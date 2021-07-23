@@ -1,0 +1,9 @@
+<map id="PLMD::crystallization::PolymerAngles" name="PLMD::crystallization::PolymerAngles">
+<area shape="rect" id="node1" title="Provides the keyword POLYMER_ANGLES" alt="" coords="209,348,367,389"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1crystallization_1_1_orientation_sphere.html" title=" " alt="" coords="209,259,367,300"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1multicolvar_1_1_multi_colvar_base.html" title=" " alt="" coords="213,169,363,211"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="5,87,176,114"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="234,5,342,32"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="201,87,375,114"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_vessel.html" title=" " alt="" coords="400,80,589,121"/>
+</map>

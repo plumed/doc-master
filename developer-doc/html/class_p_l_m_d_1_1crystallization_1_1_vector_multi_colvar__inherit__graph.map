@@ -1,0 +1,15 @@
+<map id="PLMD::crystallization::VectorMultiColvar" name="PLMD::crystallization::VectorMultiColvar">
+<area shape="rect" id="node1" title=" " alt="" coords="596,104,755,145"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1crystallization_1_1_bond_orientation.html" title="Provides the keyword BOND_DIRECTIONS" alt="" coords="805,5,963,47"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1crystallization_1_1_molecule_orientation.html" title="Provides the keyword MOLECULES" alt="" coords="803,71,965,112"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1crystallization_1_1_molecule_plane.html" title="Provides the keyword PLANES" alt="" coords="805,136,963,177"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1crystallization_1_1_steinhardt.html" title=" " alt="" coords="805,201,963,243"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1multicolvar_1_1_multi_colvar_base.html" title=" " alt="" coords="399,104,548,145"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="171,61,341,87"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,111,113,138"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="169,111,343,138"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_vessel.html" title=" " alt="" coords="161,163,351,204"/>
+<area shape="rect" id="node11" href="$class_p_l_m_d_1_1crystallization_1_1_q3.html" title="Provides the keyword Q3" alt="" coords="1013,158,1199,185"/>
+<area shape="rect" id="node12" href="$class_p_l_m_d_1_1crystallization_1_1_q4.html" title="Provides the keyword Q4" alt="" coords="1013,209,1199,235"/>
+<area shape="rect" id="node13" href="$class_p_l_m_d_1_1crystallization_1_1_q6.html" title="Provides the keyword Q6" alt="" coords="1013,259,1199,286"/>
+</map>

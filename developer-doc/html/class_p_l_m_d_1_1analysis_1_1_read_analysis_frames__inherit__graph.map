@@ -1,0 +1,10 @@
+<map id="PLMD::analysis::ReadAnalysisFrames" name="PLMD::analysis::ReadAnalysisFrames">
+<area shape="rect" id="node1" title="Provides the keyword COLLECT_FRAMES" alt="" coords="683,99,900,141"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1analysis_1_1_analysis_base.html" title=" " alt="" coords="419,107,635,133"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_pilot.html" title=" " alt="" coords="197,5,335,32"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,107,113,133"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="179,56,353,83"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="181,107,351,133"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="161,157,371,184"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_vessel.html" title=" " alt="" coords="171,209,361,250"/>
+</map>

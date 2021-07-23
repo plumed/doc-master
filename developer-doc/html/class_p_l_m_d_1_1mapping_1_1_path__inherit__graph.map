@@ -1,0 +1,10 @@
+<map id="PLMD::mapping::Path" name="PLMD::mapping::Path">
+<area shape="rect" id="node1" title="Provides the keyword PATH" alt="" coords="895,81,1055,108"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1mapping_1_1_path_base.html" title=" " alt="" coords="655,81,847,108"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1mapping_1_1_mapping.html" title=" " alt="" coords="419,81,607,108"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="181,5,351,32"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,81,113,108"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="161,56,371,83"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="179,107,353,133"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_vessel.html" title=" " alt="" coords="171,158,361,199"/>
+</map>

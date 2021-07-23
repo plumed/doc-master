@@ -1,0 +1,15 @@
+<map id="PLMD::adjmat::AdjacencyMatrixBase" name="PLMD::adjmat::AdjacencyMatrixBase">
+<area shape="rect" id="node1" title=" " alt="" coords="596,143,859,170"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1adjmat_1_1_aligned_matrix_base.html" title=" " alt="" coords="907,42,1151,69"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1adjmat_1_1_contact_matrix.html" title="Provides the keyword CONTACT_MATRIX" alt="" coords="922,93,1135,119"/>
+<area shape="rect" id="node11" href="$class_p_l_m_d_1_1adjmat_1_1_h_bond_matrix.html" title="Provides the keyword HBOND_MATRIX" alt="" coords="925,143,1132,170"/>
+<area shape="rect" id="node12" href="$class_p_l_m_d_1_1adjmat_1_1_topology_matrix.html" title="Provides the keyword TOPOLOGY_MATRIX" alt="" coords="918,194,1139,221"/>
+<area shape="rect" id="node13" href="$class_p_l_m_d_1_1pamm_1_1_h_b_pamm_matrix.html" title="Provides the keyword HBPAMM_MATRIX" alt="" coords="919,245,1138,271"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1multicolvar_1_1_multi_colvar_base.html" title=" " alt="" coords="399,136,548,177"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="171,93,341,119"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,143,113,170"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="169,143,343,170"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_vessel.html" title=" " alt="" coords="161,195,351,236"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1adjmat_1_1_contact_aligned_matrix.html" title="Provides the keyword ALIGNED_MATRIX" alt="" coords="1199,5,1419,47"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1adjmat_1_1_s_m_a_c_matrix.html" title="Provides the keyword SMAC_MATRIX" alt="" coords="1208,71,1409,98"/>
+</map>

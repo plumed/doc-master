@@ -1,0 +1,7 @@
+<map id="PLMD::colvar::DRMSD" name="PLMD::colvar::DRMSD">
+<area shape="rect" id="node1" title="Provides the keyword DRMSD" alt="" coords="107,229,271,256"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="135,155,244,181"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="5,80,176,107"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="135,5,243,32"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="201,80,375,107"/>
+</map>

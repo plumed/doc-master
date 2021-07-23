@@ -1,0 +1,10 @@
+<map id="PLMD::ReferenceArguments" name="PLMD::ReferenceArguments">
+<area shape="rect" id="node1" title=" " alt="" coords="273,107,477,133"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_argument_only_distance.html" title=" " alt="" coords="525,81,744,108"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1_direction.html" title=" " alt="" coords="571,132,698,159"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_reference_configuration.html" title=" " alt="" coords="5,107,225,133"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_dot_product_distance.html" title=" " alt="" coords="797,5,993,32"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_euclidean_distance.html" title=" " alt="" coords="802,56,989,83"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_mahalanobis_distance.html" title=" " alt="" coords="792,107,999,133"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1_normalized_euclidean_distance.html" title=" " alt="" coords="793,158,998,199"/>
+</map>

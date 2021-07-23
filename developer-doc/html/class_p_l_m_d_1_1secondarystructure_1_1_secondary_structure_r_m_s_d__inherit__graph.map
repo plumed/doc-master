@@ -1,0 +1,10 @@
+<map id="PLMD::secondarystructure::SecondaryStructureRMSD" name="PLMD::secondarystructure::SecondaryStructureRMSD">
+<area shape="rect" id="node1" title="Base action for calculating things like AlphRMSD, AntibetaRMSD, etc." alt="" coords="399,71,595,112"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1secondarystructure_1_1_alpha_r_m_s_d.html" title="Provides the keyword ALPHARMSD" alt="" coords="643,5,835,47"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1secondarystructure_1_1_antibeta_r_m_s_d.html" title="Provides the keyword ANTIBETARMSD" alt="" coords="643,71,835,112"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1secondarystructure_1_1_parabeta_r_m_s_d.html" title="Provides the keyword PARABETARMSD" alt="" coords="643,136,835,177"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="171,27,341,54"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,78,113,105"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="169,78,343,105"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_vessel.html" title=" " alt="" coords="161,129,351,171"/>
+</map>

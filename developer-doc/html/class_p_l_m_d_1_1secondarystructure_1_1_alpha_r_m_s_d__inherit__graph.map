@@ -1,0 +1,8 @@
+<map id="PLMD::secondarystructure::AlphaRMSD" name="PLMD::secondarystructure::AlphaRMSD">
+<area shape="rect" id="node1" title="Provides the keyword ALPHARMSD" alt="" coords="192,259,384,300"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1secondarystructure_1_1_secondary_structure_r_m_s_d.html" title="Base action for calculating things like AlphRMSD, AntibetaRMSD, etc." alt="" coords="190,169,386,211"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="5,87,176,114"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="234,5,342,32"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="201,87,375,114"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_vessel.html" title=" " alt="" coords="400,80,589,121"/>
+</map>

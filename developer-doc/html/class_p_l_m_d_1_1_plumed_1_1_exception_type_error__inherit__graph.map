@@ -1,0 +1,5 @@
+<map id="PLMD::Plumed::ExceptionTypeError" name="PLMD::Plumed::ExceptionTypeError">
+<area shape="rect" id="node1" title="Thrown when a wrong pointer is passed to the PLUMED interface." alt="" coords="5,155,224,196"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_plumed_1_1_exception.html" title="Base class used to rethrow PLUMED exceptions." alt="" coords="21,80,209,107"/>
+<area shape="rect" id="node3" title="STL class." alt="" coords="57,5,172,32"/>
+</map>

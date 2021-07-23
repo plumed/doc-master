@@ -1,0 +1,48 @@
+<map id="PLMD::Colvar" name="PLMD::Colvar">
+<area shape="rect" id="node1" title=" " alt="" coords="384,791,493,817"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1colvar_1_1_angle.html" title="Provides the keyword ANGLE" alt="" coords="581,5,733,32"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1colvar_1_1_cell.html" title="Provides the keyword CELL" alt="" coords="587,56,727,83"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1colvar_1_1_colvar_fake.html" title="Provides the keyword FAKE" alt="" coords="563,107,750,133"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1colvar_1_1_constant.html" title="Provides the keyword CONSTANT" alt="" coords="570,157,743,184"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1colvar_1_1_contact_map.html" title="Provides the keyword CONTACTMAP" alt="" coords="560,208,753,235"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1colvar_1_1_coordination_base.html" title=" " alt="" coords="541,259,772,285"/>
+<area shape="rect" id="node14" href="$class_p_l_m_d_1_1colvar_1_1_dimer.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_d_i_m_e_r.html&quot;&gt; &quot;DIMER" alt="" coords="579,309,734,336"/>
+<area shape="rect" id="node15" href="$class_p_l_m_d_1_1colvar_1_1_dipole.html" title="Provides the keyword DIPOLE" alt="" coords="578,360,735,387"/>
+<area shape="rect" id="node16" href="$class_p_l_m_d_1_1colvar_1_1_distance.html" title="Provides the keyword DISTANCE" alt="" coords="571,411,743,437"/>
+<area shape="rect" id="node17" href="$class_p_l_m_d_1_1colvar_1_1_d_r_m_s_d.html" title="Provides the keyword DRMSD" alt="" coords="575,461,739,488"/>
+<area shape="rect" id="node18" href="$class_p_l_m_d_1_1colvar_1_1_e_e_f_solv.html" title="Provides the keyword EEFSOLV" alt="" coords="573,512,740,539"/>
+<area shape="rect" id="node19" href="$class_p_l_m_d_1_1colvar_1_1_energy.html" title="Provides the keyword ENERGY" alt="" coords="577,563,737,589"/>
+<area shape="rect" id="node20" href="$class_p_l_m_d_1_1colvar_1_1_e_r_m_s_d.html" title="Provides the keyword ERMSD" alt="" coords="575,613,738,640"/>
+<area shape="rect" id="node21" href="$class_p_l_m_d_1_1colvar_1_1_extra_c_v.html" title="Provides the keyword EXTRACV" alt="" coords="573,664,740,691"/>
+<area shape="rect" id="node22" href="$class_p_l_m_d_1_1colvar_1_1_gyration.html" title="Provides the keyword GYRATION" alt="" coords="571,715,742,741"/>
+<area shape="rect" id="node23" href="$class_p_l_m_d_1_1colvar_1_1_multi_r_m_s_d.html" title="Provides the keyword MULTI_RMSD" alt="" coords="563,765,750,792"/>
+<area shape="rect" id="node24" href="$class_p_l_m_d_1_1colvar_1_1_path_m_s_d_base.html" title=" " alt="" coords="554,816,759,843"/>
+<area shape="rect" id="node27" href="$class_p_l_m_d_1_1colvar_1_1_p_c_a_r_m_s_d.html" title="Provides the keyword PCARMSD" alt="" coords="567,867,747,893"/>
+<area shape="rect" id="node28" href="$class_p_l_m_d_1_1colvar_1_1_position.html" title="Provides the keyword POSITION" alt="" coords="573,917,740,944"/>
+<area shape="rect" id="node29" href="$class_p_l_m_d_1_1colvar_1_1_projection_on_axis.html" title="Provides the keyword PROJECTION_ON_AXIS" alt="" coords="567,969,747,1010"/>
+<area shape="rect" id="node30" href="$class_p_l_m_d_1_1colvar_1_1_puckering.html" title="Provides the keyword PUCKERING" alt="" coords="567,1035,746,1061"/>
+<area shape="rect" id="node31" href="$class_p_l_m_d_1_1colvar_1_1_r_m_s_d.html" title="Provides the keyword RMSD" alt="" coords="579,1085,734,1112"/>
+<area shape="rect" id="node32" href="$class_p_l_m_d_1_1colvar_1_1_template.html" title="Provides the keyword TEMPLATE" alt="" coords="569,1136,744,1163"/>
+<area shape="rect" id="node33" href="$class_p_l_m_d_1_1colvar_1_1_torsion.html" title="Provides the keyword TORSION" alt="" coords="576,1187,737,1213"/>
+<area shape="rect" id="node34" href="$class_p_l_m_d_1_1colvar_1_1_volume.html" title="Provides the keyword VOLUME" alt="" coords="575,1237,739,1264"/>
+<area shape="rect" id="node35" href="$class_p_l_m_d_1_1funnel_1_1_f_u_n_n_e_l___p_s.html" title="Provides the keyword FUNNEL_PS" alt="" coords="561,1288,753,1315"/>
+<area shape="rect" id="node36" href="$class_p_l_m_d_1_1isdb_1_1_fret_efficiency.html" title="Provides the keyword FRET" alt="" coords="561,1339,752,1365"/>
+<area shape="rect" id="node37" href="$class_p_l_m_d_1_1maze_1_1_loss.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__l_o_s_s.html&quot;&gt; &quot;MAZE_LOSS" alt="" coords="587,1389,727,1416"/>
+<area shape="rect" id="node38" href="$class_p_l_m_d_1_1maze_1_1_optimizer.html" title="Base class for implementing optimizers for ligand unbinding." alt="" coords="569,1440,744,1467"/>
+<area shape="rect" id="node44" href="$class_p_l_m_d_1_1piv_1_1_p_i_v.html" title="Provides the keyword PIV" alt="" coords="599,1491,714,1517"/>
+<area shape="rect" id="node45" href="$class_p_l_m_d_1_1sasa_1_1_s_a_s_a___h_a_s_e_l.html" title="Provides the keyword SASA_HASEL" alt="" coords="561,1541,752,1568"/>
+<area shape="rect" id="node46" href="$class_p_l_m_d_1_1sasa_1_1_s_a_s_a___l_c_p_o.html" title="Provides the keyword SASA_LCPO" alt="" coords="565,1592,748,1619"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="163,765,334,792"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,791,113,817"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="161,816,336,843"/>
+<area shape="rect" id="node11" href="$class_p_l_m_d_1_1colvar_1_1_coordination.html" title="Provides the keyword COORDINATION" alt="" coords="823,208,1021,235"/>
+<area shape="rect" id="node12" href="$class_p_l_m_d_1_1colvar_1_1_d_h_energy.html" title="Provides the keyword DHENERGY" alt="" coords="832,259,1012,285"/>
+<area shape="rect" id="node13" href="$class_p_l_m_d_1_1colvar_1_1_g_h_b_f_i_x.html" title="Provides the keyword GHBFIX" alt="" coords="839,309,1005,336"/>
+<area shape="rect" id="node25" href="$class_p_l_m_d_1_1colvar_1_1_path_m_s_d.html" title="Provides the keyword PATHMSD" alt="" coords="835,791,1009,817"/>
+<area shape="rect" id="node26" href="$class_p_l_m_d_1_1colvar_1_1_property_map.html" title="Provides the keyword PROPERTYMAP" alt="" coords="823,841,1021,868"/>
+<area shape="rect" id="node39" href="$class_p_l_m_d_1_1maze_1_1_memetic.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__m_e_m_e_t_i_c__s_a_m_p_l_i_n_g...." alt="" coords="838,1323,1006,1349"/>
+<area shape="rect" id="node40" href="$class_p_l_m_d_1_1maze_1_1_random___acceleration___m_d.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__r_a_n_d_o_m__a_c_c_e_l_e_r_a_t_i_o_n__m..." alt="" coords="839,1374,1005,1415"/>
+<area shape="rect" id="node41" href="$class_p_l_m_d_1_1maze_1_1_random___walk.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__r_a_n_d_o_m__w_a_l_k...." alt="" coords="820,1440,1024,1467"/>
+<area shape="rect" id="node42" href="$class_p_l_m_d_1_1maze_1_1_simulated___annealing.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__s_i_m_u_l_a_t_e_d__a_n_n_e_a_l_i_n_g...." alt="" coords="833,1491,1011,1533"/>
+<area shape="rect" id="node43" href="$class_p_l_m_d_1_1maze_1_1_steered___m_d.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__s_t_e_e_r_e_d__m_d.html&quot;&gt; &quot;MAZE_STEERED..." alt="" coords="827,1557,1017,1584"/>
+</map>

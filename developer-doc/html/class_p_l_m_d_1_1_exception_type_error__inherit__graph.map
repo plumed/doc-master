@@ -1,0 +1,5 @@
+<map id="PLMD::ExceptionTypeError" name="PLMD::ExceptionTypeError">
+<area shape="rect" id="node1" title="Class representing a type error in the PLMD::Plumed interface." alt="" coords="5,155,197,181"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1lepton_1_1_exception.html" title="This class is used for all exceptions thrown by lepton." alt="" coords="11,80,191,107"/>
+<area shape="rect" id="node3" title="STL class." alt="" coords="44,5,159,32"/>
+</map>

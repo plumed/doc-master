@@ -1,0 +1,9 @@
+<map id="PLMD::ActionWithVirtualAtom" name="PLMD::ActionWithVirtualAtom">
+<area shape="rect" id="node1" title="Class to add a single virtual atom to the system." alt="" coords="380,97,596,123"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1multicolvar_1_1_center_of_multi_colvar.html" title="Provides the keyword CENTER_OF_MULTICOLVAR" alt="" coords="660,5,815,47"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1vatom_1_1_center.html" title="Provides the keyword CENTER" alt="" coords="657,71,817,98"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1vatom_1_1_fixed_atom.html" title="Provides the keyword FIXEDATOM" alt="" coords="644,122,831,149"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1vatom_1_1_ghost.html" title="Provides the keyword GHOST" alt="" coords="660,173,815,199"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="161,97,332,123"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,97,113,123"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="PLMD::adjmat::ClusterAnalysisBase" name="PLMD::adjmat::ClusterAnalysisBase">
+<area shape="rect" id="node1" title=" " alt="" coords="596,81,851,108"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1adjmat_1_1_cluster_diameter.html" title="Provides the keyword CLUSTER_DIAMETER" alt="" coords="906,5,1134,32"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1adjmat_1_1_cluster_distribution.html" title="Provides the keyword CLUSTER_DISTRIBUTION" alt="" coords="899,56,1141,83"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1adjmat_1_1_cluster_properties.html" title="Provides the keyword CLUSTER_PROPERTIES" alt="" coords="903,107,1137,133"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1adjmat_1_1_cluster_size.html" title="Provides the keyword CLUSTER_NATOMS" alt="" coords="923,157,1117,184"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1multicolvar_1_1_multi_colvar_base.html" title=" " alt="" coords="399,74,548,115"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="171,31,341,57"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,81,113,108"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="169,81,343,108"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_vessel.html" title=" " alt="" coords="161,133,351,174"/>
+</map>

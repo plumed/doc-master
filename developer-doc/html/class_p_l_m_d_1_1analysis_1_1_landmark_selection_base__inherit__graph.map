@@ -1,0 +1,15 @@
+<map id="PLMD::analysis::LandmarkSelectionBase" name="PLMD::analysis::LandmarkSelectionBase">
+<area shape="rect" id="node1" title=" " alt="" coords="683,136,877,177"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1analysis_1_1_farthest_point_sampling.html" title="Provides the keyword LANDMARK_SELECT_FPS" alt="" coords="946,5,1127,47"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1analysis_1_1_landmark_staged.html" title="Provides the keyword LANDMARK_SELECT_STAGED" alt="" coords="939,71,1134,112"/>
+<area shape="rect" id="node11" href="$class_p_l_m_d_1_1analysis_1_1_reselect_landmarks.html" title="Provides the keyword RESELECT_LANDMARKS" alt="" coords="944,136,1129,177"/>
+<area shape="rect" id="node12" href="$class_p_l_m_d_1_1analysis_1_1_select_random_frames.html" title="Provides the keyword LANDMARK_SELECT_RANDOM" alt="" coords="925,201,1148,243"/>
+<area shape="rect" id="node13" href="$class_p_l_m_d_1_1analysis_1_1_select_with_stride.html" title="Provides the keyword LANDMARK_SELECT_STRIDE" alt="" coords="937,267,1136,308"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1analysis_1_1_analysis_base.html" title=" " alt="" coords="419,143,635,170"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_pilot.html" title=" " alt="" coords="197,42,335,69"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,143,113,170"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="179,93,353,119"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="181,143,351,170"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="161,194,371,221"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_vessel.html" title=" " alt="" coords="171,245,361,287"/>
+</map>

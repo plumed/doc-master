@@ -1,0 +1,8 @@
+<map id="PLMD::vesselbase::AveragingVessel" name="PLMD::vesselbase::AveragingVessel">
+<area shape="rect" id="node1" title=" " alt="" coords="129,80,343,121"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1analysis_1_1_average_vessel.html" title=" " alt="" coords="5,169,229,196"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1gridtools_1_1_grid_vessel.html" title=" " alt="" coords="254,169,455,196"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1vesselbase_1_1_vessel.html" title=" " alt="" coords="141,5,331,32"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1gridtools_1_1_histogram_on_grid.html" title=" " alt="" coords="255,244,455,285"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1gridtools_1_1_average_on_grid.html" title=" " alt="" coords="262,333,447,375"/>
+</map>

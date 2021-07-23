@@ -1,0 +1,51 @@
+<map id="PLMD::vesselbase::ActionWithVessel" name="PLMD::vesselbase::ActionWithVessel">
+<area shape="rect" id="node1" title=" " alt="" coords="161,1168,351,1209"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1analysis_1_1_analysis_base.html" title=" " alt="" coords="399,311,615,338"/>
+<area shape="rect" id="node14" href="$class_p_l_m_d_1_1manyrestraints_1_1_many_restraints_base.html" title=" " alt="" coords="423,683,590,724"/>
+<area shape="rect" id="node17" href="$class_p_l_m_d_1_1mapping_1_1_mapping.html" title=" " alt="" coords="413,799,601,826"/>
+<area shape="rect" id="node20" href="$class_p_l_m_d_1_1multicolvar_1_1_multi_colvar_base.html" title=" " alt="" coords="432,1575,581,1616"/>
+<area shape="rect" id="node48" href="$class_p_l_m_d_1_1secondarystructure_1_1_secondary_structure_r_m_s_d.html" title="Base action for calculating things like AlphRMSD, AntibetaRMSD, etc." alt="" coords="409,1640,605,1681"/>
+<area shape="rect" id="node49" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_averaging.html" title=" " alt="" coords="412,1705,601,1747"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,1175,113,1202"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1analysis_1_1_euclidean_dissimilarity_matrix.html" title="Provides the keyword EUCLIDEAN_DISSIMILARITIES" alt="" coords="698,5,890,47"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1analysis_1_1_landmark_selection_base.html" title=" " alt="" coords="697,71,891,112"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1analysis_1_1_output_colvar_file.html" title="Provides the keyword OUTPUT_ANALYSIS_DATA_TO_COLVAR" alt="" coords="675,137,913,163"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1analysis_1_1_output_p_d_b_file.html" title="Provides the keyword OUTPUT_ANALYSIS_DATA_TO_PDB" alt="" coords="683,187,905,214"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1analysis_1_1_print_dissimilarity_matrix.html" title="Provides the keyword PRINT_DISSIMILARITY_MATRIX" alt="" coords="673,239,915,280"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1analysis_1_1_read_analysis_frames.html" title="Provides the keyword COLLECT_FRAMES" alt="" coords="685,304,903,345"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1analysis_1_1_read_dissimilarity_matrix.html" title="Provides the keyword READ_DISSIMILARITY_MATRIX" alt="" coords="671,369,917,411"/>
+<area shape="rect" id="node11" href="$class_p_l_m_d_1_1dimred_1_1_dimensionality_reduction_base.html" title=" " alt="" coords="684,435,904,476"/>
+<area shape="rect" id="node12" href="$class_p_l_m_d_1_1dimred_1_1_output_p_c_a_projection.html" title="Provides the keyword OUTPUT_PCA_PROJECTION" alt="" coords="666,501,922,527"/>
+<area shape="rect" id="node13" href="$class_p_l_m_d_1_1dimred_1_1_project_non_landmark_points.html" title="Provides the keyword PROJECT_ALL_ANALYSIS_DATA" alt="" coords="698,552,890,593"/>
+<area shape="rect" id="node15" href="$class_p_l_m_d_1_1manyrestraints_1_1_l_walls.html" title="Provides the keyword LWALLS" alt="" coords="711,617,877,659"/>
+<area shape="rect" id="node16" href="$class_p_l_m_d_1_1manyrestraints_1_1_u_walls.html" title="Provides the keyword UWALLS" alt="" coords="711,683,877,724"/>
+<area shape="rect" id="node18" href="$class_p_l_m_d_1_1mapping_1_1_adaptive_path.html" title="Provides the keyword ADAPTIVE_PATH" alt="" coords="685,749,903,775"/>
+<area shape="rect" id="node19" href="$class_p_l_m_d_1_1mapping_1_1_path_base.html" title=" " alt="" coords="698,799,890,826"/>
+<area shape="rect" id="node21" href="$class_p_l_m_d_1_1adjmat_1_1_action_with_input_matrix.html" title=" " alt="" coords="698,851,890,892"/>
+<area shape="rect" id="node22" href="$class_p_l_m_d_1_1adjmat_1_1_adjacency_matrix_base.html" title=" " alt="" coords="663,917,925,943"/>
+<area shape="rect" id="node23" href="$class_p_l_m_d_1_1adjmat_1_1_cluster_analysis_base.html" title=" " alt="" coords="667,967,921,994"/>
+<area shape="rect" id="node24" href="$class_p_l_m_d_1_1crystallization_1_1_cubic_harmonic_base.html" title=" " alt="" coords="713,1019,875,1060"/>
+<area shape="rect" id="node25" href="$class_p_l_m_d_1_1crystallization_1_1_environment_similarity.html" title="Provides the keyword ENVIRONMENTSIMILARITY" alt="" coords="706,1084,882,1125"/>
+<area shape="rect" id="node26" href="$class_p_l_m_d_1_1crystallization_1_1_inter_molecular_torsions.html" title="Provides the keyword INTERMOLECULARTORSIONS" alt="" coords="705,1149,883,1191"/>
+<area shape="rect" id="node27" href="$class_p_l_m_d_1_1crystallization_1_1_orientation_sphere.html" title=" " alt="" coords="715,1215,873,1256"/>
+<area shape="rect" id="node28" href="$class_p_l_m_d_1_1crystallization_1_1_vector_multi_colvar.html" title=" " alt="" coords="715,1280,873,1321"/>
+<area shape="rect" id="node29" href="$class_p_l_m_d_1_1multicolvar_1_1_alpha_beta.html" title="Provides the keyword ALPHABETA" alt="" coords="719,1345,869,1387"/>
+<area shape="rect" id="node30" href="$class_p_l_m_d_1_1multicolvar_1_1_angles.html" title="Provides the keyword ANGLES" alt="" coords="719,1411,869,1452"/>
+<area shape="rect" id="node31" href="$class_p_l_m_d_1_1multicolvar_1_1_bridge.html" title="Provides the keyword BRIDGE" alt="" coords="719,1476,869,1517"/>
+<area shape="rect" id="node32" href="$class_p_l_m_d_1_1multicolvar_1_1_bridged_multi_colvar_function.html" title=" " alt="" coords="693,1541,895,1583"/>
+<area shape="rect" id="node33" href="$class_p_l_m_d_1_1multicolvar_1_1_coordination_numbers.html" title="Provides the keyword COORDINATIONNUMBER" alt="" coords="712,1607,876,1648"/>
+<area shape="rect" id="node34" href="$class_p_l_m_d_1_1multicolvar_1_1_density.html" title="Provides the keyword DENSITY" alt="" coords="719,1672,869,1713"/>
+<area shape="rect" id="node35" href="$class_p_l_m_d_1_1multicolvar_1_1_dihedral_correlation.html" title="Provides the keyword DIHCOR" alt="" coords="719,1737,869,1779"/>
+<area shape="rect" id="node36" href="$class_p_l_m_d_1_1multicolvar_1_1_distance_from_contour.html" title="Provides the keyword DISTANCE_FROM_CONTOUR" alt="" coords="713,1803,875,1844"/>
+<area shape="rect" id="node37" href="$class_p_l_m_d_1_1multicolvar_1_1_distances.html" title="Provides the keyword DISTANCES" alt="" coords="719,1868,869,1909"/>
+<area shape="rect" id="node38" href="$class_p_l_m_d_1_1multicolvar_1_1_in_plane_distances.html" title="Provides the keyword INPLANEDISTANCES" alt="" coords="719,1933,869,1975"/>
+<area shape="rect" id="node39" href="$class_p_l_m_d_1_1multicolvar_1_1_local_average.html" title="Provides the keyword LOCAL_AVERAGE" alt="" coords="719,1999,869,2040"/>
+<area shape="rect" id="node40" href="$class_p_l_m_d_1_1multicolvar_1_1_multi_colvar_combine.html" title="Provides the keyword MCOLV_COMBINE" alt="" coords="717,2064,871,2105"/>
+<area shape="rect" id="node41" href="$class_p_l_m_d_1_1multicolvar_1_1_multi_colvar_product.html" title="Provides the keyword MCOLV_PRODUCT" alt="" coords="719,2129,869,2171"/>
+<area shape="rect" id="node42" href="$class_p_l_m_d_1_1multicolvar_1_1_number_of_links.html" title="Provides the keyword NLINKS" alt="" coords="719,2195,869,2236"/>
+<area shape="rect" id="node43" href="$class_p_l_m_d_1_1multicolvar_1_1_torsions.html" title="Provides the keyword TORSIONS" alt="" coords="719,2260,869,2301"/>
+<area shape="rect" id="node44" href="$class_p_l_m_d_1_1multicolvar_1_1_x_angles.html" title="Provides the keyword XANGLES" alt="" coords="719,2325,869,2367"/>
+<area shape="rect" id="node45" href="$class_p_l_m_d_1_1multicolvar_1_1_x_distances.html" title="Provides the keyword XDISTANCES" alt="" coords="719,2391,869,2432"/>
+<area shape="rect" id="node46" href="$class_p_l_m_d_1_1multicolvar_1_1_x_y_distances.html" title="Provides the keyword XYDISTANCES" alt="" coords="719,2456,869,2497"/>
+<area shape="rect" id="node47" href="$class_p_l_m_d_1_1multicolvar_1_1_x_y_torsion.html" title="Provides the keyword XYTORSIONS" alt="" coords="719,2521,869,2563"/>
+</map>

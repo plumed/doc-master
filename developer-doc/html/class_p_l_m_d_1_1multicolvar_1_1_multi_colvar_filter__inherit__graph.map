@@ -1,0 +1,12 @@
+<map id="PLMD::multicolvar::MultiColvarFilter" name="PLMD::multicolvar::MultiColvarFilter">
+<area shape="rect" id="node1" title=" " alt="" coords="847,71,996,112"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1multicolvar_1_1_filter_between.html" title="Provides the keyword MFILTER_BETWEEN" alt="" coords="1044,5,1193,47"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1multicolvar_1_1_filter_less.html" title="Provides the keyword MFILTER_LESS" alt="" coords="1044,71,1193,112"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1multicolvar_1_1_filter_more.html" title="Provides the keyword MFILTER_MORE" alt="" coords="1044,136,1193,177"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1multicolvar_1_1_bridged_multi_colvar_function.html" title=" " alt="" coords="596,71,799,112"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1multicolvar_1_1_multi_colvar_base.html" title=" " alt="" coords="399,71,548,112"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="171,27,341,54"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,78,113,105"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="169,78,343,105"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_vessel.html" title=" " alt="" coords="161,129,351,171"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="PLMD::isdb::MetainferenceBase" name="PLMD::isdb::MetainferenceBase">
+<area shape="rect" id="node1" title=" " alt="" coords="419,132,647,159"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1isdb_1_1_c_s2_backbone.html" title="Provides the keyword CS2BACKBONE" alt="" coords="695,5,885,32"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1isdb_1_1_j_coupling.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_j_c_o_u_p_l_i_n_g.html&quot;&gt; &quot;JCOUPLING" alt="" coords="709,56,871,83"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1isdb_1_1_n_o_e.html" title="Provides the keyword NOE" alt="" coords="725,107,855,133"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1isdb_1_1_p_r_e.html" title="Provides the keyword PRE" alt="" coords="727,157,853,184"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1isdb_1_1_r_d_c.html" title="Provides the keyword RDC" alt="" coords="725,208,855,235"/>
+<area shape="rect" id="node11" href="$class_p_l_m_d_1_1isdb_1_1_s_a_x_s.html" title="Provides the keyword SAXS" alt="" coords="721,259,859,285"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="181,81,351,108"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,132,113,159"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="161,132,371,159"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="179,183,353,209"/>
+</map>

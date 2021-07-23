@@ -1,0 +1,11 @@
+<map id="PLMD::adjmat::AlignedMatrixBase" name="PLMD::adjmat::AlignedMatrixBase">
+<area shape="rect" id="node1" title=" " alt="" coords="166,333,410,360"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1adjmat_1_1_contact_aligned_matrix.html" title="Provides the keyword ALIGNED_MATRIX" alt="" coords="61,408,281,449"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1adjmat_1_1_s_m_a_c_matrix.html" title="Provides the keyword SMAC_MATRIX" alt="" coords="305,415,506,442"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1adjmat_1_1_adjacency_matrix_base.html" title=" " alt="" coords="157,259,419,285"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1multicolvar_1_1_multi_colvar_base.html" title=" " alt="" coords="213,169,363,211"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="5,87,176,114"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="234,5,342,32"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="201,87,375,114"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_vessel.html" title=" " alt="" coords="400,80,589,121"/>
+</map>

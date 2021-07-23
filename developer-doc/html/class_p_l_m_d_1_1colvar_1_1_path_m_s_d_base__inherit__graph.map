@@ -1,0 +1,9 @@
+<map id="PLMD::colvar::PathMSDBase" name="PLMD::colvar::PathMSDBase">
+<area shape="rect" id="node1" title=" " alt="" coords="95,229,300,256"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1colvar_1_1_path_m_s_d.html" title="Provides the keyword PATHMSD" alt="" coords="5,304,179,331"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1colvar_1_1_property_map.html" title="Provides the keyword PROPERTYMAP" alt="" coords="203,304,402,331"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="143,155,252,181"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="13,80,184,107"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="143,5,251,32"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="209,80,383,107"/>
+</map>
