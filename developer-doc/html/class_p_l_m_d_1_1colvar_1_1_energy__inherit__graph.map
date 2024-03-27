@@ -1,0 +1,7 @@
+<map id="PLMD::colvar::Energy" name="PLMD::colvar::Energy">
+<area shape="rect" id="node1" title="Provides the keyword ENERGY" alt="" coords="19,304,179,331"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_action_to_put_data.html" title="Provides the keyword PUT" alt="" coords="11,229,186,256"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_for_interface.html" title=" " alt="" coords="5,155,192,181"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="11,80,186,107"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="45,5,153,32"/>
+</map>

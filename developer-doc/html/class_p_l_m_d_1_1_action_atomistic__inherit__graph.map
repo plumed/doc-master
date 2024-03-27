@@ -1,0 +1,51 @@
+<map id="PLMD::ActionAtomistic" name="PLMD::ActionAtomistic">
+<area shape="rect" id="node1" title=" " alt="" coords="161,1714,332,1741"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_with_vector.html" title=" " alt="" coords="412,305,591,331"/>
+<area shape="rect" id="node14" href="$class_p_l_m_d_1_1_action_with_virtual_atom.html" title="Class to add a single virtual atom to the system." alt="" coords="393,679,609,706"/>
+<area shape="rect" id="node18" href="$class_p_l_m_d_1_1analysis_1_1_analysis_base.html" title=" " alt="" coords="393,1062,609,1089"/>
+<area shape="rect" id="node29" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="447,1445,556,1471"/>
+<area shape="rect" id="node37" href="$class_p_l_m_d_1_1contour_1_1_distance_from_contour_base.html" title=" " alt="" coords="394,1496,609,1537"/>
+<area shape="rect" id="node38" href="$class_p_l_m_d_1_1generic_1_1_dump_atoms.html" title="Provides the keyword DUMPATOMS" alt="" coords="399,1562,603,1589"/>
+<area shape="rect" id="node39" href="$class_p_l_m_d_1_1generic_1_1_dump_mass_charge.html" title="Provides the keyword DUMPMASSCHARGE" alt="" coords="380,1613,623,1639"/>
+<area shape="rect" id="node40" href="$class_p_l_m_d_1_1generic_1_1_fit_to_template.html" title="Provides the keyword FIT_TO_TEMPLATE" alt="" coords="395,1663,608,1690"/>
+<area shape="rect" id="node41" href="$class_p_l_m_d_1_1generic_1_1_plumed.html" title="Provides the keyword PLUMED" alt="" coords="415,1714,587,1741"/>
+<area shape="rect" id="node42" href="$class_p_l_m_d_1_1generic_1_1_print_n_d_x.html" title="Provides the keyword PRINT_NDX" alt="" coords="410,1765,593,1791"/>
+<area shape="rect" id="node43" href="$class_p_l_m_d_1_1generic_1_1_reset_cell.html" title="Provides the keyword RESET_CELL" alt="" coords="409,1815,594,1842"/>
+<area shape="rect" id="node44" href="$class_p_l_m_d_1_1generic_1_1_whole_molecules.html" title="Provides the keyword WHOLEMOLECULES" alt="" coords="386,1866,617,1893"/>
+<area shape="rect" id="node45" href="$class_p_l_m_d_1_1generic_1_1_wrap_around.html" title="Provides the keyword WRAPAROUND" alt="" coords="400,1917,603,1943"/>
+<area shape="rect" id="node46" href="$class_p_l_m_d_1_1_generic_mol_info.html" title=" " alt="" coords="418,1967,585,1994"/>
+<area shape="rect" id="node47" href="$class_p_l_m_d_1_1_group.html" title="Provides the keyword GROUP" alt="" coords="448,2018,555,2045"/>
+<area shape="rect" id="node48" href="$class_p_l_m_d_1_1isdb_1_1_e_m_m_i.html" title="Provides the keyword EMMI" alt="" coords="432,2069,571,2095"/>
+<area shape="rect" id="node49" href="$class_p_l_m_d_1_1isdb_1_1_metainference_base.html" title=" " alt="" coords="387,2119,615,2146"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,1714,113,1741"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1adjmat_1_1_action_with_matrix.html" title=" " alt="" coords="703,5,895,47"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1colvar_1_1_multi_colvar_template.html" title=" " alt="" coords="703,71,894,112"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1colvar_1_1_r_m_s_d_vector.html" title="Provides the keyword RMSD_VECTOR" alt="" coords="701,137,896,163"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1function_1_1_function_of_vector.html" title=" " alt="" coords="707,188,890,229"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1gridtools_1_1_action_with_grid.html" title=" " alt="" coords="683,254,914,281"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1mapping_1_1_geometric_path.html" title="Provides the keyword GEOMETRIC_PATH" alt="" coords="685,305,913,331"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1refdist_1_1_matrix_product_diagonal.html" title="Provides the keyword MATRIX_PRODUCT_DIAGONAL" alt="" coords="695,356,903,397"/>
+<area shape="rect" id="node11" href="$class_p_l_m_d_1_1secondarystructure_1_1_secondary_structure_r_m_s_d.html" title="Base action for calculating things like AlphRMSD, AntibetaRMSD, etc." alt="" coords="701,421,897,463"/>
+<area shape="rect" id="node12" href="$class_p_l_m_d_1_1symfunc_1_1_three_body_g_functions.html" title="Provides the keyword GSYMFUNC_THREEBODY" alt="" coords="698,487,899,528"/>
+<area shape="rect" id="node13" href="$class_p_l_m_d_1_1volumes_1_1_action_volume.html" title=" " alt="" coords="688,553,909,579"/>
+<area shape="rect" id="node15" href="$class_p_l_m_d_1_1vatom_1_1_center.html" title="Provides the keyword CENTER_FAST" alt="" coords="719,603,879,630"/>
+<area shape="rect" id="node16" href="$class_p_l_m_d_1_1vatom_1_1_fixed_atom.html" title="Provides the keyword FIXEDATOM" alt="" coords="705,654,892,681"/>
+<area shape="rect" id="node17" href="$class_p_l_m_d_1_1vatom_1_1_ghost.html" title="Provides the keyword GHOST" alt="" coords="721,705,876,731"/>
+<area shape="rect" id="node19" href="$class_p_l_m_d_1_1analysis_1_1_euclidean_dissimilarity_matrix.html" title="Provides the keyword EUCLIDEAN_DISSIMILARITIES" alt="" coords="703,756,895,797"/>
+<area shape="rect" id="node20" href="$class_p_l_m_d_1_1analysis_1_1_landmark_selection_base.html" title=" " alt="" coords="701,821,896,863"/>
+<area shape="rect" id="node21" href="$class_p_l_m_d_1_1analysis_1_1_output_colvar_file.html" title="Provides the keyword OUTPUT_ANALYSIS_DATA_TO_COLVAR" alt="" coords="679,887,918,914"/>
+<area shape="rect" id="node22" href="$class_p_l_m_d_1_1analysis_1_1_output_p_d_b_file.html" title="Provides the keyword OUTPUT_ANALYSIS_DATA_TO_PDB" alt="" coords="687,938,910,965"/>
+<area shape="rect" id="node23" href="$class_p_l_m_d_1_1analysis_1_1_print_dissimilarity_matrix.html" title="Provides the keyword PRINT_DISSIMILARITY_MATRIX" alt="" coords="677,989,920,1031"/>
+<area shape="rect" id="node24" href="$class_p_l_m_d_1_1analysis_1_1_read_analysis_frames.html" title="Provides the keyword COLLECT_FRAMES" alt="" coords="690,1055,907,1096"/>
+<area shape="rect" id="node25" href="$class_p_l_m_d_1_1analysis_1_1_read_dissimilarity_matrix.html" title="Provides the keyword READ_DISSIMILARITY_MATRIX" alt="" coords="676,1120,921,1161"/>
+<area shape="rect" id="node26" href="$class_p_l_m_d_1_1dimred_1_1_dimensionality_reduction_base.html" title=" " alt="" coords="689,1185,909,1227"/>
+<area shape="rect" id="node27" href="$class_p_l_m_d_1_1dimred_1_1_output_p_c_a_projection.html" title="Provides the keyword OUTPUT_PCA_PROJECTION" alt="" coords="671,1251,927,1278"/>
+<area shape="rect" id="node28" href="$class_p_l_m_d_1_1dimred_1_1_project_non_landmark_points.html" title="Provides the keyword PROJECT_ALL_ANALYSIS_DATA" alt="" coords="703,1303,895,1344"/>
+<area shape="rect" id="node30" href="$class_p_l_m_d_1_1colvar_1_1_angle.html" title="Provides the keyword ANGLE_SCALAR" alt="" coords="723,1369,875,1395"/>
+<area shape="rect" id="node31" href="$class_p_l_m_d_1_1colvar_1_1_cell.html" title="Provides the keyword CELL" alt="" coords="729,1419,869,1446"/>
+<area shape="rect" id="node32" href="$class_p_l_m_d_1_1colvar_1_1_colvar_fake.html" title="Provides the keyword FAKE" alt="" coords="705,1470,892,1497"/>
+<area shape="rect" id="node33" href="$class_p_l_m_d_1_1colvar_1_1_contact_map.html" title="Provides the keyword CONTACTMAP" alt="" coords="702,1521,895,1547"/>
+<area shape="rect" id="node34" href="$class_p_l_m_d_1_1colvar_1_1_coordination_base.html" title=" " alt="" coords="683,1571,914,1598"/>
+<area shape="rect" id="node35" href="$class_p_l_m_d_1_1colvar_1_1_dihedral_correlation.html" title="Provides the keyword DIHEDRAL_CORRELATION_SCALAR" alt="" coords="677,1622,920,1649"/>
+<area shape="rect" id="node36" href="$class_p_l_m_d_1_1colvar_1_1_dimer.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_d_i_m_e_r.html&quot;&gt; &quot;DIMER" alt="" coords="721,1673,876,1699"/>
+</map>

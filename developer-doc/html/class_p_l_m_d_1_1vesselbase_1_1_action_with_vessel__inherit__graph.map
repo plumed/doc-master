@@ -1,0 +1,28 @@
+<map id="PLMD::vesselbase::ActionWithVessel" name="PLMD::vesselbase::ActionWithVessel">
+<area shape="rect" id="node1" title=" " alt="" coords="161,337,351,379"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1analysis_1_1_analysis_base.html" title=" " alt="" coords="399,345,615,371"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,345,113,371"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1analysis_1_1_euclidean_dissimilarity_matrix.html" title="Provides the keyword EUCLIDEAN_DISSIMILARITIES" alt="" coords="695,71,887,112"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1analysis_1_1_landmark_selection_base.html" title=" " alt="" coords="693,136,888,177"/>
+<area shape="rect" id="node11" href="$class_p_l_m_d_1_1analysis_1_1_output_colvar_file.html" title="Provides the keyword OUTPUT_ANALYSIS_DATA_TO_COLVAR" alt="" coords="671,202,910,229"/>
+<area shape="rect" id="node12" href="$class_p_l_m_d_1_1analysis_1_1_output_p_d_b_file.html" title="Provides the keyword OUTPUT_ANALYSIS_DATA_TO_PDB" alt="" coords="679,253,902,279"/>
+<area shape="rect" id="node13" href="$class_p_l_m_d_1_1analysis_1_1_print_dissimilarity_matrix.html" title="Provides the keyword PRINT_DISSIMILARITY_MATRIX" alt="" coords="669,304,912,345"/>
+<area shape="rect" id="node14" href="$class_p_l_m_d_1_1analysis_1_1_read_analysis_frames.html" title="Provides the keyword COLLECT_FRAMES" alt="" coords="682,369,899,411"/>
+<area shape="rect" id="node15" href="$class_p_l_m_d_1_1analysis_1_1_read_dissimilarity_matrix.html" title="Provides the keyword READ_DISSIMILARITY_MATRIX" alt="" coords="668,435,913,476"/>
+<area shape="rect" id="node16" href="$class_p_l_m_d_1_1dimred_1_1_dimensionality_reduction_base.html" title=" " alt="" coords="681,500,901,541"/>
+<area shape="rect" id="node25" href="$class_p_l_m_d_1_1dimred_1_1_output_p_c_a_projection.html" title="Provides the keyword OUTPUT_PCA_PROJECTION" alt="" coords="663,566,919,593"/>
+<area shape="rect" id="node26" href="$class_p_l_m_d_1_1dimred_1_1_project_non_landmark_points.html" title="Provides the keyword PROJECT_ALL_ANALYSIS_DATA" alt="" coords="695,617,887,659"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1analysis_1_1_farthest_point_sampling.html" title="Provides the keyword LANDMARK_SELECT_FPS" alt="" coords="988,5,1169,47"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1analysis_1_1_landmark_staged.html" title="Provides the keyword LANDMARK_SELECT_STAGED" alt="" coords="981,71,1176,112"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1analysis_1_1_reselect_landmarks.html" title="Provides the keyword RESELECT_LANDMARKS" alt="" coords="986,136,1171,177"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1analysis_1_1_select_random_frames.html" title="Provides the keyword LANDMARK_SELECT_RANDOM" alt="" coords="967,201,1190,243"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1analysis_1_1_select_with_stride.html" title="Provides the keyword LANDMARK_SELECT_STRIDE" alt="" coords="979,267,1178,308"/>
+<area shape="rect" id="node17" href="$class_p_l_m_d_1_1dimred_1_1_classical_multi_dimensional_scaling.html" title="Provides the keyword CLASSICAL_MDS" alt="" coords="973,416,1185,457"/>
+<area shape="rect" id="node18" href="$class_p_l_m_d_1_1dimred_1_1_p_c_a.html" title="Provides the keyword PCA" alt="" coords="1005,482,1152,509"/>
+<area shape="rect" id="node19" href="$class_p_l_m_d_1_1dimred_1_1_sketch_map_base.html" title=" " alt="" coords="967,533,1191,559"/>
+<area shape="rect" id="node24" href="$class_p_l_m_d_1_1dimred_1_1_smacof_m_d_s.html" title="Provides the keyword SMACOF_MDS" alt="" coords="979,583,1179,610"/>
+<area shape="rect" id="node20" href="$class_p_l_m_d_1_1dimred_1_1_sketch_map_conj_grad.html" title="Provides the keyword SKETCHMAP_CONJGRAD" alt="" coords="1240,457,1492,483"/>
+<area shape="rect" id="node21" href="$class_p_l_m_d_1_1dimred_1_1_sketch_map_pointwise.html" title="Provides the keyword SKETCHMAP_POINTWISE" alt="" coords="1239,507,1493,534"/>
+<area shape="rect" id="node22" href="$class_p_l_m_d_1_1dimred_1_1_sketch_map_read.html" title="Provides the keyword SKETCHMAP_READ" alt="" coords="1253,558,1479,585"/>
+<area shape="rect" id="node23" href="$class_p_l_m_d_1_1dimred_1_1_sketch_map_smacof.html" title="Provides the keyword SKETCHMAP_SMACOF" alt="" coords="1245,609,1487,635"/>
+</map>

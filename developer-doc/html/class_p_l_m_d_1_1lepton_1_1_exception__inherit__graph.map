@@ -1,0 +1,7 @@
+<map id="PLMD::lepton::Exception" name="PLMD::lepton::Exception">
+<area shape="rect" id="node1" title="This class is used for all exceptions thrown by lepton." alt="" coords="194,80,374,107"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_exception_debug.html" title="Class representing a debug error (can only be thrown when using debug options)" alt="" coords="5,155,179,181"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_exception_error.html" title="Class representing a generic error." alt="" coords="203,155,365,181"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_exception_type_error.html" title="Class representing a type error in the PLMD::Plumed interface." alt="" coords="389,155,581,181"/>
+<area shape="rect" id="node2" title="STL class." alt="" coords="227,5,341,32"/>
+</map>

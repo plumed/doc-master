@@ -1,0 +1,13 @@
+<map id="PLMD::ReferenceAtoms" name="PLMD::ReferenceAtoms">
+<area shape="rect" id="node1" title=" " alt="" coords="273,56,448,83"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_direction.html" title=" " alt="" coords="531,5,658,32"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_multi_domain_r_m_s_d.html" title=" " alt="" coords="499,56,690,83"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_single_domain_r_m_s_d.html" title=" " alt="" coords="496,107,693,133"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_reference_configuration.html" title=" " alt="" coords="5,56,225,83"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_d_r_m_s_d.html" title=" " alt="" coords="753,81,869,108"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1_r_m_s_d_base.html" title=" " alt="" coords="741,132,880,159"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1_intermolecular_d_r_m_s_d.html" title=" " alt="" coords="928,31,1139,57"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1_intramolecular_d_r_m_s_d.html" title=" " alt="" coords="928,81,1139,108"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1_optimal_r_m_s_d.html" title=" " alt="" coords="954,132,1113,159"/>
+<area shape="rect" id="node11" href="$class_p_l_m_d_1_1_simple_r_m_s_d.html" title=" " alt="" coords="958,183,1109,209"/>
+</map>

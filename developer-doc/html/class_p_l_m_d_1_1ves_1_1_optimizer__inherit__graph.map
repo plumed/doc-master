@@ -1,0 +1,10 @@
+<map id="PLMD::ves::Optimizer" name="PLMD::ves::Optimizer">
+<area shape="rect" id="node1" title=" " alt="" coords="384,81,547,108"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1ves_1_1_opt___adam.html" title="Provides the keyword OPT_ADAM" alt="" coords="636,5,803,32"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1ves_1_1_opt___bach_averaged_s_g_d.html" title="Provides the keyword OPT_AVERAGED_SGD" alt="" coords="595,56,844,83"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1ves_1_1_opt___dummy.html" title="Provides the keyword OPT_DUMMY" alt="" coords="629,107,809,133"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1ves_1_1_opt___robbins_monro_s_g_d.html" title="Provides the keyword OPT_ROBBINS_MONRO_SGD" alt="" coords="595,157,844,184"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_action_pilot.html" title=" " alt="" coords="180,56,317,83"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,81,113,108"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="161,107,336,133"/>
+</map>

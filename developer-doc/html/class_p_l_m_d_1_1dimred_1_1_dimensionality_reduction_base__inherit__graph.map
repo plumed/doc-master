@@ -1,0 +1,18 @@
+<map id="PLMD::dimred::DimensionalityReductionBase" name="PLMD::dimred::DimensionalityReductionBase">
+<area shape="rect" id="node1" title=" " alt="" coords="683,99,903,141"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1dimred_1_1_classical_multi_dimensional_scaling.html" title="Provides the keyword CLASSICAL_MDS" alt="" coords="957,15,1169,57"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1dimred_1_1_p_c_a.html" title="Provides the keyword PCA" alt="" coords="989,81,1136,108"/>
+<area shape="rect" id="node11" href="$class_p_l_m_d_1_1dimred_1_1_sketch_map_base.html" title=" " alt="" coords="951,132,1175,159"/>
+<area shape="rect" id="node16" href="$class_p_l_m_d_1_1dimred_1_1_smacof_m_d_s.html" title="Provides the keyword SMACOF_MDS" alt="" coords="963,183,1163,209"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1analysis_1_1_analysis_base.html" title=" " alt="" coords="419,107,635,133"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_pilot.html" title=" " alt="" coords="197,5,335,32"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,107,113,133"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="179,56,353,83"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="181,107,351,133"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="161,157,371,184"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1vesselbase_1_1_action_with_vessel.html" title=" " alt="" coords="171,209,361,250"/>
+<area shape="rect" id="node12" href="$class_p_l_m_d_1_1dimred_1_1_sketch_map_conj_grad.html" title="Provides the keyword SKETCHMAP_CONJGRAD" alt="" coords="1224,56,1476,83"/>
+<area shape="rect" id="node13" href="$class_p_l_m_d_1_1dimred_1_1_sketch_map_pointwise.html" title="Provides the keyword SKETCHMAP_POINTWISE" alt="" coords="1223,107,1477,133"/>
+<area shape="rect" id="node14" href="$class_p_l_m_d_1_1dimred_1_1_sketch_map_read.html" title="Provides the keyword SKETCHMAP_READ" alt="" coords="1237,157,1463,184"/>
+<area shape="rect" id="node15" href="$class_p_l_m_d_1_1dimred_1_1_sketch_map_smacof.html" title="Provides the keyword SKETCHMAP_SMACOF" alt="" coords="1229,208,1471,235"/>
+</map>

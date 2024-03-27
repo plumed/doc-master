@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_p_l_m_d_1_1_with_cmd.html" title="Base for classes with cmd() method." alt="" coords="5,81,132,108"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_c_l_tool_main.html" title="Class providing cmd() access to command line tools." alt="" coords="191,5,331,32"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_g_r_e_x.html" title=" " alt="" coords="210,56,313,83"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_plumed_handle.html" title="Tiny local class to load a PLUMED kernel." alt="" coords="180,107,343,133"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_plumed_main.html" title="Main plumed object." alt="" coords="187,157,335,184"/>
+</map>

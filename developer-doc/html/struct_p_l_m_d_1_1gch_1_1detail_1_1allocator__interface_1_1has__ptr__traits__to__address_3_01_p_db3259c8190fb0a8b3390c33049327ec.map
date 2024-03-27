@@ -1,0 +1,4 @@
+<map id="PLMD::gch::detail::allocator_interface&lt; Allocator &gt;::has_ptr_traits_to_address&lt; P, void_t&lt; decltype(std::pointer_traits&lt; P &gt;::to_address(std::declval&lt; P &gt;()))&gt; &gt;" name="PLMD::gch::detail::allocator_interface&lt; Allocator &gt;::has_ptr_traits_to_address&lt; P, void_t&lt; decltype(std::pointer_traits&lt; P &gt;::to_address(std::declval&lt; P &gt;()))&gt; &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,221,195"/>
+<area shape="rect" id="node2" title=" " alt="" coords="71,5,155,32"/>
+</map>
