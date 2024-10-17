@@ -1,0 +1,8 @@
+<map id="PLMD::colvar::PropertyMap" name="PLMD::colvar::PropertyMap">
+<area shape="rect" id="node1" title="Provides the keyword PROPERTYMAP" alt="" coords="90,304,289,331"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1colvar_1_1_path_m_s_d_base.html" title=" " alt="" coords="87,229,292,256"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="135,155,244,181"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="5,80,176,107"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="135,5,243,32"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="201,80,375,107"/>
+</map>

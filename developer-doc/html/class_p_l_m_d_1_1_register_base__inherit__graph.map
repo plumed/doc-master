@@ -1,0 +1,8 @@
+<map id="PLMD::RegisterBase&lt; Content &gt;" name="PLMD::RegisterBase&lt; Content &gt;">
+<area shape="rect" id="node1" title="General register." alt="" coords="176,39,329,80"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="560,5,760,47"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="560,71,760,112"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_register.html" title="Base class, with type independent information." alt="" coords="5,46,127,73"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action_register.html" title="Register holding all the allowed keywords." alt="" coords="809,13,972,39"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_c_l_tool_register.html" title="Same as ActionRegister, but for CLTools." alt="" coords="809,78,972,105"/>
+</map>

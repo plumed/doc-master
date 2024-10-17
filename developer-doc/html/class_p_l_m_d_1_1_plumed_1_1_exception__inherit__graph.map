@@ -1,0 +1,8 @@
+<map id="PLMD::Plumed::Exception" name="PLMD::Plumed::Exception">
+<area shape="rect" id="node1" title="Base class used to rethrow PLUMED exceptions." alt="" coords="168,85,356,112"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_plumed_1_1_exception_debug.html" title="Used to rethrow a PLMD::ExceptionDebug." alt="" coords="404,5,635,32"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_plumed_1_1_exception_error.html" title="Used to rethrow a PLMD::ExceptionError." alt="" coords="410,56,629,83"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_plumed_1_1_exception_type_error.html" title="Thrown when a wrong pointer is passed to the PLUMED interface." alt="" coords="410,107,629,149"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_plumed_1_1_invalid.html" title="Thrown when trying to access an invalid plumed object." alt="" coords="435,173,603,200"/>
+<area shape="rect" id="node2" title="STL class." alt="" coords="5,85,120,112"/>
+</map>

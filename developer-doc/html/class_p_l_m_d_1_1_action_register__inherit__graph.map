@@ -1,0 +1,6 @@
+<map id="PLMD::ActionRegister" name="PLMD::ActionRegister">
+<area shape="rect" id="node1" title="Register holding all the allowed keywords." alt="" coords="24,276,187,303"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="5,185,205,227"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_register.html" title="Base class, with type independent information." alt="" coords="39,5,161,32"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_register_base.html" title="General register." alt="" coords="122,81,275,123"/>
+</map>

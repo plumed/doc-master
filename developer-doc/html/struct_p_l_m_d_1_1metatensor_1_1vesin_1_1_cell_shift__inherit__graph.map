@@ -1,0 +1,4 @@
+<map id="PLMD::metatensor::vesin::CellShift" name="PLMD::metatensor::vesin::CellShift">
+<area shape="rect" id="node1" title="A cell shift represents the displacement along cell axis between the actual position of an atom and a..." alt="" coords="5,80,191,121"/>
+<area shape="rect" id="node2" title="STL class." alt="" coords="11,5,185,32"/>
+</map>

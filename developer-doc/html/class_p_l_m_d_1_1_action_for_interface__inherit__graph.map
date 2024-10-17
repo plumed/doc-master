@@ -1,0 +1,9 @@
+<map id="PLMD::ActionForInterface" name="PLMD::ActionForInterface">
+<area shape="rect" id="node1" title=" " alt="" coords="185,155,372,181"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action_to_put_data.html" title="Provides the keyword PUT" alt="" coords="82,229,257,256"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1_domain_decomposition.html" title=" " alt="" coords="281,229,497,256"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="191,80,366,107"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="225,5,333,32"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1colvar_1_1_energy.html" title="Provides the keyword ENERGY" alt="" coords="5,304,165,331"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1_pbc_action.html" title="Provides the keyword PBC" alt="" coords="189,304,320,331"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="PLMD::CLToolMain" name="PLMD::CLToolMain">
+<area shape="rect" id="node1" title="Class providing cmd() access to command line tools." alt="" coords="5,80,145,107"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_with_cmd.html" title="Base for classes with cmd() method." alt="" coords="12,5,139,32"/>
+</map>
