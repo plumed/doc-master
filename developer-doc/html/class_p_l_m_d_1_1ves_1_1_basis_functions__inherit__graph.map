@@ -1,0 +1,15 @@
+<map id="PLMD::ves::BasisFunctions" name="PLMD::ves::BasisFunctions">
+<area shape="rect" id="node1" title=" " alt="" coords="161,259,356,285"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1ves_1_1_b_f___chebyshev.html" title="Provides the keyword BF_CHEBYSHEV" alt="" coords="413,5,608,32"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1ves_1_1_b_f___combined.html" title="Provides the keyword BF_COMBINED" alt="" coords="417,56,605,83"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1ves_1_1_b_f___cosine.html" title="Provides the keyword BF_COSINE" alt="" coords="427,107,594,133"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1ves_1_1_b_f___cubic_bsplines.html" title="Provides the keyword BF_CUBIC_B_SPLINES" alt="" coords="404,157,617,184"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1ves_1_1_b_f___custom.html" title="Provides the keyword BF_CUSTOM" alt="" coords="425,208,597,235"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1ves_1_1_b_f___fourier.html" title="Provides the keyword BF_FOURIER" alt="" coords="427,259,594,285"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1ves_1_1_b_f___gaussians.html" title="Provides the keyword BF_GAUSSIANS" alt="" coords="416,309,605,336"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1ves_1_1_b_f___legendre.html" title="Provides the keyword BF_LEGENDRE" alt="" coords="419,360,602,387"/>
+<area shape="rect" id="node11" href="$class_p_l_m_d_1_1ves_1_1_b_f___powers.html" title="Provides the keyword BF_POWERS" alt="" coords="426,411,595,437"/>
+<area shape="rect" id="node12" href="$class_p_l_m_d_1_1ves_1_1_b_f___sine.html" title="Provides the keyword BF_SINE" alt="" coords="435,461,586,488"/>
+<area shape="rect" id="node13" href="$class_p_l_m_d_1_1ves_1_1_b_f___wavelets.html" title="Provides the keyword BF_WAVELETS" alt="" coords="419,512,602,539"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,259,113,285"/>
+</map>

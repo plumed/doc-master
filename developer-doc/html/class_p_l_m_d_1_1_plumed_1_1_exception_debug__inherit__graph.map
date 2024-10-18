@@ -1,0 +1,5 @@
+<map id="PLMD::Plumed::ExceptionDebug" name="PLMD::Plumed::ExceptionDebug">
+<area shape="rect" id="node1" title="Used to rethrow a PLMD::ExceptionDebug." alt="" coords="5,155,236,181"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_plumed_1_1_exception.html" title="Base class used to rethrow PLUMED exceptions." alt="" coords="27,80,215,107"/>
+<area shape="rect" id="node3" title="STL class." alt="" coords="63,5,178,32"/>
+</map>

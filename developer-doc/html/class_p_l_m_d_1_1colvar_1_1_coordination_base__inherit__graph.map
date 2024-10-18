@@ -1,0 +1,10 @@
+<map id="PLMD::colvar::CoordinationBase" name="PLMD::colvar::CoordinationBase">
+<area shape="rect" id="node1" title=" " alt="" coords="203,229,433,256"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1colvar_1_1_coordination.html" title="Provides the keyword COORDINATION" alt="" coords="5,304,204,331"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1colvar_1_1_d_h_energy.html" title="Provides the keyword DHENERGY" alt="" coords="228,304,408,331"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1colvar_1_1_g_h_b_f_i_x.html" title="Provides the keyword GHBFIX" alt="" coords="433,304,598,331"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="263,155,373,181"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="134,80,305,107"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="264,5,372,32"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="329,80,504,107"/>
+</map>

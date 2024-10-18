@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title="STL class." alt="" coords="5,78,128,105"/>
+<area shape="rect" id="node2" href="$struct_p_l_m_d_1_1metatensor_1_1vesin_1_1_cell_shift.html" title="A cell shift represents the displacement along cell axis between the actual position of an atom and a..." alt="" coords="176,5,361,47"/>
+<area shape="rect" id="node3" href="$struct_p_l_m_d_1_1metatensor_1_1vesin_1_1_matrix.html" title=" " alt="" coords="176,71,361,112"/>
+<area shape="rect" id="node4" href="$struct_p_l_m_d_1_1metatensor_1_1vesin_1_1_vector.html" title=" " alt="" coords="176,136,361,177"/>
+</map>

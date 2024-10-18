@@ -1,0 +1,12 @@
+<map id="PLMD::maze::Optimizer" name="PLMD::maze::Optimizer">
+<area shape="rect" id="node1" title="Base class for implementing optimizers for ligand unbinding." alt="" coords="541,123,716,149"/>
+<area shape="rect" id="node6" href="$class_p_l_m_d_1_1maze_1_1_memetic.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__m_e_m_e_t_i_c__s_a_m_p_l_i_n_g...." alt="" coords="782,5,950,32"/>
+<area shape="rect" id="node7" href="$class_p_l_m_d_1_1maze_1_1_random___acceleration___m_d.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__r_a_n_d_o_m__a_c_c_e_l_e_r_a_t_i_o_n__m..." alt="" coords="783,57,949,98"/>
+<area shape="rect" id="node8" href="$class_p_l_m_d_1_1maze_1_1_random___walk.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__r_a_n_d_o_m__w_a_l_k...." alt="" coords="764,123,968,149"/>
+<area shape="rect" id="node9" href="$class_p_l_m_d_1_1maze_1_1_simulated___annealing.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__s_i_m_u_l_a_t_e_d__a_n_n_e_a_l_i_n_g...." alt="" coords="777,174,955,215"/>
+<area shape="rect" id="node10" href="$class_p_l_m_d_1_1maze_1_1_steered___m_d.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__s_t_e_e_r_e_d__m_d.html&quot;&gt; &quot;MAZE_STEERED..." alt="" coords="771,240,961,267"/>
+<area shape="rect" id="node2" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="384,123,493,149"/>
+<area shape="rect" id="node3" href="$class_p_l_m_d_1_1_action_atomistic.html" title=" " alt="" coords="163,97,334,124"/>
+<area shape="rect" id="node4" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,123,113,149"/>
+<area shape="rect" id="node5" href="$class_p_l_m_d_1_1_action_with_value.html" title=" " alt="" coords="161,148,336,175"/>
+</map>
