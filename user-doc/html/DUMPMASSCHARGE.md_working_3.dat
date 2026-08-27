@@ -1,0 +1,3 @@
+solute_ions: GROUP ATOMS=1-121,200-2012
+DUMPATOMS FILE=traj.gro ATOMS=solute_ions STRIDE=100
+DUMPMASSCHARGE FILE=mcfile ATOMS=solute_ions

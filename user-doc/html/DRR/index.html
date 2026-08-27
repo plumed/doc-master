@@ -1,0 +1,1141 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: DRR - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-drr" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: DRR
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-drr"><a href="../actions/">Action</a>: DRR</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_drr/"><strong>drr</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Used to performed extended-system adaptive biasing force (eABF)</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><a href="https://www.plumed-nest.org/browse.html?action=DRR"><img alt="used in 6 eggs" src="https://img.shields.io/badge/nest-6-green.svg" /></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Used to performed extended-system adaptive biasing force (eABF)</p>
+<p>This method was introduced in the first paper cited below.  It is used
+ on one or more collective variables. This method is also
+ called dynamic reference restraining(DRR) as in the second paper cited below. A detailed description
+ of this module can be found in the third paper cited below.</p>
+<p>For each collective variable <script type="math/tex">\xi_i</script>, a fictitious variable <script type="math/tex">\lambda_i</script>
+is attached through a spring. The fictitious variable <script type="math/tex">\lambda_i</script> undergoes
+overdamped Langevin dynamics just like <a href="../EXTENDED_LAGRANGIAN/">EXTENDED_LAGRANGIAN</a>. The ABF
+algorithm applies bias force on <script type="math/tex">\lambda_i</script>. The bias force acts on
+<script type="math/tex">\lambda_i</script> is the negative average spring force on <script type="math/tex">\lambda_i</script>, which
+enhances the sampling of <script type="math/tex">\lambda_i</script>.</p>
+<p>
+<script type="math/tex; mode=display">
+F_{bias}(\lambda_i)=k(\lambda_i-\langle\xi_i\rangle_{\lambda_i})
+</script>
+</p>
+<p>If spring force constant k is large enough, then <script type="math/tex">\xi_i</script> synchronizes with
+<script type="math/tex">\lambda_i</script>. The naive(ABF) estimator is just the negative
+average spring force of <script type="math/tex">\lambda_i</script>.</p>
+<p>The naive(ABF) estimator is biased. There are unbiased estimators such as
+CZAR(Corrected z-averaged restraint) discussed in the fourth paper cited below and UI(Umbrella
+Integration).
+The CZAR estimates the gradients as:</p>
+<p>
+<script type="math/tex; mode=display">
+\frac{\partial{A}}{\partial{\xi_i}}\left({\xi}\right)=-\frac{1}{\beta}\frac{\partial\ln\tilde{\rho}\left(\xi\right)}{\partial{\xi_i}}+k\left(\langle\lambda_i\rangle_\xi-\xi_i\right)
+</script>
+</p>
+<p>The UI estimates the gradients as:</p>
+<p>
+<script type="math/tex; mode=display">
+A'(\xi^*)=\frac{{\sum_\lambda}N\left(\xi^*,\lambda\right)\left[\frac{\xi^*-\langle\xi\rangle_\lambda}{\beta\sigma_\lambda^2}-k(\xi^*-\lambda)\right]}{{\sum_\lambda}N\left(\xi^*,\lambda\right)}
+</script>
+</p>
+<p>The code performing UI(colvar_UIestimator.h) is contributed by Haohao Fu (see fifth paper cited below).
+It may be slow. I only change the Boltzmann constant and output
+precision in it. For new version and issues, please see:
+https://github.com/fhh2626/colvars</p>
+<p>After running eABF/DRR, the <a href="../drr_tool/">drr_tool</a> utility can be used to extract the gradients and counts files from .drrstate.
+Naive(ABF) estimator's result is in .abf.grad and .abf.count files and CZAR estimator's result is in .czar.grad and .czar.count files.
+The additional .zcount and .zgrad files contain the number of samples of <script type="math/tex">\boldsymbol{\xi}</script>, and the negative of <script type="math/tex">\boldsymbol{\xi}</script>-averaged
+spring forces, respectively, which are mainly for inspecting and debugging purpose. To get PMF, the abf_integrate(https://github.com/Colvars/colvars/tree/master/colvartools) is useful for numerically integrating the .czar.grad file.</p>
+<h2 id="examples">Examples</h2>
+<p>The following input tells plumed to perform a eABF/DRR simulation on two
+torsional angles.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DRR.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DRR.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="DRR.md_working_1.datphi" onclick='showPath("DRR.md_working_1.dat","DRR.md_working_1.datphi","DRR.md_working_1.datphi","black")'>phi</b><span style="display:none;" id="DRR.md_working_1.datphi">The TORSION action with label <b>phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">phi</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=5,7,9,15
+<b name="DRR.md_working_1.datpsi" onclick='showPath("DRR.md_working_1.dat","DRR.md_working_1.datpsi","DRR.md_working_1.datpsi","black")'>psi</b><span style="display:none;" id="DRR.md_working_1.datpsi">The TORSION action with label <b>psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">psi</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=7,9,15,17
+
+<span id="DRR.md_working_1.datdefeabf_short"><span class="plumedtooltip" style="color:green">DRR<span class="right">Used to performed extended-system adaptive biasing force (eABF) This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("DRR.md_working_1.datdefeabf");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DRR">More details</a><i></i></span></span> ...
+<span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="DRR.md_working_1.dateabf" onclick='showPath("DRR.md_working_1.dat","DRR.md_working_1.dateabf","DRR.md_working_1.dateabf","black")'>eabf</b><span style="display:none;" id="DRR.md_working_1.dateabf">The DRR action with label <b>eabf</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">eabf.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">eabf.phi_fict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is possible to add forces on these variable. This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">eabf.phi_vfict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is NOT possible to add forces on these variable. This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">eabf.phi_biasforce</td><td width="5%"><font color="black">scalar</font></td><td>The bias force from eABF/DRR of the fictitious particle. This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">eabf.phi_springforce</td><td width="5%"><font color="black">scalar</font></td><td>Spring force between real CVs and extended CVs This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">eabf.phi_fictNoPBC</td><td width="5%"><font color="black">scalar</font></td><td>the positions of fictitious particles (without PBC). This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">eabf.psi_fict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is possible to add forces on these variable. This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">eabf.psi_vfict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is NOT possible to add forces on these variable. This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">eabf.psi_biasforce</td><td width="5%"><font color="black">scalar</font></td><td>The bias force from eABF/DRR of the fictitious particle. This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">eabf.psi_springforce</td><td width="5%"><font color="black">scalar</font></td><td>Spring force between real CVs and extended CVs This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">eabf.psi_fictNoPBC</td><td width="5%"><font color="black">scalar</font></td><td>the positions of fictitious particles (without PBC). This particular component measures this quantity for the input CV named psi</td></tr></table></span>
+<span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="DRR.md_working_1.datphi">phi</b>,<b name="DRR.md_working_1.datpsi">psi</b>
+<span class="plumedtooltip">FULLSAMPLES<span class="right"> number of samples in a bin prior to application of the ABF<i></i></span></span>=500
+<span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=-pi,-pi
+<span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=pi,pi
+<span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=180,180
+<span class="plumedtooltip">FRICTION<span class="right"> add a friction to the variable, similar to extended Langevin Damping in Colvars<i></i></span></span>=8.0,8.0
+<span class="plumedtooltip">TAU<span class="right"> specifies relaxation time on each of variables are, similar to extended Time Constant in Colvars<i></i></span></span>=0.5,0.5
+<span class="plumedtooltip">OUTPUTFREQ<span class="right">write results to a file every N steps<i></i></span></span>=50000
+<span class="plumedtooltip">HISTORYFREQ<span class="right">save history to a file every N steps<i></i></span></span>=500000
+... DRR
+</span><span id="DRR.md_working_1.datdefeabf_long" style="display:none;"><span class="plumedtooltip" style="color:green">DRR<span class="right">Used to performed extended-system adaptive biasing force (eABF) This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("DRR.md_working_1.datdefeabf");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DRR">More details</a><i></i></span></span> ...
+<span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="DRR.md_working_1.dateabf" onclick='showPath("DRR.md_working_1.dat","DRR.md_working_1.dateabf","DRR.md_working_1.dateabf","black")'>eabf</b>
+<span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="DRR.md_working_1.datphi">phi</b>,<b name="DRR.md_working_1.datpsi">psi</b>
+<span class="plumedtooltip">FULLSAMPLES<span class="right"> number of samples in a bin prior to application of the ABF<i></i></span></span>=500
+<span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=-pi,-pi
+<span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=pi,pi
+<span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=180,180
+<span class="plumedtooltip">FRICTION<span class="right"> add a friction to the variable, similar to extended Langevin Damping in Colvars<i></i></span></span>=8.0,8.0
+<span class="plumedtooltip">TAU<span class="right"> specifies relaxation time on each of variables are, similar to extended Time Constant in Colvars<i></i></span></span>=0.5,0.5
+<span class="plumedtooltip">OUTPUTFREQ<span class="right">write results to a file every N steps<i></i></span></span>=50000
+<span class="plumedtooltip">HISTORYFREQ<span class="right">save history to a file every N steps<i></i></span></span>=500000
+ <span class="plumedtooltip">REFLECTINGWALL<span class="right"> whether add reflecting walls for each CV at GRID_MIN and GRID_MAX<i></i></span></span>=0,0 <span class="plumedtooltip">MAXFACTOR<span class="right"> maximum scaling factor of biasing force<i></i></span></span>=1.0,1.0
+... DRR
+</span><br/><span style="color:blue" class="comment"># monitor the two variables, their fictitious variables and applied forces.</span>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=10 <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DRR.md_working_1.datphi">phi</b>,<b name="DRR.md_working_1.datpsi">psi</b>,<b name="DRR.md_working_1.dateabf">eabf.phi_fict</b>,<b name="DRR.md_working_1.dateabf">eabf.psi_fict</b>,<b name="DRR.md_working_1.dateabf">eabf.phi_biasforce</b>,<b name="DRR.md_working_1.dateabf">eabf.psi_biasforce</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<p>The following input tells plumed to perform a eABF/DRR simulation on the
+distance of atom 10 and 92. The distance is restraint by <a href="../LOWER_WALLS/">LOWER_WALLS</a> and
+<a href="../UPPER_WALLS/">UPPER_WALLS</a>.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DRR.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DRR.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="DRR.md_working_2.datdist1" onclick='showPath("DRR.md_working_2.dat","DRR.md_working_2.datdist1","DRR.md_working_2.datdist1","black")'>dist1</b><span style="display:none;" id="DRR.md_working_2.datdist1">The DISTANCE action with label <b>dist1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dist1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=10,92
+<span id="DRR.md_working_2.datdefeabf_winall_short"><b name="DRR.md_working_2.dateabf_winall" onclick='showPath("DRR.md_working_2.dat","DRR.md_working_2.dateabf_winall","DRR.md_working_2.dateabf_winall","black")'>eabf_winall</b><span style="display:none;" id="DRR.md_working_2.dateabf_winall">The DRR action with label <b>eabf_winall</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">eabf_winall.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">eabf_winall.dist1_fict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is possible to add forces on these variable. This particular component measures this quantity for the input CV named dist1</td></tr><tr><td width="5%">eabf_winall.dist1_vfict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is NOT possible to add forces on these variable. This particular component measures this quantity for the input CV named dist1</td></tr><tr><td width="5%">eabf_winall.dist1_biasforce</td><td width="5%"><font color="black">scalar</font></td><td>The bias force from eABF/DRR of the fictitious particle. This particular component measures this quantity for the input CV named dist1</td></tr><tr><td width="5%">eabf_winall.dist1_springforce</td><td width="5%"><font color="black">scalar</font></td><td>Spring force between real CVs and extended CVs This particular component measures this quantity for the input CV named dist1</td></tr><tr><td width="5%">eabf_winall.dist1_fictNoPBC</td><td width="5%"><font color="black">scalar</font></td><td>the positions of fictitious particles (without PBC). This particular component measures this quantity for the input CV named dist1</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DRR<span class="right">Used to performed extended-system adaptive biasing force (eABF) This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("DRR.md_working_2.datdefeabf_winall");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DRR">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="DRR.md_working_2.datdist1">dist1</b> <span class="plumedtooltip">FULLSAMPLES<span class="right"> number of samples in a bin prior to application of the ABF<i></i></span></span>=2000 <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=1.20 <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=3.20 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=200 <span class="plumedtooltip">FRICTION<span class="right"> add a friction to the variable, similar to extended Langevin Damping in Colvars<i></i></span></span>=8.0 <span class="plumedtooltip">TAU<span class="right"> specifies relaxation time on each of variables are, similar to extended Time Constant in Colvars<i></i></span></span>=0.5 <span class="plumedtooltip">OUTPUTFREQ<span class="right">write results to a file every N steps<i></i></span></span>=5000 <span class="plumedtooltip">HISTORYFREQ<span class="right">save history to a file every N steps<i></i></span></span>=500000
+</span><span id="DRR.md_working_2.datdefeabf_winall_long" style="display:none;"><b name="DRR.md_working_2.dateabf_winall" onclick='showPath("DRR.md_working_2.dat","DRR.md_working_2.dateabf_winall","DRR.md_working_2.dateabf_winall","black")'>eabf_winall</b>: <span class="plumedtooltip" style="color:green">DRR<span class="right">Used to performed extended-system adaptive biasing force (eABF) This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("DRR.md_working_2.datdefeabf_winall");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DRR">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="DRR.md_working_2.datdist1">dist1</b> <span class="plumedtooltip">FULLSAMPLES<span class="right"> number of samples in a bin prior to application of the ABF<i></i></span></span>=2000 <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=1.20 <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=3.20 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=200 <span class="plumedtooltip">FRICTION<span class="right"> add a friction to the variable, similar to extended Langevin Damping in Colvars<i></i></span></span>=8.0 <span class="plumedtooltip">TAU<span class="right"> specifies relaxation time on each of variables are, similar to extended Time Constant in Colvars<i></i></span></span>=0.5 <span class="plumedtooltip">OUTPUTFREQ<span class="right">write results to a file every N steps<i></i></span></span>=5000 <span class="plumedtooltip">HISTORYFREQ<span class="right">save history to a file every N steps<i></i></span></span>=500000  <span class="plumedtooltip">REFLECTINGWALL<span class="right"> whether add reflecting walls for each CV at GRID_MIN and GRID_MAX<i></i></span></span>=0 <span class="plumedtooltip">MAXFACTOR<span class="right"> maximum scaling factor of biasing force<i></i></span></span>=1.0
+</span><b name="DRR.md_working_2.datuwall" onclick='showPath("DRR.md_working_2.dat","DRR.md_working_2.datuwall","DRR.md_working_2.datuwall","black")'>uwall</b><span style="display:none;" id="DRR.md_working_2.datuwall">The UPPER_WALLS action with label <b>uwall</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">uwall.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">uwall.force2</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the squared force due to this bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">UPPER_WALLS<span class="right">Defines a wall for the value of one or more collective variables, <a href="https://www.plumed.org/doc-master/user-doc/html/UPPER_WALLS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the arguments on which the bias is acting<i></i></span></span>=<b name="DRR.md_working_2.dateabf_winall">eabf_winall.dist1_fict</b> <span class="plumedtooltip">AT<span class="right">the positions of the wall<i></i></span></span>=3.2 <span class="plumedtooltip">KAPPA<span class="right">the force constant for the wall<i></i></span></span>=418.4
+<b name="DRR.md_working_2.datlwall" onclick='showPath("DRR.md_working_2.dat","DRR.md_working_2.datlwall","DRR.md_working_2.datlwall","black")'>lwall</b><span style="display:none;" id="DRR.md_working_2.datlwall">The LOWER_WALLS action with label <b>lwall</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lwall.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">lwall.force2</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the squared force due to this bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LOWER_WALLS<span class="right">Defines a wall for the value of one or more collective variables, <a href="https://www.plumed.org/doc-master/user-doc/html/LOWER_WALLS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the arguments on which the bias is acting<i></i></span></span>=<b name="DRR.md_working_2.dateabf_winall">eabf_winall.dist1_fict</b> <span class="plumedtooltip">AT<span class="right">the positions of the wall<i></i></span></span>=1.2 <span class="plumedtooltip">KAPPA<span class="right">the force constant for the wall<i></i></span></span>=418.4
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=10 <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DRR.md_working_2.datdist1">dist1</b>,<b name="DRR.md_working_2.dateabf_winall">eabf_winall.dist1_fict</b>,<b name="DRR.md_working_2.dateabf_winall">eabf_winall.dist1_biasforce</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<p>It's also possible to run extended generalized adaptive biasing force (egABF) described in the sixth paper cited below.
+An egABF example:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DRR.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DRR.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="DRR.md_working_3.datphi" onclick='showPath("DRR.md_working_3.dat","DRR.md_working_3.datphi","DRR.md_working_3.datphi","black")'>phi</b><span style="display:none;" id="DRR.md_working_3.datphi">The TORSION action with label <b>phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">phi</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=5,7,9,15
+<b name="DRR.md_working_3.datpsi" onclick='showPath("DRR.md_working_3.dat","DRR.md_working_3.datpsi","DRR.md_working_3.datpsi","black")'>psi</b><span style="display:none;" id="DRR.md_working_3.datpsi">The TORSION action with label <b>psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">psi</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=7,9,15,17
+
+<span id="DRR.md_working_3.datdefgabf_phi_short"><span class="plumedtooltip" style="color:green">DRR<span class="right">Used to performed extended-system adaptive biasing force (eABF) This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("DRR.md_working_3.datdefgabf_phi");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DRR">More details</a><i></i></span></span> ...
+<span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="DRR.md_working_3.datgabf_phi" onclick='showPath("DRR.md_working_3.dat","DRR.md_working_3.datgabf_phi","DRR.md_working_3.datgabf_phi","black")'>gabf_phi</b><span style="display:none;" id="DRR.md_working_3.datgabf_phi">The DRR action with label <b>gabf_phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">gabf_phi.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">gabf_phi.phi_fict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is possible to add forces on these variable. This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">gabf_phi.phi_vfict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is NOT possible to add forces on these variable. This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">gabf_phi.phi_biasforce</td><td width="5%"><font color="black">scalar</font></td><td>The bias force from eABF/DRR of the fictitious particle. This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">gabf_phi.phi_springforce</td><td width="5%"><font color="black">scalar</font></td><td>Spring force between real CVs and extended CVs This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">gabf_phi.phi_fictNoPBC</td><td width="5%"><font color="black">scalar</font></td><td>the positions of fictitious particles (without PBC). This particular component measures this quantity for the input CV named phi</td></tr></table></span>
+<span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="DRR.md_working_3.datphi">phi</b>
+<span class="plumedtooltip">FULLSAMPLES<span class="right"> number of samples in a bin prior to application of the ABF<i></i></span></span>=500
+<span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=-pi
+<span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=pi
+<span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=180
+<span class="plumedtooltip">FRICTION<span class="right"> add a friction to the variable, similar to extended Langevin Damping in Colvars<i></i></span></span>=8.0
+<span class="plumedtooltip">TAU<span class="right"> specifies relaxation time on each of variables are, similar to extended Time Constant in Colvars<i></i></span></span>=0.5
+<span class="plumedtooltip">OUTPUTFREQ<span class="right">write results to a file every N steps<i></i></span></span>=50000
+<span class="plumedtooltip">HISTORYFREQ<span class="right">save history to a file every N steps<i></i></span></span>=500000
+... DRR
+</span><span id="DRR.md_working_3.datdefgabf_phi_long" style="display:none;"><span class="plumedtooltip" style="color:green">DRR<span class="right">Used to performed extended-system adaptive biasing force (eABF) This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("DRR.md_working_3.datdefgabf_phi");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DRR">More details</a><i></i></span></span> ...
+<span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="DRR.md_working_3.datgabf_phi" onclick='showPath("DRR.md_working_3.dat","DRR.md_working_3.datgabf_phi","DRR.md_working_3.datgabf_phi","black")'>gabf_phi</b>
+<span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="DRR.md_working_3.datphi">phi</b>
+<span class="plumedtooltip">FULLSAMPLES<span class="right"> number of samples in a bin prior to application of the ABF<i></i></span></span>=500
+<span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=-pi
+<span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=pi
+<span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=180
+<span class="plumedtooltip">FRICTION<span class="right"> add a friction to the variable, similar to extended Langevin Damping in Colvars<i></i></span></span>=8.0
+<span class="plumedtooltip">TAU<span class="right"> specifies relaxation time on each of variables are, similar to extended Time Constant in Colvars<i></i></span></span>=0.5
+<span class="plumedtooltip">OUTPUTFREQ<span class="right">write results to a file every N steps<i></i></span></span>=50000
+<span class="plumedtooltip">HISTORYFREQ<span class="right">save history to a file every N steps<i></i></span></span>=500000
+ <span class="plumedtooltip">REFLECTINGWALL<span class="right"> whether add reflecting walls for each CV at GRID_MIN and GRID_MAX<i></i></span></span>=0 <span class="plumedtooltip">MAXFACTOR<span class="right"> maximum scaling factor of biasing force<i></i></span></span>=1.0
+... DRR
+</span><br/><span id="DRR.md_working_3.datdefgabf_psi_short"><span class="plumedtooltip" style="color:green">DRR<span class="right">Used to performed extended-system adaptive biasing force (eABF) This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("DRR.md_working_3.datdefgabf_psi");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DRR">More details</a><i></i></span></span> ...
+<span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="DRR.md_working_3.datgabf_psi" onclick='showPath("DRR.md_working_3.dat","DRR.md_working_3.datgabf_psi","DRR.md_working_3.datgabf_psi","black")'>gabf_psi</b><span style="display:none;" id="DRR.md_working_3.datgabf_psi">The DRR action with label <b>gabf_psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">gabf_psi.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">gabf_psi.psi_fict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is possible to add forces on these variable. This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">gabf_psi.psi_vfict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is NOT possible to add forces on these variable. This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">gabf_psi.psi_biasforce</td><td width="5%"><font color="black">scalar</font></td><td>The bias force from eABF/DRR of the fictitious particle. This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">gabf_psi.psi_springforce</td><td width="5%"><font color="black">scalar</font></td><td>Spring force between real CVs and extended CVs This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">gabf_psi.psi_fictNoPBC</td><td width="5%"><font color="black">scalar</font></td><td>the positions of fictitious particles (without PBC). This particular component measures this quantity for the input CV named psi</td></tr></table></span>
+<span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="DRR.md_working_3.datpsi">psi</b>
+<span class="plumedtooltip">FULLSAMPLES<span class="right"> number of samples in a bin prior to application of the ABF<i></i></span></span>=500
+<span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=-pi
+<span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=pi
+<span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=180
+<span class="plumedtooltip">FRICTION<span class="right"> add a friction to the variable, similar to extended Langevin Damping in Colvars<i></i></span></span>=8.0
+<span class="plumedtooltip">TAU<span class="right"> specifies relaxation time on each of variables are, similar to extended Time Constant in Colvars<i></i></span></span>=0.5
+<span class="plumedtooltip">OUTPUTFREQ<span class="right">write results to a file every N steps<i></i></span></span>=50000
+<span class="plumedtooltip">HISTORYFREQ<span class="right">save history to a file every N steps<i></i></span></span>=500000
+... DRR
+</span><span id="DRR.md_working_3.datdefgabf_psi_long" style="display:none;"><span class="plumedtooltip" style="color:green">DRR<span class="right">Used to performed extended-system adaptive biasing force (eABF) This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("DRR.md_working_3.datdefgabf_psi");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DRR">More details</a><i></i></span></span> ...
+<span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="DRR.md_working_3.datgabf_psi" onclick='showPath("DRR.md_working_3.dat","DRR.md_working_3.datgabf_psi","DRR.md_working_3.datgabf_psi","black")'>gabf_psi</b>
+<span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="DRR.md_working_3.datpsi">psi</b>
+<span class="plumedtooltip">FULLSAMPLES<span class="right"> number of samples in a bin prior to application of the ABF<i></i></span></span>=500
+<span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=-pi
+<span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=pi
+<span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=180
+<span class="plumedtooltip">FRICTION<span class="right"> add a friction to the variable, similar to extended Langevin Damping in Colvars<i></i></span></span>=8.0
+<span class="plumedtooltip">TAU<span class="right"> specifies relaxation time on each of variables are, similar to extended Time Constant in Colvars<i></i></span></span>=0.5
+<span class="plumedtooltip">OUTPUTFREQ<span class="right">write results to a file every N steps<i></i></span></span>=50000
+<span class="plumedtooltip">HISTORYFREQ<span class="right">save history to a file every N steps<i></i></span></span>=500000
+ <span class="plumedtooltip">REFLECTINGWALL<span class="right"> whether add reflecting walls for each CV at GRID_MIN and GRID_MAX<i></i></span></span>=0 <span class="plumedtooltip">MAXFACTOR<span class="right"> maximum scaling factor of biasing force<i></i></span></span>=1.0
+... DRR
+</span><br/><span id="DRR.md_working_3.datdefgabf_2d_short"><span class="plumedtooltip" style="color:green">DRR<span class="right">Used to performed extended-system adaptive biasing force (eABF) This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("DRR.md_working_3.datdefgabf_2d");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DRR">More details</a><i></i></span></span> ...
+<span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="DRR.md_working_3.datgabf_2d" onclick='showPath("DRR.md_working_3.dat","DRR.md_working_3.datgabf_2d","DRR.md_working_3.datgabf_2d","black")'>gabf_2d</b><span style="display:none;" id="DRR.md_working_3.datgabf_2d">The DRR action with label <b>gabf_2d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">gabf_2d.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">gabf_2d.phi_fict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is possible to add forces on these variable. This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">gabf_2d.phi_vfict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is NOT possible to add forces on these variable. This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">gabf_2d.phi_biasforce</td><td width="5%"><font color="black">scalar</font></td><td>The bias force from eABF/DRR of the fictitious particle. This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">gabf_2d.phi_springforce</td><td width="5%"><font color="black">scalar</font></td><td>Spring force between real CVs and extended CVs This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">gabf_2d.phi_fictNoPBC</td><td width="5%"><font color="black">scalar</font></td><td>the positions of fictitious particles (without PBC). This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">gabf_2d.psi_fict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is possible to add forces on these variable. This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">gabf_2d.psi_vfict</td><td width="5%"><font color="black">scalar</font></td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file. These quantities will named with the arguments of the bias followed by the character string _tilde. It is NOT possible to add forces on these variable. This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">gabf_2d.psi_biasforce</td><td width="5%"><font color="black">scalar</font></td><td>The bias force from eABF/DRR of the fictitious particle. This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">gabf_2d.psi_springforce</td><td width="5%"><font color="black">scalar</font></td><td>Spring force between real CVs and extended CVs This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">gabf_2d.psi_fictNoPBC</td><td width="5%"><font color="black">scalar</font></td><td>the positions of fictitious particles (without PBC). This particular component measures this quantity for the input CV named psi</td></tr></table></span>
+<span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="DRR.md_working_3.datphi">phi</b>,<b name="DRR.md_working_3.datpsi">psi</b>
+<span class="plumedtooltip">EXTERNAL_FORCE<span class="right">use forces from other action instead of internal spring force, this disable the extended system!<i></i></span></span>=<b name="DRR.md_working_3.datgabf_phi">gabf_phi.phi_springforce</b>,<b name="DRR.md_working_3.datgabf_psi">gabf_psi.psi_springforce</b>
+<span class="plumedtooltip">EXTERNAL_FICT<span class="right">position of external fictitious particles, useful for UIESTIMATOR<i></i></span></span>=<b name="DRR.md_working_3.datgabf_phi">gabf_phi.phi_fictNoPBC</b>,<b name="DRR.md_working_3.datgabf_psi">gabf_psi.psi_fictNoPBC</b>
+<span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=-pi,-pi
+<span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=pi,pi
+<span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=180,180
+<span class="plumedtooltip">NOBIAS<span class="right"> DO NOT apply bias forces<i></i></span></span>
+<span class="plumedtooltip">OUTPUTFREQ<span class="right">write results to a file every N steps<i></i></span></span>=50000
+<span class="plumedtooltip">HISTORYFREQ<span class="right">save history to a file every N steps<i></i></span></span>=500000
+... DRR
+</span><span id="DRR.md_working_3.datdefgabf_2d_long" style="display:none;"><span class="plumedtooltip" style="color:green">DRR<span class="right">Used to performed extended-system adaptive biasing force (eABF) This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("DRR.md_working_3.datdefgabf_2d");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DRR">More details</a><i></i></span></span> ...
+<span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="DRR.md_working_3.datgabf_2d" onclick='showPath("DRR.md_working_3.dat","DRR.md_working_3.datgabf_2d","DRR.md_working_3.datgabf_2d","black")'>gabf_2d</b>
+<span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="DRR.md_working_3.datphi">phi</b>,<b name="DRR.md_working_3.datpsi">psi</b>
+<span class="plumedtooltip">EXTERNAL_FORCE<span class="right">use forces from other action instead of internal spring force, this disable the extended system!<i></i></span></span>=<b name="DRR.md_working_3.datgabf_phi">gabf_phi.phi_springforce</b>,<b name="DRR.md_working_3.datgabf_psi">gabf_psi.psi_springforce</b>
+<span class="plumedtooltip">EXTERNAL_FICT<span class="right">position of external fictitious particles, useful for UIESTIMATOR<i></i></span></span>=<b name="DRR.md_working_3.datgabf_phi">gabf_phi.phi_fictNoPBC</b>,<b name="DRR.md_working_3.datgabf_psi">gabf_psi.psi_fictNoPBC</b>
+<span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=-pi,-pi
+<span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid (GRID_BIN or GRID_SPACING should be specified)<i></i></span></span>=pi,pi
+<span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=180,180
+<span class="plumedtooltip">NOBIAS<span class="right"> DO NOT apply bias forces<i></i></span></span>
+<span class="plumedtooltip">OUTPUTFREQ<span class="right">write results to a file every N steps<i></i></span></span>=50000
+<span class="plumedtooltip">HISTORYFREQ<span class="right">save history to a file every N steps<i></i></span></span>=500000
+ <span class="plumedtooltip">TAU<span class="right"> specifies relaxation time on each of variables are, similar to extended Time Constant in Colvars<i></i></span></span>=0.5,0.5 <span class="plumedtooltip">FRICTION<span class="right"> add a friction to the variable, similar to extended Langevin Damping in Colvars<i></i></span></span>=8.0,8.0 <span class="plumedtooltip">REFLECTINGWALL<span class="right"> whether add reflecting walls for each CV at GRID_MIN and GRID_MAX<i></i></span></span>=0,0 <span class="plumedtooltip">FULLSAMPLES<span class="right"> number of samples in a bin prior to application of the ABF<i></i></span></span>=500 <span class="plumedtooltip">MAXFACTOR<span class="right"> maximum scaling factor of biasing force<i></i></span></span>=1.0,1.0
+... DRR
+</span><br/><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=10 <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DRR.md_working_3.datphi">phi</b>,<b name="DRR.md_working_3.datpsi">psi</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">scalar</td>
+<td style="text-align: left;">the labels of the scalars on which the bias will act</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-components">Output components</h2>
+<p>This action calculates the <a href="../specifying_arguments/">values</a> in the following table.  These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">bias</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">the instantaneous value of the bias potential</td>
+</tr>
+<tr>
+<td style="text-align: left;">_fict</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">one or multiple instances of this quantity can be referenced elsewhere in the input file</td>
+</tr>
+<tr>
+<td style="text-align: left;">_vfict</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">one or multiple instances of this quantity can be referenced elsewhere in the input file</td>
+</tr>
+<tr>
+<td style="text-align: left;">_biasforce</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">The bias force from eABF/DRR of the fictitious particle</td>
+</tr>
+<tr>
+<td style="text-align: left;">_springforce</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">Spring force between real CVs and extended CVs</td>
+</tr>
+<tr>
+<td style="text-align: left;">_fictNoPBC</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">the positions of fictitious particles (without PBC)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the labels of the scalars on which the bias will act</td>
+</tr>
+<tr>
+<td style="text-align: left;">TAU</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: left;">specifies relaxation time on each of variables are, similar to extended Time Constant in Colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">FRICTION</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">8.0</td>
+<td style="text-align: left;">add a friction to the variable, similar to extended Langevin Damping in Colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">GRID_MIN</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the lower bounds for the grid (GRID_BIN or GRID_SPACING should be specified)</td>
+</tr>
+<tr>
+<td style="text-align: left;">GRID_MAX</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the upper bounds for the grid (GRID_BIN or GRID_SPACING should be specified)</td>
+</tr>
+<tr>
+<td style="text-align: left;">REFLECTINGWALL</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">whether add reflecting walls for each CV at GRID_MIN and GRID_MAX</td>
+</tr>
+<tr>
+<td style="text-align: left;">FULLSAMPLES</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">500</td>
+<td style="text-align: left;">number of samples in a bin prior to application of the ABF</td>
+</tr>
+<tr>
+<td style="text-align: left;">MAXFACTOR</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: left;">maximum scaling factor of biasing force</td>
+</tr>
+<tr>
+<td style="text-align: left;">OUTPUTFREQ</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">write results to a file every N steps</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NUMERICAL_DERIVATIVES<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the derivatives for these quantities numerically</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">KAPPA<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">specifies that the restraint is harmonic and what the values of the force constants on each of the variables are (default to k_BT/(GRID_SPACING)^2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">GRID_BIN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the number of bins for the grid</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">GRID_SPACING<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the approximate grid spacing (to be used as an alternative or together with GRID_BIN)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">ZGRID_MIN<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the lower bounds for the grid (ZGRID_BIN or ZGRID_SPACING should be specified)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">ZGRID_MAX<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the upper bounds for the grid (ZGRID_BIN or ZGRID_SPACING should be specified)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">ZGRID_BIN<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the number of bins for the grid</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">ZGRID_SPACING<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the approximate grid spacing (to be used as an alternative or together with ZGRID_BIN)</td>
+</tr>
+<tr>
+<td style="text-align: left;">EXTERNAL_FORCE</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">use forces from other action instead of internal spring force, this disable the extended system!</td>
+</tr>
+<tr>
+<td style="text-align: left;">EXTERNAL_FICT</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">position of external fictitious particles, useful for UIESTIMATOR</td>
+</tr>
+<tr>
+<td style="text-align: left;">HISTORYFREQ</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">save history to a file every N steps</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NOCZAR<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">disable the CZAR estimator</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">UI<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">enable the umbrella integration estimator</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">UIRESTARTPREFIX<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">specify the restart files for umbrella integration</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">OUTPUTPREFIX<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">specify the output prefix (default to the label name)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">TEMP<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the system temperature - needed when FRICTION is present</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">EXTTEMP<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the temperature of extended variables (default to system temperature)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">DRR_RFILE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">specifies the restart file (</td>
+</tr>
+<tr>
+<td style="text-align: left;">NOBIAS</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">DO NOT apply bias forces</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">TEXTOUTPUT<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">use text output for grad and count files instead of boost::serialization binary output</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">MERGEHISTORYFILES<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">output all historic results to a single file rather than multiple</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">FMT<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">specify format for outfiles files (useful for decrease the number of digits in regtests)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1063/1.2711185">T. Lelièvre, M. Rousset, G. Stoltz, Computation of free energy profiles with parallel adaptive dynamics. The Journal of Chemical Physics 126 (2007)</a></li>
+<li><a href="http://dx.doi.org/10.1021/ct200726v">L. Zheng, W. Yang, Practically Efficient and Robust Free Energy Calculations: Double-Integration Orthogonal Space Tempering. Journal of Chemical Theory and Computation 8, 810–823 (2012)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jcim.8b00115">H. Chen, H. Fu, X. Shao, C. Chipot, W. Cai, ELF: An Extended-Lagrangian Free Energy Calculation Module for Multiple Molecular Dynamics Engines. Journal of Chemical Information and Modeling 58, 1315–1318 (2018)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jpcb.6b10055">A. Lesage, T. Lelièvre, G. Stoltz, J. Hénin, Smoothed Biasing Forces Yield Unbiased Free Energies with the Extended-System Adaptive Biasing Force Method. The Journal of Physical Chemistry B 121, 3676–3685 (2016)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jctc.6b00447">H. Fu, X. Shao, C. Chipot, W. Cai, Extended Adaptive Biasing Force Algorithm. An On-the-Fly Implementation for Accurate Free-Energy Calculations. Journal of Chemical Theory and Computation 12, 3506–3513 (2016)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jctc.7b00032">T. Zhao, H. Fu, T. Lelièvre, X. Shao, C. Chipot, W. Cai, The Extended Generalized Adaptive Biasing Force Algorithm for Multidimensional Free-Energy Calculations. Journal of Chemical Theory and Computation 13, 1566–1576 (2017)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

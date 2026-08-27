@@ -1,0 +1,2 @@
+DISTANCE ATOMS=1,2 LABEL=dist
+INCLUDE FILE=extras/toBeIncluded.inc

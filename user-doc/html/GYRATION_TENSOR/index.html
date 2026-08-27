@@ -1,0 +1,899 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: GYRATION_TENSOR - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-gyration_tensor" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: GYRATION_TENSOR
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-note-on-periodic-boundary-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A note on periodic boundary conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-gyration_tensor"><a href="../shortcuts/">Shortcut</a>: GYRATION_TENSOR</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_colvar/"><strong>colvar</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate the gyration tensor using a user specified vector of weights</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the gyration tensor that was computed from the weights</td>
+<td style="text-align: center;">matrix</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate the gyration tensor using a user specified vector of weights</p>
+<p>The elements of the <script type="math/tex">3 \times 3</script> gyration tensor are defined as:</p>
+<p>
+<script type="math/tex; mode=display">
+G_{\alpha\beta} = \frac{\sum_i^{n} w_i (\alpha_i-\alpha_{\rm COM})(\beta_i - \beta_{\rm COM})}{\sum_i^{n} w_i}
+</script>
+</p>
+<p>where <script type="math/tex">\alpha_i</script> and <script type="math/tex">\beta_i</script> can be the <script type="math/tex">x</script>, <script type="math/tex">y</script> or <script type="math/tex">z</script> coordinates of atom <script type="math/tex">i</script> and <script type="math/tex">\alpha_{\rm COM}</script> and
+<script type="math/tex">\beta_{\rm COM}</script> can be the <script type="math/tex">x</script>, <script type="math/tex">y</script> or <script type="math/tex">z</script> components of the center, which is calculated using:</p>
+<p>
+<script type="math/tex; mode=display">
+{r}_{\rm COM}=\frac{\sum_i^{n} {r}_i\ w_i }{\sum_i^{n} w_i}
+</script>
+</p>
+<p>The following example shows how you can calculate and print the gyration tensor from the positions of the fist 10 atoms using PLUMED</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_GYRATION_TENSOR.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../GYRATION_TENSOR.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="GYRATION_TENSOR.md_working_1.datg_short"><b name="GYRATION_TENSOR.md_working_1.datg" onclick='showPath("GYRATION_TENSOR.md_working_1.dat","GYRATION_TENSOR.md_working_1.datg","GYRATION_TENSOR.md_working_1.datg_shortcut","red")'>g</b><span style="display:none;" id="GYRATION_TENSOR.md_working_1.datg_shortcut">The GYRATION_TENSOR action with label <b>g</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g</td><td width="5%"><font color="red">matrix</font></td><td>the gyration tensor that was computed from the weights</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GYRATION_TENSOR<span class="right">Calculate the gyration tensor using a user specified vector of weights This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("GYRATION_TENSOR.md_working_1.datg");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/GYRATION_TENSOR">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that you are calculating the Gyration Tensor for<i></i></span></span>=1-10
+</span><span id="GYRATION_TENSOR.md_working_1.datg_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("GYRATION_TENSOR.md_working_1.datg")'># g: GYRATION_TENSOR ATOMS=1-10</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="GYRATION_TENSOR.md_working_1.datg_cent" onclick='showPath("GYRATION_TENSOR.md_working_1.dat","GYRATION_TENSOR.md_working_1.datg_cent","GYRATION_TENSOR.md_working_1.datg_cent","violet")'>g_cent</b><span style="display:none;" id="GYRATION_TENSOR.md_working_1.datg_cent">The CENTER_FAST action with label <b>g_cent</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_cent</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by CENTER_FAST action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CENTER<span class="right">Calculate the center for a group of atoms, with arbitrary weights. <a href="https://www.plumed.org/doc-master/user-doc/html/CENTER" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that appear in the definition of this center<i></i></span></span>=1,2,3,4,5,6,7,8,9,10
+<b name="GYRATION_TENSOR.md_working_1.datg_w" onclick='showPath("GYRATION_TENSOR.md_working_1.dat","GYRATION_TENSOR.md_working_1.datg_w","GYRATION_TENSOR.md_working_1.datg_w","blue")'>g_w</b><span style="display:none;" id="GYRATION_TENSOR.md_working_1.datg_w">The CONSTANT action with label <b>g_w</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_w</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=10
+<b name="GYRATION_TENSOR.md_working_1.datg_dists" onclick='showPath("GYRATION_TENSOR.md_working_1.dat","GYRATION_TENSOR.md_working_1.datg_dists","GYRATION_TENSOR.md_working_1.datg_dists","blue")'>g_dists</b><span style="display:none;" id="GYRATION_TENSOR.md_working_1.datg_dists">The DISTANCE action with label <b>g_dists</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_dists.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g_dists.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g_dists.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_1.datg_cent">g_cent</b>,1 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_1.datg_cent">g_cent</b>,2 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_1.datg_cent">g_cent</b>,3 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_1.datg_cent">g_cent</b>,4 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_1.datg_cent">g_cent</b>,5     <span style="color:blue" class="comment"># Action input conctinues with 5 further ATOMSn keywords, </span>
+<b name="GYRATION_TENSOR.md_working_1.datg" onclick='showPath("GYRATION_TENSOR.md_working_1.dat","GYRATION_TENSOR.md_working_1.datg","GYRATION_TENSOR.md_working_1.datg","red")'>g</b><span style="display:none;" id="GYRATION_TENSOR.md_working_1.datg">The MATRIX_PRODUCT action with label <b>g</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g</td><td width="5%"><font color="red">matrix</font></td><td>the product of the two input matrices</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COVARIANCE_MATRIX<span class="right">Calculate a covariance matix <a href="https://www.plumed.org/doc-master/user-doc/html/COVARIANCE_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vectors of data from which we are calculating the covariance<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_1.datg_dists">g_dists.x</b>,<b name="GYRATION_TENSOR.md_working_1.datg_dists">g_dists.y</b>,<b name="GYRATION_TENSOR.md_working_1.datg_dists">g_dists.z</b> <span class="plumedtooltip">WEIGHTS<span class="right">this keyword takes the label of an action that calculates a vector of values<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_1.datg_w">g_w</b>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_1.datg">g</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>In this example input the weights of all the atoms are set equal to one. The 9 elements of the resulting gyration matrix will
+be output to the file <code>colvar</code> here.  If you want the weights of the atoms to be set equal to the masses you can use either of the following
+equivalent commands:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_GYRATION_TENSOR.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../GYRATION_TENSOR.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="GYRATION_TENSOR.md_working_2.datg_short"><b name="GYRATION_TENSOR.md_working_2.datg" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg","GYRATION_TENSOR.md_working_2.datg_shortcut","red")'>g</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg_shortcut">The GYRATION_TENSOR action with label <b>g</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g</td><td width="5%"><font color="red">matrix</font></td><td>the gyration tensor that was computed from the weights</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GYRATION_TENSOR<span class="right">Calculate the gyration tensor using a user specified vector of weights This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("GYRATION_TENSOR.md_working_2.datg");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/GYRATION_TENSOR">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that you are calculating the Gyration Tensor for<i></i></span></span>=1-10 <span class="plumedtooltip">MASS<span class="right"> calculate the center of mass<i></i></span></span>
+</span><span id="GYRATION_TENSOR.md_working_2.datg_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("GYRATION_TENSOR.md_working_2.datg")'># g: GYRATION_TENSOR ATOMS=1-10 MASS</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="GYRATION_TENSOR.md_working_2.datg_cent" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg_cent","GYRATION_TENSOR.md_working_2.datg_cent","violet")'>g_cent</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg_cent">The CENTER_FAST action with label <b>g_cent</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_cent</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by CENTER_FAST action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CENTER<span class="right">Calculate the center for a group of atoms, with arbitrary weights. <a href="https://www.plumed.org/doc-master/user-doc/html/CENTER" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that appear in the definition of this center<i></i></span></span>=1,2,3,4,5,6,7,8,9,10 <span class="plumedtooltip">WEIGHTS<span class="right">what weights should be used when calculating the center<i></i></span></span>=@Masses
+<b name="GYRATION_TENSOR.md_working_2.datg_m" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg_m","GYRATION_TENSOR.md_working_2.datg_m","blue")'>g_m</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg_m">The MASS action with label <b>g_m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_m</td><td width="5%"><font color="blue">vector</font></td><td>the MASS of the atom/s</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MASS<span class="right">Get the mass of one or multiple atoms <a href="https://www.plumed.org/doc-master/user-doc/html/MASS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the atom numbers that you would like to store the masses and charges of<i></i></span></span>=1,2,3,4,5,6,7,8,9,10
+<b name="GYRATION_TENSOR.md_working_2.datg_dists" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg_dists","GYRATION_TENSOR.md_working_2.datg_dists","blue")'>g_dists</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg_dists">The DISTANCE action with label <b>g_dists</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_dists.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g_dists.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g_dists.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg_cent">g_cent</b>,1 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg_cent">g_cent</b>,2 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg_cent">g_cent</b>,3 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg_cent">g_cent</b>,4 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg_cent">g_cent</b>,5     <span style="color:blue" class="comment"># Action input conctinues with 5 further ATOMSn keywords, </span>
+<b name="GYRATION_TENSOR.md_working_2.datg" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg","GYRATION_TENSOR.md_working_2.datg","red")'>g</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg">The MATRIX_PRODUCT action with label <b>g</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g</td><td width="5%"><font color="red">matrix</font></td><td>the product of the two input matrices</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COVARIANCE_MATRIX<span class="right">Calculate a covariance matix <a href="https://www.plumed.org/doc-master/user-doc/html/COVARIANCE_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vectors of data from which we are calculating the covariance<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg_dists">g_dists.x</b>,<b name="GYRATION_TENSOR.md_working_2.datg_dists">g_dists.y</b>,<b name="GYRATION_TENSOR.md_working_2.datg_dists">g_dists.z</b> <span class="plumedtooltip">WEIGHTS<span class="right">this keyword takes the label of an action that calculates a vector of values<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg_m">g_m</b>
+<span style="color:blue"># --- End of included input --- </span></span><span id="GYRATION_TENSOR.md_working_2.datg2_short"><b name="GYRATION_TENSOR.md_working_2.datg2" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg2","GYRATION_TENSOR.md_working_2.datg2_shortcut","red")'>g2</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg2_shortcut">The GYRATION_TENSOR action with label <b>g2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g2</td><td width="5%"><font color="red">matrix</font></td><td>the gyration tensor that was computed from the weights</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GYRATION_TENSOR<span class="right">Calculate the gyration tensor using a user specified vector of weights This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("GYRATION_TENSOR.md_working_2.datg2");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/GYRATION_TENSOR">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that you are calculating the Gyration Tensor for<i></i></span></span>=1-10 <span class="plumedtooltip">WEIGHTS<span class="right">what weights should be used when calculating the center<i></i></span></span>=@Masses
+</span><span id="GYRATION_TENSOR.md_working_2.datg2_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("GYRATION_TENSOR.md_working_2.datg2")'># g2: GYRATION_TENSOR ATOMS=1-10 WEIGHTS=@Masses</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="GYRATION_TENSOR.md_working_2.datg2_cent" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg2_cent","GYRATION_TENSOR.md_working_2.datg2_cent","violet")'>g2_cent</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg2_cent">The CENTER_FAST action with label <b>g2_cent</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g2_cent</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by CENTER_FAST action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CENTER<span class="right">Calculate the center for a group of atoms, with arbitrary weights. <a href="https://www.plumed.org/doc-master/user-doc/html/CENTER" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that appear in the definition of this center<i></i></span></span>=1,2,3,4,5,6,7,8,9,10 <span class="plumedtooltip">WEIGHTS<span class="right">what weights should be used when calculating the center<i></i></span></span>=@Masses
+<b name="GYRATION_TENSOR.md_working_2.datg2_m" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg2_m","GYRATION_TENSOR.md_working_2.datg2_m","blue")'>g2_m</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg2_m">The MASS action with label <b>g2_m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g2_m</td><td width="5%"><font color="blue">vector</font></td><td>the MASS of the atom/s</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MASS<span class="right">Get the mass of one or multiple atoms <a href="https://www.plumed.org/doc-master/user-doc/html/MASS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the atom numbers that you would like to store the masses and charges of<i></i></span></span>=1,2,3,4,5,6,7,8,9,10
+<b name="GYRATION_TENSOR.md_working_2.datg2_dists" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg2_dists","GYRATION_TENSOR.md_working_2.datg2_dists","blue")'>g2_dists</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg2_dists">The DISTANCE action with label <b>g2_dists</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g2_dists.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g2_dists.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g2_dists.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg2_cent">g2_cent</b>,1 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg2_cent">g2_cent</b>,2 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg2_cent">g2_cent</b>,3 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg2_cent">g2_cent</b>,4 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg2_cent">g2_cent</b>,5     <span style="color:blue" class="comment"># Action input conctinues with 5 further ATOMSn keywords, </span>
+<b name="GYRATION_TENSOR.md_working_2.datg2" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg2","GYRATION_TENSOR.md_working_2.datg2","red")'>g2</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg2">The MATRIX_PRODUCT action with label <b>g2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g2</td><td width="5%"><font color="red">matrix</font></td><td>the product of the two input matrices</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COVARIANCE_MATRIX<span class="right">Calculate a covariance matix <a href="https://www.plumed.org/doc-master/user-doc/html/COVARIANCE_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vectors of data from which we are calculating the covariance<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg2_dists">g2_dists.x</b>,<b name="GYRATION_TENSOR.md_working_2.datg2_dists">g2_dists.y</b>,<b name="GYRATION_TENSOR.md_working_2.datg2_dists">g2_dists.z</b> <span class="plumedtooltip">WEIGHTS<span class="right">this keyword takes the label of an action that calculates a vector of values<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg2_m">g2_m</b>
+<span style="color:blue"># --- End of included input --- </span></span><span id="GYRATION_TENSOR.md_working_2.datg3_short"><b name="GYRATION_TENSOR.md_working_2.datg3" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg3","GYRATION_TENSOR.md_working_2.datg3_shortcut","red")'>g3</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg3_shortcut">The GYRATION_TENSOR action with label <b>g3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g3</td><td width="5%"><font color="red">matrix</font></td><td>the gyration tensor that was computed from the weights</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GYRATION_TENSOR<span class="right">Calculate the gyration tensor using a user specified vector of weights This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("GYRATION_TENSOR.md_working_2.datg3");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/GYRATION_TENSOR">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that you are calculating the Gyration Tensor for<i></i></span></span>=1-10 <span class="plumedtooltip">MASS_WEIGHTED<span class="right"> set the masses of all the atoms equal to one<i></i></span></span>
+</span><span id="GYRATION_TENSOR.md_working_2.datg3_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("GYRATION_TENSOR.md_working_2.datg3")'># g3: GYRATION_TENSOR ATOMS=1-10 MASS_WEIGHTED</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="GYRATION_TENSOR.md_working_2.datg3_cent" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg3_cent","GYRATION_TENSOR.md_working_2.datg3_cent","violet")'>g3_cent</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg3_cent">The CENTER_FAST action with label <b>g3_cent</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g3_cent</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by CENTER_FAST action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CENTER<span class="right">Calculate the center for a group of atoms, with arbitrary weights. <a href="https://www.plumed.org/doc-master/user-doc/html/CENTER" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that appear in the definition of this center<i></i></span></span>=1,2,3,4,5,6,7,8,9,10 <span class="plumedtooltip">WEIGHTS<span class="right">what weights should be used when calculating the center<i></i></span></span>=@Masses
+<b name="GYRATION_TENSOR.md_working_2.datg3_m" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg3_m","GYRATION_TENSOR.md_working_2.datg3_m","blue")'>g3_m</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg3_m">The MASS action with label <b>g3_m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g3_m</td><td width="5%"><font color="blue">vector</font></td><td>the MASS of the atom/s</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MASS<span class="right">Get the mass of one or multiple atoms <a href="https://www.plumed.org/doc-master/user-doc/html/MASS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the atom numbers that you would like to store the masses and charges of<i></i></span></span>=1,2,3,4,5,6,7,8,9,10
+<b name="GYRATION_TENSOR.md_working_2.datg3_dists" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg3_dists","GYRATION_TENSOR.md_working_2.datg3_dists","blue")'>g3_dists</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg3_dists">The DISTANCE action with label <b>g3_dists</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g3_dists.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g3_dists.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g3_dists.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg3_cent">g3_cent</b>,1 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg3_cent">g3_cent</b>,2 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg3_cent">g3_cent</b>,3 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg3_cent">g3_cent</b>,4 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg3_cent">g3_cent</b>,5     <span style="color:blue" class="comment"># Action input conctinues with 5 further ATOMSn keywords, </span>
+<b name="GYRATION_TENSOR.md_working_2.datg3" onclick='showPath("GYRATION_TENSOR.md_working_2.dat","GYRATION_TENSOR.md_working_2.datg3","GYRATION_TENSOR.md_working_2.datg3","red")'>g3</b><span style="display:none;" id="GYRATION_TENSOR.md_working_2.datg3">The MATRIX_PRODUCT action with label <b>g3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g3</td><td width="5%"><font color="red">matrix</font></td><td>the product of the two input matrices</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COVARIANCE_MATRIX<span class="right">Calculate a covariance matix <a href="https://www.plumed.org/doc-master/user-doc/html/COVARIANCE_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vectors of data from which we are calculating the covariance<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg3_dists">g3_dists.x</b>,<b name="GYRATION_TENSOR.md_working_2.datg3_dists">g3_dists.y</b>,<b name="GYRATION_TENSOR.md_working_2.datg3_dists">g3_dists.z</b> <span class="plumedtooltip">WEIGHTS<span class="right">this keyword takes the label of an action that calculates a vector of values<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg3_m">g3_m</b>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_2.datg">g</b>,<b name="GYRATION_TENSOR.md_working_2.datg2">g2</b>,<b name="GYRATION_TENSOR.md_working_2.datg3">g3</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>This input above should output three identical <script type="math/tex">3\times 3</script> matrices.</p>
+<p>If you want to use an arbitrary set of weights for the atoms you can use the following syntax.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_GYRATION_TENSOR.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../GYRATION_TENSOR.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="GYRATION_TENSOR.md_working_3.datdefc_short"><b name="GYRATION_TENSOR.md_working_3.datc" onclick='showPath("GYRATION_TENSOR.md_working_3.dat","GYRATION_TENSOR.md_working_3.datc","GYRATION_TENSOR.md_working_3.datc","blue")'>c</b><span style="display:none;" id="GYRATION_TENSOR.md_working_3.datc">The CONSTANT action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("GYRATION_TENSOR.md_working_3.datdefc");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,3,2,4
+</span><span id="GYRATION_TENSOR.md_working_3.datdefc_long" style="display:none;"><b name="GYRATION_TENSOR.md_working_3.datc" onclick='showPath("GYRATION_TENSOR.md_working_3.dat","GYRATION_TENSOR.md_working_3.datc","GYRATION_TENSOR.md_working_3.datc","blue")'>c</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("GYRATION_TENSOR.md_working_3.datdefc");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,3,2,4  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><span id="GYRATION_TENSOR.md_working_3.datg_short"><b name="GYRATION_TENSOR.md_working_3.datg" onclick='showPath("GYRATION_TENSOR.md_working_3.dat","GYRATION_TENSOR.md_working_3.datg","GYRATION_TENSOR.md_working_3.datg_shortcut","red")'>g</b><span style="display:none;" id="GYRATION_TENSOR.md_working_3.datg_shortcut">The GYRATION_TENSOR action with label <b>g</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g</td><td width="5%"><font color="red">matrix</font></td><td>the gyration tensor that was computed from the weights</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GYRATION_TENSOR<span class="right">Calculate the gyration tensor using a user specified vector of weights This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("GYRATION_TENSOR.md_working_3.datg");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/GYRATION_TENSOR">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that you are calculating the Gyration Tensor for<i></i></span></span>=1-4 <span class="plumedtooltip">WEIGHTS<span class="right">what weights should be used when calculating the center<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_3.datc">c</b> <span class="plumedtooltip">UNORMALIZED<span class="right"> do not divide by the sum of the weights<i></i></span></span>
+</span><span id="GYRATION_TENSOR.md_working_3.datg_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("GYRATION_TENSOR.md_working_3.datg")'># g: GYRATION_TENSOR ATOMS=1-4 WEIGHTS=c UNORMALIZED</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="GYRATION_TENSOR.md_working_3.datg_cent" onclick='showPath("GYRATION_TENSOR.md_working_3.dat","GYRATION_TENSOR.md_working_3.datg_cent","GYRATION_TENSOR.md_working_3.datg_cent","black")'>g_cent</b><span style="display:none;" id="GYRATION_TENSOR.md_working_3.datg_cent">The ARGS2VATOM action with label <b>g_cent</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_cent.x</td><td width="5%"><font color="black">scalar</font></td><td>the x coordinate of the virtual atom</td></tr><tr><td width="5%">g_cent.y</td><td width="5%"><font color="black">scalar</font></td><td>the y coordinate of the virtual atom</td></tr><tr><td width="5%">g_cent.z</td><td width="5%"><font color="black">scalar</font></td><td>the z coordinate of the virtual atom</td></tr><tr><td width="5%">g_cent.mass</td><td width="5%"><font color="black">scalar</font></td><td>the mass of the virtual atom</td></tr><tr><td width="5%">g_cent.charge</td><td width="5%"><font color="black">scalar</font></td><td>the charge of the virtual atom</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CENTER<span class="right">Calculate the center for a group of atoms, with arbitrary weights. <a href="https://www.plumed.org/doc-master/user-doc/html/CENTER" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that appear in the definition of this center<i></i></span></span>=1,2,3,4 <span class="plumedtooltip">WEIGHTS<span class="right">what weights should be used when calculating the center<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_3.datc">c</b>
+<b name="GYRATION_TENSOR.md_working_3.datg_dists" onclick='showPath("GYRATION_TENSOR.md_working_3.dat","GYRATION_TENSOR.md_working_3.datg_dists","GYRATION_TENSOR.md_working_3.datg_dists","blue")'>g_dists</b><span style="display:none;" id="GYRATION_TENSOR.md_working_3.datg_dists">The DISTANCE action with label <b>g_dists</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_dists.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g_dists.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g_dists.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_3.datg_cent">g_cent</b>,1 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_3.datg_cent">g_cent</b>,2 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_3.datg_cent">g_cent</b>,3 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_3.datg_cent">g_cent</b>,4
+<b name="GYRATION_TENSOR.md_working_3.datg" onclick='showPath("GYRATION_TENSOR.md_working_3.dat","GYRATION_TENSOR.md_working_3.datg","GYRATION_TENSOR.md_working_3.datg","red")'>g</b><span style="display:none;" id="GYRATION_TENSOR.md_working_3.datg">The MATRIX_PRODUCT action with label <b>g</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g</td><td width="5%"><font color="red">matrix</font></td><td>the product of the two input matrices</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COVARIANCE_MATRIX<span class="right">Calculate a covariance matix <a href="https://www.plumed.org/doc-master/user-doc/html/COVARIANCE_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vectors of data from which we are calculating the covariance<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_3.datg_dists">g_dists.x</b>,<b name="GYRATION_TENSOR.md_working_3.datg_dists">g_dists.y</b>,<b name="GYRATION_TENSOR.md_working_3.datg_dists">g_dists.z</b> <span class="plumedtooltip">WEIGHTS<span class="right">this keyword takes the label of an action that calculates a vector of values<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_3.datc">c</b> <span class="plumedtooltip">UNORMALIZED<span class="right"> do not divide by the sum of the weights<i></i></span></span>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_3.datg">g</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>Although the input weights are <a href="../CONSTANT/">CONSTANT</a> here that is not a requirement.  You can use a vector of weights from any action
+that outputs a vector in the input for the WEIGHTS keyword here.  Notice, also that the denominator in the expression for <script type="math/tex">G_{\alpha\beta}</script>
+is set equal to one rather than the sum of the weights as we used the UNORMALIZED flag.</p>
+<p>Similar functionality to the functionality in the examples above is used in the <a href="../GYRATION/">GYRATION</a> shortcut.  There is, however,
+no fast version of the GYRATION_TENSOR command in the way that there is a fast version of the <a href="../GYRATION/">GYRATION</a> command that is
+used when the weights are all one or when the masses are used as the weights.</p>
+<h2 id="a-note-on-periodic-boundary-conditions">A note on periodic boundary conditions</h2>
+<p>Calculating the gyration tensor is normally used to determine the shape of a molecule so all the specified atoms
+would normally be part of the same molecule.  When computing gyration tensors it is important to ensure that the periodic boundaries
+are calculated correctly.  There are two ways that you can manage periodic boundary conditions when using this action.  The
+first and simplest is to reconstruct the molecule similarly to the way that <a href="../WHOLEMOLECULES/">WHOLEMOLECULES</a> operates.
+This reconstruction of molecules has been done automatically since PLUMED 2.2.  If for some reason you want to turn it off
+you can use the NOPBC flag as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_GYRATION_TENSOR.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../GYRATION_TENSOR.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="GYRATION_TENSOR.md_working_4.datg_short"><b name="GYRATION_TENSOR.md_working_4.datg" onclick='showPath("GYRATION_TENSOR.md_working_4.dat","GYRATION_TENSOR.md_working_4.datg","GYRATION_TENSOR.md_working_4.datg_shortcut","red")'>g</b><span style="display:none;" id="GYRATION_TENSOR.md_working_4.datg_shortcut">The GYRATION_TENSOR action with label <b>g</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g</td><td width="5%"><font color="red">matrix</font></td><td>the gyration tensor that was computed from the weights</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GYRATION_TENSOR<span class="right">Calculate the gyration tensor using a user specified vector of weights This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("GYRATION_TENSOR.md_working_4.datg");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/GYRATION_TENSOR">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that you are calculating the Gyration Tensor for<i></i></span></span>=1-5 <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span>
+</span><span id="GYRATION_TENSOR.md_working_4.datg_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("GYRATION_TENSOR.md_working_4.datg")'># g: GYRATION_TENSOR ATOMS=1-5 NOPBC</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="GYRATION_TENSOR.md_working_4.datg_cent" onclick='showPath("GYRATION_TENSOR.md_working_4.dat","GYRATION_TENSOR.md_working_4.datg_cent","GYRATION_TENSOR.md_working_4.datg_cent","violet")'>g_cent</b><span style="display:none;" id="GYRATION_TENSOR.md_working_4.datg_cent">The CENTER_FAST action with label <b>g_cent</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_cent</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by CENTER_FAST action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CENTER<span class="right">Calculate the center for a group of atoms, with arbitrary weights. <a href="https://www.plumed.org/doc-master/user-doc/html/CENTER" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that appear in the definition of this center<i></i></span></span>=1,2,3,4,5 <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span>
+<b name="GYRATION_TENSOR.md_working_4.datg_w" onclick='showPath("GYRATION_TENSOR.md_working_4.dat","GYRATION_TENSOR.md_working_4.datg_w","GYRATION_TENSOR.md_working_4.datg_w","blue")'>g_w</b><span style="display:none;" id="GYRATION_TENSOR.md_working_4.datg_w">The CONSTANT action with label <b>g_w</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_w</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=5
+<b name="GYRATION_TENSOR.md_working_4.datg_dists" onclick='showPath("GYRATION_TENSOR.md_working_4.dat","GYRATION_TENSOR.md_working_4.datg_dists","GYRATION_TENSOR.md_working_4.datg_dists","blue")'>g_dists</b><span style="display:none;" id="GYRATION_TENSOR.md_working_4.datg_dists">The DISTANCE action with label <b>g_dists</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_dists.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g_dists.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g_dists.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span> <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_4.datg_cent">g_cent</b>,1 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_4.datg_cent">g_cent</b>,2 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_4.datg_cent">g_cent</b>,3 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_4.datg_cent">g_cent</b>,4 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_4.datg_cent">g_cent</b>,5
+<b name="GYRATION_TENSOR.md_working_4.datg" onclick='showPath("GYRATION_TENSOR.md_working_4.dat","GYRATION_TENSOR.md_working_4.datg","GYRATION_TENSOR.md_working_4.datg","red")'>g</b><span style="display:none;" id="GYRATION_TENSOR.md_working_4.datg">The MATRIX_PRODUCT action with label <b>g</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g</td><td width="5%"><font color="red">matrix</font></td><td>the product of the two input matrices</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COVARIANCE_MATRIX<span class="right">Calculate a covariance matix <a href="https://www.plumed.org/doc-master/user-doc/html/COVARIANCE_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vectors of data from which we are calculating the covariance<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_4.datg_dists">g_dists.x</b>,<b name="GYRATION_TENSOR.md_working_4.datg_dists">g_dists.y</b>,<b name="GYRATION_TENSOR.md_working_4.datg_dists">g_dists.z</b> <span class="plumedtooltip">WEIGHTS<span class="right">this keyword takes the label of an action that calculates a vector of values<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_4.datg_w">g_w</b>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_4.datg">g</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>An alternative approach to handling PBC is to use the PHASES keyword.  This keyword instructs PLUMED to use the PHASES option
+when computing the position of the center using the <a href="../CENTER/">CENTER</a> command.  Distances of atoms from this center are then
+computed using PBC as usual. The example shown below shows you how to use this option</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_GYRATION_TENSOR.md_working_5.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../GYRATION_TENSOR.md_working_5.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="GYRATION_TENSOR.md_working_5.datg_short"><b name="GYRATION_TENSOR.md_working_5.datg" onclick='showPath("GYRATION_TENSOR.md_working_5.dat","GYRATION_TENSOR.md_working_5.datg","GYRATION_TENSOR.md_working_5.datg_shortcut","red")'>g</b><span style="display:none;" id="GYRATION_TENSOR.md_working_5.datg_shortcut">The GYRATION_TENSOR action with label <b>g</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g</td><td width="5%"><font color="red">matrix</font></td><td>the gyration tensor that was computed from the weights</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GYRATION_TENSOR<span class="right">Calculate the gyration tensor using a user specified vector of weights This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("GYRATION_TENSOR.md_working_5.datg");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/GYRATION_TENSOR">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that you are calculating the Gyration Tensor for<i></i></span></span>=1-5 <span class="plumedtooltip">PHASES<span class="right"> use trigonometric phases when computing position of center of mass<i></i></span></span>
+</span><span id="GYRATION_TENSOR.md_working_5.datg_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("GYRATION_TENSOR.md_working_5.datg")'># g: GYRATION_TENSOR ATOMS=1-5 PHASES</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="GYRATION_TENSOR.md_working_5.datg_cent" onclick='showPath("GYRATION_TENSOR.md_working_5.dat","GYRATION_TENSOR.md_working_5.datg_cent","GYRATION_TENSOR.md_working_5.datg_cent","violet")'>g_cent</b><span style="display:none;" id="GYRATION_TENSOR.md_working_5.datg_cent">The CENTER_FAST action with label <b>g_cent</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_cent</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by CENTER_FAST action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CENTER<span class="right">Calculate the center for a group of atoms, with arbitrary weights. <a href="https://www.plumed.org/doc-master/user-doc/html/CENTER" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that appear in the definition of this center<i></i></span></span>=1,2,3,4,5 <span class="plumedtooltip">PHASES<span class="right"> use trigonometric phases when computing position of center<i></i></span></span>
+<b name="GYRATION_TENSOR.md_working_5.datg_w" onclick='showPath("GYRATION_TENSOR.md_working_5.dat","GYRATION_TENSOR.md_working_5.datg_w","GYRATION_TENSOR.md_working_5.datg_w","blue")'>g_w</b><span style="display:none;" id="GYRATION_TENSOR.md_working_5.datg_w">The CONSTANT action with label <b>g_w</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_w</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=5
+<b name="GYRATION_TENSOR.md_working_5.datg_dists" onclick='showPath("GYRATION_TENSOR.md_working_5.dat","GYRATION_TENSOR.md_working_5.datg_dists","GYRATION_TENSOR.md_working_5.datg_dists","blue")'>g_dists</b><span style="display:none;" id="GYRATION_TENSOR.md_working_5.datg_dists">The DISTANCE action with label <b>g_dists</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g_dists.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g_dists.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">g_dists.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_5.datg_cent">g_cent</b>,1 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_5.datg_cent">g_cent</b>,2 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_5.datg_cent">g_cent</b>,3 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_5.datg_cent">g_cent</b>,4 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_5.datg_cent">g_cent</b>,5
+<b name="GYRATION_TENSOR.md_working_5.datg" onclick='showPath("GYRATION_TENSOR.md_working_5.dat","GYRATION_TENSOR.md_working_5.datg","GYRATION_TENSOR.md_working_5.datg","red")'>g</b><span style="display:none;" id="GYRATION_TENSOR.md_working_5.datg">The MATRIX_PRODUCT action with label <b>g</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g</td><td width="5%"><font color="red">matrix</font></td><td>the product of the two input matrices</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COVARIANCE_MATRIX<span class="right">Calculate a covariance matix <a href="https://www.plumed.org/doc-master/user-doc/html/COVARIANCE_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vectors of data from which we are calculating the covariance<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_5.datg_dists">g_dists.x</b>,<b name="GYRATION_TENSOR.md_working_5.datg_dists">g_dists.y</b>,<b name="GYRATION_TENSOR.md_working_5.datg_dists">g_dists.z</b> <span class="plumedtooltip">WEIGHTS<span class="right">this keyword takes the label of an action that calculates a vector of values<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_5.datg_w">g_w</b>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="GYRATION_TENSOR.md_working_5.datg">g</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_atoms/">atoms</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ATOMS</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">the group of atoms that you are calculating the Gyration Tensor for</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ATOMS</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the group of atoms that you are calculating the Gyration Tensor for</td>
+</tr>
+<tr>
+<td style="text-align: left;">NOPBC</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">ignore the periodic boundary conditions when calculating distances</td>
+</tr>
+<tr>
+<td style="text-align: left;">WEIGHTS</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">what weights should be used when calculating the center</td>
+</tr>
+<tr>
+<td style="text-align: left;">PHASES</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">use trigonometric phases when computing position of center of mass</td>
+</tr>
+<tr>
+<td style="text-align: left;">MASS</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the center of mass</td>
+</tr>
+<tr>
+<td style="text-align: left;">MASS_WEIGHTED</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">set the masses of all the atoms equal to one</td>
+</tr>
+<tr>
+<td style="text-align: left;">UNORMALIZED</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">do not divide by the sum of the weights</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1021/jp2065612">J. Vymětal, J. Vondrášek, Gyration- and Inertia-Tensor-Based Collective Coordinates for Metadynamics. Application on the Conformational Behavior of Polyalanine Peptides and Trp-Cage Folding. The Journal of Physical Chemistry A 115, 11455–11465 (2011)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

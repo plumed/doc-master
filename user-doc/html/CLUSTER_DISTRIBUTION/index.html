@@ -1,0 +1,960 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: CLUSTER_DISTRIBUTION - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-cluster_distribution" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: CLUSTER_DISTRIBUTION
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-cluster_distribution"><a href="../shortcuts/">Shortcut</a>: CLUSTER_DISTRIBUTION</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_clusters/"><strong>clusters</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate functions of the distribution of properties in your connected components.</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=CLUSTER_DISTRIBUTION"><img alt="used in 1 tutorials" src="https://img.shields.io/badge/tutorials-1-green.svg" /></a><a href="https://www.plumed-nest.org/browse.html?action=CLUSTER_DISTRIBUTION"><img alt="used in 4 eggs" src="https://img.shields.io/badge/nest-4-green.svg" /></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate functions of the distribution of properties in your connected components.</p>
+<p>This action allows you to calculate the number of atoms in each of the connected components that
+were detected when you performed <a href="../DFSCLUSTERING/">DFSCLUSTERING</a> on one of the adjacency matrices
+computed using the <a href="../module_adjmat/">admat</a>.  The following example illustrates how you can use
+this to compute the number of atoms in each of the identified clusters:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_CLUSTER_DISTRIBUTION.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../CLUSTER_DISTRIBUTION.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="CLUSTER_DISTRIBUTION.md_working_1.datcm" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_1.dat","CLUSTER_DISTRIBUTION.md_working_1.datcm","CLUSTER_DISTRIBUTION.md_working_1.datcm","red")'>cm</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_1.datcm">The CONTACT_MATRIX action with label <b>cm</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cm</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-100 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={CUBIC D_0=0.45  D_MAX=0.55}
+<b name="CLUSTER_DISTRIBUTION.md_working_1.datdfs" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_1.dat","CLUSTER_DISTRIBUTION.md_working_1.datdfs","CLUSTER_DISTRIBUTION.md_working_1.datdfs","blue")'>dfs</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_1.datdfs">The DFSCLUSTERING action with label <b>dfs</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dfs</td><td width="5%"><font color="blue">vector</font></td><td>vector with length that is equal to the number of rows in the input matrix.  Elements of this vector are equal to the cluster that each node is a part of</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DFSCLUSTERING<span class="right">Find the connected components of the matrix using the depth first search clustering algorithm. <a href="https://www.plumed.org/doc-master/user-doc/html/DFSCLUSTERING" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the input matrix<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_1.datcm">cm</b>
+<b name="CLUSTER_DISTRIBUTION.md_working_1.datclust" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_1.dat","CLUSTER_DISTRIBUTION.md_working_1.datclust","CLUSTER_DISTRIBUTION.md_working_1.datclust","blue")'>clust</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_1.datclust">The CLUSTER_DISTRIBUTION action with label <b>clust</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust</td><td width="5%"><font color="blue">vector</font></td><td>a vector containing the sum of a atomic-cv that is calculated for each of the identified clusters</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CLUSTER_DISTRIBUTION<span class="right">Calculate functions of the distribution of properties in your connected components. <a href="https://www.plumed.org/doc-master/user-doc/html/CLUSTER_DISTRIBUTION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CLUSTERS<span class="right">the label of the action that does the clustering<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_1.datdfs">dfs</b>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_1.datclust">clust</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=1
+</pre></div>
+
+<p>The output from the CLUSTER_DISTRIBUTION action here is a vector with 100 elements.  The first element of this vector
+is the number of atoms in the largest connected component, the second element of the vector is the number of atoms in the
+second largest connected component and so on (many elements of the vector will be zero).</p>
+<p>As illustrated in the inputs below there are multiple shortcuts that allow you to probe the distribution of cluster sizes.
+For example, the following input calculates how many clusters with more than 10 atoms are present.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_CLUSTER_DISTRIBUTION.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../CLUSTER_DISTRIBUTION.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="CLUSTER_DISTRIBUTION.md_working_2.datcm" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_2.dat","CLUSTER_DISTRIBUTION.md_working_2.datcm","CLUSTER_DISTRIBUTION.md_working_2.datcm","red")'>cm</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_2.datcm">The CONTACT_MATRIX action with label <b>cm</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cm</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-100 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={CUBIC D_0=0.45  D_MAX=0.55}
+<b name="CLUSTER_DISTRIBUTION.md_working_2.datdfs" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_2.dat","CLUSTER_DISTRIBUTION.md_working_2.datdfs","CLUSTER_DISTRIBUTION.md_working_2.datdfs","blue")'>dfs</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_2.datdfs">The DFSCLUSTERING action with label <b>dfs</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dfs</td><td width="5%"><font color="blue">vector</font></td><td>vector with length that is equal to the number of rows in the input matrix.  Elements of this vector are equal to the cluster that each node is a part of</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DFSCLUSTERING<span class="right">Find the connected components of the matrix using the depth first search clustering algorithm. <a href="https://www.plumed.org/doc-master/user-doc/html/DFSCLUSTERING" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the input matrix<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_2.datcm">cm</b>
+<span id="CLUSTER_DISTRIBUTION.md_working_2.datclust_short"><b name="CLUSTER_DISTRIBUTION.md_working_2.datclust" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_2.dat","CLUSTER_DISTRIBUTION.md_working_2.datclust","CLUSTER_DISTRIBUTION.md_working_2.datclust_shortcut","blue")'>clust</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_2.datclust_shortcut">The CLUSTER_DISTRIBUTION action with label <b>clust</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value more than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CLUSTER_DISTRIBUTION<span class="right">Calculate functions of the distribution of properties in your connected components. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_2.datclust");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CLUSTER_DISTRIBUTION">More details</a><i></i></span></span> <span class="plumedtooltip">CLUSTERS<span class="right">the label of the action that does the clustering<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_2.datdfs">dfs</b> <span class="plumedtooltip">MORE_THAN<span class="right">calculate the number of variables that are more than a certain target value. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN">MORE_THAN</a>.<i></i></span></span>={RATIONAL D_0=10 R_0=0.0001}
+</span><span id="CLUSTER_DISTRIBUTION.md_working_2.datclust_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_2.datclust")'># clust: CLUSTER_DISTRIBUTION CLUSTERS=dfs MORE_THAN={RATIONAL D_0=10 R_0=0.0001}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="CLUSTER_DISTRIBUTION.md_working_2.datclust_mt" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_2.dat","CLUSTER_DISTRIBUTION.md_working_2.datclust_mt","CLUSTER_DISTRIBUTION.md_working_2.datclust_mt","blue")'>clust_mt</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_2.datclust_mt">The MORE_THAN action with label <b>clust_mt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_mt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=clust <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL D_0=10 R_0=0.0001}
+<b name="CLUSTER_DISTRIBUTION.md_working_2.datclust_morethan" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_2.dat","CLUSTER_DISTRIBUTION.md_working_2.datclust_morethan","CLUSTER_DISTRIBUTION.md_working_2.datclust_morethan","black")'>clust_morethan</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_2.datclust_morethan">The SUM action with label <b>clust_morethan</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_2.datclust_mt">clust_mt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=clust.morethan <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=1
+</pre></div>
+
+<p>By a similar logic you can compute the number of clusters that were identified as follows:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_CLUSTER_DISTRIBUTION.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../CLUSTER_DISTRIBUTION.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="CLUSTER_DISTRIBUTION.md_working_3.datcm" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_3.dat","CLUSTER_DISTRIBUTION.md_working_3.datcm","CLUSTER_DISTRIBUTION.md_working_3.datcm","red")'>cm</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_3.datcm">The CONTACT_MATRIX action with label <b>cm</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cm</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-100 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={CUBIC D_0=0.45  D_MAX=0.55}
+<b name="CLUSTER_DISTRIBUTION.md_working_3.datdfs" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_3.dat","CLUSTER_DISTRIBUTION.md_working_3.datdfs","CLUSTER_DISTRIBUTION.md_working_3.datdfs","blue")'>dfs</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_3.datdfs">The DFSCLUSTERING action with label <b>dfs</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dfs</td><td width="5%"><font color="blue">vector</font></td><td>vector with length that is equal to the number of rows in the input matrix.  Elements of this vector are equal to the cluster that each node is a part of</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DFSCLUSTERING<span class="right">Find the connected components of the matrix using the depth first search clustering algorithm. <a href="https://www.plumed.org/doc-master/user-doc/html/DFSCLUSTERING" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the input matrix<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_3.datcm">cm</b>
+<span id="CLUSTER_DISTRIBUTION.md_working_3.datclust_short"><b name="CLUSTER_DISTRIBUTION.md_working_3.datclust" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_3.dat","CLUSTER_DISTRIBUTION.md_working_3.datclust","CLUSTER_DISTRIBUTION.md_working_3.datclust_shortcut","blue")'>clust</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_3.datclust_shortcut">The CLUSTER_DISTRIBUTION action with label <b>clust</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_lessthan</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CLUSTER_DISTRIBUTION<span class="right">Calculate functions of the distribution of properties in your connected components. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_3.datclust");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CLUSTER_DISTRIBUTION">More details</a><i></i></span></span> <span class="plumedtooltip">CLUSTERS<span class="right">the label of the action that does the clustering<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_3.datdfs">dfs</b> <span class="plumedtooltip">LESS_THAN<span class="right">calculate the number of variables that are less than a certain target value. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.0001}
+</span><span id="CLUSTER_DISTRIBUTION.md_working_3.datclust_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_3.datclust")'># clust: CLUSTER_DISTRIBUTION CLUSTERS=dfs LESS_THAN={RATIONAL R_0=0.0001}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="CLUSTER_DISTRIBUTION.md_working_3.datclust_lt" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_3.dat","CLUSTER_DISTRIBUTION.md_working_3.datclust_lt","CLUSTER_DISTRIBUTION.md_working_3.datclust_lt","blue")'>clust_lt</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_3.datclust_lt">The LESS_THAN action with label <b>clust_lt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_lt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=clust <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.0001}
+<b name="CLUSTER_DISTRIBUTION.md_working_3.datclust_lessthan" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_3.dat","CLUSTER_DISTRIBUTION.md_working_3.datclust_lessthan","CLUSTER_DISTRIBUTION.md_working_3.datclust_lessthan","black")'>clust_lessthan</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_3.datclust_lessthan">The SUM action with label <b>clust_lessthan</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_lessthan</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_3.datclust_lt">clust_lt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><b name="CLUSTER_DISTRIBUTION.md_working_3.datnc" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_3.dat","CLUSTER_DISTRIBUTION.md_working_3.datnc","CLUSTER_DISTRIBUTION.md_working_3.datnc","black")'>nc</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_3.datnc">The CUSTOM action with label <b>nc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">nc</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=clust.lessthan <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=100-x <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_3.datnc">nc</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=1
+</pre></div>
+
+<p>This input calculates the number of zeros in the vector output by the CLUSTER_DISTRIBUTION action.  If we subtract the number of
+non-zero elements from the size of the vector we then get the number of clusters.</p>
+<p>Lastly, you can calculate the number of clusters that are within a certain range or a set of ranges using the BETWEEN and HISGTOGRAM keywords
+as indicated below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_CLUSTER_DISTRIBUTION.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../CLUSTER_DISTRIBUTION.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="CLUSTER_DISTRIBUTION.md_working_4.datcm" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datcm","CLUSTER_DISTRIBUTION.md_working_4.datcm","red")'>cm</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datcm">The CONTACT_MATRIX action with label <b>cm</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cm</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-100 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={CUBIC D_0=0.45  D_MAX=0.55}
+<b name="CLUSTER_DISTRIBUTION.md_working_4.datdfs" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datdfs","CLUSTER_DISTRIBUTION.md_working_4.datdfs","blue")'>dfs</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datdfs">The DFSCLUSTERING action with label <b>dfs</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dfs</td><td width="5%"><font color="blue">vector</font></td><td>vector with length that is equal to the number of rows in the input matrix.  Elements of this vector are equal to the cluster that each node is a part of</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DFSCLUSTERING<span class="right">Find the connected components of the matrix using the depth first search clustering algorithm. <a href="https://www.plumed.org/doc-master/user-doc/html/DFSCLUSTERING" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the input matrix<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_4.datcm">cm</b>
+<span id="CLUSTER_DISTRIBUTION.md_working_4.datclust_short"><b name="CLUSTER_DISTRIBUTION.md_working_4.datclust" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datclust","CLUSTER_DISTRIBUTION.md_working_4.datclust_shortcut","blue")'>clust</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datclust_shortcut">The CLUSTER_DISTRIBUTION action with label <b>clust</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_between</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">clust_between-1</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">clust_between-2</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">clust_between-3</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">clust_between-4</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CLUSTER_DISTRIBUTION<span class="right">Calculate functions of the distribution of properties in your connected components. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_4.datclust");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CLUSTER_DISTRIBUTION">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">CLUSTERS<span class="right">the label of the action that does the clustering<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_4.datdfs">dfs</b>
+   <span class="plumedtooltip">BETWEEN<span class="right">calculate the number of values that are within a certain range. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN">BETWEEN</a>.<i></i></span></span>={GAUSSIAN LOWER=5 UPPER=6 SMEAR=0.5}
+   <span class="plumedtooltip">HISTOGRAM<span class="right">calculate a discretized histogram of the distribution of values<i></i></span></span>={GAUSSIAN LOWER=6 UPPER=10 NBINS=4 SMEAR=0.5}
+...
+</span><span id="CLUSTER_DISTRIBUTION.md_working_4.datclust_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_4.datclust")'># clust: CLUSTER_DISTRIBUTION ...</span>
+<span style="color:blue" class="comment">#    CLUSTERS=dfs</span>
+<span style="color:blue" class="comment">#    BETWEEN={GAUSSIAN LOWER=5 UPPER=6 SMEAR=0.5}</span>
+<span style="color:blue" class="comment">#    HISTOGRAM={GAUSSIAN LOWER=6 UPPER=10 NBINS=4 SMEAR=0.5}</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datclust_bt","CLUSTER_DISTRIBUTION.md_working_4.datclust_bt","blue")'>clust_bt</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt">The BETWEEN action with label <b>clust_bt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_bt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=clust <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=5 UPPER=6 SMEAR=0.5}
+<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_between" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datclust_between","CLUSTER_DISTRIBUTION.md_working_4.datclust_between","black")'>clust_between</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datclust_between">The SUM action with label <b>clust_between</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_between</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt">clust_bt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt1" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datclust_bt1","CLUSTER_DISTRIBUTION.md_working_4.datclust_bt1","blue")'>clust_bt1</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt1">The BETWEEN action with label <b>clust_bt1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_bt1</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=clust <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=6 UPPER=7 SMEAR=0.5}
+<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_between-1" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datclust_between-1","CLUSTER_DISTRIBUTION.md_working_4.datclust_between-1","black")'>clust_between-1</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datclust_between-1">The SUM action with label <b>clust_between-1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_between-1</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt1">clust_bt1</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt2" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datclust_bt2","CLUSTER_DISTRIBUTION.md_working_4.datclust_bt2","blue")'>clust_bt2</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt2">The BETWEEN action with label <b>clust_bt2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_bt2</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=clust <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=7 UPPER=8 SMEAR=0.5}
+<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_between-2" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datclust_between-2","CLUSTER_DISTRIBUTION.md_working_4.datclust_between-2","black")'>clust_between-2</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datclust_between-2">The SUM action with label <b>clust_between-2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_between-2</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt2">clust_bt2</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt3" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datclust_bt3","CLUSTER_DISTRIBUTION.md_working_4.datclust_bt3","blue")'>clust_bt3</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt3">The BETWEEN action with label <b>clust_bt3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_bt3</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=clust <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=8 UPPER=9 SMEAR=0.5}
+<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_between-3" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datclust_between-3","CLUSTER_DISTRIBUTION.md_working_4.datclust_between-3","black")'>clust_between-3</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datclust_between-3">The SUM action with label <b>clust_between-3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_between-3</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt3">clust_bt3</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt4" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datclust_bt4","CLUSTER_DISTRIBUTION.md_working_4.datclust_bt4","blue")'>clust_bt4</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt4">The BETWEEN action with label <b>clust_bt4</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_bt4</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=clust <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=9 UPPER=10 SMEAR=0.5}
+<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_between-4" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_4.dat","CLUSTER_DISTRIBUTION.md_working_4.datclust_between-4","CLUSTER_DISTRIBUTION.md_working_4.datclust_between-4","black")'>clust_between-4</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_4.datclust_between-4">The SUM action with label <b>clust_between-4</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust_between-4</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_4.datclust_bt4">clust_bt4</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=clust.* <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=1
+</pre></div>
+
+<p>This input will output 5 quantities:</p>
+<ul>
+<li><code>clust.between</code> tells you the number of connected components that contain between 5 and 6 atoms.</li>
+<li><code>clust.between-1</code> tells you the number of connected components that contain between 6 and 7 atoms.</li>
+<li><code>clust.between-2</code> tells you the number of connected components that contain between 7 and 8 atoms.</li>
+<li><code>clust.between-3</code> tells you the number of connected components that contain between 8 and 9 atoms.</li>
+<li><code>clust.between-4</code> tells you the number of connected components that contain between 9 and 10 atoms.</li>
+</ul>
+<p>If you expand the inputs above you can find more details on how these quantities are calculated.</p>
+<p>The input provided below shows just how this can be used to perform quite complicated calculations.  The input
+calculates the local q6 Steinhardt parameter on each atom.  The coordination number
+that atoms with a high value for the local q6 Steinhardt parameter have with other atoms that have a high
+value for the local q6 Steinhardt parameter is then computed.  A contact matrix is then computed that measures
+whether atoms atoms <script type="math/tex">i</script> and <script type="math/tex">j</script> have a high value for this coordination number and if they are within
+3.6 nm of each other.  The connected components of this matrix are then found using a depth first clustering
+algorithm on the corresponding graph. The number of components in this graph that contain more than 27 atoms is then computed.
+An input similar to this one was used to analyze the formation of a polycrystal of GeTe from amorphous GeTe in the paper cited below</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_CLUSTER_DISTRIBUTION.md_working_5.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../CLUSTER_DISTRIBUTION.md_working_5.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="CLUSTER_DISTRIBUTION.md_working_5.datq6_short"><b name="CLUSTER_DISTRIBUTION.md_working_5.datq6" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datq6","CLUSTER_DISTRIBUTION.md_working_5.datq6_shortcut","blue")'>q6</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datq6_shortcut">The Q6 action with label <b>q6</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6</td><td width="5%"><font color="blue">vector</font></td><td>the norms of the vectors of spherical harmonic coefficients</td></tr></table></span>: <span class="plumedtooltip" style="color:green">Q6<span class="right">Calculate sixth order Steinhardt parameters. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_5.datq6");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/Q6">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIES<span class="right">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments<i></i></span></span>=1-300 <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={GAUSSIAN D_0=5.29 R_0=0.01 D_MAX=5.3}
+</span><span id="CLUSTER_DISTRIBUTION.md_working_5.datq6_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_5.datq6")'># q6: Q6 SPECIES=1-300 SWITCH={GAUSSIAN D_0=5.29 R_0=0.01 D_MAX=5.3}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_grp" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datq6_grp","CLUSTER_DISTRIBUTION.md_working_5.datq6_grp","violet")'>q6_grp</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datq6_grp">The GROUP action with label <b>q6_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-300
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_mat" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datq6_mat","CLUSTER_DISTRIBUTION.md_working_5.datq6_mat","red")'>q6_mat</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datq6_mat">The CONTACT_MATRIX action with label <b>q6_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_mat.w</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr><tr><td width="5%">q6_mat.x</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the x axis</td></tr><tr><td width="5%">q6_mat.y</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the y axis</td></tr><tr><td width="5%">q6_mat.z</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the z axis</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-300 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={GAUSSIAN D_0=5.29 R_0=0.01 D_MAX=5.3} <span class="plumedtooltip">COMPONENTS<span class="right"> also calculate the components of the vector connecting the atoms in the contact matrix<i></i></span></span>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sh" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datq6_sh","CLUSTER_DISTRIBUTION.md_working_5.datq6_sh","red")'>q6_sh</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datq6_sh">The SPHERICAL_HARMONIC action with label <b>q6_sh</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_sh.rm-n6</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n6th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-n5</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n5th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-n4</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n4th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-n3</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n3th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-n2</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n2th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-n1</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n1th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-0</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the 0th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-p1</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p1th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-p2</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p2th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-p3</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p3th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-p4</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p4th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-p5</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p5th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-p6</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p6th of these quantities</td></tr><tr><td width="5%">q6_sh.im-n6</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n6th of these quantities</td></tr><tr><td width="5%">q6_sh.im-n5</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n5th of these quantities</td></tr><tr><td width="5%">q6_sh.im-n4</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n4th of these quantities</td></tr><tr><td width="5%">q6_sh.im-n3</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n3th of these quantities</td></tr><tr><td width="5%">q6_sh.im-n2</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n2th of these quantities</td></tr><tr><td width="5%">q6_sh.im-n1</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n1th of these quantities</td></tr><tr><td width="5%">q6_sh.im-0</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the 0th of these quantities</td></tr><tr><td width="5%">q6_sh.im-p1</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p1th of these quantities</td></tr><tr><td width="5%">q6_sh.im-p2</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p2th of these quantities</td></tr><tr><td width="5%">q6_sh.im-p3</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p3th of these quantities</td></tr><tr><td width="5%">q6_sh.im-p4</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p4th of these quantities</td></tr><tr><td width="5%">q6_sh.im-p5</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p5th of these quantities</td></tr><tr><td width="5%">q6_sh.im-p6</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p6th of these quantities</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SPHERICAL_HARMONIC<span class="right">Calculate the values of all the spherical harmonic funtions for a particular value of l. <a href="https://www.plumed.org/doc-master/user-doc/html/SPHERICAL_HARMONIC" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_mat">q6_mat.x</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_mat">q6_mat.y</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_mat">q6_mat.z</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_mat">q6_mat.w</b> <span class="plumedtooltip">L<span class="right">the value of the angular momentum<i></i></span></span>=6
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_denom_ones" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datq6_denom_ones","CLUSTER_DISTRIBUTION.md_working_5.datq6_denom_ones","blue")'>q6_denom_ones</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datq6_denom_ones">The CONSTANT action with label <b>q6_denom_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_denom_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=300
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_denom" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datq6_denom","CLUSTER_DISTRIBUTION.md_working_5.datq6_denom","blue")'>q6_denom</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datq6_denom">The MATRIX_VECTOR_PRODUCT action with label <b>q6_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_denom</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_mat">q6_mat.w</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_denom_ones">q6_denom_ones</b>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datq6_sp","CLUSTER_DISTRIBUTION.md_working_5.datq6_sp","blue")'>q6_sp</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">The MATRIX_VECTOR_PRODUCT action with label <b>q6_sp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_sp.rm-n6</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-n6 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-n5</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-n5 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-n4</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-n4 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-n3</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-n3 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-n2</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-n2 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-n1</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-n1 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-0</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-0 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-p1</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-p1 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-p2</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-p2 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-p3</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-p3 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-p4</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-p4 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-p5</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-p5 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-p6</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-p6 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-n6</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-n6 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-n5</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-n5 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-n4</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-n4 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-n3</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-n3 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-n2</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-n2 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-n1</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-n1 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-0</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-0 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-p1</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-p1 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-p2</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-p2 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-p3</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-p3 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-p4</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-p4 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-p5</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-p5 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-p6</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-p6 and the vector q6_denom_ones</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sh">q6_sh.*</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_denom_ones">q6_denom_ones</b>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_norm2" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datq6_norm2","CLUSTER_DISTRIBUTION.md_working_5.datq6_norm2","blue")'>q6_norm2</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datq6_norm2">The COMBINE action with label <b>q6_norm2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_norm2</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a linear combination to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2 <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-n6</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-n6</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-n5</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-n5</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-n4</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-n4</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-n3</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-n3</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-n2</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-n2</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-n1</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-n1</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-0</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-0</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-p1</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-p1</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-p2</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-p2</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-p3</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-p3</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-p4</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-p4</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-p5</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-p5</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-p6</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-p6</b>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_norm" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datq6_norm","CLUSTER_DISTRIBUTION.md_working_5.datq6_norm","blue")'>q6_norm</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datq6_norm">The CUSTOM action with label <b>q6_norm</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_norm</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_norm2">q6_norm2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datq6","CLUSTER_DISTRIBUTION.md_working_5.datq6","blue")'>q6</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datq6">The CUSTOM action with label <b>q6</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_norm">q6_norm</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_denom">q6_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_short"><b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6","CLUSTER_DISTRIBUTION.md_working_5.datlq6_shortcut","blue")'>lq6</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_shortcut">The LOCAL_Q6 action with label <b>lq6</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6</td><td width="5%"><font color="blue">vector</font></td><td>the values of the local steinhardt parameters for the input atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LOCAL_Q6<span class="right">Calculate the local degree of order around an atoms by taking the average dot product between the q_6 vector on the central atom and the q_6 vector on the atoms in the first coordination sphere. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_5.datlq6");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/LOCAL_Q6">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIES<span class="right">the label of the action that computes the Steinhardt parameters for which you would like to calculate local steinhardt parameters<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6">q6</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={GAUSSIAN D_0=5.29 R_0=0.01 D_MAX=5.3}
+</span><span id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_5.datlq6")'># lq6: LOCAL_Q6 SPECIES=q6 SWITCH={GAUSSIAN D_0=5.29 R_0=0.01 D_MAX=5.3}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_uvec" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_uvec","CLUSTER_DISTRIBUTION.md_working_5.datlq6_uvec","blue")'>lq6_uvec</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_uvec">The CONSTANT action with label <b>lq6_uvec</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6_uvec</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=26
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_grp" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_grp","CLUSTER_DISTRIBUTION.md_working_5.datlq6_grp","violet")'>lq6_grp</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_grp">The GROUP action with label <b>lq6_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6">q6</b>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_nmat" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_nmat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_nmat","red")'>lq6_nmat</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_nmat">The OUTER_PRODUCT action with label <b>lq6_nmat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6_nmat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the outer product of the two input vectors that was obtained using the function that was input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">OUTER_PRODUCT<span class="right">Calculate the outer product matrix of two vectors <a href="https://www.plumed.org/doc-master/user-doc/html/OUTER_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the two vectors from which the outer product is being computed<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_norm">q6_norm</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_uvec">lq6_uvec</b>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_uvecs" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_uvecs","CLUSTER_DISTRIBUTION.md_working_5.datlq6_uvecs","red")'>lq6_uvecs</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_uvecs">The VSTACK action with label <b>lq6_uvecs</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6_uvecs</td><td width="5%"><font color="red">matrix</font></td><td>a matrix that contains the input vectors in its columns</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VSTACK<span class="right">Create a matrix by stacking vectors together <a href="https://www.plumed.org/doc-master/user-doc/html/VSTACK" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values that you would like to stack together to construct the output matrix<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-n6</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-n6</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-n5</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-n5</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-n4</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-n4</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-n3</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-n3</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-n2</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-n2</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-n1</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-n1</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-0</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-0</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-p1</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-p1</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-p2</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-p2</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-p3</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-p3</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-p4</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-p4</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-p5</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-p5</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.rm-p6</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6_sp">q6_sp.im-p6</b>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_vecs" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_vecs","CLUSTER_DISTRIBUTION.md_working_5.datlq6_vecs","red")'>lq6_vecs</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_vecs">The CUSTOM action with label <b>lq6_vecs</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6_vecs</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_uvecs">lq6_uvecs</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_nmat">lq6_nmat</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_vecsT" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_vecsT","CLUSTER_DISTRIBUTION.md_working_5.datlq6_vecsT","red")'>lq6_vecsT</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_vecsT">The TRANSPOSE action with label <b>lq6_vecsT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6_vecsT</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_vecs">lq6_vecs</b>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_cmap" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_cmap","CLUSTER_DISTRIBUTION.md_working_5.datlq6_cmap","red")'>lq6_cmap</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_cmap">The CONTACT_MATRIX action with label <b>lq6_cmap</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6_cmap</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datq6">q6</b> <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={GAUSSIAN D_0=5.29 R_0=0.01 D_MAX=5.3}
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_dpmat" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_dpmat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_dpmat","red")'>lq6_dpmat</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_dpmat">The MATRIX_PRODUCT action with label <b>lq6_dpmat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6_dpmat</td><td width="5%"><font color="red">matrix</font></td><td>the product of the two input matrices</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT<span class="right">Calculate the product of two matrices <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the two matrices from which the product is calculated<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_vecs">lq6_vecs</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_vecsT">lq6_vecsT</b> <span class="plumedtooltip">MASK<span class="right">a matrix that is used to used to determine which elements of the output matrix to compute<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_cmap">lq6_cmap</b>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_prod" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_prod","CLUSTER_DISTRIBUTION.md_working_5.datlq6_prod","red")'>lq6_prod</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_prod">The CUSTOM action with label <b>lq6_prod</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6_prod</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_cmap">lq6_cmap</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_dpmat">lq6_dpmat</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_ones" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_ones","CLUSTER_DISTRIBUTION.md_working_5.datlq6_ones","blue")'>lq6_ones</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_ones">The CONSTANT action with label <b>lq6_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=300
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6","CLUSTER_DISTRIBUTION.md_working_5.datlq6","blue")'>lq6</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6">The MATRIX_VECTOR_PRODUCT action with label <b>lq6</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_prod">lq6_prod</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_ones">lq6_ones</b>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_denom" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_denom","CLUSTER_DISTRIBUTION.md_working_5.datlq6_denom","blue")'>lq6_denom</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_denom">The MATRIX_VECTOR_PRODUCT action with label <b>lq6_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6_denom</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_cmap">lq6_cmap</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_ones">lq6_ones</b>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_av" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datlq6_av","CLUSTER_DISTRIBUTION.md_working_5.datlq6_av","blue")'>lq6_av</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datlq6_av">The CUSTOM action with label <b>lq6_av</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lq6_av</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6">lq6</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6_denom">lq6_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><b name="CLUSTER_DISTRIBUTION.md_working_5.datflq6" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datflq6","CLUSTER_DISTRIBUTION.md_working_5.datflq6","blue")'>flq6</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datflq6">The MORE_THAN action with label <b>flq6</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">flq6</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datlq6">lq6</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={GAUSSIAN D_0=0.19 R_0=0.01 D_MAX=0.2}
+<span id="CLUSTER_DISTRIBUTION.md_working_5.datcc_short"><b name="CLUSTER_DISTRIBUTION.md_working_5.datcc" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datcc","CLUSTER_DISTRIBUTION.md_working_5.datcc_shortcut","blue")'>cc</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datcc_shortcut">The COORDINATIONNUMBER action with label <b>cc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc</td><td width="5%"><font color="blue">vector</font></td><td>the coordination numbers of the specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COORDINATIONNUMBER<span class="right">Calculate the coordination numbers of atoms so that you can then calculate functions of the distribution of This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_5.datcc");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/COORDINATIONNUMBER">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIES<span class="right">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments<i></i></span></span>=1-300 <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={GAUSSIAN D_0=3.59 R_0=0.01 D_MAX=3.6}
+</span><span id="CLUSTER_DISTRIBUTION.md_working_5.datcc_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_5.datcc")'># cc: COORDINATIONNUMBER SPECIES=1-300 SWITCH={GAUSSIAN D_0=3.59 R_0=0.01 D_MAX=3.6}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datcc_grp" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datcc_grp","CLUSTER_DISTRIBUTION.md_working_5.datcc_grp","violet")'>cc_grp</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datcc_grp">The GROUP action with label <b>cc_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-300
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datcc_mat" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datcc_mat","CLUSTER_DISTRIBUTION.md_working_5.datcc_mat","red")'>cc_mat</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datcc_mat">The CONTACT_MATRIX action with label <b>cc_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_mat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-300 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={GAUSSIAN D_0=3.59 R_0=0.01 D_MAX=3.6}
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datcc_ones" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datcc_ones","CLUSTER_DISTRIBUTION.md_working_5.datcc_ones","blue")'>cc_ones</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datcc_ones">The CONSTANT action with label <b>cc_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=300
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datcc" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datcc","CLUSTER_DISTRIBUTION.md_working_5.datcc","blue")'>cc</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datcc">The MATRIX_VECTOR_PRODUCT action with label <b>cc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span>  <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datcc_mat">cc_mat</b>,<b name="CLUSTER_DISTRIBUTION.md_working_5.datcc_ones">cc_ones</b>
+<span style="color:blue"># --- End of included input --- </span></span><b name="CLUSTER_DISTRIBUTION.md_working_5.datfcc" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datfcc","CLUSTER_DISTRIBUTION.md_working_5.datfcc","blue")'>fcc</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datfcc">The MORE_THAN action with label <b>fcc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fcc</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datcc">cc</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={GAUSSIAN D_0=5.99 R_0=0.01 D_MAX=6.0}
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datmat" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datmat","CLUSTER_DISTRIBUTION.md_working_5.datmat","red")'>mat</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datmat">The CONTACT_MATRIX action with label <b>mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">mat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-300 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={GAUSSIAN D_0=3.59 R_0=0.01 D_MAX=3.6}
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datdfs" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datdfs","CLUSTER_DISTRIBUTION.md_working_5.datdfs","blue")'>dfs</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datdfs">The DFSCLUSTERING action with label <b>dfs</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dfs</td><td width="5%"><font color="blue">vector</font></td><td>vector with length that is equal to the number of rows in the input matrix.  Elements of this vector are equal to the cluster that each node is a part of</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DFSCLUSTERING<span class="right">Find the connected components of the matrix using the depth first search clustering algorithm. <a href="https://www.plumed.org/doc-master/user-doc/html/DFSCLUSTERING" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the input matrix<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datmat">mat</b>
+<span id="CLUSTER_DISTRIBUTION.md_working_5.datnclust_short"><b name="CLUSTER_DISTRIBUTION.md_working_5.datnclust" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datnclust","CLUSTER_DISTRIBUTION.md_working_5.datnclust_shortcut","blue")'>nclust</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datnclust_shortcut">The CLUSTER_DISTRIBUTION action with label <b>nclust</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">nclust_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value more than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CLUSTER_DISTRIBUTION<span class="right">Calculate functions of the distribution of properties in your connected components. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_5.datnclust");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CLUSTER_DISTRIBUTION">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">CLUSTERS<span class="right">the label of the action that does the clustering<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datdfs">dfs</b> <span class="plumedtooltip">WEIGHTS<span class="right">use the vector of values calculated by this action as weights rather than giving each atom a unit weight<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datfcc">fcc</b>
+   <span class="plumedtooltip">MORE_THAN<span class="right">calculate the number of variables that are more than a certain target value. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN">MORE_THAN</a>.<i></i></span></span>={GAUSSIAN D_0=26.99 R_0=0.01 D_MAX=27}
+...
+</span><span id="CLUSTER_DISTRIBUTION.md_working_5.datnclust_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("CLUSTER_DISTRIBUTION.md_working_5.datnclust")'># nclust: CLUSTER_DISTRIBUTION ...</span>
+<span style="color:blue" class="comment">#    CLUSTERS=dfs WEIGHTS=fcc</span>
+<span style="color:blue" class="comment">#    MORE_THAN={GAUSSIAN D_0=26.99 R_0=0.01 D_MAX=27}</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datnclust_mt" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datnclust_mt","CLUSTER_DISTRIBUTION.md_working_5.datnclust_mt","blue")'>nclust_mt</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datnclust_mt">The MORE_THAN action with label <b>nclust_mt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">nclust_mt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=nclust <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={GAUSSIAN D_0=26.99 R_0=0.01 D_MAX=27}
+<b name="CLUSTER_DISTRIBUTION.md_working_5.datnclust_morethan" onclick='showPath("CLUSTER_DISTRIBUTION.md_working_5.dat","CLUSTER_DISTRIBUTION.md_working_5.datnclust_morethan","CLUSTER_DISTRIBUTION.md_working_5.datnclust_morethan","black")'>nclust_morethan</b><span style="display:none;" id="CLUSTER_DISTRIBUTION.md_working_5.datnclust_morethan">The SUM action with label <b>nclust_morethan</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">nclust_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="CLUSTER_DISTRIBUTION.md_working_5.datnclust_mt">nclust_mt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=nclust.* <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>Notice how the WEIGHTS keyword is used here in the input to CLUSTER_DISTRIBUTION. By using this keyword here we ensure that the size of each
+cluster is the sum of the components of the vector <code>fcc</code> that are part of the connected component.  The <code>size</code> of each cluster that is output
+is thus the number of atoms in that cluster that have a COORDINATIONNUMBER that is greater than 4.</p>
+<h2 id="output-components">Output components</h2>
+<p>This action can calculate the <a href="../specifying_arguments/">values</a> in the following table when the associated keyword is included in the input for the action. These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">lessthan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">LESS_THAN</td>
+<td style="text-align: left;">the number of colvars that have a value less than a threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;">morethan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MORE_THAN</td>
+<td style="text-align: left;">the number of colvars that have a value more than a threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;">altmin</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">ALT_MIN</td>
+<td style="text-align: left;">the minimum value of the cv</td>
+</tr>
+<tr>
+<td style="text-align: left;">min</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MIN</td>
+<td style="text-align: left;">the minimum colvar</td>
+</tr>
+<tr>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MAX</td>
+<td style="text-align: left;">the maximum colvar</td>
+</tr>
+<tr>
+<td style="text-align: left;">between</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">BETWEEN</td>
+<td style="text-align: left;">the number of colvars that have a value that lies in a particular interval</td>
+</tr>
+<tr>
+<td style="text-align: left;">highest</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">HIGHEST</td>
+<td style="text-align: left;">the largest of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">lowest</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">LOWEST</td>
+<td style="text-align: left;">the smallest of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">sum</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">SUM</td>
+<td style="text-align: left;">the sum of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">mean</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MEAN</td>
+<td style="text-align: left;">the mean of the colvars</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CLUSTERS</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the label of the action that does the clustering</td>
+</tr>
+<tr>
+<td style="text-align: left;">WEIGHTS</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">use the vector of values calculated by this action as weights rather than giving each atom a unit weight</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">deprecated keywords</p>
+<p>The keywords in the following table can still be used with this action but have been deprecated</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">LESS_THAN</td>
+<td style="text-align: left;">calculate the number of variables that are less than a certain target value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MORE_THAN</td>
+<td style="text-align: left;">calculate the number of variables that are more than a certain target value</td>
+</tr>
+<tr>
+<td style="text-align: left;">BETWEEN</td>
+<td style="text-align: left;">calculate the number of values that are within a certain range</td>
+</tr>
+<tr>
+<td style="text-align: left;">HISTOGRAM</td>
+<td style="text-align: left;">calculate a discretized histogram of the distribution of values</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

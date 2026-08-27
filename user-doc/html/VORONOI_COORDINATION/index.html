@@ -1,0 +1,1198 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: VORONOI_COORDINATION - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-voronoi_coordination" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: VORONOI_COORDINATION
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soft-assignment-and-coordination-defects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soft assignment and coordination defects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translating-chemistry-into-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Translating chemistry into keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exact-and-neighbor-list-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exact and neighbor-list calculations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu-parallelism-and-practical-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPU parallelism and practical scaling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-1-water-autoionization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example 1: water autoionization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-2-exact-to-nlist-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example 2: exact-to-NLIST acceleration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-3-applying-a-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example 3: applying a bias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-and-production-cautions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting and production cautions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-voronoi_coordination"><a href="../actions/">Action</a>: VORONOI_COORDINATION</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_colvar/"><strong>colvar</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate a scalar reduction of smooth Voronoi coordination defects.</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the selected reduction of the smooth occupancy defects</td>
+<td style="text-align: center;">scalar</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate a scalar reduction of smooth Voronoi coordination defects.</p>
+<p>Reactive processes such as proton transfer are difficult to describe with a
+fixed molecular identity because the atom that carries the proton can change.
+This Action assigns every atom in ASSIGNED continuously to the atoms in
+CENTERS and reduces the resulting coordination defects to one scalar.  The
+same assignment is shared by <a href="../VORONOI_DISTANCE/">VORONOI_DISTANCE</a> and
+<a href="../VORONOI_POSITION/">VORONOI_POSITION</a>.  Together the three Actions describe
+the amount, separation, and location of coordination defects without
+hard-coding water, glycine, a catalyst, or an atom-list position.</p>
+<p>The construction follows the descriptors introduced for acid-base equilibria
+\cite Grifoni2019AcidBase and condensed-phase tautomerism
+\cite Grifoni2020Tautomeric.  Applications to solvated glycine, interfacial
+water ions, electric-field effects, and electrocatalytic nitrogen reduction
+are discussed in \cite Zhang2024Glycine, \cite Zhang2025Interfaces,
+\cite Zhang2025ElectricField, and \cite Zhang2026NRR.</p>
+<p>An illustrated bilingual guide with downloadable teaching structures,
+application examples, performance data, and additional references is
+available on the
+<a href="https://zhang-pchao.github.io/code/reactive-voronoi/">Reactive Soft-Voronoi CV project page</a>.</p>
+<p>VORONOI_COORDINATION, <a href="../VORONOI_DISTANCE/">VORONOI_DISTANCE</a>, and
+<a href="../VORONOI_POSITION/">VORONOI_POSITION</a> are part of PLUMED's default <code>colvar</code>
+module and have no external library dependency.  In a PLUMED installation that
+contains these Actions, use them directly in the input; no <a href="../LOAD/">LOAD</a>
+line or optional module is required.  Bias examples using
+<a href="../OPES_METAD/">OPES_METAD</a> additionally require the <code>opes</code> module.</p>
+<h2 id="soft-assignment-and-coordination-defects">Soft assignment and coordination defects</h2>
+<p>For a center \f<script type="math/tex">i\f</script> and an assigned atom \f<script type="math/tex">j\f</script>, let \f<script type="math/tex">d_{ij}\f</script> be their
+minimum-image distance.  The assignment weight is</p>
+<p>\f[
+ w_{ij}=\frac{\exp(-\kappa d_{ij})}
+ {\sum_k\exp(-\kappa d_{kj})}.
+\f]</p>
+<p>By default, \f<script type="math/tex">d_{ij}\f</script> is evaluated with the minimum-image convention.
+NOPBC instead uses the direct coordinate difference, so the input coordinates
+must already follow a consistent unwrapped image convention.</p>
+<p>The denominator contains all CENTERS for the same assigned atom, so
+\f<script type="math/tex">\sum_i w_{ij}=1\f</script>.  KAPPA is positive and has inverse units of the current
+PLUMED length unit.  Increasing KAPPA sharpens the assignment toward the
+nearest center; reducing it spreads an assigned atom over more centers.  The
+implementation uses a shifted softmax, which improves numerical stability
+without changing the mathematical value.</p>
+<p>For monitoring or structural diagnosis, a larger KAPPA can provide sharper
+state labels once the relevant basins are already known.  For biased sampling,
+a smaller KAPPA usually gives smoother assignment and force changes when an
+assigned atom switches between nearby centers, although a value that is too
+small can blur distinct chemical basins.  Scan KAPPA on representative
+reactant, transition, product, and host-switching frames before applying a
+bias.  Values such as 5 for smoother sampling or 100 for sharper diagnosis are
+application examples, not transferable defaults.</p>
+<p>The smooth occupancy and coordination defect of center \f<script type="math/tex">i\f</script> are</p>
+<p>\f[
+ n_i=\sum_j w_{ij}, \qquad q_i=n_i-\nu_i .
+\f]</p>
+<p>REFERENCE supplies \f<script type="math/tex">\nu_i\f</script>.  A single value is broadcast to all CENTERS;
+otherwise provide exactly one value per center in the same order as CENTERS.
+For example, <code>REFERENCE=2</code> with two water O centers is the vector <code>(2,2)</code>, not
+a one-center calculation.  Fractional entries are valid when the model
+deliberately shares one reference occupancy over symmetry-related centers;
+they should not be introduced by averaging chemically nonequivalent sites.
+The identities</p>
+<p>\f[
+ \sum_i n_i=N_{\mathrm{assigned}}, \qquad
+ \sum_i q_i=N_{\mathrm{assigned}}-\sum_i\nu_i
+\f]</p>
+<p>provide useful checks on a new chemical mapping.  The Action does not infer
+elements, molecules, water, or a special reactive site from atom order.
+CENTERS and ASSIGNED must be nonempty, internally unique, and disjoint.</p>
+<p>VORONOI_COORDINATION returns</p>
+<p>\f[
+ Q_p=\sum_{i\in S} a_i q_i^p ,
+\f]</p>
+<p>where SELECT defines \f<script type="math/tex">S\f</script> and COEFFICIENTS supplies \f<script type="math/tex">a_i\f</script>.  SELECT
+defaults to all CENTERS and COEFFICIENTS defaults to one.  SIGN restricts the
+sum to \f<script type="math/tex">q_i>0\f</script> or \f<script type="math/tex">q_i<0\f</script> when POSITIVE or NEGATIVE is selected.</p>
+<ul>
+<li>POWER=1 preserves the signed defect.  With sign filtering it is
+  non-differentiable exactly at \f<script type="math/tex">q_i=0\f</script>.</li>
+<li>POWER=2 measures defect activity without cancellation.  With sign
+  filtering its value and first derivative are continuous at \f<script type="math/tex">q_i=0\f</script>,
+  but its second derivative has a cusp there.</li>
+<li>COEFFICIENTS can distinguish chemically different selected centers or
+  reproduce a published scalar.  Coefficients do not change the assignment.</li>
+</ul>
+<p>Analytical coordinate and box derivatives are provided.  The derivative with
+respect to a defect is \f<script type="math/tex">a_i\f</script> for POWER=1 and \f<script type="math/tex">2a_iq_i\f</script> for POWER=2
+inside the selected sign branch, and zero outside it.  These derivatives are
+propagated through every assignment weight.  A CV intended for biasing should
+avoid a POWER=1 sign boundary, a neighbor-list membership change, or another
+non-smooth surface discussed below.</p>
+<p>The geometric defects are not formal electronic charges.  Their physical
+meaning comes from the chosen atom sets and reference occupancies and should
+always be checked for the system of interest.</p>
+<h2 id="translating-chemistry-into-keywords">Translating chemistry into keywords</h2>
+<p>Build the input from chemistry rather than from atom-list positions:</p>
+<ol>
+<li>Put atoms that can receive an assigned atom in CENTERS.  For proton
+   transfer these are commonly O and N atoms.</li>
+<li>Put only the transferable atoms in ASSIGNED.  Hydrogen atoms that cannot
+   participate in the process need not be included.</li>
+<li>Give every center its neutral or intended occupancy in REFERENCE.  Typical
+   examples are 2 for a water O and a model-dependent value for a reactive O
+   or N.</li>
+<li>Start with the exact full-pair calculation.  Inspect representative
+   neutral, product, transition, and multi-defect configurations before
+   choosing SELECT, POWER, SIGN, or COEFFICIENTS.</li>
+<li>Add <a href="../VORONOI_DISTANCE/">VORONOI_DISTANCE</a> only when separation is needed,
+   and <a href="../VORONOI_POSITION/">VORONOI_POSITION</a> only when a fixed spatial frame
+   is physically meaningful.</li>
+</ol>
+<p>REFERENCE follows CENTERS order.  COEFFICIENTS follows SELECT order.  If the
+centers are reordered, reorder the corresponding numeric vector as well.
+Atom-valued SELECT, GROUP1, and GROUP2 lists use absolute atom numbers and do
+not rely on a center being last, first, or one of a fixed number of species.</p>
+<h2 id="exact-and-neighbor-list-calculations">Exact and neighbor-list calculations</h2>
+<p>Without NLIST, every CENTER-ASSIGNED pair is included and the finite-system
+definition above is exact.  NLIST truncates the candidate centers and
+renormalizes the weights over the retained candidates, so it is an
+approximation rather than an algebraically exact acceleration.  Every
+ASSIGNED atom must retain at least one CENTER or the calculation stops with an
+error.</p>
+<p>Omitting NLIST therefore has no hidden cutoff.  When NLIST is enabled,
+NL_CUTOFF is an absolute CENTER-ASSIGNED distance in the active PLUMED length
+units, not a bond cutoff or a water-specific constant.  If \f<script type="math/tex">d_{\min}\f</script> is
+the nearest-center distance and \f<script type="math/tex">R\f</script> is a trial cutoff, the screening
+relation</p>
+<p>\f[
+ \exp[-\kappa(R-d_{\min})] \le \epsilon
+\f]</p>
+<p>can provide an initial estimate for making a single omitted score small.
+Smaller KAPPA generally requires a larger cutoff.  This estimate does not
+replace convergence because omitted scores, normalization errors, and force
+derivatives can accumulate over many centers.</p>
+<p>NL_CUTOFF and NL_STRIDE are required whenever NLIST is present.  NL_SKIN is
+optional, defaults to zero, and can be used only when NL_STRIDE is greater
+than one.</p>
+<p>Before using NLIST in production:</p>
+<ol>
+<li>evaluate representative configurations with the exact full-pair form;</li>
+<li>increase NL_CUTOFF until values and forces agree within the required
+   tolerance;</li>
+<li>start with NL_STRIDE=1, then increase it only after checking consecutive
+   MD steps.  With NL_STRIDE greater than one, NL_SKIN can add a Verlet buffer.
+   The list is rebuilt early if any requested atom moves by more than half the
+   skin or if the periodic box changes, while the evaluated pairs are still
+   filtered at the true NL_CUTOFF on every step.</li>
+</ol>
+<p>For replica exchange, every exchange step must also be a neighbor-list update
+step.  Choose the update schedule accordingly; normally NL_STRIDE should
+divide the exchange stride.</p>
+<p>For a fixed box, the half-skin displacement check ensures that a pair cannot
+cross NL_CUTOFF before it was present in the buffered candidate list.  A
+larger skin reduces rebuilds but retains more candidate pairs, so both the
+skin and stride should be benchmarked.  On PLUMED 2.11 and later, sufficiently
+large periodic candidate lists use the built-in link-cell broad phase;
+smaller lists retain the threaded pair scan because it is faster there.
+Runtime plugins built against older PLUMED versions keep the compatible pair
+scan, but can still amortize its rebuild cost with NL_SKIN.</p>
+<p>A cutoff copied from another system is not a convergence test.  Pair-list
+changes can introduce small discontinuities because the retained weights are
+renormalized.  Prefer exact mode for derivative validation and for small or
+moderate systems.  Use NLIST only after a value-and-force convergence scan
+demonstrates a useful speed/accuracy tradeoff for the target system.</p>
+<h2 id="cpu-parallelism-and-practical-scaling">CPU parallelism and practical scaling</h2>
+<p>The exact calculation evaluates \f<script type="math/tex">N_{\mathrm{centers}}
+N_{\mathrm{assigned}}\f</script> pairs per step.  For water with every O in CENTERS
+and every H in ASSIGNED, this is \f<script type="math/tex">2N_{\mathrm{water}}^2\f</script>.  Exact mode
+therefore remains quadratic even when it is parallel: additional CPU workers
+reduce elapsed time but do not change the asymptotic cost.</p>
+<p>The pair, normalization, occupancy, and derivative loops use OpenMP when it is
+available.  Set the PLUMED and OpenMP thread counts to the CPU cores allocated
+to each molecular-dynamics rank, for example:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PLUMED_NUM_THREADS</span><span class="o">=</span><span class="m">4</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">4</span>
+plumed<span class="w"> </span>driver<span class="w"> </span>--plumed<span class="w"> </span>plumed.dat<span class="w"> </span>--ixyz<span class="w"> </span>trajectory.xyz<span class="w"> </span>--box<span class="w"> </span><span class="m">3</span>.0,3.0,3.0
+</code></pre></div>
+<p>Benchmark 1, 2, 4, and 8 threads on the same frames because small candidate
+lists can spend more time entering parallel regions than doing pair work, and
+large lists can become limited by memory bandwidth.  Avoid CPU
+oversubscription.  In a GPU molecular-dynamics run these Actions still execute
+on CPUs, so a GPU allocation alone does not accelerate them.  MPI also
+partitions pairs unless SERIAL is present; SERIAL is a debugging mode that
+repeats the work on every rank, not a performance option.</p>
+<p>For large systems, a converged NLIST is the only option here that reduces the
+number of retained assignment pairs.  NL_CUTOFF controls truncation accuracy,
+whereas NL_STRIDE controls how often membership is rebuilt.  Start with
+NL_STRIDE=1, converge NL_CUTOFF against exact values and derivatives, and only
+then test a larger stride against the maximum atomic displacement between
+updates.  Report CV time per call as well as whole-simulation throughput so
+that GPU force-model time and output time are not mistaken for CV cost.</p>
+<h2 id="worked-example-1-water-autoionization">Worked example 1: water autoionization</h2>
+<p>For water, oxygen atoms can be used as CENTERS, hydrogen atoms as ASSIGNED,
+and the neutral reference occupancy is two.  In a configuration containing
+one hydronium and one hydroxide, the corresponding defects approach +1 and
+-1.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_VORONOI_COORDINATION.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../VORONOI_COORDINATION.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">UNITS<span class="right">This command sets the internal units for the code. <a href="https://www.plumed.org/doc-master/user-doc/html/UNITS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">LENGTH<span class="right">the units of lengths<i></i></span></span>=A
+<span style="display:none;" id="VORONOI_COORDINATION.md_working_1.dat">The UNITS action with label <b></b> calculates something</span><b name="VORONOI_COORDINATION.md_working_1.datWaterO" onclick='showPath("VORONOI_COORDINATION.md_working_1.dat","VORONOI_COORDINATION.md_working_1.datWaterO","VORONOI_COORDINATION.md_working_1.datWaterO","violet")'>WaterO</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_1.datWaterO">The GROUP action with label <b>WaterO</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">WaterO</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-4
+<b name="VORONOI_COORDINATION.md_working_1.datWaterH" onclick='showPath("VORONOI_COORDINATION.md_working_1.dat","VORONOI_COORDINATION.md_working_1.datWaterH","VORONOI_COORDINATION.md_working_1.datWaterH","violet")'>WaterH</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_1.datWaterH">The GROUP action with label <b>WaterH</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">WaterH</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=5-12
+
+<span id="VORONOI_COORDINATION.md_working_1.datdefionization_short"><b name="VORONOI_COORDINATION.md_working_1.dationization" onclick='showPath("VORONOI_COORDINATION.md_working_1.dat","VORONOI_COORDINATION.md_working_1.dationization","VORONOI_COORDINATION.md_working_1.dationization","black")'>ionization</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_1.dationization">The VORONOI_COORDINATION action with label <b>ionization</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ionization</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_COORDINATION.md_working_1.datdefionization");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2
+</span><span id="VORONOI_COORDINATION.md_working_1.datdefionization_long" style="display:none;"><b name="VORONOI_COORDINATION.md_working_1.dationization" onclick='showPath("VORONOI_COORDINATION.md_working_1.dat","VORONOI_COORDINATION.md_working_1.dationization","VORONOI_COORDINATION.md_working_1.dationization","black")'>ionization</b>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_COORDINATION.md_working_1.datdefionization");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2  <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=ALL
+</span><b name="VORONOI_COORDINATION.md_working_1.datpositive_amount" onclick='showPath("VORONOI_COORDINATION.md_working_1.dat","VORONOI_COORDINATION.md_working_1.datpositive_amount","VORONOI_COORDINATION.md_working_1.datpositive_amount","black")'>positive_amount</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_1.datpositive_amount">The VORONOI_COORDINATION action with label <b>positive_amount</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">positive_amount</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2 <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=POSITIVE
+<b name="VORONOI_COORDINATION.md_working_1.datnegative_amount" onclick='showPath("VORONOI_COORDINATION.md_working_1.dat","VORONOI_COORDINATION.md_working_1.datnegative_amount","VORONOI_COORDINATION.md_working_1.datnegative_amount","black")'>negative_amount</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_1.datnegative_amount">The VORONOI_COORDINATION action with label <b>negative_amount</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">negative_amount</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2 <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=NEGATIVE
+<b name="VORONOI_COORDINATION.md_working_1.datpositive_signed" onclick='showPath("VORONOI_COORDINATION.md_working_1.dat","VORONOI_COORDINATION.md_working_1.datpositive_signed","VORONOI_COORDINATION.md_working_1.datpositive_signed","black")'>positive_signed</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_1.datpositive_signed">The VORONOI_COORDINATION action with label <b>positive_signed</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">positive_signed</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=1 <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=POSITIVE
+<b name="VORONOI_COORDINATION.md_working_1.datnegative_signed" onclick='showPath("VORONOI_COORDINATION.md_working_1.dat","VORONOI_COORDINATION.md_working_1.datnegative_signed","VORONOI_COORDINATION.md_working_1.datnegative_signed","black")'>negative_signed</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_1.datnegative_signed">The VORONOI_COORDINATION action with label <b>negative_signed</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">negative_signed</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=1 <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=NEGATIVE
+
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_1.dationization">ionization</b>,<b name="VORONOI_COORDINATION.md_working_1.datpositive_amount">positive_amount</b>,<b name="VORONOI_COORDINATION.md_working_1.datnegative_amount">negative_amount</b>,<b name="VORONOI_COORDINATION.md_working_1.datpositive_signed">positive_signed</b>,<b name="VORONOI_COORDINATION.md_working_1.datnegative_signed">negative_signed</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<p>For an isolated ion pair, <code>ionization</code> approaches 2, the two squared branches
+approach 1, and the signed branches approach +1 and -1.  In a neutral frame
+all five values approach zero.  Soft values between these limits are expected
+during proton transfer.</p>
+<h2 id="worked-example-2-exact-to-nlist-acceleration">Worked example 2: exact-to-NLIST acceleration</h2>
+<p>The numeric cutoff, skin, and stride below are only input examples, not
+transferable recommendations.  Use the three stages in order: establish an
+exact reference, converge NL_CUTOFF while rebuilding every step, and only
+then test whether a displacement-safe skin and a longer stride improve
+performance without changing values or forces.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_VORONOI_COORDINATION.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../VORONOI_COORDINATION.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">UNITS<span class="right">This command sets the internal units for the code. <a href="https://www.plumed.org/doc-master/user-doc/html/UNITS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">LENGTH<span class="right">the units of lengths<i></i></span></span>=A
+<span style="display:none;" id="VORONOI_COORDINATION.md_working_2.dat">The UNITS action with label <b></b> calculates something</span><b name="VORONOI_COORDINATION.md_working_2.datWaterO" onclick='showPath("VORONOI_COORDINATION.md_working_2.dat","VORONOI_COORDINATION.md_working_2.datWaterO","VORONOI_COORDINATION.md_working_2.datWaterO","violet")'>WaterO</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_2.datWaterO">The GROUP action with label <b>WaterO</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">WaterO</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-4
+<b name="VORONOI_COORDINATION.md_working_2.datWaterH" onclick='showPath("VORONOI_COORDINATION.md_working_2.dat","VORONOI_COORDINATION.md_working_2.datWaterH","VORONOI_COORDINATION.md_working_2.datWaterH","violet")'>WaterH</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_2.datWaterH">The GROUP action with label <b>WaterH</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">WaterH</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=5-12
+
+<span style="color:blue" class="comment"># 1. Exact full-pair reference</span>
+<span id="VORONOI_COORDINATION.md_working_2.datdefexact_short"><b name="VORONOI_COORDINATION.md_working_2.datexact" onclick='showPath("VORONOI_COORDINATION.md_working_2.dat","VORONOI_COORDINATION.md_working_2.datexact","VORONOI_COORDINATION.md_working_2.datexact","black")'>exact</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_2.datexact">The VORONOI_COORDINATION action with label <b>exact</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">exact</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_COORDINATION.md_working_2.datdefexact");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2
+</span><span id="VORONOI_COORDINATION.md_working_2.datdefexact_long" style="display:none;"><b name="VORONOI_COORDINATION.md_working_2.datexact" onclick='showPath("VORONOI_COORDINATION.md_working_2.dat","VORONOI_COORDINATION.md_working_2.datexact","VORONOI_COORDINATION.md_working_2.datexact","black")'>exact</b>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_COORDINATION.md_working_2.datdefexact");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2  <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=ALL
+</span><br/><span style="color:blue" class="comment"># 2. Converge NL_CUTOFF with a rebuild every step</span>
+<span id="VORONOI_COORDINATION.md_working_2.datdeftrial_short"><b name="VORONOI_COORDINATION.md_working_2.dattrial" onclick='showPath("VORONOI_COORDINATION.md_working_2.dat","VORONOI_COORDINATION.md_working_2.dattrial","VORONOI_COORDINATION.md_working_2.dattrial","black")'>trial</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_2.dattrial">The VORONOI_COORDINATION action with label <b>trial</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">trial</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_COORDINATION.md_working_2.datdeftrial");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2 <span class="plumedtooltip">NLIST<span class="right"> Use an approximate neighbor-list truncation of the assignment candidates<i></i></span></span> <span class="plumedtooltip">NL_CUTOFF<span class="right">Candidate cutoff in PLUMED length units; every ASSIGNED atom must retain at least one CENTER<i></i></span></span>=8.0 <span class="plumedtooltip">NL_STRIDE<span class="right">Number of steps between neighbor-list updates<i></i></span></span>=1
+</span><span id="VORONOI_COORDINATION.md_working_2.datdeftrial_long" style="display:none;"><b name="VORONOI_COORDINATION.md_working_2.dattrial" onclick='showPath("VORONOI_COORDINATION.md_working_2.dat","VORONOI_COORDINATION.md_working_2.dattrial","VORONOI_COORDINATION.md_working_2.dattrial","black")'>trial</b>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_COORDINATION.md_working_2.datdeftrial");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2 <span class="plumedtooltip">NLIST<span class="right"> Use an approximate neighbor-list truncation of the assignment candidates<i></i></span></span> <span class="plumedtooltip">NL_CUTOFF<span class="right">Candidate cutoff in PLUMED length units; every ASSIGNED atom must retain at least one CENTER<i></i></span></span>=8.0 <span class="plumedtooltip">NL_STRIDE<span class="right">Number of steps between neighbor-list updates<i></i></span></span>=1  <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=ALL
+</span><br/><span style="color:blue" class="comment"># 3. Only after stage 2, amortize rebuilds with a tested skin and stride</span>
+<span id="VORONOI_COORDINATION.md_working_2.datdeffast_short"><b name="VORONOI_COORDINATION.md_working_2.datfast" onclick='showPath("VORONOI_COORDINATION.md_working_2.dat","VORONOI_COORDINATION.md_working_2.datfast","VORONOI_COORDINATION.md_working_2.datfast","black")'>fast</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_2.datfast">The VORONOI_COORDINATION action with label <b>fast</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fast</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_COORDINATION.md_working_2.datdeffast");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2 <span class="plumedtooltip">NLIST<span class="right"> Use an approximate neighbor-list truncation of the assignment candidates<i></i></span></span> <span class="plumedtooltip">NL_CUTOFF<span class="right">Candidate cutoff in PLUMED length units; every ASSIGNED atom must retain at least one CENTER<i></i></span></span>=8.0 <span class="plumedtooltip">NL_SKIN<span class="right">Nonnegative Verlet buffer in PLUMED length units; requires NL_STRIDE greater than one<i></i></span></span>=1.0 <span class="plumedtooltip">NL_STRIDE<span class="right">Number of steps between neighbor-list updates<i></i></span></span>=10
+</span><span id="VORONOI_COORDINATION.md_working_2.datdeffast_long" style="display:none;"><b name="VORONOI_COORDINATION.md_working_2.datfast" onclick='showPath("VORONOI_COORDINATION.md_working_2.dat","VORONOI_COORDINATION.md_working_2.datfast","VORONOI_COORDINATION.md_working_2.datfast","black")'>fast</b>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_COORDINATION.md_working_2.datdeffast");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2 <span class="plumedtooltip">NLIST<span class="right"> Use an approximate neighbor-list truncation of the assignment candidates<i></i></span></span> <span class="plumedtooltip">NL_CUTOFF<span class="right">Candidate cutoff in PLUMED length units; every ASSIGNED atom must retain at least one CENTER<i></i></span></span>=8.0 <span class="plumedtooltip">NL_SKIN<span class="right">Nonnegative Verlet buffer in PLUMED length units; requires NL_STRIDE greater than one<i></i></span></span>=1.0 <span class="plumedtooltip">NL_STRIDE<span class="right">Number of steps between neighbor-list updates<i></i></span></span>=10  <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=ALL
+</span><br/><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datexact">exact</b>,<b name="VORONOI_COORDINATION.md_working_2.dattrial">trial</b>,<b name="VORONOI_COORDINATION.md_working_2.datfast">fast</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+<span class="plumedtooltip" style="color:green">DUMPDERIVATIVES<span class="right">Dump the derivatives with respect to the input parameters for scalar values (generally CVs, functions or biases). <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPDERIVATIVES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values whose derivatives should be output<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_2.datexact">exact</b>,<b name="VORONOI_COORDINATION.md_working_2.dattrial">trial</b>,<b name="VORONOI_COORDINATION.md_working_2.datfast">fast</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output the derivatives<i></i></span></span>=DERIVATIVES <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the derivatives should be output<i></i></span></span>=1
+</pre></div>
+
+<h2 id="worked-example-3-applying-a-bias">Worked example 3: applying a bias</h2>
+<p>First monitor the unbiased CV and check its scale.  The following compact
+input then biases the total ionization activity with OPES.  PACE, BARRIER,
+TEMP, and all production settings are system-dependent and must be justified
+for the simulation being run.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_VORONOI_COORDINATION.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../VORONOI_COORDINATION.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">UNITS<span class="right">This command sets the internal units for the code. <a href="https://www.plumed.org/doc-master/user-doc/html/UNITS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">LENGTH<span class="right">the units of lengths<i></i></span></span>=A <span class="plumedtooltip">ENERGY<span class="right">the units of energy<i></i></span></span>=kj/mol
+<span style="display:none;" id="VORONOI_COORDINATION.md_working_3.dat">The UNITS action with label <b></b> calculates something</span><b name="VORONOI_COORDINATION.md_working_3.datWaterO" onclick='showPath("VORONOI_COORDINATION.md_working_3.dat","VORONOI_COORDINATION.md_working_3.datWaterO","VORONOI_COORDINATION.md_working_3.datWaterO","violet")'>WaterO</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_3.datWaterO">The GROUP action with label <b>WaterO</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">WaterO</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-4
+<b name="VORONOI_COORDINATION.md_working_3.datWaterH" onclick='showPath("VORONOI_COORDINATION.md_working_3.dat","VORONOI_COORDINATION.md_working_3.datWaterH","VORONOI_COORDINATION.md_working_3.datWaterH","violet")'>WaterH</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_3.datWaterH">The GROUP action with label <b>WaterH</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">WaterH</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=5-12
+<span id="VORONOI_COORDINATION.md_working_3.datdefionization_short"><b name="VORONOI_COORDINATION.md_working_3.dationization" onclick='showPath("VORONOI_COORDINATION.md_working_3.dat","VORONOI_COORDINATION.md_working_3.dationization","VORONOI_COORDINATION.md_working_3.dationization","black")'>ionization</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_3.dationization">The VORONOI_COORDINATION action with label <b>ionization</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ionization</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_COORDINATION.md_working_3.datdefionization");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_3.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_3.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2
+</span><span id="VORONOI_COORDINATION.md_working_3.datdefionization_long" style="display:none;"><b name="VORONOI_COORDINATION.md_working_3.dationization" onclick='showPath("VORONOI_COORDINATION.md_working_3.dat","VORONOI_COORDINATION.md_working_3.dationization","VORONOI_COORDINATION.md_working_3.dationization","black")'>ionization</b>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_COORDINATION.md_working_3.datdefionization");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_3.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_3.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2  <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=ALL
+</span><span id="VORONOI_COORDINATION.md_working_3.datdefopes_short"><b name="VORONOI_COORDINATION.md_working_3.datopes" onclick='showPath("VORONOI_COORDINATION.md_working_3.dat","VORONOI_COORDINATION.md_working_3.datopes","VORONOI_COORDINATION.md_working_3.datopes","black")'>opes</b><span style="display:none;" id="VORONOI_COORDINATION.md_working_3.datopes">The OPES_METAD action with label <b>opes</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">opes.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">opes.rct</td><td width="5%"><font color="black">scalar</font></td><td>estimate of c(t). log(exp(beta V)/beta, should become flat as the simulation converges. Do NOT use for reweighting</td></tr><tr><td width="5%">opes.zed</td><td width="5%"><font color="black">scalar</font></td><td>estimate of Z_n. should become flat once no new CV-space region is explored</td></tr><tr><td width="5%">opes.neff</td><td width="5%"><font color="black">scalar</font></td><td>effective sample size</td></tr><tr><td width="5%">opes.nker</td><td width="5%"><font color="black">scalar</font></td><td>total number of compressed kernels used to represent the bias</td></tr></table></span>: <span class="plumedtooltip" style="color:green">OPES_METAD<span class="right">On-the-fly probability enhanced sampling with metadynamics-like target distribution. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_COORDINATION.md_working_3.datdefopes");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/OPES_METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_3.dationization">ionization</b> <span class="plumedtooltip">PACE<span class="right">the frequency for kernel deposition<i></i></span></span>=500 <span class="plumedtooltip">BARRIER<span class="right">the free energy barrier to be overcome<i></i></span></span>=40 <span class="plumedtooltip">TEMP<span class="right"> temperature<i></i></span></span>=300
+</span><span id="VORONOI_COORDINATION.md_working_3.datdefopes_long" style="display:none;"><b name="VORONOI_COORDINATION.md_working_3.datopes" onclick='showPath("VORONOI_COORDINATION.md_working_3.dat","VORONOI_COORDINATION.md_working_3.datopes","VORONOI_COORDINATION.md_working_3.datopes","black")'>opes</b>: <span class="plumedtooltip" style="color:green">OPES_METAD<span class="right">On-the-fly probability enhanced sampling with metadynamics-like target distribution. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_COORDINATION.md_working_3.datdefopes");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/OPES_METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_3.dationization">ionization</b> <span class="plumedtooltip">PACE<span class="right">the frequency for kernel deposition<i></i></span></span>=500 <span class="plumedtooltip">BARRIER<span class="right">the free energy barrier to be overcome<i></i></span></span>=40 <span class="plumedtooltip">TEMP<span class="right"> temperature<i></i></span></span>=300  <span class="plumedtooltip">SIGMA<span class="right"> the initial widths of the kernels<i></i></span></span>=ADAPTIVE <span class="plumedtooltip">COMPRESSION_THRESHOLD<span class="right"> merge kernels if closer than this threshold, in units of sigma<i></i></span></span>=1 <span class="plumedtooltip">FILE<span class="right"> a file in which the list of all deposited kernels is stored<i></i></span></span>=KERNELS
+</span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="VORONOI_COORDINATION.md_working_3.dationization">ionization</b>,<b name="VORONOI_COORDINATION.md_working_3.datopes">opes.bias</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=10
+</pre></div>
+
+<p>Passing a one-frame <code>plumed driver</code> test only establishes parsing and local
+evaluation.  Before production biasing, verify analytical derivatives,
+energy/force units, restart behavior, the unbiased CV distribution, and a
+short molecular-dynamics force-path run.</p>
+<h2 id="validation-checklist">Validation checklist</h2>
+<p>For every new chemical system:</p>
+<ol>
+<li>Check CENTERS, ASSIGNED, REFERENCE, SELECT, and COEFFICIENTS against a
+   labeled structure rather than a topology-order assumption.</li>
+<li>Confirm the occupancy and defect conservation identities on neutral and
+   reactive frames.</li>
+<li>Compare analytical and numerical derivatives away from sign cusps,
+   zero-distance configurations, and periodic branch cuts.</li>
+<li>Translate the whole system by a lattice vector and verify the same value.</li>
+<li>Reorder CENTERS and ASSIGNED, reorder numeric vectors consistently, and
+   verify the same value and forces.</li>
+<li>If NLIST is requested, converge both values and forces against exact mode.</li>
+<li>Compare serial and intended MPI/OpenMP execution on the same frames.</li>
+<li>Run a short, fixed-seed molecular-dynamics smoke test before enhanced
+   sampling, then inspect finite COLVAR, bias, force, and restart output.</li>
+</ol>
+<h2 id="troubleshooting-and-production-cautions">Troubleshooting and production cautions</h2>
+<ul>
+<li><code>Action VORONOI_COORDINATION is not known</code>: use a PLUMED installation that
+  contains these Actions and verify that the simulation is loading the same
+  PLUMED kernel as <code>plumed driver</code>.</li>
+<li><code>REFERENCE must contain ... values</code>: provide one value for broadcast or one
+  value per CENTER, in CENTERS order.</li>
+<li><code>every atom in SELECT must also be present in CENTERS</code>: SELECT is a subset,
+  not an independent chemical group.</li>
+<li><code>an ASSIGNED atom has no CENTER inside the candidate list</code>: NL_CUTOFF is too
+  small for that configuration or the atom sets are wrong.  The calculation
+  intentionally stops instead of returning a biased normalization.</li>
+<li>Large changes after enabling NLIST indicate an unconverged truncation, not a
+  harmless implementation detail.</li>
+<li>Very large KAPPA makes the assignment nearly discrete and can produce sharp
+  force changes near equidistant centers.  Choose it from physical and
+  numerical validation, not only from endpoint values.</li>
+<li>POWER=1 sign filtering, ABSOLUTE positions, periodic position branch cuts,
+  and neighbor-list membership changes are not globally smooth bias
+  coordinates.  Choose a smooth path or constrain the sampled region when
+  these features are unavoidable.</li>
+</ul>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_atoms/">atoms</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CENTERS</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">Atoms that receive the smooth assignment</td>
+</tr>
+<tr>
+<td style="text-align: left;">ASSIGNED</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">Atoms that are distributed over CENTERS</td>
+</tr>
+<tr>
+<td style="text-align: left;">SELECT</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">Subset of CENTERS included in the scalar reduction; the default is all centers</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CENTERS</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Atoms that receive the smooth assignment</td>
+</tr>
+<tr>
+<td style="text-align: left;">ASSIGNED</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Atoms that are distributed over CENTERS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">SELECT<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Subset of CENTERS included in the scalar reduction; the default is all centers</td>
+</tr>
+<tr>
+<td style="text-align: left;">KAPPA</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Positive soft-assignment sharpness in inverse PLUMED length units</td>
+</tr>
+<tr>
+<td style="text-align: left;">REFERENCE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order</td>
+</tr>
+<tr>
+<td style="text-align: left;">POWER</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Power of the selected occupancy defects; supported values are 1 and 2</td>
+</tr>
+<tr>
+<td style="text-align: left;">SIGN</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">ALL</td>
+<td style="text-align: left;">Use ALL, POSITIVE, or NEGATIVE defects</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NUMERICAL_DERIVATIVES<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the derivatives for these quantities numerically</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NOPBC<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">ignore the periodic boundary conditions when calculating distances</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">SERIAL<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Perform the calculation redundantly on each rank for debugging</td>
+</tr>
+<tr>
+<td style="text-align: left;">NLIST</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Use an approximate neighbor-list truncation of the assignment candidates</td>
+</tr>
+<tr>
+<td style="text-align: left;">NL_CUTOFF</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Candidate cutoff in PLUMED length units; every ASSIGNED atom must retain at least one CENTER</td>
+</tr>
+<tr>
+<td style="text-align: left;">NL_STRIDE</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Number of steps between neighbor-list updates</td>
+</tr>
+<tr>
+<td style="text-align: left;">NL_SKIN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Nonnegative Verlet buffer in PLUMED length units; requires NL_STRIDE greater than one</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">COEFFICIENTS<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">One coefficient, or one value per atom in SELECT</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,10 @@
+#SETTINGS INPUTFILES=regtest/gridtools/rt-weights-integral/kde.grid
+
+ff: REFERENCE_GRID FILE=regtest/gridtools/rt-weights-integral/kde.grid VALUE=h
+aa: ANGLE ATOMS=1,2,3
+tt: TORSION ATOMS=1,2,3,4
+val: EVALUATE_FUNCTION_FROM_GRID ...
+  GRID=ff INTERPOLATION_TYPE=spline
+  ZERO_OUTSIDE_GRID_RANGE
+...
+PRINT ARG=aa,tt,val FILE=colvar

@@ -1,0 +1,906 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: SECONDARY_STRUCTURE_RMSD - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-secondary_structure_rmsd" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: SECONDARY_STRUCTURE_RMSD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#periodic-boundary-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Periodic boundary conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-beta-sheet-like-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with beta sheet like structures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-secondary_structure_rmsd"><a href="../actions/">Action</a>: SECONDARY_STRUCTURE_RMSD</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_secondarystructure/"><strong>secondarystructure</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calclulate the RMSD between segments of a protein and a reference structure of interest</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calclulate the RMSD between segments of a protein and a reference structure of interest</p>
+<p>This action is used in the shortcuts <a href="../ALPHARMSD/">ALPHARMSD</a>, <a href="../ANTIBETARMSD/">ANTIBETARMSD</a> and <a href="../PARABETARMSD/">PARABETARMSD</a>.  It calculates a
+vector of <a href="../RMSD/">RMSD</a> values between a single reference multiple configurations and the instantaneous
+positions of various groups of atoms.  For example, in the following input we define a single set of reference
+set of coordinates for 3 atoms.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_SECONDARY_STRUCTURE_RMSD.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../SECONDARY_STRUCTURE_RMSD.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="SECONDARY_STRUCTURE_RMSD.md_working_1.datc1" onclick='showPath("SECONDARY_STRUCTURE_RMSD.md_working_1.dat","SECONDARY_STRUCTURE_RMSD.md_working_1.datc1","SECONDARY_STRUCTURE_RMSD.md_working_1.datc1","blue")'>c1</b><span style="display:none;" id="SECONDARY_STRUCTURE_RMSD.md_working_1.datc1">The SECONDARY_STRUCTURE_RMSD action with label <b>c1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1</td><td width="5%"><font color="blue">vector</font></td><td>the value calculated by this action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SECONDARY_STRUCTURE_RMSD<span class="right">Calclulate the RMSD between segments of a protein and a reference structure of interest <a href="https://www.plumed.org/doc-master/user-doc/html/SECONDARY_STRUCTURE_RMSD" style="color:green">More details</a><i></i></span></span> ...
+    <span class="plumedtooltip">ATOMS<span class="right">this is the full list of atoms that we are investigating<i></i></span></span>=13-24
+    <span class="plumedtooltip">STRUCTURE1<span class="right">the reference structure<i></i></span></span>=1,0,0,0,1,0,0,0,1
+    <span class="plumedtooltip">SEGMENT1<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2 <span class="plumedtooltip">SEGMENT2<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=3,4,5
+    <span class="plumedtooltip">SEGMENT3<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=6,7,8 <span class="plumedtooltip">SEGMENT4<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=9,10,11
+    <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL
+...
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="SECONDARY_STRUCTURE_RMSD.md_working_1.datc1">c1</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>A four dimensional vector is then returned that contains the RMSD distances between the 4 sets of 3 atoms that were specified using the <code>SEGMENT</code> keywords
+and the reference coordinates.  Notice that you can use multiple instances of the <code>STRUCTURE</code> keyword.  In general the the number of vectors output
+is equal to the number of times the <code>STRUCTURE</code> keyword is used.  Further note that the indices specified to the SEGMENT keywords give the indices in the list
+of atoms specified by the ATOMS keyword.  <code>SEGMENT1=0,1,2</code> in the above input is measuring the distance between the instaneous positions of atoms 13, 14 and 15
+and the reference structure.</p>
+<h2 id="periodic-boundary-conditions">Periodic boundary conditions</h2>
+<p>If you turn off periodic boundary conditions by using the NOPBC flag as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_SECONDARY_STRUCTURE_RMSD.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../SECONDARY_STRUCTURE_RMSD.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="SECONDARY_STRUCTURE_RMSD.md_working_2.datc1" onclick='showPath("SECONDARY_STRUCTURE_RMSD.md_working_2.dat","SECONDARY_STRUCTURE_RMSD.md_working_2.datc1","SECONDARY_STRUCTURE_RMSD.md_working_2.datc1","blue")'>c1</b><span style="display:none;" id="SECONDARY_STRUCTURE_RMSD.md_working_2.datc1">The SECONDARY_STRUCTURE_RMSD action with label <b>c1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1</td><td width="5%"><font color="blue">vector</font></td><td>the value calculated by this action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SECONDARY_STRUCTURE_RMSD<span class="right">Calclulate the RMSD between segments of a protein and a reference structure of interest <a href="https://www.plumed.org/doc-master/user-doc/html/SECONDARY_STRUCTURE_RMSD" style="color:green">More details</a><i></i></span></span> ...
+    <span class="plumedtooltip">ATOMS<span class="right">this is the full list of atoms that we are investigating<i></i></span></span>=13-24 <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions<i></i></span></span>
+    <span class="plumedtooltip">STRUCTURE1<span class="right">the reference structure<i></i></span></span>=1,0,0,0,1,0,0,0,1
+    <span class="plumedtooltip">SEGMENT1<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2 <span class="plumedtooltip">SEGMENT2<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=3,4,5
+    <span class="plumedtooltip">SEGMENT3<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=6,7,8 <span class="plumedtooltip">SEGMENT4<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=9,10,11
+    <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=SIMPLE
+...
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="SECONDARY_STRUCTURE_RMSD.md_working_2.datc1">c1</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>the distances between in the instaneous structure are evaluated in a way that does not take the periodic boundary conditions
+into account.  Whenver this flag is <strong>not</strong> present the distances in the instaneous structure are evaluated in a way that takes the periodic boundary conditions
+into account.</p>
+<p>If you use the <code>ALIGN_STRANDS</code> flag to evaluate the distances in a way that takes the periodic boundary conditions into accounts means that
+calculating the distance between the positions of the 7th and 22nd atoms (<script type="math/tex">\mathbf{x}_7</script> and <script type="math/tex">\mathbf{x}_{22}</script>) of the instanenous structures
+using the periodic boundary conditions.  The 22 atom is the repositioned at:</p>
+<p>
+<script type="math/tex; mode=display">
+\mathbf{x}_{22} = \mathbf{x}_7 + ( \mathbf{x}_{22} - \mathbf{x}_7 )
+</script>
+</p>
+<p>where the difference in the second term on the right of the equality sign is evaluated using the periodic boundary conditions. New positions are then determined
+for atoms 16 through 30 by adding the difference (evaluated without PBC) between the new position for atom 22 after the above transformation has been perfomed and the
+original position of this atom.  This treatment is designed for making sure that the two strands of the <a href="../ANTIBETARMSD/">ANTIBETARMSD</a> and <a href="../PARABETARMSD/">PARABETARMSD</a>
+sheets are not broken by the periodic boundaries.</p>
+<h2 id="working-with-beta-sheet-like-structures">Working with beta sheet like structures</h2>
+<p>As discussed in the documentation for <a href="../ANTIBETARMSD/">ANTIBETARMSD</a> and <a href="../PARABETARMSD/">PARABETARMSD</a> using the STRANDS_KEYWORD cutoff can speed up the calculation
+dramatically.  The reason this keyword gives such dramatric speed ups is illustrated by the example input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_SECONDARY_STRUCTURE_RMSD.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../SECONDARY_STRUCTURE_RMSD.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_cut_dists" onclick='showPath("SECONDARY_STRUCTURE_RMSD.md_working_3.dat","SECONDARY_STRUCTURE_RMSD.md_working_3.datab_cut_dists","SECONDARY_STRUCTURE_RMSD.md_working_3.datab_cut_dists","blue")'>ab_cut_dists</b><span style="display:none;" id="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_cut_dists">The DISTANCE action with label <b>ab_cut_dists</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ab_cut_dists</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,69 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,79
+  <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,89 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,99
+  <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,109
+...
+<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_cut" onclick='showPath("SECONDARY_STRUCTURE_RMSD.md_working_3.dat","SECONDARY_STRUCTURE_RMSD.md_working_3.datab_cut","SECONDARY_STRUCTURE_RMSD.md_working_3.datab_cut","blue")'>ab_cut</b><span style="display:none;" id="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_cut">The CUSTOM action with label <b>ab_cut</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ab_cut</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_cut_dists">ab_cut_dists</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=step(1-x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_rmsd" onclick='showPath("SECONDARY_STRUCTURE_RMSD.md_working_3.dat","SECONDARY_STRUCTURE_RMSD.md_working_3.datab_rmsd","SECONDARY_STRUCTURE_RMSD.md_working_3.datab_rmsd","blue")'>ab_rmsd</b><span style="display:none;" id="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_rmsd">The SECONDARY_STRUCTURE_RMSD action with label <b>ab_rmsd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ab_rmsd</td><td width="5%"><font color="blue">vector</font></td><td>the value calculated by this action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SECONDARY_STRUCTURE_RMSD<span class="right">Calclulate the RMSD between segments of a protein and a reference structure of interest <a href="https://www.plumed.org/doc-master/user-doc/html/SECONDARY_STRUCTURE_RMSD" style="color:green">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL <span class="plumedtooltip">ALIGN_STRANDS<span class="right"> ensure that the two halves of a beta sheet are not broken by the periodic boundaries before doing alignment<i></i></span></span> <span class="plumedtooltip">MASK<span class="right">a vector which is used to determine which elements of the secondary structure variable should be computed<i></i></span></span>=<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_cut">ab_cut</b>
+   <span class="plumedtooltip">ATOMS<span class="right">this is the full list of atoms that we are investigating<i></i></span></span>=7,9,11,15,16,17,19,21,25,26,27,29,31,35,36,37,39,41,45,46,47,49,51,55,56,57,59,61,65,66,67,69,71,75,76,77,79,81,85,86,87,89,91,95,96,97,99,101,105,106,107,109,111,115,116,117,119,121,125,126
+   <span class="plumedtooltip">SEGMENT1<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39
+   <span class="plumedtooltip">SEGMENT2<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
+   <span class="plumedtooltip">SEGMENT3<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49
+   <span class="plumedtooltip">SEGMENT4<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54
+   <span class="plumedtooltip">SEGMENT5<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59
+   <span class="plumedtooltip">STRUCTURE1<span class="right">the reference structure<i></i></span></span>=2.263,-3.795,1.722,2.493,-2.426,2.263,3.847,-1.838,1.761,1.301,-1.517,1.921,0.852,-1.504,0.739,0.818,-0.738,2.917,-0.299,0.243,2.748,-1.421,-0.076,3.757,0.273,1.68,2.854,0.902,1.993,3.888,0.119,2.532,1.813,0.683,3.916,1.68,1.58,3.94,0.395,-0.394,5.011,1.63,-1.459,4.814,0.982,-2.962,3.559,-1.359,-2.439,2.526,-2.287,-1.189,3.006,-3.087,-2.081,1.231,-1.52,-1.524,1.324,-0.409,-2.326,0.037,-2.095,-1.858,-1.269,-1.554,-3.053,-2.199,-1.291,-0.869,-1.949,-2.512,-1.255,-2.07,-3.71,0.326,-2.363,-2.072,1.405,-2.992,-2.872,2.699,-2.129,-2.917,1.745,-4.399,-2.33,1.899,-4.545,-1.102
+...
+<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_ltu" onclick='showPath("SECONDARY_STRUCTURE_RMSD.md_working_3.dat","SECONDARY_STRUCTURE_RMSD.md_working_3.datab_ltu","SECONDARY_STRUCTURE_RMSD.md_working_3.datab_ltu","blue")'>ab_ltu</b><span style="display:none;" id="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_ltu">The LESS_THAN action with label <b>ab_ltu</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ab_ltu</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_rmsd">ab_rmsd</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.1 D_0=0.0 NN=8 MM=12} <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_cut">ab_cut</b>
+<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_lt" onclick='showPath("SECONDARY_STRUCTURE_RMSD.md_working_3.dat","SECONDARY_STRUCTURE_RMSD.md_working_3.datab_lt","SECONDARY_STRUCTURE_RMSD.md_working_3.datab_lt","blue")'>ab_lt</b><span style="display:none;" id="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_lt">The CUSTOM action with label <b>ab_lt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ab_lt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_ltu">ab_ltu</b>,<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_cut">ab_cut</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab" onclick='showPath("SECONDARY_STRUCTURE_RMSD.md_working_3.dat","SECONDARY_STRUCTURE_RMSD.md_working_3.datab","SECONDARY_STRUCTURE_RMSD.md_working_3.datab","black")'>ab</b><span style="display:none;" id="SECONDARY_STRUCTURE_RMSD.md_working_3.datab">The SUM action with label <b>ab</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ab</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab_lt">ab_lt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="SECONDARY_STRUCTURE_RMSD.md_working_3.datab">ab</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>The input above illustrates the input that is used by the shortcut that computes the <a href="../ANTIBETARMSD/">ANTIBETARMSD</a>. You can see that the distances between the atoms on the two strands of the
+beta sheet are computed in a <a href="../DISTANCE/">DISTANCE</a> action before we computed the SECONDARY_STRUCTURE_RMSD values.  These distances are then transformed by a Heavyside function that is 1 if
+the distance is less than 1 nm and zero otherwise.  This vector of ones and zeros is then fed into the SECONDARY_STRUCTURE_RMSD action as a mask.  By doing this we ensure that SECONDARY_STRUCTURE_RMSD
+values are only computed for parts of the strand that are close together. This avoids performing unecessarily expensive calculations and is also a reasonable thing to do as if the two strands are more than
+1 nm appart the residues in question are not at all similar to a beta sheet structure.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> and <a href="../specifying_atoms/">atoms</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MASK</td>
+<td style="text-align: center;">vector</td>
+<td style="text-align: left;">a vector which is used to determine which elements of the secondary structure variable should be computed</td>
+</tr>
+<tr>
+<td style="text-align: left;">ATOMS</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">this is the full list of atoms that we are investigating</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-components">Output components</h2>
+<p>This action calculates the <a href="../specifying_arguments/">values</a> in the following table.  These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">struct</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">the vectors containing the rmsd distances between the residues and each of the reference structures</td>
+</tr>
+<tr>
+<td style="text-align: left;">lessthan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">the number blocks of residues that have an RMSD from the secondary structure that is less than the threshold</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MASK</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">a vector which is used to determine which elements of the secondary structure variable should be computed</td>
+</tr>
+<tr>
+<td style="text-align: left;">ATOMS</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">this is the full list of atoms that we are investigating</td>
+</tr>
+<tr>
+<td style="text-align: left;">TYPE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">OPTIMAL</td>
+<td style="text-align: left;">the manner in which RMSD alignment is performed</td>
+</tr>
+<tr>
+<td style="text-align: left;">SERIAL</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">do the calculation in serial. Further information about this flag can be found <a href="../actions/">here</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">USEGPU</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">run this calculation on the GPU. Further information about this flag can be found <a href="../gpu/">here</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">NOPBC</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">ignore the periodic boundary conditions</td>
+</tr>
+<tr>
+<td style="text-align: left;">SEGMENT</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">this is the lists of atoms in the segment that are being considered</td>
+</tr>
+<tr>
+<td style="text-align: left;">STRUCTURE</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the reference structure</td>
+</tr>
+<tr>
+<td style="text-align: left;">ALIGN_STRANDS</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">ensure that the two halves of a beta sheet are not broken by the periodic boundaries before doing alignment</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1021/ct900202f">F. Pietrucci, A. Laio, A Collective Variable for the Efficient Exploration of Protein Beta-Sheet Structures: Application to SH3 and GB1. Journal of Chemical Theory and Computation 5, 2197–2201 (2009)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

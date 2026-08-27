@@ -1,0 +1,8 @@
+d1: DISTANCE ...
+   COMPONENTS
+   ATOMS1=1,2 ATOMS2=3,4
+   ATOMS3=5,6 ATOMS4=7,8
+...
+m: VSTACK ARG=d1.x,d1.y,d1.z
+
+PRINT ARG=m FILE=matrix.dat

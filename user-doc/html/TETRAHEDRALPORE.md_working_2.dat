@@ -1,0 +1,7 @@
+cav: TETRAHEDRALPORE ...
+   ATOMS=20-500 BOX=1,4,5,11
+   SIGMA=0.1 KERNEL=gaussian
+   OUTSIDE
+...
+s: SUM ARG=cav PERIODIC=NO
+PRINT ARG=s FILE=colvar

@@ -1,0 +1,7 @@
+<map id="PLMD::switchContainers::fastgaussianSwitch" name="PLMD::switchContainers::fastgaussianSwitch">
+<area shape="rect" id="Node000001" title=" " alt="" coords="46,197,225,237"/>
+<area shape="rect" id="Node000002" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="5,108,265,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,162,138,197,133,197,133,162"/>
+<area shape="rect" id="Node000003" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title="container for the actual switching function used by PLMD::SwitchingFunction" alt="" coords="37,5,233,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="138,59,138,108,133,108,133,59"/>
+</map>

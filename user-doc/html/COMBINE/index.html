@@ -1,0 +1,1017 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: COMBINE - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-combine" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: COMBINE
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-normalize-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The NORMALIZE flag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#periodic-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Periodic arguments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector arguments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrix-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix arguments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mask-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The MASK keyword
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-combine"><a href="../shortcuts/">Shortcut</a>: COMBINE</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_function/"><strong>function</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate a polynomial combination of a set of other variables.</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=COMBINE"><img alt="used in 5 tutorials" src="https://img.shields.io/badge/tutorials-5-green.svg" /></a><a href="https://www.plumed-nest.org/browse.html?action=COMBINE"><img alt="used in 70 eggs" src="https://img.shields.io/badge/nest-70-green.svg" /></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">a linear combination</td>
+<td style="text-align: center;">scalar/vector/matrix</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate a polynomial combination of a set of other variables.</p>
+<p>This action takes in <script type="math/tex">N_{arg}</script> arguments (<script type="math/tex">x_i</script>) and computes the following function of them:</p>
+<p>
+<script type="math/tex; mode=display">
+C=\sum_{i=1}^{N_{arg}} c_i (x_i-a_i)^{p_i}
+</script>
+</p>
+<p>The <script type="math/tex">c_i</script>, <script type="math/tex">a_i</script> and <script type="math/tex">p_i</script> values in this expression are provided through the COEFFICIENTS, PARAMETERS and POWERS keywords respectively.
+The following example illustrates how this action can be used to calculate and print the square of the distance between atom 1 and atom 2.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_COMBINE.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../COMBINE.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="COMBINE.md_working_1.datd" onclick='showPath("COMBINE.md_working_1.dat","COMBINE.md_working_1.datd","COMBINE.md_working_1.datd","black")'>d</b><span style="display:none;" id="COMBINE.md_working_1.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d.x</td><td width="5%"><font color="black">scalar</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.y</td><td width="5%"><font color="black">scalar</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.z</td><td width="5%"><font color="black">scalar</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+<b name="COMBINE.md_working_1.datc" onclick='showPath("COMBINE.md_working_1.dat","COMBINE.md_working_1.datc","COMBINE.md_working_1.datc","black")'>c</b><span style="display:none;" id="COMBINE.md_working_1.datc">The COMBINE action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="black">scalar</font></td><td>a linear combination</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="COMBINE.md_working_1.datd">d.x</b>,<b name="COMBINE.md_working_1.datd">d.y</b>,<b name="COMBINE.md_working_1.datd">d.z</b> <span class="plumedtooltip">COEFFICIENTS<span class="right"> the coefficients of the arguments in your function<i></i></span></span>=1,1,1 <span class="plumedtooltip">PARAMETERS<span class="right"> the parameters of the arguments in your function<i></i></span></span>=0,0,0 <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2,2,2 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="COMBINE.md_working_1.datc">c</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>Notice that if the COEFFICIENTS keyword is absent all the <script type="math/tex">c_i</script> values are set equal to 1.
+Furthermore, if the PARAMETERS keyword is absent all the <script type="math/tex">a_i</script> values are set equal to 0.
+We can thus make use of these defaults and rewrite the input above as:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_COMBINE.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../COMBINE.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="COMBINE.md_working_2.datd" onclick='showPath("COMBINE.md_working_2.dat","COMBINE.md_working_2.datd","COMBINE.md_working_2.datd","black")'>d</b><span style="display:none;" id="COMBINE.md_working_2.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d.x</td><td width="5%"><font color="black">scalar</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.y</td><td width="5%"><font color="black">scalar</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.z</td><td width="5%"><font color="black">scalar</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+<b name="COMBINE.md_working_2.datc" onclick='showPath("COMBINE.md_working_2.dat","COMBINE.md_working_2.datc","COMBINE.md_working_2.datc","black")'>c</b><span style="display:none;" id="COMBINE.md_working_2.datc">The COMBINE action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="black">scalar</font></td><td>a linear combination</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="COMBINE.md_working_2.datd">d.x</b>,<b name="COMBINE.md_working_2.datd">d.y</b>,<b name="COMBINE.md_working_2.datd">d.z</b> <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2,2,2 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="COMBINE.md_working_2.datc">c</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>Notice that we cannot remove the POWERS keyword here as if it is absent all the <script type="math/tex">p_i</script> values are set equal to 1.</p>
+<h2 id="the-normalize-flag">The NORMALIZE flag</h2>
+<p>Using the NORAMALIZE flag in the input below ensures that the coefficients of the three input scalars are all set equal to one:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_COMBINE.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../COMBINE.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="COMBINE.md_working_3.datd" onclick='showPath("COMBINE.md_working_3.dat","COMBINE.md_working_3.datd","COMBINE.md_working_3.datd","black")'>d</b><span style="display:none;" id="COMBINE.md_working_3.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d.x</td><td width="5%"><font color="black">scalar</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.y</td><td width="5%"><font color="black">scalar</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.z</td><td width="5%"><font color="black">scalar</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+<b name="COMBINE.md_working_3.datc" onclick='showPath("COMBINE.md_working_3.dat","COMBINE.md_working_3.datc","COMBINE.md_working_3.datc","black")'>c</b><span style="display:none;" id="COMBINE.md_working_3.datc">The COMBINE action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="black">scalar</font></td><td>a linear combination</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="COMBINE.md_working_3.datd">d.x</b>,<b name="COMBINE.md_working_3.datd">d.y</b>,<b name="COMBINE.md_working_3.datd">d.z</b> <span class="plumedtooltip">NORMALIZE<span class="right"> normalize all the coefficients so that in total they are equal to one<i></i></span></span> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="COMBINE.md_working_3.datc">c</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>Notice that you can use this flag together with the coefficient keyword as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_COMBINE.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../COMBINE.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="COMBINE.md_working_4.datd" onclick='showPath("COMBINE.md_working_4.dat","COMBINE.md_working_4.datd","COMBINE.md_working_4.datd","black")'>d</b><span style="display:none;" id="COMBINE.md_working_4.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d.x</td><td width="5%"><font color="black">scalar</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.y</td><td width="5%"><font color="black">scalar</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.z</td><td width="5%"><font color="black">scalar</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+<b name="COMBINE.md_working_4.datc" onclick='showPath("COMBINE.md_working_4.dat","COMBINE.md_working_4.datc","COMBINE.md_working_4.datc","black")'>c</b><span style="display:none;" id="COMBINE.md_working_4.datc">The COMBINE action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="black">scalar</font></td><td>a linear combination</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="COMBINE.md_working_4.datd">d.x</b>,<b name="COMBINE.md_working_4.datd">d.y</b>,<b name="COMBINE.md_working_4.datd">d.z</b> <span class="plumedtooltip">NORMALIZE<span class="right"> normalize all the coefficients so that in total they are equal to one<i></i></span></span> <span class="plumedtooltip">COEFFICIENTS<span class="right"> the coefficients of the arguments in your function<i></i></span></span>=2,1,3 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="COMBINE.md_working_4.datc">c</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>The coefficients of <code>d.x</code>, <code>d.y</code> and <code>d.z</code> for this input are 1/3, 1/6 and 1/2 respectively.</p>
+<h2 id="periodic-arguments">Periodic arguments</h2>
+<p>The COMBINE action is not able to predict the periodic domain for the function that is computed from the arguments
+automatically.  The user is thus forced to specify it explicitly. Use PERIODIC=NO if the resulting variable is not periodic,
+and PERIODIC=A,B where A and B are the two boundaries for the periodic domain if the resulting variable is periodic.
+The following provides an example where the output from combine has a periodic domain.  In this input we are taking the
+cube of a dihedral angle.  The dihedral angle has a periodic domain that runs from <script type="math/tex">-\pi</script> to <script type="math/tex">\pi</script>.  The cube of this variable
+thus has a periodic domain that runs from <script type="math/tex">-\pi^3</script> to <script type="math/tex">\pi^3</script> as indicated in the following input.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_COMBINE.md_working_5.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../COMBINE.md_working_5.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="COMBINE.md_working_5.datt" onclick='showPath("COMBINE.md_working_5.dat","COMBINE.md_working_5.datt","COMBINE.md_working_5.datt","black")'>t</b><span style="display:none;" id="COMBINE.md_working_5.datt">The TORSION action with label <b>t</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,3,5,7
+<span style="color:blue" class="comment">#c: COMBINE ARG=t POWERS=3 PERIODIC=-31.0062766802998,31.0062766802998</span>
+<b name="COMBINE.md_working_5.datc" onclick='showPath("COMBINE.md_working_5.dat","COMBINE.md_working_5.datc","COMBINE.md_working_5.datc","black")'>c</b><span style="display:none;" id="COMBINE.md_working_5.datc">The COMBINE action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="black">scalar</font></td><td>a linear combination</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="COMBINE.md_working_5.datt">t</b> <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=3 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=-pi^3,pi^3
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="COMBINE.md_working_5.datc">c</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<h2 id="vector-arguments">Vector arguments</h2>
+<p>The two examples in the previous section demonstrate how to use the COMBINE action with scalar arguments.  However, you can also
+pass arguments to this action that have a rank greater than zero.  For example, in the example below COMBINE accepts three
+vectors with 4 elements in input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_COMBINE.md_working_6.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../COMBINE.md_working_6.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="COMBINE.md_working_6.datd" onclick='showPath("COMBINE.md_working_6.dat","COMBINE.md_working_6.datd","COMBINE.md_working_6.datd","blue")'>d</b><span style="display:none;" id="COMBINE.md_working_6.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,6 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=7,8 <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+<b name="COMBINE.md_working_6.datc" onclick='showPath("COMBINE.md_working_6.dat","COMBINE.md_working_6.datc","COMBINE.md_working_6.datc","blue")'>c</b><span style="display:none;" id="COMBINE.md_working_6.datc">The COMBINE action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a linear combination to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="COMBINE.md_working_6.datd">d.x</b>,<b name="COMBINE.md_working_6.datd">d.y</b>,<b name="COMBINE.md_working_6.datd">d.z</b> <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2,2,2 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="COMBINE.md_working_6.datc">c</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>The output from the COMBINE action here is also a vector with four elements. The first element of this vector is the square of the
+distance betwen atoms 1 and 2, the second is the square of the distance between atoms 3 and 4 and so on.</p>
+<p>The COMBINE action can also take a mixture of scalars and vectors in input as long as the labels of vectors appear before the labels of scalars
+in the input to the ARG keyword.  The following input illustrates an COMBINE action that takes vectors and scalars in input.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_COMBINE.md_working_7.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../COMBINE.md_working_7.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="COMBINE.md_working_7.datdefp_short"><b name="COMBINE.md_working_7.datp" onclick='showPath("COMBINE.md_working_7.dat","COMBINE.md_working_7.datp","COMBINE.md_working_7.datp","black")'>p</b><span style="display:none;" id="COMBINE.md_working_7.datp">The CONSTANT action with label <b>p</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p</td><td width="5%"><font color="black">scalar</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("COMBINE.md_working_7.datdefp");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUE<span class="right">the single number that you would like to store<i></i></span></span>=2
+</span><span id="COMBINE.md_working_7.datdefp_long" style="display:none;"><b name="COMBINE.md_working_7.datp" onclick='showPath("COMBINE.md_working_7.dat","COMBINE.md_working_7.datp","COMBINE.md_working_7.datp","black")'>p</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("COMBINE.md_working_7.datdefp");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUE<span class="right">the single number that you would like to store<i></i></span></span>=2  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><b name="COMBINE.md_working_7.datd" onclick='showPath("COMBINE.md_working_7.dat","COMBINE.md_working_7.datd","COMBINE.md_working_7.datd","blue")'>d</b><span style="display:none;" id="COMBINE.md_working_7.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,6 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=7,8
+<b name="COMBINE.md_working_7.datc" onclick='showPath("COMBINE.md_working_7.dat","COMBINE.md_working_7.datc","COMBINE.md_working_7.datc","blue")'>c</b><span style="display:none;" id="COMBINE.md_working_7.datc">The COMBINE action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a linear combination to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="COMBINE.md_working_7.datd">d</b>,<b name="COMBINE.md_working_7.datp">p</b> <span class="plumedtooltip">COEFFICIENTS<span class="right"> the coefficients of the arguments in your function<i></i></span></span>=4,-1 <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2.5,1 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="COMBINE.md_working_7.datc">c</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>The elements of the vector that is calculated by the COMBINE action here are given by:</p>
+<p>
+<script type="math/tex; mode=display">
+c_i = 4d_i^{2.5} - 2
+</script>
+</p>
+<p>The <script type="math/tex">d_i</script> in this expression are the distances that were calculated by the DISTANCE action. The 2 comes
+from the scalar <code>p</code> that passed to the ARG action in input.  As a single scalar is passed the same number is
+used when calculating all 4 elements of the output vector.  In other words, the scalar behaves as if it is a
+vector with four components that all have the same value.</p>
+<p>Lastly, notice that if you pass a single vector in input to COMBINE as in the following example, the output is still a vector:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_COMBINE.md_working_8.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../COMBINE.md_working_8.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="COMBINE.md_working_8.datd" onclick='showPath("COMBINE.md_working_8.dat","COMBINE.md_working_8.datd","COMBINE.md_working_8.datd","blue")'>d</b><span style="display:none;" id="COMBINE.md_working_8.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,6 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=7,8
+<b name="COMBINE.md_working_8.datc" onclick='showPath("COMBINE.md_working_8.dat","COMBINE.md_working_8.datc","COMBINE.md_working_8.datc","blue")'>c</b><span style="display:none;" id="COMBINE.md_working_8.datc">The COMBINE action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a linear combination to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="COMBINE.md_working_8.datd">d</b> <span class="plumedtooltip">COEFFICIENTS<span class="right"> the coefficients of the arguments in your function<i></i></span></span>=4 <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2.5 <span class="plumedtooltip">PARAMETERS<span class="right"> the parameters of the arguments in your function<i></i></span></span>=0.5 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="COMBINE.md_working_8.datc">c</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>To calculate the 4-dimensional output by the COMBINE action here we subtract 0.5 from each of the input distances, raise
+the result from this subtraction to the power 2.5 and then multiply the result by 4.</p>
+<p>If you want to calculate a linear combination of the elements of a vector using the formula at the top of the page you should use
+the <a href="../CUSTOM/">CUSTOM</a> action to transform all the components of the input vector.  You can then add all the results from these
+transformations together using <a href="../SUM/">SUM</a>.</p>
+<h2 id="matrix-arguments">Matrix arguments</h2>
+<p>You can also use matrices in the input to the COMBINE action as illustrated below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_COMBINE.md_working_9.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../COMBINE.md_working_9.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="COMBINE.md_working_9.datdefd_short"><b name="COMBINE.md_working_9.datd" onclick='showPath("COMBINE.md_working_9.dat","COMBINE.md_working_9.datd","COMBINE.md_working_9.datd","red")'>d</b><span style="display:none;" id="COMBINE.md_working_9.datd">The DISTANCE_MATRIX action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d.w</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr><tr><td width="5%">d.x</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the x axis</td></tr><tr><td width="5%">d.y</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the y axis</td></tr><tr><td width="5%">d.z</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the z axis</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE_MATRIX<span class="right">Calculate a matrix of distances between atoms. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("COMBINE.md_working_9.datdefd");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE_MATRIX">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPB<i></i></span></span>=1,2 <span class="plumedtooltip">GROUPB<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPA<i></i></span></span>=3,4,5 <span class="plumedtooltip">COMPONENTS<span class="right"> also calculate the components of the vector connecting the atoms in the contact matrix<i></i></span></span>
+</span><span id="COMBINE.md_working_9.datdefd_long" style="display:none;"><b name="COMBINE.md_working_9.datd" onclick='showPath("COMBINE.md_working_9.dat","COMBINE.md_working_9.datd","COMBINE.md_working_9.datd","red")'>d</b>: <span class="plumedtooltip" style="color:green">DISTANCE_MATRIX<span class="right">Calculate a matrix of distances between atoms. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("COMBINE.md_working_9.datdefd");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE_MATRIX">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPB<i></i></span></span>=1,2 <span class="plumedtooltip">GROUPB<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPA<i></i></span></span>=3,4,5 <span class="plumedtooltip">COMPONENTS<span class="right"> also calculate the components of the vector connecting the atoms in the contact matrix<i></i></span></span>  <span class="plumedtooltip">NL_CUTOFF<span class="right"> The cutoff for the neighbor list<i></i></span></span>=0.0 <span class="plumedtooltip">NL_STRIDE<span class="right"> The frequency with which we are updating the atoms in the neighbor list<i></i></span></span>=1 <span class="plumedtooltip">CUTOFF<span class="right"> ignore distances that have a value larger than this cutoff<i></i></span></span>=-1
+</span><b name="COMBINE.md_working_9.datc" onclick='showPath("COMBINE.md_working_9.dat","COMBINE.md_working_9.datc","COMBINE.md_working_9.datc","red")'>c</b><span style="display:none;" id="COMBINE.md_working_9.datc">The COMBINE action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a linear combination to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="COMBINE.md_working_9.datd">d.x</b>,<b name="COMBINE.md_working_9.datd">d.y</b>,<b name="COMBINE.md_working_9.datd">d.z</b> <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2,2,2 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="COMBINE.md_working_9.datc">c</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>The input to the combine action here consists of three <script type="math/tex">2\times3</script> matrices. The output is thus a <script type="math/tex">2\times3</script> matrix that contains the squares of the
+distances between the atoms in GROUPA and the atoms in GROUPB.  Notice that all the input matrices must have the same size as the elements of the final
+matrix are calculated by applying the formula in the first section of this input to each set of elements to the input matrices in turn.</p>
+<p>The input to this action can be a combination of matrices and scalars as long as the labels of the matrices appear before the labels of the scalars in the input for the ARG keyword.
+If your input arguments are an <script type="math/tex">N\times M</script> matrix and a scalar the scalar is treated as if
+it is a <script type="math/tex">N\times M</script> matrix which has all its elements equal to the input scalar. You <strong>cannot</strong> use a mixture of vectors and matrices in the input to this action.</p>
+<p>Furthermore, if you pass a single matrix to COMBINE the output is a matrix.  To calculate a linear combination of all the elements in a matrix using the formula at the top of the page you should use
+the <a href="../CUSTOM/">CUSTOM</a> action to transform all the components of the input vector.  You can then add all the results from these transformations together using <a href="../SUM/">SUM</a>.</p>
+<h2 id="the-mask-keyword">The MASK keyword</h2>
+<p>The example input below illustrates a way you can use the MASK keyword to improve PLUMED performance for inputs that use COMBINE actions that take arguments that
+are vectors:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_COMBINE.md_working_10.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../COMBINE.md_working_10.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment"># Fixed virtual atom which serves as the probe volume&#x27;s center (pos. in nm)</span>
+<span id="COMBINE.md_working_10.datdefcenter_short"><b name="COMBINE.md_working_10.datcenter" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.datcenter","COMBINE.md_working_10.datcenter","violet")'>center</b><span style="display:none;" id="COMBINE.md_working_10.datcenter">The FIXEDATOM action with label <b>center</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">center</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by FIXEDATOM action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("COMBINE.md_working_10.datdefcenter");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=2.5,2.5,2.5
+</span><span id="COMBINE.md_working_10.datdefcenter_long" style="display:none;"><b name="COMBINE.md_working_10.datcenter" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.datcenter","COMBINE.md_working_10.datcenter","violet")'>center</b>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("COMBINE.md_working_10.datdefcenter");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=2.5,2.5,2.5  <span class="plumedtooltip">SET_MASS<span class="right"> mass of the virtual atom<i></i></span></span>=1 <span class="plumedtooltip">SET_CHARGE<span class="right"> charge of the virtual atom<i></i></span></span>=0
+</span><b name="COMBINE.md_working_10.datow" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.datow","COMBINE.md_working_10.datow","violet")'>ow</b><span style="display:none;" id="COMBINE.md_working_10.datow">The GROUP action with label <b>ow</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ow</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-400
+<b name="COMBINE.md_working_10.dathw" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.dathw","COMBINE.md_working_10.dathw","violet")'>hw</b><span style="display:none;" id="COMBINE.md_working_10.dathw">The GROUP action with label <b>hw</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hw</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=401-1200
+<span style="color:blue" class="comment"># Vector in which element i is one if atom i is in sphere of interest and zero otherwise</span>
+<b name="COMBINE.md_working_10.datsphere" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.datsphere","COMBINE.md_working_10.datsphere","blue")'>sphere</b><span style="display:none;" id="COMBINE.md_working_10.datsphere">The INSPHERE action with label <b>sphere</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">sphere</td><td width="5%"><font color="blue">vector</font></td><td>vector of numbers between 0 and 1 that measure the degree to which each atom is within the volume of interest</td></tr></table></span>: <span class="plumedtooltip" style="color:green">INSPHERE<span class="right">This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a particular, user-specified part of of the cell. <a href="https://www.plumed.org/doc-master/user-doc/html/INSPHERE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that you would like to investigate<i></i></span></span>=<b name="COMBINE.md_working_10.datow">ow</b> <span class="plumedtooltip">CENTER<span class="right">the atom whose vicinity we are interested in examining<i></i></span></span>=<b name="COMBINE.md_working_10.datcenter">center</b> <span class="plumedtooltip">RADIUS<span class="right">the switching function that tells us the extent of the sphereical region of interest. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={GAUSSIAN D_0=0.5 R_0=0.01 D_MAX=0.52}
+<span style="color:blue" class="comment"># Calculate coordination with oxygen atoms</span>
+<span id="COMBINE.md_working_10.datow_ones_short"><b name="COMBINE.md_working_10.datow_ones" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.datow_ones","COMBINE.md_working_10.datow_ones_shortcut","blue")'>ow_ones</b><span style="display:none;" id="COMBINE.md_working_10.datow_ones_shortcut">The ONES action with label <b>ow_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ow_ones</td><td width="5%"><font color="blue">vector</font></td><td>a vector of ones with the required number of elements</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("COMBINE.md_working_10.datow_ones");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/ONES">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=400
+</span><span id="COMBINE.md_working_10.datow_ones_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("COMBINE.md_working_10.datow_ones")'># ow_ones: ONES SIZE=400</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="COMBINE.md_working_10.datow_ones" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.datow_ones","COMBINE.md_working_10.datow_ones","blue")'>ow_ones</b><span style="display:none;" id="COMBINE.md_working_10.datow_ones">The CONSTANT action with label <b>ow_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ow_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NOLOG<span class="right"> do not report all the read in scalars in the log<i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+<span style="color:blue"># --- End of included input --- </span></span><b name="COMBINE.md_working_10.datow_mat" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.datow_mat","COMBINE.md_working_10.datow_mat","red")'>ow_mat</b><span style="display:none;" id="COMBINE.md_working_10.datow_mat">The CONTACT_MATRIX action with label <b>ow_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ow_mat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=<b name="COMBINE.md_working_10.datow">ow</b> <span class="plumedtooltip">MASK<span class="right">a vector that is used to used to determine which rows of the adjancency matrix to compute<i></i></span></span>=<b name="COMBINE.md_working_10.datsphere">sphere</b> <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.3 D_MAX=0.8}
+<b name="COMBINE.md_working_10.datow_coord" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.datow_coord","COMBINE.md_working_10.datow_coord","blue")'>ow_coord</b><span style="display:none;" id="COMBINE.md_working_10.datow_coord">The MATRIX_VECTOR_PRODUCT action with label <b>ow_coord</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ow_coord</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="COMBINE.md_working_10.datow_mat">ow_mat</b>,<b name="COMBINE.md_working_10.datow_ones">ow_ones</b>
+<span style="color:blue" class="comment"># Calculate the coordination with hydrogen atoms</span>
+<span id="COMBINE.md_working_10.dathw_ones_short"><b name="COMBINE.md_working_10.dathw_ones" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.dathw_ones","COMBINE.md_working_10.dathw_ones_shortcut","blue")'>hw_ones</b><span style="display:none;" id="COMBINE.md_working_10.dathw_ones_shortcut">The ONES action with label <b>hw_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hw_ones</td><td width="5%"><font color="blue">vector</font></td><td>a vector of ones with the required number of elements</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("COMBINE.md_working_10.dathw_ones");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/ONES">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=800
+</span><span id="COMBINE.md_working_10.dathw_ones_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("COMBINE.md_working_10.dathw_ones")'># hw_ones: ONES SIZE=800</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="COMBINE.md_working_10.dathw_ones" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.dathw_ones","COMBINE.md_working_10.dathw_ones","blue")'>hw_ones</b><span style="display:none;" id="COMBINE.md_working_10.dathw_ones">The CONSTANT action with label <b>hw_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hw_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NOLOG<span class="right"> do not report all the read in scalars in the log<i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+<span style="color:blue"># --- End of included input --- </span></span><b name="COMBINE.md_working_10.dathw_mat" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.dathw_mat","COMBINE.md_working_10.dathw_mat","red")'>hw_mat</b><span style="display:none;" id="COMBINE.md_working_10.dathw_mat">The CONTACT_MATRIX action with label <b>hw_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hw_mat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPB<i></i></span></span>=<b name="COMBINE.md_working_10.datow">ow</b> <span class="plumedtooltip">GROUPB<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPA<i></i></span></span>=<b name="COMBINE.md_working_10.dathw">hw</b> <span class="plumedtooltip">MASK<span class="right">a vector that is used to used to determine which rows of the adjancency matrix to compute<i></i></span></span>=<b name="COMBINE.md_working_10.datsphere">sphere</b> <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.1 D_MAX=0.5}
+<b name="COMBINE.md_working_10.dathw_coord" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.dathw_coord","COMBINE.md_working_10.dathw_coord","blue")'>hw_coord</b><span style="display:none;" id="COMBINE.md_working_10.dathw_coord">The MATRIX_VECTOR_PRODUCT action with label <b>hw_coord</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hw_coord</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="COMBINE.md_working_10.dathw_mat">hw_mat</b>,<b name="COMBINE.md_working_10.dathw_ones">hw_ones</b>
+<span style="color:blue" class="comment"># And do the linear combination of the transformed coordination numbers together</span>
+<b name="COMBINE.md_working_10.datprod" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.datprod","COMBINE.md_working_10.datprod","blue")'>prod</b><span style="display:none;" id="COMBINE.md_working_10.datprod">The COMBINE action with label <b>prod</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">prod</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a linear combination to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="COMBINE.md_working_10.dathw_coord">hw_coord</b>,<b name="COMBINE.md_working_10.datow_coord">ow_coord</b> <span class="plumedtooltip">COEFFICIENTS<span class="right"> the coefficients of the arguments in your function<i></i></span></span>=2,8 <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="COMBINE.md_working_10.datsphere">sphere</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue" class="comment"># Sum of coordination numbers for atoms that are in the sphere of interest</span>
+<b name="COMBINE.md_working_10.datnumer" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.datnumer","COMBINE.md_working_10.datnumer","black")'>numer</b><span style="display:none;" id="COMBINE.md_working_10.datnumer">The SUM action with label <b>numer</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">numer</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="COMBINE.md_working_10.datprod">prod</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="COMBINE.md_working_10.datdenom" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.datdenom","COMBINE.md_working_10.datdenom","black")'>denom</b><span style="display:none;" id="COMBINE.md_working_10.datdenom">The SUM action with label <b>denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">denom</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="COMBINE.md_working_10.datsphere">sphere</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="COMBINE.md_working_10.datcv" onclick='showPath("COMBINE.md_working_10.dat","COMBINE.md_working_10.datcv","COMBINE.md_working_10.datcv","black")'>cv</b><span style="display:none;" id="COMBINE.md_working_10.datcv">The CUSTOM action with label <b>cv</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cv</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="COMBINE.md_working_10.datnumer">numer</b>,<b name="COMBINE.md_working_10.datdenom">denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue" class="comment"># And print out final CV to a file</span>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="COMBINE.md_working_10.datcv">cv</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=1
+</pre></div>
+
+<p>The variable being computed is computed for the oxygen atoms in a spherical region centered on the point <script type="math/tex">(2.5,2.5,2.5)</script> and is a linear combination of
+the coordination number of the atoms in this region with the oxygen atoms and the coordination number of the atoms in this region with the hydrogen atoms.
+The average value of this linear combination for the atoms that are within this region is output.</p>
+<p>If the arguments input to the COMBINE action are matrices then the MASK keyword is used in the way that is described in the documentation for the <a href="../CUSTOM/">CUSTOM</a>.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">scalar/vector/matrix</td>
+<td style="text-align: left;">the values input to this function</td>
+</tr>
+<tr>
+<td style="text-align: left;">MASK</td>
+<td style="text-align: center;">vector/matrix</td>
+<td style="text-align: left;">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the values input to this function</td>
+</tr>
+<tr>
+<td style="text-align: left;">MASK</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed</td>
+</tr>
+<tr>
+<td style="text-align: left;">PERIODIC</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">if the output of your function is periodic then you should specify the periodicity of the function</td>
+</tr>
+<tr>
+<td style="text-align: left;">COEFFICIENTS</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: left;">the coefficients of the arguments in your function</td>
+</tr>
+<tr>
+<td style="text-align: left;">PARAMETERS</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: left;">the parameters of the arguments in your function</td>
+</tr>
+<tr>
+<td style="text-align: left;">POWERS</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: left;">the powers to which you are raising each of the arguments in your function</td>
+</tr>
+<tr>
+<td style="text-align: left;">USEGPU</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">run this calculation on the GPU. Further information about this flag can be found <a href="../gpu/">here</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">NORMALIZE</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">normalize all the coefficients so that in total they are equal to one</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

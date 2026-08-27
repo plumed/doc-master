@@ -1,0 +1,906 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: FIND_SPHERICAL_CONTOUR - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-find_spherical_contour" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: FIND_SPHERICAL_CONTOUR
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-find_spherical_contour"><a href="../actions/">Action</a>: FIND_SPHERICAL_CONTOUR</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_contour/"><strong>contour</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Find an isocontour in a three dimensional grid by searching over a Fibonacci sphere.</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">a grid on a Fibonacci sphere that describes the radial distance from the origin for the points on the Willard-Chandler surface</td>
+<td style="text-align: center;">grid</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Find an isocontour in a three dimensional grid by searching over a Fibonacci sphere.</p>
+<p>As discussed in the documentation for the <a href="../module_gridtools/">gridtools</a>, PLUMED contains a number of tools that allow you to calculate
+a function on a grid.  The function on this grid might be a <a href="../HISTOGRAM/">HISTOGRAM</a>  or it might be one of the phase fields that are
+discussed <a href="../module_contour/">here</a>.  If this function has one or two input
+arguments it is relatively straightforward to plot the function.  If by contrast the data has a three dimensions it can be
+difficult to visualize.</p>
+<p>This action provides one tool for visualizing these functions.  It can be used to search for a set of points on a contour
+where the function takes a particular value.  In other words, for the function <script type="math/tex">f(x,y,z)</script> this action would find a set
+of points <script type="math/tex">\{x_c,y_c,z_c\}</script> that have:</p>
+<p>
+<script type="math/tex; mode=display">
+f(x_c,y_c,z_c) - c = 0
+</script>
+</p>
+<p>where <script type="math/tex">c</script> is some constant value that is specified by the user.  The points on this contour are find by searching along a
+set of equally spaced radii of a sphere that centered at on particular, user-specified atom or virtual atom.  To ensure that
+these search radii are equally spaced on the surface of the sphere the search directions are generated by using a Fibonacci
+spiral projected on a sphere.  In other words, the search directions are given by:</p>
+<p>
+<script type="math/tex; mode=display">
+\mathbf{r}_i = \left(
+\begin{matrix}
+\sqrt{1 - y^2} \cos(\phi) \\
+\frac{2i}{n} - 1 + \frac{1}{n}  \\
+\sqrt{1 - y^2} \sin(\phi)
+\end{matrix}
+\right)
+</script>
+</p>
+<p>where <script type="math/tex">y</script> is the second component of the vector defined above, <script type="math/tex">n</script> is the number of directions to look in and <script type="math/tex">\phi</script> is</p>
+<p>
+<script type="math/tex; mode=display">
+\phi = \mod(i + R, n) \pi ( 3 - \sqrt{5} )
+</script>
+</p>
+<p>where <script type="math/tex">R</script> is a random variable between 0 and <script type="math/tex">n-1</script> that is generated during the read in of the input file and that is fixed during
+the whole calculation.</p>
+<p>It is important to note that this action can only be used to detect contours in three dimensional functions.  In addition, this action will fail to
+find the full set of contour  points if the contour does not have the same topology as a sphere.  If you are uncertain that the isocontours in your
+function have a spherical topology you should use <a href="../FIND_CONTOUR/">FIND_CONTOUR</a> instead.</p>
+<h2 id="examples">Examples</h2>
+<p>The following input demonstrates how this action can be used.  The input here is used to study the shape of a droplet that has been formed during the
+condensation of Lennard Jones from the vapor.  The input below achieves this by calculating the coordination numbers, <script type="math/tex">c_i</script>, of all the atoms within the gas.
+Obviously, those atoms within the droplet will have a large value for the coordination number while the isolated atoms in the gas will have a low value.</p>
+<p>We can detect the sizes of the droplets by constructing a matrix whose <script type="math/tex">i,j</script> element tells us whether atom <script type="math/tex">i</script> and atom <script type="math/tex">j</script> are within 6 nm of each other and
+both have coordination numbers that are greater that two.  The atoms within the various droplets within the system can then be found by performing a
+<a href="../DFSCLUSTERING/">DFSCLUSTERING</a> on this matrix to detect the connected components.  We can take the largest of these connected components and find the center of the droplet
+by exploiting the functionality within <a href="../CENTER/">CENTER</a>. We can then construct a phase field based on the positions of the atoms in the largest
+cluster and the values of the coordination numbers of these atoms as follows:</p>
+<p>
+<script type="math/tex; mode=display">
+\rho'(x,y,z) = \frac{ \sum_{i=1}^N f(s_i) K\left(\frac{x-x_i}{\lambda}, \frac{y-y_i}{\lambda}, \frac{z-z_i}{\lambda}\right) }{ \sum_{i=1}^N K\left(\frac{x-x_i}{\lambda}, \frac{y-y_i}{\lambda}, \frac{z-z_i}{\lambda}\right) }
+</script>
+</p>
+<p>where <script type="math/tex">f</script> is a switching function.  The final line in the input then finds the a set of points on the dividing surface that separates
+the droplet from the surrounding gas.  The value of the phase field on this isocontour is equal to 0.75.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_FIND_SPHERICAL_CONTOUR.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../FIND_SPHERICAL_CONTOUR.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment"># Calculate coordination numbers</span>
+<span id="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_short"><b name="FIND_SPHERICAL_CONTOUR.md_working_1.datc1" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datc1","FIND_SPHERICAL_CONTOUR.md_working_1.datc1_shortcut","blue")'>c1</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_shortcut">The COORDINATIONNUMBER action with label <b>c1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1</td><td width="5%"><font color="blue">vector</font></td><td>the coordination numbers of the specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COORDINATIONNUMBER<span class="right">Calculate the coordination numbers of atoms so that you can then calculate functions of the distribution of This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datc1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/COORDINATIONNUMBER">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIES<span class="right">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments<i></i></span></span>=1-512 <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={EXP D_0=4.0 R_0=0.5 D_MAX=6.0}
+</span><span id="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datc1")'># c1: COORDINATIONNUMBER SPECIES=1-512 SWITCH={EXP D_0=4.0 R_0=0.5 D_MAX=6.0}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_grp" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datc1_grp","FIND_SPHERICAL_CONTOUR.md_working_1.datc1_grp","violet")'>c1_grp</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_grp">The GROUP action with label <b>c1_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-512
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_mat" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datc1_mat","FIND_SPHERICAL_CONTOUR.md_working_1.datc1_mat","red")'>c1_mat</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_mat">The CONTACT_MATRIX action with label <b>c1_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1_mat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-512 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={EXP D_0=4.0 R_0=0.5 D_MAX=6.0}
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_ones" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datc1_ones","FIND_SPHERICAL_CONTOUR.md_working_1.datc1_ones","blue")'>c1_ones</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_ones">The CONSTANT action with label <b>c1_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=512
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datc1" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datc1","FIND_SPHERICAL_CONTOUR.md_working_1.datc1","blue")'>c1</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datc1">The MATRIX_VECTOR_PRODUCT action with label <b>c1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span>  <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_mat">c1_mat</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_ones">c1_ones</b>
+<span style="color:blue"># --- End of included input --- </span></span><span style="color:blue" class="comment"># Select coordination numbers that are more than 2.0</span>
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcf" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcf","FIND_SPHERICAL_CONTOUR.md_working_1.datcf","blue")'>cf</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcf">The MORE_THAN action with label <b>cf</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cf</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datc1">c1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL D_0=2.0 R_0=0.1}
+<span style="color:blue" class="comment"># Build a contact matrix</span>
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_mat2" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datc1_mat2","FIND_SPHERICAL_CONTOUR.md_working_1.datc1_mat2","red")'>c1_mat2</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_mat2">The CONTACT_MATRIX action with label <b>c1_mat2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1_mat2</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-512 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={EXP D_0=4.0 R_0=0.5 D_MAX=6.0}
+<span id="FIND_SPHERICAL_CONTOUR.md_working_1.datdefdp_mat_short"><b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdp_mat" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datdp_mat","FIND_SPHERICAL_CONTOUR.md_working_1.datdp_mat","red")'>dp_mat</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datdp_mat">The OUTER_PRODUCT action with label <b>dp_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dp_mat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the outer product of the two input vectors that was obtained using the function that was input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">OUTER_PRODUCT<span class="right">Calculate the outer product matrix of two vectors This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datdefdp_mat");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/OUTER_PRODUCT">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the two vectors from which the outer product is being computed<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcf">cf</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcf">cf</b>
+</span><span id="FIND_SPHERICAL_CONTOUR.md_working_1.datdefdp_mat_long" style="display:none;"><b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdp_mat" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datdp_mat","FIND_SPHERICAL_CONTOUR.md_working_1.datdp_mat","red")'>dp_mat</b>: <span class="plumedtooltip" style="color:green">OUTER_PRODUCT<span class="right">Calculate the outer product matrix of two vectors This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datdefdp_mat");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/OUTER_PRODUCT">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the two vectors from which the outer product is being computed<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcf">cf</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcf">cf</b>  <span class="plumedtooltip">FUNC<span class="right"> the function of the input vectors that should be put in the elements of the outer product<i></i></span></span>=x*y
+</span><span style="color:blue" class="comment"># Build the final matrix</span>
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datmat" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datmat","FIND_SPHERICAL_CONTOUR.md_working_1.datmat","red")'>mat</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datmat">The CUSTOM action with label <b>mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">mat</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datc1_mat2">c1_mat2</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdp_mat">dp_mat</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue" class="comment"># Find largest cluster</span>
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdfs" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datdfs","FIND_SPHERICAL_CONTOUR.md_working_1.datdfs","blue")'>dfs</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datdfs">The DFSCLUSTERING action with label <b>dfs</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dfs</td><td width="5%"><font color="blue">vector</font></td><td>vector with length that is equal to the number of rows in the input matrix.  Elements of this vector are equal to the cluster that each node is a part of</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DFSCLUSTERING<span class="right">Find the connected components of the matrix using the depth first search clustering algorithm. <a href="https://www.plumed.org/doc-master/user-doc/html/DFSCLUSTERING" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the input matrix<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datmat">mat</b>
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datclust1" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datclust1","FIND_SPHERICAL_CONTOUR.md_working_1.datclust1","blue")'>clust1</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datclust1">The CLUSTER_WEIGHTS action with label <b>clust1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">clust1</td><td width="5%"><font color="blue">vector</font></td><td>vector with elements that are one if the atom of interest is part of the required cluster and zero otherwise</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CLUSTER_WEIGHTS<span class="right">Setup a vector that has one for all the atoms that form part of the cluster of interest and that has zero for all other atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/CLUSTER_WEIGHTS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CLUSTERS<span class="right">the label of the action that does the clustering<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdfs">dfs</b> <span class="plumedtooltip">CLUSTER<span class="right"> which cluster would you like to look at 1 is the largest cluster, 2 is the second largest, 3 is the the third largest and so on<i></i></span></span>=1
+<span style="color:blue" class="comment"># Find center of largest cluster</span>
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1","FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1","blue")'>trans1</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1">The CUSTOM action with label <b>trans1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">trans1</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcf">cf</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datclust1">clust1</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_short"><b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent","FIND_SPHERICAL_CONTOUR.md_working_1.datcent","black")'>cent</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent">The ARGS2VATOM action with label <b>cent</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent.x</td><td width="5%"><font color="black">scalar</font></td><td>the x coordinate of the virtual atom</td></tr><tr><td width="5%">cent.y</td><td width="5%"><font color="black">scalar</font></td><td>the y coordinate of the virtual atom</td></tr><tr><td width="5%">cent.z</td><td width="5%"><font color="black">scalar</font></td><td>the z coordinate of the virtual atom</td></tr><tr><td width="5%">cent.mass</td><td width="5%"><font color="black">scalar</font></td><td>the mass of the virtual atom</td></tr><tr><td width="5%">cent.charge</td><td width="5%"><font color="black">scalar</font></td><td>the charge of the virtual atom</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CENTER<span class="right">Calculate the center for a group of atoms, with arbitrary weights. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datcent");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CENTER">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that appear in the definition of this center<i></i></span></span>=1-512 <span class="plumedtooltip">WEIGHTS<span class="right">what weights should be used when calculating the center<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1">trans1</b> <span class="plumedtooltip">PHASES<span class="right"> use trigonometric phases when computing position of center<i></i></span></span>
+</span><span id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datcent")'># cent: CENTER ATOMS=1-512 WEIGHTS=trans1 PHASES</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_m" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_m","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_m","blue")'>cent_m</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_m">The MASS action with label <b>cent_m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_m</td><td width="5%"><font color="blue">vector</font></td><td>the MASS of the atom/s</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MASS<span class="right">Get the mass of one or multiple atoms <a href="https://www.plumed.org/doc-master/user-doc/html/MASS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the atom numbers that you would like to store the masses and charges of<i></i></span></span>=1-512
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_mass" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_mass","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_mass","black")'>cent_mass</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_mass">The SUM action with label <b>cent_mass</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_mass</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_m">cent_m</b>
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_q" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_q","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_q","blue")'>cent_q</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_q">The CHARGE action with label <b>cent_q</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_q</td><td width="5%"><font color="blue">vector</font></td><td>the CHARGE of the atom/s</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CHARGE<span class="right">Get the charges of one or multiple atoms <a href="https://www.plumed.org/doc-master/user-doc/html/CHARGE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the atom numbers that you would like to store the masses and charges of<i></i></span></span>=1-512
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_charge" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_charge","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_charge","black")'>cent_charge</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_charge">The SUM action with label <b>cent_charge</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_charge</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_q">cent_q</b>
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_fpos" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_fpos","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_fpos","blue")'>cent_fpos</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_fpos">The POSITION action with label <b>cent_fpos</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_fpos.a</td><td width="5%"><font color="blue">vector</font></td><td>the normalized projection on the first lattice vector of the atom position</td></tr><tr><td width="5%">cent_fpos.b</td><td width="5%"><font color="blue">vector</font></td><td>the normalized projection on the second lattice vector of the atom position</td></tr><tr><td width="5%">cent_fpos.c</td><td width="5%"><font color="blue">vector</font></td><td>the normalized projection on the third lattice vector of the atom position</td></tr></table></span>: <span class="plumedtooltip" style="color:green">POSITION<span class="right">Calculate the components of the position of an atom or atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/POSITION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SCALED_COMPONENTS<span class="right"> calculate the a, b and c scaled components of the position separately and store them as label<i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the atom numbers that you would like to use the positions of<i></i></span></span>=1-512
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sina" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sina","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sina","blue")'>cent_sina</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sina">The CUSTOM action with label <b>cent_sina</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_sina</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1">trans1</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_fpos">cent_fpos.a</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*sin(2*pi*y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosa" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosa","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosa","blue")'>cent_cosa</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosa">The CUSTOM action with label <b>cent_cosa</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_cosa</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1">trans1</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_fpos">cent_fpos.a</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*cos(2*pi*y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinb" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinb","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinb","blue")'>cent_sinb</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinb">The CUSTOM action with label <b>cent_sinb</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_sinb</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1">trans1</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_fpos">cent_fpos.b</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*sin(2*pi*y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosb" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosb","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosb","blue")'>cent_cosb</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosb">The CUSTOM action with label <b>cent_cosb</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_cosb</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1">trans1</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_fpos">cent_fpos.b</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*cos(2*pi*y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinc" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinc","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinc","blue")'>cent_sinc</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinc">The CUSTOM action with label <b>cent_sinc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_sinc</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1">trans1</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_fpos">cent_fpos.c</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*sin(2*pi*y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosc" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosc","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosc","blue")'>cent_cosc</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosc">The CUSTOM action with label <b>cent_cosc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_cosc</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1">trans1</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_fpos">cent_fpos.c</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*cos(2*pi*y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsuma" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsuma","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsuma","black")'>cent_sinsuma</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsuma">The SUM action with label <b>cent_sinsuma</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_sinsuma</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sina">cent_sina</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossuma" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossuma","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossuma","black")'>cent_cossuma</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossuma">The SUM action with label <b>cent_cossuma</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_cossuma</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosa">cent_cosa</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsumb" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsumb","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsumb","black")'>cent_sinsumb</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsumb">The SUM action with label <b>cent_sinsumb</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_sinsumb</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinb">cent_sinb</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossumb" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossumb","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossumb","black")'>cent_cossumb</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossumb">The SUM action with label <b>cent_cossumb</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_cossumb</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosb">cent_cosb</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsumc" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsumc","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsumc","black")'>cent_sinsumc</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsumc">The SUM action with label <b>cent_sinsumc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_sinsumc</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinc">cent_sinc</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossumc" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossumc","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossumc","black")'>cent_cossumc</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossumc">The SUM action with label <b>cent_cossumc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_cossumc</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cosc">cent_cosc</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_a" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_a","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_a","black")'>cent_a</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_a">The CUSTOM action with label <b>cent_a</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_a</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsuma">cent_sinsuma</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossuma">cent_cossuma</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=atan2(x,y)/(2*pi) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_b" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_b","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_b","black")'>cent_b</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_b">The CUSTOM action with label <b>cent_b</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_b</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsumb">cent_sinsumb</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossumb">cent_cossumb</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=atan2(x,y)/(2*pi) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_c" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_c","FIND_SPHERICAL_CONTOUR.md_working_1.datcent_c","black")'>cent_c</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_c">The CUSTOM action with label <b>cent_c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cent_c</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_sinsumc">cent_sinsumc</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_cossumc">cent_cossumc</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=atan2(x,y)/(2*pi) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datcent","FIND_SPHERICAL_CONTOUR.md_working_1.datcent","black")'>cent</b>: <span class="plumedtooltip" style="color:green">ARGS2VATOM<span class="right">Create a virtual atom from the input scalars <a href="https://www.plumed.org/doc-master/user-doc/html/ARGS2VATOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">XPOS<span class="right">the value to use for the x position of the atom<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_a">cent_a</b> <span class="plumedtooltip">YPOS<span class="right">the value to use for the y position of the atom<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_b">cent_b</b> <span class="plumedtooltip">ZPOS<span class="right">the value to use for the z position of the atom<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_c">cent_c</b>  <span class="plumedtooltip">MASS<span class="right">the value to use for the mass of the atom<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_mass">cent_mass</b> <span class="plumedtooltip">CHARGE<span class="right">the value to use for the charge of the atom<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent_charge">cent_charge</b> <span class="plumedtooltip">FRACTIONAL<span class="right"> the input arguments are calculated in fractional coordinates so you need to multiply by the cell<i></i></span></span>
+<span style="color:blue"># --- End of included input --- </span></span><span style="color:blue" class="comment"># Calculate the phase field of the coordination</span>
+<span id="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist_short"><b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist","FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist","blue")'>dens_dist</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">The DISTANCE action with label <b>dens_dist</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dens_dist.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">dens_dist.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">dens_dist.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> <span class="plumedtooltip">ORIGIN<span class="right">calculate the distance of all the atoms specified using the ATOMS keyword from this point<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent">cent</b> <span class="plumedtooltip">ATOMS<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datc1">c1</b> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+</span><span id="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist")'># dens_dist: DISTANCES ORIGIN=cent ATOMS=c1 COMPONENTS</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist","FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist","blue")'>dens_dist</b>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent">cent</b>,1 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent">cent</b>,2 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent">cent</b>,3 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent">cent</b>,4 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datcent">cent</b>,5     <span style="color:blue" class="comment"># Action input conctinues with 507 further ATOMSn keywords, </span>
+<span style="color:blue"># --- End of included input --- </span></span><span id="FIND_SPHERICAL_CONTOUR.md_working_1.datdefdens_numer_short"><b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_numer" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datdens_numer","FIND_SPHERICAL_CONTOUR.md_working_1.datdens_numer","green")'>dens_numer</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_numer">The KDE action with label <b>dens_numer</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dens_numer</td><td width="5%"><font color="green">grid</font></td><td>a function on a grid that was obtained by doing a Kernel Density Estimation using the input arguments</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KDE<span class="right">Create a histogram from the input scalar/vector/matrix using KDE This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datdefdens_numer");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/KDE">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">VOLUMES<span class="right">this keyword take the label of an action that calculates a vector of values<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1">trans1</b> <span class="plumedtooltip">ARG<span class="right">the label for the value that should be used to construct the histogram<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">dens_dist.x</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">dens_dist.y</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">dens_dist.z</b>
+   <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=30,30,30 <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=2.0,2.0,2.0
+...
+</span><span id="FIND_SPHERICAL_CONTOUR.md_working_1.datdefdens_numer_long" style="display:none;"><b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_numer" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datdens_numer","FIND_SPHERICAL_CONTOUR.md_working_1.datdens_numer","green")'>dens_numer</b>: <span class="plumedtooltip" style="color:green">KDE<span class="right">Create a histogram from the input scalar/vector/matrix using KDE This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datdefdens_numer");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/KDE">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">VOLUMES<span class="right">this keyword take the label of an action that calculates a vector of values<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.dattrans1">trans1</b> <span class="plumedtooltip">ARG<span class="right">the label for the value that should be used to construct the histogram<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">dens_dist.x</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">dens_dist.y</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">dens_dist.z</b>
+   <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=30,30,30 <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=2.0,2.0,2.0
+ <span class="plumedtooltip">KERNEL<span class="right"> the kernel function you are using<i></i></span></span>=GAUSSIAN
+...
+</span><span id="FIND_SPHERICAL_CONTOUR.md_working_1.datdefdens_denom_short"><b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_denom" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datdens_denom","FIND_SPHERICAL_CONTOUR.md_working_1.datdens_denom","green")'>dens_denom</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_denom">The KDE action with label <b>dens_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dens_denom</td><td width="5%"><font color="green">grid</font></td><td>a function on a grid that was obtained by doing a Kernel Density Estimation using the input arguments</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KDE<span class="right">Create a histogram from the input scalar/vector/matrix using KDE This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datdefdens_denom");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/KDE">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">VOLUMES<span class="right">this keyword take the label of an action that calculates a vector of values<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datclust1">clust1</b> <span class="plumedtooltip">ARG<span class="right">the label for the value that should be used to construct the histogram<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">dens_dist.x</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">dens_dist.y</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">dens_dist.z</b>
+   <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=30,30,30 <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=2.0,2.0,2.0
+...
+</span><span id="FIND_SPHERICAL_CONTOUR.md_working_1.datdefdens_denom_long" style="display:none;"><b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_denom" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datdens_denom","FIND_SPHERICAL_CONTOUR.md_working_1.datdens_denom","green")'>dens_denom</b>: <span class="plumedtooltip" style="color:green">KDE<span class="right">Create a histogram from the input scalar/vector/matrix using KDE This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datdefdens_denom");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/KDE">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">VOLUMES<span class="right">this keyword take the label of an action that calculates a vector of values<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datclust1">clust1</b> <span class="plumedtooltip">ARG<span class="right">the label for the value that should be used to construct the histogram<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">dens_dist.x</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">dens_dist.y</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_dist">dens_dist.z</b>
+   <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=30,30,30 <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=2.0,2.0,2.0
+ <span class="plumedtooltip">KERNEL<span class="right"> the kernel function you are using<i></i></span></span>=GAUSSIAN
+...
+</span><b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datdens","FIND_SPHERICAL_CONTOUR.md_working_1.datdens","green")'>dens</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datdens">The CUSTOM action with label <b>dens</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dens</td><td width="5%"><font color="green">grid</font></td><td>the grid obtained by doing an element-wise application of an arbitrary function to the input grid</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_numer">dens_numer</b>,<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens_denom">dens_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue" class="comment"># Find the isocontour around the nucleus</span>
+<span id="FIND_SPHERICAL_CONTOUR.md_working_1.datdefsc_short"><b name="FIND_SPHERICAL_CONTOUR.md_working_1.datsc" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datsc","FIND_SPHERICAL_CONTOUR.md_working_1.datsc","green")'>sc</b><span style="display:none;" id="FIND_SPHERICAL_CONTOUR.md_working_1.datsc">The FIND_SPHERICAL_CONTOUR action with label <b>sc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">sc</td><td width="5%"><font color="green">grid</font></td><td>a grid on a Fibonacci sphere that describes the radial distance from the origin for the points on the Willard-Chandler surface</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FIND_SPHERICAL_CONTOUR<span class="right">Find an isocontour in a three dimensional grid by searching over a Fibonacci sphere. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datdefsc");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIND_SPHERICAL_CONTOUR">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the grid in which the contour will be found<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens">dens</b> <span class="plumedtooltip">CONTOUR<span class="right">the value we would like to draw the contour at in the space<i></i></span></span>=0.85 <span class="plumedtooltip">INNER_RADIUS<span class="right">the minimum radius on which to look for the contour<i></i></span></span>=10.0 <span class="plumedtooltip">OUTER_RADIUS<span class="right">the outer radius on which to look for the contour<i></i></span></span>=40.0 <span class="plumedtooltip">NPOINTS<span class="right">the number of points for which we are looking for the contour<i></i></span></span>=100
+</span><span id="FIND_SPHERICAL_CONTOUR.md_working_1.datdefsc_long" style="display:none;"><b name="FIND_SPHERICAL_CONTOUR.md_working_1.datsc" onclick='showPath("FIND_SPHERICAL_CONTOUR.md_working_1.dat","FIND_SPHERICAL_CONTOUR.md_working_1.datsc","FIND_SPHERICAL_CONTOUR.md_working_1.datsc","green")'>sc</b>: <span class="plumedtooltip" style="color:green">FIND_SPHERICAL_CONTOUR<span class="right">Find an isocontour in a three dimensional grid by searching over a Fibonacci sphere. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("FIND_SPHERICAL_CONTOUR.md_working_1.datdefsc");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIND_SPHERICAL_CONTOUR">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the grid in which the contour will be found<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datdens">dens</b> <span class="plumedtooltip">CONTOUR<span class="right">the value we would like to draw the contour at in the space<i></i></span></span>=0.85 <span class="plumedtooltip">INNER_RADIUS<span class="right">the minimum radius on which to look for the contour<i></i></span></span>=10.0 <span class="plumedtooltip">OUTER_RADIUS<span class="right">the outer radius on which to look for the contour<i></i></span></span>=40.0 <span class="plumedtooltip">NPOINTS<span class="right">the number of points for which we are looking for the contour<i></i></span></span>=100  <span class="plumedtooltip">NBINS<span class="right"> the number of discrete sections in which to divide the distance between the inner and outer radius when searching for a contour<i></i></span></span>=1 <span class="plumedtooltip">INTERPOLATION_TYPE<span class="right"> the method to use for interpolation<i></i></span></span>=spline
+</span><span style="color:blue" class="comment"># And print the grid to a file</span>
+<span class="plumedtooltip" style="color:green">DUMPGRID<span class="right">Output the function on the grid to a file with the PLUMED grid format. <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPGRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the grid that you would like to output<i></i></span></span>=<b name="FIND_SPHERICAL_CONTOUR.md_working_1.datsc">sc</b> <span class="plumedtooltip">PRINT_XYZ<span class="right"> output coordinates on fibonacci grid to xyz file<i></i></span></span> <span class="plumedtooltip">FILE<span class="right"> the file on which to write the grid<i></i></span></span>=mysurface.xyz <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the grid should be output to the file<i></i></span></span>=1
+</pre></div>
+
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">grid</td>
+<td style="text-align: left;">the labels of the grid in which the contour will be found</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the labels of the grid in which the contour will be found</td>
+</tr>
+<tr>
+<td style="text-align: left;">NPOINTS</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the number of points for which we are looking for the contour</td>
+</tr>
+<tr>
+<td style="text-align: left;">INNER_RADIUS</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the minimum radius on which to look for the contour</td>
+</tr>
+<tr>
+<td style="text-align: left;">OUTER_RADIUS</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the outer radius on which to look for the contour</td>
+</tr>
+<tr>
+<td style="text-align: left;">CONTOUR</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the value we would like to draw the contour at in the space</td>
+</tr>
+<tr>
+<td style="text-align: left;">INTERPOLATION_TYPE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">spline</td>
+<td style="text-align: left;">the method to use for interpolation</td>
+</tr>
+<tr>
+<td style="text-align: left;">NBINS</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">the number of discrete sections in which to divide the distance between the inner and outer radius when searching for a contour</td>
+</tr>
+<tr>
+<td style="text-align: left;">SERIAL</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">do the calculation in serial. Further information about this flag can be found <a href="../actions/">here</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">USEGPU</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">run this calculation on the GPU. Further information about this flag can be found <a href="../gpu/">here</a>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1063/1.5134461">B. Cheng, M. Ceriotti, G. A. Tribello, Classical nucleation theory predicts the shape of the nucleus in homogeneous solidification. The Journal of Chemical Physics 152 (2020)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

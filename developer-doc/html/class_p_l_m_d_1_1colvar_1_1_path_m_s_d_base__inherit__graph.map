@@ -1,0 +1,16 @@
+<map id="PLMD::colvar::PathMSDBase" name="PLMD::colvar::PathMSDBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="95,225,300,251"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1colvar_1_1_path_m_s_d.html" title="Provides the keyword PATHMSD" alt="" coords="5,299,179,324"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="170,261,111,301,108,296,167,256"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1colvar_1_1_property_map.html" title="Provides the keyword PROPERTYMAP" alt="" coords="203,299,402,324"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="227,256,287,296,284,301,224,261"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="143,152,252,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,191,200,225,195,225,195,191"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="13,79,184,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,110,183,150,180,154,124,114"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="143,5,251,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="172,41,116,81,113,76,169,36"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="209,79,383,104"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="226,36,281,76,278,81,222,41"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="271,114,215,154,212,150,268,110"/>
+</map>

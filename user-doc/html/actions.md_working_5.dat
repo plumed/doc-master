@@ -1,0 +1,4 @@
+# This is the distance between two atoms:
+d1: DISTANCE ATOMS=1,2
+Snout: UPPER_WALLS ARG=d1 AT=3.0 KAPPA=3.0   # In this same interlude it doth befall.
+# That I, one Snout by name, present a wall.

@@ -1,0 +1,39 @@
+# Lead ions
+Pb: GROUP ATOMS=1-64
+# Iodide atoms
+I: GROUP ATOMS=65-256
+# Methylamonium "atoms" -- in the real CV these are centers of mass rather than single atoms
+cn: GROUP ATOMS=257-320
+
+ones192: ONES SIZE=192
+# Contact matrix that determines if methylamoinium moleulcule and I atom are within 6.5 A of each other
+cm_cnI: CONTACT_MATRIX GROUPA=cn GROUPB=I SWITCH={RATIONAL R_0=0.65 D_MAX=1.0}
+# Coordination number of methylamonium with I
+cc_cnI: MATRIX_VECTOR_PRODUCT ARG=cm_cnI,ones192
+# Vector with elements that are one if coordination of methylamounium with lead is >11
+mt_cnI: MORE_THAN ARG=cc_cnI SWITCH={RATIONAL R_0=11 NN=12 MM=24}
+
+ones64: ONES SIZE=64
+# Contact matrix that determines if methylamoinium moleulcule and Pb atom are within 7.5 A of each other
+cm_cnpb: CONTACT_MATRIX GROUPA=cn GROUPB=Pb SWITCH={RATIONAL R_0=0.75 D_MAX=1.5} MASK=mt_cnI
+# Coordination number of methylamonium with Pb
+cc_cnpb: MATRIX_VECTOR_PRODUCT ARG=cm_cnpb,ones64
+# Vector with elements that are one if coordination of methylamounium with lead is >7
+mt_cnpb: MORE_THAN ARG=cc_cnpb SWITCH={RATIONAL R_0=7 NN=12 MM=24}
+
+# Contact matrix that determines if methylamonium molecules are within 8 A of each other
+cm_cncn: CONTACT_MATRIX GROUP=cn SWITCH={RATIONAL R_0=0.8 D_MAX=1.75} MASK=mt_cnI
+# Coordination number of methylamounium with methylamonium
+cc_cncn: MATRIX_VECTOR_PRODUCT ARG=cm_cncn,ones64
+# Vector with elements that are one if coordiantion of methylamonium with methylamonium >5
+mt_cncn: MORE_THAN ARG=cc_cncn SWITCH={RATIONAL R_0=5 NN=12 MM=24}
+
+# Element wise product of these three input vectors.
+# mm[i]==1 if coordination number of corrsponding methylamounium with methylamonium is >5
+# and if coordination of methylamounium with Pb is >7 and if coordination of methylamounium with I > 11
+mm: CUSTOM ARG=mt_cncn,mt_cnpb,mt_cnI FUNC=x*y*z PERIODIC=NO
+
+# Sum of coordination numbers and thus equal to number of methylamoniums with desired coordination numbers
+ff: SUM ARG=mm PERIODIC=NO
+
+rr: RESTRAINT ARG=ff AT=62 KAPPA=10

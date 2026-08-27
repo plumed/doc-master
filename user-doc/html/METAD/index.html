@@ -1,0 +1,1831 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: METAD - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-metad" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: METAD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-grids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using grids
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-neighbour-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using neighbour lists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restrating-a-metadynamics-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restrating a metadynamics simulation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculating-the-work-done-by-the-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculating the work done by the bias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#well-tempered-metadynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Well-tempered metadynamics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadynamics-with-flexible-gaussians" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadynamics with flexible Gaussians
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadynamics-with-the-interval-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadynamics with the interval keyword
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-walkers-metadynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple walkers metadynamics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reweighting-a-metadynamics-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reweighting a metadynamics simulation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurrent-metadynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concurrent metadynamics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrequent-metadynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Infrequent metadynamics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-the-deposition-frequency-adaptively" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing the deposition frequency adaptively
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#targetted-metadynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Targetted metadynamics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-metad"><a href="../actions/">Action</a>: METAD</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_bias/"><strong>bias</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Used to performed metadynamics on one or more collective variables.</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=METAD"><img alt="used in 18 tutorials" src="https://img.shields.io/badge/tutorials-18-green.svg" /></a><a href="https://www.plumed-nest.org/browse.html?action=METAD"><img alt="used in 174 eggs" src="https://img.shields.io/badge/nest-174-green.svg" /></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Used to performed metadynamics on one or more collective variables.</p>
+<p>In a metadynamics simulations a history dependent bias composed of
+intermittently added Gaussian functions is added to the potential as discussed in the first paper cited below.</p>
+<p>
+<script type="math/tex; mode=display">
+V(\vec{s},t) = \sum_{ k \tau < t} W(k \tau)
+\exp\left(
+-\sum_{i=1}^{d} \frac{(s_i-s_i^{(0)}(k \tau))^2}{2\sigma_i^2}
+\right).
+</script>
+</p>
+<p>This potential forces the system away from the kinetic traps in the potential energy surface
+and out into the unexplored parts of the energy landscape. Information on the Gaussian
+functions from which this potential is composed is output to a file called HILLS, which
+is used both the restart the calculation and to reconstruct the free energy as a function of the CVs.
+The free energy can be reconstructed from a metadynamics calculation because the final bias is given
+by:</p>
+<p>
+<script type="math/tex; mode=display">
+V(\vec{s}) = -F(\vec{s})
+</script>
+</p>
+<p>During post processing the free energy can be calculated in this way using the <a href="../sum_hills/">sum_hills</a>
+utility.</p>
+<p>The following example provides an example input for a simple metadynamics calculation:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_1.datd1" onclick='showPath("METAD.md_working_1.dat","METAD.md_working_1.datd1","METAD.md_working_1.datd1","black")'>d1</b><span style="display:none;" id="METAD.md_working_1.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5
+<b name="METAD.md_working_1.datd2" onclick='showPath("METAD.md_working_1.dat","METAD.md_working_1.datd2","METAD.md_working_1.datd2","black")'>d2</b><span style="display:none;" id="METAD.md_working_1.datd2">The DISTANCE action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,4
+<span id="METAD.md_working_1.datdefrestraint_short"><b name="METAD.md_working_1.datrestraint" onclick='showPath("METAD.md_working_1.dat","METAD.md_working_1.datrestraint","METAD.md_working_1.datrestraint","black")'>restraint</b><span style="display:none;" id="METAD.md_working_1.datrestraint">The METAD action with label <b>restraint</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">restraint.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_1.datdefrestraint");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_1.datd1">d1</b>,<b name="METAD.md_working_1.datd2">d2</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.2,0.2 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.3 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500
+</span><span id="METAD.md_working_1.datdefrestraint_long" style="display:none;"><b name="METAD.md_working_1.datrestraint" onclick='showPath("METAD.md_working_1.dat","METAD.md_working_1.datrestraint","METAD.md_working_1.datrestraint","black")'>restraint</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_1.datdefrestraint");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_1.datd1">d1</b>,<b name="METAD.md_working_1.datd2">d2</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.2,0.2 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.3 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500  <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+</span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_1.datd1">d1</b>,<b name="METAD.md_working_1.datd2">d2</b>,<b name="METAD.md_working_1.datrestraint">restraint.bias</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=100  <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<p>In this calculation the distance between atoms 3 and 5
+and the distance between atoms 2 and 4 are used as collective variables. Gaussian hills with a heigh of 0.3 kJ/mol
+are and widths of 0.2 nm in the two CVs are added every 500 steps. The values
+of the CVs and the metadynamics bias potential are written to the COLVAR file every 100 steps.</p>
+<h2 id="using-grids">Using grids</h2>
+<p>In the simplest possible implementation of a metadynamics calculation <strong>the expense associated with calculating the
+bias potential increases with the length of the simulation as one has to, at every step, evaluate
+the values of a larger and larger number of Gaussian kernels. To avoid this issue you can
+store the bias on a grid.</strong>  This approach is similar to that proposed in the second paper cited below but has the
+advantage that the grid spacing is independent of the Gaussian width.  An example input for a calculation
+that uses a grid to store the bias is shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_2.datt1" onclick='showPath("METAD.md_working_2.dat","METAD.md_working_2.datt1","METAD.md_working_2.datt1","black")'>t1</b><span style="display:none;" id="METAD.md_working_2.datt1">The TORSION action with label <b>t1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,2,3,4
+<b name="METAD.md_working_2.datt2" onclick='showPath("METAD.md_working_2.dat","METAD.md_working_2.datt2","METAD.md_working_2.datt2","black")'>t2</b><span style="display:none;" id="METAD.md_working_2.datt2">The TORSION action with label <b>t2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t2</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=5,6,7,8
+<span id="METAD.md_working_2.datdefm_short"><b name="METAD.md_working_2.datm" onclick='showPath("METAD.md_working_2.dat","METAD.md_working_2.datm","METAD.md_working_2.datm","black")'>m</b><span style="display:none;" id="METAD.md_working_2.datm">The METAD action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_2.datdefm");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_2.datt1">t1</b>,<b name="METAD.md_working_2.datt2">t2</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.1,0.1 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=1.2 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=-pi,-pi <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=pi,pi <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=100,100
+</span><span id="METAD.md_working_2.datdefm_long" style="display:none;"><b name="METAD.md_working_2.datm" onclick='showPath("METAD.md_working_2.dat","METAD.md_working_2.datm","METAD.md_working_2.datm","black")'>m</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_2.datdefm");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_2.datt1">t1</b>,<b name="METAD.md_working_2.datt2">t2</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.1,0.1 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=1.2 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=-pi,-pi <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=pi,pi <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=100,100  <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+</span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_2.datt1">t1</b>,<b name="METAD.md_working_2.datt2">t2</b>,<b name="METAD.md_working_2.datm">m.bias</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=100 <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<p>Notice that to use the grid you need to provide the grid boundaries (GRID_MIN and GRID_MAX).  You can also specify the number
+of grid points for every collective variable (GRID_BIN) or the desired grid spacing (GRID_SPACING).
+If you specify the GRID_SPACING and the number of bins  PLUMED uses the most conservative choice.  In other words, it uses
+the hoice that gives you the  largest number of bins for each dimension.</p>
+<p>If you specify neither GRID_BIN nor GRID_SPACING PLUMED uses 1/5 of the Gaussian width (SIGMA) as as grid spacing if the width is
+fixed or 1/5 of the minimum Gaussian width (SIGMA_MIN - see next section) if the width is variable.
+This default choice should be reasonable for most applications.</p>
+<h2 id="using-neighbour-lists">Using neighbour lists</h2>
+<p>Another way to decrease the cost associated with evaluating the metadynamics bias is to use a neighbor list.  If you
+wish to use this alternative to grids you use the NLIST keyword as illustrated below.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_3.datd1" onclick='showPath("METAD.md_working_3.dat","METAD.md_working_3.datd1","METAD.md_working_3.datd1","black")'>d1</b><span style="display:none;" id="METAD.md_working_3.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="METAD.md_working_3.datd2" onclick='showPath("METAD.md_working_3.dat","METAD.md_working_3.datd2","METAD.md_working_3.datd2","black")'>d2</b><span style="display:none;" id="METAD.md_working_3.datd2">The DISTANCE action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4
+<b name="METAD.md_working_3.datd3" onclick='showPath("METAD.md_working_3.dat","METAD.md_working_3.datd3","METAD.md_working_3.datd3","black")'>d3</b><span style="display:none;" id="METAD.md_working_3.datd3">The DISTANCE action with label <b>d3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d3</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,6
+<b name="METAD.md_working_3.datd4" onclick='showPath("METAD.md_working_3.dat","METAD.md_working_3.datd4","METAD.md_working_3.datd4","black")'>d4</b><span style="display:none;" id="METAD.md_working_3.datd4">The DISTANCE action with label <b>d4</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d4</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=7,8
+<span id="METAD.md_working_3.datdefm_short"><b name="METAD.md_working_3.datm" onclick='showPath("METAD.md_working_3.dat","METAD.md_working_3.datm","METAD.md_working_3.datm","black")'>m</b><span style="display:none;" id="METAD.md_working_3.datm">The METAD action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">m.nlker</td><td width="5%"><font color="black">scalar</font></td><td>number of hills in the neighbor list</td></tr><tr><td width="5%">m.nlsteps</td><td width="5%"><font color="black">scalar</font></td><td>number of steps from last neighbor list update</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_3.datdefm");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_3.datd1">d1</b>,<b name="METAD.md_working_3.datd2">d2</b>,<b name="METAD.md_working_3.datd3">d3</b>,<b name="METAD.md_working_3.datd4">d4</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.1,0.1,0.1,0.1 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=1.2 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">NLIST<span class="right"> Use neighbor list for kernels summation, faster but experimental<i></i></span></span>
+</span><span id="METAD.md_working_3.datdefm_long" style="display:none;"><b name="METAD.md_working_3.datm" onclick='showPath("METAD.md_working_3.dat","METAD.md_working_3.datm","METAD.md_working_3.datm","black")'>m</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_3.datdefm");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_3.datd1">d1</b>,<b name="METAD.md_working_3.datd2">d2</b>,<b name="METAD.md_working_3.datd3">d3</b>,<b name="METAD.md_working_3.datd4">d4</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.1,0.1,0.1,0.1 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=1.2 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">NLIST<span class="right"> Use neighbor list for kernels summation, faster but experimental<i></i></span></span>  <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+</span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_3.datd1">d1</b>,<b name="METAD.md_working_3.datd2">d2</b>,<b name="METAD.md_working_3.datd3">d3</b>,<b name="METAD.md_working_3.datd4">d4</b>,<b name="METAD.md_working_3.datm">m.bias</b>,<b name="METAD.md_working_3.datm">m.nlker</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>Using NLIST is beneficial if you are using more than 2 collective variables as if you are using large numbers of CVs GRID becomes
+expensive and memory consuming. Furthermore, as indicated above, if you are using this option you can have access to a value called
+<code>nlker</code>, which tells you how many Gaussians were evaluated in each step.</p>
+<p>The neighbor list is updated everytime the CVs move farther than a cut-off value
+from the position they were at last neighbor list update. Gaussians are added to the neigbhor list if their center
+is within 6.<em>DP2CUTOFF</em>sigma*sigma. While the list is updated if the CVs are farther from the center than 0.5 of the
+standard deviation of the Gaussian center distribution of the list. These parameters (6 and 0.5) can be modified using
+NLIST_PARAMETERS. Note that the use of neighbor list does not provide the exact bias.</p>
+<h2 id="restrating-a-metadynamics-simulation">Restrating a metadynamics simulation</h2>
+<p>Metadynamics can be restarted from a HILLS file as illustrated in the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/basic/rt-mpi6/HILLS_multi</span>
+<br/><span class="plumedtooltip" style="color:green">RESTART<span class="right">Activate restart. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTART" style="color:green">More details</a><i></i></span></span>
+<span style="display:none;" id="METAD.md_working_4.dat">The RESTART action with label <b></b> calculates something</span><b name="METAD.md_working_4.datd" onclick='showPath("METAD.md_working_4.dat","METAD.md_working_4.datd","METAD.md_working_4.datd","black")'>d</b><span style="display:none;" id="METAD.md_working_4.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,10
+<span id="METAD.md_working_4.datdefc_short"><b name="METAD.md_working_4.datc" onclick='showPath("METAD.md_working_4.dat","METAD.md_working_4.datc","METAD.md_working_4.datc","black")'>c</b><span style="display:none;" id="METAD.md_working_4.datc">The COORDINATION action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="black">scalar</font></td><td>the value of the coordination</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COORDINATION<span class="right">Calculate coordination numbers. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_4.datdefc");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">First list of atoms<i></i></span></span>=1-108 <span class="plumedtooltip">GROUPB<span class="right">Second list of atoms (if empty, N*(N-1)/2 pairs in GROUPA are counted)<i></i></span></span>=1-108 <span class="plumedtooltip">R_0<span class="right">The r_0 parameter of the switching function<i></i></span></span>=0.5
+</span><span id="METAD.md_working_4.datdefc_long" style="display:none;"><b name="METAD.md_working_4.datc" onclick='showPath("METAD.md_working_4.dat","METAD.md_working_4.datc","METAD.md_working_4.datc","black")'>c</b>: <span class="plumedtooltip" style="color:green">COORDINATION<span class="right">Calculate coordination numbers. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_4.datdefc");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">First list of atoms<i></i></span></span>=1-108 <span class="plumedtooltip">GROUPB<span class="right">Second list of atoms (if empty, N*(N-1)/2 pairs in GROUPA are counted)<i></i></span></span>=1-108 <span class="plumedtooltip">R_0<span class="right">The r_0 parameter of the switching function<i></i></span></span>=0.5  <span class="plumedtooltip">D_0<span class="right"> The d_0 parameter of the switching function<i></i></span></span>=0.0 <span class="plumedtooltip">NN<span class="right"> The n parameter of the switching function <i></i></span></span>=6 <span class="plumedtooltip">MM<span class="right"> The m parameter of the switching function; 0 implies 2*NN<i></i></span></span>=0
+</span><b name="METAD.md_working_4.datm" onclick='showPath("METAD.md_working_4.dat","METAD.md_working_4.datm","METAD.md_working_4.datm","black")'>m</b><span style="display:none;" id="METAD.md_working_4.datm">The METAD action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_4.datc">c</b>,<b name="METAD.md_working_4.datd">d</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.1,0.2 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.1 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt-mpi6/HILLS_multi<div class="right"> Click <a onclick='openModal("METAD.md_working_4.datregtest/basic/rt-mpi6/HILLS_multi1")'>here</a> to see an extract from this file.<i></i></div></div><div id="METAD.md_working_4.datregtest/basic/rt-mpi6/HILLS_multi1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("METAD.md_working_4.datregtest/basic/rt-mpi6/HILLS_multi1")'>&times;</span>  <h2>FILE: regtest/basic/rt-mpi6/HILLS_multi</h2></div><div class="plumedmodal-body">    <pre></pre></div>  </div></div>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_4.datd">d</b>,<b name="METAD.md_working_4.datc">c</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=10
+</pre></div>
+
+<p>If you don't specify the location of the HILLS file then PLUMED looks for a file called HILLS to read in.
+Metadynamics can also be restrated from a GRID, as in this second example.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_5.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_5.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=extras/1d_bias.grid</span>
+<br/><b name="METAD.md_working_5.datd1" onclick='showPath("METAD.md_working_5.dat","METAD.md_working_5.datd1","METAD.md_working_5.datd1","black")'>d1</b><span style="display:none;" id="METAD.md_working_5.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<span id="METAD.md_working_5.datdefm_short"><b name="METAD.md_working_5.datm" onclick='showPath("METAD.md_working_5.dat","METAD.md_working_5.datm","METAD.md_working_5.datm","black")'>m</b><span style="display:none;" id="METAD.md_working_5.datm">The METAD action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_5.datdefm");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_5.datd1">d1</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.1
+  <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.1 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500
+  <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=1.14 <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=1.32 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=5
+  <span class="plumedtooltip">GRID_RFILE<span class="right">a grid file from which the bias should be read at the initial step of the simulation<i></i></span></span>=<div class="plumedtooltip">extras/1d_bias.grid<div class="right"> Click <a onclick='openModal("METAD.md_working_5.datextras/1d_bias.grid1")'>here</a> to see an extract from this file.<i></i></div></div><div id="METAD.md_working_5.datextras/1d_bias.grid1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("METAD.md_working_5.datextras/1d_bias.grid1")'>&times;</span>  <h2>FILE: extras/1d_bias.grid</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS d1 m.bias der_d1
+#! SET min_d1 1.14
+#! SET max_d1 1.32
+#! SET nbins_d1 6
+#! SET periodic_d1 false
+   1.1400   0.0031   0.1101
+   1.1700   0.0086   0.2842
+   1.2000   0.0222   0.6648
+   1.2300   0.0521   1.4068
+   1.2600   0.1120   2.6873
+   1.2900   0.2199   4.6183
+   1.3200   0.3948   7.1055
+</pre></div>  </div></div>
+  <span class="plumedtooltip">RESTART<span class="right">allows per-action setting of restart (YES/NO/AUTO)<i></i></span></span>=YES
+...
+</span><span id="METAD.md_working_5.datdefm_long" style="display:none;"><b name="METAD.md_working_5.datm" onclick='showPath("METAD.md_working_5.dat","METAD.md_working_5.datm","METAD.md_working_5.datm","black")'>m</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_5.datdefm");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_5.datd1">d1</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.1
+  <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.1 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500
+  <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=1.14 <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=1.32 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=5
+  <span class="plumedtooltip">GRID_RFILE<span class="right">a grid file from which the bias should be read at the initial step of the simulation<i></i></span></span>=<div class="plumedtooltip">extras/1d_bias.grid<div class="right"> Click <a onclick='openModal("METAD.md_working_5.datextras/1d_bias.grid2")'>here</a> to see an extract from this file.<i></i></div></div><div id="METAD.md_working_5.datextras/1d_bias.grid2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("METAD.md_working_5.datextras/1d_bias.grid2")'>&times;</span>  <h2>FILE: extras/1d_bias.grid</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS d1 m.bias der_d1
+#! SET min_d1 1.14
+#! SET max_d1 1.32
+#! SET nbins_d1 6
+#! SET periodic_d1 false
+   1.1400   0.0031   0.1101
+   1.1700   0.0086   0.2842
+   1.2000   0.0222   0.6648
+   1.2300   0.0521   1.4068
+   1.2600   0.1120   2.6873
+   1.2900   0.2199   4.6183
+   1.3200   0.3948   7.1055
+</pre></div>  </div></div>
+  <span class="plumedtooltip">RESTART<span class="right">allows per-action setting of restart (YES/NO/AUTO)<i></i></span></span>=YES
+ <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+...
+</span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_5.datd1">d1</b>,<b name="METAD.md_working_5.datm">m.bias</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=10
+</pre></div>
+
+<p>Notice that if you want to use this option you first need to save the GRID using GRID_WFILE (and GRID_WSTRIDE).  Using this
+option ensures that the grid file that is read in with GRID_RFILE is output.</p>
+<p>Notice, also that in the first input above the
+<a href="../RESTART/">RESTART</a> action was used, while the second input used METAD's RESTART keyword.  If you use the first input
+every action in the input is restarted so the <a href="../PRINT/">PRINT</a> command will append to the output file from the earlier calculation.
+In this second input, however, only the METAD action is restarted so the <a href="../PRINT/">PRINT</a> file will output data to a new file and
+back up any old files it finds with the same name.</p>
+<h2 id="calculating-the-work-done-by-the-bias">Calculating the work done by the bias</h2>
+<p>The work performed by the METAD bias can be calculated by using the CALC_WORK option. You can then output the work as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_6.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_6.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_6.datmu1" onclick='showPath("METAD.md_working_6.dat","METAD.md_working_6.datmu1","METAD.md_working_6.datmu1","black")'>mu1</b><span style="display:none;" id="METAD.md_working_6.datmu1">The DISTANCE action with label <b>mu1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">mu1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,10
+<b name="METAD.md_working_6.datvol" onclick='showPath("METAD.md_working_6.dat","METAD.md_working_6.datvol","METAD.md_working_6.datvol","black")'>vol</b><span style="display:none;" id="METAD.md_working_6.datvol">The VOLUME action with label <b>vol</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">vol</td><td width="5%"><font color="black">scalar</font></td><td>the volume of simulation box</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VOLUME<span class="right">Calculate the volume the simulation box. <a href="https://www.plumed.org/doc-master/user-doc/html/VOLUME" style="color:green">More details</a><i></i></span></span>
+<br/><span id="METAD.md_working_6.datdefmd_short"><b name="METAD.md_working_6.datmd" onclick='showPath("METAD.md_working_6.dat","METAD.md_working_6.datmd","METAD.md_working_6.datmd","black")'>md</b><span style="display:none;" id="METAD.md_working_6.datmd">The METAD action with label <b>md</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">md.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">md.work</td><td width="5%"><font color="black">scalar</font></td><td>accumulator for work</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_6.datdefmd");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_6.datmu1">mu1</b>,<b name="METAD.md_working_6.datvol">vol</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.1,0.2 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=1.0 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=10 <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=-5,20 <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=5,40 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=100,100 <span class="plumedtooltip">CALC_WORK<span class="right"> calculate the total accumulated work done by the bias since last restart<i></i></span></span>
+</span><span id="METAD.md_working_6.datdefmd_long" style="display:none;"><b name="METAD.md_working_6.datmd" onclick='showPath("METAD.md_working_6.dat","METAD.md_working_6.datmd","METAD.md_working_6.datmd","black")'>md</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_6.datdefmd");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_6.datmu1">mu1</b>,<b name="METAD.md_working_6.datvol">vol</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.1,0.2 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=1.0 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=10 <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=-5,20 <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=5,40 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=100,100 <span class="plumedtooltip">CALC_WORK<span class="right"> calculate the total accumulated work done by the bias since last restart<i></i></span></span>  <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+</span><br/><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_6.datmu1">mu1</b>,<b name="METAD.md_working_6.datvol">vol</b>,<b name="METAD.md_working_6.datmd">md.bias</b>,<b name="METAD.md_working_6.datmd">md.work</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>Note that this calculation is expensive when not using grids.</p>
+<h2 id="well-tempered-metadynamics">Well-tempered metadynamics</h2>
+<p>Another option that is available in plumed is well-tempered metadynamics that is introduced in the third paper cited below. In this
+variant of metadynamics the heights of the Gaussian hills are scaled at each step so the bias is now
+given by:</p>
+<p>
+<script type="math/tex; mode=display">
+V({s},t)= \sum_{t'=0,\tau_G,2\tau_G,\dots}^{t'<t} W e^{-V({s}({q}(t'),t'))/\Delta T} \exp\left(
+-\sum_{i=1}^{d} \frac{(s_i({q})-s_i({q}(t')))^2}{2\sigma_i^2}
+\right),
+</script>
+</p>
+<p>This method ensures that the bias converges more smoothly. The following example shows an example input for a well-tempered metadynamics
+calculation.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_7.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_7.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_7.datd1" onclick='showPath("METAD.md_working_7.dat","METAD.md_working_7.datd1","METAD.md_working_7.datd1","black")'>d1</b><span style="display:none;" id="METAD.md_working_7.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5
+<b name="METAD.md_working_7.datd2" onclick='showPath("METAD.md_working_7.dat","METAD.md_working_7.datd2","METAD.md_working_7.datd2","black")'>d2</b><span style="display:none;" id="METAD.md_working_7.datd2">The DISTANCE action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,4
+<span id="METAD.md_working_7.datdefrestraint_short"><b name="METAD.md_working_7.datrestraint" onclick='showPath("METAD.md_working_7.dat","METAD.md_working_7.datrestraint","METAD.md_working_7.datrestraint","black")'>restraint</b><span style="display:none;" id="METAD.md_working_7.datrestraint">The METAD action with label <b>restraint</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">restraint.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_7.datdefrestraint");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_7.datd1">d1</b>,<b name="METAD.md_working_7.datd2">d2</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.2,0.2 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.3 <span class="plumedtooltip">BIASFACTOR<span class="right">use well tempered metadynamics and use this bias factor<i></i></span></span>=10 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500
+</span><span id="METAD.md_working_7.datdefrestraint_long" style="display:none;"><b name="METAD.md_working_7.datrestraint" onclick='showPath("METAD.md_working_7.dat","METAD.md_working_7.datrestraint","METAD.md_working_7.datrestraint","black")'>restraint</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_7.datdefrestraint");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_7.datd1">d1</b>,<b name="METAD.md_working_7.datd2">d2</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.2,0.2 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.3 <span class="plumedtooltip">BIASFACTOR<span class="right">use well tempered metadynamics and use this bias factor<i></i></span></span>=10 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500  <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+</span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_7.datd1">d1</b>,<b name="METAD.md_working_7.datd2">d2</b>,<b name="METAD.md_working_7.datrestraint">restraint.bias</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=100  <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre>
+</div>
+<p>It should be noted that, if you do well-tempered metadynamics,
+the hills file output contains the value of Gaussian height re-scaled by the bias factor.
+This rescaling is done to ensure that the HILLS file contains
+negative of the free-energy estimate and <strong>not</strong> the bias potential. An added bonus of this choice is that
+one can restart a simulation using a different value for the <script type="math/tex">\Delta T</script>. The applied bias will be scaled accordingly.</p>
+<h2 id="metadynamics-with-flexible-gaussians">Metadynamics with flexible Gaussians</h2>
+<p>You can also use the flexible Gaussian approach that is discussed in the fourth paper cited below.
+This method adapts the Gaussian to the extent of Cartesian space covered by a variable or
+to the space in collective variable covered in a given time. When you use these methods the width of the deposited
+Gaussian potential is denoted by one value only that is a Cartesian space (ADAPTIVE=GEOM) or a time
+(ADAPTIVE=DIFF). Note that a specific integration technique that is discussed in the documenation for <a href="../sum_hills/">sum_hills</a>
+mist be used when calculating the free energy from the deposited Gaussian kernels
+should be used in this case.</p>
+<p>The following example shows how to use adaptive Gaussian kernels, with the diffusion scheme.  In this example
+Gaussians that cover the space of 20 time steps in collective variables are used.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_8.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_8.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_8.datd1" onclick='showPath("METAD.md_working_8.dat","METAD.md_working_8.datd1","METAD.md_working_8.datd1","black")'>d1</b><span style="display:none;" id="METAD.md_working_8.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5
+<b name="METAD.md_working_8.datd2" onclick='showPath("METAD.md_working_8.dat","METAD.md_working_8.datd2","METAD.md_working_8.datd2","black")'>d2</b><span style="display:none;" id="METAD.md_working_8.datd2">The DISTANCE action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,4
+<span id="METAD.md_working_8.datdefrestraint_short"><b name="METAD.md_working_8.datrestraint" onclick='showPath("METAD.md_working_8.dat","METAD.md_working_8.datrestraint","METAD.md_working_8.datrestraint","black")'>restraint</b><span style="display:none;" id="METAD.md_working_8.datrestraint">The METAD action with label <b>restraint</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">restraint.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_8.datdefrestraint");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_8.datd1">d1</b>,<b name="METAD.md_working_8.datd2">d2</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=20 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.3 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">ADAPTIVE<span class="right">use a geometric (=GEOM) or diffusion (=DIFF) based hills width scheme<i></i></span></span>=DIFF
+</span><span id="METAD.md_working_8.datdefrestraint_long" style="display:none;"><b name="METAD.md_working_8.datrestraint" onclick='showPath("METAD.md_working_8.dat","METAD.md_working_8.datrestraint","METAD.md_working_8.datrestraint","black")'>restraint</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_8.datdefrestraint");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_8.datd1">d1</b>,<b name="METAD.md_working_8.datd2">d2</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=20 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.3 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">ADAPTIVE<span class="right">use a geometric (=GEOM) or diffusion (=DIFF) based hills width scheme<i></i></span></span>=DIFF  <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+</span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_8.datd1">d1</b>,<b name="METAD.md_working_8.datd2">d2</b>,<b name="METAD.md_working_8.datrestraint">restraint.bias</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=100  <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<p>This second example shows you how to use adaptive Gaussian kernels, with the geometrical scheme.  In this example
+Gaussians that cover the space of 0.05 nm in Cartesian space are used</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_9.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_9.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_9.datd1" onclick='showPath("METAD.md_working_9.dat","METAD.md_working_9.datd1","METAD.md_working_9.datd1","black")'>d1</b><span style="display:none;" id="METAD.md_working_9.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5
+<b name="METAD.md_working_9.datd2" onclick='showPath("METAD.md_working_9.dat","METAD.md_working_9.datd2","METAD.md_working_9.datd2","black")'>d2</b><span style="display:none;" id="METAD.md_working_9.datd2">The DISTANCE action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,4
+<span id="METAD.md_working_9.datdefrestraint_short"><b name="METAD.md_working_9.datrestraint" onclick='showPath("METAD.md_working_9.dat","METAD.md_working_9.datrestraint","METAD.md_working_9.datrestraint","black")'>restraint</b><span style="display:none;" id="METAD.md_working_9.datrestraint">The METAD action with label <b>restraint</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">restraint.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_9.datdefrestraint");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_9.datd1">d1</b>,<b name="METAD.md_working_9.datd2">d2</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.05 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.3 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">ADAPTIVE<span class="right">use a geometric (=GEOM) or diffusion (=DIFF) based hills width scheme<i></i></span></span>=GEOM
+</span><span id="METAD.md_working_9.datdefrestraint_long" style="display:none;"><b name="METAD.md_working_9.datrestraint" onclick='showPath("METAD.md_working_9.dat","METAD.md_working_9.datrestraint","METAD.md_working_9.datrestraint","black")'>restraint</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_9.datdefrestraint");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_9.datd1">d1</b>,<b name="METAD.md_working_9.datd2">d2</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.05 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.3 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">ADAPTIVE<span class="right">use a geometric (=GEOM) or diffusion (=DIFF) based hills width scheme<i></i></span></span>=GEOM  <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+</span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_9.datd1">d1</b>,<b name="METAD.md_working_9.datd2">d2</b>,<b name="METAD.md_working_9.datrestraint">restraint.bias</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=100  <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<p>With both these methods you can limit how much the hills width can change by using the SIGMA_MIN and SIGMA_MAX keywords
+as shown below.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_10.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_10.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_10.datd1" onclick='showPath("METAD.md_working_10.dat","METAD.md_working_10.datd1","METAD.md_working_10.datd1","black")'>d1</b><span style="display:none;" id="METAD.md_working_10.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5
+<b name="METAD.md_working_10.datd2" onclick='showPath("METAD.md_working_10.dat","METAD.md_working_10.datd2","METAD.md_working_10.datd2","black")'>d2</b><span style="display:none;" id="METAD.md_working_10.datd2">The DISTANCE action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,4
+<span id="METAD.md_working_10.datdefrestraint_short"><b name="METAD.md_working_10.datrestraint" onclick='showPath("METAD.md_working_10.dat","METAD.md_working_10.datrestraint","METAD.md_working_10.datrestraint","black")'>restraint</b><span style="display:none;" id="METAD.md_working_10.datrestraint">The METAD action with label <b>restraint</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">restraint.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_10.datdefrestraint");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_10.datd1">d1</b>,<b name="METAD.md_working_10.datd2">d2</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.05 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.3 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">ADAPTIVE<span class="right">use a geometric (=GEOM) or diffusion (=DIFF) based hills width scheme<i></i></span></span>=GEOM
+  <span class="plumedtooltip">SIGMA_MIN<span class="right">the lower bounds for the sigmas (in CV units) when using adaptive hills<i></i></span></span>=0.2,0.1 <span class="plumedtooltip">SIGMA_MAX<span class="right">the upper bounds for the sigmas (in CV units) when using adaptive hills<i></i></span></span>=0.5,1.0
+...
+</span><span id="METAD.md_working_10.datdefrestraint_long" style="display:none;"><b name="METAD.md_working_10.datrestraint" onclick='showPath("METAD.md_working_10.dat","METAD.md_working_10.datrestraint","METAD.md_working_10.datrestraint","black")'>restraint</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_10.datdefrestraint");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_10.datd1">d1</b>,<b name="METAD.md_working_10.datd2">d2</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.05 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.3 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">ADAPTIVE<span class="right">use a geometric (=GEOM) or diffusion (=DIFF) based hills width scheme<i></i></span></span>=GEOM
+  <span class="plumedtooltip">SIGMA_MIN<span class="right">the lower bounds for the sigmas (in CV units) when using adaptive hills<i></i></span></span>=0.2,0.1 <span class="plumedtooltip">SIGMA_MAX<span class="right">the upper bounds for the sigmas (in CV units) when using adaptive hills<i></i></span></span>=0.5,1.0
+ <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+...
+</span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_10.datd1">d1</b>,<b name="METAD.md_working_10.datd2">d2</b>,<b name="METAD.md_working_10.datrestraint">restraint.bias</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=100  <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<p>The sigma values that are provided to these two keywords are specified in the units of the CV.
+Note that if you use a negative number, this means that the limit is not set.
+Note also that in this case the histogram correction is needed when summing up hills.</p>
+<h2 id="metadynamics-with-the-interval-keyword">Metadynamics with the interval keyword</h2>
+<p>When you use the keyword INTERVAL the metadynamics bias force equal is set equal to zero
+outside of a boundary as discussed in the fifth paper cited below. This feature is useful if, for example, metadynamics is performed on one or more CVs and if one is only interested
+in the free energy for s &gt; boundary.  When you use this option the history dependent potential is still updated in accordance with the forumulas above.
+The difference is simply that the metadynamics force is set to zero for s &lt; boundary. This means that Gaussian kernels are added also
+if s &lt; boundary, as the tails of these Gaussian kernels influence VG in the relevant region s &gt; boundary. In this way, the
+force on the system in the region s &gt; boundary comes from both metadynamics and the force field, while in the region
+s &lt; boundary the only force the system experiences if from the forcefield. This approach allows one to obtain a history-dependent bias potential VG that
+fluctuates around a stable estimator, equal to the negative of the free energy far enough from the
+boundaries. Notice that:</p>
+<ul>
+<li>This method only works for one-dimensional biases;</li>
+<li>It works both with and without GRID;</li>
+<li>The interval limit boundary should be set in a region where the derivative of the free energy is not large;</li>
+<li>If in the region outside the limit boundary the system has a free energy minimum, the INTERVAL keyword should
+  be used together with a <a href="../UPPER_WALLS/">UPPER_WALLS</a> or <a href="../LOWER_WALLS/">LOWER_WALLS</a> that act when the system is beyond the boundary as illustrated in the following example.</li>
+</ul>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_11.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_11.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_11.datr2g" onclick='showPath("METAD.md_working_11.dat","METAD.md_working_11.datr2g","METAD.md_working_11.datr2g","black")'>r2g</b><span style="display:none;" id="METAD.md_working_11.datr2g">The DISTANCE action with label <b>r2g</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">r2g</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="METAD.md_working_11.datm2g" onclick='showPath("METAD.md_working_11.dat","METAD.md_working_11.datm2g","METAD.md_working_11.datm2g","black")'>m2g</b><span style="display:none;" id="METAD.md_working_11.datm2g">The METAD action with label <b>m2g</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m2g.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_11.datr2g">r2g</b> <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.1 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=1.0 <span class="plumedtooltip">INTERVAL<span class="right">one dimensional lower and upper limits, outside the limits the system will not feel the biasing force<i></i></span></span>=4,8 <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=H2G <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=0 <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=20 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=100
+<b name="METAD.md_working_11.datlw" onclick='showPath("METAD.md_working_11.dat","METAD.md_working_11.datlw","METAD.md_working_11.datlw","black")'>lw</b><span style="display:none;" id="METAD.md_working_11.datlw">The LOWER_WALLS action with label <b>lw</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lw.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">lw.force2</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the squared force due to this bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LOWER_WALLS<span class="right">Defines a wall for the value of one or more collective variables, <a href="https://www.plumed.org/doc-master/user-doc/html/LOWER_WALLS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the arguments on which the bias is acting<i></i></span></span>=<b name="METAD.md_working_11.datr2g">r2g</b> <span class="plumedtooltip">AT<span class="right">the positions of the wall<i></i></span></span>=4 <span class="plumedtooltip">KAPPA<span class="right">the force constant for the wall<i></i></span></span>=100
+<b name="METAD.md_working_11.datuw" onclick='showPath("METAD.md_working_11.dat","METAD.md_working_11.datuw","METAD.md_working_11.datuw","black")'>uw</b><span style="display:none;" id="METAD.md_working_11.datuw">The UPPER_WALLS action with label <b>uw</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">uw.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">uw.force2</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the squared force due to this bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">UPPER_WALLS<span class="right">Defines a wall for the value of one or more collective variables, <a href="https://www.plumed.org/doc-master/user-doc/html/UPPER_WALLS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the arguments on which the bias is acting<i></i></span></span>=<b name="METAD.md_working_11.datr2g">r2g</b> <span class="plumedtooltip">AT<span class="right">the positions of the wall<i></i></span></span>=8 <span class="plumedtooltip">KAPPA<span class="right">the force constant for the wall<i></i></span></span>=100
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_11.datr2g">r2g</b>,*.bias <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=10
+</pre></div>
+
+<p>As a final note, since version 2.0.2 the force is set to zero and the bias value to the value at the corresponding boundary
+when the system is outside of the selected interval. This choice allows acceptances for replica exchange methods to be computed correctly.</p>
+<h2 id="multiple-walkers-metadynamics">Multiple walkers metadynamics</h2>
+<p>The multiple walkers metadynamics method that is described in the sixth paper cited below can be used by using an input
+like the one shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_12.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_12.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_12.datd1" onclick='showPath("METAD.md_working_12.dat","METAD.md_working_12.datd1","METAD.md_working_12.datd1","black")'>d1</b><span style="display:none;" id="METAD.md_working_12.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5
+<span id="METAD.md_working_12.datdefrestraint_short"><b name="METAD.md_working_12.datrestraint" onclick='showPath("METAD.md_working_12.dat","METAD.md_working_12.datrestraint","METAD.md_working_12.datrestraint","black")'>restraint</b><span style="display:none;" id="METAD.md_working_12.datrestraint">The METAD action with label <b>restraint</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">restraint.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_12.datdefrestraint");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_12.datd1">d1</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.05 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.3 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500
+   <span class="plumedtooltip">WALKERS_N<span class="right">number of walkers<i></i></span></span>=10
+   <span class="plumedtooltip">WALKERS_ID<span class="right">walker id<i></i></span></span>=3
+   <span class="plumedtooltip">WALKERS_DIR<span class="right">shared directory with the hills files from all the walkers<i></i></span></span>=../
+   <span class="plumedtooltip">WALKERS_RSTRIDE<span class="right">stride for reading hills files<i></i></span></span>=100
+...
+</span><span id="METAD.md_working_12.datdefrestraint_long" style="display:none;"><b name="METAD.md_working_12.datrestraint" onclick='showPath("METAD.md_working_12.dat","METAD.md_working_12.datrestraint","METAD.md_working_12.datrestraint","black")'>restraint</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_12.datdefrestraint");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_12.datd1">d1</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.05 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=0.3 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500
+   <span class="plumedtooltip">WALKERS_N<span class="right">number of walkers<i></i></span></span>=10
+   <span class="plumedtooltip">WALKERS_ID<span class="right">walker id<i></i></span></span>=3
+   <span class="plumedtooltip">WALKERS_DIR<span class="right">shared directory with the hills files from all the walkers<i></i></span></span>=../
+   <span class="plumedtooltip">WALKERS_RSTRIDE<span class="right">stride for reading hills files<i></i></span></span>=100
+ <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+...
+</span></pre></div>
+
+<p>To use this method you need to set the number of walkers (WALKERS_N), the ID of the
+current walker (WALKERS-ID), the directory where the files containing the hills files reside
+(WALKERS_DIR) and the frequency to read the other walkers (WALKERS_RSTRIDE).
+The bias potential experienced by all the walkers is synched between walkers every
+WALKERS_RSTRIDE steps.  In addition, since version 2.2.5, hills files are automatically
+flushed every WALKERS_RSTRIDE steps.</p>
+<h2 id="reweighting-a-metadynamics-simulation">Reweighting a metadynamics simulation</h2>
+<p>The <script type="math/tex">c(t)</script> reweighting factor can also be calculated on the fly using the equations
+presented in the seventh paper in the references section by using the keyword CALC_RCT as illustrated in the example input below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_13.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_13.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-failed-red.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_13.datphi" onclick='showPath("METAD.md_working_13.dat","METAD.md_working_13.datphi","METAD.md_working_13.datphi","brown")'>phi</b>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,2,3,4
+<span style="display:none;" id="METAD.md_working_13.datphi">The TORSION action with label <b>phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">phi.value</td><td>the TORSION involving these atoms</td></tr></table></span><b name="METAD.md_working_13.datpsi" onclick='showPath("METAD.md_working_13.dat","METAD.md_working_13.datpsi","METAD.md_working_13.datpsi","brown")'>psi</b>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=5,6,7,8
+
+<span style="display:none;" id="METAD.md_working_13.datpsi">The TORSION action with label <b>psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">psi.value</td><td>the TORSION involving these atoms</td></tr></table></span><b name="METAD.md_working_13.datm" onclick='showPath("METAD.md_working_13.dat","METAD.md_working_13.datm","METAD.md_working_13.datm","brown")'>m</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD" style="color:green">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_13.datphi">phi</b>,<b name="METAD.md_working_13.datpsi">psi</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.20,0.20 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=1.20 <span class="plumedtooltip">BIASFACTOR<span class="right">use well tempered metadynamics and use this bias factor<i></i></span></span>=5 <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is only needed if you are doing well-tempered metadynamics<i></i></span></span>=300.0 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500
+ <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=-pi,-pi <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=pi,pi <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=150,150
+ <span class="plumedtooltip">CALC_RCT<span class="right"> calculate the c(t) reweighting factor and use that to obtain the normalized bias [rbias=bias-rct]<i></i></span></span>
+ <span class="plumedtooltip">RCT_USTRIDE<span class="right">the update stride for calculating the c(t) reweighting factor<i></i></span></span>=10
+...
+<br/><span style="display:none;" id="METAD.md_working_13.datm">The METAD action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m.bias</td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">m.rbias</td><td>the instantaneous value of the bias normalized using the c(t) reweighting factor [rbias=bias-rct]</td></tr><tr><td width="5%">m.rct</td><td>the reweighting factor c(t)</td></tr></table></span><b name="METAD.md_working_13.datrw" onclick='showPath("METAD.md_working_13.dat","METAD.md_working_13.datrw","METAD.md_working_13.datrw","brown")'>rw</b>: <span class="plumedtooltip" style="color:green">REWEIGHT_METAD<span class="right">Calculate the weights configurations should contribute to the histogram in a simulation in which a metadynamics bias acts upon the system. <a href="https://www.plumed.org/doc-master/user-doc/html/REWEIGHT_METAD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">TEMP<span class="right">the system temperature<i></i></span></span>=300
+
+<span style="display:none;" id="METAD.md_working_13.datrw">The REWEIGHT_METAD action with label <b>rw</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rw.value</td><td>the weight to use for this frame to negate the effect the metadynamics bias</td></tr></table></span><b name="METAD.md_working_13.dath" onclick='showPath("METAD.md_working_13.dat","METAD.md_working_13.dath","METAD.md_working_13.dath","brown")'>h</b>: <span class="plumedtooltip" style="color:green">HISTOGRAM<span class="right">Accumulate the average probability density along a few CVs from a trajectory. <a href="https://www.plumed.org/doc-master/user-doc/html/HISTOGRAM" style="color:green">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">ARG<span class="right">the quantities that are being used to construct the histogram<i></i></span></span>=<b name="METAD.md_working_13.datphi">phi</b>,<b name="METAD.md_working_13.datpsi">psi</b>
+   <span class="plumedtooltip">GRID_MIN<span class="right"> the lower bounds for the grid<i></i></span></span>=-pi,-pi <span class="plumedtooltip">GRID_MAX<span class="right"> the upper bounds for the grid<i></i></span></span>=pi,pi <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=150,150
+   <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=0.1,0.1
+   <span class="plumedtooltip">LOGWEIGHTS<span class="right">the logarithm of the quantity to use as the weights when calculating averages<i></i></span></span>=<b name="METAD.md_working_13.datrw">rw</b>
+...
+<br/><span style="display:none;" id="METAD.md_working_13.dath">The HISTOGRAM action with label <b>h</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">h.value</td><td>the estimate of the histogram as a function of the argument that was obtained</td></tr></table></span><b name="METAD.md_working_13.datff" onclick='showPath("METAD.md_working_13.dat","METAD.md_working_13.datff","METAD.md_working_13.datff","brown")'>ff</b>: <span class="plumedtooltip" style="color:green">CONVERT_TO_FES<span class="right">Convert a histogram to a free energy surface. <a href="https://www.plumed.org/doc-master/user-doc/html/CONVERT_TO_FES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the histogram that you would like to convert into a free energy surface<i></i></span></span>=<b name="METAD.md_working_13.dath">h</b> <span class="plumedtooltip">TEMP<span class="right">the temperature at which you are operating<i></i></span></span>=300
+<span style="display:none;" id="METAD.md_working_13.datff">The CONVERT_TO_FES action with label <b>ff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ff.value</td><td>the free energy surface</td></tr></table></span><span class="plumedtooltip" style="color:green">DUMPGRID<span class="right">Output the function on the grid to a file with the PLUMED grid format. <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPGRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the grid that you would like to output<i></i></span></span>=<b name="METAD.md_working_13.datff">ff</b> <span class="plumedtooltip">FILE<span class="right"> the file on which to write the grid<i></i></span></span>=fes.dat
+</pre></div>
+
+<p>The expression used to calculate <script type="math/tex">c(t)</script> follows directly from Eq. 3 in the seventh paper cited below,
+where <script type="math/tex">F(\vec{s})=-\gamma/(\gamma-1) V(\vec{s})</script>.
+This gives smoother results than Eqs. 13 and Eqs. 14 in that paper.</p>
+<p>Notice that you can only use this option if you are accumulating the metadynamics bias on a grid.
+<script type="math/tex">c(t)</script> is given by the rct component of the METAD action above while the bias
+normalized by <script type="math/tex">c(t)</script> is given by the rbias component (rbias=bias-rct).  As illustrated above this
+value  can be used to obtain a reweighted histogram.</p>
+<p>By default <script type="math/tex">c(t)</script> is updated every time the bias changes, but if this slows down the simulation.
+If you use the keyword RCT_USTRIDE and set to a value higher than 1 the calculation is sped up.
+In the example input above we are calcluating <script type="math/tex">c(t)</script> after every Gaussian deposition event.</p>
+<h2 id="concurrent-metadynamics">Concurrent metadynamics</h2>
+<p>To implement the method of concurrent metadynamics that is discussed in the eigth paper cited below you insert multiple
+METAD actions in your plumed input file.</p>
+<h2 id="infrequent-metadynamics">Infrequent metadynamics</h2>
+<p>The kinetics of the transitions between basins can also be analyzed on the fly as
+in discussed in the 9th paper cited below. The flag ACCELERATION turn on accumulation of the acceleration
+factor that can then be used to determine the rate as illustrated by the following input.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_14.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_14.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_14.datpsi" onclick='showPath("METAD.md_working_14.dat","METAD.md_working_14.datpsi","METAD.md_working_14.datpsi","black")'>psi</b><span style="display:none;" id="METAD.md_working_14.datpsi">The ANGLE action with label <b>psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">psi</td><td width="5%"><font color="black">scalar</font></td><td>the ANGLE involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ANGLE<span class="right">Calculate one or multiple angle/s. <a href="https://www.plumed.org/doc-master/user-doc/html/ANGLE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the list of atoms involved in this collective variable (either 3 or 4 atoms)<i></i></span></span>=7,9,15
+
+<span id="METAD.md_working_14.datdefmd1_short"><b name="METAD.md_working_14.datmd1" onclick='showPath("METAD.md_working_14.dat","METAD.md_working_14.datmd1","METAD.md_working_14.datmd1","black")'>md1</b><span style="display:none;" id="METAD.md_working_14.datmd1">The METAD action with label <b>md1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">md1.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">md1.acc</td><td width="5%"><font color="black">scalar</font></td><td>the metadynamics acceleration factor</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_14.datdefmd1");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_14.datpsi">psi</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.20
+ <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=1.20 <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is only needed if you are doing well-tempered metadynamics<i></i></span></span>=300.0 <span class="plumedtooltip">BIASFACTOR<span class="right">use well tempered metadynamics and use this bias factor<i></i></span></span>=10
+ <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=0 <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=pi <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=10
+ <span class="plumedtooltip">ACCELERATION<span class="right"> Set to TRUE if you want to compute the metadynamics acceleration factor<i></i></span></span>
+...
+</span><span id="METAD.md_working_14.datdefmd1_long" style="display:none;"><b name="METAD.md_working_14.datmd1" onclick='showPath("METAD.md_working_14.dat","METAD.md_working_14.datmd1","METAD.md_working_14.datmd1","black")'>md1</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_14.datdefmd1");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_14.datpsi">psi</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.20
+ <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=1.20 <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is only needed if you are doing well-tempered metadynamics<i></i></span></span>=300.0 <span class="plumedtooltip">BIASFACTOR<span class="right">use well tempered metadynamics and use this bias factor<i></i></span></span>=10
+ <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=500 <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=0 <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=pi <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=10
+ <span class="plumedtooltip">ACCELERATION<span class="right"> Set to TRUE if you want to compute the metadynamics acceleration factor<i></i></span></span>
+ <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+...
+</span><br/><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_14.datpsi">psi</b>,<b name="METAD.md_working_14.datmd1">md1.bias</b>,<b name="METAD.md_working_14.datmd1">md1.acc</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=10
+</pre></div>
+
+<p>This method can be used together with <a href="../COMMITTOR/">COMMITTOR</a> analysis to stop the simulation when the system get to the target basin.
+It must be used together with Well-Tempered Metadynamics. If restarting from a previous
+metadynamics you need to use the ACCELERATION_RFILE keyword to give the name of the
+data file from which the previous value of the acceleration factor should be read, otherwise the
+calculation of the acceleration factor will be wrong.</p>
+<h2 id="changing-the-deposition-frequency-adaptively">Changing the deposition frequency adaptively</h2>
+<p>By using the flag FREQUENCY_ADAPTIVE the frequency adaptive scheme introduced in the 10th paper cited below
+is turned on. The frequency for hill addition then changes dynamically based on the acceleration factor
+according to the following equation</p>
+<p>
+<script type="math/tex; mode=display">
+\tau_{\mathrm{dep}}(t) =
+\min\left[
+\tau_0 \cdot
+\max\left[\frac{\alpha(t)}{\theta},1\right]
+,\tau_{c}
+\right]
+</script>
+</p>
+<p>where <script type="math/tex">\tau_0</script> is the initial hill addition frequency given by the PACE keyword,
+<script type="math/tex">\tau_{c}</script> is the maximum allowed frequency given by the FA_MAX_PACE keyword,
+<script type="math/tex">\alpha(t)</script> is the instantaneous acceleration factor at time <script type="math/tex">t</script>,
+and <script type="math/tex">\theta</script> is a threshold value that acceleration factor has to reach before
+triggering a change in the hill addition frequency given by the FA_MIN_ACCELERATION keyword.
+The frequency for updating the hill addition frequency according to this equation is
+given by the FA_UPDATE_FREQUENCY keyword, by default it is the same as the value given
+in PACE. The hill hill addition frequency increase monotonously such that if the
+instantaneous acceleration factor is lower than in the previous updating step the
+previous <script type="math/tex">\tau_{\mathrm{dep}}</script> is kept rather than updating it to a lower value.
+The instantaneous hill addition frequency <script type="math/tex">\tau_{\mathrm{dep}}(t)</script> is outputted
+to pace component. Note that if restarting from a previous metadynamics run you need to
+use the ACCELERATION_RFILE keyword to read in the acceleration factors from the
+previous run, otherwise the hill addition frequency will start from the initial
+frequency.</p>
+<h2 id="targetted-metadynamics">Targetted metadynamics</h2>
+<p>You can also provide a target distribution for your metadynamics simulations by using the keyword TARGET.
+This idea is discussed in the last four papers cited in the references section.</p>
+<p>The TARGET should be a grid containing a free-energy (i.e. the -<script type="math/tex">k_B</script>T*log for the desired target distribution).
+Gaussian kernels will then be scaled by a factor</p>
+<p>
+<script type="math/tex; mode=display">
+e^{\beta(\tilde{F}(s)-\tilde{F}_{max})}
+</script>
+</p>
+<p>Here <script type="math/tex">\tilde{F}(s)</script> is the free energy defined on the grid and <script type="math/tex">\tilde{F}_{max}</script> its maximum value.
+Notice that we here used the maximum value as was done in the penultimate paper in the reference section.
+This choice allows one to avoid the addition of exceedingly large Gaussian kernels. However,
+it can also make the Gaussian too small. You should always choose the HEIGHT parameter carefully
+in this case.
+The grid file should be similar to other PLUMED grid files in that it should contain
+both the target free-energy and its derivatives.</p>
+<p>Notice that if you wish your simulation to converge to the target free energy you should use
+the DAMPFACTOR command to provide a global tempering as is discussed in the last paper from the reference section.
+Alternatively, if you use a BIASFACTOR your simulation will converge to a free
+energy that is a linear combination of the target free energy and of the intrinsic free energy
+determined by the original force field.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_15.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_15.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=extras/target.fes</span>
+<br/><b name="METAD.md_working_15.datd1" onclick='showPath("METAD.md_working_15.dat","METAD.md_working_15.datd1","METAD.md_working_15.datd1","black")'>d1</b><span style="display:none;" id="METAD.md_working_15.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5
+<span id="METAD.md_working_15.datdeft1_short"><b name="METAD.md_working_15.datt1" onclick='showPath("METAD.md_working_15.dat","METAD.md_working_15.datt1","METAD.md_working_15.datt1","black")'>t1</b><span style="display:none;" id="METAD.md_working_15.datt1">The METAD action with label <b>t1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_15.datdeft1");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_15.datd1">d1</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.05 <span class="plumedtooltip">TAU<span class="right">in well tempered metadynamics, sets height to (k_B Delta T*pace*timestep)/tau<i></i></span></span>=200 <span class="plumedtooltip">DAMPFACTOR<span class="right">damp hills with exp(-max(V)/(kT*DAMPFACTOR)<i></i></span></span>=100 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=250
+ <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=1.14 <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=1.32 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=6
+ <span class="plumedtooltip">TARGET<span class="right">target to a predefined distribution<i></i></span></span>=<div class="plumedtooltip">extras/target.fes<div class="right"> Click <a onclick='openModal("METAD.md_working_15.datextras/target.fes1")'>here</a> to see an extract from this file.<i></i></div></div><div id="METAD.md_working_15.datextras/target.fes1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("METAD.md_working_15.datextras/target.fes1")'>&times;</span>  <h2>FILE: extras/target.fes</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS d1 t1.target der_d1
+#! SET min_d1 1.14
+#! SET max_d1 1.32
+#! SET nbins_d1  6
+#! SET periodic_d1 false
+   1.1400   0.0031   0.1101
+   1.1700   0.0086   0.2842
+   1.2000   0.0222   0.6648
+   1.2300   0.0521   1.4068
+   1.2600   0.1120   2.6873
+   1.2900   0.2199   4.6183
+   1.3200   0.3948   7.1055
+</pre></div>  </div></div>
+...
+</span><span id="METAD.md_working_15.datdeft1_long" style="display:none;"><b name="METAD.md_working_15.datt1" onclick='showPath("METAD.md_working_15.dat","METAD.md_working_15.datt1","METAD.md_working_15.datt1","black")'>t1</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("METAD.md_working_15.datdeft1");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_15.datd1">d1</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.05 <span class="plumedtooltip">TAU<span class="right">in well tempered metadynamics, sets height to (k_B Delta T*pace*timestep)/tau<i></i></span></span>=200 <span class="plumedtooltip">DAMPFACTOR<span class="right">damp hills with exp(-max(V)/(kT*DAMPFACTOR)<i></i></span></span>=100 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=250
+ <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=1.14 <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=1.32 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=6
+ <span class="plumedtooltip">TARGET<span class="right">target to a predefined distribution<i></i></span></span>=<div class="plumedtooltip">extras/target.fes<div class="right"> Click <a onclick='openModal("METAD.md_working_15.datextras/target.fes2")'>here</a> to see an extract from this file.<i></i></div></div><div id="METAD.md_working_15.datextras/target.fes2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("METAD.md_working_15.datextras/target.fes2")'>&times;</span>  <h2>FILE: extras/target.fes</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS d1 t1.target der_d1
+#! SET min_d1 1.14
+#! SET max_d1 1.32
+#! SET nbins_d1  6
+#! SET periodic_d1 false
+   1.1400   0.0031   0.1101
+   1.1700   0.0086   0.2842
+   1.2000   0.0222   0.6648
+   1.2300   0.0521   1.4068
+   1.2600   0.1120   2.6873
+   1.2900   0.2199   4.6183
+   1.3200   0.3948   7.1055
+</pre></div>  </div></div>
+ <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+...
+</span><br/><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="METAD.md_working_15.datd1">d1</b>,<b name="METAD.md_working_15.datt1">t1.bias</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=100 <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<p>Notice that the BIASFACTOR can also be set equal to 1. In this case one will perform
+unbiased sampling. Instead of using HEIGHT, one should provide the TAU parameter as illustrated below.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_16.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_16.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_16.datd" onclick='showPath("METAD.md_working_16.dat","METAD.md_working_16.datd","METAD.md_working_16.datd","black")'>d</b><span style="display:none;" id="METAD.md_working_16.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5
+<span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_16.datd">d</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.1 <span class="plumedtooltip">TAU<span class="right">in well tempered metadynamics, sets height to (k_B Delta T*pace*timestep)/tau<i></i></span></span>=4.0 <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is only needed if you are doing well-tempered metadynamics<i></i></span></span>=300 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=100 <span class="plumedtooltip">BIASFACTOR<span class="right">use well tempered metadynamics and use this bias factor<i></i></span></span>=1.0
+</pre></div>
+
+<p>The HILLS file obtained will still work with <code>plumed sum_hills</code> so as to plot a free-energy.
+The case where this makes sense is probably that of RECT simulations.</p>
+<p>Regarding RECT simulations, you can also use the RECT keyword so as to avoid using multiple input files.
+For instance, a single input file will be</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_METAD.md_working_17.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../METAD.md_working_17.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="METAD.md_working_17.datd" onclick='showPath("METAD.md_working_17.dat","METAD.md_working_17.datd","METAD.md_working_17.datd","black")'>d</b><span style="display:none;" id="METAD.md_working_17.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5
+<span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="METAD.md_working_17.datd">d</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.1 <span class="plumedtooltip">TAU<span class="right">in well tempered metadynamics, sets height to (k_B Delta T*pace*timestep)/tau<i></i></span></span>=4.0 <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is only needed if you are doing well-tempered metadynamics<i></i></span></span>=300 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=100 <span class="plumedtooltip">RECT<span class="right">list of bias factors for all the replicas<i></i></span></span>=1.0,1.5,2.0,3.0
+</pre></div>
+
+<p>The number of elements in the RECT array should be equal to the number of replicas.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">scalar</td>
+<td style="text-align: left;">the labels of the scalars on which the bias will act</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-components">Output components</h2>
+<p>This action can calculate the <a href="../specifying_arguments/">values</a> in the following table when the associated keyword is included in the input for the action. These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">bias</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">default</td>
+<td style="text-align: left;">the instantaneous value of the bias potential</td>
+</tr>
+<tr>
+<td style="text-align: left;">rbias</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">CALC_RCT</td>
+<td style="text-align: left;">the instantaneous value of the bias normalized using the c(t) reweighting factor [rbias=bias-rct]</td>
+</tr>
+<tr>
+<td style="text-align: left;">rct</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">CALC_RCT</td>
+<td style="text-align: left;">the reweighting factor c(t)</td>
+</tr>
+<tr>
+<td style="text-align: left;">work</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">CALC_WORK</td>
+<td style="text-align: left;">accumulator for work</td>
+</tr>
+<tr>
+<td style="text-align: left;">acc</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">ACCELERATION</td>
+<td style="text-align: left;">the metadynamics acceleration factor</td>
+</tr>
+<tr>
+<td style="text-align: left;">maxbias</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">CALC_MAX_BIAS</td>
+<td style="text-align: left;">the maximum of the metadynamics V(s, t)</td>
+</tr>
+<tr>
+<td style="text-align: left;">transbias</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">CALC_TRANSITION_BIAS</td>
+<td style="text-align: left;">the metadynamics transition bias V*(t)</td>
+</tr>
+<tr>
+<td style="text-align: left;">pace</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">FREQUENCY_ADAPTIVE</td>
+<td style="text-align: left;">the hill addition frequency when employing frequency adaptive metadynamics</td>
+</tr>
+<tr>
+<td style="text-align: left;">nlker</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">NLIST</td>
+<td style="text-align: left;">number of hills in the neighbor list</td>
+</tr>
+<tr>
+<td style="text-align: left;">nlsteps</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">NLIST</td>
+<td style="text-align: left;">number of steps from last neighbor list update</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the labels of the scalars on which the bias will act</td>
+</tr>
+<tr>
+<td style="text-align: left;">SIGMA</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the widths of the Gaussian hills</td>
+</tr>
+<tr>
+<td style="text-align: left;">PACE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the frequency for hill addition</td>
+</tr>
+<tr>
+<td style="text-align: left;">FILE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">HILLS</td>
+<td style="text-align: left;">a file in which the list of added hills is stored</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NUMERICAL_DERIVATIVES<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the derivatives for these quantities numerically</td>
+</tr>
+<tr>
+<td style="text-align: left;">HEIGHT</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the heights of the Gaussian hills</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">FMT<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">specify format for HILLS files (useful for decrease the number of digits in regtests)</td>
+</tr>
+<tr>
+<td style="text-align: left;">BIASFACTOR</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">use well tempered metadynamics and use this bias factor</td>
+</tr>
+<tr>
+<td style="text-align: left;">CALC_WORK</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the total accumulated work done by the bias since last restart</td>
+</tr>
+<tr>
+<td style="text-align: left;">RECT</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">list of bias factors for all the replicas</td>
+</tr>
+<tr>
+<td style="text-align: left;">DAMPFACTOR</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">damp hills with exp(-max(V)/(kT*DAMPFACTOR)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">TTBIASFACTOR<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">use transition tempered metadynamics with this bias factor</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">TTBIASTHRESHOLD<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">use transition tempered metadynamics with this bias threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">TTALPHA<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">use transition tempered metadynamics with this hill size decay exponent parameter</td>
+</tr>
+<tr>
+<td style="text-align: left;">TARGET</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">target to a predefined distribution</td>
+</tr>
+<tr>
+<td style="text-align: left;">TEMP</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the system temperature - this is only needed if you are doing well-tempered metadynamics</td>
+</tr>
+<tr>
+<td style="text-align: left;">TAU</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">in well tempered metadynamics, sets height to (k_B Delta T<em>pace</em>timestep)/tau</td>
+</tr>
+<tr>
+<td style="text-align: left;">CALC_RCT</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the c(t) reweighting factor and use that to obtain the normalized bias [rbias=bias-rct]</td>
+</tr>
+<tr>
+<td style="text-align: left;">RCT_USTRIDE</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the update stride for calculating the c(t) reweighting factor</td>
+</tr>
+<tr>
+<td style="text-align: left;">GRID_MIN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the lower bounds for the grid</td>
+</tr>
+<tr>
+<td style="text-align: left;">GRID_MAX</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the upper bounds for the grid</td>
+</tr>
+<tr>
+<td style="text-align: left;">GRID_BIN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the number of bins for the grid</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">GRID_SPACING<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the approximate grid spacing (to be used as an alternative or together with GRID_BIN)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">GRID_SPARSE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">use a sparse grid to store hills</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">GRID_NOSPLINE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">don't use spline interpolation with grids</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">GRID_WSTRIDE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">write the grid to a file every N steps</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">GRID_WFILE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the file on which to write the grid</td>
+</tr>
+<tr>
+<td style="text-align: left;">GRID_RFILE</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">a grid file from which the bias should be read at the initial step of the simulation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">STORE_GRIDS<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">store all the grid files the calculation generates</td>
+</tr>
+<tr>
+<td style="text-align: left;">NLIST</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Use neighbor list for kernels summation, faster but experimental</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NLIST_PARAMETERS<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the two cutoff parameters for the Gaussians neighbor list</td>
+</tr>
+<tr>
+<td style="text-align: left;">ADAPTIVE</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">use a geometric (=GEOM) or diffusion (=DIFF) based hills width scheme</td>
+</tr>
+<tr>
+<td style="text-align: left;">SIGMA_MAX</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the upper bounds for the sigmas (in CV units) when using adaptive hills</td>
+</tr>
+<tr>
+<td style="text-align: left;">SIGMA_MIN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the lower bounds for the sigmas (in CV units) when using adaptive hills</td>
+</tr>
+<tr>
+<td style="text-align: left;">WALKERS_ID</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">walker id</td>
+</tr>
+<tr>
+<td style="text-align: left;">WALKERS_N</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">number of walkers</td>
+</tr>
+<tr>
+<td style="text-align: left;">WALKERS_DIR</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">shared directory with the hills files from all the walkers</td>
+</tr>
+<tr>
+<td style="text-align: left;">WALKERS_RSTRIDE</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">stride for reading hills files</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">WALKERS_MPI<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Switch on MPI version of multiple walkers - not compatible with WALKERS_* options other than WALKERS_DIR</td>
+</tr>
+<tr>
+<td style="text-align: left;">INTERVAL</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">one dimensional lower and upper limits, outside the limits the system will not feel the biasing force</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">FLYING_GAUSSIAN<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Switch on flying Gaussian method, must be used with WALKERS_MPI</td>
+</tr>
+<tr>
+<td style="text-align: left;">ACCELERATION</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Set to TRUE if you want to compute the metadynamics acceleration factor</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">ACCELERATION_RFILE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">a data file from which the acceleration should be read at the initial step of the simulation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">CALC_MAX_BIAS<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Set to TRUE if you want to compute the maximum of the metadynamics V(s, t)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">CALC_TRANSITION_BIAS<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Set to TRUE if you want to compute a metadynamics transition bias V*(t)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">TRANSITIONWELL<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">This keyword appears multiple times as TRANSITIONWELL followed by an integer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">FREQUENCY_ADAPTIVE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Set to TRUE if you want to enable frequency adaptive metadynamics such that the frequency for hill addition to change dynamically based on the acceleration factor</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">FA_UPDATE_FREQUENCY<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the frequency for updating the hill addition pace in frequency adaptive metadynamics, by default this is equal to the value given in PACE</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">FA_MAX_PACE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the maximum hill addition frequency allowed in frequency adaptive metadynamics</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">FA_MIN_ACCELERATION<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">only update the hill addition pace in frequency adaptive metadynamics after reaching the minimum acceleration factor given here</td>
+</tr>
+<tr>
+<td style="text-align: left;">RESTART</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">allows per-action setting of restart (YES/NO/AUTO)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">UPDATE_FROM<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Only update this action from this time</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">UPDATE_UNTIL<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Only update this action until this time</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1073/pnas.202427399">A. Laio, M. Parrinello, Escaping free-energy minima. Proceedings of the National Academy of Sciences 99, 12562–12566 (2002)</a></li>
+<li><a href="http://dx.doi.org/10.1063/1.2844595">V. Babin, C. Roland, C. Sagui, Adaptively biased molecular dynamics for free energy calculations. The Journal of Chemical Physics 128 (2008)</a></li>
+<li><a href="http://dx.doi.org/10.1103/PhysRevLett.100.020603">A. Barducci, G. Bussi, M. Parrinello, Well-Tempered Metadynamics: A Smoothly Converging and Tunable Free-Energy Method. Physical Review Letters 100 (2008)</a></li>
+<li><a href="http://dx.doi.org/10.1021/ct3002464">D. Branduardi, G. Bussi, M. Parrinello, Metadynamics with Adaptive Gaussians. Journal of Chemical Theory and Computation 8, 2247–2254 (2012)</a></li>
+<li><a href="http://dx.doi.org/10.2174/1877946811202010079">F. Baftizadeh, P. Cossio, F. Pietrucci, A. Laio, Protein Folding and Ligand-Enzyme Binding from Bias-Exchange Metadynamics Simulations. Current Physical Chemistry 2, 79–91 (2012)</a></li>
+<li><a href="http://dx.doi.org/10.1021/jp054359r">P. Raiteri, A. Laio, F. L. Gervasio, C. Micheletti, M. Parrinello, Efficient Reconstruction of Complex Free Energy Landscapes by Multiple Walkers Metadynamics. The Journal of Physical Chemistry B 110, 3533–3539 (2005)</a></li>
+<li><a href="http://dx.doi.org/10.1021/jp504920s">P. Tiwary, M. Parrinello, A Time-Independent Free Energy Estimator for Metadynamics. The Journal of Physical Chemistry B 119, 736–742 (2014)</a></li>
+<li><a href="http://dx.doi.org/10.1021/ct5009087">A. Gil-Ley, G. Bussi, Enhanced
+Conformational Sampling Using Replica Exchange
+with Collective-Variable Tempering. Journal of Chemical Theory and Computation 11, 1077–1085 (2015)</a></li>
+<li><a href="http://dx.doi.org/10.1103/PhysRevLett.111.230602">P. Tiwary, M. Parrinello, From Metadynamics to Dynamics. Physical Review Letters 111 (2013)</a></li>
+<li><a href="http://dx.doi.org/10.1063/1.5024679">Y. Wang, O. Valsson, P. Tiwary, M. Parrinello, K. Lindorff-Larsen, Frequency adaptive metadynamics for the calculation of rare-event kinetics. The Journal of Chemical Physics 149 (2018)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jctc.5b00178">A. D. White, J. F. Dama, G. A. Voth, Designing Free Energy Surfaces That Match Experimental Data with Metadynamics. Journal of Chemical Theory and Computation 11, 2451–2460 (2015)</a></li>
+<li><a href="http://dx.doi.org/10.1016/j.bpj.2015.05.024">F. Marinelli, José D. Faraldo-Gómez, Ensemble-Biased Metadynamics: A Molecular Simulation Method to Sample Experimental Distributions. Biophysical Journal 108, 2779–2782 (2015)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jctc.6b00299">A. Gil-Ley, S. Bottaro, G. Bussi, Empirical Corrections to the Amber RNA Force Field with Target Metadynamics. Journal of Chemical Theory and Computation 12, 2790–2798 (2016)</a></li>
+<li><a href="http://dx.doi.org/10.1103/PhysRevLett.112.240602">J. F. Dama, M. Parrinello, G. A. Voth, Well-Tempered Metadynamics Converges Asymptotically. Physical Review Letters 112 (2014)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

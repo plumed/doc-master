@@ -1,0 +1,43 @@
+<map id="PLMD::switchContainers::baseSwitch&lt; switching &gt;" name="PLMD::switchContainers::baseSwitch&lt; switching &gt;">
+<area shape="rect" id="Node000001" title="container for the actual switching function used by PLMD::SwitchingFunction" alt="" coords="5,312,201,352"/>
+<area shape="rect" id="Node000002" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="427,5,654,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,298,121,248,143,188,176,128,198,101,224,78,271,50,323,32,376,22,427,18,428,23,377,27,324,38,273,55,227,82,202,105,181,131,148,190,126,249,113,299"/>
+<area shape="rect" id="Node000004" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="435,69,646,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="115,298,132,264,156,224,187,186,224,154,274,127,328,108,383,96,435,89,436,95,384,101,330,113,276,132,227,158,191,190,161,227,137,266,120,301"/>
+<area shape="rect" id="Node000006" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="413,133,668,173"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="130,300,172,261,224,226,270,205,318,189,412,167,414,172,319,194,272,210,227,230,175,265,134,304"/>
+<area shape="rect" id="Node000008" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="411,197,671,237"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="164,304,225,283,327,256,426,235,427,240,329,261,226,288,165,309"/>
+<area shape="rect" id="Node000010" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="439,262,643,317"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="215,319,438,297,439,302,215,324"/>
+<area shape="rect" id="Node000012" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="423,341,658,381"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="215,337,424,351,423,356,215,342"/>
+<area shape="rect" id="Node000014" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="427,405,654,445"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="173,354,226,369,329,391,428,408,427,413,328,397,225,375,171,359"/>
+<area shape="rect" id="Node000016" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="451,470,630,525"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="132,361,174,401,199,420,227,436,282,459,341,474,399,485,451,491,451,496,398,490,340,480,281,464,224,441,196,425,171,405,129,365"/>
+<area shape="rect" id="Node000018" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="434,549,647,589"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="121,364,138,397,161,436,191,473,227,503,276,529,329,547,383,558,434,565,434,570,382,564,328,552,274,534,224,508,187,476,157,439,133,400,116,366"/>
+<area shape="rect" id="Node000020" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="437,613,644,653"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="113,365,126,414,148,473,181,531,202,557,227,579,276,607,330,624,385,634,437,637,437,642,384,639,328,629,273,612,224,583,198,561,177,534,143,475,121,415,108,366"/>
+<area shape="rect" id="Node000003" href="$struct_p_l_m_d_1_1switch_containers_1_1cosinus_switch.html" title=" " alt="" coords="728,5,907,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="668,23,728,23,728,28,668,28"/>
+<area shape="rect" id="Node000005" href="$struct_p_l_m_d_1_1switch_containers_1_1cubic_switch.html" title=" " alt="" coords="728,69,907,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="660,87,728,87,728,92,660,92"/>
+<area shape="rect" id="Node000007" href="$struct_p_l_m_d_1_1switch_containers_1_1exponential_switch.html" title=" " alt="" coords="728,133,907,173"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="682,151,728,151,728,156,682,156"/>
+<area shape="rect" id="Node000009" href="$struct_p_l_m_d_1_1switch_containers_1_1fastgaussian_switch.html" title=" " alt="" coords="728,197,907,237"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="685,215,728,215,728,220,685,220"/>
+<area shape="rect" id="Node000011" href="$struct_p_l_m_d_1_1switch_containers_1_1fixed_rational.html" title=" " alt="" coords="728,269,907,309"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="656,287,728,287,728,292,656,292"/>
+<area shape="rect" id="Node000013" href="$struct_p_l_m_d_1_1switch_containers_1_1gaussian_switch.html" title=" " alt="" coords="728,341,907,381"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="672,359,728,359,728,364,672,364"/>
+<area shape="rect" id="Node000015" href="$struct_p_l_m_d_1_1switch_containers_1_1nativeq_switch.html" title=" " alt="" coords="728,405,907,445"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="668,423,728,423,728,428,668,428"/>
+<area shape="rect" id="Node000017" href="$struct_p_l_m_d_1_1switch_containers_1_1rational.html" title=" " alt="" coords="720,477,915,517"/>
+<area shape="poly" id="edge16_Node000016_Node000017" title=" " alt="" coords="644,495,720,495,720,500,644,500"/>
+<area shape="rect" id="Node000019" href="$struct_p_l_m_d_1_1switch_containers_1_1smap_switch.html" title=" " alt="" coords="728,549,907,589"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="661,567,728,567,728,572,661,572"/>
+<area shape="rect" id="Node000021" href="$struct_p_l_m_d_1_1switch_containers_1_1tanh_switch.html" title=" " alt="" coords="728,613,907,653"/>
+<area shape="poly" id="edge20_Node000020_Node000021" title=" " alt="" coords="658,631,728,631,728,636,658,636"/>
+</map>

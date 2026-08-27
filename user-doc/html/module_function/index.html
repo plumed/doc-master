@@ -1,0 +1,812 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Module: function - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-function" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Module: function
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dealing-with-periodicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dealing with periodicity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="module-function"><a href="../modules/">Module</a>: function</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">actions that take arguments as input and that return values</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Authors:</strong> The PLUMED core developers</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?module=function"><img alt="used in 43 tutorials" src="https://img.shields.io/badge/tutorials-43-green.svg" /></a><a href="https://www.plumed-nest.org/browse.html?module=function"><img alt="used in 230 eggs" src="https://img.shields.io/badge/nest-230-green.svg" /></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details">Details</h2>
+<p>When performing biased dynamics or analyzing a trajectory you may wish to analyze/bias the value of
+some function of a set of collective variables rather than the values of the collective variables
+directly.  You can do this with PLUMED by using the function that are available within this module.</p>
+<p>In early versions of PLUMED the values that appeared in the input to these functions were always scalars.<br />
+However, from PLUMED 2.10 onwards some functions can also accept vectors, matrices or functions on grids
+in input. When the scalar-valued functions in this module are called in this way the function is applied 
+elementwise to to the input vectors, matrices or functions on grid are returned and thus any values returned
+have the same type as the input arguments.</p>
+<h2 id="dealing-with-periodicity">Dealing with periodicity</h2>
+<p>Notice that in many functions you should explicitly say to PLUMED whether the result
+is a periodic variable or not using the keyword <code>PERIODIC</code>.
+This is crucial to allow a variable to be properly based.
+To know if a function is periodic
+of not you should answer to the following question:</p>
+<ul>
+<li>Can my function change with a discontinuity when I move my atoms in a continuous manner?</li>
+</ul>
+<p>In case the answer is no, than you should use <code>PERIODIC=NO</code>. In case the answer is yes, then you should
+consider the following question:</p>
+<ul>
+<li>Are the values of the function at the discontinuity always the same or do they change?</li>
+</ul>
+<p>In case the answer is that they are the same, you should use <code>PERIODIC=A,B</code> where <code>A</code>
+is the smallest value and <code>B</code> is the largest value. In case the answer is that the
+values at the discontinuity are not always the same, then you cannot construct a variable that
+can be biased with PLUMED. Consider the following examples:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_module_function.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../module_function.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="module_function.md_working_1.datt" onclick='showPath("module_function.md_working_1.dat","module_function.md_working_1.datt","module_function.md_working_1.datt","black")'>t</b><span style="display:none;" id="module_function.md_working_1.datt">The TORSION action with label <b>t</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,2,3,4
+<span style="color:blue" class="comment"># When atoms are moved, t could jump suddenly from -pi to +pi</span>
+<br/><b name="module_function.md_working_1.datc" onclick='showPath("module_function.md_working_1.dat","module_function.md_working_1.datc","module_function.md_working_1.datc","black")'>c</b><span style="display:none;" id="module_function.md_working_1.datc">The MATHEVAL action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATHEVAL<span class="right">An alias to the CUSTOM function that can also be used to calaculate combinations of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/MATHEVAL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="module_function.md_working_1.datt">t</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*x*x <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=-31.0062766802998,31.0062766802998
+<span style="color:blue" class="comment"># When atoms are moved, c could jump suddenly from -pi**3 to +pi**3</span>
+<br/><span style="color:blue" class="comment"># equivalently, we could have used:</span>
+<span style="color:blue" class="comment"># c: COMBINE ARG=t POWERS=3 PERIODIC=-31.0062766802998,31.0062766802998</span>
+<br/><span style="color:blue" class="comment"># compute x/y/z components of the distance between atoms 1 and 10</span>
+<b name="module_function.md_working_1.datd" onclick='showPath("module_function.md_working_1.dat","module_function.md_working_1.datd","module_function.md_working_1.datd","black")'>d</b><span style="display:none;" id="module_function.md_working_1.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d.x</td><td width="5%"><font color="black">scalar</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.y</td><td width="5%"><font color="black">scalar</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.z</td><td width="5%"><font color="black">scalar</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,10 <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+<br/><span style="color:blue" class="comment"># make a new variable equal to d.z but with the correct periodicity</span>
+<b name="module_function.md_working_1.datdz" onclick='showPath("module_function.md_working_1.dat","module_function.md_working_1.datdz","module_function.md_working_1.datdz","black")'>dz</b><span style="display:none;" id="module_function.md_working_1.datdz">The COMBINE action with label <b>dz</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dz</td><td width="5%"><font color="black">scalar</font></td><td>a linear combination</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="module_function.md_working_1.datd">d.z</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=-10,10
+<span style="color:blue" class="comment"># here we assumed the system is in a orthorhombic box with z side = 20</span>
+</pre></div>
+<h2 id="actions">Actions</h2>
+<p>The following actions are part of this module</p>
+<div class="dropdown">
+<button class="dropbtn" onclick='clearTagSelection()'>Tags</button>
+<div class="dropdown-content">
+<a href="#" onclick='displayActionWithTags("COLVAR")' onmouseover='displayTagData("COLVAR")' onmouseleave='displayTagData("no selection")'>COLVAR</a>
+<a href="#" onclick='displayActionWithTags("FUNCTION")' onmouseover='displayTagData("FUNCTION")' onmouseleave='displayTagData("no selection")'>FUNCTION</a>
+</div>
+<span id="tagdisplay"></span>
+</div>
+<p><span id="COLVAR" style="display:none;"><b>COLVAR:</b> a function of a set of atomic positions that returns a scalar</span>
+<span id="FUNCTION" style="display:none;"><b>FUNCTION:</b> actions that take in one or multiple arguments and that return one or multiple arguments</span></p>
+<table id="browse-table" class="display">
+<thead><tr>
+<th style="text-align: left" >Name</th>
+<th style="text-align: left" >Description</th>
+<th style="text-align: left" >Tags</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left"><a href="../BESSEL">BESSEL</a></td>
+<td style="text-align: left">Calculate the value of a Bessel function.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BETWEEN">BETWEEN</a></td>
+<td style="text-align: left">Use a switching function to determine how many of the input variables are within a certain range.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COMBINE">COMBINE</a></td>
+<td style="text-align: left">Calculate a polynomial combination of a set of other variables.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CUSTOM">CUSTOM</a></td>
+<td style="text-align: left">Calculate a combination of variables using a custom expression.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ENSEMBLE">ENSEMBLE</a></td>
+<td style="text-align: left">Calculates the replica averaging of a collective variable over multiple replicas.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FUNCPATHGENERAL">FUNCPATHGENERAL</a></td>
+<td style="text-align: left">This function calculates path collective variables (PCVs) using an arbitrary combination of collective variables.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FUNCPATHMSD">FUNCPATHMSD</a></td>
+<td style="text-align: left">This function calculates path collective variables.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FUNCSUMHILLS">FUNCSUMHILLS</a></td>
+<td style="text-align: left">This function is intended to be called by the command line tool sum_hills.  It is meant to integrate a HILLS file or an HILLS file interpreted as a histogram in a variety of ways. It is, therefore, not expected that you use this during your dynamics (it will crash!)</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../HIGHEST">HIGHEST</a></td>
+<td style="text-align: left">This function can be used to find the highest colvar by magnitude in a set.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LESS_THAN">LESS_THAN</a></td>
+<td style="text-align: left">Use a switching function to determine how many of the input variables are less than a certain cutoff.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOCALENSEMBLE">LOCALENSEMBLE</a></td>
+<td style="text-align: left">Calculates the average over multiple arguments.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOWEST">LOWEST</a></td>
+<td style="text-align: left">This function can be used to find the lowest colvar by magnitude in a set.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MATHEVAL">MATHEVAL</a></td>
+<td style="text-align: left">An alias to the CUSTOM function that can also be used to calaculate combinations of variables using a custom expression.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MEAN">MEAN</a></td>
+<td style="text-align: left">Calculate the arithmetic mean of the elements in a vector</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MOMENTS">MOMENTS</a></td>
+<td style="text-align: left">Calculate central moments from the distribution of input quantities</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MORE_THAN">MORE_THAN</a></td>
+<td style="text-align: left">Use a switching function to determine how many of the input variables are more than a certain cutoff.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PIECEWISE">PIECEWISE</a></td>
+<td style="text-align: left">Compute a piece wise straight line through its arguments that passes through a set of ordered control points.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PRODUCT">PRODUCT</a></td>
+<td style="text-align: left">Calculate the product of the input quantities</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SORT">SORT</a></td>
+<td style="text-align: left">This function can be used to sort colvars according to their magnitudes.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../STATS">STATS</a></td>
+<td style="text-align: left">Calculates statistical properties of a set of collective variables with respect to a set of reference values.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SUM">SUM</a></td>
+<td style="text-align: left">Calculate the sum of the arguments</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

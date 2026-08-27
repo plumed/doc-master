@@ -1,0 +1,18 @@
+<map id="PLMD::colvar::SoftVoronoiBase" name="PLMD::colvar::SoftVoronoiBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="541,55,763,80"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1colvar_1_1_voronoi_coordination.html" title=" " alt="" coords="811,5,1057,31"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="738,50,860,28,861,33,739,55"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1colvar_1_1_voronoi_distance.html" title=" " alt="" coords="823,55,1045,80"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="776,65,823,65,823,70,776,70"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1colvar_1_1_voronoi_position.html" title=" " alt="" coords="826,104,1042,129"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="739,80,861,101,860,107,738,85"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="384,55,493,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="507,65,541,65,541,70,507,70"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="163,29,334,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="348,53,384,57,383,63,347,58"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,55,113,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="127,56,163,51,163,56,127,61"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="161,79,336,104"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="128,73,161,78,161,83,127,79"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="349,76,383,72,384,77,350,81"/>
+</map>

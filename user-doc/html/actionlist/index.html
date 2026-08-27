@@ -1,0 +1,2601 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../modules/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Actions - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#actions-implemented-in-plumed-version-211" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Actions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actions-implemented-in-plumed-version-211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions implemented in PLUMED Version 2.11
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actions-implemented-in-plumed-version-211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions implemented in PLUMED Version 2.11
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Actions</h1>
+
+<h2 id="actions-implemented-in-plumed-version-211">Actions implemented in PLUMED Version 2.11</h2>
+<p>The <a href="../actions/">actions</a> that can be used within a PLUMED input file are listed below.</p>
+<div class="dropdown">
+<button class="dropbtn" onclick='clearTagSelection()'>Tags</button>
+<div class="dropdown-content">
+<a href="#" onclick='displayActionWithTags("MATRIX")' onmouseover='displayTagData("MATRIX")' onmouseleave='displayTagData("no selection")'>MATRIX</a>
+<a href="#" onclick='displayActionWithTags("ISDB_GENERIC")' onmouseover='displayTagData("ISDB_GENERIC")' onmouseleave='displayTagData("no selection")'>ISDB_GENERIC</a>
+<a href="#" onclick='displayActionWithTags("VES_BASISF")' onmouseover='displayTagData("VES_BASISF")' onmouseleave='displayTagData("no selection")'>VES_BASISF</a>
+<a href="#" onclick='displayActionWithTags("GRIDANALYSIS")' onmouseover='displayTagData("GRIDANALYSIS")' onmouseleave='displayTagData("no selection")'>GRIDANALYSIS</a>
+<a href="#" onclick='displayActionWithTags("MCOLVAR")' onmouseover='displayTagData("MCOLVAR")' onmouseleave='displayTagData("no selection")'>MCOLVAR</a>
+<a href="#" onclick='displayActionWithTags("ANNMOD_Function")' onmouseover='displayTagData("ANNMOD_Function")' onmouseleave='displayTagData("no selection")'>ANNMOD_Function</a>
+<a href="#" onclick='displayActionWithTags("MATRIXF")' onmouseover='displayTagData("MATRIXF")' onmouseleave='displayTagData("no selection")'>MATRIXF</a>
+<a href="#" onclick='displayActionWithTags("MAZE_BIAS")' onmouseover='displayTagData("MAZE_BIAS")' onmouseleave='displayTagData("no selection")'>MAZE_BIAS</a>
+<a href="#" onclick='displayActionWithTags("MCOLVARF")' onmouseover='displayTagData("MCOLVARF")' onmouseleave='displayTagData("no selection")'>MCOLVARF</a>
+<a href="#" onclick='displayActionWithTags("GRIDCALC")' onmouseover='displayTagData("GRIDCALC")' onmouseleave='displayTagData("no selection")'>GRIDCALC</a>
+<a href="#" onclick='displayActionWithTags("DCOLVAR")' onmouseover='displayTagData("DCOLVAR")' onmouseleave='displayTagData("no selection")'>DCOLVAR</a>
+<a href="#" onclick='displayActionWithTags("COLVAR")' onmouseover='displayTagData("COLVAR")' onmouseleave='displayTagData("no selection")'>COLVAR</a>
+<a href="#" onclick='displayActionWithTags("FUNCTION")' onmouseover='displayTagData("FUNCTION")' onmouseleave='displayTagData("no selection")'>FUNCTION</a>
+<a href="#" onclick='displayActionWithTags("PRINTANALYSIS")' onmouseover='displayTagData("PRINTANALYSIS")' onmouseleave='displayTagData("no selection")'>PRINTANALYSIS</a>
+<a href="#" onclick='displayActionWithTags("VES_OPTIMIZER")' onmouseover='displayTagData("VES_OPTIMIZER")' onmouseleave='displayTagData("no selection")'>VES_OPTIMIZER</a>
+<a href="#" onclick='displayActionWithTags("ISDB_BIAS")' onmouseover='displayTagData("ISDB_BIAS")' onmouseleave='displayTagData("no selection")'>ISDB_BIAS</a>
+<a href="#" onclick='displayActionWithTags("MAZE_LOSS_FUNCTION")' onmouseover='displayTagData("MAZE_LOSS_FUNCTION")' onmouseleave='displayTagData("no selection")'>MAZE_LOSS_FUNCTION</a>
+<a href="#" onclick='displayActionWithTags("TOPOLOGY")' onmouseover='displayTagData("TOPOLOGY")' onmouseleave='displayTagData("no selection")'>TOPOLOGY</a>
+<a href="#" onclick='displayActionWithTags("EABFMOD_BIAS")' onmouseover='displayTagData("EABFMOD_BIAS")' onmouseleave='displayTagData("no selection")'>EABFMOD_BIAS</a>
+<a href="#" onclick='displayActionWithTags("GENERIC")' onmouseover='displayTagData("GENERIC")' onmouseleave='displayTagData("no selection")'>GENERIC</a>
+<a href="#" onclick='displayActionWithTags("BIAS")' onmouseover='displayTagData("BIAS")' onmouseleave='displayTagData("no selection")'>BIAS</a>
+<a href="#" onclick='displayActionWithTags("MAZE_OPTIMIZER")' onmouseover='displayTagData("MAZE_OPTIMIZER")' onmouseleave='displayTagData("no selection")'>MAZE_OPTIMIZER</a>
+<a href="#" onclick='displayActionWithTags("VES_UTILS")' onmouseover='displayTagData("VES_UTILS")' onmouseleave='displayTagData("no selection")'>VES_UTILS</a>
+<a href="#" onclick='displayActionWithTags("OPES_EXPANSION_CV")' onmouseover='displayTagData("OPES_EXPANSION_CV")' onmouseleave='displayTagData("no selection")'>OPES_EXPANSION_CV</a>
+<a href="#" onclick='displayActionWithTags("VES_BIAS")' onmouseover='displayTagData("VES_BIAS")' onmouseleave='displayTagData("no selection")'>VES_BIAS</a>
+<a href="#" onclick='displayActionWithTags("REWEIGHTING")' onmouseover='displayTagData("REWEIGHTING")' onmouseleave='displayTagData("no selection")'>REWEIGHTING</a>
+<a href="#" onclick='displayActionWithTags("VES_TARGETDIST")' onmouseover='displayTagData("VES_TARGETDIST")' onmouseleave='displayTagData("no selection")'>VES_TARGETDIST</a>
+<a href="#" onclick='displayActionWithTags("VOLUMES")' onmouseover='displayTagData("VOLUMES")' onmouseleave='displayTagData("no selection")'>VOLUMES</a>
+<a href="#" onclick='displayActionWithTags("VATOM")' onmouseover='displayTagData("VATOM")' onmouseleave='displayTagData("no selection")'>VATOM</a>
+<a href="#" onclick='displayActionWithTags("ANALYSIS")' onmouseover='displayTagData("ANALYSIS")' onmouseleave='displayTagData("no selection")'>ANALYSIS</a>
+<a href="#" onclick='displayActionWithTags("CONCOMP")' onmouseover='displayTagData("CONCOMP")' onmouseleave='displayTagData("no selection")'>CONCOMP</a>
+<a href="#" onclick='displayActionWithTags("LANDMARKS")' onmouseover='displayTagData("LANDMARKS")' onmouseleave='displayTagData("no selection")'>LANDMARKS</a>
+<a href="#" onclick='displayActionWithTags("ISDB_FUNCTION")' onmouseover='displayTagData("ISDB_FUNCTION")' onmouseleave='displayTagData("no selection")'>ISDB_FUNCTION</a>
+<a href="#" onclick='displayActionWithTags("DIMRED")' onmouseover='displayTagData("DIMRED")' onmouseleave='displayTagData("no selection")'>DIMRED</a>
+<a href="#" onclick='displayActionWithTags("ISDB_COLVAR")' onmouseover='displayTagData("ISDB_COLVAR")' onmouseleave='displayTagData("no selection")'>ISDB_COLVAR</a>
+</div>
+<span id="tagdisplay"></span>
+</div>
+<p><span id="MATRIX" style="display:none;"><b>MATRIX:</b> action that calculates an adjacency matrix between atoms</span>
+<span id="ISDB_GENERIC" style="display:none;"><b>ISDB_GENERIC:</b> generic tools for integrative structural and dynamical biology</span>
+<span id="VES_BASISF" style="display:none;"><b>VES_BASISF:</b> one-dimensional basis functions for variationally enhanced sampling</span>
+<span id="GRIDANALYSIS" style="display:none;"><b>GRIDANALYSIS:</b> actions that take a function computed on a grid in input</span>
+<span id="MCOLVAR" style="display:none;"><b>MCOLVAR:</b> actions for calculating a vector of colvars</span>
+<span id="ANNMOD_Function" style="display:none;"><b>ANNMOD_Function:</b> function for computing a fully-connected feedforward neural network</span>
+<span id="MATRIXF" style="display:none;"><b>MATRIXF:</b> actions that perform operations on input matrices</span>
+<span id="MAZE_BIAS" style="display:none;"><b>MAZE_BIAS:</b> bias for the maze module</span>
+<span id="MCOLVARF" style="display:none;"><b>MCOLVARF:</b> actions for calculating functions of vectors of colvars</span>
+<span id="GRIDCALC" style="display:none;"><b>GRIDCALC:</b> actions that output a function computed on a grid</span>
+<span id="DCOLVAR" style="display:none;"><b>DCOLVAR:</b> a collective variable that measures the distance between the instantaneous configuration and a reference structure</span>
+<span id="COLVAR" style="display:none;"><b>COLVAR:</b> a function of a set of atomic positions that returns a scalar</span>
+<span id="FUNCTION" style="display:none;"><b>FUNCTION:</b> actions that take in one or multiple arguments and that return one or multiple arguments</span>
+<span id="PRINTANALYSIS" style="display:none;"><b>PRINTANALYSIS:</b> tools for printing data that was obtained from an analysis of multiple frames of the trajectory</span>
+<span id="VES_OPTIMIZER" style="display:none;"><b>VES_OPTIMIZER:</b> optimizers for variationally enhanced sampling</span>
+<span id="ISDB_BIAS" style="display:none;"><b>ISDB_BIAS:</b> biases that are used in integrative structural and dynamical biology</span>
+<span id="MAZE_LOSS_FUNCTION" style="display:none;"><b>MAZE_LOSS_FUNCTION:</b> loss function for the maze module</span>
+<span id="TOPOLOGY" style="display:none;"><b>TOPOLOGY:</b> actions for providing information on the molecular topology</span>
+<span id="EABFMOD_BIAS" style="display:none;"><b>EABFMOD_BIAS:</b> bias actions for performing extended-system adaptive biasing force</span>
+<span id="GENERIC" style="display:none;"><b>GENERIC:</b> generic actions for printing and so on</span>
+<span id="BIAS" style="display:none;"><b>BIAS:</b> bias potentials that can be used to force rare events to occur in MD simulations</span>
+<span id="MAZE_OPTIMIZER" style="display:none;"><b>MAZE_OPTIMIZER:</b> optimizer for the maze module</span>
+<span id="VES_UTILS" style="display:none;"><b>VES_UTILS:</b> utilities for variationally enhanced sampling</span>
+<span id="OPES_EXPANSION_CV" style="display:none;"><b>OPES_EXPANSION_CV:</b> expansion cvs that can be used with the OPES method</span>
+<span id="VES_BIAS" style="display:none;"><b>VES_BIAS:</b> biases for variationally enhanced sampling</span>
+<span id="REWEIGHTING" style="display:none;"><b>REWEIGHTING:</b> actions for computing weights that can be used when calculating the unbiased distribution</span>
+<span id="VES_TARGETDIST" style="display:none;"><b>VES_TARGETDIST:</b> target distributions for variationally enhanced sampling</span>
+<span id="VOLUMES" style="display:none;"><b>VOLUMES:</b> actions for calculating whether atoms are within a certain part of the simulation cell or not</span>
+<span id="VATOM" style="display:none;"><b>VATOM:</b> actions that calculate the position of a virtual atom</span>
+<span id="ANALYSIS" style="display:none;"><b>ANALYSIS:</b> tools for analysing trajectories</span>
+<span id="CONCOMP" style="display:none;"><b>CONCOMP:</b> actions for that can be performed after you have clustered the atoms in a frame using DFSCLUSTERING</span>
+<span id="LANDMARKS" style="display:none;"><b>LANDMARKS:</b> tools for selecting a subset of points from an input vector/matrix</span>
+<span id="ISDB_FUNCTION" style="display:none;"><b>ISDB_FUNCTION:</b> functions that are used in integrative structural and dynamical biology</span>
+<span id="DIMRED" style="display:none;"><b>DIMRED:</b> dimensionality reduction algorithms</span>
+<span id="ISDB_COLVAR" style="display:none;"><b>ISDB_COLVAR:</b> collective variables that are used in integrative structural and dynamical biology</span></p>
+<table id="browse-table" class="display">
+<thead><tr>
+<th style="text-align: left" class="actionHeader" >Name</th>
+<th style="text-align: left" >Description</th>
+<th style="text-align: left" >Tags</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left"><a href="../ABMD">ABMD</a></td>
+<td style="text-align: left">Adds a ratchet-and-pawl like restraint on one or more variables.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ACCUMULATE">ACCUMULATE</a></td>
+<td style="text-align: left">Sum the elements of this value over the course of the trajectory</td>
+<td style="text-align: left">GRIDCALC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ADAPTIVE_PATH">ADAPTIVE_PATH</a></td>
+<td style="text-align: left">Compute path collective variables that adapt to the lowest free energy path connecting states A and B.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ALPHABETA">ALPHABETA</a></td>
+<td style="text-align: left">Measures a distance including pbc between the instantaneous values of a set of torsional angles and set of reference values.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ALPHARMSD">ALPHARMSD</a></td>
+<td style="text-align: left">Probe the alpha helical content of a protein structure.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ANGLE">ANGLE</a></td>
+<td style="text-align: left">Calculate one or multiple angle/s.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ANGLES">ANGLES</a></td>
+<td style="text-align: left">Calculate functions of the distribution of angles.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ANN">ANN</a></td>
+<td style="text-align: left">Calculates the ANN-function.</td>
+<td style="text-align: left">ANNMOD_Function </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ANTIBETARMSD">ANTIBETARMSD</a></td>
+<td style="text-align: left">Probe the antiparallel beta sheet content of your protein structure.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ARGS2VATOM">ARGS2VATOM</a></td>
+<td style="text-align: left">Create a virtual atom from the input scalars</td>
+<td style="text-align: left">VATOM </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../AROUND">AROUND</a></td>
+<td style="text-align: left">This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a particular, user-specified part of of the cell.</td>
+<td style="text-align: left">VOLUMES </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ARRANGE_POINTS">ARRANGE_POINTS</a></td>
+<td style="text-align: left">Arrange points in a low dimensional space so that the (transformed) distances between points in the low dimensional space match the dissimilarities provided in an input matrix.</td>
+<td style="text-align: left">DIMRED </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ATOMIC_SMAC">ATOMIC_SMAC</a></td>
+<td style="text-align: left">Calculate the atomic smac CV</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../AVERAGE">AVERAGE</a></td>
+<td style="text-align: left">Calculate the ensemble average of a collective variable</td>
+<td style="text-align: left">GRIDCALC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../AVERAGE_PATH_DISPLACEMENT">AVERAGE_PATH_DISPLACEMENT</a></td>
+<td style="text-align: left">Accumulate the distances between the reference frames in the paths and the configurations visited</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BAIES">BAIES</a></td>
+<td style="text-align: left">Bayesian refinement of AF models.</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BESSEL">BESSEL</a></td>
+<td style="text-align: left">Calculate the value of a Bessel function.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BETWEEN">BETWEEN</a></td>
+<td style="text-align: left">Use a switching function to determine how many of the input variables are within a certain range.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BF_CHEBYSHEV">BF_CHEBYSHEV</a></td>
+<td style="text-align: left">Chebyshev polynomial basis functions.</td>
+<td style="text-align: left">VES_BASISF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BF_COMBINED">BF_COMBINED</a></td>
+<td style="text-align: left">Combining other basis functions types</td>
+<td style="text-align: left">VES_BASISF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BF_COSINE">BF_COSINE</a></td>
+<td style="text-align: left">Fourier cosine basis functions.</td>
+<td style="text-align: left">VES_BASISF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BF_CUBIC_B_SPLINES">BF_CUBIC_B_SPLINES</a></td>
+<td style="text-align: left">Cubic B spline basis functions.</td>
+<td style="text-align: left">VES_BASISF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BF_CUSTOM">BF_CUSTOM</a></td>
+<td style="text-align: left">Basis functions given by arbitrary mathematical expressions.</td>
+<td style="text-align: left">VES_BASISF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BF_FOURIER">BF_FOURIER</a></td>
+<td style="text-align: left">Fourier basis functions.</td>
+<td style="text-align: left">VES_BASISF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BF_GAUSSIANS">BF_GAUSSIANS</a></td>
+<td style="text-align: left">Gaussian basis functions.</td>
+<td style="text-align: left">VES_BASISF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BF_LEGENDRE">BF_LEGENDRE</a></td>
+<td style="text-align: left">Legendre polynomials basis functions.</td>
+<td style="text-align: left">VES_BASISF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BF_POWERS">BF_POWERS</a></td>
+<td style="text-align: left">Polynomial power basis functions.</td>
+<td style="text-align: left">VES_BASISF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BF_SINE">BF_SINE</a></td>
+<td style="text-align: left">Fourier sine basis functions.</td>
+<td style="text-align: left">VES_BASISF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BF_WAVELETS">BF_WAVELETS</a></td>
+<td style="text-align: left">Daubechies Wavelets basis functions.</td>
+<td style="text-align: left">VES_BASISF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BIASVALUE">BIASVALUE</a></td>
+<td style="text-align: left">Takes the value of one variable and use it as a bias</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BOPS">BOPS</a></td>
+<td style="text-align: left">Calculate Bond orientational order parameters for molecules.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BRIDGE">BRIDGE</a></td>
+<td style="text-align: left">Calculate the number of briding atoms between two groups</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../BRIDGE_MATRIX">BRIDGE_MATRIX</a></td>
+<td style="text-align: left">Calculate the number of atoms that bridge two parts of a structure</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CALIBER">CALIBER</a></td>
+<td style="text-align: left">Add a time-dependent, harmonic restraint on one or more variables.</td>
+<td style="text-align: left">ISDB_BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CAVITY">CAVITY</a></td>
+<td style="text-align: left">This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a box defined by the positions of four atoms.</td>
+<td style="text-align: left">VOLUMES </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CELL">CELL</a></td>
+<td style="text-align: left">Get the components of the simulation cell</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CENTER">CENTER</a></td>
+<td style="text-align: left">Calculate the center for a group of atoms, with arbitrary weights.</td>
+<td style="text-align: left">VATOM </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CHARGE">CHARGE</a></td>
+<td style="text-align: left">Get the charges of one or multiple atoms</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CLASSICAL_MDS">CLASSICAL_MDS</a></td>
+<td style="text-align: left">Create a low-dimensional projection of a trajectory using the classical multidimensional</td>
+<td style="text-align: left">DIMRED </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CLUSTER_DIAMETER">CLUSTER_DIAMETER</a></td>
+<td style="text-align: left">Print out the diameter of one of the connected components.</td>
+<td style="text-align: left">CONCOMP </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CLUSTER_DISTRIBUTION">CLUSTER_DISTRIBUTION</a></td>
+<td style="text-align: left">Calculate functions of the distribution of properties in your connected components.</td>
+<td style="text-align: left">CONCOMP </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CLUSTER_NATOMS">CLUSTER_NATOMS</a></td>
+<td style="text-align: left">Calculate the number of atoms in the cluster of interest</td>
+<td style="text-align: left">CONCOMP </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CLUSTER_PROPERTIES">CLUSTER_PROPERTIES</a></td>
+<td style="text-align: left">Calculate properties of the distribution of some quantities that are part of a connected component</td>
+<td style="text-align: left">CONCOMP </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CLUSTER_WEIGHTS">CLUSTER_WEIGHTS</a></td>
+<td style="text-align: left">Setup a vector that has one for all the atoms that form part of the cluster of interest and that has zero for all other atoms.</td>
+<td style="text-align: left">CONCOMP </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CLUSTER_WITHSURFACE">CLUSTER_WITHSURFACE</a></td>
+<td style="text-align: left">Determine the atoms that are within a certain cutoff of the atoms in a cluster.</td>
+<td style="text-align: left">CONCOMP </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COLLECT">COLLECT</a></td>
+<td style="text-align: left">Collect data from the trajectory for later analysis</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COLLECT_FRAMES">COLLECT_FRAMES</a></td>
+<td style="text-align: left">Collect atomic positions or argument values from the trajectory for later analysis</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COM">COM</a></td>
+<td style="text-align: left">Calculate the center of mass for a group of atoms.</td>
+<td style="text-align: left">VATOM </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COMBINE">COMBINE</a></td>
+<td style="text-align: left">Calculate a polynomial combination of a set of other variables.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COMMITTOR">COMMITTOR</a></td>
+<td style="text-align: left">Does a committor analysis.</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CONCATENATE">CONCATENATE</a></td>
+<td style="text-align: left">Join vectors or matrices together</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CONSTANT">CONSTANT</a></td>
+<td style="text-align: left">Create a constant value that can be passed to actions</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CONTACTMAP">CONTACTMAP</a></td>
+<td style="text-align: left">Calculate the distances between a number of pairs of atoms and transform each distance by a switching function.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CONTACT_MATRIX">CONTACT_MATRIX</a></td>
+<td style="text-align: left">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff.</td>
+<td style="text-align: left">MATRIX </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CONVERT_TO_FES">CONVERT_TO_FES</a></td>
+<td style="text-align: left">Convert a histogram to a free energy surface.</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COORDINATION">COORDINATION</a></td>
+<td style="text-align: left">Calculate coordination numbers.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COORDINATIONNUMBER">COORDINATIONNUMBER</a></td>
+<td style="text-align: left">Calculate the coordination numbers of atoms so that you can then calculate functions of the distribution of</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COORDINATION_MOMENTS">COORDINATION_MOMENTS</a></td>
+<td style="text-align: left">Calculate moments of the distribution of distances in the first coordination sphere</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COORDINATION_SHELL_AVERAGE">COORDINATION_SHELL_AVERAGE</a></td>
+<td style="text-align: left">Calculate an arbitrary function of all the bond vectors in the first coordination sphere of an atom and take an average</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COORDINATION_SHELL_FUNCTION">COORDINATION_SHELL_FUNCTION</a></td>
+<td style="text-align: left">Calculate an arbitrary function of all the bond vectors in the first coordination sphere of an atom</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COORD_ANGLES">COORD_ANGLES</a></td>
+<td style="text-align: left">Calculate functions of the distribution of angles between bonds in the first coordination spheres of a set of atoms</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../COVARIANCE_MATRIX">COVARIANCE_MATRIX</a></td>
+<td style="text-align: left">Calculate a covariance matix</td>
+<td style="text-align: left">REWEIGHTING </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CREATE_MASK">CREATE_MASK</a></td>
+<td style="text-align: left">Create a mask vector to use for landmark selection</td>
+<td style="text-align: left">DIMRED </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CS2BACKBONE">CS2BACKBONE</a></td>
+<td style="text-align: left">Calculates the backbone chemical shifts for a protein.</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CUSTOM">CUSTOM</a></td>
+<td style="text-align: left">Calculate a combination of variables using a custom expression.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../CYLINDRICAL_HARMONIC">CYLINDRICAL_HARMONIC</a></td>
+<td style="text-align: left">Calculate the cylindrical harmonic function</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DEBUG">DEBUG</a></td>
+<td style="text-align: left">Set some debug options.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DENSITY">DENSITY</a></td>
+<td style="text-align: left">Depreciated command that is bascially equivalant to GROUP.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DETERMINANT">DETERMINANT</a></td>
+<td style="text-align: left">Calculate the determinant of a matrix</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DFSCLUSTERING">DFSCLUSTERING</a></td>
+<td style="text-align: left">Find the connected components of the matrix using the depth first search clustering algorithm.</td>
+<td style="text-align: left">MATRIXF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DHENERGY">DHENERGY</a></td>
+<td style="text-align: left">Calculate Debye-Huckel interaction energy between the atoms in GROUPA and GROUPB.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DIAGONALIZE">DIAGONALIZE</a></td>
+<td style="text-align: left">Calculate the eigenvalues and eigenvectors of a square matrix</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DIFFERENCE">DIFFERENCE</a></td>
+<td style="text-align: left">Calculate the differences between two scalars or vectors</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DIHCOR">DIHCOR</a></td>
+<td style="text-align: left">Measures the degree of similarity between dihedral angles.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DIHEDRAL_CORRELATION">DIHEDRAL_CORRELATION</a></td>
+<td style="text-align: left">Measure the correlation between a pair of dihedral angles</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DIMER">DIMER</a></td>
+<td style="text-align: left">This CV computes the dimer interaction energy for a collection of dimers.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DIPOLE">DIPOLE</a></td>
+<td style="text-align: left">Calculate the dipole moment for a group of atoms.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DISPLACEMENT">DISPLACEMENT</a></td>
+<td style="text-align: left">Calculate the displacement vector between the pair of input vectors</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DISTANCE">DISTANCE</a></td>
+<td style="text-align: left">Calculate the distance/s between pairs of atoms.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DISTANCES">DISTANCES</a></td>
+<td style="text-align: left">Calculate the distances between multiple piars of atoms</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DISTANCE_FROM_CONTOUR">DISTANCE_FROM_CONTOUR</a></td>
+<td style="text-align: left">Calculate the perpendicular distance from a Willard-Chandler dividing surface.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DISTANCE_FROM_SPHERICAL_CONTOUR">DISTANCE_FROM_SPHERICAL_CONTOUR</a></td>
+<td style="text-align: left">Calculate the perpendicular distance from a Willard-Chandler dividing surface.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DISTANCE_MATRIX">DISTANCE_MATRIX</a></td>
+<td style="text-align: left">Calculate a matrix of distances between atoms.</td>
+<td style="text-align: left">MATRIX </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DOMAIN_DECOMPOSITION">DOMAIN_DECOMPOSITION</a></td>
+<td style="text-align: left">Pass domain decomposed properties of atoms to PLUMED</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DOPS">DOPS</a></td>
+<td style="text-align: left">Calculate DOPS order parameter for molecules.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DRMSD">DRMSD</a></td>
+<td style="text-align: left">Calculate the distance RMSD with respect to a reference structure.</td>
+<td style="text-align: left">DCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DRR">DRR</a></td>
+<td style="text-align: left">Used to performed extended-system adaptive biasing force (eABF)</td>
+<td style="text-align: left">EABFMOD_BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DUMPATOMS">DUMPATOMS</a></td>
+<td style="text-align: left">Dump selected atoms on a file.</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DUMPCONTOUR">DUMPCONTOUR</a></td>
+<td style="text-align: left">Print the contour</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DUMPCUBE">DUMPCUBE</a></td>
+<td style="text-align: left">Output a three dimensional grid using the Gaussian cube file format.</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DUMPDERIVATIVES">DUMPDERIVATIVES</a></td>
+<td style="text-align: left">Dump the derivatives with respect to the input parameters for scalar values (generally CVs, functions or biases).</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DUMPFORCES">DUMPFORCES</a></td>
+<td style="text-align: left">Dump the force acting on one of a values in a file.</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DUMPGRID">DUMPGRID</a></td>
+<td style="text-align: left">Output the function on the grid to a file with the PLUMED grid format.</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DUMPMASSCHARGE">DUMPMASSCHARGE</a></td>
+<td style="text-align: left">Dump masses and charges on a selected file.</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DUMPMULTICOLVAR">DUMPMULTICOLVAR</a></td>
+<td style="text-align: left">Dump atom positions and a vector of values to a file.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DUMPPDB">DUMPPDB</a></td>
+<td style="text-align: left">Output PDB file.</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DUMPPROJECTIONS">DUMPPROJECTIONS</a></td>
+<td style="text-align: left">Dump the derivatives with respect to the input parameters for one or more objects (generally CVs, functions or biases).</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../DUMPVECTOR">DUMPVECTOR</a></td>
+<td style="text-align: left">Print a vector to a file</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ECV_CUSTOM">ECV_CUSTOM</a></td>
+<td style="text-align: left">Use some given CVs as a set of expansion collective variables (ECVs).</td>
+<td style="text-align: left">OPES_EXPANSION_CV </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ECV_LINEAR">ECV_LINEAR</a></td>
+<td style="text-align: left">Linear expansion, according to a parameter lambda.</td>
+<td style="text-align: left">OPES_EXPANSION_CV </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ECV_MULTITHERMAL">ECV_MULTITHERMAL</a></td>
+<td style="text-align: left">Expand a simulation to sample multiple temperatures simultaneously.</td>
+<td style="text-align: left">OPES_EXPANSION_CV </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ECV_MULTITHERMAL_MULTIBARIC">ECV_MULTITHERMAL_MULTIBARIC</a></td>
+<td style="text-align: left">Expand a simulation to sample multiple temperatures and pressures.</td>
+<td style="text-align: left">OPES_EXPANSION_CV </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ECV_UMBRELLAS_FILE">ECV_UMBRELLAS_FILE</a></td>
+<td style="text-align: left">Target a multiumbrella ensemble, by combining systems each with a parabolic bias potential at a different location.</td>
+<td style="text-align: left">OPES_EXPANSION_CV </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ECV_UMBRELLAS_LINE">ECV_UMBRELLAS_LINE</a></td>
+<td style="text-align: left">Target a multiumbrella ensemble, by combining systems each with a parabolic bias potential at a different location.</td>
+<td style="text-align: left">OPES_EXPANSION_CV </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../EDS">EDS</a></td>
+<td style="text-align: left">Add a linear bias on a set of observables.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../EEFSOLV">EEFSOLV</a></td>
+<td style="text-align: left">Calculates EEF1 solvation free energy for a group of atoms.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../EFFECTIVE_ENERGY_DRIFT">EFFECTIVE_ENERGY_DRIFT</a></td>
+<td style="text-align: left">Print the effective energy drift</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../EMMI">EMMI</a></td>
+<td style="text-align: left">Calculate the fit of a structure or ensemble of structures with a cryo-EM density map.</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../EMMIVOX">EMMIVOX</a></td>
+<td style="text-align: left">Bayesian single-structure and ensemble refinement with cryo-EM maps.</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ENDPLUMED">ENDPLUMED</a></td>
+<td style="text-align: left">Terminate plumed input.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ENERGY">ENERGY</a></td>
+<td style="text-align: left">Calculate the total potential energy of the simulation box.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ENSEMBLE">ENSEMBLE</a></td>
+<td style="text-align: left">Calculates the replica averaging of a collective variable over multiple replicas.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ENVIRONMENTSIMILARITY">ENVIRONMENTSIMILARITY</a></td>
+<td style="text-align: left">Measure how similar the environment around atoms is to that found in some reference crystal structure.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ERMSD">ERMSD</a></td>
+<td style="text-align: left">Calculate eRMSD with respect to a reference structure.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../EUCLIDEAN_DISTANCE">EUCLIDEAN_DISTANCE</a></td>
+<td style="text-align: left">Calculate the euclidean distance between two vectors of arguments</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../EVALUATE_FUNCTION_FROM_GRID">EVALUATE_FUNCTION_FROM_GRID</a></td>
+<td style="text-align: left">Calculate the function stored on the input grid at an arbitrary point</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../EXTENDED_LAGRANGIAN">EXTENDED_LAGRANGIAN</a></td>
+<td style="text-align: left">Add extended Lagrangian.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../EXTERNAL">EXTERNAL</a></td>
+<td style="text-align: left">Calculate a restraint that is defined on a grid that is read during start up</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../EXTRACV">EXTRACV</a></td>
+<td style="text-align: left">Allow PLUMED to use collective variables computed in the MD engine.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FAKE">FAKE</a></td>
+<td style="text-align: left">This is a fake colvar container that is used by cltools or various other actions that supports input and period definitions</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FARTHEST_POINT_SAMPLING">FARTHEST_POINT_SAMPLING</a></td>
+<td style="text-align: left">Select a set of landmarks using farthest point sampling.</td>
+<td style="text-align: left">LANDMARKS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FCCUBIC">FCCUBIC</a></td>
+<td style="text-align: left">Measure how similar the environment around atoms is to that found in a FCC structure.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FCCUBIC_FUNC">FCCUBIC_FUNC</a></td>
+<td style="text-align: left">Measure how similar the environment around atoms is to that found in a FCC structure.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FERRONEMATIC_ORDER">FERRONEMATIC_ORDER</a></td>
+<td style="text-align: left">Calculate the ferronematic order parameter.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FIND_CONTOUR">FIND_CONTOUR</a></td>
+<td style="text-align: left">Find an isocontour in a smooth function.</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FIND_CONTOUR_SURFACE">FIND_CONTOUR_SURFACE</a></td>
+<td style="text-align: left">Find an isocontour by searching along either the x, y or z direction.</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FIND_GRID_MAXIMUM">FIND_GRID_MAXIMUM</a></td>
+<td style="text-align: left">Find the point with the highest value of the function on the grid</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FIND_GRID_MINIMUM">FIND_GRID_MINIMUM</a></td>
+<td style="text-align: left">Find the point with the lowest value of the function on the grid</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FIND_SPHERICAL_CONTOUR">FIND_SPHERICAL_CONTOUR</a></td>
+<td style="text-align: left">Find an isocontour in a three dimensional grid by searching over a Fibonacci sphere.</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FISST">FISST</a></td>
+<td style="text-align: left">Compute and apply the optimal linear force on an observable to enhance sampling of conformational distributions over a range of applied forces.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FIT_TO_TEMPLATE">FIT_TO_TEMPLATE</a></td>
+<td style="text-align: left">This action is used to align a molecule to a template.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FIXEDATOM">FIXEDATOM</a></td>
+<td style="text-align: left">Add a virtual atom in a fixed position.</td>
+<td style="text-align: left">VATOM </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FLATTEN">FLATTEN</a></td>
+<td style="text-align: left">Convert a matrix into a vector</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FLUSH">FLUSH</a></td>
+<td style="text-align: left">This command instructs plumed to flush all the open files with a user specified frequency.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FOURIER_TRANSFORM">FOURIER_TRANSFORM</a></td>
+<td style="text-align: left">Compute the Discrete Fourier Transform (DFT) by means of FFTW of data stored on a 2D grid.</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FRET">FRET</a></td>
+<td style="text-align: left">Calculates the FRET efficiency between a pair of atoms.</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FUNCPATHGENERAL">FUNCPATHGENERAL</a></td>
+<td style="text-align: left">This function calculates path collective variables (PCVs) using an arbitrary combination of collective variables.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FUNCPATHMSD">FUNCPATHMSD</a></td>
+<td style="text-align: left">This function calculates path collective variables.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FUNCSUMHILLS">FUNCSUMHILLS</a></td>
+<td style="text-align: left">This function is intended to be called by the command line tool sum_hills.  It is meant to integrate a HILLS file or an HILLS file interpreted as a histogram in a variety of ways. It is, therefore, not expected that you use this during your dynamics (it will crash!)</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FUNNEL">FUNNEL</a></td>
+<td style="text-align: left">Calculate a funnel-shape restraint potential that is defined on a grid that is read during the setup.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FUNNEL_PS">FUNNEL_PS</a></td>
+<td style="text-align: left">FUNNEL_PS implements the Funnel-Metadynamics (FM) technique in PLUMED 2.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FUSIONPOREEXPANSIONP">FUSIONPOREEXPANSIONP</a></td>
+<td style="text-align: left">A CV for inducing the expansion of a fusion pore from a nucleated fusion pore.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../FUSIONPORENUCLEATIONP">FUSIONPORENUCLEATIONP</a></td>
+<td style="text-align: left">A CV for inducing the nucleation of the fusion pore from a hemifusion stalk.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GATHER_REPLICAS">GATHER_REPLICAS</a></td>
+<td style="text-align: left">Create a vector that contains the copies of the input quantities from all replicas</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GEOMETRIC_PATH">GEOMETRIC_PATH</a></td>
+<td style="text-align: left">Distance along and from a path calculated using geometric formulas</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GET">GET</a></td>
+<td style="text-align: left">Get data from PLUMED for another code</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GET_VOLUME_ELEMENT">GET_VOLUME_ELEMENT</a></td>
+<td style="text-align: left">Get the volume element from the input grid</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GHBFIX">GHBFIX</a></td>
+<td style="text-align: left">Calculate the GHBFIX interaction energy between GROUPA and GROUPB</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GHOST">GHOST</a></td>
+<td style="text-align: left">Calculate the absolute position of a ghost atom with fixed coordinates in the local reference frame formed by three atoms.</td>
+<td style="text-align: left">VATOM </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GPATH">GPATH</a></td>
+<td style="text-align: left">Distance along and from a path calculated using geometric formulas</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GPROPERTYMAP">GPROPERTYMAP</a></td>
+<td style="text-align: left">Property maps but with a more flexible framework for the distance metric being used.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GRADIENT">GRADIENT</a></td>
+<td style="text-align: left">Calculate the gradient of an input grid</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GROUP">GROUP</a></td>
+<td style="text-align: left">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GSYMFUNC_THREEBODY">GSYMFUNC_THREEBODY</a></td>
+<td style="text-align: left">Calculate functions of the coordinates of the coordinates of all pairs of bonds in the first coordination sphere of an atom</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GYRATION">GYRATION</a></td>
+<td style="text-align: left">Calculate the radius of gyration, or other properties related to it.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../GYRATION_TENSOR">GYRATION_TENSOR</a></td>
+<td style="text-align: left">Calculate the gyration tensor using a user specified vector of weights</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../HBOND_MATRIX">HBOND_MATRIX</a></td>
+<td style="text-align: left">Adjacency matrix in which two atoms are adjacent if there is a hydrogen bond between them.</td>
+<td style="text-align: left">MATRIX </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../HBPAMM_MATRIX">HBPAMM_MATRIX</a></td>
+<td style="text-align: left">Adjacency matrix in which two electronegative atoms are adjacent if they are hydrogen bonded</td>
+<td style="text-align: left">MATRIX </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../HBPAMM_SA">HBPAMM_SA</a></td>
+<td style="text-align: left">Calculate the number of hydrogen bonds each acceptor participates in using the HBPamm method</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../HBPAMM_SD">HBPAMM_SD</a></td>
+<td style="text-align: left">Calculate the number of hydrogen bonds each donor participates in using the HBPamm method</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../HBPAMM_SH">HBPAMM_SH</a></td>
+<td style="text-align: left">Calculate the number of hydrogen bonds each hydrogen participates in using the HBPamm method</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../HEXACTIC_PARAMETER">HEXACTIC_PARAMETER</a></td>
+<td style="text-align: left">Calculate the hexatic order parameter</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../HIGHEST">HIGHEST</a></td>
+<td style="text-align: left">This function can be used to find the highest colvar by magnitude in a set.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../HISTOGRAM">HISTOGRAM</a></td>
+<td style="text-align: left">Accumulate the average probability density along a few CVs from a trajectory.</td>
+<td style="text-align: left">GRIDCALC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../INCLUDE">INCLUDE</a></td>
+<td style="text-align: left">Includes an external input file, similar to #include in C preprocessor.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../INCYLINDER">INCYLINDER</a></td>
+<td style="text-align: left">This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a particular, user-specified part of of the cell.</td>
+<td style="text-align: left">VOLUMES </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../INENVELOPE">INENVELOPE</a></td>
+<td style="text-align: left">This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a region where the density of a certain type of atom is high.</td>
+<td style="text-align: left">VOLUMES </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../INPLANEDISTANCES">INPLANEDISTANCES</a></td>
+<td style="text-align: left">Calculate distances in the plane perpendicular to an axis</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../INSPHERE">INSPHERE</a></td>
+<td style="text-align: left">This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a particular, user-specified part of of the cell.</td>
+<td style="text-align: left">VOLUMES </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../INTEGRATE_GRID">INTEGRATE_GRID</a></td>
+<td style="text-align: left">Calculate the numerical integral of the function stored on the grid</td>
+<td style="text-align: left">GRIDCALC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../INTERPOLATE_GRID">INTERPOLATE_GRID</a></td>
+<td style="text-align: left">Interpolate a smooth function stored on a grid onto a grid with a smaller grid spacing.</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../INVERT_MATRIX">INVERT_MATRIX</a></td>
+<td style="text-align: left">Calculate the inverse of the input matrix</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../JCOUPLING">JCOUPLING</a></td>
+<td style="text-align: left">Calculates 3J coupling constants for a dihedral angle.</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../KDE">KDE</a></td>
+<td style="text-align: left">Create a histogram from the input scalar/vector/matrix using KDE</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../KERNEL">KERNEL</a></td>
+<td style="text-align: left">Transform a set of input coordinates using a kernel function</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../KL_ENTROPY">KL_ENTROPY</a></td>
+<td style="text-align: left">Calculate the KL entropy of a distribution</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LANDMARK_SELECT_FPS">LANDMARK_SELECT_FPS</a></td>
+<td style="text-align: left">Select a of landmarks from a large set of configurations using farthest point sampling.</td>
+<td style="text-align: left">LANDMARKS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LANDMARK_SELECT_RANDOM">LANDMARK_SELECT_RANDOM</a></td>
+<td style="text-align: left">Select a random set of landmarks from a large set of configurations.</td>
+<td style="text-align: left">LANDMARKS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LANDMARK_SELECT_STRIDE">LANDMARK_SELECT_STRIDE</a></td>
+<td style="text-align: left">Select every ith frame from the stored set of configurations</td>
+<td style="text-align: left">LANDMARKS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LESS_THAN">LESS_THAN</a></td>
+<td style="text-align: left">Use a switching function to determine how many of the input variables are less than a certain cutoff.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOAD">LOAD</a></td>
+<td style="text-align: left">Loads a library, possibly defining new actions.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOCALENSEMBLE">LOCALENSEMBLE</a></td>
+<td style="text-align: left">Calculates the average over multiple arguments.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOCAL_AVERAGE">LOCAL_AVERAGE</a></td>
+<td style="text-align: left">Calculate averages over spherical regions centered on atoms</td>
+<td style="text-align: left">MCOLVARF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOCAL_CRYSTALINITY">LOCAL_CRYSTALINITY</a></td>
+<td style="text-align: left">Calculate the local crystalinity symmetry function</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOCAL_Q1">LOCAL_Q1</a></td>
+<td style="text-align: left">Calculate the local degree of order around an atoms by taking the average dot product between the q_1 vector on the central atom and the q_3 vector on the atoms in the first coordination sphere.</td>
+<td style="text-align: left">MCOLVARF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOCAL_Q3">LOCAL_Q3</a></td>
+<td style="text-align: left">Calculate the local degree of order around an atoms by taking the average dot product between the q_3 vector on the central atom and the q_3 vector on the atoms in the first coordination sphere.</td>
+<td style="text-align: left">MCOLVARF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOCAL_Q4">LOCAL_Q4</a></td>
+<td style="text-align: left">Calculate the local degree of order around an atoms by taking the average dot product between the q_4 vector on the central atom and the q_4 vector on the atoms in the first coordination sphere.</td>
+<td style="text-align: left">MCOLVARF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOCAL_Q6">LOCAL_Q6</a></td>
+<td style="text-align: left">Calculate the local degree of order around an atoms by taking the average dot product between the q_6 vector on the central atom and the q_6 vector on the atoms in the first coordination sphere.</td>
+<td style="text-align: left">MCOLVARF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOGMFD">LOGMFD</a></td>
+<td style="text-align: left">Used to perform LogMFD, LogPD, and TAMD/d-AFED.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOGSUMEXP">LOGSUMEXP</a></td>
+<td style="text-align: left">This action takes the exponential of a vector of logarithms and divides each element of the vector by the sum of the exponentials.</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOWER_WALLS">LOWER_WALLS</a></td>
+<td style="text-align: left">Defines a wall for the value of one or more collective variables,</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../LOWEST">LOWEST</a></td>
+<td style="text-align: left">This function can be used to find the lowest colvar by magnitude in a set.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MAHALANOBIS_DISTANCE">MAHALANOBIS_DISTANCE</a></td>
+<td style="text-align: left">Calculate the Mahalanobis distance between two points in CV space</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MARGINAL">MARGINAL</a></td>
+<td style="text-align: left">Compute a marginal from the input multi-dimensional function</td>
+<td style="text-align: left">GRIDANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MASS">MASS</a></td>
+<td style="text-align: left">Get the mass of one or multiple atoms</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MATHEVAL">MATHEVAL</a></td>
+<td style="text-align: left">An alias to the CUSTOM function that can also be used to calaculate combinations of variables using a custom expression.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MATRIX_PRODUCT">MATRIX_PRODUCT</a></td>
+<td style="text-align: left">Calculate the product of two matrices</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MATRIX_PRODUCT_DIAGONAL">MATRIX_PRODUCT_DIAGONAL</a></td>
+<td style="text-align: left">Calculate the product of two matrices and return a vector that contains the diagonal elements of the ouptut vector</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MATRIX_VECTOR_PRODUCT">MATRIX_VECTOR_PRODUCT</a></td>
+<td style="text-align: left">Calculate the product of the matrix and the vector</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MAXENT">MAXENT</a></td>
+<td style="text-align: left">Add a linear biasing potential on one or more variables that satisfies a maximum entropy principle.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MAZE_LOSS">MAZE_LOSS</a></td>
+<td style="text-align: left">Define a coarse-grained loss function describing interactions in a</td>
+<td style="text-align: left">MAZE_LOSS_FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MAZE_MEMETIC_SAMPLING">MAZE_MEMETIC_SAMPLING</a></td>
+<td style="text-align: left">Calculates the biasing direction along which the ligand unbinds by</td>
+<td style="text-align: left">MAZE_OPTIMIZER </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MAZE_OPTIMIZER_BIAS">MAZE_OPTIMIZER_BIAS</a></td>
+<td style="text-align: left">Biases the ligand along the direction calculated by the chosen MAZE_OPTIMIZER.</td>
+<td style="text-align: left">MAZE_BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MAZE_RANDOM_ACCELERATION_MD">MAZE_RANDOM_ACCELERATION_MD</a></td>
+<td style="text-align: left">Performs random acceleration MD within the protein matrix.</td>
+<td style="text-align: left">MAZE_OPTIMIZER </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MAZE_RANDOM_WALK">MAZE_RANDOM_WALK</a></td>
+<td style="text-align: left">Fake optimizer that can be used for debugging.</td>
+<td style="text-align: left">MAZE_OPTIMIZER </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MAZE_SIMULATED_ANNEALING">MAZE_SIMULATED_ANNEALING</a></td>
+<td style="text-align: left">Calculates the biasing direction along which the ligand unbinds by minimizing</td>
+<td style="text-align: left">MAZE_OPTIMIZER </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MAZE_STEERED_MD">MAZE_STEERED_MD</a></td>
+<td style="text-align: left">Performs a linear unbinding along a predefined biasing direction that</td>
+<td style="text-align: left">MAZE_OPTIMIZER </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MEAN">MEAN</a></td>
+<td style="text-align: left">Calculate the arithmetic mean of the elements in a vector</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MEMFUSIONP">MEMFUSIONP</a></td>
+<td style="text-align: left">Calculate a CV that can induce the formation of the hemifusion stalk between two initially flat and planar bilayers.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../METAD">METAD</a></td>
+<td style="text-align: left">Used to performed metadynamics on one or more collective variables.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../METAINFERENCE">METAINFERENCE</a></td>
+<td style="text-align: left">Calculates the Metainference energy for a set of experimental data.</td>
+<td style="text-align: left">ISDB_BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../METATOMIC">METATOMIC</a></td>
+<td style="text-align: left">Use arbitrary machine learning models as collective variables.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MFILTER_LESS">MFILTER_LESS</a></td>
+<td style="text-align: left">Apply a switching function to the input vector.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MFILTER_MORE">MFILTER_MORE</a></td>
+<td style="text-align: left">Apply one minus a switching function to the input vector.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MOLINFO">MOLINFO</a></td>
+<td style="text-align: left">This command is used to provide information on the molecules that are present in your system.</td>
+<td style="text-align: left">TOPOLOGY </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MOMENTS">MOMENTS</a></td>
+<td style="text-align: left">Calculate central moments from the distribution of input quantities</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MORE_THAN">MORE_THAN</a></td>
+<td style="text-align: left">Use a switching function to determine how many of the input variables are more than a certain cutoff.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MOVINGRESTRAINT">MOVINGRESTRAINT</a></td>
+<td style="text-align: left">Add a time-dependent, harmonic restraint on one or more variables.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MULTICOLVARDENS">MULTICOLVARDENS</a></td>
+<td style="text-align: left">Evaluate the average value of a multicolvar on a grid.</td>
+<td style="text-align: left">GRIDCALC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../MULTI_RMSD">MULTI_RMSD</a></td>
+<td style="text-align: left">Calculate RMSD distances for different domains and combine them.</td>
+<td style="text-align: left">DCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../NEIGHBORS">NEIGHBORS</a></td>
+<td style="text-align: left">Build a matrix with ones in for the N nearest neighbours of an atom</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../NEMATIC_ORDER">NEMATIC_ORDER</a></td>
+<td style="text-align: left">Calculate the nematic order parameter.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../NOE">NOE</a></td>
+<td style="text-align: left">Calculates NOE intensities as sums of 1/r^6, also averaging over multiple equivalent atoms</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../NORMALIZED_EUCLIDEAN_DISTANCE">NORMALIZED_EUCLIDEAN_DISTANCE</a></td>
+<td style="text-align: left">Calculate the normalised euclidean distance between two points in CV space</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ONES">ONES</a></td>
+<td style="text-align: left">Create a constant vector with all elements equal to one</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../OPES_EXPANDED">OPES_EXPANDED</a></td>
+<td style="text-align: left">On-the-fly probability enhanced sampling with expanded ensembles for the target distribution.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../OPES_METAD">OPES_METAD</a></td>
+<td style="text-align: left">On-the-fly probability enhanced sampling with metadynamics-like target distribution.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../OPES_METAD_EXPLORE">OPES_METAD_EXPLORE</a></td>
+<td style="text-align: left">On-the-fly probability enhanced sampling with well-tempered target distribution in exploreation mode.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../OPT_ADAM">OPT_ADAM</a></td>
+<td style="text-align: left">Adaptive moment estimation (ADAM) optimizer.</td>
+<td style="text-align: left">VES_OPTIMIZER </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../OPT_AVERAGED_SGD">OPT_AVERAGED_SGD</a></td>
+<td style="text-align: left">Averaged stochastic gradient decent with fixed step size.</td>
+<td style="text-align: left">VES_OPTIMIZER </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../OPT_DUMMY">OPT_DUMMY</a></td>
+<td style="text-align: left">Dummy optimizer for debugging.</td>
+<td style="text-align: left">VES_OPTIMIZER </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../OPT_ROBBINS_MONRO_SGD">OPT_ROBBINS_MONRO_SGD</a></td>
+<td style="text-align: left">Robbins-Monro stochastic gradient decent.</td>
+<td style="text-align: left">VES_OPTIMIZER </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../OUTER_PRODUCT">OUTER_PRODUCT</a></td>
+<td style="text-align: left">Calculate the outer product matrix of two vectors</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../OUTPUT_CLUSTER">OUTPUT_CLUSTER</a></td>
+<td style="text-align: left">Output the indices of the atoms in one of the clusters identified by a clustering object</td>
+<td style="text-align: left">CONCOMP </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PAIRENTROPIES">PAIRENTROPIES</a></td>
+<td style="text-align: left">Calculate the KL entropy from the RDF around each of the atoms</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PAIRENTROPY">PAIRENTROPY</a></td>
+<td style="text-align: left">Calculate the KL Entropy from the radial distribution function</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PAMM">PAMM</a></td>
+<td style="text-align: left">Probabilistic analysis of molecular motifs.</td>
+<td style="text-align: left">MCOLVARF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PARABETARMSD">PARABETARMSD</a></td>
+<td style="text-align: left">Probe the parallel beta sheet content of your protein structure.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PATH">PATH</a></td>
+<td style="text-align: left">Path collective variables with a more flexible framework for the distance metric being used.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PATHMSD">PATHMSD</a></td>
+<td style="text-align: left">This Colvar calculates path collective variables.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PBC">PBC</a></td>
+<td style="text-align: left">Pass the cell vectors into PLUMED.</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PBMETAD">PBMETAD</a></td>
+<td style="text-align: left">Used to performed Parallel Bias metadynamics.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PCA">PCA</a></td>
+<td style="text-align: left">Perform principal component analysis (PCA) using either the positions of the atoms a large number of collective variables as input.</td>
+<td style="text-align: left">DIMRED </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PCARMSD">PCARMSD</a></td>
+<td style="text-align: left">Calculate the PCA components for a number of provided eigenvectors and an average structure.</td>
+<td style="text-align: left">DCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PCAVARS">PCAVARS</a></td>
+<td style="text-align: left">Projection on principal component eigenvectors or other high dimensional linear subspace</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PCS">PCS</a></td>
+<td style="text-align: left">Calculates the Pseudo-contact shift of a nucleus determined by the presence of a metal ion susceptible to anisotropic magnetization.</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PDB2CONSTANT">PDB2CONSTANT</a></td>
+<td style="text-align: left">Create a constant value from a PDB input file</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PIECEWISE">PIECEWISE</a></td>
+<td style="text-align: left">Compute a piece wise straight line through its arguments that passes through a set of ordered control points.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PIV">PIV</a></td>
+<td style="text-align: left">Calculates the PIV-distance.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PLANE">PLANE</a></td>
+<td style="text-align: left">Calculate the plane perpendicular to two vectors in order to represent the orientation of a planar molecule.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PLANES">PLANES</a></td>
+<td style="text-align: left">Calculate the components of the normals to the planes containing groups of three atoms.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PLUMED">PLUMED</a></td>
+<td style="text-align: left">Embed a separate PLUMED instance.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../POSITION">POSITION</a></td>
+<td style="text-align: left">Calculate the components of the position of an atom or atoms.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PRE">PRE</a></td>
+<td style="text-align: left">Calculates the Paramagnetic Resonance Enhancement intensity ratio between a spin label atom and a list of atoms .</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PRINT">PRINT</a></td>
+<td style="text-align: left">Print quantities to a file.</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PRINT_NDX">PRINT_NDX</a></td>
+<td style="text-align: left">Print an ndx file</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PRODUCT">PRODUCT</a></td>
+<td style="text-align: left">Calculate the product of the input quantities</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PROJECTION_ON_AXIS">PROJECTION_ON_AXIS</a></td>
+<td style="text-align: left">Calculate a position based on the projection along and extension from a defined axis.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PROJECT_POINTS">PROJECT_POINTS</a></td>
+<td style="text-align: left">Find the projection of a point in a low dimensional space by matching the (transformed) distance between it and a series of reference configurations that were input</td>
+<td style="text-align: left">DIMRED </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PROPERTYMAP">PROPERTYMAP</a></td>
+<td style="text-align: left">Calculate generic property maps.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PUCKERING">PUCKERING</a></td>
+<td style="text-align: left">Calculate sugar pseudorotation coordinates.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PUT">PUT</a></td>
+<td style="text-align: left">Pass data into PLUMED</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../PYTORCH_MODEL">PYTORCH_MODEL</a></td>
+<td style="text-align: left">Load a PyTorch model compiled with TorchScript.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../Q1">Q1</a></td>
+<td style="text-align: left">Calculate 1st order Steinhardt parameters</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../Q3">Q3</a></td>
+<td style="text-align: left">Calculate 3rd order Steinhardt parameters.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../Q4">Q4</a></td>
+<td style="text-align: left">Calculate fourth order Steinhardt parameters.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../Q6">Q6</a></td>
+<td style="text-align: left">Calculate sixth order Steinhardt parameters.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../QUATERNION">QUATERNION</a></td>
+<td style="text-align: left">Calculate unit quaternions for molecules.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../QUATERNION_BOND_PRODUCT_MATRIX">QUATERNION_BOND_PRODUCT_MATRIX</a></td>
+<td style="text-align: left">Calculate the product between a matrix of quaternions and the bonds connecting molecules</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../QUATERNION_PRODUCT_MATRIX">QUATERNION_PRODUCT_MATRIX</a></td>
+<td style="text-align: left">Calculate the outer product matrix from two vectors of quaternions</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../RANDOM_EXCHANGES">RANDOM_EXCHANGES</a></td>
+<td style="text-align: left">Set random pattern for exchanges.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../RDC">RDC</a></td>
+<td style="text-align: left">Calculates the (Residual) Dipolar Coupling between two atoms.</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../RDF">RDF</a></td>
+<td style="text-align: left">Calculate the radial distribution function</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../READ">READ</a></td>
+<td style="text-align: left">Read quantities from a colvar file.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../READMASSCHARGE">READMASSCHARGE</a></td>
+<td style="text-align: left">Set the masses and charges from an input PDB file.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../REFERENCE_GRID">REFERENCE_GRID</a></td>
+<td style="text-align: left">Setup a constant grid by either reading values from a file or definining a function in input</td>
+<td style="text-align: left">GRIDCALC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../REPARAMETERIZE_PATH">REPARAMETERIZE_PATH</a></td>
+<td style="text-align: left">Take an input path with frames that are not equally spaced and make the frames equally spaced</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../RESCALE">RESCALE</a></td>
+<td style="text-align: left">Scales the value of an another action, being a Collective Variable or a Bias.</td>
+<td style="text-align: left">ISDB_BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../RESET_CELL">RESET_CELL</a></td>
+<td style="text-align: left">This action is used to rotate the full cell</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../RESTART">RESTART</a></td>
+<td style="text-align: left">Activate restart.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../RESTRAINT">RESTRAINT</a></td>
+<td style="text-align: left">Adds harmonic and/or linear restraints on one or more variables.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../REWEIGHT_BIAS">REWEIGHT_BIAS</a></td>
+<td style="text-align: left">Calculate weights for ensemble averages that negate the effect the bias has on the region of phase space explored</td>
+<td style="text-align: left">REWEIGHTING </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../REWEIGHT_METAD">REWEIGHT_METAD</a></td>
+<td style="text-align: left">Calculate the weights configurations should contribute to the histogram in a simulation in which a metadynamics bias acts upon the system.</td>
+<td style="text-align: left">REWEIGHTING </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../REWEIGHT_TEMP_PRESS">REWEIGHT_TEMP_PRESS</a></td>
+<td style="text-align: left">Calculate weights for ensemble averages at temperatures and/or pressures different than those used in your original simulation.</td>
+<td style="text-align: left">REWEIGHTING </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../RMSD">RMSD</a></td>
+<td style="text-align: left">Calculate the RMSD with respect to a reference structure.</td>
+<td style="text-align: left">DCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ROPS">ROPS</a></td>
+<td style="text-align: left">Calculate the ROPS order parameter</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../S2CM">S2CM</a></td>
+<td style="text-align: left">S2 contact model CV.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SANS">SANS</a></td>
+<td style="text-align: left">Calculates SANS intensity.</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SASA_HASEL">SASA_HASEL</a></td>
+<td style="text-align: left">Calculates the solvent accessible surface area (SASA) of a protein molecule, or other properties related to it.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SASA_LCPO">SASA_LCPO</a></td>
+<td style="text-align: left">Calculates the solvent accessible surface area (SASA) of a protein molecule, or other properties related to it.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SAXS">SAXS</a></td>
+<td style="text-align: left">Calculates SAXS intensity.</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SECONDARY_STRUCTURE_DRMSD">SECONDARY_STRUCTURE_DRMSD</a></td>
+<td style="text-align: left">Calclulate the DRMSD between segments of a protein and a reference structure of interest</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SECONDARY_STRUCTURE_RMSD">SECONDARY_STRUCTURE_RMSD</a></td>
+<td style="text-align: left">Calclulate the RMSD between segments of a protein and a reference structure of interest</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SELECT">SELECT</a></td>
+<td style="text-align: left">Selects an argument based on the value of a SELECTOR.</td>
+<td style="text-align: left">ISDB_FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SELECTOR">SELECTOR</a></td>
+<td style="text-align: left">Defines a variable (of the type double) inside the PLUMED code that can be used and modified by other actions.</td>
+<td style="text-align: left">ISDB_GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SELECT_COMPONENTS">SELECT_COMPONENTS</a></td>
+<td style="text-align: left">Create a new value to hold a subset of the components that are in a vector or matrix</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SELECT_WITH_MASK">SELECT_WITH_MASK</a></td>
+<td style="text-align: left">Use a mask to select elements of an array</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SHADOW">SHADOW</a></td>
+<td style="text-align: left">Communicate atoms positions among replicas and calculate the RMSD with respect to a mother (reference) simulation.</td>
+<td style="text-align: left">ISDB_COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SIMPLECUBIC">SIMPLECUBIC</a></td>
+<td style="text-align: left">Calculate whether or not the coordination spheres of atoms are arranged as they would be in a simple cubic structure.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SIZESHAPE_POSITION_LINEAR_PROJ">SIZESHAPE_POSITION_LINEAR_PROJ</a></td>
+<td style="text-align: left">Calculates a linear projection in the space of a given reference configurational distribution in size-and-shape space.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SIZESHAPE_POSITION_MAHA_DIST">SIZESHAPE_POSITION_MAHA_DIST</a></td>
+<td style="text-align: left">Calculates Mahalanobis distance of a current configuration from a  given reference configurational distribution in size-and-shape space.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SKETCHMAP">SKETCHMAP</a></td>
+<td style="text-align: left">Construct a sketch map projection of the input data</td>
+<td style="text-align: left">DIMRED </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SKETCHMAP_PROJECTION">SKETCHMAP_PROJECTION</a></td>
+<td style="text-align: left">Read in a sketch-map projection</td>
+<td style="text-align: left">DIMRED </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SMAC">SMAC</a></td>
+<td style="text-align: left">Calculate the SMAC order parameter for a set of molecules</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SORT">SORT</a></td>
+<td style="text-align: left">This function can be used to sort colvars according to their magnitudes.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SPHERICAL_HARMONIC">SPHERICAL_HARMONIC</a></td>
+<td style="text-align: left">Calculate the values of all the spherical harmonic funtions for a particular value of l.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SPHERICAL_KDE">SPHERICAL_KDE</a></td>
+<td style="text-align: left">Create a histogram from the input scalar/vector/matrix using SPHERICAL_KDE</td>
+<td style="text-align: left">ANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SPRINT">SPRINT</a></td>
+<td style="text-align: left">Calculate SPRINT topological variables from an adjacency matrix.</td>
+<td style="text-align: left">MATRIXF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../STATS">STATS</a></td>
+<td style="text-align: left">Calculates statistical properties of a set of collective variables with respect to a set of reference values.</td>
+<td style="text-align: left">FUNCTION </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../SUM">SUM</a></td>
+<td style="text-align: left">Calculate the sum of the arguments</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_CHI">TD_CHI</a></td>
+<td style="text-align: left">Chi distribution (static).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_CHISQUARED">TD_CHISQUARED</a></td>
+<td style="text-align: left">Chi-squared distribution (static).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_CUSTOM">TD_CUSTOM</a></td>
+<td style="text-align: left">Target distribution given by an arbitrary mathematical expression (static or dynamic).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_EXPONENTIAL">TD_EXPONENTIAL</a></td>
+<td style="text-align: left">Exponential distribution (static).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_EXPONENTIALLY_MODIFIED_GAUSSIAN">TD_EXPONENTIALLY_MODIFIED_GAUSSIAN</a></td>
+<td style="text-align: left">Target distribution given by a sum of exponentially modified Gaussian distributions (static).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_GAUSSIAN">TD_GAUSSIAN</a></td>
+<td style="text-align: left">Target distribution given by a sum of Gaussian kernels (static).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_GENERALIZED_EXTREME_VALUE">TD_GENERALIZED_EXTREME_VALUE</a></td>
+<td style="text-align: left">Generalized extreme value distribution (static).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_GENERALIZED_NORMAL">TD_GENERALIZED_NORMAL</a></td>
+<td style="text-align: left">Target distribution given by a sum of generalized normal distributions (static).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_GRID">TD_GRID</a></td>
+<td style="text-align: left">Target distribution from an external grid file (static).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_LINEAR_COMBINATION">TD_LINEAR_COMBINATION</a></td>
+<td style="text-align: left">Target distribution given by linear combination of distributions (static or dynamic).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_MULTICANONICAL">TD_MULTICANONICAL</a></td>
+<td style="text-align: left">Multicanonical target distribution (dynamic).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_MULTITHERMAL_MULTIBARIC">TD_MULTITHERMAL_MULTIBARIC</a></td>
+<td style="text-align: left">Multithermal-multibaric target distribution (dynamic).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_PRODUCT_COMBINATION">TD_PRODUCT_COMBINATION</a></td>
+<td style="text-align: left">Target distribution given by product combination of distributions (static or dynamic).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_PRODUCT_DISTRIBUTION">TD_PRODUCT_DISTRIBUTION</a></td>
+<td style="text-align: left">Target distribution given by a separable product of one-dimensional distributions (static or dynamic).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_UNIFORM">TD_UNIFORM</a></td>
+<td style="text-align: left">Uniform target distribution (static).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_VONMISES">TD_VONMISES</a></td>
+<td style="text-align: left">Target distribution given by a sum of Von Mises distributions (static).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TD_WELLTEMPERED">TD_WELLTEMPERED</a></td>
+<td style="text-align: left">Well-tempered target distribution (dynamic).</td>
+<td style="text-align: left">VES_TARGETDIST </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TEMPLATE">TEMPLATE</a></td>
+<td style="text-align: left">This file provides a template for if you want to introduce a new CV.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TETRAHEDRAL">TETRAHEDRAL</a></td>
+<td style="text-align: left">Calculate the degree to which the environment about ions has a tetrahedral order.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TETRAHEDRALPORE">TETRAHEDRALPORE</a></td>
+<td style="text-align: left">This quantity can be used to calculate functions of the distribution of collective variables for the atoms lie that lie in a box defined by the positions of four atoms at the corners of a tetrahedron.</td>
+<td style="text-align: left">VOLUMES </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TETRA_ANGULAR">TETRA_ANGULAR</a></td>
+<td style="text-align: left">Calculate the angular tetra CV</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TETRA_RADIAL">TETRA_RADIAL</a></td>
+<td style="text-align: left">Calculate the radial tetra CV</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TIME">TIME</a></td>
+<td style="text-align: left">retrieve the time of the simulation to be used elsewhere</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TOPOLOGY_MATRIX">TOPOLOGY_MATRIX</a></td>
+<td style="text-align: left">Adjacency matrix in which two atoms are adjacent if they are connected topologically</td>
+<td style="text-align: left">MATRIX </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TORSION">TORSION</a></td>
+<td style="text-align: left">Calculate one or multiple torsional angles.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TORSIONS">TORSIONS</a></td>
+<td style="text-align: left">Calculate whether or not a set of torsional angles are within a particular range.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TORSIONS_MATRIX">TORSIONS_MATRIX</a></td>
+<td style="text-align: left">Calculate the matrix of torsions between two vectors of molecules</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TRANSPOSE">TRANSPOSE</a></td>
+<td style="text-align: left">Calculate the transpose of a matrix</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../TTMETAD">TTMETAD</a></td>
+<td style="text-align: left">Performs metadynamics with a tensor-train representation of the bias potential.</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../UNITS">UNITS</a></td>
+<td style="text-align: left">This command sets the internal units for the code.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../UPDATE_IF">UPDATE_IF</a></td>
+<td style="text-align: left">Conditional update of other actions.</td>
+<td style="text-align: left">PRINTANALYSIS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../UPPER_WALLS">UPPER_WALLS</a></td>
+<td style="text-align: left">Defines a wall for the value of one or more collective variables,</td>
+<td style="text-align: left">BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../UWALLS">UWALLS</a></td>
+<td style="text-align: left">Add lower walls to a vector of quantities</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../VES_DELTA_F">VES_DELTA_F</a></td>
+<td style="text-align: left">Implementation of VES Delta F method</td>
+<td style="text-align: left">VES_BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../VES_LINEAR_EXPANSION">VES_LINEAR_EXPANSION</a></td>
+<td style="text-align: left">Linear basis set expansion bias.</td>
+<td style="text-align: left">VES_BIAS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../VES_OUTPUT_BASISFUNCTIONS">VES_OUTPUT_BASISFUNCTIONS</a></td>
+<td style="text-align: left">Output basis functions to file.</td>
+<td style="text-align: left">VES_UTILS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../VES_OUTPUT_FES">VES_OUTPUT_FES</a></td>
+<td style="text-align: left">Tool to output biases and free energy surfaces for VES biases from previously obtained coefficients.</td>
+<td style="text-align: left">VES_UTILS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../VES_OUTPUT_TARGET_DISTRIBUTION">VES_OUTPUT_TARGET_DISTRIBUTION</a></td>
+<td style="text-align: left">Output target distribution to file.</td>
+<td style="text-align: left">VES_UTILS </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../VOLUME">VOLUME</a></td>
+<td style="text-align: left">Calculate the volume the simulation box.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../VORONOI">VORONOI</a></td>
+<td style="text-align: left">Do a voronoi analysis</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../VORONOI_COORDINATION">VORONOI_COORDINATION</a></td>
+<td style="text-align: left">Calculate a scalar reduction of smooth Voronoi coordination defects.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../VORONOI_DISTANCE">VORONOI_DISTANCE</a></td>
+<td style="text-align: left">Calculate a distance-weighted product of smooth coordination defects.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../VORONOI_POSITION">VORONOI_POSITION</a></td>
+<td style="text-align: left">Calculate a defect-weighted Cartesian position relative to a fixed origin.</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../VSTACK">VSTACK</a></td>
+<td style="text-align: left">Create a matrix by stacking vectors together</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../WHAM">WHAM</a></td>
+<td style="text-align: left">Calculate the weights for configurations using the weighted histogram analysis method.</td>
+<td style="text-align: left">REWEIGHTING </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../WHAM_HISTOGRAM">WHAM_HISTOGRAM</a></td>
+<td style="text-align: left">This can be used to output the a histogram using the weighted histogram technique</td>
+<td style="text-align: left">REWEIGHTING </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../WHAM_WEIGHTS">WHAM_WEIGHTS</a></td>
+<td style="text-align: left">Calculate and output weights for configurations using the weighted histogram analysis method.</td>
+<td style="text-align: left">REWEIGHTING </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../WHOLEMOLECULES">WHOLEMOLECULES</a></td>
+<td style="text-align: left">This action is used to rebuild molecules that can become split by the periodic boundary conditions.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../WRAPAROUND">WRAPAROUND</a></td>
+<td style="text-align: left">Rebuild periodic boundary conditions around chosen atoms.</td>
+<td style="text-align: left">GENERIC </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../XANGLES">XANGLES</a></td>
+<td style="text-align: left">Calculate the angle between an arbitrary vector and the positive x direction</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../XDISTANCES">XDISTANCES</a></td>
+<td style="text-align: left">Calculate the x components of the vectors connecting one or many pairs of atoms.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../XSPRINT">XSPRINT</a></td>
+<td style="text-align: left">Calculate eXtended SPRINT (xSPRINT) topological variables from adjacency matrices over multiple shells.</td>
+<td style="text-align: left">MATRIXF </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../XYTORSIONS">XYTORSIONS</a></td>
+<td style="text-align: left">Calculate the torsional angle around the x axis between an arbitrary vector and the positive y direction</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../XZTORSIONS">XZTORSIONS</a></td>
+<td style="text-align: left">Calculate the torsional angle around the x axis between an arbitrary vector and the positive z direction</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../YANGLES">YANGLES</a></td>
+<td style="text-align: left">Calculate the angle between an arbitrary vector and the positive y direction</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../YDISTANCES">YDISTANCES</a></td>
+<td style="text-align: left">Calculate the y components of the vectors connecting one or many pairs of atoms.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../YXTORSIONS">YXTORSIONS</a></td>
+<td style="text-align: left">Calculate the torsional angle around the y axis between an arbitrary vector and the positive x direction</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../YZTORSIONS">YZTORSIONS</a></td>
+<td style="text-align: left">Calculate the torsional angle around the y axis between an arbitrary vector and the positive z direction</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ZANGLES">ZANGLES</a></td>
+<td style="text-align: left">Calculate the angle between an arbitrary vector and the positive z direction</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ZDISTANCES">ZDISTANCES</a></td>
+<td style="text-align: left">Calculate the z components of the vectors connecting one or many pairs of atoms.</td>
+<td style="text-align: left">MCOLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ZXTORSIONS">ZXTORSIONS</a></td>
+<td style="text-align: left">Calculate the torsional angle around the z axis between an arbitrary vector and the positive x direction</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="../ZYTORSIONS">ZYTORSIONS</a></td>
+<td style="text-align: left">Calculate the torsional angle around the z axis between an arbitrary vector and the positive y direction</td>
+<td style="text-align: left">COLVAR </td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,932 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Specifying atoms - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#specifying-atoms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Specifying atoms
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#specifying-atoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specifying atoms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-molinfo-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The MOLINFO command
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-atoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual atoms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broken-molecules-and-periodic-boundary-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Broken molecules and Periodic Boundary Conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Specifying atoms</h1>
+
+<h2 id="specifying-atoms">Specifying atoms</h2>
+<p>Many of the actions in PLUMED take a list of atom positions in input.  Within PLUMED
+atoms are specified using their numerical indices in the molecular dynamics input file.</p>
+<p>In PLUMED lists of atoms can be either provided directly inside the definition of each action, or
+predefined as a <a href="../GROUP/">GROUP</a> that can be reused multiple times. Lists of atoms can be written as:</p>
+<ul>
+<li>comma separated lists of numbers (<code>g1: GROUP ATOMS=10,11,15,20</code>)</li>
+<li>numerical ranges.  So <code>g2: GROUP ATOMS=10-20</code> is equivalent to <code>g2: GROUP ATOMS=10,11,12,13,14,15,16,17,18,19,20</code></li>
+<li>numerical ranges with a stride. So <code>g3: GROUP ATOMS=10-100:10</code> is equivalent to <code>g3: GROUP ATOMS=10,20,30,40,50,60,70,80,90,100</code></li>
+<li>atom ranges with a negative stride. So <code>g4: GROUP ATOMS=100-10:-10</code> is equivalent to <code>g4: GROUP ATOMS=100,90,80,70,60,50,40,30,20,10</code></li>
+<li>by using an auxiliary <a href="https://manual.gromacs.org/archive/5.0.4/online/ndx.html">ndx file</a>. So <code>g5: GROUP ATOMS={@ndx:{index.ndx Protein}}</code></li>
+</ul>
+<p>All the above methods can be combined just putting one name after the other separated by a comma as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_specifying_atoms.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../specifying_atoms.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">DUMPATOMS<span class="right">Dump selected atoms on a file. <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPATOMS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the atom indices whose positions you would like to print out<i></i></span></span>=1,2,10-20,40-60:5,100-70:-2 <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="specifying_atoms.md_working_1.datg5" onclick='showPath("specifying_atoms.md_working_1.dat","specifying_atoms.md_working_1.datg5","specifying_atoms.md_working_1.datg5","brown")'>g5</b> <span class="plumedtooltip">FILE<span class="right">file on which to output coordinates; extension is automatically detected<i></i></span></span>=test.xyz
+<span style="display:none;" id="specifying_atoms.md_working_1.datg5">The DUMPATOMS action with label <b>g5</b> calculates something</span></pre></div>
+
+<p>If you want to use the atoms in a group as the input for a action you use the label of the group as shown in the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_specifying_atoms.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../specifying_atoms.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="specifying_atoms.md_working_2.datg5" onclick='showPath("specifying_atoms.md_working_2.dat","specifying_atoms.md_working_2.datg5","specifying_atoms.md_working_2.datg5","violet")'>g5</b><span style="display:none;" id="specifying_atoms.md_working_2.datg5">The GROUP action with label <b>g5</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g5</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1,2
+<b name="specifying_atoms.md_working_2.datd1" onclick='showPath("specifying_atoms.md_working_2.dat","specifying_atoms.md_working_2.datd1","specifying_atoms.md_working_2.datd1","black")'>d1</b><span style="display:none;" id="specifying_atoms.md_working_2.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<b name="specifying_atoms.md_working_2.datg5">g5</b>
+</pre></div>
+
+<p>Some collective variable must accept a fixed number of atoms, for example a <a href="../DISTANCE/">DISTANCE</a> is calculated
+using two atoms only, an <a href="../ANGLE/">ANGLE</a> is calculated using either 3 or 4 atoms and <a href="../TORSION/">TORSION</a> is calculated using 4 atoms.</p>
+<p>A few other wasys of using groups in the input to actions are also available:</p>
+<ul>
+<li><code>@mdatoms</code> indicate all the physical atoms present in the MD engine (e.g. <code>DUMPATOMS ATOMS=@mdatoms</code>).</li>
+<li><code>@allatoms</code> indicates all atoms, including the virtual atoms that are only defined in PLUMED (e.g. <code>DUMPATOMS ATOMS=@allatoms</code>).</li>
+<li><code>@ndx</code> uses a <a href="https://manual.gromacs.org/archive/5.0.2/online/ndx.html">GROMACS index file</a>. <code>@ndx:index.ndx</code> picks the first group in the file. <code>{@ndx:{index.ndx protein}}</code> picks
+   the group named <code>protein</code>.</li>
+</ul>
+<h2 id="the-molinfo-command">The MOLINFO command</h2>
+<p>You can access many useful shortcuts for specifying atomic positions to PLUMED by using the <a href="../MOLINFO/">MOLINFO</a>, which takes 
+a PDB structure file in input. This command allows you to access the following list of shortcuts.</p>
+<table id="browse-table" class="display">
+<thead><tr>
+<th style="text-align: left" >Name</th>
+<th style="text-align: left" >Description</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left">@allatoms</td>
+<td style="text-align: left">refers to all the MD codes atoms and PLUMEDs vatoms</td>
+</tr>
+<tr>
+<td style="text-align: left">@mdatoms</td>
+<td style="text-align: left">refers to all the MD codes atoms but not PLUMEDs vatoms</td>
+</tr>
+<tr>
+<td style="text-align: left">@ndx:</td>
+<td style="text-align: left">load a group from a GROMACS index file</td>
+</tr>
+<tr>
+<td style="text-align: left">@alpha-</td>
+<td style="text-align: left">the four atoms that are required to calculate the alpha backbone dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@back-</td>
+<td style="text-align: left">the protein/dna/rna backbone atoms in</td>
+</tr>
+<tr>
+<td style="text-align: left">@base-</td>
+<td style="text-align: left">the heavy atoms of the base in</td>
+</tr>
+<tr>
+<td style="text-align: left">@beta-</td>
+<td style="text-align: left">the four atoms that are required to calculate the beta backbone dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@chi-</td>
+<td style="text-align: left">the four atoms that are required to alcullate the chi dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@chi1-</td>
+<td style="text-align: left">the four atoms that are required to calculate the chi1 dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@chi2-</td>
+<td style="text-align: left">the four atoms that are required to calculate the chi2 dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@chi3-</td>
+<td style="text-align: left">the four atoms that are required to calculate the chi3 dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@chi4-</td>
+<td style="text-align: left">the four atoms that are required to calculate the chi4 dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@chi5-</td>
+<td style="text-align: left">the four atoms that are required to calculate the chi5 dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@delta-</td>
+<td style="text-align: left">the four atoms that are required to calculate the delta backbone dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@epsilon-</td>
+<td style="text-align: left">the four atoms that are required to calculate the backbone epsilon dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@gamma-</td>
+<td style="text-align: left">the four atoms that are required to calculate the gamma backbone dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@hydrogens</td>
+<td style="text-align: left">all hydrogen atoms</td>
+</tr>
+<tr>
+<td style="text-align: left">@ions</td>
+<td style="text-align: left">all the ions</td>
+</tr>
+<tr>
+<td style="text-align: left">@lcs-</td>
+<td style="text-align: left">an ordered triplet of atoms on the 6-membered ring of the nucleobase in</td>
+</tr>
+<tr>
+<td style="text-align: left">@mda:</td>
+<td style="text-align: left">atom selection built using syntax for <a href="https://docs.mdanalysis.org/stable/documentation_pages/selections.html">MDAnalysis</a></td>
+</tr>
+<tr>
+<td style="text-align: left">@mdt:</td>
+<td style="text-align: left">atom selection built using syntax for <a href="https://www.mdtraj.org/1.9.8.dev0/index.html">mdtraj</a></td>
+</tr>
+<tr>
+<td style="text-align: left">@nonhydrogens</td>
+<td style="text-align: left">all non hydrogen atoms</td>
+</tr>
+<tr>
+<td style="text-align: left">@nucleic</td>
+<td style="text-align: left">all atoms that are part of a DNA or RNA molecule</td>
+</tr>
+<tr>
+<td style="text-align: left">@omega-</td>
+<td style="text-align: left">the four atoms that are required to calculate the omega dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@phi-</td>
+<td style="text-align: left">the four atoms that are required to calculate the phi dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@protein</td>
+<td style="text-align: left">all atoms that are part of a protein</td>
+</tr>
+<tr>
+<td style="text-align: left">@psi-</td>
+<td style="text-align: left">the four atoms that are required to calculate the psi dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@sidechain-</td>
+<td style="text-align: left">the protein sidechain atoms in</td>
+</tr>
+<tr>
+<td style="text-align: left">@sugar-</td>
+<td style="text-align: left">the heavy atoms of the sugar in</td>
+</tr>
+<tr>
+<td style="text-align: left">@v0-</td>
+<td style="text-align: left">the four atoms that are required to calculate the v0 sugar dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@v1-</td>
+<td style="text-align: left">the four atoms that are required to calculate the v1 sugar dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@v2-</td>
+<td style="text-align: left">the four atoms that are required to calculate the v2 sugar dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@v3-</td>
+<td style="text-align: left">the four atoms that are required to calculate the v3 sugar dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@v4-</td>
+<td style="text-align: left">the four atoms that are required to calculate the v4 sugar dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@vmd:</td>
+<td style="text-align: left">atom selection built using syntax for <a href="https://www.ks.uiuc.edu/Research/vmd/">VMD</a> python module</td>
+</tr>
+<tr>
+<td style="text-align: left">@vmdexec:</td>
+<td style="text-align: left">atom selection built using syntax for <a href="https://www.ks.uiuc.edu/Research/vmd/">VMD</a></td>
+</tr>
+<tr>
+<td style="text-align: left">@water</td>
+<td style="text-align: left">all water molecules</td>
+</tr>
+<tr>
+<td style="text-align: left">@zeta-</td>
+<td style="text-align: left">the four atoms that are required to calculate the zeta backbone dihedral for</td>
+</tr>
+</tbody></table>
+
+<h2 id="virtual-atoms">Virtual atoms</h2>
+<p>Sometimes, when calculating a collective variable, you may not want to use the positions of a number of atoms directly. Instead
+ you may wish to use the position of a virtual atom whose position is generated based on the positions of a collection
+of other atoms.  For example you might want to use the center of mass of a group of atoms. PLUMED has a number of routines
+for calculating the positions of these virtual atoms from lists of atoms that are in the vatom module.</p>
+<p>To specify to an action that you want to use the position of a virtual atom to calculate an action rather than one of the atoms
+in your system you simply use the label for your virtual atom in place of the usual numerical index. Virtual
+atoms and normal atoms can be mixed together in the input to actions as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_specifying_atoms.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../specifying_atoms.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="specifying_atoms.md_working_3.datcom1" onclick='showPath("specifying_atoms.md_working_3.dat","specifying_atoms.md_working_3.datcom1","specifying_atoms.md_working_3.datcom1","violet")'>com1</b><span style="display:none;" id="specifying_atoms.md_working_3.datcom1">The COM action with label <b>com1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">com1</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by COM action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COM<span class="right">Calculate the center of mass for a group of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/COM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the list of atoms which are involved the virtual atom's definition<i></i></span></span>=1,10 
+<b name="specifying_atoms.md_working_3.datd1" onclick='showPath("specifying_atoms.md_working_3.dat","specifying_atoms.md_working_3.datd1","specifying_atoms.md_working_3.datd1","black")'>d1</b><span style="display:none;" id="specifying_atoms.md_working_3.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=11,<b name="specifying_atoms.md_working_3.datcom1">com1</b>
+</pre></div>
+
+<p>If you don't want to calculate CVs from the virtual atom.  That is to say you just want to monitor the position of a virtual atom
+(or any set of atoms) over the course of your trajectory you can do this using <a href="../DUMPATOMS/">DUMPATOMS</a>.</p>
+<p>The list of the virtual atoms defined in PLUMED can be obtained by using the command <code>GROUP ATOMS=@allatoms REMOVE=@mdatoms</code>.</p>
+<h2 id="broken-molecules-and-periodic-boundary-conditions">Broken molecules and Periodic Boundary Conditions</h2>
+<p>PLUMED is designed so that for the majority of the CVs implemented the periodic boundary conditions are treated
+in the same manner as they would be treated in the host code.  In some codes this can be problematic when the actions 
+you are using involve some property of a molecule.  These codes allow the atoms in the molecules to become separated by
+periodic boundaries, a fact which PLUMED could only deal with if the topology is passed from the MD code to PLUMED.  Doing this
+work would involve a lot laborious programming and goes against our original aim of having a general patch that can be implemented
+in a wide variety of MD codes.  Consequentially, we have implemented a more pragmatic solution to this problem - the user specifies
+in input any molecules (or parts of molecules) that must be kept in tact throughout the simulation run using the <a href="../WHOLEMOLECULES/">WHOLEMOLECULES</a> command.</p>
+<p>The following input computes the end-to-end distance for a polymer of 100 atoms and keeps it at a value around 5.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_specifying_atoms.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../specifying_atoms.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">WHOLEMOLECULES<span class="right">This action is used to rebuild molecules that can become split by the periodic boundary conditions. <a href="https://www.plumed.org/doc-master/user-doc/html/WHOLEMOLECULES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ENTITY0<span class="right">the atoms that make up a molecule that you wish to align<i></i></span></span>=1-100
+<span style="display:none;" id="specifying_atoms.md_working_4.dat">The WHOLEMOLECULES action with label <b></b> calculates something</span><b name="specifying_atoms.md_working_4.date2e" onclick='showPath("specifying_atoms.md_working_4.dat","specifying_atoms.md_working_4.date2e","specifying_atoms.md_working_4.date2e","black")'>e2e</b><span style="display:none;" id="specifying_atoms.md_working_4.date2e">The DISTANCE action with label <b>e2e</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">e2e</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,100 <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span>
+<span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=<b name="specifying_atoms.md_working_4.date2e">e2e</b> <span class="plumedtooltip">KAPPA<span class="right"> specifies that the restraint is harmonic and what the values of the force constants on each of the variables are<i></i></span></span>=1 <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=5
+</pre></div>
+
+<p>Notice that NOPBC is used to in the <a href="../DISTANCE/">DISTANCE</a> action so as to ensure that if the end-to-end distance is larger than half the simulation box the distance
+is compute properly. Also notice that, since many MD codes break molecules across cell boundary, it might be necessary to use the
+<a href="../WHOLEMOLECULES/">WHOLEMOLECULES</a> keyword (also notice that it should be before distance).</p>
+<p>Notice that most expressions are invariant with respect to a change in the order of the atoms,
+but some of them depend on that order. E.g., with <a href="../WHOLEMOLECULES/">WHOLEMOLECULES</a> it could be useful to
+specify atom lists in a reversed order.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_specifying_atoms.md_working_5.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../specifying_atoms.md_working_5.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment"># to see the effect, one could dump the atoms as they were before molecule reconstruction:</span>
+<span style="color:blue" class="comment"># DUMPATOMS FILE=dump-broken.xyz ATOMS=1-20</span>
+<span class="plumedtooltip" style="color:green">WHOLEMOLECULES<span class="right">This action is used to rebuild molecules that can become split by the periodic boundary conditions. <a href="https://www.plumed.org/doc-master/user-doc/html/WHOLEMOLECULES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which molecules are reassembled<i></i></span></span>=1 <span class="plumedtooltip">ENTITY0<span class="right">the atoms that make up a molecule that you wish to align<i></i></span></span>=1-20
+<span style="display:none;" id="specifying_atoms.md_working_5.dat">The WHOLEMOLECULES action with label <b></b> calculates something</span><span class="plumedtooltip" style="color:green">DUMPATOMS<span class="right">Dump selected atoms on a file. <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPATOMS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">FILE<span class="right">file on which to output coordinates; extension is automatically detected<i></i></span></span>=dump.xyz <span class="plumedtooltip">ATOMS<span class="right">the atom indices whose positions you would like to print out<i></i></span></span>=1-20
+</pre></div>
+
+<p>Notice that there are other ways to manipulate the coordinates stored within PLUMED:</p>
+<ul>
+<li><a href="../FIT_TO_TEMPLATE/">FIT_TO_TEMPLATE</a> aligns atoms to a template structure.</li>
+<li><a href="../WRAPAROUND/">WRAPAROUND</a> brings a set of atom as close as possible to another set of atoms.</li>
+<li><a href="../RESET_CELL/">RESET_CELL</a> rotates the periodic cell.</li>
+</ul>
+<script>
+$(document).ready(function() {
+var table = $('#browse-table').DataTable({
+  "dom": '<"search"f><"top"il>rt<"bottom"Bp><"clear">',
+  language: { search: '', searchPlaceholder: "Search project..." },
+  buttons: [
+        'copy', 'excel', 'pdf'
+  ],
+  "order": [[ 0, "desc" ]]
+  });
+$('#browse-table-searchbar').keyup(function () {
+  table.search( this.value ).draw();
+  });
+  hu = window.location.search.substring(1);
+  searchfor = hu.split("=");
+  if( searchfor[0]=="search" ) {
+      table.search( searchfor[1] ).draw();
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,863 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: REFERENCE_GRID - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-reference_grid" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: REFERENCE_GRID
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-reference_grid"><a href="../actions/">Action</a>: REFERENCE_GRID</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_gridtools/"><strong>gridtools</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Setup a constant grid by either reading values from a file or definining a function in input</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=REFERENCE_GRID"><img alt="used in 1 tutorials" src="https://img.shields.io/badge/tutorials-1-green.svg" /></a><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the constant function on the grid that was specified in input</td>
+<td style="text-align: center;">grid</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Setup a constant grid by either reading values from a file or definining a function in input</p>
+<p>This action allows you to create a constant function and store the values that this function takes
+at a grid of points.  There are two ways that you can create the constant function.  You can either
+read in the value of the function at a set of  grid points from a file as is done in this example input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_REFERENCE_GRID.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../REFERENCE_GRID.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/gridtools/rt-test-fib-read/kde.grid</span>
+<b name="REFERENCE_GRID.md_working_1.datffg" onclick='showPath("REFERENCE_GRID.md_working_1.dat","REFERENCE_GRID.md_working_1.datffg","REFERENCE_GRID.md_working_1.datffg","green")'>ffg</b><span style="display:none;" id="REFERENCE_GRID.md_working_1.datffg">The REFERENCE_GRID action with label <b>ffg</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ffg</td><td width="5%"><font color="green">grid</font></td><td>the constant function on the grid that was specified in input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">REFERENCE_GRID<span class="right">Setup a constant grid by either reading values from a file or definining a function in input <a href="https://www.plumed.org/doc-master/user-doc/html/REFERENCE_GRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">FILE<span class="right">the name of the file that contains the reference data<i></i></span></span>=<div class="plumedtooltip">regtest/gridtools/rt-test-fib-read/kde.grid<div class="right"> Click <a onclick='openModal("REFERENCE_GRID.md_working_1.datregtest/gridtools/rt-test-fib-read/kde.grid1")'>here</a> to see an extract from this file.<i></i></div></div><div id="REFERENCE_GRID.md_working_1.datregtest/gridtools/rt-test-fib-read/kde.grid1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("REFERENCE_GRID.md_working_1.datregtest/gridtools/rt-test-fib-read/kde.grid1")'>&times;</span>  <h2>FILE: regtest/gridtools/rt-test-fib-read/kde.grid</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS d1n.x d1n.y d1n.z h dh_d1n.x dh_d1n.y dh_d1n.z
+#! SET nbins  100
+   0.1411  -0.9900   0.0000   0.0037   0.0052  -0.0364   0.0000
+  -0.1793  -0.9700  -0.1642   0.0002  -0.0003  -0.0016  -0.0003
+   0.0273  -0.9500   0.3111   0.0147   0.0040  -0.1401   0.0459
+   0.2236  -0.9300  -0.2917   0.0007   0.0015  -0.0062  -0.0019
+  -0.4083  -0.9100   0.0722   0.0002  -0.0007  -0.0016   0.0001
+   0.3847  -0.8900   0.2447   0.0598   0.2301  -0.5322   0.1463
+  -0.1280  -0.8700  -0.4761   0.0000  -0.0000  -0.0003  -0.0002
+  -0.2428  -0.8500   0.4675   0.0063  -0.0152  -0.0532   0.0293
+   0.5239  -0.8300  -0.1913   0.0049   0.0259  -0.0410  -0.0094
+  -0.5421  -0.8100  -0.2238   0.0000  -0.0000  -0.0001  -0.0000
+   0.2599  -0.7900   0.5553   0.1789   0.4648  -1.4132   0.9933
+   0.1910  -0.7700  -0.6088   0.0001   0.0002  -0.0007  -0.0006
+  -0.5723  -0.7500   0.3316   0.0002  -0.0013  -0.0018   0.0008
+   0.6675  -0.7300   0.1467   0.0851   0.5683  -0.6215   0.1249
+  -0.4050  -0.7100  -0.5761   0.0000  -0.0001  -0.0001  -0.0001
+  -0.0930  -0.6900   0.7178   0.0487  -0.0453  -0.3362   0.3498
+   0.5676  -0.6700  -0.4784   0.0006   0.0033  -0.0039  -0.0028
+  -0.7593  -0.6500  -0.0314   0.0000  -0.0000  -0.0000  -0.0000
+   0.5505  -0.6300   0.5478   0.5079   2.7961  -3.2001   2.7825
+  -0.0366  -0.6100  -0.7916   0.0001  -0.0000  -0.0004  -0.0005
+  -0.5173  -0.5900   0.6199   0.0014  -0.0071  -0.0080   0.0085
+   0.8143  -0.5700  -0.1096   0.0177   0.1439  -0.1008  -0.0194
+  -0.6856  -0.5500  -0.4770   0.0001  -0.0004  -0.0003  -0.0003
+   0.1861  -0.5300   0.8273   0.2978   0.5542  -1.5782   2.4635
+   0.4277  -0.5100  -0.7463   0.0001   0.0004  -0.0005  -0.0008
+  -0.8305  -0.4900   0.2649   0.0000  -0.0001  -0.0001   0.0000
+   0.8013  -0.4700   0.3702   0.3397   2.7222  -1.5968   1.2577
+  -0.3448  -0.4500  -0.8238   0.0005  -0.0016  -0.0021  -0.0038
+  -0.3056  -0.4300   0.8495   0.0132  -0.0403  -0.0568   0.1121
+   0.8074  -0.4100  -0.4243   0.0010   0.0084  -0.0042  -0.0044
+  -0.8904  -0.3900  -0.2347   0.0001  -0.0006  -0.0003  -0.0002
+   0.5025  -0.3700   0.7814   0.7484   3.7603  -2.7690   5.8482
+   0.1587  -0.3500  -0.9232   0.0006   0.0009  -0.0020  -0.0053
+  -0.7463  -0.3300   0.5780   0.0001  -0.0007  -0.0003   0.0006
+   0.9475  -0.3100   0.0785   0.0545   0.5161  -0.1689   0.0428
+  -0.6499  -0.2900  -0.7025   0.0015  -0.0096  -0.0043  -0.0104
+   0.0047  -0.2700   0.9628   0.0995   0.0047  -0.2687   0.9580
+   0.6506  -0.2500  -0.7171   0.0002   0.0010  -0.0004  -0.0011
+  -0.9690  -0.2300   0.0898   0.0000  -0.0003  -0.0001   0.0000
+   0.7788  -0.2100   0.5911   0.5311   4.1361  -1.1153   3.1392
+  -0.1757  -0.1900  -0.9659   0.0053  -0.0093  -0.0101  -0.0513
+  -0.5249  -0.1700   0.8340   0.0012  -0.0063  -0.0020   0.0100
+   0.9535  -0.1500  -0.2613   0.0027   0.0261  -0.0041  -0.0071
+  -0.8821  -0.1300  -0.4527   0.0018  -0.0157  -0.0023  -0.0080
+   0.3455  -0.1100   0.9319   0.3213   1.1102  -0.3535   2.9946
+   0.3755  -0.0900  -0.9224   0.0024   0.0089  -0.0021  -0.0219
+  -0.9014  -0.0700   0.4272   0.0000  -0.0002  -0.0000   0.0001
+   0.9544  -0.0500   0.2943   0.0976   0.9316  -0.0488   0.2872
+  -0.5054  -0.0300  -0.8624   0.0199  -0.1005  -0.0060  -0.1715
+  -0.2099  -0.0100   0.9777   0.0116  -0.0243  -0.0012   0.1131
+   0.8152   0.0100  -0.5791   0.0003   0.0023   0.0000  -0.0017
+  -0.9919   0.0300  -0.1236   0.0010  -0.0097   0.0003  -0.0012
+   0.6474   0.0500   0.7605   0.3033   1.9631   0.1516   2.3064
+   0.0364   0.0700  -0.9969   0.0275   0.0100   0.0192  -0.2736
+  -0.6991   0.0900   0.7094   0.0001  -0.0005   0.0001   0.0005
+   0.9926   0.1100  -0.0508   0.0057   0.0564   0.0063  -0.0029
+  -0.7644   0.1300  -0.6316   0.0287  -0.2191   0.0373  -0.1810
+   0.1366   0.1500   0.9792   0.0487   0.0665   0.0731   0.4769
+   0.5589   0.1700  -0.8116   0.0054   0.0304   0.0092  -0.0441
+  -0.9568   0.1900   0.2202   0.0004  -0.0034   0.0007   0.0008
+   0.8507   0.2100   0.4820   0.0747   0.6353   0.1568   0.3599
+  -0.3003   0.2300  -0.9257   0.1279  -0.3840   0.2941  -1.1837
+  -0.4018   0.2500   0.8809   0.0007  -0.0028   0.0017   0.0061
+   0.8864   0.2700  -0.3761   0.0005   0.0046   0.0014  -0.0020
+  -0.9021   0.2900  -0.3195   0.0188  -0.1697   0.0546  -0.0601
+   0.4464   0.3100   0.8394   0.0603   0.2693   0.1870   0.5064
+   0.2362   0.3300  -0.9140   0.0720   0.1701   0.2377  -0.6583
+  -0.7854   0.3500   0.5105   0.0001  -0.0010   0.0005   0.0007
+   0.9164   0.3700   0.1529   0.0057   0.0526   0.0212   0.0088
+  -0.5674   0.3900  -0.7253   0.2269  -1.2873   0.8849  -1.6455
+  -0.0709   0.4100   0.9093   0.0032  -0.0023   0.0133   0.0294
+   0.6597   0.4300  -0.6163   0.0089   0.0589   0.0384  -0.0551
+  -0.8930   0.4500   0.0087   0.0079  -0.0708   0.0357   0.0007
+   0.6566   0.4700   0.5899   0.0190   0.1250   0.0895   0.1123
+  -0.0847   0.4900  -0.8676   0.3773  -0.3195   1.8488  -3.2735
+  -0.5167   0.5100   0.6877   0.0001  -0.0006   0.0006   0.0008
+   0.8336   0.5300  -0.1558   0.0009   0.0078   0.0049  -0.0015
+  -0.7090   0.5500  -0.4414   0.1790  -1.2691   0.9844  -0.7900
+   0.2210   0.5700   0.7914   0.0042   0.0093   0.0241   0.0334
+   0.3651   0.5900  -0.7201   0.1119   0.4085   0.6601  -0.8057
+  -0.7416   0.6100   0.2791   0.0034  -0.0255   0.0210   0.0096
+   0.7207   0.6300   0.2893   0.0019   0.0136   0.0119   0.0055
+  -0.3288   0.6500  -0.6851   0.7096  -2.3331   4.6124  -4.8617
+  -0.2153   0.6700   0.7105   0.0002  -0.0005   0.0016   0.0017
+   0.6227   0.6900  -0.3690   0.0147   0.0913   0.1011  -0.0541
+  -0.6892   0.7100  -0.1445   0.0894  -0.6165   0.6351  -0.1292
+   0.3985   0.7300   0.5552   0.0013   0.0052   0.0096   0.0073
+   0.0786   0.7500  -0.6568   0.4868   0.3826   3.6513  -3.1973
+  -0.4838   0.7700   0.4159   0.0027  -0.0129   0.0206   0.0111
+   0.6128   0.7900   0.0194   0.0029   0.0178   0.0230   0.0006
+  -0.4197   0.8100  -0.4096   0.5239  -2.1988   4.2437  -2.1458
+   0.0312   0.8300   0.5569   0.0006   0.0002   0.0052   0.0035
+   0.3336   0.8500  -0.4077   0.1209   0.4033   1.0278  -0.4930
+  -0.4880   0.8700   0.0705   0.0487  -0.2378   0.4239   0.0344
+   0.3768   0.8900   0.2567   0.0024   0.0092   0.0217   0.0063
+  -0.0949   0.9100  -0.4036   0.5007  -0.4754   4.5565  -2.0208
+  -0.1796   0.9300   0.3207   0.0079  -0.0141   0.0732   0.0252
+   0.2965   0.9500  -0.0978   0.0406   0.1204   0.3857  -0.0397
+  -0.2217   0.9700  -0.0998   0.1596  -0.3537   1.5478  -0.1593
+   0.0557   0.9900   0.1296   0.0234   0.0130   0.2312   0.0303
+</pre></div>  </div></div> <span class="plumedtooltip">VALUE<span class="right">the name of the value that should be read from the grid<i></i></span></span>=h
+<span class="plumedtooltip" style="color:green">DUMPGRID<span class="right">Output the function on the grid to a file with the PLUMED grid format. <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPGRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the grid that you would like to output<i></i></span></span>=<b name="REFERENCE_GRID.md_working_1.datffg">ffg</b> <span class="plumedtooltip">FILE<span class="right"> the file on which to write the grid<i></i></span></span>=output.grid
+</pre></div>
+
+<p>The input file in this case has the format for grids that is discussed in the documentation for <a href="../DUMPGRID/">DUMPGRID</a>.</p>
+<p>The second way you can create these constant functions is illustrated below.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_REFERENCE_GRID.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../REFERENCE_GRID.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="REFERENCE_GRID.md_working_2.datd2" onclick='showPath("REFERENCE_GRID.md_working_2.dat","REFERENCE_GRID.md_working_2.datd2","REFERENCE_GRID.md_working_2.datd2","green")'>d2</b><span style="display:none;" id="REFERENCE_GRID.md_working_2.datd2">The REFERENCE_GRID action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2</td><td width="5%"><font color="green">grid</font></td><td>the constant function on the grid that was specified in input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">REFERENCE_GRID<span class="right">Setup a constant grid by either reading values from a file or definining a function in input <a href="https://www.plumed.org/doc-master/user-doc/html/REFERENCE_GRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GRID_MIN<span class="right"> the lower bounds for the grid<i></i></span></span>=0 <span class="plumedtooltip">GRID_MAX<span class="right"> the upper bounds for the grid<i></i></span></span>=10 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=20 <span class="plumedtooltip">FUNC<span class="right">the function to compute on the grid<i></i></span></span>=d1*d1 <span class="plumedtooltip">VAR<span class="right">the names to give each of the grid directions in the function<i></i></span></span>=d1 <span class="plumedtooltip">PERIODIC<span class="right">are the grid directions periodic<i></i></span></span>=NO
+<b name="REFERENCE_GRID.md_working_2.datd1" onclick='showPath("REFERENCE_GRID.md_working_2.dat","REFERENCE_GRID.md_working_2.datd1","REFERENCE_GRID.md_working_2.datd1","black")'>d1</b><span style="display:none;" id="REFERENCE_GRID.md_working_2.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="REFERENCE_GRID.md_working_2.datff" onclick='showPath("REFERENCE_GRID.md_working_2.dat","REFERENCE_GRID.md_working_2.datff","REFERENCE_GRID.md_working_2.datff","black")'>ff</b><span style="display:none;" id="REFERENCE_GRID.md_working_2.datff">The EVALUATE_FUNCTION_FROM_GRID action with label <b>ff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ff</td><td width="5%"><font color="black">scalar</font></td><td>interpolation of the input grid to get the value of the function at the input arguments</td></tr></table></span>: <span class="plumedtooltip" style="color:green">EVALUATE_FUNCTION_FROM_GRID<span class="right">Calculate the function stored on the input grid at an arbitrary point <a href="https://www.plumed.org/doc-master/user-doc/html/EVALUATE_FUNCTION_FROM_GRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GRID<span class="right">the name of the grid that we are using to evaluate the function<i></i></span></span>=<b name="REFERENCE_GRID.md_working_2.datd2">d2</b>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="REFERENCE_GRID.md_working_2.datd1">d1</b>,<b name="REFERENCE_GRID.md_working_2.datff">ff</b> <span class="plumedtooltip">FMT<span class="right"> the format that should be used to output real numbers<i></i></span></span>=%8.4f <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>This input illustrates a rather elaborate (and approximate) method for evaluating the square of the distance between atoms 1 and 2.
+As you can see, the option involves using the GRID_MIN, GRID_MAX and GRID_BIN options to create a grid of points.  You can then use the FUNC option
+to specify the function that should be evaluated at each of those grid points.
+If you use this option the lepton library that is discussed in the documentation for <a href="../CUSTOM/">CUSTOM</a> is used to evaluate the
+function at the various grid points.</p>
+<p>N.B. This method with lepton was implemented to facilitate the implementation of the normalisation in the implementation of the <a href="../RDF/">RDF</a> shortcut.</p>
+<p>Lastly note that you can specify the grid spacing in the input to this action rather than the number of bins as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_REFERENCE_GRID.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../REFERENCE_GRID.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="REFERENCE_GRID.md_working_3.datd2" onclick='showPath("REFERENCE_GRID.md_working_3.dat","REFERENCE_GRID.md_working_3.datd2","REFERENCE_GRID.md_working_3.datd2","green")'>d2</b><span style="display:none;" id="REFERENCE_GRID.md_working_3.datd2">The REFERENCE_GRID action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2</td><td width="5%"><font color="green">grid</font></td><td>the constant function on the grid that was specified in input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">REFERENCE_GRID<span class="right">Setup a constant grid by either reading values from a file or definining a function in input <a href="https://www.plumed.org/doc-master/user-doc/html/REFERENCE_GRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GRID_MIN<span class="right"> the lower bounds for the grid<i></i></span></span>=0 <span class="plumedtooltip">GRID_MAX<span class="right"> the upper bounds for the grid<i></i></span></span>=10 <span class="plumedtooltip">GRID_SPACING<span class="right">the approximate grid spacing (to be used as an alternative or together with GRID_BIN)<i></i></span></span>=0.5 <span class="plumedtooltip">FUNC<span class="right">the function to compute on the grid<i></i></span></span>=d1*d1 <span class="plumedtooltip">VAR<span class="right">the names to give each of the grid directions in the function<i></i></span></span>=d1 <span class="plumedtooltip">PERIODIC<span class="right">are the grid directions periodic<i></i></span></span>=NO
+<b name="REFERENCE_GRID.md_working_3.datd1" onclick='showPath("REFERENCE_GRID.md_working_3.dat","REFERENCE_GRID.md_working_3.datd1","REFERENCE_GRID.md_working_3.datd1","black")'>d1</b><span style="display:none;" id="REFERENCE_GRID.md_working_3.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="REFERENCE_GRID.md_working_3.datff" onclick='showPath("REFERENCE_GRID.md_working_3.dat","REFERENCE_GRID.md_working_3.datff","REFERENCE_GRID.md_working_3.datff","black")'>ff</b><span style="display:none;" id="REFERENCE_GRID.md_working_3.datff">The EVALUATE_FUNCTION_FROM_GRID action with label <b>ff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ff</td><td width="5%"><font color="black">scalar</font></td><td>interpolation of the input grid to get the value of the function at the input arguments</td></tr></table></span>: <span class="plumedtooltip" style="color:green">EVALUATE_FUNCTION_FROM_GRID<span class="right">Calculate the function stored on the input grid at an arbitrary point <a href="https://www.plumed.org/doc-master/user-doc/html/EVALUATE_FUNCTION_FROM_GRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GRID<span class="right">the name of the grid that we are using to evaluate the function<i></i></span></span>=<b name="REFERENCE_GRID.md_working_3.datd2">d2</b>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="REFERENCE_GRID.md_working_3.datd1">d1</b>,<b name="REFERENCE_GRID.md_working_3.datff">ff</b> <span class="plumedtooltip">FMT<span class="right"> the format that should be used to output real numbers<i></i></span></span>=%8.4f <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">GRID_MIN</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">auto</td>
+<td style="text-align: left;">the lower bounds for the grid</td>
+</tr>
+<tr>
+<td style="text-align: left;">GRID_MAX</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">auto</td>
+<td style="text-align: left;">the upper bounds for the grid</td>
+</tr>
+<tr>
+<td style="text-align: left;">PERIODIC</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">are the grid directions periodic</td>
+</tr>
+<tr>
+<td style="text-align: left;">FILE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the name of the file that contains the reference data</td>
+</tr>
+<tr>
+<td style="text-align: left;">VALUE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the name of the value that should be read from the grid</td>
+</tr>
+<tr>
+<td style="text-align: left;">FUNC</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the function to compute on the grid</td>
+</tr>
+<tr>
+<td style="text-align: left;">GRID_BIN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the number of bins for the grid</td>
+</tr>
+<tr>
+<td style="text-align: left;">GRID_SPACING</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the approximate grid spacing (to be used as an alternative or together with GRID_BIN)</td>
+</tr>
+<tr>
+<td style="text-align: left;">VAR</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the names to give each of the grid directions in the function</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

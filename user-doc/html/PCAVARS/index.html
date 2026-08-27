@@ -1,0 +1,1154 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: PCAVARS - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-pcavars" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: PCAVARS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-pcavars"><a href="../shortcuts/">Shortcut</a>: PCAVARS</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_mapping/"><strong>mapping</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Projection on principal component eigenvectors or other high dimensional linear subspace</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=PCAVARS"><img alt="used in 2 tutorials" src="https://img.shields.io/badge/tutorials-2-green.svg" /></a><a href="https://www.plumed-nest.org/browse.html?action=PCAVARS"><img alt="used in 1 eggs" src="https://img.shields.io/badge/nest-1-green.svg" /></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Projection on principal component eigenvectors or other high dimensional linear subspace</p>
+<p>As discussed in the documenation for <a href="../RMSD/">RMSD</a> and <a href="../module_refdist/">the refdist module</a> there are various different ways
+of calculating the distance between the instantaneous structure adopted by the system and some high-dimensional, reference configuration.  The
+problem with all these methods, as one gets further and further from the reference configuration, the
+distance from it becomes a progressively poorer and poorer collective variable.  This happens because
+the ``number" of structures at a distance <script type="math/tex">d</script> from a reference configuration is proportional to <script type="math/tex">d^N</script> in
+an <script type="math/tex">N</script> dimensional space.  Consequently, when <script type="math/tex">d</script> is small the distance from the reference configuration
+may well be a good collective variable.  However, when <script type="math/tex">d</script> is large it is unlikely that the distance from the reference
+structure is a good CV.  When the distance is large there will almost certainly be markedly different
+configurations that have the same CV value and hence barriers in transverse degrees of
+freedom.</p>
+<p>For these reasons dimensionality reduction is often employed so a projection <script type="math/tex">\mathbf{s}</script> of a high-dimensional configuration
+<script type="math/tex">\mathbf{X}</script> in a lower dimensionality space is found using a function:</p>
+<p>
+<script type="math/tex; mode=display">
+\mathbf{s} = F(\mathbf{X}-\mathbf{X}^{ref})
+</script>
+</p>
+<p>where here we have introduced some high-dimensional reference configuration <script type="math/tex">\mathbf{X}^{ref}</script>. By far the simplest way to
+do this is to use some linear operator for <script type="math/tex">F</script>.  That is to say we find a low-dimensional projection
+by rotating the basis vectors using some linear algebra:</p>
+<p>
+<script type="math/tex; mode=display">
+\mathbf{s}_i = \sum_k A_{ik} ( X_{k} - X_{k}^{ref} )
+</script>
+</p>
+<p>Here <script type="math/tex">\mathbf{X}-\mathbf{X}^{ref}</script> is the displacement from the refernece configuration in the high dimenisonal space, which you can
+calculate using the <a href="../RMSD/">RMSD</a> action or by simply calculating difference between the instaneous values for a collection of variables
+and the values of the variables for a particular reference configuration.  <script type="math/tex">A</script> is then a <script type="math/tex">d</script> by <script type="math/tex">D</script> matrix where <script type="math/tex">D</script> is the dimensionality
+of the high dimensional space and <script type="math/tex">d</script> is the dimensionality of the lower dimensional subspace.   This matrix, <script type="math/tex">A</script>,
+can be found by various means including principal component analysis (<a href="../PCA/">PCA</a>) and normal mode analysis.  In both these methods the
+rows of <script type="math/tex">A</script> would be the principle eigenvectors of a square matrix.  For PCA the covariance while for normal modes the Hessian.</p>
+<h2 id="examples">Examples</h2>
+<p>The following input calculates a projection on a linear subspace where the displacements
+from the reference configuration are calculated using <a href="../RMSD/">RMSD</a> and TYPE=OPTIMAL.  Consequently,
+both translation of the center of mass of the atoms and rotation of the reference
+frame are removed from the displacements that appear in the equatiosn above.  The matrix <script type="math/tex">A</script> and the reference
+configuration <script type="math/tex">R^{ref}</script> are specified in the pdb input file reference.pdb and the
+value of all projections (and the residual) are output to a file called colvar2.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PCAVARS.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PCAVARS.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/mapping/rt-pca/reference.pdb</span>
+<span id="PCAVARS.md_working_1.datpca2_short"><b name="PCAVARS.md_working_1.datpca2" onclick='showPath("PCAVARS.md_working_1.dat","PCAVARS.md_working_1.datpca2","PCAVARS.md_working_1.datpca2_shortcut","brown")'>pca2</b><span style="display:none;" id="PCAVARS.md_working_1.datpca2_shortcut">The PCAVARS action with label <b>pca2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_eig</td><td width="5%"><font color="blue">vector</font></td><td>the projections on the eigenvalues</td></tr><tr><td width="5%">pca2_residual</td><td width="5%"><font color="black">scalar</font></td><td>the residual distance that is not projected on any of the eigenvalues</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PCAVARS<span class="right">Projection on principal component eigenvectors or other high dimensional linear subspace This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PCAVARS.md_working_1.datpca2");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PCAVARS">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a pdb file containing the set of reference configurations<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca/reference.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_1.datregtest/mapping/rt-pca/reference.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_1.datregtest/mapping/rt-pca/reference.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_1.datregtest/mapping/rt-pca/reference.pdb1")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca/reference.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      2  CH3 ACE     1      12.932 -14.718  -6.016  1.00  1.00
+ATOM      5  C   ACE     1      21.312  -9.928  -5.946  1.00  1.00
+ATOM      9  CA  ALA     2      19.462 -11.088  -8.986  1.00  1.00
+ATOM     13  HB2 ALA     2      21.112 -10.688 -12.476  1.00  1.00
+ATOM     15  C   ALA     2      19.422   7.978 -14.536  1.00  1.00
+ATOM     20 HH31 NME     3      20.122  -9.928 -17.746  1.00  1.00
+ATOM     21 HH32 NME     3      18.572 -13.148 -16.346  1.00  1.00
+END
+REMARK TYPE=DIRECTION
+ATOM      2  CH3 ACE     1      0.1414  0.3334 -0.0302  1.00  0.00
+ATOM      5  C   ACE     1      0.0893 -0.1095 -0.1434  1.00  0.00
+ATOM      9  CA  ALA     2      0.0207 -0.321   0.0321  1.00  0.00
+ATOM     13  HB2 ALA     2      0.0317 -0.6085  0.0783  1.00  0.00
+ATOM     15  C   ALA     2      0.1282 -0.4792  0.0797  1.00  0.00
+ATOM     20 HH31 NME     3      0.0053 -0.465   0.0309  1.00  0.00
+ATOM     21 HH32 NME     3     -0.1019 -0.4261 -0.0082  1.00  0.00
+END
+REMARK TYPE=DIRECTION
+ATOM      2  CH3 ACE     1     -0.0380 -0.2736 -0.0003  1.00  0.00
+ATOM      5  C   ACE     1     -0.0656 -0.2138  0.0075  1.00  0.00
+ATOM      9  CA  ALA     2     -0.0286 -0.2116 -0.0579  1.00  0.00
+ATOM     13  HB2 ALA     2     -0.0235 -0.2794 -0.0388  1.00  0.00
+ATOM     15  C   ALA     2     -0.0512 -0.3078 -0.0076  1.00  0.00
+ATOM     20 HH31 NME     3      0.0798 -0.2642 -0.1300  1.00  0.00
+ATOM     21 HH32 NME     3      0.1136 -0.0846 -0.1385  1.00  0.00
+END
+</pre></div>  </div></div> <span class="plumedtooltip">TYPE<span class="right"> the manner in which distances are calculated<i></i></span></span>=OPTIMAL
+</span><span id="PCAVARS.md_working_1.datpca2_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PCAVARS.md_working_1.datpca2")'># pca2: PCAVARS REFERENCE=regtest/mapping/rt-pca/reference.pdb TYPE=OPTIMAL</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<span style="display:none;" id="PCAVARS.md_working_1.datpca2">The PCAVARS action with label <b>pca2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2.eig</td><td>the projections on the eigenvalues</td></tr><tr><td width="5%">pca2.residual</td><td>the residual distance that is not projected on any of the eigenvalues</td></tr></table></span><b name="PCAVARS.md_working_1.datpca2_at" onclick='showPath("PCAVARS.md_working_1.dat","PCAVARS.md_working_1.datpca2_at","PCAVARS.md_working_1.datpca2_at","brown")'>pca2_at</b><span style="display:none;" id="PCAVARS.md_working_1.datpca2_at">The RMSD action with label <b>pca2_at</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_at.dist</td><td width="5%"><font color="black">scalar</font></td><td>the RMSD distance the atoms have moved</td></tr><tr><td width="5%">pca2_at.disp</td><td width="5%"><font color="blue">vector</font></td><td>the vector of displacements for the atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">RMSD<span class="right">Calculate the RMSD with respect to a reference structure. <a href="https://www.plumed.org/doc-master/user-doc/html/RMSD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">DISPLACEMENT<span class="right"> Calculate the vector of displacements instead of the length of this vector<i></i></span></span> <span class="plumedtooltip">SQUARED<span class="right">  This should be setted if you want MSD instead of RMSD <i></i></span></span> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=1 <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure and the atoms involved in the CV<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca/reference.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_1.datregtest/mapping/rt-pca/reference.pdb2")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_1.datregtest/mapping/rt-pca/reference.pdb2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_1.datregtest/mapping/rt-pca/reference.pdb2")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca/reference.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      2  CH3 ACE     1      12.932 -14.718  -6.016  1.00  1.00
+ATOM      5  C   ACE     1      21.312  -9.928  -5.946  1.00  1.00
+ATOM      9  CA  ALA     2      19.462 -11.088  -8.986  1.00  1.00
+ATOM     13  HB2 ALA     2      21.112 -10.688 -12.476  1.00  1.00
+ATOM     15  C   ALA     2      19.422   7.978 -14.536  1.00  1.00
+ATOM     20 HH31 NME     3      20.122  -9.928 -17.746  1.00  1.00
+ATOM     21 HH32 NME     3      18.572 -13.148 -16.346  1.00  1.00
+END
+REMARK TYPE=DIRECTION
+ATOM      2  CH3 ACE     1      0.1414  0.3334 -0.0302  1.00  0.00
+ATOM      5  C   ACE     1      0.0893 -0.1095 -0.1434  1.00  0.00
+ATOM      9  CA  ALA     2      0.0207 -0.321   0.0321  1.00  0.00
+ATOM     13  HB2 ALA     2      0.0317 -0.6085  0.0783  1.00  0.00
+ATOM     15  C   ALA     2      0.1282 -0.4792  0.0797  1.00  0.00
+ATOM     20 HH31 NME     3      0.0053 -0.465   0.0309  1.00  0.00
+ATOM     21 HH32 NME     3     -0.1019 -0.4261 -0.0082  1.00  0.00
+END
+REMARK TYPE=DIRECTION
+ATOM      2  CH3 ACE     1     -0.0380 -0.2736 -0.0003  1.00  0.00
+ATOM      5  C   ACE     1     -0.0656 -0.2138  0.0075  1.00  0.00
+ATOM      9  CA  ALA     2     -0.0286 -0.2116 -0.0579  1.00  0.00
+ATOM     13  HB2 ALA     2     -0.0235 -0.2794 -0.0388  1.00  0.00
+ATOM     15  C   ALA     2     -0.0512 -0.3078 -0.0076  1.00  0.00
+ATOM     20 HH31 NME     3      0.0798 -0.2642 -0.1300  1.00  0.00
+ATOM     21 HH32 NME     3      0.1136 -0.0846 -0.1385  1.00  0.00
+END
+</pre></div>  </div></div> <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL
+<b name="PCAVARS.md_working_1.datpca2_peig" onclick='showPath("PCAVARS.md_working_1.dat","PCAVARS.md_working_1.datpca2_peig","PCAVARS.md_working_1.datpca2_peig","red")'>pca2_peig</b><span style="display:none;" id="PCAVARS.md_working_1.datpca2_peig">The CONSTANT action with label <b>pca2_peig</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_peig</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=0.0465854,0.0294206,0.00681978,0.0104438,0.0422365,0.00174613,-0.0335718,0.109841,-0.0360757,-0.105756,-0.200475,-0.157876,-0.153198,-0.140382,-0.00994964,-0.0472443,0.0105756,0.0257966,0.0262578,0.0101803,-0.00270156,-0.0206199,-0.0355965,-0.0155192,-0.0127518,-0.0277826,0.0433018,0.0616427,-0.148463,-0.116014,-0.11482,-0.151611,-0.167021,-0.143363,-0.0459064,-0.000162789,0.00406972,-0.0314182,-0.021054,-0.00412398,-0.0705418,-0.0751541 <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=2 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=21
+<b name="PCAVARS.md_working_1.datpca2_eig" onclick='showPath("PCAVARS.md_working_1.dat","PCAVARS.md_working_1.datpca2_eig","PCAVARS.md_working_1.datpca2_eig","blue")'>pca2_eig</b><span style="display:none;" id="PCAVARS.md_working_1.datpca2_eig">The MATRIX_VECTOR_PRODUCT action with label <b>pca2_eig</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_eig</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="PCAVARS.md_working_1.datpca2_peig">pca2_peig</b>,<b name="PCAVARS.md_working_1.datpca2_at">pca2_at.disp</b>
+<b name="PCAVARS.md_working_1.datpca2_eig-1" onclick='showPath("PCAVARS.md_working_1.dat","PCAVARS.md_working_1.datpca2_eig-1","PCAVARS.md_working_1.datpca2_eig-1","blue")'>pca2_eig-1</b><span style="display:none;" id="PCAVARS.md_working_1.datpca2_eig-1">The SELECT_WITH_MASK action with label <b>pca2_eig-1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_eig-1</td><td width="5%"><font color="blue">vector</font></td><td>a vector/matrix of values that is obtained using a mask to select elements of interest</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SELECT_COMPONENTS<span class="right">Create a new value to hold a subset of the components that are in a vector or matrix <a href="https://www.plumed.org/doc-master/user-doc/html/SELECT_COMPONENTS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the value from which we are selecting components<i></i></span></span>=<b name="PCAVARS.md_working_1.datpca2_eig">pca2_eig</b> <span class="plumedtooltip">COMPONENTS<span class="right">the components in the input value that you woul like to build a new vector from<i></i></span></span>=1
+<b name="PCAVARS.md_working_1.datpca2_eig-2" onclick='showPath("PCAVARS.md_working_1.dat","PCAVARS.md_working_1.datpca2_eig-2","PCAVARS.md_working_1.datpca2_eig-2","blue")'>pca2_eig-2</b><span style="display:none;" id="PCAVARS.md_working_1.datpca2_eig-2">The SELECT_WITH_MASK action with label <b>pca2_eig-2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_eig-2</td><td width="5%"><font color="blue">vector</font></td><td>a vector/matrix of values that is obtained using a mask to select elements of interest</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SELECT_COMPONENTS<span class="right">Create a new value to hold a subset of the components that are in a vector or matrix <a href="https://www.plumed.org/doc-master/user-doc/html/SELECT_COMPONENTS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the value from which we are selecting components<i></i></span></span>=<b name="PCAVARS.md_working_1.datpca2_eig">pca2_eig</b> <span class="plumedtooltip">COMPONENTS<span class="right">the components in the input value that you woul like to build a new vector from<i></i></span></span>=2
+<b name="PCAVARS.md_working_1.datpca2_eig2" onclick='showPath("PCAVARS.md_working_1.dat","PCAVARS.md_working_1.datpca2_eig2","PCAVARS.md_working_1.datpca2_eig2","blue")'>pca2_eig2</b><span style="display:none;" id="PCAVARS.md_working_1.datpca2_eig2">The CUSTOM action with label <b>pca2_eig2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_eig2</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PCAVARS.md_working_1.datpca2_eig">pca2_eig</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*x <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PCAVARS.md_working_1.datpca2_eigsum2" onclick='showPath("PCAVARS.md_working_1.dat","PCAVARS.md_working_1.datpca2_eigsum2","PCAVARS.md_working_1.datpca2_eigsum2","black")'>pca2_eigsum2</b><span style="display:none;" id="PCAVARS.md_working_1.datpca2_eigsum2">The SUM action with label <b>pca2_eigsum2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_eigsum2</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PCAVARS.md_working_1.datpca2_eig2">pca2_eig2</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PCAVARS.md_working_1.datpca2_residual" onclick='showPath("PCAVARS.md_working_1.dat","PCAVARS.md_working_1.datpca2_residual","PCAVARS.md_working_1.datpca2_residual","black")'>pca2_residual</b><span style="display:none;" id="PCAVARS.md_working_1.datpca2_residual">The CUSTOM action with label <b>pca2_residual</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_residual</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PCAVARS.md_working_1.datpca2_at">pca2_at.dist</b>,<b name="PCAVARS.md_working_1.datpca2_eigsum2">pca2_eigsum2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x-y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="PCAVARS.md_working_1.datpca2">pca2.*</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar2
+</pre></div>
+
+<p>As you can see from the example above, the reference configurations are specified using a pdb file.  The first configuration that you provide is the reference configuration,
+which is referred to in the above expressions as <script type="math/tex">X^{ref}</script>.  Subsequent configurations give the directions of row vectors that are contained in
+the matrix <script type="math/tex">A</script> above.  These directions are specified by giving a second configuration that describes the components of <script type="math/tex">A</script> explicitly.</p>
+<p>When you use an input like the one in the example above PLUMED assumes that the atoms for which RMSD displacements are being computed together form a molecule.
+A procedure akin to that in <a href="../WHOLEMOLECULES/">WHOLEMOLECULES</a> is thus performed to ensure that any bonds that are broken by the periodic boundary conditions are
+reformed.  If you would like to turn this feature off for any reason you add the NOPBC flag to the input line as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PCAVARS.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PCAVARS.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/mapping/rt-pca/reference.pdb</span>
+<span id="PCAVARS.md_working_2.datpca2_short"><b name="PCAVARS.md_working_2.datpca2" onclick='showPath("PCAVARS.md_working_2.dat","PCAVARS.md_working_2.datpca2","PCAVARS.md_working_2.datpca2_shortcut","brown")'>pca2</b><span style="display:none;" id="PCAVARS.md_working_2.datpca2_shortcut">The PCAVARS action with label <b>pca2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_eig</td><td width="5%"><font color="blue">vector</font></td><td>the projections on the eigenvalues</td></tr><tr><td width="5%">pca2_residual</td><td width="5%"><font color="black">scalar</font></td><td>the residual distance that is not projected on any of the eigenvalues</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PCAVARS<span class="right">Projection on principal component eigenvectors or other high dimensional linear subspace This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PCAVARS.md_working_2.datpca2");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PCAVARS">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a pdb file containing the set of reference configurations<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca/reference.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_2.datregtest/mapping/rt-pca/reference.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_2.datregtest/mapping/rt-pca/reference.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_2.datregtest/mapping/rt-pca/reference.pdb1")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca/reference.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      2  CH3 ACE     1      12.932 -14.718  -6.016  1.00  1.00
+ATOM      5  C   ACE     1      21.312  -9.928  -5.946  1.00  1.00
+ATOM      9  CA  ALA     2      19.462 -11.088  -8.986  1.00  1.00
+ATOM     13  HB2 ALA     2      21.112 -10.688 -12.476  1.00  1.00
+ATOM     15  C   ALA     2      19.422   7.978 -14.536  1.00  1.00
+ATOM     20 HH31 NME     3      20.122  -9.928 -17.746  1.00  1.00
+ATOM     21 HH32 NME     3      18.572 -13.148 -16.346  1.00  1.00
+END
+REMARK TYPE=DIRECTION
+ATOM      2  CH3 ACE     1      0.1414  0.3334 -0.0302  1.00  0.00
+ATOM      5  C   ACE     1      0.0893 -0.1095 -0.1434  1.00  0.00
+ATOM      9  CA  ALA     2      0.0207 -0.321   0.0321  1.00  0.00
+ATOM     13  HB2 ALA     2      0.0317 -0.6085  0.0783  1.00  0.00
+ATOM     15  C   ALA     2      0.1282 -0.4792  0.0797  1.00  0.00
+ATOM     20 HH31 NME     3      0.0053 -0.465   0.0309  1.00  0.00
+ATOM     21 HH32 NME     3     -0.1019 -0.4261 -0.0082  1.00  0.00
+END
+REMARK TYPE=DIRECTION
+ATOM      2  CH3 ACE     1     -0.0380 -0.2736 -0.0003  1.00  0.00
+ATOM      5  C   ACE     1     -0.0656 -0.2138  0.0075  1.00  0.00
+ATOM      9  CA  ALA     2     -0.0286 -0.2116 -0.0579  1.00  0.00
+ATOM     13  HB2 ALA     2     -0.0235 -0.2794 -0.0388  1.00  0.00
+ATOM     15  C   ALA     2     -0.0512 -0.3078 -0.0076  1.00  0.00
+ATOM     20 HH31 NME     3      0.0798 -0.2642 -0.1300  1.00  0.00
+ATOM     21 HH32 NME     3      0.1136 -0.0846 -0.1385  1.00  0.00
+END
+</pre></div>  </div></div> <span class="plumedtooltip">NOPBC<span class="right"> do not use periodic boundary conditions when computing this quantity<i></i></span></span> <span class="plumedtooltip">TYPE<span class="right"> the manner in which distances are calculated<i></i></span></span>=OPTIMAL
+</span><span id="PCAVARS.md_working_2.datpca2_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PCAVARS.md_working_2.datpca2")'># pca2: PCAVARS REFERENCE=regtest/mapping/rt-pca/reference.pdb NOPBC TYPE=OPTIMAL</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<span style="display:none;" id="PCAVARS.md_working_2.datpca2">The PCAVARS action with label <b>pca2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2.eig</td><td>the projections on the eigenvalues</td></tr><tr><td width="5%">pca2.residual</td><td>the residual distance that is not projected on any of the eigenvalues</td></tr></table></span><b name="PCAVARS.md_working_2.datpca2_at" onclick='showPath("PCAVARS.md_working_2.dat","PCAVARS.md_working_2.datpca2_at","PCAVARS.md_working_2.datpca2_at","brown")'>pca2_at</b><span style="display:none;" id="PCAVARS.md_working_2.datpca2_at">The RMSD action with label <b>pca2_at</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_at.dist</td><td width="5%"><font color="black">scalar</font></td><td>the RMSD distance the atoms have moved</td></tr><tr><td width="5%">pca2_at.disp</td><td width="5%"><font color="blue">vector</font></td><td>the vector of displacements for the atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">RMSD<span class="right">Calculate the RMSD with respect to a reference structure. <a href="https://www.plumed.org/doc-master/user-doc/html/RMSD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">DISPLACEMENT<span class="right"> Calculate the vector of displacements instead of the length of this vector<i></i></span></span> <span class="plumedtooltip">SQUARED<span class="right">  This should be setted if you want MSD instead of RMSD <i></i></span></span> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=1 <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure and the atoms involved in the CV<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca/reference.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_2.datregtest/mapping/rt-pca/reference.pdb2")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_2.datregtest/mapping/rt-pca/reference.pdb2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_2.datregtest/mapping/rt-pca/reference.pdb2")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca/reference.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      2  CH3 ACE     1      12.932 -14.718  -6.016  1.00  1.00
+ATOM      5  C   ACE     1      21.312  -9.928  -5.946  1.00  1.00
+ATOM      9  CA  ALA     2      19.462 -11.088  -8.986  1.00  1.00
+ATOM     13  HB2 ALA     2      21.112 -10.688 -12.476  1.00  1.00
+ATOM     15  C   ALA     2      19.422   7.978 -14.536  1.00  1.00
+ATOM     20 HH31 NME     3      20.122  -9.928 -17.746  1.00  1.00
+ATOM     21 HH32 NME     3      18.572 -13.148 -16.346  1.00  1.00
+END
+REMARK TYPE=DIRECTION
+ATOM      2  CH3 ACE     1      0.1414  0.3334 -0.0302  1.00  0.00
+ATOM      5  C   ACE     1      0.0893 -0.1095 -0.1434  1.00  0.00
+ATOM      9  CA  ALA     2      0.0207 -0.321   0.0321  1.00  0.00
+ATOM     13  HB2 ALA     2      0.0317 -0.6085  0.0783  1.00  0.00
+ATOM     15  C   ALA     2      0.1282 -0.4792  0.0797  1.00  0.00
+ATOM     20 HH31 NME     3      0.0053 -0.465   0.0309  1.00  0.00
+ATOM     21 HH32 NME     3     -0.1019 -0.4261 -0.0082  1.00  0.00
+END
+REMARK TYPE=DIRECTION
+ATOM      2  CH3 ACE     1     -0.0380 -0.2736 -0.0003  1.00  0.00
+ATOM      5  C   ACE     1     -0.0656 -0.2138  0.0075  1.00  0.00
+ATOM      9  CA  ALA     2     -0.0286 -0.2116 -0.0579  1.00  0.00
+ATOM     13  HB2 ALA     2     -0.0235 -0.2794 -0.0388  1.00  0.00
+ATOM     15  C   ALA     2     -0.0512 -0.3078 -0.0076  1.00  0.00
+ATOM     20 HH31 NME     3      0.0798 -0.2642 -0.1300  1.00  0.00
+ATOM     21 HH32 NME     3      0.1136 -0.0846 -0.1385  1.00  0.00
+END
+</pre></div>  </div></div> <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span> <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL
+<b name="PCAVARS.md_working_2.datpca2_peig" onclick='showPath("PCAVARS.md_working_2.dat","PCAVARS.md_working_2.datpca2_peig","PCAVARS.md_working_2.datpca2_peig","red")'>pca2_peig</b><span style="display:none;" id="PCAVARS.md_working_2.datpca2_peig">The CONSTANT action with label <b>pca2_peig</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_peig</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=0.0465854,0.0294206,0.00681978,0.0104438,0.0422365,0.00174613,-0.0335718,0.109841,-0.0360757,-0.105756,-0.200475,-0.157876,-0.153198,-0.140382,-0.00994964,-0.0472443,0.0105756,0.0257966,0.0262578,0.0101803,-0.00270156,-0.0206199,-0.0355965,-0.0155192,-0.0127518,-0.0277826,0.0433018,0.0616427,-0.148463,-0.116014,-0.11482,-0.151611,-0.167021,-0.143363,-0.0459064,-0.000162789,0.00406972,-0.0314182,-0.021054,-0.00412398,-0.0705418,-0.0751541 <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=2 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=21
+<b name="PCAVARS.md_working_2.datpca2_eig" onclick='showPath("PCAVARS.md_working_2.dat","PCAVARS.md_working_2.datpca2_eig","PCAVARS.md_working_2.datpca2_eig","blue")'>pca2_eig</b><span style="display:none;" id="PCAVARS.md_working_2.datpca2_eig">The MATRIX_VECTOR_PRODUCT action with label <b>pca2_eig</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_eig</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="PCAVARS.md_working_2.datpca2_peig">pca2_peig</b>,<b name="PCAVARS.md_working_2.datpca2_at">pca2_at.disp</b>
+<b name="PCAVARS.md_working_2.datpca2_eig-1" onclick='showPath("PCAVARS.md_working_2.dat","PCAVARS.md_working_2.datpca2_eig-1","PCAVARS.md_working_2.datpca2_eig-1","blue")'>pca2_eig-1</b><span style="display:none;" id="PCAVARS.md_working_2.datpca2_eig-1">The SELECT_WITH_MASK action with label <b>pca2_eig-1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_eig-1</td><td width="5%"><font color="blue">vector</font></td><td>a vector/matrix of values that is obtained using a mask to select elements of interest</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SELECT_COMPONENTS<span class="right">Create a new value to hold a subset of the components that are in a vector or matrix <a href="https://www.plumed.org/doc-master/user-doc/html/SELECT_COMPONENTS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the value from which we are selecting components<i></i></span></span>=<b name="PCAVARS.md_working_2.datpca2_eig">pca2_eig</b> <span class="plumedtooltip">COMPONENTS<span class="right">the components in the input value that you woul like to build a new vector from<i></i></span></span>=1
+<b name="PCAVARS.md_working_2.datpca2_eig-2" onclick='showPath("PCAVARS.md_working_2.dat","PCAVARS.md_working_2.datpca2_eig-2","PCAVARS.md_working_2.datpca2_eig-2","blue")'>pca2_eig-2</b><span style="display:none;" id="PCAVARS.md_working_2.datpca2_eig-2">The SELECT_WITH_MASK action with label <b>pca2_eig-2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_eig-2</td><td width="5%"><font color="blue">vector</font></td><td>a vector/matrix of values that is obtained using a mask to select elements of interest</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SELECT_COMPONENTS<span class="right">Create a new value to hold a subset of the components that are in a vector or matrix <a href="https://www.plumed.org/doc-master/user-doc/html/SELECT_COMPONENTS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the value from which we are selecting components<i></i></span></span>=<b name="PCAVARS.md_working_2.datpca2_eig">pca2_eig</b> <span class="plumedtooltip">COMPONENTS<span class="right">the components in the input value that you woul like to build a new vector from<i></i></span></span>=2
+<b name="PCAVARS.md_working_2.datpca2_eig2" onclick='showPath("PCAVARS.md_working_2.dat","PCAVARS.md_working_2.datpca2_eig2","PCAVARS.md_working_2.datpca2_eig2","blue")'>pca2_eig2</b><span style="display:none;" id="PCAVARS.md_working_2.datpca2_eig2">The CUSTOM action with label <b>pca2_eig2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_eig2</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PCAVARS.md_working_2.datpca2_eig">pca2_eig</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*x <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PCAVARS.md_working_2.datpca2_eigsum2" onclick='showPath("PCAVARS.md_working_2.dat","PCAVARS.md_working_2.datpca2_eigsum2","PCAVARS.md_working_2.datpca2_eigsum2","black")'>pca2_eigsum2</b><span style="display:none;" id="PCAVARS.md_working_2.datpca2_eigsum2">The SUM action with label <b>pca2_eigsum2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_eigsum2</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PCAVARS.md_working_2.datpca2_eig2">pca2_eig2</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PCAVARS.md_working_2.datpca2_residual" onclick='showPath("PCAVARS.md_working_2.dat","PCAVARS.md_working_2.datpca2_residual","PCAVARS.md_working_2.datpca2_residual","black")'>pca2_residual</b><span style="display:none;" id="PCAVARS.md_working_2.datpca2_residual">The CUSTOM action with label <b>pca2_residual</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca2_residual</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PCAVARS.md_working_2.datpca2_at">pca2_at.dist</b>,<b name="PCAVARS.md_working_2.datpca2_eigsum2">pca2_eigsum2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x-y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="PCAVARS.md_working_2.datpca2">pca2.*</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar2
+</pre></div>
+
+<p>Notice that the PCAVARS command is a shortcut.  If you look at how the shortcut in the above input is expanded you should be able to see how the command works
+by calculating the RMSD displacement between the instantaneous and reference configuration and how those displacements are then projected on the eigenvector that
+was specified in the second frame of the pdb input above. Understanding the expanded version of this shortcut command allows you to recognise that you can project
+the displacement vector on any arbitrary vector.  For example in the input below two reference structures are provided in the pdb file. PLUMED calculates the RMSD
+distance between these two reference configurations during setup and sets up a unit vector called eig that points along the director connecting the two RMSD structure.
+During the calculation the vector connecting the instantaneous configuration and the first of the two reference configurations in computed.  This vector is then projected
+on the unit vector connecting the two initial structures:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PCAVARS.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PCAVARS.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/mapping/rt-pca-two-frames/two-frames.pdb</span>
+<br/><span style="color:blue" class="comment"># Read in two reference configuratioms from PDB file</span>
+<span id="PCAVARS.md_working_3.datref1_short"><b name="PCAVARS.md_working_3.datref1" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.datref1","PCAVARS.md_working_3.datref1_shortcut","red")'>ref1</b><span style="display:none;" id="PCAVARS.md_working_3.datref1_shortcut">The PDB2CONSTANT action with label <b>ref1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref1</td><td width="5%"><font color="red">matrix</font></td><td>a value that is constructed from the information in the PDB file</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PCAVARS.md_working_3.datref1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca-two-frames/two-frames.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_3.datregtest/mapping/rt-pca-two-frames/two-frames.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_3.datregtest/mapping/rt-pca-two-frames/two-frames.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_3.datregtest/mapping/rt-pca-two-frames/two-frames.pdb1")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca-two-frames/two-frames.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      5  CLP ALA     1      -1.819  -0.143   1.679  1.00  1.00
+ATOM      6  OL  ALA     1      -1.177  -0.889   2.401  1.00  1.00
+ATOM      7  NL  ALA     1      -1.313   0.341   0.529  1.00  1.00
+ATOM      8  HL  ALA     1      -1.845   0.961  -0.011  1.00  1.00
+ATOM      9  CA  ALA     1      -0.003  -0.019   0.021  1.00  1.00
+ATOM     10  HA  ALA     1       0.205  -1.051   0.259  1.00  1.00
+ATOM     11  CB  ALA     1       0.009   0.135  -1.509  1.00  1.00
+ATOM     15  CRP ALA     1       1.121   0.799   0.663  1.00  1.00
+ATOM     16  OR  ALA     1       1.723   1.669   0.043  1.00  1.00
+ATOM     17  NR  ALA     1       1.423   0.519   1.941  1.00  1.00
+ATOM     18  HR  ALA     1       0.873  -0.161   2.413  1.00  1.00
+ATOM     19  CR  ALA     1       2.477   1.187   2.675  1.00  1.00
+END
+ATOM      5  CLP ALA     1      -1.941   1.459   0.447  1.00  1.00
+ATOM      6  OL  ALA     1      -1.481   2.369  -0.223  1.00  1.00
+ATOM      7  NL  ALA     1      -1.303   0.291   0.647  1.00  1.00
+ATOM      8  HL  ALA     1      -1.743  -0.379   1.229  1.00  1.00
+ATOM      9  CA  ALA     1      -0.011  -0.077   0.099  1.00  1.00
+ATOM     10  HA  ALA     1       0.155  -1.099   0.417  1.00  1.00
+ATOM     11  CB  ALA     1       0.001  -0.097  -1.439  1.00  1.00
+ATOM     15  CRP ALA     1       1.191   0.673   0.683  1.00  1.00
+ATOM     16  OR  ALA     1       2.015   0.103   1.375  1.00  1.00
+ATOM     17  NR  ALA     1       1.303   1.983   0.393  1.00  1.00
+ATOM     18  HR  ALA     1       0.553   2.411  -0.109  1.00  1.00
+ATOM     19  CR  ALA     1       2.395   2.811   0.843  1.00  1.00
+END
+</pre></div>  </div></div> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=1
+</span><span id="PCAVARS.md_working_3.datref1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PCAVARS.md_working_3.datref1")'># ref1: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pca-two-frames/two-frames.pdb NUMBER=1</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PCAVARS.md_working_3.datref1" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.datref1","PCAVARS.md_working_3.datref1","red")'>ref1</b><span style="display:none;" id="PCAVARS.md_working_3.datref1">The CONSTANT action with label <b>ref1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref1</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=1 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=36 <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-0.19585,-0.13165,-0.14525,-0.19845,-0.01425,0.00655,-0.01305,0.09815,0.15835,0.12835,0.07335,0.23375,-0.0422,-0.1168,0.0062,0.0682,-0.0298,-0.133,-0.0144,0.052,0.139,0.024,-0.044,0.0908,0.0753667,0.147567,-0.0396333,-0.0936333,-0.0904333,-0.0666333,-0.243433,-0.0262333,-0.0882333,0.101567,0.148767,0.174967
+<span style="color:blue"># --- End of included input --- </span></span><b name="PCAVARS.md_working_3.datref1T" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.datref1T","PCAVARS.md_working_3.datref1T","blue")'>ref1T</b><span style="display:none;" id="PCAVARS.md_working_3.datref1T">The TRANSPOSE action with label <b>ref1T</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref1T</td><td width="5%"><font color="blue">vector</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="PCAVARS.md_working_3.datref1">ref1</b>
+<span id="PCAVARS.md_working_3.datref2_short"><b name="PCAVARS.md_working_3.datref2" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.datref2","PCAVARS.md_working_3.datref2_shortcut","red")'>ref2</b><span style="display:none;" id="PCAVARS.md_working_3.datref2_shortcut">The PDB2CONSTANT action with label <b>ref2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref2</td><td width="5%"><font color="red">matrix</font></td><td>a value that is constructed from the information in the PDB file</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PCAVARS.md_working_3.datref2");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca-two-frames/two-frames.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_3.datregtest/mapping/rt-pca-two-frames/two-frames.pdb2")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_3.datregtest/mapping/rt-pca-two-frames/two-frames.pdb2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_3.datregtest/mapping/rt-pca-two-frames/two-frames.pdb2")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca-two-frames/two-frames.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      5  CLP ALA     1      -1.819  -0.143   1.679  1.00  1.00
+ATOM      6  OL  ALA     1      -1.177  -0.889   2.401  1.00  1.00
+ATOM      7  NL  ALA     1      -1.313   0.341   0.529  1.00  1.00
+ATOM      8  HL  ALA     1      -1.845   0.961  -0.011  1.00  1.00
+ATOM      9  CA  ALA     1      -0.003  -0.019   0.021  1.00  1.00
+ATOM     10  HA  ALA     1       0.205  -1.051   0.259  1.00  1.00
+ATOM     11  CB  ALA     1       0.009   0.135  -1.509  1.00  1.00
+ATOM     15  CRP ALA     1       1.121   0.799   0.663  1.00  1.00
+ATOM     16  OR  ALA     1       1.723   1.669   0.043  1.00  1.00
+ATOM     17  NR  ALA     1       1.423   0.519   1.941  1.00  1.00
+ATOM     18  HR  ALA     1       0.873  -0.161   2.413  1.00  1.00
+ATOM     19  CR  ALA     1       2.477   1.187   2.675  1.00  1.00
+END
+ATOM      5  CLP ALA     1      -1.941   1.459   0.447  1.00  1.00
+ATOM      6  OL  ALA     1      -1.481   2.369  -0.223  1.00  1.00
+ATOM      7  NL  ALA     1      -1.303   0.291   0.647  1.00  1.00
+ATOM      8  HL  ALA     1      -1.743  -0.379   1.229  1.00  1.00
+ATOM      9  CA  ALA     1      -0.011  -0.077   0.099  1.00  1.00
+ATOM     10  HA  ALA     1       0.155  -1.099   0.417  1.00  1.00
+ATOM     11  CB  ALA     1       0.001  -0.097  -1.439  1.00  1.00
+ATOM     15  CRP ALA     1       1.191   0.673   0.683  1.00  1.00
+ATOM     16  OR  ALA     1       2.015   0.103   1.375  1.00  1.00
+ATOM     17  NR  ALA     1       1.303   1.983   0.393  1.00  1.00
+ATOM     18  HR  ALA     1       0.553   2.411  -0.109  1.00  1.00
+ATOM     19  CR  ALA     1       2.395   2.811   0.843  1.00  1.00
+END
+</pre></div>  </div></div> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=2
+</span><span id="PCAVARS.md_working_3.datref2_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PCAVARS.md_working_3.datref2")'># ref2: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pca-two-frames/two-frames.pdb NUMBER=2</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PCAVARS.md_working_3.datref2" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.datref2","PCAVARS.md_working_3.datref2","red")'>ref2</b><span style="display:none;" id="PCAVARS.md_working_3.datref2">The CONSTANT action with label <b>ref2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref2</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=1 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=36 <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-0.20355,-0.15755,-0.13975,-0.18375,-0.01055,0.00605,-0.00935,0.10965,0.19205,0.12085,0.04585,0.23005,0.0588333,0.149833,-0.0579667,-0.124967,-0.0947667,-0.196967,-0.0967667,-0.0197667,-0.0767667,0.111233,0.154033,0.194033,0.00835,-0.05865,0.02835,0.08655,-0.02645,0.00535,-0.18025,0.03195,0.10115,0.00295,-0.04725,0.04795
+<span style="color:blue"># --- End of included input --- </span></span><span style="color:blue" class="comment"># Calculate the displacement vector that takes you from ref1 to ref2</span>
+<b name="PCAVARS.md_working_3.dateigu" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.dateigu","PCAVARS.md_working_3.dateigu","brown")'>eigu</b><span style="display:none;" id="PCAVARS.md_working_3.dateigu">The RMSD action with label <b>eigu</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">eigu.dist</td><td width="5%"><font color="black">scalar</font></td><td>the RMSD distance the atoms have moved</td></tr><tr><td width="5%">eigu.disp</td><td width="5%"><font color="blue">vector</font></td><td>the vector of displacements for the atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">RMSD<span class="right">Calculate the RMSD with respect to a reference structure. <a href="https://www.plumed.org/doc-master/user-doc/html/RMSD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">instead of using the REFERENCE option you can use this action to specify the labels of two actions that you are calculating the RMSD between<i></i></span></span>=<b name="PCAVARS.md_working_3.datref1T">ref1T</b>,<b name="PCAVARS.md_working_3.datref2">ref2</b> <span class="plumedtooltip">DISPLACEMENT<span class="right"> Calculate the vector of displacements instead of the length of this vector<i></i></span></span> <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL
+<span style="color:blue" class="comment"># Normalise the reference vector</span>
+<b name="PCAVARS.md_working_3.dateigu2" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.dateigu2","PCAVARS.md_working_3.dateigu2","blue")'>eigu2</b><span style="display:none;" id="PCAVARS.md_working_3.dateigu2">The CUSTOM action with label <b>eigu2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">eigu2</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PCAVARS.md_working_3.dateigu">eigu.disp</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*x <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PCAVARS.md_working_3.dateign2" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.dateign2","PCAVARS.md_working_3.dateign2","black")'>eign2</b><span style="display:none;" id="PCAVARS.md_working_3.dateign2">The SUM action with label <b>eign2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">eign2</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PCAVARS.md_working_3.dateigu2">eigu2</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PCAVARS.md_working_3.dateig" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.dateig","PCAVARS.md_working_3.dateig","blue")'>eig</b><span style="display:none;" id="PCAVARS.md_working_3.dateig">The CUSTOM action with label <b>eig</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">eig</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PCAVARS.md_working_3.dateigu">eigu.disp</b>,<b name="PCAVARS.md_working_3.dateign2">eign2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/sqrt(y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PCAVARS.md_working_3.dateigT" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.dateigT","PCAVARS.md_working_3.dateigT","red")'>eigT</b><span style="display:none;" id="PCAVARS.md_working_3.dateigT">The TRANSPOSE action with label <b>eigT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">eigT</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="PCAVARS.md_working_3.dateig">eig</b>
+<span style="color:blue" class="comment"># Everything prior to this point is only done in setup.  From here onwards we have the commands that are done during the main calculate loop.</span>
+<br/><span style="color:blue" class="comment"># Calculate the RMSD displacement between the instaneous structure and the first reference structure</span>
+<span id="PCAVARS.md_working_3.datrmsd_short"><b name="PCAVARS.md_working_3.datrmsd" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.datrmsd","PCAVARS.md_working_3.datrmsd","brown")'>rmsd</b><span style="display:none;" id="PCAVARS.md_working_3.datrmsd">The RMSD action with label <b>rmsd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd.dist</td><td width="5%"><font color="black">scalar</font></td><td>the RMSD distance the atoms have moved</td></tr><tr><td width="5%">rmsd.disp</td><td width="5%"><font color="blue">vector</font></td><td>the vector of displacements for the atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">RMSD<span class="right">Calculate the RMSD with respect to a reference structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PCAVARS.md_working_3.datrmsd");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/RMSD">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure and the atoms involved in the CV<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca-two-frames/two-frames.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_3.datregtest/mapping/rt-pca-two-frames/two-frames.pdb3")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_3.datregtest/mapping/rt-pca-two-frames/two-frames.pdb3" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_3.datregtest/mapping/rt-pca-two-frames/two-frames.pdb3")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca-two-frames/two-frames.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      5  CLP ALA     1      -1.819  -0.143   1.679  1.00  1.00
+ATOM      6  OL  ALA     1      -1.177  -0.889   2.401  1.00  1.00
+ATOM      7  NL  ALA     1      -1.313   0.341   0.529  1.00  1.00
+ATOM      8  HL  ALA     1      -1.845   0.961  -0.011  1.00  1.00
+ATOM      9  CA  ALA     1      -0.003  -0.019   0.021  1.00  1.00
+ATOM     10  HA  ALA     1       0.205  -1.051   0.259  1.00  1.00
+ATOM     11  CB  ALA     1       0.009   0.135  -1.509  1.00  1.00
+ATOM     15  CRP ALA     1       1.121   0.799   0.663  1.00  1.00
+ATOM     16  OR  ALA     1       1.723   1.669   0.043  1.00  1.00
+ATOM     17  NR  ALA     1       1.423   0.519   1.941  1.00  1.00
+ATOM     18  HR  ALA     1       0.873  -0.161   2.413  1.00  1.00
+ATOM     19  CR  ALA     1       2.477   1.187   2.675  1.00  1.00
+END
+ATOM      5  CLP ALA     1      -1.941   1.459   0.447  1.00  1.00
+ATOM      6  OL  ALA     1      -1.481   2.369  -0.223  1.00  1.00
+ATOM      7  NL  ALA     1      -1.303   0.291   0.647  1.00  1.00
+ATOM      8  HL  ALA     1      -1.743  -0.379   1.229  1.00  1.00
+ATOM      9  CA  ALA     1      -0.011  -0.077   0.099  1.00  1.00
+ATOM     10  HA  ALA     1       0.155  -1.099   0.417  1.00  1.00
+ATOM     11  CB  ALA     1       0.001  -0.097  -1.439  1.00  1.00
+ATOM     15  CRP ALA     1       1.191   0.673   0.683  1.00  1.00
+ATOM     16  OR  ALA     1       2.015   0.103   1.375  1.00  1.00
+ATOM     17  NR  ALA     1       1.303   1.983   0.393  1.00  1.00
+ATOM     18  HR  ALA     1       0.553   2.411  -0.109  1.00  1.00
+ATOM     19  CR  ALA     1       2.395   2.811   0.843  1.00  1.00
+END
+</pre></div>  </div></div> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=1 <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL <span class="plumedtooltip">DISPLACEMENT<span class="right"> Calculate the vector of displacements instead of the length of this vector<i></i></span></span> <span class="plumedtooltip">SQUARED<span class="right">  This should be setted if you want MSD instead of RMSD <i></i></span></span>
+</span><span id="PCAVARS.md_working_3.datrmsd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PCAVARS.md_working_3.datrmsd")'># rmsd: RMSD REFERENCE=regtest/mapping/rt-pca-two-frames/two-frames.pdb NUMBER=1 TYPE=OPTIMAL DISPLACEMENT SQUARED</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PCAVARS.md_working_3.datrmsd_ref" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.datrmsd_ref","PCAVARS.md_working_3.datrmsd_ref","red")'>rmsd_ref</b><span style="display:none;" id="PCAVARS.md_working_3.datrmsd_ref">The CONSTANT action with label <b>rmsd_ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd_ref</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca-two-frames/two-frames.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_3.datregtest/mapping/rt-pca-two-frames/two-frames.pdb4")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_3.datregtest/mapping/rt-pca-two-frames/two-frames.pdb4" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_3.datregtest/mapping/rt-pca-two-frames/two-frames.pdb4")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca-two-frames/two-frames.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      5  CLP ALA     1      -1.819  -0.143   1.679  1.00  1.00
+ATOM      6  OL  ALA     1      -1.177  -0.889   2.401  1.00  1.00
+ATOM      7  NL  ALA     1      -1.313   0.341   0.529  1.00  1.00
+ATOM      8  HL  ALA     1      -1.845   0.961  -0.011  1.00  1.00
+ATOM      9  CA  ALA     1      -0.003  -0.019   0.021  1.00  1.00
+ATOM     10  HA  ALA     1       0.205  -1.051   0.259  1.00  1.00
+ATOM     11  CB  ALA     1       0.009   0.135  -1.509  1.00  1.00
+ATOM     15  CRP ALA     1       1.121   0.799   0.663  1.00  1.00
+ATOM     16  OR  ALA     1       1.723   1.669   0.043  1.00  1.00
+ATOM     17  NR  ALA     1       1.423   0.519   1.941  1.00  1.00
+ATOM     18  HR  ALA     1       0.873  -0.161   2.413  1.00  1.00
+ATOM     19  CR  ALA     1       2.477   1.187   2.675  1.00  1.00
+END
+ATOM      5  CLP ALA     1      -1.941   1.459   0.447  1.00  1.00
+ATOM      6  OL  ALA     1      -1.481   2.369  -0.223  1.00  1.00
+ATOM      7  NL  ALA     1      -1.303   0.291   0.647  1.00  1.00
+ATOM      8  HL  ALA     1      -1.743  -0.379   1.229  1.00  1.00
+ATOM      9  CA  ALA     1      -0.011  -0.077   0.099  1.00  1.00
+ATOM     10  HA  ALA     1       0.155  -1.099   0.417  1.00  1.00
+ATOM     11  CB  ALA     1       0.001  -0.097  -1.439  1.00  1.00
+ATOM     15  CRP ALA     1       1.191   0.673   0.683  1.00  1.00
+ATOM     16  OR  ALA     1       2.015   0.103   1.375  1.00  1.00
+ATOM     17  NR  ALA     1       1.303   1.983   0.393  1.00  1.00
+ATOM     18  HR  ALA     1       0.553   2.411  -0.109  1.00  1.00
+ATOM     19  CR  ALA     1       2.395   2.811   0.843  1.00  1.00
+END
+</pre></div>  </div></div> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=1
+<span class="plumedtooltip" style="color:green">WHOLEMOLECULES<span class="right">This action is used to rebuild molecules that can become split by the periodic boundary conditions. <a href="https://www.plumed.org/doc-master/user-doc/html/WHOLEMOLECULES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ENTITY0<span class="right">the atoms that make up a molecule that you wish to align<i></i></span></span>=5,6,7,8,9,10,11,15,16,17,18,19
+<span style="display:none;" id="PCAVARS.md_working_3.dat">The WHOLEMOLECULES action with label <b></b> calculates something</span><b name="PCAVARS.md_working_3.datrmsd_cpos" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.datrmsd_cpos","PCAVARS.md_working_3.datrmsd_cpos","blue")'>rmsd_cpos</b><span style="display:none;" id="PCAVARS.md_working_3.datrmsd_cpos">The POSITION action with label <b>rmsd_cpos</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd_cpos.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the atom position</td></tr><tr><td width="5%">rmsd_cpos.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the atom position</td></tr><tr><td width="5%">rmsd_cpos.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the atom position</td></tr></table></span>: <span class="plumedtooltip" style="color:green">POSITION<span class="right">Calculate the components of the position of an atom or atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/POSITION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the atom numbers that you would like to use the positions of<i></i></span></span>=5,6,7,8,9,10,11,15,16,17,18,19
+<b name="PCAVARS.md_working_3.datrmsd_pos" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.datrmsd_pos","PCAVARS.md_working_3.datrmsd_pos","blue")'>rmsd_pos</b><span style="display:none;" id="PCAVARS.md_working_3.datrmsd_pos">The CONCATENATE action with label <b>rmsd_pos</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd_pos</td><td width="5%"><font color="blue">vector</font></td><td>the concatenated vector/matrix that was constructed from the input values</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONCATENATE<span class="right">Join vectors or matrices together <a href="https://www.plumed.org/doc-master/user-doc/html/CONCATENATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values that should be concatenated together to form the output vector<i></i></span></span>=<b name="PCAVARS.md_working_3.datrmsd_cpos">rmsd_cpos.x</b>,<b name="PCAVARS.md_working_3.datrmsd_cpos">rmsd_cpos.y</b>,<b name="PCAVARS.md_working_3.datrmsd_cpos">rmsd_cpos.z</b>
+<b name="PCAVARS.md_working_3.datrmsd" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.datrmsd","PCAVARS.md_working_3.datrmsd","brown")'>rmsd</b>: <span class="plumedtooltip" style="color:green">RMSD<span class="right">Calculate the RMSD with respect to a reference structure. <a href="https://www.plumed.org/doc-master/user-doc/html/RMSD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">instead of using the REFERENCE option you can use this action to specify the labels of two actions that you are calculating the RMSD between<i></i></span></span>=<b name="PCAVARS.md_working_3.datrmsd_pos">rmsd_pos</b>,<b name="PCAVARS.md_working_3.datrmsd_ref">rmsd_ref</b> <span class="plumedtooltip">DISPLACEMENT<span class="right"> Calculate the vector of displacements instead of the length of this vector<i></i></span></span> <span class="plumedtooltip">ALIGN<span class="right"> the weights to use when aligning to the reference structure<i></i></span></span>=1,1,1,1,1,1,1,1,1,1,1,1 <span class="plumedtooltip">DISPLACE<span class="right"> the weights to use when calculating the displacement from the reference structure<i></i></span></span>=1,1,1,1,1,1,1,1,1,1,1,1 <span class="plumedtooltip">SQUARED<span class="right">  This should be setted if you want MSD instead of RMSD <i></i></span></span> <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL
+<span style="color:blue"># --- End of included input --- </span></span><span style="color:blue" class="comment"># Project the displacement computed above on the director of the vector that connects reference structure ref1 to refeference structure ref2</span>
+<b name="PCAVARS.md_working_3.datpca" onclick='showPath("PCAVARS.md_working_3.dat","PCAVARS.md_working_3.datpca","PCAVARS.md_working_3.datpca","blue")'>pca</b><span style="display:none;" id="PCAVARS.md_working_3.datpca">The MATRIX_VECTOR_PRODUCT action with label <b>pca</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="PCAVARS.md_working_3.dateigT">eigT</b>,<b name="PCAVARS.md_working_3.datrmsd">rmsd.disp</b>
+
+<span style="color:blue" class="comment"># Print the final CV to a file</span>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="PCAVARS.md_working_3.datpca">pca</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>You can also project vectors of differences of arguments on reference vectors.  For example, the input below can be used to look at the projection
+of the vector connecting the instantanous configuraiton to a reference point in CV on a reference vector that has been specified in the PDB file.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PCAVARS.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PCAVARS.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/mapping/rt-pca-args/epath.pdb</span>
+<br/><b name="PCAVARS.md_working_4.datd1" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datd1","PCAVARS.md_working_4.datd1","black")'>d1</b><span style="display:none;" id="PCAVARS.md_working_4.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="PCAVARS.md_working_4.datd2" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datd2","PCAVARS.md_working_4.datd2","black")'>d2</b><span style="display:none;" id="PCAVARS.md_working_4.datd2">The DISTANCE action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4
+<b name="PCAVARS.md_working_4.datd3" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datd3","PCAVARS.md_working_4.datd3","black")'>d3</b><span style="display:none;" id="PCAVARS.md_working_4.datd3">The DISTANCE action with label <b>d3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d3</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,6
+<span id="PCAVARS.md_working_4.datpca_short"><span id="PCAVARS.md_working_4.datdefpca_short"><b name="PCAVARS.md_working_4.datpca" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datpca","PCAVARS.md_working_4.datpca_shortcut","brown")'>pca</b><span style="display:none;" id="PCAVARS.md_working_4.datpca_shortcut">The PCAVARS action with label <b>pca</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca_eig</td><td width="5%"><font color="blue">vector</font></td><td>the projections on the eigenvalues</td></tr><tr><td width="5%">pca_residual</td><td width="5%"><font color="black">scalar</font></td><td>the residual distance that is not projected on any of the eigenvalues</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PCAVARS<span class="right">Projection on principal component eigenvectors or other high dimensional linear subspace This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PCAVARS.md_working_4.datpca");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("PCAVARS.md_working_4.datdefpca");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PCAVARS">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">if there are arguments to be used specify them here<i></i></span></span>=<b name="PCAVARS.md_working_4.datd1">d1</b>,<b name="PCAVARS.md_working_4.datd2">d2</b>,<b name="PCAVARS.md_working_4.datd3">d3</b> <span class="plumedtooltip">REFERENCE<span class="right">a pdb file containing the set of reference configurations<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca-args/epath.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb1")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca-args/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK d1=0.1221 d2=0.0979 d3=0.1079
+END
+REMARK d1=0.078811 d2=-0.945732 d3=-0.315244
+END
+</pre></div>  </div></div>
+</span><span id="PCAVARS.md_working_4.datdefpca_long" style="display:none;"><span style="display:none;" id="PCAVARS.md_working_4.datpca">The PCAVARS action with label <b>pca</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca.eig</td><td>the projections on the eigenvalues</td></tr><tr><td width="5%">pca.residual</td><td>the residual distance that is not projected on any of the eigenvalues</td></tr></table></span><b name="PCAVARS.md_working_4.datpca" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datpca","PCAVARS.md_working_4.datpca_shortcut","brown")'>pca</b>: <span class="plumedtooltip" style="color:green">PCAVARS<span class="right">Projection on principal component eigenvectors or other high dimensional linear subspace This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PCAVARS.md_working_4.datpca");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("PCAVARS.md_working_4.datdefpca");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PCAVARS">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">if there are arguments to be used specify them here<i></i></span></span>=<b name="PCAVARS.md_working_4.datd1">d1</b>,<b name="PCAVARS.md_working_4.datd2">d2</b>,<b name="PCAVARS.md_working_4.datd3">d3</b> <span class="plumedtooltip">REFERENCE<span class="right">a pdb file containing the set of reference configurations<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca-args/epath.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb2")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb2")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca-args/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK d1=0.1221 d2=0.0979 d3=0.1079
+END
+REMARK d1=0.078811 d2=-0.945732 d3=-0.315244
+END
+</pre></div>  </div></div>  <span class="plumedtooltip">TYPE<span class="right"> the manner in which distances are calculated<i></i></span></span>=OPTIMAL-FAST
+</span></span><span id="PCAVARS.md_working_4.datpca_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PCAVARS.md_working_4.datpca")'># pca: PCAVARS ARG=d1,d2,d3 REFERENCE=regtest/mapping/rt-pca-args/epath.pdb</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PCAVARS.md_working_4.datpca_ref_d1" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datpca_ref_d1","PCAVARS.md_working_4.datpca_ref_d1","black")'>pca_ref_d1</b><span style="display:none;" id="PCAVARS.md_working_4.datpca_ref_d1">The CONSTANT action with label <b>pca_ref_d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca_ref_d1</td><td width="5%"><font color="black">scalar</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=1 <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca-args/epath.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb3")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb3" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb3")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca-args/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK d1=0.1221 d2=0.0979 d3=0.1079
+END
+REMARK d1=0.078811 d2=-0.945732 d3=-0.315244
+END
+</pre></div>  </div></div> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=<b name="PCAVARS.md_working_4.datd1">d1</b>
+<b name="PCAVARS.md_working_4.datpca_ref_d2" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datpca_ref_d2","PCAVARS.md_working_4.datpca_ref_d2","black")'>pca_ref_d2</b><span style="display:none;" id="PCAVARS.md_working_4.datpca_ref_d2">The CONSTANT action with label <b>pca_ref_d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca_ref_d2</td><td width="5%"><font color="black">scalar</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=1 <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca-args/epath.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb4")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb4" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb4")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca-args/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK d1=0.1221 d2=0.0979 d3=0.1079
+END
+REMARK d1=0.078811 d2=-0.945732 d3=-0.315244
+END
+</pre></div>  </div></div> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=<b name="PCAVARS.md_working_4.datd2">d2</b>
+<b name="PCAVARS.md_working_4.datpca_ref_d3" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datpca_ref_d3","PCAVARS.md_working_4.datpca_ref_d3","black")'>pca_ref_d3</b><span style="display:none;" id="PCAVARS.md_working_4.datpca_ref_d3">The CONSTANT action with label <b>pca_ref_d3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca_ref_d3</td><td width="5%"><font color="black">scalar</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=1 <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pca-args/epath.pdb<div class="right"> Click <a onclick='openModal("PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb5")'>here</a> to see an extract from this file.<i></i></div></div><div id="PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb5" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PCAVARS.md_working_4.datregtest/mapping/rt-pca-args/epath.pdb5")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pca-args/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK d1=0.1221 d2=0.0979 d3=0.1079
+END
+REMARK d1=0.078811 d2=-0.945732 d3=-0.315244
+END
+</pre></div>  </div></div> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=<b name="PCAVARS.md_working_4.datd3">d3</b>
+<b name="PCAVARS.md_working_4.datpca_argdist" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datpca_argdist","PCAVARS.md_working_4.datpca_argdist","black")'>pca_argdist</b><span style="display:none;" id="PCAVARS.md_working_4.datpca_argdist">The MATRIX_PRODUCT_DIAGONAL action with label <b>pca_argdist</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca_argdist</td><td width="5%"><font color="black">scalar</font></td><td>a vector containing the diagonal elements of the matrix that obtaned by multiplying the two input matrices together</td></tr></table></span>: <span class="plumedtooltip" style="color:green">EUCLIDEAN_DISTANCE<span class="right">Calculate the euclidean distance between two vectors of arguments <a href="https://www.plumed.org/doc-master/user-doc/html/EUCLIDEAN_DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SQUARED<span class="right"> The squared distance should be calculated<i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The poin that we are calculating the distance from<i></i></span></span>=<b name="PCAVARS.md_working_4.datd1">d1</b>,<b name="PCAVARS.md_working_4.datd2">d2</b>,<b name="PCAVARS.md_working_4.datd3">d3</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="PCAVARS.md_working_4.datpca_ref_d1">pca_ref_d1</b>,<b name="PCAVARS.md_working_4.datpca_ref_d2">pca_ref_d2</b>,<b name="PCAVARS.md_working_4.datpca_ref_d3">pca_ref_d3</b>
+<b name="PCAVARS.md_working_4.datpca_peig" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datpca_peig","PCAVARS.md_working_4.datpca_peig","red")'>pca_peig</b><span style="display:none;" id="PCAVARS.md_working_4.datpca_peig">The CONSTANT action with label <b>pca_peig</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca_peig</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=0.078811,-0.945732,-0.315244 <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=1 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=3
+<b name="PCAVARS.md_working_4.datpca_eig" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datpca_eig","PCAVARS.md_working_4.datpca_eig","blue")'>pca_eig</b><span style="display:none;" id="PCAVARS.md_working_4.datpca_eig">The MATRIX_VECTOR_PRODUCT action with label <b>pca_eig</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca_eig</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="PCAVARS.md_working_4.datpca_peig">pca_peig</b>,pca_argdist_diffT
+<b name="PCAVARS.md_working_4.datpca_eig-1" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datpca_eig-1","PCAVARS.md_working_4.datpca_eig-1","blue")'>pca_eig-1</b><span style="display:none;" id="PCAVARS.md_working_4.datpca_eig-1">The SELECT_WITH_MASK action with label <b>pca_eig-1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca_eig-1</td><td width="5%"><font color="blue">vector</font></td><td>a vector/matrix of values that is obtained using a mask to select elements of interest</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SELECT_COMPONENTS<span class="right">Create a new value to hold a subset of the components that are in a vector or matrix <a href="https://www.plumed.org/doc-master/user-doc/html/SELECT_COMPONENTS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the value from which we are selecting components<i></i></span></span>=<b name="PCAVARS.md_working_4.datpca_eig">pca_eig</b> <span class="plumedtooltip">COMPONENTS<span class="right">the components in the input value that you woul like to build a new vector from<i></i></span></span>=1
+<b name="PCAVARS.md_working_4.datpca_eig2" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datpca_eig2","PCAVARS.md_working_4.datpca_eig2","blue")'>pca_eig2</b><span style="display:none;" id="PCAVARS.md_working_4.datpca_eig2">The CUSTOM action with label <b>pca_eig2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca_eig2</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PCAVARS.md_working_4.datpca_eig">pca_eig</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*x <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PCAVARS.md_working_4.datpca_eigsum2" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datpca_eigsum2","PCAVARS.md_working_4.datpca_eigsum2","black")'>pca_eigsum2</b><span style="display:none;" id="PCAVARS.md_working_4.datpca_eigsum2">The SUM action with label <b>pca_eigsum2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca_eigsum2</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PCAVARS.md_working_4.datpca_eig2">pca_eig2</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PCAVARS.md_working_4.datpca_residual" onclick='showPath("PCAVARS.md_working_4.dat","PCAVARS.md_working_4.datpca_residual","PCAVARS.md_working_4.datpca_residual","black")'>pca_residual</b><span style="display:none;" id="PCAVARS.md_working_4.datpca_residual">The CUSTOM action with label <b>pca_residual</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pca_residual</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PCAVARS.md_working_4.datpca_argdist">pca_argdist</b>,<b name="PCAVARS.md_working_4.datpca_eigsum2">pca_eigsum2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x-y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="PCAVARS.md_working_4.datpca_eig-1">pca_eig-1</b>,<b name="PCAVARS.md_working_4.datpca_residual">pca_residual</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>The first set of argument values in this input file are the reference values for the arguments.  The second any subsquent sets of arguments give the
+coefficients that should be used when constructing linear combinations.</p>
+<p>Notice, lastly, that you can also use a combination of argument values and atomic positions when specifying the reference configuration and the reference
+directions.  If you are doing something this complicated, however, you are perhaps better working with the PLUMED input directly rather than this shortcut
+as you will need to take special measures to ensure that all your CVs are in the same units.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">scalar/vector</td>
+<td style="text-align: left;">if there are arguments to be used specify them here</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-components">Output components</h2>
+<p>This action calculates the <a href="../specifying_arguments/">values</a> in the following table.  These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">eig</td>
+<td style="text-align: left;">vector</td>
+<td style="text-align: left;">the projections on the eigenvalues</td>
+</tr>
+<tr>
+<td style="text-align: left;">residual</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">the residual distance that is not projected on any of the eigenvalues</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">if there are arguments to be used specify them here</td>
+</tr>
+<tr>
+<td style="text-align: left;">REFERENCE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">a pdb file containing the set of reference configurations</td>
+</tr>
+<tr>
+<td style="text-align: left;">TYPE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">OPTIMAL-FAST</td>
+<td style="text-align: left;">the manner in which distances are calculated</td>
+</tr>
+<tr>
+<td style="text-align: left;">NOPBC</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">do not use periodic boundary conditions when computing this quantity</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

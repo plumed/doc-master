@@ -1,0 +1,3 @@
+#SETTINGS INPUTFILES=regtest/basic/rt-fametad-1/Input-COLVAR
+sum_abs: READ VALUES=sum_abs FILE=regtest/basic/rt-fametad-1/Input-COLVAR IGNORE_FORCES
+PRINT ARG=sum_abs STRIDE=1 FILE=colvar

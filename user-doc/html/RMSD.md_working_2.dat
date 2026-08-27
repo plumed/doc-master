@@ -1,0 +1,3 @@
+#SETTINGS INPUTFILES=regtest/basic/rt19/test0.pdb
+rmsd0: RMSD TYPE=OPTIMAL SQUARED REFERENCE=regtest/basic/rt19/test0.pdb
+PRINT ARG=rmsd0 FILE=colvar

@@ -1,0 +1,3 @@
+#SETTINGS MOLFILE=regtest/basic/rt-ermsd/ref.pdb
+MOLINFO STRUCTURE=regtest/basic/rt-ermsd/ref.pdb
+eRMSD1: ERMSD REFERENCE=regtest/basic/rt-ermsd/ref.pdb ATOMS=@lcs-1,@lcs-2,@lcs-3,@lcs-4,@lcs-5,@lcs-6

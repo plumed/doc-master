@@ -1,0 +1,15 @@
+# add some restraint that do not require molecules to be whole:
+a: TORSION ATOMS=1,2,10,11
+RESTRAINT ARG=a AT=0.0 KAPPA=5
+
+
+# then do the things that are required for dumping the trajectory
+# notice that they are all done every 100 steps, so as not to
+# unnecessarily overload the calculation
+
+rna: GROUP ATOMS=1-100
+ions: GROUP ATOMS=101-110
+# first make the rna molecule whole
+WHOLEMOLECULES ENTITY0=rna STRIDE=100
+WRAPAROUND ATOMS=ions AROUND=rna STRIDE=100
+DUMPATOMS FILE=dump.xyz ATOMS=rna,ions STRIDE=100

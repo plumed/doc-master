@@ -1,0 +1,3 @@
+#SETTINGS INPUTFILES=regtest/mapping/rt39/all1.pdb
+rmsd: RMSD TYPE=OPTIMAL DISPLACEMENT REFERENCE=regtest/mapping/rt39/all1.pdb
+PRINT ARG=rmsd.disp,rmsd.dist FILE=colvar

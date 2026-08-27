@@ -1,0 +1,830 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: AVERAGE - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-average" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: AVERAGE
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-average"><a href="../shortcuts/">Shortcut</a>: AVERAGE</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_generic/"><strong>generic</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate the ensemble average of a collective variable</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=AVERAGE"><img alt="used in 2 tutorials" src="https://img.shields.io/badge/tutorials-2-green.svg" /></a><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the value of the average</td>
+<td style="text-align: center;">scalar/grid</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate the ensemble average of a collective variable</p>
+<p>The ensemble average for a non-periodic, collective variable, <script type="math/tex">s</script> is given by the following expression:</p>
+<p>
+<script type="math/tex; mode=display">
+\langle s \rangle = \frac{ \sum_{t'=0}^t w(t') s(t') }{ \sum_{t'=0}^t w(t') }
+</script>
+</p>
+<p>Here the sum runs over a the trajectory and <script type="math/tex">s(t')</script> is used to denote the value of the collective variable
+at time <script type="math/tex">t'</script>.  The final quantity evaluated is a weighted
+average as the weights, If the simulation is unbiassed then all the <script type="math/tex">w(t')</script> values in teh expression above are
+zero.  If the simulation is biased then the <script type="math/tex">w(t')</script> weights are set in a way that ensures the effect any bias
+has on the region of phase space sampled by the system is negated.</p>
+<p>As the following example input shows you can use the AVERAGE shortcut to calculate the ensemble average of a CV using this formula:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_AVERAGE.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../AVERAGE.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="AVERAGE.md_working_1.datd1" onclick='showPath("AVERAGE.md_working_1.dat","AVERAGE.md_working_1.datd1","AVERAGE.md_working_1.datd1","black")'>d1</b><span style="display:none;" id="AVERAGE.md_working_1.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<span id="AVERAGE.md_working_1.datd1a_short"><span id="AVERAGE.md_working_1.datdefd1a_short"><b name="AVERAGE.md_working_1.datd1a" onclick='showPath("AVERAGE.md_working_1.dat","AVERAGE.md_working_1.datd1a","AVERAGE.md_working_1.datd1a_shortcut","black")'>d1a</b><span style="display:none;" id="AVERAGE.md_working_1.datd1a_shortcut">The AVERAGE action with label <b>d1a</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1a</td><td width="5%"><font color="black">scalar</font></td><td>the value of the average</td></tr></table></span>: <span class="plumedtooltip" style="color:green">AVERAGE<span class="right">Calculate the ensemble average of a collective variable This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_1.datd1a");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_1.datdefd1a");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/AVERAGE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the quantity that is being averaged<i></i></span></span>=<b name="AVERAGE.md_working_1.datd1">d1</b>
+</span><span id="AVERAGE.md_working_1.datdefd1a_long" style="display:none;"><b name="AVERAGE.md_working_1.datd1a" onclick='showPath("AVERAGE.md_working_1.dat","AVERAGE.md_working_1.datd1a","AVERAGE.md_working_1.datd1a_shortcut","black")'>d1a</b>: <span class="plumedtooltip" style="color:green">AVERAGE<span class="right">Calculate the ensemble average of a collective variable This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_1.datd1a");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_1.datdefd1a");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/AVERAGE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the quantity that is being averaged<i></i></span></span>=<b name="AVERAGE.md_working_1.datd1">d1</b>  <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which to store data for averaging<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with whihc to clear the data that is being averaged<i></i></span></span>=0
+</span></span><span id="AVERAGE.md_working_1.datd1a_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("AVERAGE.md_working_1.datd1a")'># d1a: AVERAGE ARG=d1</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="AVERAGE.md_working_1.datd1a_weight" onclick='showPath("AVERAGE.md_working_1.dat","AVERAGE.md_working_1.datd1a_weight","AVERAGE.md_working_1.datd1a_weight","black")'>d1a_weight</b><span style="display:none;" id="AVERAGE.md_working_1.datd1a_weight">The CONSTANT action with label <b>d1a_weight</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1a_weight</td><td width="5%"><font color="black">scalar</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=1
+<b name="AVERAGE.md_working_1.datd1a_denom" onclick='showPath("AVERAGE.md_working_1.dat","AVERAGE.md_working_1.datd1a_denom","AVERAGE.md_working_1.datd1a_denom","black")'>d1a_denom</b><span style="display:none;" id="AVERAGE.md_working_1.datd1a_denom">The ACCUMULATE action with label <b>d1a_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1a_denom</td><td width="5%"><font color="black">scalar</font></td><td>a sum calculated from the time series of the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ACCUMULATE<span class="right">Sum the elements of this value over the course of the trajectory <a href="https://www.plumed.org/doc-master/user-doc/html/ACCUMULATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the argument that is being added to on each timestep<i></i></span></span>=<b name="AVERAGE.md_working_1.datd1a_weight">d1a_weight</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=0
+<b name="AVERAGE.md_working_1.datd1a_prod" onclick='showPath("AVERAGE.md_working_1.dat","AVERAGE.md_working_1.datd1a_prod","AVERAGE.md_working_1.datd1a_prod","black")'>d1a_prod</b><span style="display:none;" id="AVERAGE.md_working_1.datd1a_prod">The CUSTOM action with label <b>d1a_prod</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1a_prod</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="AVERAGE.md_working_1.datd1">d1</b>,<b name="AVERAGE.md_working_1.datd1a_weight">d1a_weight</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="AVERAGE.md_working_1.datd1a_numer" onclick='showPath("AVERAGE.md_working_1.dat","AVERAGE.md_working_1.datd1a_numer","AVERAGE.md_working_1.datd1a_numer","black")'>d1a_numer</b><span style="display:none;" id="AVERAGE.md_working_1.datd1a_numer">The ACCUMULATE action with label <b>d1a_numer</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1a_numer</td><td width="5%"><font color="black">scalar</font></td><td>a sum calculated from the time series of the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ACCUMULATE<span class="right">Sum the elements of this value over the course of the trajectory <a href="https://www.plumed.org/doc-master/user-doc/html/ACCUMULATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the argument that is being added to on each timestep<i></i></span></span>=<b name="AVERAGE.md_working_1.datd1a_prod">d1a_prod</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=0
+<b name="AVERAGE.md_working_1.datd1a" onclick='showPath("AVERAGE.md_working_1.dat","AVERAGE.md_working_1.datd1a","AVERAGE.md_working_1.datd1a","black")'>d1a</b><span style="display:none;" id="AVERAGE.md_working_1.datd1a">The CUSTOM action with label <b>d1a</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1a</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="AVERAGE.md_working_1.datd1a_numer">d1a_numer</b>,<b name="AVERAGE.md_working_1.datd1a_denom">d1a_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="AVERAGE.md_working_1.datd1a">d1a</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=100
+</pre></div>
+
+<p>In this example no bias is acting on the system so the weights, <script type="math/tex">w(t')</script> in the formulas above can thus all be set equal
+to one. The shortcut illustrates how the averaging is achieved by using the <a href="../ACCUMULATE/">ACCUMULATE</a> action.</p>
+<p>When the variable is periodic (e.g. <a href="../TORSION/">TORSION</a>) and has a value, <script type="math/tex">s</script>, in <script type="math/tex">a \le s \le b</script> the ensemble average is evaluated using:</p>
+<p>
+<script type="math/tex; mode=display">
+\langle s \rangle = a + \frac{b - a}{2\pi} \arctan \left[ \frac{ \sum_{t'=0}^t w(t') \sin\left( \frac{2\pi [s(t')-a]}{b - a} \right) }{ \sum_{t'=0}^t w(t') \cos\left( \frac{2\pi [s(t')-a]}{b - a} \right) } \right]
+</script>
+</p>
+<p>You can see how <a href="../ACCUMULATE/">ACCUMULATE</a> and <a href="../CUSTOM/">CUSTOM</a> can be used to implement this formula by expanding the shortcuts in the following example input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_AVERAGE.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../AVERAGE.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="AVERAGE.md_working_2.datt1" onclick='showPath("AVERAGE.md_working_2.dat","AVERAGE.md_working_2.datt1","AVERAGE.md_working_2.datt1","black")'>t1</b><span style="display:none;" id="AVERAGE.md_working_2.datt1">The TORSION action with label <b>t1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,2,3,4
+<span id="AVERAGE.md_working_2.datt1a_short"><span id="AVERAGE.md_working_2.datdeft1a_short"><b name="AVERAGE.md_working_2.datt1a" onclick='showPath("AVERAGE.md_working_2.dat","AVERAGE.md_working_2.datt1a","AVERAGE.md_working_2.datt1a_shortcut","black")'>t1a</b><span style="display:none;" id="AVERAGE.md_working_2.datt1a_shortcut">The AVERAGE action with label <b>t1a</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a</td><td width="5%"><font color="black">scalar</font></td><td>the value of the average</td></tr></table></span>: <span class="plumedtooltip" style="color:green">AVERAGE<span class="right">Calculate the ensemble average of a collective variable This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_2.datt1a");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_2.datdeft1a");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/AVERAGE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the quantity that is being averaged<i></i></span></span>=<b name="AVERAGE.md_working_2.datt1">t1</b> <span class="plumedtooltip">CLEAR<span class="right"> the frequency with whihc to clear the data that is being averaged<i></i></span></span>=100
+</span><span id="AVERAGE.md_working_2.datdeft1a_long" style="display:none;"><b name="AVERAGE.md_working_2.datt1a" onclick='showPath("AVERAGE.md_working_2.dat","AVERAGE.md_working_2.datt1a","AVERAGE.md_working_2.datt1a_shortcut","black")'>t1a</b>: <span class="plumedtooltip" style="color:green">AVERAGE<span class="right">Calculate the ensemble average of a collective variable This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_2.datt1a");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_2.datdeft1a");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/AVERAGE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the quantity that is being averaged<i></i></span></span>=<b name="AVERAGE.md_working_2.datt1">t1</b> <span class="plumedtooltip">CLEAR<span class="right"> the frequency with whihc to clear the data that is being averaged<i></i></span></span>=100  <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which to store data for averaging<i></i></span></span>=1
+</span></span><span id="AVERAGE.md_working_2.datt1a_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("AVERAGE.md_working_2.datt1a")'># t1a: AVERAGE ARG=t1 CLEAR=100</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="AVERAGE.md_working_2.datt1a_weight" onclick='showPath("AVERAGE.md_working_2.dat","AVERAGE.md_working_2.datt1a_weight","AVERAGE.md_working_2.datt1a_weight","black")'>t1a_weight</b><span style="display:none;" id="AVERAGE.md_working_2.datt1a_weight">The CONSTANT action with label <b>t1a_weight</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_weight</td><td width="5%"><font color="black">scalar</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=1
+<b name="AVERAGE.md_working_2.datt1a_denom" onclick='showPath("AVERAGE.md_working_2.dat","AVERAGE.md_working_2.datt1a_denom","AVERAGE.md_working_2.datt1a_denom","black")'>t1a_denom</b><span style="display:none;" id="AVERAGE.md_working_2.datt1a_denom">The ACCUMULATE action with label <b>t1a_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_denom</td><td width="5%"><font color="black">scalar</font></td><td>a sum calculated from the time series of the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ACCUMULATE<span class="right">Sum the elements of this value over the course of the trajectory <a href="https://www.plumed.org/doc-master/user-doc/html/ACCUMULATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the argument that is being added to on each timestep<i></i></span></span>=<b name="AVERAGE.md_working_2.datt1a_weight">t1a_weight</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=100
+<b name="AVERAGE.md_working_2.datt1a_sin" onclick='showPath("AVERAGE.md_working_2.dat","AVERAGE.md_working_2.datt1a_sin","AVERAGE.md_working_2.datt1a_sin","black")'>t1a_sin</b><span style="display:none;" id="AVERAGE.md_working_2.datt1a_sin">The CUSTOM action with label <b>t1a_sin</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_sin</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="AVERAGE.md_working_2.datt1">t1</b>,<b name="AVERAGE.md_working_2.datt1a_weight">t1a_weight</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=y*sin((x--pi)/((pi--pi)/(pi+pi))) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="AVERAGE.md_working_2.datt1a_cos" onclick='showPath("AVERAGE.md_working_2.dat","AVERAGE.md_working_2.datt1a_cos","AVERAGE.md_working_2.datt1a_cos","black")'>t1a_cos</b><span style="display:none;" id="AVERAGE.md_working_2.datt1a_cos">The CUSTOM action with label <b>t1a_cos</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_cos</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="AVERAGE.md_working_2.datt1">t1</b>,<b name="AVERAGE.md_working_2.datt1a_weight">t1a_weight</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=y*cos((x--pi)/((pi--pi)/(pi+pi))) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="AVERAGE.md_working_2.datt1a_sinsum" onclick='showPath("AVERAGE.md_working_2.dat","AVERAGE.md_working_2.datt1a_sinsum","AVERAGE.md_working_2.datt1a_sinsum","black")'>t1a_sinsum</b><span style="display:none;" id="AVERAGE.md_working_2.datt1a_sinsum">The ACCUMULATE action with label <b>t1a_sinsum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_sinsum</td><td width="5%"><font color="black">scalar</font></td><td>a sum calculated from the time series of the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ACCUMULATE<span class="right">Sum the elements of this value over the course of the trajectory <a href="https://www.plumed.org/doc-master/user-doc/html/ACCUMULATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the argument that is being added to on each timestep<i></i></span></span>=<b name="AVERAGE.md_working_2.datt1a_sin">t1a_sin</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=100
+<b name="AVERAGE.md_working_2.datt1a_cossum" onclick='showPath("AVERAGE.md_working_2.dat","AVERAGE.md_working_2.datt1a_cossum","AVERAGE.md_working_2.datt1a_cossum","black")'>t1a_cossum</b><span style="display:none;" id="AVERAGE.md_working_2.datt1a_cossum">The ACCUMULATE action with label <b>t1a_cossum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_cossum</td><td width="5%"><font color="black">scalar</font></td><td>a sum calculated from the time series of the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ACCUMULATE<span class="right">Sum the elements of this value over the course of the trajectory <a href="https://www.plumed.org/doc-master/user-doc/html/ACCUMULATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the argument that is being added to on each timestep<i></i></span></span>=<b name="AVERAGE.md_working_2.datt1a_cos">t1a_cos</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=100
+<b name="AVERAGE.md_working_2.datt1a" onclick='showPath("AVERAGE.md_working_2.dat","AVERAGE.md_working_2.datt1a","AVERAGE.md_working_2.datt1a","black")'>t1a</b><span style="display:none;" id="AVERAGE.md_working_2.datt1a">The CUSTOM action with label <b>t1a</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="AVERAGE.md_working_2.datt1a_sinsum">t1a_sinsum</b>,<b name="AVERAGE.md_working_2.datt1a_cossum">t1a_cossum</b>,<b name="AVERAGE.md_working_2.datt1a_denom">t1a_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=-pi+((pi--pi)/(pi+pi))*atan2(x/z,y/z) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=-pi,pi
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="AVERAGE.md_working_2.datt1a">t1a</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=100
+</pre></div>
+
+<p>Notice that by using the <code>CLEAR</code> keyword we have specified that block averages
+are to be calculated.  Consequently, after 100 steps all the information acquired thus far in the simulation is
+forgotten and the process of averaging is begun again.  The quantities output in the colvar file are thus the
+block averages taken over the first 100 frames of the trajectory, the block average over the second 100 frames
+of trajectory and so on.</p>
+<p>If a bias is acting upon the system then the <script type="math/tex">w(t')</script> values in the expression above are non-zero.  You can calculate the $w(t') values
+by using <a href="../REWEIGHT_BIAS/">REWEIGHT_BIAS</a> or similar.  To pass these weights to the average action you would then use an input something
+like the following:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_AVERAGE.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../AVERAGE.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="AVERAGE.md_working_3.datt1" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datt1","AVERAGE.md_working_3.datt1","black")'>t1</b><span style="display:none;" id="AVERAGE.md_working_3.datt1">The TORSION action with label <b>t1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,2,3,4
+<span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=<b name="AVERAGE.md_working_3.datt1">t1</b> <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=pi <span class="plumedtooltip">KAPPA<span class="right"> specifies that the restraint is harmonic and what the values of the force constants on each of the variables are<i></i></span></span>=100.
+<span id="AVERAGE.md_working_3.datdefww_short"><span style="display:none;" id="AVERAGE.md_working_3.dat">The RESTRAINT action with label <b></b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">.bias</td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">.force2</td><td>the instantaneous value of the squared force due to this bias potential</td></tr></table></span><b name="AVERAGE.md_working_3.datww" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datww","AVERAGE.md_working_3.datww","black")'>ww</b><span style="display:none;" id="AVERAGE.md_working_3.datww">The REWEIGHT_BIAS action with label <b>ww</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ww</td><td width="5%"><font color="black">scalar</font></td><td>the weight to use for this frame to negate the effect the bias</td></tr></table></span>: <span class="plumedtooltip" style="color:green">REWEIGHT_BIAS<span class="right">Calculate weights for ensemble averages that negate the effect the bias has on the region of phase space explored This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_3.datdefww");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/REWEIGHT_BIAS">More details</a><i></i></span></span> <span class="plumedtooltip">TEMP<span class="right">the system temperature<i></i></span></span>=300
+</span><span id="AVERAGE.md_working_3.datdefww_long" style="display:none;"><b name="AVERAGE.md_working_3.datww" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datww","AVERAGE.md_working_3.datww","black")'>ww</b>: <span class="plumedtooltip" style="color:green">REWEIGHT_BIAS<span class="right">Calculate weights for ensemble averages that negate the effect the bias has on the region of phase space explored This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_3.datdefww");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/REWEIGHT_BIAS">More details</a><i></i></span></span> <span class="plumedtooltip">TEMP<span class="right">the system temperature<i></i></span></span>=300  <span class="plumedtooltip">ARG<span class="right"> the biases that must be taken into account when reweighting<i></i></span></span>=*.bias
+</span><span id="AVERAGE.md_working_3.datt1a_short"><span id="AVERAGE.md_working_3.datdeft1a_short"><b name="AVERAGE.md_working_3.datt1a" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datt1a","AVERAGE.md_working_3.datt1a_shortcut","black")'>t1a</b><span style="display:none;" id="AVERAGE.md_working_3.datt1a_shortcut">The AVERAGE action with label <b>t1a</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a</td><td width="5%"><font color="black">scalar</font></td><td>the value of the average</td></tr></table></span>: <span class="plumedtooltip" style="color:green">AVERAGE<span class="right">Calculate the ensemble average of a collective variable This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_3.datt1a");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_3.datdeft1a");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/AVERAGE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the quantity that is being averaged<i></i></span></span>=<b name="AVERAGE.md_working_3.datt1">t1</b> <span class="plumedtooltip">LOGWEIGHTS<span class="right">the logarithm of the quantity to use as the weights when calculating averages<i></i></span></span>=<b name="AVERAGE.md_working_3.datww">ww</b> <span class="plumedtooltip">CLEAR<span class="right"> the frequency with whihc to clear the data that is being averaged<i></i></span></span>=100
+</span><span id="AVERAGE.md_working_3.datdeft1a_long" style="display:none;"><b name="AVERAGE.md_working_3.datt1a" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datt1a","AVERAGE.md_working_3.datt1a_shortcut","black")'>t1a</b>: <span class="plumedtooltip" style="color:green">AVERAGE<span class="right">Calculate the ensemble average of a collective variable This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_3.datt1a");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("AVERAGE.md_working_3.datdeft1a");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/AVERAGE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the quantity that is being averaged<i></i></span></span>=<b name="AVERAGE.md_working_3.datt1">t1</b> <span class="plumedtooltip">LOGWEIGHTS<span class="right">the logarithm of the quantity to use as the weights when calculating averages<i></i></span></span>=<b name="AVERAGE.md_working_3.datww">ww</b> <span class="plumedtooltip">CLEAR<span class="right"> the frequency with whihc to clear the data that is being averaged<i></i></span></span>=100  <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which to store data for averaging<i></i></span></span>=1
+</span></span><span id="AVERAGE.md_working_3.datt1a_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("AVERAGE.md_working_3.datt1a")'># t1a: AVERAGE ARG=t1 LOGWEIGHTS=ww CLEAR=100</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="AVERAGE.md_working_3.datt1a_wsum" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datt1a_wsum","AVERAGE.md_working_3.datt1a_wsum","black")'>t1a_wsum</b><span style="display:none;" id="AVERAGE.md_working_3.datt1a_wsum">The COMBINE action with label <b>t1a_wsum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_wsum</td><td width="5%"><font color="black">scalar</font></td><td>a linear combination</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="AVERAGE.md_working_3.datww">ww</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="AVERAGE.md_working_3.datt1a_weight" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datt1a_weight","AVERAGE.md_working_3.datt1a_weight","black")'>t1a_weight</b><span style="display:none;" id="AVERAGE.md_working_3.datt1a_weight">The CUSTOM action with label <b>t1a_weight</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_weight</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="AVERAGE.md_working_3.datt1a_wsum">t1a_wsum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=exp(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="AVERAGE.md_working_3.datt1a_denom" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datt1a_denom","AVERAGE.md_working_3.datt1a_denom","black")'>t1a_denom</b><span style="display:none;" id="AVERAGE.md_working_3.datt1a_denom">The ACCUMULATE action with label <b>t1a_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_denom</td><td width="5%"><font color="black">scalar</font></td><td>a sum calculated from the time series of the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ACCUMULATE<span class="right">Sum the elements of this value over the course of the trajectory <a href="https://www.plumed.org/doc-master/user-doc/html/ACCUMULATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the argument that is being added to on each timestep<i></i></span></span>=<b name="AVERAGE.md_working_3.datt1a_weight">t1a_weight</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=100
+<b name="AVERAGE.md_working_3.datt1a_sin" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datt1a_sin","AVERAGE.md_working_3.datt1a_sin","black")'>t1a_sin</b><span style="display:none;" id="AVERAGE.md_working_3.datt1a_sin">The CUSTOM action with label <b>t1a_sin</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_sin</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="AVERAGE.md_working_3.datt1">t1</b>,<b name="AVERAGE.md_working_3.datt1a_weight">t1a_weight</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=y*sin((x--pi)/((pi--pi)/(pi+pi))) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="AVERAGE.md_working_3.datt1a_cos" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datt1a_cos","AVERAGE.md_working_3.datt1a_cos","black")'>t1a_cos</b><span style="display:none;" id="AVERAGE.md_working_3.datt1a_cos">The CUSTOM action with label <b>t1a_cos</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_cos</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="AVERAGE.md_working_3.datt1">t1</b>,<b name="AVERAGE.md_working_3.datt1a_weight">t1a_weight</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=y*cos((x--pi)/((pi--pi)/(pi+pi))) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="AVERAGE.md_working_3.datt1a_sinsum" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datt1a_sinsum","AVERAGE.md_working_3.datt1a_sinsum","black")'>t1a_sinsum</b><span style="display:none;" id="AVERAGE.md_working_3.datt1a_sinsum">The ACCUMULATE action with label <b>t1a_sinsum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_sinsum</td><td width="5%"><font color="black">scalar</font></td><td>a sum calculated from the time series of the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ACCUMULATE<span class="right">Sum the elements of this value over the course of the trajectory <a href="https://www.plumed.org/doc-master/user-doc/html/ACCUMULATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the argument that is being added to on each timestep<i></i></span></span>=<b name="AVERAGE.md_working_3.datt1a_sin">t1a_sin</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=100
+<b name="AVERAGE.md_working_3.datt1a_cossum" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datt1a_cossum","AVERAGE.md_working_3.datt1a_cossum","black")'>t1a_cossum</b><span style="display:none;" id="AVERAGE.md_working_3.datt1a_cossum">The ACCUMULATE action with label <b>t1a_cossum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a_cossum</td><td width="5%"><font color="black">scalar</font></td><td>a sum calculated from the time series of the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ACCUMULATE<span class="right">Sum the elements of this value over the course of the trajectory <a href="https://www.plumed.org/doc-master/user-doc/html/ACCUMULATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the argument that is being added to on each timestep<i></i></span></span>=<b name="AVERAGE.md_working_3.datt1a_cos">t1a_cos</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=100
+<b name="AVERAGE.md_working_3.datt1a" onclick='showPath("AVERAGE.md_working_3.dat","AVERAGE.md_working_3.datt1a","AVERAGE.md_working_3.datt1a","black")'>t1a</b><span style="display:none;" id="AVERAGE.md_working_3.datt1a">The CUSTOM action with label <b>t1a</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1a</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="AVERAGE.md_working_3.datt1a_sinsum">t1a_sinsum</b>,<b name="AVERAGE.md_working_3.datt1a_cossum">t1a_cossum</b>,<b name="AVERAGE.md_working_3.datt1a_denom">t1a_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=-pi+((pi--pi)/(pi+pi))*atan2(x/z,y/z) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=-pi,pi
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="AVERAGE.md_working_3.datt1a">t1a</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=100
+</pre></div>
+
+<p>This AVERAGE action in this input is a shortcut once again so by expanding it you can obtain a better understanding of how the
+formulas above are applied in this case.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">scalar/grid</td>
+<td style="text-align: left;">the quantity that is being averaged</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the quantity that is being averaged</td>
+</tr>
+<tr>
+<td style="text-align: left;">STRIDE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">the frequency with which to store data for averaging</td>
+</tr>
+<tr>
+<td style="text-align: left;">CLEAR</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">the frequency with whihc to clear the data that is being averaged</td>
+</tr>
+<tr>
+<td style="text-align: left;">LOGWEIGHTS</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the logarithm of the quantity to use as the weights when calculating averages</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">deprecated keywords</p>
+<p>The keywords in the following table can still be used with this action but have been deprecated</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">NORMALIZATION</td>
+<td style="text-align: left;">Including this keyword in the input to this action makes no difference to the calculation performed it was used in older versions of PLUMED and is provided here for back compatibility only</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

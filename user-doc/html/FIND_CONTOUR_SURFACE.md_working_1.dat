@@ -1,0 +1,28 @@
+UNITS NATURAL
+
+# This calculates the value of a set of symmetry functions for the atoms of interest
+fcc: FCCUBIC ...
+  SPECIES=1-96000 SWITCH={CUBIC D_0=1.2 D_MAX=1.5}
+  ALPHA=27 PHI=0.0 THETA=-1.5708 PSI=-2.35619
+...
+
+# This determines the positions of the atoms of interest relative to the position of atom 1
+dens2_dist: DISTANCES ORIGIN=1 ATOMS=fcc COMPONENTS
+# This computes the numerator in the expression above for the phase field
+dens2_numer: KDE ...
+   VOLUMES=fcc_n ARG=dens2_dist.x,dens2_dist.y,dens2_dist.z
+   GRID_BIN=14,14,50 GRID_MIN=auto,auto,6.0
+   GRID_MAX=auto,auto,11.0 BANDWIDTH=1.0,1.0,1.0
+...
+# This computes the denominator
+dens2_denom: KDE ...
+   ARG=dens2_dist.x,dens2_dist.y,dens2_dist.z
+   GRID_BIN=14,14,50 GRID_MIN=auto,auto,6.0
+   GRID_MAX=auto,auto,11.0 BANDWIDTH=1.0,1.0,1.0
+...
+# This computes the final phase field
+dens2: CUSTOM ARG=dens2_numer,dens2_denom FUNC=x/y PERIODIC=NO
+
+# We can now find and print the location of the two dimensional contour surface
+ss2: FIND_CONTOUR_SURFACE ARG=dens2 CONTOUR=0.42 SEARCHDIR=dens2_dist.z
+DUMPGRID ARG=ss2 FILE=contour2.dat STRIDE=1

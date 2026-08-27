@@ -1,0 +1,6 @@
+# Calculate the coordination numbers for the two types of atom
+d1a: COORDINATIONNUMBER SPECIES=1-5 SWITCH={RATIONAL D_0=1.3 R_0=0.2 D_MAX=3.0}
+d1b: COORDINATIONNUMBER SPECIES=1-64 SWITCH={RATIONAL D_0=1.3 R_0=0.2 D_MAX=3.0}
+# Now compute the local average
+la: LOCAL_AVERAGE SPECIESA=d1a SPECIESB=d1b SWITCH={RATIONAL D_0=1.3 R_0=0.2 D_MAX=3.0}
+DUMPATOMS ARG=la ATOMS=1-5 FILE=atoms.xyz

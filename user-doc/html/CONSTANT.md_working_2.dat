@@ -1,0 +1,2 @@
+v: CONSTANT VALUES=1,2,3,4,5
+PRINT ARG=v FILE=constant_vector

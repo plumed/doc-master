@@ -1,0 +1,1423 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: LESS_THAN - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-less_than" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: LESS_THAN
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transforming-squares-of-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transforming squares of quantities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-rank-zero-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non rank zero arguments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mask-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The MASK keyword
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switching-functions-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switching functions types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Switching functions types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rational-switching-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rational switching function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exponential-switching-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exponential switching function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gaussian-switching-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaussian switching function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sketch-map-switching-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sketch-map switching function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-switching-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q switching function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cubic-switching-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cubic switching function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tanh-switching-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tanh switching function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cosinus-switching-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cosinus switching function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-switching-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom switching function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-less_than"><a href="../shortcuts/">Shortcut</a>: LESS_THAN</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_function/"><strong>function</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Use a switching function to determine how many of the input variables are less than a certain cutoff.</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=LESS_THAN"><img alt="used in 3 tutorials" src="https://img.shields.io/badge/tutorials-3-green.svg" /></a><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">a function that is one if the input is less than a threshold</td>
+<td style="text-align: center;">scalar/vector/matrix</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Use a switching function to determine how many of the input variables are less than a certain cutoff.</p>
+<p>This action takes one argument, <script type="math/tex">r</script> and evaluates the following function:</p>
+<p>
+<script type="math/tex; mode=display">
+w(r) = s(r)
+</script>
+</p>
+<p>The function <script type="math/tex">s(r)</script> here is a switching function so the output value <script type="math/tex">w</script> is a number between 0 and 1.
+Switching functions are typically used to determine if an input value is less than some cutoff.  The value
+of <script type="math/tex">w</script> the switches smoothly from one to zero as the input value <script type="math/tex">r</script> crosses the threshold of interest.</p>
+<p>The following example, shows how we can apply a switching function on the instantaneous value of the
+distance between atom 1 and atom 2.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_1.datd" onclick='showPath("LESS_THAN.md_working_1.dat","LESS_THAN.md_working_1.datd","LESS_THAN.md_working_1.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_1.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_1.dats" onclick='showPath("LESS_THAN.md_working_1.dat","LESS_THAN.md_working_1.dats","LESS_THAN.md_working_1.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_1.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_1.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.2}
+</pre></div>
+
+<p>The output here is close to one when the distance between atoms 1 and 2 is less than 0.2 nm close to zero
+for values that are greater than 0.2.</p>
+<h2 id="transforming-squares-of-quantities">Transforming squares of quantities</h2>
+<p>If you have computed the square of the distance you can use the flag SQUARED to indicate that the input
+quantity is the square of the distance as indicated below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_2.datd" onclick='showPath("LESS_THAN.md_working_2.dat","LESS_THAN.md_working_2.datd","LESS_THAN.md_working_2.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_2.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d.x</td><td width="5%"><font color="black">scalar</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.y</td><td width="5%"><font color="black">scalar</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d.z</td><td width="5%"><font color="black">scalar</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_2.datdm" onclick='showPath("LESS_THAN.md_working_2.dat","LESS_THAN.md_working_2.datdm","LESS_THAN.md_working_2.datdm","black")'>dm</b><span style="display:none;" id="LESS_THAN.md_working_2.datdm">The CUSTOM action with label <b>dm</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dm</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_2.datd">d.x</b>,<b name="LESS_THAN.md_working_2.datd">d.y</b>,<b name="LESS_THAN.md_working_2.datd">d.z</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*x+y*y+z*z <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="LESS_THAN.md_working_2.dats" onclick='showPath("LESS_THAN.md_working_2.dat","LESS_THAN.md_working_2.dats","LESS_THAN.md_working_2.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_2.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_2.datdm">dm</b> <span class="plumedtooltip">SQUARED<span class="right"> is the input quantity the square of the value that you would like to apply the switching function to<i></i></span></span> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.2}
+</pre></div>
+
+<p>This option can be useful for improving performance by removing the expensive square root operations.</p>
+<h2 id="non-rank-zero-arguments">Non rank zero arguments</h2>
+<p>Instead of passing a single scalar in the input to the <code>LESS_THAN</code> action you can pass a single vector as shown here:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_3.datd" onclick='showPath("LESS_THAN.md_working_3.dat","LESS_THAN.md_working_3.datd","LESS_THAN.md_working_3.datd","blue")'>d</b><span style="display:none;" id="LESS_THAN.md_working_3.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,6 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=7,8
+<b name="LESS_THAN.md_working_3.datb" onclick='showPath("LESS_THAN.md_working_3.dat","LESS_THAN.md_working_3.datb","LESS_THAN.md_working_3.datb","blue")'>b</b><span style="display:none;" id="LESS_THAN.md_working_3.datb">The LESS_THAN action with label <b>b</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">b</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_3.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.2}
+</pre></div>
+
+<p>The input to the <code>LESS_THAN</code> action here is a vector with four elements. The output from the action <code>b</code> is similarly
+a vector with four elements. In calculating the elements of this vector PLUMED applies the function described in the previous
+section on each of the distances in turn. The first element of <code>b</code> thus tells you if the distance between atoms 1 and 2 is less than
+0.2 nm, the second element tells you if the distance between atoms 3 and 4 is less than 0.2 nm and so on.</p>
+<p>You can use the commands in the above example input to evaluate the number of distances that are less than a cutoff as follows:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_4.datd" onclick='showPath("LESS_THAN.md_working_4.dat","LESS_THAN.md_working_4.datd","LESS_THAN.md_working_4.datd","blue")'>d</b><span style="display:none;" id="LESS_THAN.md_working_4.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,6 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=7,8
+<b name="LESS_THAN.md_working_4.datb" onclick='showPath("LESS_THAN.md_working_4.dat","LESS_THAN.md_working_4.datb","LESS_THAN.md_working_4.datb","blue")'>b</b><span style="display:none;" id="LESS_THAN.md_working_4.datb">The LESS_THAN action with label <b>b</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">b</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_4.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.2}
+<b name="LESS_THAN.md_working_4.dats" onclick='showPath("LESS_THAN.md_working_4.dat","LESS_THAN.md_working_4.dats","LESS_THAN.md_working_4.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_4.dats">The SUM action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="LESS_THAN.md_working_4.datb">b</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="LESS_THAN.md_working_4.dats">s</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>The final scalar that is output here is evaluated using the following summation:</p>
+<p>
+<script type="math/tex; mode=display">
+s = \sum_i s(d_i)
+</script>
+</p>
+<p>where the sum over <script type="math/tex">i</script> here runs over the four distances in the above expression. This scalar tells you the number of distances that are
+less than 0.2 nm.</p>
+<p>Notice that you can do something similar with a matrix as input as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_5.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_5.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="LESS_THAN.md_working_5.datdefd_short"><b name="LESS_THAN.md_working_5.datd" onclick='showPath("LESS_THAN.md_working_5.dat","LESS_THAN.md_working_5.datd","LESS_THAN.md_working_5.datd","red")'>d</b><span style="display:none;" id="LESS_THAN.md_working_5.datd">The DISTANCE_MATRIX action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE_MATRIX<span class="right">Calculate a matrix of distances between atoms. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("LESS_THAN.md_working_5.datdefd");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE_MATRIX">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPB<i></i></span></span>=1-10 <span class="plumedtooltip">GROUPB<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPA<i></i></span></span>=11-20
+</span><span id="LESS_THAN.md_working_5.datdefd_long" style="display:none;"><b name="LESS_THAN.md_working_5.datd" onclick='showPath("LESS_THAN.md_working_5.dat","LESS_THAN.md_working_5.datd","LESS_THAN.md_working_5.datd","red")'>d</b>: <span class="plumedtooltip" style="color:green">DISTANCE_MATRIX<span class="right">Calculate a matrix of distances between atoms. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("LESS_THAN.md_working_5.datdefd");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE_MATRIX">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPB<i></i></span></span>=1-10 <span class="plumedtooltip">GROUPB<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPA<i></i></span></span>=11-20  <span class="plumedtooltip">NL_CUTOFF<span class="right"> The cutoff for the neighbor list<i></i></span></span>=0.0 <span class="plumedtooltip">NL_STRIDE<span class="right"> The frequency with which we are updating the atoms in the neighbor list<i></i></span></span>=1 <span class="plumedtooltip">CUTOFF<span class="right"> ignore distances that have a value larger than this cutoff<i></i></span></span>=-1
+</span><b name="LESS_THAN.md_working_5.datb" onclick='showPath("LESS_THAN.md_working_5.dat","LESS_THAN.md_working_5.datb","LESS_THAN.md_working_5.datb","red")'>b</b><span style="display:none;" id="LESS_THAN.md_working_5.datb">The LESS_THAN action with label <b>b</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">b</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_5.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.2}
+<b name="LESS_THAN.md_working_5.dats" onclick='showPath("LESS_THAN.md_working_5.dat","LESS_THAN.md_working_5.dats","LESS_THAN.md_working_5.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_5.dats">The SUM action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="LESS_THAN.md_working_5.datb">b</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="LESS_THAN.md_working_5.dats">s</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>This input tells PLUMED to calculate the 100 distances between the atoms in the two input groups. The final value that is printed to the colvar file then
+tells you how many of these distances are less than 0.2 nm.</p>
+<h2 id="the-mask-keyword">The MASK keyword</h2>
+<p>Consider the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_6.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_6.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment"># Fixed virtual atom which serves as the probe volume&#x27;s center (pos. in nm)</span>
+<span id="LESS_THAN.md_working_6.datdefcenter_short"><b name="LESS_THAN.md_working_6.datcenter" onclick='showPath("LESS_THAN.md_working_6.dat","LESS_THAN.md_working_6.datcenter","LESS_THAN.md_working_6.datcenter","violet")'>center</b><span style="display:none;" id="LESS_THAN.md_working_6.datcenter">The FIXEDATOM action with label <b>center</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">center</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by FIXEDATOM action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("LESS_THAN.md_working_6.datdefcenter");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=2.5,2.5,2.5
+</span><span id="LESS_THAN.md_working_6.datdefcenter_long" style="display:none;"><b name="LESS_THAN.md_working_6.datcenter" onclick='showPath("LESS_THAN.md_working_6.dat","LESS_THAN.md_working_6.datcenter","LESS_THAN.md_working_6.datcenter","violet")'>center</b>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("LESS_THAN.md_working_6.datdefcenter");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=2.5,2.5,2.5  <span class="plumedtooltip">SET_MASS<span class="right"> mass of the virtual atom<i></i></span></span>=1 <span class="plumedtooltip">SET_CHARGE<span class="right"> charge of the virtual atom<i></i></span></span>=0
+</span><span style="color:blue" class="comment"># Vector in which element i is one if atom i is in sphere of interest and zero otherwise</span>
+<b name="LESS_THAN.md_working_6.datsphere" onclick='showPath("LESS_THAN.md_working_6.dat","LESS_THAN.md_working_6.datsphere","LESS_THAN.md_working_6.datsphere","blue")'>sphere</b><span style="display:none;" id="LESS_THAN.md_working_6.datsphere">The INSPHERE action with label <b>sphere</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">sphere</td><td width="5%"><font color="blue">vector</font></td><td>vector of numbers between 0 and 1 that measure the degree to which each atom is within the volume of interest</td></tr></table></span>: <span class="plumedtooltip" style="color:green">INSPHERE<span class="right">This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a particular, user-specified part of of the cell. <a href="https://www.plumed.org/doc-master/user-doc/html/INSPHERE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that you would like to investigate<i></i></span></span>=1-400 <span class="plumedtooltip">CENTER<span class="right">the atom whose vicinity we are interested in examining<i></i></span></span>=<b name="LESS_THAN.md_working_6.datcenter">center</b> <span class="plumedtooltip">RADIUS<span class="right">the switching function that tells us the extent of the sphereical region of interest. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={GAUSSIAN D_0=0.5 R_0=0.01 D_MAX=0.52}
+<span style="color:blue" class="comment"># Compute the coordination numbers</span>
+<b name="LESS_THAN.md_working_6.datadj" onclick='showPath("LESS_THAN.md_working_6.dat","LESS_THAN.md_working_6.datadj","LESS_THAN.md_working_6.datadj","red")'>adj</b><span style="display:none;" id="LESS_THAN.md_working_6.datadj">The CONTACT_MATRIX action with label <b>adj</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">adj</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-400 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.3 D_MAX=1.0} <span class="plumedtooltip">MASK<span class="right">a vector that is used to used to determine which rows of the adjancency matrix to compute<i></i></span></span>=<b name="LESS_THAN.md_working_6.datsphere">sphere</b>
+<span id="LESS_THAN.md_working_6.datones_short"><b name="LESS_THAN.md_working_6.datones" onclick='showPath("LESS_THAN.md_working_6.dat","LESS_THAN.md_working_6.datones","LESS_THAN.md_working_6.datones_shortcut","blue")'>ones</b><span style="display:none;" id="LESS_THAN.md_working_6.datones_shortcut">The ONES action with label <b>ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ones</td><td width="5%"><font color="blue">vector</font></td><td>a vector of ones with the required number of elements</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("LESS_THAN.md_working_6.datones");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/ONES">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=400
+</span><span id="LESS_THAN.md_working_6.datones_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("LESS_THAN.md_working_6.datones")'># ones: ONES SIZE=400</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="LESS_THAN.md_working_6.datones" onclick='showPath("LESS_THAN.md_working_6.dat","LESS_THAN.md_working_6.datones","LESS_THAN.md_working_6.datones","blue")'>ones</b><span style="display:none;" id="LESS_THAN.md_working_6.datones">The CONSTANT action with label <b>ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NOLOG<span class="right"> do not report all the read in scalars in the log<i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+<span style="color:blue"># --- End of included input --- </span></span><b name="LESS_THAN.md_working_6.datcoord" onclick='showPath("LESS_THAN.md_working_6.dat","LESS_THAN.md_working_6.datcoord","LESS_THAN.md_working_6.datcoord","blue")'>coord</b><span style="display:none;" id="LESS_THAN.md_working_6.datcoord">The MATRIX_VECTOR_PRODUCT action with label <b>coord</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">coord</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="LESS_THAN.md_working_6.datadj">adj</b>,<b name="LESS_THAN.md_working_6.datones">ones</b>
+<span style="color:blue" class="comment"># Determine if coordination numbers are less than 4 or not</span>
+<b name="LESS_THAN.md_working_6.datlt" onclick='showPath("LESS_THAN.md_working_6.dat","LESS_THAN.md_working_6.datlt","LESS_THAN.md_working_6.datlt","blue")'>lt</b><span style="display:none;" id="LESS_THAN.md_working_6.datlt">The LESS_THAN action with label <b>lt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_6.datcoord">coord</b> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="LESS_THAN.md_working_6.datsphere">sphere</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=4.0}
+<span style="color:blue" class="comment"># And calculate how many atoms in the region of interst have a coordination number that is less than four</span>
+<b name="LESS_THAN.md_working_6.datltsphere" onclick='showPath("LESS_THAN.md_working_6.dat","LESS_THAN.md_working_6.datltsphere","LESS_THAN.md_working_6.datltsphere","blue")'>ltsphere</b><span style="display:none;" id="LESS_THAN.md_working_6.datltsphere">The CUSTOM action with label <b>ltsphere</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ltsphere</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_6.datlt">lt</b>,<b name="LESS_THAN.md_working_6.datsphere">sphere</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="LESS_THAN.md_working_6.datcv" onclick='showPath("LESS_THAN.md_working_6.dat","LESS_THAN.md_working_6.datcv","LESS_THAN.md_working_6.datcv","black")'>cv</b><span style="display:none;" id="LESS_THAN.md_working_6.datcv">The SUM action with label <b>cv</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cv</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="LESS_THAN.md_working_6.datltsphere">ltsphere</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="LESS_THAN.md_working_6.datcv">cv</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>This input calculates the total number of atoms that are within a spherical region that is centered on the point <script type="math/tex">(2.5,2.5,2.5)</script> and have a
+coordination number that is less than 4.  Notice that to reduce the computational expense we use the MASK keyword in the input to
+<a href="../CONTACT_MATRIX/">CONTACT_MATRIX</a> so PLUMED knows to not bother calculating the coordination numbers of atoms that are not within the spherical region of
+interest. Further notice that we have also used this MASK keyword in the input to LESS_THAN to prevent PLUMED from transforming the coordination numbers
+that have not been calculated with the switching function to get a further speed up.</p>
+<p>Using the MASK keyword in this way is necessary if the input argument is a vector. If the input argument is a matrix then you should never need to use the
+MASK keyword. PLUMED will use the sparsity pattern for the input matrix to reduce the number of transformations that are performed within LESS_THAN.</p>
+<h2 id="switching-functions-types">Switching functions types</h2>
+<p>PLUMED allows you to use a range of different switching function types.  Most of these
+require you to provide at least one input parameter <script type="math/tex">r_0</script>. The switching function is then defined so that for
+<script type="math/tex">r \le d_0 \quad s(r)=1.0</script> while for <script type="math/tex">r > d_0</script> the function decays smoothly to 0.  By changing the switching
+function you are using you change the decay that occurs in the switching function for <script type="math/tex">r</script> values that are greater
+that <script type="math/tex">d_0</script>.</p>
+<p>You can specify the value at which the the switching function goes to zero by using the D_MAX keyword.
+PLUMED will ensure that the swtiching function is definitely zero for for input values that are greater than
+or equal to D_MAX by by stretching and shifting the function using the following transformations.</p>
+<p>
+<script type="math/tex">
+s(r) = \frac{s'(r)-s'(d_{max})}{s'(0)-s'(d_{max})}
+</script>
+</p>
+<p>The various expressions that are used for <script type="math/tex">s'(r)</script> in the above expression are described in the following sections.
+Scaling the switching function so that it is exactly zero at <script type="math/tex">d_{max}</script> using the transformation described above
+has been the default behaviour within PLUMED since version 2.2.
+If you wish to use a D_MAX parameter and the <script type="math/tex">s'(r)</script> functions described in the following sections directly you can use the
+keyword <code>NOSTRETCH</code>. However, the advangage of performing the stretching and scaling in this way is that the function has
+no discontinuities.  If you use the <code>NOSTRETCH</code> option the switching function may have a discontinuity at <script type="math/tex">d_{max}</script>.</p>
+<h3 id="rational-switching-function">Rational switching function</h3>
+<p>The rational switching function is the most commonly used of the switching functions.  The implementation of this function within PLUMED has been carefully
+optimised so calculations using this switching function should be fast.</p>
+<p>For this function <script type="math/tex">s'(r)</script> has the following functional form:</p>
+<p>
+<script type="math/tex; mode=display">
+s'(r) = \begin{cases}
+1 & \textrm{if} \quad r<d_0 \\
+\frac{ 1 - \left(\frac{ r - d_0 }{ r_0 }\right)^{n} }{ 1 - \left(\frac{ r - d_0 }{ r_0 }\right)^{m} } & \textrm{if} \quad d_0 < r < d_{max} \\
+0 & \textrm{otherwise}
+\end{cases}
+</script>
+</p>
+<p>The following example illustrates how you can use the rational switching function is used in practice:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_7.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_7.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_7.datd" onclick='showPath("LESS_THAN.md_working_7.dat","LESS_THAN.md_working_7.datd","LESS_THAN.md_working_7.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_7.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_7.dats" onclick='showPath("LESS_THAN.md_working_7.dat","LESS_THAN.md_working_7.dats","LESS_THAN.md_working_7.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_7.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_7.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.5 D_0=0.1 NN=8 MM=16 D_MAX=1.0}
+</pre>
+</div>
+<p>As was discussed in earlier parts of this page, you can also specify a rational switching function using the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_8.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_8.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_8.datd" onclick='showPath("LESS_THAN.md_working_8.dat","LESS_THAN.md_working_8.datd","LESS_THAN.md_working_8.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_8.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_8.dats" onclick='showPath("LESS_THAN.md_working_8.dat","LESS_THAN.md_working_8.dats","LESS_THAN.md_working_8.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_8.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_8.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.2}
+</pre></div>
+
+<p>In this case, the paramers <script type="math/tex">d_0</script>, <script type="math/tex">n</script> and <script type="math/tex">m</script> are set to their default values of 0, 6 and 12 respectively. Meanwhile, if D_MAX is unset the stretching and scaling that
+was described in the previous section is not performed.</p>
+<p>Notice that you can choose to set a subset of the switching function parameters and to use the default values for the unset parameters by using an input like this one:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_9.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_9.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_9.datd" onclick='showPath("LESS_THAN.md_working_9.dat","LESS_THAN.md_working_9.datd","LESS_THAN.md_working_9.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_9.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_9.dats" onclick='showPath("LESS_THAN.md_working_9.dat","LESS_THAN.md_working_9.dats","LESS_THAN.md_working_9.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_9.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_9.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.2 NN=8}
+</pre></div>
+
+<p>The input above sets <script type="math/tex">n=8</script> and <script type="math/tex">m=2n=16</script>. Meanwhile, <script type="math/tex">d_0</script> is set to its default value of 0.</p>
+<p>Lastly, note that you can also specify the parameters for the rational switching function without using the SWITCH keyword as indicated below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_10.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_10.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_10.datd" onclick='showPath("LESS_THAN.md_working_10.dat","LESS_THAN.md_working_10.datd","LESS_THAN.md_working_10.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_10.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_10.dats" onclick='showPath("LESS_THAN.md_working_10.dat","LESS_THAN.md_working_10.dats","LESS_THAN.md_working_10.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_10.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_10.datd">d</b> <span class="plumedtooltip">D_0<span class="right"> The d_0 parameter of the switching function<i></i></span></span>=0.1 <span class="plumedtooltip">R_0<span class="right">The r_0 parameter of the switching function<i></i></span></span>=0.2 <span class="plumedtooltip">NN<span class="right"> The n parameter of the switching function <i></i></span></span>=6 <span class="plumedtooltip">MM<span class="right"> The m parameter of the switching function; 0 implies 2*NN<i></i></span></span>=12
+</pre></div>
+
+<p>The newer syntax using the SWITCH keyword is better than this option as there is no way to set the D_MAX parameter this way and because if you use this syntax you are forced to
+use the RATIONAL switching function type.</p>
+<h3 id="exponential-switching-function">Exponential switching function</h3>
+<p>The way that the exponential switching function can be used is illustrated in the following example input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_11.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_11.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_11.datd" onclick='showPath("LESS_THAN.md_working_11.dat","LESS_THAN.md_working_11.datd","LESS_THAN.md_working_11.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_11.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_11.dats" onclick='showPath("LESS_THAN.md_working_11.dat","LESS_THAN.md_working_11.dats","LESS_THAN.md_working_11.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_11.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_11.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={EXP D_0=0.1 R_0=0.2 D_MAX=1.0}
+</pre></div>
+
+<p>The <script type="math/tex">s'(r)</script> that is used in this input is given by the following expression:</p>
+<p>
+<script type="math/tex; mode=display">
+s'(r) = \begin{cases}
+1 & \textrm{if} \quad r<d_0 \\
+\exp\left(-\frac{ r - d_0 }{ r_0 }\right) & \textrm{if} \quad d_0 < r < d_{max} \\
+0 & \textrm{otherwise}
+\end{cases}
+</script>
+</p>
+<p>You can also specify that an exponential switching function is to be used by using the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_12.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_12.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_12.datd" onclick='showPath("LESS_THAN.md_working_12.dat","LESS_THAN.md_working_12.datd","LESS_THAN.md_working_12.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_12.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_12.dats" onclick='showPath("LESS_THAN.md_working_12.dat","LESS_THAN.md_working_12.dats","LESS_THAN.md_working_12.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_12.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_12.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={EXP R_0=0.2}
+</pre>
+</div>
+<p>For this input <script type="math/tex">d_0</script> is set to its default value of 0.  Furthermore, as D_MAX is unset the stretching and scaling that
+was described in the previous section is not performed.</p>
+<h3 id="gaussian-switching-function">Gaussian switching function</h3>
+<p>The way that the gaussian switching function can be used is illustrated in the following example input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_13.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_13.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_13.datd" onclick='showPath("LESS_THAN.md_working_13.dat","LESS_THAN.md_working_13.datd","LESS_THAN.md_working_13.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_13.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_13.dats" onclick='showPath("LESS_THAN.md_working_13.dat","LESS_THAN.md_working_13.dats","LESS_THAN.md_working_13.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_13.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_13.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={GAUSSIAN D_0=0.1 R_0=0.2 D_MAX=1.0}
+</pre></div>
+
+<p>The <script type="math/tex">s'(r)</script> that is used in this input is given by the following expression:</p>
+<p>
+<script type="math/tex; mode=display">
+s'(r) = \begin{cases}
+1 & \textrm{if} \quad r<d_0 \\
+\exp\left(-\frac{ (r - d_0)^2 }{ 2r_0^2 }\right) & \textrm{if} \quad d_0 < r < d_{max} \\
+0 & \textrm{otherwise}
+\end{cases}
+</script>
+</p>
+<p>You can also specify that an gaussian switching function is to be used by using the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_14.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_14.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_14.datd" onclick='showPath("LESS_THAN.md_working_14.dat","LESS_THAN.md_working_14.datd","LESS_THAN.md_working_14.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_14.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_14.dats" onclick='showPath("LESS_THAN.md_working_14.dat","LESS_THAN.md_working_14.dats","LESS_THAN.md_working_14.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_14.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_14.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={GAUSSIAN R_0=0.2}
+</pre>
+</div>
+<p>For this input <script type="math/tex">d_0</script> is set to its default value of 0.  Furthermore, as D_MAX is unset the stretching and scaling that
+was described in the previous section is not performed.</p>
+<h3 id="sketch-map-switching-function">Sketch-map switching function</h3>
+<p>You can specify that the sketch-map switching function is to be used by using the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_15.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_15.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_15.datd" onclick='showPath("LESS_THAN.md_working_15.dat","LESS_THAN.md_working_15.datd","LESS_THAN.md_working_15.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_15.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_15.dats" onclick='showPath("LESS_THAN.md_working_15.dat","LESS_THAN.md_working_15.dats","LESS_THAN.md_working_15.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_15.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_15.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={SMAP D_0=1 R_0=4 A=3 B=2 D_MAX=10}
+</pre></div>
+
+<p>The <script type="math/tex">s'(r)</script> that is used in this input is given by the following expression:</p>
+<p>
+<script type="math/tex; mode=display">
+s'(r) = \begin{cases}
+1 & \textrm{if} \quad r<d_0 \\
+\left[ 1 + ( 2^{a/b} -1 )\left( \frac{r-d_0}{r_0} \right)^a \right]^{-b/a} & \textrm{if} \quad d_0 < r < d_{max} \\
+0 & \textrm{otherwise}
+\end{cases}
+</script>
+</p>
+<p>This type of swtiching function would be used with PLUMED's implementation of <a href="../SKETCHMAP/">SKETCHMAP</a>. If you are
+performing a sketch-map projection an input like the one below would be more common:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_16.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_16.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_16.datd" onclick='showPath("LESS_THAN.md_working_16.dat","LESS_THAN.md_working_16.datd","LESS_THAN.md_working_16.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_16.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_16.dats" onclick='showPath("LESS_THAN.md_working_16.dat","LESS_THAN.md_working_16.dats","LESS_THAN.md_working_16.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_16.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_16.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={SMAP R_0=4 A=3 B=2}
+</pre>
+</div>
+<p>With this input <script type="math/tex">d_0</script> is set to its default value of 0.  Furthermore, as D_MAX is unset the stretching and scaling that
+was described in the previous section is not performed.</p>
+<h3 id="q-switching-function">Q switching function</h3>
+<p>You can specify that the Q switching function is to be used by using the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_17.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_17.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_17.datd" onclick='showPath("LESS_THAN.md_working_17.dat","LESS_THAN.md_working_17.datd","LESS_THAN.md_working_17.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_17.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_17.dats" onclick='showPath("LESS_THAN.md_working_17.dat","LESS_THAN.md_working_17.dats","LESS_THAN.md_working_17.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_17.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_17.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={Q D_0=0 REF=0.498366 BETA=50.0 LAMBDA=1.8 R_0=0.01 D_MAX=20}
+</pre></div>
+
+<p>The <script type="math/tex">s'(r)</script> that is used in this input is given by the following expression:</p>
+<p>
+<script type="math/tex; mode=display">
+s'(r) = \begin{cases}
+1 & \textrm{if} \quad r<d_0 \\
+s(r) = \frac{1}{1 + \exp(\beta(r_{ij} - \lambda r_{ij}^0))} & \textrm{if} \quad d_0 < r < d_{max} \\
+0 & \textrm{otherwise}
+\end{cases}
+</script>
+</p>
+<p>The value of <script type="math/tex">r_{ij}^0</script> is specified in the above input by the <code>REF</code> keyword.  Notice that you can also specify this type of switching function using
+the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_18.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_18.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_18.datd" onclick='showPath("LESS_THAN.md_working_18.dat","LESS_THAN.md_working_18.datd","LESS_THAN.md_working_18.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_18.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_18.dats" onclick='showPath("LESS_THAN.md_working_18.dat","LESS_THAN.md_working_18.dats","LESS_THAN.md_working_18.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_18.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_18.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={Q REF=0.498366 R_0=0.01 }
+</pre></div>
+
+<p>With this input <script type="math/tex">_0</script>, <script type="math/tex">\lambda</script> and <script type="math/tex">\beta</script> are set equal to their default values of 0, 1.8 and 50 nm<script type="math/tex">^{-1}</script> respectively. Furthermore, as D_MAX is unset the stretching and scaling that
+was described in the previous section is not performed. These default values for <script type="math/tex">\lambda</script> and <script type="math/tex">\beta</script> are suitable if you are simulating all atom models.  However, if you are using
+a coarse grainded models values of <script type="math/tex">\lambda=1.5</script> and <script type="math/tex">\beta=50 nm^-1</script> are more appropriate.</p>
+<h3 id="cubic-switching-function">Cubic switching function</h3>
+<p>You can specify that the cubic swtiching function is to be used by using the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_19.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_19.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_19.datd" onclick='showPath("LESS_THAN.md_working_19.dat","LESS_THAN.md_working_19.datd","LESS_THAN.md_working_19.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_19.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_19.dats" onclick='showPath("LESS_THAN.md_working_19.dat","LESS_THAN.md_working_19.dats","LESS_THAN.md_working_19.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_19.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_19.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={CUBIC D_0=0.1 D_MAX=0.5}
+</pre></div>
+
+<p>If this type of expression is used then the <script type="math/tex">s(r)</script> is calculated as:</p>
+<p>
+<script type="math/tex; mode=display">
+s(r) = (y-1)^2(1+2y) \qquad \textrm{where} \quad y = \frac{r - d_0}{d_{max}-d_{0}}
+</script>
+</p>
+<p>No stretching is required for this type of switching function as its functional form ensures that it is zero at <script type="math/tex">d_{max}</script>.</p>
+<h3 id="tanh-switching-function">Tanh switching function</h3>
+<p>You can specify that the cubic swtiching function is to be used by using the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_20.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_20.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_20.datd" onclick='showPath("LESS_THAN.md_working_20.dat","LESS_THAN.md_working_20.datd","LESS_THAN.md_working_20.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_20.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_20.dats" onclick='showPath("LESS_THAN.md_working_20.dat","LESS_THAN.md_working_20.dats","LESS_THAN.md_working_20.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_20.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_20.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={TANH D_0=0.1 R_0=0.1 D_MAX=1.0}
+</pre></div>
+
+<p>The <script type="math/tex">s'(r)</script> that is used in this input is given by the following expression:</p>
+<p>
+<script type="math/tex; mode=display">
+s'(r) = \begin{cases}
+1 & \textrm{if} \quad r<d_0 \\
+1 - \tanh\left( \frac{ r - d_0 }{ r_0 } \right) & \textrm{if} \quad d_0 < r < d_{max} \\
+0 & \textrm{otherwise}
+\end{cases}
+</script>
+</p>
+<p>You can also specify that a tanh switching function is to be used by using the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_21.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_21.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_21.datd" onclick='showPath("LESS_THAN.md_working_21.dat","LESS_THAN.md_working_21.datd","LESS_THAN.md_working_21.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_21.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_21.dats" onclick='showPath("LESS_THAN.md_working_21.dat","LESS_THAN.md_working_21.dats","LESS_THAN.md_working_21.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_21.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_21.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={TANH R_0=0.2}
+</pre>
+</div>
+<p>For this input <script type="math/tex">d_0</script> is set to its default value of 0.  Furthermore, as D_MAX is unset the stretching and scaling that
+was described in the previous section is not performed.</p>
+<h3 id="cosinus-switching-function">Cosinus switching function</h3>
+<p>You can specify that the cosinum function is to be used by using the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_22.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_22.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_22.datd" onclick='showPath("LESS_THAN.md_working_22.dat","LESS_THAN.md_working_22.datd","LESS_THAN.md_working_22.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_22.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_22.dats" onclick='showPath("LESS_THAN.md_working_22.dat","LESS_THAN.md_working_22.dats","LESS_THAN.md_working_22.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_22.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_22.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={COSINUS D_0=0.1 R_0=0.1}
+</pre></div>
+
+<p>The <script type="math/tex">s'(r)</script> that is used in this input is given by the following expression:</p>
+<p>
+<script type="math/tex; mode=display">
+s(r) =\left\{\begin{array}{ll}
+   1                                                           & \mathrm{if } r \leq d_0 \\
+   0.5 \left( \cos ( \frac{ r - d_0 }{ r_0 } \pi ) + 1 \right) & \mathrm{if } d_0 < r\leq d_0 + r_0 \\
+   0
+\end{array} \right\}
+</script>
+</p>
+<p>No stretching is required for this type of switching function as its functional form ensures that it is zero at <script type="math/tex">d_0+r_0</script>
+</p>
+<h3 id="custom-switching-function">Custom switching function</h3>
+<p>If you want to use a switching function that is different to all of the functions listed above you can use the cusom option that is illustrated below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_23.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_23.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_23.datd" onclick='showPath("LESS_THAN.md_working_23.dat","LESS_THAN.md_working_23.datd","LESS_THAN.md_working_23.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_23.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_23.dats" onclick='showPath("LESS_THAN.md_working_23.dat","LESS_THAN.md_working_23.dats","LESS_THAN.md_working_23.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_23.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_23.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={CUSTOM FUNC=1/(1+x^6) D_0=0.1 R_0=0.1 D_MAX=10}
+</pre></div>
+
+<p>This option allows you to use the lepton library that is used to implement the <a href="../CUSTOM/">CUSTOM</a> action to evaluate your switching function. With this
+option you specify the functional form for <script type="math/tex">s'(r)</script> by providing a function of <code>x</code> to the <code>FUNC</code> keyword.  The <code>x</code> that enters the switching function
+definition that you provide is given by:</p>
+<p>
+<script type="math/tex; mode=display">
+x = \frac{r - d_0}{r_0}
+</script>
+</p>
+<p>Notice, that you can also express your switching function in terms of <script type="math/tex">x^2</script> as illustrated in the input below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_24.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_24.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_24.datd" onclick='showPath("LESS_THAN.md_working_24.dat","LESS_THAN.md_working_24.datd","LESS_THAN.md_working_24.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_24.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_24.dats" onclick='showPath("LESS_THAN.md_working_24.dat","LESS_THAN.md_working_24.dats","LESS_THAN.md_working_24.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_24.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_24.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={CUSTOM FUNC=1/(1+x2^3) D_0=0.1 R_0=0.1 D_MAX=10}
+</pre></div>
+
+<p>which is equivalent to the earlier input with the CUSTOM switching function.  However, using <code>x2</code> in place of <code>x</code> is often more computationally efficient
+as you can avoid an expensive square root operation.  Notice, lastly, that just as there is a <a href="../MATHEVAL/">MATHEVAL</a> action that is equivalent to <a href="../CUSTOM/">CUSTOM</a>,
+there is also a matheval equivalent that you can use here:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LESS_THAN.md_working_25.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LESS_THAN.md_working_25.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="LESS_THAN.md_working_25.datd" onclick='showPath("LESS_THAN.md_working_25.dat","LESS_THAN.md_working_25.datd","LESS_THAN.md_working_25.datd","black")'>d</b><span style="display:none;" id="LESS_THAN.md_working_25.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="LESS_THAN.md_working_25.dats" onclick='showPath("LESS_THAN.md_working_25.dat","LESS_THAN.md_working_25.dats","LESS_THAN.md_working_25.dats","black")'>s</b><span style="display:none;" id="LESS_THAN.md_working_25.dats">The LESS_THAN action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>a function that is one if the input is less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LESS_THAN.md_working_25.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={MATHEVAL FUNC=1/(1+x2^3) R_0=0.1}
+</pre></div>
+
+<p>For this input <script type="math/tex">d_0</script> is set to its default value of 0. Furthermore, as D_MAX is unset the stretching and scaling that
+was described in the previous section is not performed.</p>
+<div class="admonition caution">
+<p class="admonition-title">performance of CUSTOM</p>
+<p>With the default implementation CUSTOM is slower than other functions
+(e.g., it is slower than an equivalent RATIONAL function by approximately a factor 2).
+You can find information on how to improve its performance in the documenation for <a href="../CUSTOM/">CUSTOM</a></p>
+</div>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">scalar/vector/matrix</td>
+<td style="text-align: left;">the values input to this function</td>
+</tr>
+<tr>
+<td style="text-align: left;">MASK</td>
+<td style="text-align: center;">vector/matrix</td>
+<td style="text-align: left;">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the values input to this function</td>
+</tr>
+<tr>
+<td style="text-align: left;">MASK</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed</td>
+</tr>
+<tr>
+<td style="text-align: left;">NN</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">The n parameter of the switching function</td>
+</tr>
+<tr>
+<td style="text-align: left;">MM</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">The m parameter of the switching function; 0 implies 2*NN</td>
+</tr>
+<tr>
+<td style="text-align: left;">D_0</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: left;">The d_0 parameter of the switching function</td>
+</tr>
+<tr>
+<td style="text-align: left;">R_0</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">The r_0 parameter of the switching function</td>
+</tr>
+<tr>
+<td style="text-align: left;">USEGPU</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">run this calculation on the GPU. Further information about this flag can be found <a href="../gpu/">here</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">SWITCH</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">This keyword is used if you want to employ an alternative to the continuous swiching function defined above</td>
+</tr>
+<tr>
+<td style="text-align: left;">SQUARED</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">is the input quantity the square of the value that you would like to apply the switching function to</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2 @@
+#SETTINGS INPUTFILES=regtest/crystdistrib/rt-dops-forces/kernels.dat
+dops: DOPS SPECIES=1,4,7 CUTOFF=7.4 KERNELFILE=regtest/crystdistrib/rt-dops-forces/kernels.dat

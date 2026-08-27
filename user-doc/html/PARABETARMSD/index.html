@@ -1,0 +1,967 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: PARABETARMSD - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-parabetarmsd" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: PARABETARMSD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#periodic-boundary-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Periodic boundary conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-parabetarmsd"><a href="../actions/">Action</a>: PARABETARMSD</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_secondarystructure/"><strong>secondarystructure</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Probe the parallel beta sheet content of your protein structure.</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=PARABETARMSD"><img alt="used in 3 tutorials" src="https://img.shields.io/badge/tutorials-3-green.svg" /></a><a href="https://www.plumed-nest.org/browse.html?action=PARABETARMSD"><img alt="used in 4 eggs" src="https://img.shields.io/badge/nest-4-green.svg" /></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">if LESS_THAN is present the RMSD distance between each residue and the ideal parallel beta sheet</td>
+<td style="text-align: center;">scalar/vector</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Probe the parallel beta sheet content of your protein structure.</p>
+<p>Two protein segments containing three contiguous residues can form a parallel beta sheet.
+Although if the two segments are part of the same protein chain they must be separated by
+a minimum of 3 residues to make room for the turn. This colvar thus generates the set of
+all possible six residue sections that could conceivably form a parallel beta sheet
+and calculates the <a href="../DRMSD/">DRMSD</a> or <a href="../RMSD/">RMSD</a> distance between the configuration in which the residues find themselves
+and an idealized parallel beta sheet structure. These distances can be calculated by either
+aligning the instantaneous structure with the reference structure and measuring each
+atomic displacement or by calculating differences between the set of inter-atomic
+distances in the reference and instantaneous structures.</p>
+<p>This colvar is based on the reference in the bibliography below.  The authors of
+this paper use the set of distances from the parallel beta sheet configurations to measure
+the number of segments whose configuration resembles a parallel beta sheet. This is done by calculating
+the following sum of functions of the rmsd distances:</p>
+<p>
+<script type="math/tex; mode=display">
+s = \sum_i \frac{ 1 - \left(\frac{r_i-d_0}{r_0}\right)^n } { 1 - \left(\frac{r_i-d_0}{r_0}\right)^m }
+</script>
+</p>
+<p>where the sum runs over all possible segments of parallel beta sheet.  By default the
+NN, MM and D_0 parameters are set equal to those used in the paper cited below.  The R_0
+parameter must be set by the user - the value used in the paper cited below was 0.08 nm.</p>
+<p>If you change the function in the above sum you can calculate quantities such as the average
+distance from a structure composed of only parallel beta sheets or the distance between the set of
+residues that is closest to a parallel beta sheet and the reference configuration. To do these sorts of
+calculations you can use the AVERAGE and MIN keywords. In addition you can use the LESS_THAN
+keyword if you would like to change the form of the switching function. If you use any of these
+options you no longer need to specify NN, R_0, MM and D_0.</p>
+<p>The following input calculates the number of six residue segments of
+protein that are in an parallel beta sheet configuration.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PARABETARMSD.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PARABETARMSD.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS MOLFILE=regtest/basic/rt32/helix.pdb</span>
+<span class="plumedtooltip" style="color:green">MOLINFO<span class="right">This command is used to provide information on the molecules that are present in your system. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">STRUCTURE<span class="right">a file in pdb format containing a reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt32/helix.pdb<div class="right"> Click <a onclick='openModal("PARABETARMSD.md_working_1.datregtest/basic/rt32/helix.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PARABETARMSD.md_working_1.datregtest/basic/rt32/helix.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PARABETARMSD.md_working_1.datregtest/basic/rt32/helix.pdb1")'>&times;</span>  <h2>FILE: regtest/basic/rt32/helix.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1 HH31 ACE     1      -9.105  -2.402  21.804  0.00  0.00            
+ATOM      2  CH3 ACE     1      -8.930  -3.352  22.308  0.00  0.00            
+ATOM      3 HH32 ACE     1      -9.504  -3.501  23.223  0.00  0.00            
+ATOM      4 HH33 ACE     1      -9.067  -4.173  21.604  0.00  0.00            
+ATOM      5  C   ACE     1      -7.450  -3.303  22.659  0.00  0.00            
+...
+ATOM    129  CH3 NME    14      -1.690  -7.089  20.487  0.00  0.00            
+ATOM    130 HH31 NME    14      -1.873  -6.629  21.459  0.00  0.00            
+ATOM    131 HH32 NME    14      -1.152  -6.284  19.986  0.00  0.00            
+ATOM    132 HH33 NME    14      -1.135  -8.020  20.602  0.00  0.00            
+END
+</pre></div>  </div></div>
+<span style="display:none;" id="PARABETARMSD.md_working_1.dat">The MOLINFO action with label <b></b> calculates something</span><span id="PARABETARMSD.md_working_1.datpb_short"><span id="PARABETARMSD.md_working_1.datdefpb_short"><b name="PARABETARMSD.md_working_1.datpb" onclick='showPath("PARABETARMSD.md_working_1.dat","PARABETARMSD.md_working_1.datpb","PARABETARMSD.md_working_1.datpb_shortcut","black")'>pb</b><span style="display:none;" id="PARABETARMSD.md_working_1.datpb_shortcut">The PARABETARMSD action with label <b>pb</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb</td><td width="5%"><font color="black">scalar</font></td><td>if LESS_THAN is present the RMSD distance between each residue and the ideal parallel beta sheet.  If LESS_THAN is not present the number of residue segments where the structure is similar to a parallel beta sheet</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PARABETARMSD<span class="right">Probe the parallel beta sheet content of your protein structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PARABETARMSD.md_working_1.datpb");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("PARABETARMSD.md_working_1.datdefpb");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PARABETARMSD">More details</a><i></i></span></span> <span class="plumedtooltip">RESIDUES<span class="right">this command is used to specify the set of residues that could conceivably form part of the secondary structure<i></i></span></span>=all <span class="plumedtooltip">STRANDS_CUTOFF<span class="right">If in a segment of protein the two strands are further apart then the calculation of the actual RMSD is skipped as the structure is very far from being beta-sheet like<i></i></span></span>=1 <span class="plumedtooltip">R_0<span class="right">The r_0 parameter of the switching function<i></i></span></span>=0.1
+</span><span id="PARABETARMSD.md_working_1.datdefpb_long" style="display:none;"><b name="PARABETARMSD.md_working_1.datpb" onclick='showPath("PARABETARMSD.md_working_1.dat","PARABETARMSD.md_working_1.datpb","PARABETARMSD.md_working_1.datpb_shortcut","black")'>pb</b>: <span class="plumedtooltip" style="color:green">PARABETARMSD<span class="right">Probe the parallel beta sheet content of your protein structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PARABETARMSD.md_working_1.datpb");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("PARABETARMSD.md_working_1.datdefpb");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PARABETARMSD">More details</a><i></i></span></span> <span class="plumedtooltip">RESIDUES<span class="right">this command is used to specify the set of residues that could conceivably form part of the secondary structure<i></i></span></span>=all <span class="plumedtooltip">STRANDS_CUTOFF<span class="right">If in a segment of protein the two strands are further apart then the calculation of the actual RMSD is skipped as the structure is very far from being beta-sheet like<i></i></span></span>=1 <span class="plumedtooltip">R_0<span class="right">The r_0 parameter of the switching function<i></i></span></span>=0.1  <span class="plumedtooltip">NN<span class="right"> The n parameter of the switching function<i></i></span></span>=8 <span class="plumedtooltip">D_0<span class="right"> The d_0 parameter of the switching function<i></i></span></span>=0.0 <span class="plumedtooltip">MM<span class="right"> The m parameter of the switching function<i></i></span></span>=12 <span class="plumedtooltip">STYLE<span class="right"> Parallel beta sheets can either form in a single chain or from a pair of chains<i></i></span></span>=all <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=DRMSD
+</span></span><span id="PARABETARMSD.md_working_1.datpb_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PARABETARMSD.md_working_1.datpb")'># pb: PARABETARMSD RESIDUES=all STRANDS_CUTOFF=1 R_0=0.1</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PARABETARMSD.md_working_1.datpb_cut_dists" onclick='showPath("PARABETARMSD.md_working_1.dat","PARABETARMSD.md_working_1.datpb_cut_dists","PARABETARMSD.md_working_1.datpb_cut_dists","blue")'>pb_cut_dists</b><span style="display:none;" id="PARABETARMSD.md_working_1.datpb_cut_dists">The DISTANCE action with label <b>pb_cut_dists</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb_cut_dists</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,79 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,89 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,99 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,109 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=29,89     <span style="color:blue" class="comment"># Action input conctinues with 5 further ATOMSn keywords, </span>
+<b name="PARABETARMSD.md_working_1.datpb_cut" onclick='showPath("PARABETARMSD.md_working_1.dat","PARABETARMSD.md_working_1.datpb_cut","PARABETARMSD.md_working_1.datpb_cut","blue")'>pb_cut</b><span style="display:none;" id="PARABETARMSD.md_working_1.datpb_cut">The CUSTOM action with label <b>pb_cut</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb_cut</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PARABETARMSD.md_working_1.datpb_cut_dists">pb_cut_dists</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=step(1-x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PARABETARMSD.md_working_1.datpb_both" onclick='showPath("PARABETARMSD.md_working_1.dat","PARABETARMSD.md_working_1.datpb_both","PARABETARMSD.md_working_1.datpb_both","blue")'>pb_both</b><span style="display:none;" id="PARABETARMSD.md_working_1.datpb_both">The SECONDARY_STRUCTURE_DRMSD action with label <b>pb_both</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb_both.struct-1</td><td width="5%"><font color="blue">vector</font></td><td>the vectors containing the rmsd distances between the residues and each of the reference structures  This is the 1th of these quantities</td></tr><tr><td width="5%">pb_both.struct-2</td><td width="5%"><font color="blue">vector</font></td><td>the vectors containing the rmsd distances between the residues and each of the reference structures  This is the 2th of these quantities</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SECONDARY_STRUCTURE_DRMSD<span class="right">Calclulate the DRMSD between segments of a protein and a reference structure of interest <a href="https://www.plumed.org/doc-master/user-doc/html/SECONDARY_STRUCTURE_DRMSD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">BONDLENGTH<span class="right"> the length to use for bonds<i></i></span></span>=0.17 <span class="plumedtooltip">ALIGN_STRANDS<span class="right"> ensure that the two halves of a beta sheet are not broken by the periodic boundaries before doing alignment<i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">this is the full list of atoms that we are investigating<i></i></span></span>=7,9,11,15,16,17,19,21,25,26,27,29,31,35,36,37,39,41,45,46,47,49,51,55,56,57,59,61,65,66,67,69,71,75,76,77,79,81,85,86,87,89,91,95,96,97,99,101,105,106,107,109,111,115,116,117,119,121,125,126 <span class="plumedtooltip">MASK<span class="right">a vector which is used to determine which elements of the secondary structure variable should be computed<i></i></span></span>=<b name="PARABETARMSD.md_working_1.datpb_cut">pb_cut</b> <span class="plumedtooltip">SEGMENT1<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44 <span class="plumedtooltip">SEGMENT2<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="plumedtooltip">SEGMENT3<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54 <span class="plumedtooltip">SEGMENT4<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59 <span class="plumedtooltip">SEGMENT5<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="plumedtooltip">STRUCTURE1<span class="right">the reference structure<i></i></span></span>=1.244,-4.62,-2.127,-0.016,-4.5,-1.395,0.105,-5.089,0.024,-0.287,-3,-1.301,0.55,-2.245,-0.822,-1.445,-2.551,-1.779,-1.752,-1.13,-1.677,-2.113,-0.55,-3.059,-2.906,-0.961,-0.689,-3.867,-1.738,-0.695,-2.774,0.034,0.19,-3.788,0.331,1.201,-3.188,0.3,2.624,-4.294,1.743,0.937,-3.503,2.671,0.821,4.746,-2.363,0.188,3.427,-1.839,0.545,3.135,-1.958,2.074,3.346,-0.365,0.181,4.237,0.412,0.521,2.261,0.013,-0.487,2.024,1.401,-0.875,1.489,1.514,-2.313,0.914,1.902,0.044,-0.173,1.33,0.052,1.202,2.94,0.828,0.19,3.507,1.718,0.772,3.801,3.104,-0.229,4.791,1.038,0.523,5.771,0.996 <span class="plumedtooltip">STRUCTURE2<span class="right">the reference structure<i></i></span></span>=-1.439,-5.122,-1.144,-0.816,-3.803,-1.013,0.099,-3.509,-2.206,-1.928,-2.77,-0.952,-2.991,-2.97,-1.551,-1.698,-1.687,-0.215,-2.681,-0.613,-0.143,-3.323,-0.477,1.267,-1.984,0.681,-0.574,-0.807,0.921,-0.273,-2.716,1.492,-1.329,-2.196,2.731,-1.883,-2.263,2.692,-3.418,-2.989,3.949,-1.433,-4.214,3.989,-1.583,2.464,-4.352,2.149,3.078,-3.17,1.541,3.398,-3.415,0.06,2.08,-2.021,1.639,0.938,-2.178,1.225,2.525,-0.886,2.183,1.692,0.303,2.346,1.541,0.665,3.842,2.42,1.41,1.608,3.567,1.733,1.937,1.758,1.976,0.6,2.373,2.987,-0.238,2.367,2.527,-1.72,1.684,4.331,-0.148,0.486,4.43,-0.415     <span style="color:blue" class="comment"># Action input conctinues with 5 further SEGMENTn keywords, </span>
+<b name="PARABETARMSD.md_working_1.datpb_low" onclick='showPath("PARABETARMSD.md_working_1.dat","PARABETARMSD.md_working_1.datpb_low","PARABETARMSD.md_working_1.datpb_low","blue")'>pb_low</b><span style="display:none;" id="PARABETARMSD.md_working_1.datpb_low">The LOWEST action with label <b>pb_low</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb_low</td><td width="5%"><font color="blue">vector</font></td><td>the smallest element in the input vector if one vector specified.  If multiple vectors of the same size specified the largest elements of these vector computed elementwise.</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LOWEST<span class="right">This function can be used to find the lowest colvar by magnitude in a set. <a href="https://www.plumed.org/doc-master/user-doc/html/LOWEST" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PARABETARMSD.md_working_1.datpb_both">pb_both.struct-1</b>,<b name="PARABETARMSD.md_working_1.datpb_both">pb_both.struct-2</b> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="PARABETARMSD.md_working_1.datpb_cut">pb_cut</b>
+<b name="PARABETARMSD.md_working_1.datpb_ltu" onclick='showPath("PARABETARMSD.md_working_1.dat","PARABETARMSD.md_working_1.datpb_ltu","PARABETARMSD.md_working_1.datpb_ltu","blue")'>pb_ltu</b><span style="display:none;" id="PARABETARMSD.md_working_1.datpb_ltu">The LESS_THAN action with label <b>pb_ltu</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb_ltu</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PARABETARMSD.md_working_1.datpb_low">pb_low</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.1 D_0=0.0 NN=8 MM=12} <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="PARABETARMSD.md_working_1.datpb_cut">pb_cut</b>
+<b name="PARABETARMSD.md_working_1.datpb_lt" onclick='showPath("PARABETARMSD.md_working_1.dat","PARABETARMSD.md_working_1.datpb_lt","PARABETARMSD.md_working_1.datpb_lt","blue")'>pb_lt</b><span style="display:none;" id="PARABETARMSD.md_working_1.datpb_lt">The CUSTOM action with label <b>pb_lt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb_lt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PARABETARMSD.md_working_1.datpb_ltu">pb_ltu</b>,<b name="PARABETARMSD.md_working_1.datpb_cut">pb_cut</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PARABETARMSD.md_working_1.datpb" onclick='showPath("PARABETARMSD.md_working_1.dat","PARABETARMSD.md_working_1.datpb","PARABETARMSD.md_working_1.datpb","black")'>pb</b><span style="display:none;" id="PARABETARMSD.md_working_1.datpb">The SUM action with label <b>pb</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PARABETARMSD.md_working_1.datpb_lt">pb_lt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="PARABETARMSD.md_working_1.datpb">pb</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>Here the same is done use <a href="../RMSD/">RMSD</a> instead of <a href="../DRMSD/">DRMSD</a>, which is normally faster.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PARABETARMSD.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PARABETARMSD.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS MOLFILE=regtest/basic/rt32/helix.pdb</span>
+<span class="plumedtooltip" style="color:green">MOLINFO<span class="right">This command is used to provide information on the molecules that are present in your system. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">STRUCTURE<span class="right">a file in pdb format containing a reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt32/helix.pdb<div class="right"> Click <a onclick='openModal("PARABETARMSD.md_working_2.datregtest/basic/rt32/helix.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PARABETARMSD.md_working_2.datregtest/basic/rt32/helix.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PARABETARMSD.md_working_2.datregtest/basic/rt32/helix.pdb1")'>&times;</span>  <h2>FILE: regtest/basic/rt32/helix.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1 HH31 ACE     1      -9.105  -2.402  21.804  0.00  0.00            
+ATOM      2  CH3 ACE     1      -8.930  -3.352  22.308  0.00  0.00            
+ATOM      3 HH32 ACE     1      -9.504  -3.501  23.223  0.00  0.00            
+ATOM      4 HH33 ACE     1      -9.067  -4.173  21.604  0.00  0.00            
+ATOM      5  C   ACE     1      -7.450  -3.303  22.659  0.00  0.00            
+...
+ATOM    129  CH3 NME    14      -1.690  -7.089  20.487  0.00  0.00            
+ATOM    130 HH31 NME    14      -1.873  -6.629  21.459  0.00  0.00            
+ATOM    131 HH32 NME    14      -1.152  -6.284  19.986  0.00  0.00            
+ATOM    132 HH33 NME    14      -1.135  -8.020  20.602  0.00  0.00            
+END
+</pre></div>  </div></div>
+<span style="display:none;" id="PARABETARMSD.md_working_2.dat">The MOLINFO action with label <b></b> calculates something</span><span class="plumedtooltip" style="color:green">WHOLEMOLECULES<span class="right">This action is used to rebuild molecules that can become split by the periodic boundary conditions. <a href="https://www.plumed.org/doc-master/user-doc/html/WHOLEMOLECULES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ENTITY0<span class="right">the atoms that make up a molecule that you wish to align<i></i></span></span>=1-100
+<span id="PARABETARMSD.md_working_2.dathh_short"><span id="PARABETARMSD.md_working_2.datdefhh_short"><b name="PARABETARMSD.md_working_2.dathh" onclick='showPath("PARABETARMSD.md_working_2.dat","PARABETARMSD.md_working_2.dathh","PARABETARMSD.md_working_2.dathh_shortcut","blue")'>hh</b><span style="display:none;" id="PARABETARMSD.md_working_2.dathh_shortcut">The PARABETARMSD action with label <b>hh</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh</td><td width="5%"><font color="blue">vector</font></td><td>if LESS_THAN is present the RMSD distance between each residue and the ideal parallel beta sheet.  If LESS_THAN is not present the number of residue segments where the structure is similar to a parallel beta sheet</td></tr><tr><td width="5%">hh_lessthan</td><td width="5%"><font color="black">scalar</font></td><td>the number blocks of residues that have an RMSD from the secondary structure that is less than the threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PARABETARMSD<span class="right">Probe the parallel beta sheet content of your protein structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PARABETARMSD.md_working_2.dathh");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("PARABETARMSD.md_working_2.datdefhh");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PARABETARMSD">More details</a><i></i></span></span> <span class="plumedtooltip">RESIDUES<span class="right">this command is used to specify the set of residues that could conceivably form part of the secondary structure<i></i></span></span>=all <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL <span class="plumedtooltip">LESS_THAN<span class="right">calculate the number of a residue segments that are within a certain target distance of this secondary structure type<i></i></span></span>={RATIONAL R_0=0.1 NN=8 MM=12}  <span class="plumedtooltip">STRANDS_CUTOFF<span class="right">If in a segment of protein the two strands are further apart then the calculation of the actual RMSD is skipped as the structure is very far from being beta-sheet like<i></i></span></span>=1
+</span><span id="PARABETARMSD.md_working_2.datdefhh_long" style="display:none;"><b name="PARABETARMSD.md_working_2.dathh" onclick='showPath("PARABETARMSD.md_working_2.dat","PARABETARMSD.md_working_2.dathh","PARABETARMSD.md_working_2.dathh_shortcut","blue")'>hh</b>: <span class="plumedtooltip" style="color:green">PARABETARMSD<span class="right">Probe the parallel beta sheet content of your protein structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PARABETARMSD.md_working_2.dathh");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("PARABETARMSD.md_working_2.datdefhh");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PARABETARMSD">More details</a><i></i></span></span> <span class="plumedtooltip">RESIDUES<span class="right">this command is used to specify the set of residues that could conceivably form part of the secondary structure<i></i></span></span>=all <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL <span class="plumedtooltip">LESS_THAN<span class="right">calculate the number of a residue segments that are within a certain target distance of this secondary structure type<i></i></span></span>={RATIONAL R_0=0.1 NN=8 MM=12}  <span class="plumedtooltip">STRANDS_CUTOFF<span class="right">If in a segment of protein the two strands are further apart then the calculation of the actual RMSD is skipped as the structure is very far from being beta-sheet like<i></i></span></span>=1  <span class="plumedtooltip">STYLE<span class="right"> Parallel beta sheets can either form in a single chain or from a pair of chains<i></i></span></span>=all
+</span></span><span id="PARABETARMSD.md_working_2.dathh_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PARABETARMSD.md_working_2.dathh")'># hh: PARABETARMSD RESIDUES=all TYPE=OPTIMAL LESS_THAN={RATIONAL R_0=0.1 NN=8 MM=12}  STRANDS_CUTOFF=1</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PARABETARMSD.md_working_2.dathh_cut_dists" onclick='showPath("PARABETARMSD.md_working_2.dat","PARABETARMSD.md_working_2.dathh_cut_dists","PARABETARMSD.md_working_2.dathh_cut_dists","blue")'>hh_cut_dists</b><span style="display:none;" id="PARABETARMSD.md_working_2.dathh_cut_dists">The DISTANCE action with label <b>hh_cut_dists</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh_cut_dists</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,79 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,89 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,99 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,109 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=29,89     <span style="color:blue" class="comment"># Action input conctinues with 5 further ATOMSn keywords, </span>
+<b name="PARABETARMSD.md_working_2.dathh_cut" onclick='showPath("PARABETARMSD.md_working_2.dat","PARABETARMSD.md_working_2.dathh_cut","PARABETARMSD.md_working_2.dathh_cut","blue")'>hh_cut</b><span style="display:none;" id="PARABETARMSD.md_working_2.dathh_cut">The CUSTOM action with label <b>hh_cut</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh_cut</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PARABETARMSD.md_working_2.dathh_cut_dists">hh_cut_dists</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=step(1-x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PARABETARMSD.md_working_2.dathh_both" onclick='showPath("PARABETARMSD.md_working_2.dat","PARABETARMSD.md_working_2.dathh_both","PARABETARMSD.md_working_2.dathh_both","blue")'>hh_both</b><span style="display:none;" id="PARABETARMSD.md_working_2.dathh_both">The SECONDARY_STRUCTURE_RMSD action with label <b>hh_both</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh_both.struct-1</td><td width="5%"><font color="blue">vector</font></td><td>the vectors containing the rmsd distances between the residues and each of the reference structures  This is the 1th of these quantities</td></tr><tr><td width="5%">hh_both.struct-2</td><td width="5%"><font color="blue">vector</font></td><td>the vectors containing the rmsd distances between the residues and each of the reference structures  This is the 2th of these quantities</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SECONDARY_STRUCTURE_RMSD<span class="right">Calclulate the RMSD between segments of a protein and a reference structure of interest <a href="https://www.plumed.org/doc-master/user-doc/html/SECONDARY_STRUCTURE_RMSD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL <span class="plumedtooltip">ALIGN_STRANDS<span class="right"> ensure that the two halves of a beta sheet are not broken by the periodic boundaries before doing alignment<i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">this is the full list of atoms that we are investigating<i></i></span></span>=7,9,11,15,16,17,19,21,25,26,27,29,31,35,36,37,39,41,45,46,47,49,51,55,56,57,59,61,65,66,67,69,71,75,76,77,79,81,85,86,87,89,91,95,96,97,99,101,105,106,107,109,111,115,116,117,119,121,125,126 <span class="plumedtooltip">MASK<span class="right">a vector which is used to determine which elements of the secondary structure variable should be computed<i></i></span></span>=<b name="PARABETARMSD.md_working_2.dathh_cut">hh_cut</b> <span class="plumedtooltip">SEGMENT1<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44 <span class="plumedtooltip">SEGMENT2<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="plumedtooltip">SEGMENT3<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54 <span class="plumedtooltip">SEGMENT4<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59 <span class="plumedtooltip">SEGMENT5<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="plumedtooltip">STRUCTURE1<span class="right">the reference structure<i></i></span></span>=1.244,-4.62,-2.127,-0.016,-4.5,-1.395,0.105,-5.089,0.024,-0.287,-3,-1.301,0.55,-2.245,-0.822,-1.445,-2.551,-1.779,-1.752,-1.13,-1.677,-2.113,-0.55,-3.059,-2.906,-0.961,-0.689,-3.867,-1.738,-0.695,-2.774,0.034,0.19,-3.788,0.331,1.201,-3.188,0.3,2.624,-4.294,1.743,0.937,-3.503,2.671,0.821,4.746,-2.363,0.188,3.427,-1.839,0.545,3.135,-1.958,2.074,3.346,-0.365,0.181,4.237,0.412,0.521,2.261,0.013,-0.487,2.024,1.401,-0.875,1.489,1.514,-2.313,0.914,1.902,0.044,-0.173,1.33,0.052,1.202,2.94,0.828,0.19,3.507,1.718,0.772,3.801,3.104,-0.229,4.791,1.038,0.523,5.771,0.996 <span class="plumedtooltip">STRUCTURE2<span class="right">the reference structure<i></i></span></span>=-1.439,-5.122,-1.144,-0.816,-3.803,-1.013,0.099,-3.509,-2.206,-1.928,-2.77,-0.952,-2.991,-2.97,-1.551,-1.698,-1.687,-0.215,-2.681,-0.613,-0.143,-3.323,-0.477,1.267,-1.984,0.681,-0.574,-0.807,0.921,-0.273,-2.716,1.492,-1.329,-2.196,2.731,-1.883,-2.263,2.692,-3.418,-2.989,3.949,-1.433,-4.214,3.989,-1.583,2.464,-4.352,2.149,3.078,-3.17,1.541,3.398,-3.415,0.06,2.08,-2.021,1.639,0.938,-2.178,1.225,2.525,-0.886,2.183,1.692,0.303,2.346,1.541,0.665,3.842,2.42,1.41,1.608,3.567,1.733,1.937,1.758,1.976,0.6,2.373,2.987,-0.238,2.367,2.527,-1.72,1.684,4.331,-0.148,0.486,4.43,-0.415     <span style="color:blue" class="comment"># Action input conctinues with 5 further SEGMENTn keywords, </span>
+<b name="PARABETARMSD.md_working_2.dathh" onclick='showPath("PARABETARMSD.md_working_2.dat","PARABETARMSD.md_working_2.dathh","PARABETARMSD.md_working_2.dathh","blue")'>hh</b><span style="display:none;" id="PARABETARMSD.md_working_2.dathh">The LOWEST action with label <b>hh</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh</td><td width="5%"><font color="blue">vector</font></td><td>the smallest element in the input vector if one vector specified.  If multiple vectors of the same size specified the largest elements of these vector computed elementwise.</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LOWEST<span class="right">This function can be used to find the lowest colvar by magnitude in a set. <a href="https://www.plumed.org/doc-master/user-doc/html/LOWEST" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PARABETARMSD.md_working_2.dathh_both">hh_both.struct-1</b>,<b name="PARABETARMSD.md_working_2.dathh_both">hh_both.struct-2</b> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="PARABETARMSD.md_working_2.dathh_cut">hh_cut</b>
+<b name="PARABETARMSD.md_working_2.dathh_ltu" onclick='showPath("PARABETARMSD.md_working_2.dat","PARABETARMSD.md_working_2.dathh_ltu","PARABETARMSD.md_working_2.dathh_ltu","blue")'>hh_ltu</b><span style="display:none;" id="PARABETARMSD.md_working_2.dathh_ltu">The LESS_THAN action with label <b>hh_ltu</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh_ltu</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PARABETARMSD.md_working_2.dathh">hh</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.1 NN=8 MM=12} <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="PARABETARMSD.md_working_2.dathh_cut">hh_cut</b>
+<b name="PARABETARMSD.md_working_2.dathh_lt" onclick='showPath("PARABETARMSD.md_working_2.dat","PARABETARMSD.md_working_2.dathh_lt","PARABETARMSD.md_working_2.dathh_lt","blue")'>hh_lt</b><span style="display:none;" id="PARABETARMSD.md_working_2.dathh_lt">The CUSTOM action with label <b>hh_lt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh_lt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PARABETARMSD.md_working_2.dathh_ltu">hh_ltu</b>,<b name="PARABETARMSD.md_working_2.dathh_cut">hh_cut</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PARABETARMSD.md_working_2.dathh_lessthan" onclick='showPath("PARABETARMSD.md_working_2.dat","PARABETARMSD.md_working_2.dathh_lessthan","PARABETARMSD.md_working_2.dathh_lessthan","black")'>hh_lessthan</b><span style="display:none;" id="PARABETARMSD.md_working_2.dathh_lessthan">The SUM action with label <b>hh_lessthan</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh_lessthan</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PARABETARMSD.md_working_2.dathh_lt">hh_lt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="PARABETARMSD.md_working_2.dathh">hh.lessthan</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p><strong>YOUR CALCULATION WILL BE MUCH FASTER IF YOU USE THE <code>STRANDS_CUTOFF</code> KEYWORD.</strong>  As you can see from the
+expanded version of the inputs above this keyword reduces the computational cost of the calculation by
+avoiding calculations of the RMSD values for segments that have the two strands of the beta sheet further apart
+than a cutoff.</p>
+<h2 id="periodic-boundary-conditions">Periodic boundary conditions</h2>
+<p>You can turn off periodic boundary conditions by using the NOPBC flag as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PARABETARMSD.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PARABETARMSD.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS MOLFILE=regtest/basic/rt32/helix.pdb</span>
+<span class="plumedtooltip" style="color:green">MOLINFO<span class="right">This command is used to provide information on the molecules that are present in your system. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">STRUCTURE<span class="right">a file in pdb format containing a reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt32/helix.pdb<div class="right"> Click <a onclick='openModal("PARABETARMSD.md_working_3.datregtest/basic/rt32/helix.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PARABETARMSD.md_working_3.datregtest/basic/rt32/helix.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PARABETARMSD.md_working_3.datregtest/basic/rt32/helix.pdb1")'>&times;</span>  <h2>FILE: regtest/basic/rt32/helix.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1 HH31 ACE     1      -9.105  -2.402  21.804  0.00  0.00            
+ATOM      2  CH3 ACE     1      -8.930  -3.352  22.308  0.00  0.00            
+ATOM      3 HH32 ACE     1      -9.504  -3.501  23.223  0.00  0.00            
+ATOM      4 HH33 ACE     1      -9.067  -4.173  21.604  0.00  0.00            
+ATOM      5  C   ACE     1      -7.450  -3.303  22.659  0.00  0.00            
+...
+ATOM    129  CH3 NME    14      -1.690  -7.089  20.487  0.00  0.00            
+ATOM    130 HH31 NME    14      -1.873  -6.629  21.459  0.00  0.00            
+ATOM    131 HH32 NME    14      -1.152  -6.284  19.986  0.00  0.00            
+ATOM    132 HH33 NME    14      -1.135  -8.020  20.602  0.00  0.00            
+END
+</pre></div>  </div></div>
+<span style="display:none;" id="PARABETARMSD.md_working_3.dat">The MOLINFO action with label <b></b> calculates something</span><span id="PARABETARMSD.md_working_3.datpb_short"><span id="PARABETARMSD.md_working_3.datdefpb_short"><b name="PARABETARMSD.md_working_3.datpb" onclick='showPath("PARABETARMSD.md_working_3.dat","PARABETARMSD.md_working_3.datpb","PARABETARMSD.md_working_3.datpb_shortcut","black")'>pb</b><span style="display:none;" id="PARABETARMSD.md_working_3.datpb_shortcut">The PARABETARMSD action with label <b>pb</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb</td><td width="5%"><font color="black">scalar</font></td><td>if LESS_THAN is present the RMSD distance between each residue and the ideal parallel beta sheet.  If LESS_THAN is not present the number of residue segments where the structure is similar to a parallel beta sheet</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PARABETARMSD<span class="right">Probe the parallel beta sheet content of your protein structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PARABETARMSD.md_working_3.datpb");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("PARABETARMSD.md_working_3.datdefpb");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PARABETARMSD">More details</a><i></i></span></span> <span class="plumedtooltip">RESIDUES<span class="right">this command is used to specify the set of residues that could conceivably form part of the secondary structure<i></i></span></span>=all <span class="plumedtooltip">STRANDS_CUTOFF<span class="right">If in a segment of protein the two strands are further apart then the calculation of the actual RMSD is skipped as the structure is very far from being beta-sheet like<i></i></span></span>=1 <span class="plumedtooltip">R_0<span class="right">The r_0 parameter of the switching function<i></i></span></span>=0.1 <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions<i></i></span></span>
+</span><span id="PARABETARMSD.md_working_3.datdefpb_long" style="display:none;"><b name="PARABETARMSD.md_working_3.datpb" onclick='showPath("PARABETARMSD.md_working_3.dat","PARABETARMSD.md_working_3.datpb","PARABETARMSD.md_working_3.datpb_shortcut","black")'>pb</b>: <span class="plumedtooltip" style="color:green">PARABETARMSD<span class="right">Probe the parallel beta sheet content of your protein structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PARABETARMSD.md_working_3.datpb");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("PARABETARMSD.md_working_3.datdefpb");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PARABETARMSD">More details</a><i></i></span></span> <span class="plumedtooltip">RESIDUES<span class="right">this command is used to specify the set of residues that could conceivably form part of the secondary structure<i></i></span></span>=all <span class="plumedtooltip">STRANDS_CUTOFF<span class="right">If in a segment of protein the two strands are further apart then the calculation of the actual RMSD is skipped as the structure is very far from being beta-sheet like<i></i></span></span>=1 <span class="plumedtooltip">R_0<span class="right">The r_0 parameter of the switching function<i></i></span></span>=0.1 <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions<i></i></span></span>  <span class="plumedtooltip">NN<span class="right"> The n parameter of the switching function<i></i></span></span>=8 <span class="plumedtooltip">D_0<span class="right"> The d_0 parameter of the switching function<i></i></span></span>=0.0 <span class="plumedtooltip">MM<span class="right"> The m parameter of the switching function<i></i></span></span>=12 <span class="plumedtooltip">STYLE<span class="right"> Parallel beta sheets can either form in a single chain or from a pair of chains<i></i></span></span>=all <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=DRMSD
+</span></span><span id="PARABETARMSD.md_working_3.datpb_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PARABETARMSD.md_working_3.datpb")'># pb: PARABETARMSD RESIDUES=all STRANDS_CUTOFF=1 R_0=0.1 NOPBC</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PARABETARMSD.md_working_3.datpb_cut_dists" onclick='showPath("PARABETARMSD.md_working_3.dat","PARABETARMSD.md_working_3.datpb_cut_dists","PARABETARMSD.md_working_3.datpb_cut_dists","blue")'>pb_cut_dists</b><span style="display:none;" id="PARABETARMSD.md_working_3.datpb_cut_dists">The DISTANCE action with label <b>pb_cut_dists</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb_cut_dists</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,79 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,89 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,99 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=19,109 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=29,89     <span style="color:blue" class="comment"># Action input conctinues with 5 further ATOMSn keywords, </span>
+<b name="PARABETARMSD.md_working_3.datpb_cut" onclick='showPath("PARABETARMSD.md_working_3.dat","PARABETARMSD.md_working_3.datpb_cut","PARABETARMSD.md_working_3.datpb_cut","blue")'>pb_cut</b><span style="display:none;" id="PARABETARMSD.md_working_3.datpb_cut">The CUSTOM action with label <b>pb_cut</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb_cut</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PARABETARMSD.md_working_3.datpb_cut_dists">pb_cut_dists</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=step(1-x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PARABETARMSD.md_working_3.datpb_both" onclick='showPath("PARABETARMSD.md_working_3.dat","PARABETARMSD.md_working_3.datpb_both","PARABETARMSD.md_working_3.datpb_both","blue")'>pb_both</b><span style="display:none;" id="PARABETARMSD.md_working_3.datpb_both">The SECONDARY_STRUCTURE_DRMSD action with label <b>pb_both</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb_both.struct-1</td><td width="5%"><font color="blue">vector</font></td><td>the vectors containing the rmsd distances between the residues and each of the reference structures  This is the 1th of these quantities</td></tr><tr><td width="5%">pb_both.struct-2</td><td width="5%"><font color="blue">vector</font></td><td>the vectors containing the rmsd distances between the residues and each of the reference structures  This is the 2th of these quantities</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SECONDARY_STRUCTURE_DRMSD<span class="right">Calclulate the DRMSD between segments of a protein and a reference structure of interest <a href="https://www.plumed.org/doc-master/user-doc/html/SECONDARY_STRUCTURE_DRMSD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">BONDLENGTH<span class="right"> the length to use for bonds<i></i></span></span>=0.17 <span class="plumedtooltip">ALIGN_STRANDS<span class="right"> ensure that the two halves of a beta sheet are not broken by the periodic boundaries before doing alignment<i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">this is the full list of atoms that we are investigating<i></i></span></span>=7,9,11,15,16,17,19,21,25,26,27,29,31,35,36,37,39,41,45,46,47,49,51,55,56,57,59,61,65,66,67,69,71,75,76,77,79,81,85,86,87,89,91,95,96,97,99,101,105,106,107,109,111,115,116,117,119,121,125,126 <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions<i></i></span></span> <span class="plumedtooltip">MASK<span class="right">a vector which is used to determine which elements of the secondary structure variable should be computed<i></i></span></span>=<b name="PARABETARMSD.md_working_3.datpb_cut">pb_cut</b> <span class="plumedtooltip">SEGMENT1<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44 <span class="plumedtooltip">SEGMENT2<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="plumedtooltip">SEGMENT3<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54 <span class="plumedtooltip">SEGMENT4<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59 <span class="plumedtooltip">SEGMENT5<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="plumedtooltip">STRUCTURE1<span class="right">the reference structure<i></i></span></span>=1.244,-4.62,-2.127,-0.016,-4.5,-1.395,0.105,-5.089,0.024,-0.287,-3,-1.301,0.55,-2.245,-0.822,-1.445,-2.551,-1.779,-1.752,-1.13,-1.677,-2.113,-0.55,-3.059,-2.906,-0.961,-0.689,-3.867,-1.738,-0.695,-2.774,0.034,0.19,-3.788,0.331,1.201,-3.188,0.3,2.624,-4.294,1.743,0.937,-3.503,2.671,0.821,4.746,-2.363,0.188,3.427,-1.839,0.545,3.135,-1.958,2.074,3.346,-0.365,0.181,4.237,0.412,0.521,2.261,0.013,-0.487,2.024,1.401,-0.875,1.489,1.514,-2.313,0.914,1.902,0.044,-0.173,1.33,0.052,1.202,2.94,0.828,0.19,3.507,1.718,0.772,3.801,3.104,-0.229,4.791,1.038,0.523,5.771,0.996 <span class="plumedtooltip">STRUCTURE2<span class="right">the reference structure<i></i></span></span>=-1.439,-5.122,-1.144,-0.816,-3.803,-1.013,0.099,-3.509,-2.206,-1.928,-2.77,-0.952,-2.991,-2.97,-1.551,-1.698,-1.687,-0.215,-2.681,-0.613,-0.143,-3.323,-0.477,1.267,-1.984,0.681,-0.574,-0.807,0.921,-0.273,-2.716,1.492,-1.329,-2.196,2.731,-1.883,-2.263,2.692,-3.418,-2.989,3.949,-1.433,-4.214,3.989,-1.583,2.464,-4.352,2.149,3.078,-3.17,1.541,3.398,-3.415,0.06,2.08,-2.021,1.639,0.938,-2.178,1.225,2.525,-0.886,2.183,1.692,0.303,2.346,1.541,0.665,3.842,2.42,1.41,1.608,3.567,1.733,1.937,1.758,1.976,0.6,2.373,2.987,-0.238,2.367,2.527,-1.72,1.684,4.331,-0.148,0.486,4.43,-0.415     <span style="color:blue" class="comment"># Action input conctinues with 5 further SEGMENTn keywords, </span>
+<b name="PARABETARMSD.md_working_3.datpb_low" onclick='showPath("PARABETARMSD.md_working_3.dat","PARABETARMSD.md_working_3.datpb_low","PARABETARMSD.md_working_3.datpb_low","blue")'>pb_low</b><span style="display:none;" id="PARABETARMSD.md_working_3.datpb_low">The LOWEST action with label <b>pb_low</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb_low</td><td width="5%"><font color="blue">vector</font></td><td>the smallest element in the input vector if one vector specified.  If multiple vectors of the same size specified the largest elements of these vector computed elementwise.</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LOWEST<span class="right">This function can be used to find the lowest colvar by magnitude in a set. <a href="https://www.plumed.org/doc-master/user-doc/html/LOWEST" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PARABETARMSD.md_working_3.datpb_both">pb_both.struct-1</b>,<b name="PARABETARMSD.md_working_3.datpb_both">pb_both.struct-2</b> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="PARABETARMSD.md_working_3.datpb_cut">pb_cut</b>
+<b name="PARABETARMSD.md_working_3.datpb_ltu" onclick='showPath("PARABETARMSD.md_working_3.dat","PARABETARMSD.md_working_3.datpb_ltu","PARABETARMSD.md_working_3.datpb_ltu","blue")'>pb_ltu</b><span style="display:none;" id="PARABETARMSD.md_working_3.datpb_ltu">The LESS_THAN action with label <b>pb_ltu</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb_ltu</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PARABETARMSD.md_working_3.datpb_low">pb_low</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.1 D_0=0.0 NN=8 MM=12} <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="PARABETARMSD.md_working_3.datpb_cut">pb_cut</b>
+<b name="PARABETARMSD.md_working_3.datpb_lt" onclick='showPath("PARABETARMSD.md_working_3.dat","PARABETARMSD.md_working_3.datpb_lt","PARABETARMSD.md_working_3.datpb_lt","blue")'>pb_lt</b><span style="display:none;" id="PARABETARMSD.md_working_3.datpb_lt">The CUSTOM action with label <b>pb_lt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb_lt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PARABETARMSD.md_working_3.datpb_ltu">pb_ltu</b>,<b name="PARABETARMSD.md_working_3.datpb_cut">pb_cut</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PARABETARMSD.md_working_3.datpb" onclick='showPath("PARABETARMSD.md_working_3.dat","PARABETARMSD.md_working_3.datpb","PARABETARMSD.md_working_3.datpb","black")'>pb</b><span style="display:none;" id="PARABETARMSD.md_working_3.datpb">The SUM action with label <b>pb</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pb</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PARABETARMSD.md_working_3.datpb_lt">pb_lt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="PARABETARMSD.md_working_3.datpb">pb</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>If you are using <a href="../DRMSD/">DRMSD</a> to measure distances and you <strong>don't</strong> use the NOPBC flag then
+all distances in the instaneous structure are evaluated in a way that takes the periodic boundary conditions
+into account. Using the NOPBC flag turns off this treatment.</p>
+<p>If you are using <a href="../RMSD/">RMSD</a> to measure distances and you <strong>don't</strong> use the NOPBC flag the the instaneous positions of
+each segment for which the RMSD is computed is reconstructed using the procedure outlined in the documentation for <a href="../WHOLEMOLECULES/">WHOLEMOLECULES</a>
+before the RMSD is computed. Using the NOPBC flag turns off this treatment.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_atoms/">atoms</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">RESIDUES</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">this command is used to specify the set of residues that could conceivably form part of the secondary structure</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-components">Output components</h2>
+<p>This action calculates the <a href="../specifying_arguments/">values</a> in the following table.  These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">struct</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">the vectors containing the rmsd distances between the residues and each of the reference structures</td>
+</tr>
+<tr>
+<td style="text-align: left;">lessthan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">the number blocks of residues that have an RMSD from the secondary structure that is less than the threshold</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">RESIDUES</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">this command is used to specify the set of residues that could conceivably form part of the secondary structure</td>
+</tr>
+<tr>
+<td style="text-align: left;">TYPE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">DRMSD</td>
+<td style="text-align: left;">the manner in which RMSD alignment is performed</td>
+</tr>
+<tr>
+<td style="text-align: left;">D_0</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: left;">The d_0 parameter of the switching function</td>
+</tr>
+<tr>
+<td style="text-align: left;">NN</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">The n parameter of the switching function</td>
+</tr>
+<tr>
+<td style="text-align: left;">MM</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: left;">The m parameter of the switching function</td>
+</tr>
+<tr>
+<td style="text-align: left;">STYLE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">all</td>
+<td style="text-align: left;">Parallel beta sheets can either form in a single chain or from a pair of chains</td>
+</tr>
+<tr>
+<td style="text-align: left;">SERIAL</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">do the calculation in serial. Further information about this flag can be found <a href="../actions/">here</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">USEGPU</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">run this calculation on the GPU. Further information about this flag can be found <a href="../gpu/">here</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">NOPBC</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">ignore the periodic boundary conditions</td>
+</tr>
+<tr>
+<td style="text-align: left;">LESS_THAN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">calculate the number of a residue segments that are within a certain target distance of this secondary structure type</td>
+</tr>
+<tr>
+<td style="text-align: left;">R_0</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">The r_0 parameter of the switching function</td>
+</tr>
+<tr>
+<td style="text-align: left;">STRANDS_CUTOFF</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">If in a segment of protein the two strands are further apart then the calculation of the actual RMSD is skipped as the structure is very far from being beta-sheet like</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1021/ct900202f">F. Pietrucci, A. Laio, A Collective Variable for the Efficient Exploration of Protein Beta-Sheet Structures: Application to SH3 and GB1. Journal of Chemical Theory and Computation 5, 2197–2201 (2009)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

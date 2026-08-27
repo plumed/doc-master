@@ -1,0 +1,6 @@
+#SETTINGS MOLFILE=regtest/basic/rt-ermsd/ref.pdb
+MOLINFO STRUCTURE=regtest/basic/rt-ermsd/ref.pdb MOLTYPE=dna
+hb1: DISTANCE ATOMS=@N2-2,@O2-15
+hb2: DISTANCE ATOMS=@N1-2,@N3-15
+hb3: DISTANCE ATOMS=@O6-2,@N4-15
+PRINT ARG=hb1,hb2,hb3

@@ -1,0 +1,19 @@
+UNITS NATURAL
+
+# These two commands calculate one symmetry function for each atom.  These
+# symmetry functions tell us whether the environment around each atom resembles
+# the environment in the solid or the environment in the liquid.
+fcc: FCCUBIC SPECIES=1-20736 SWITCH={CUBIC D_0=1.2 D_MAX=1.5} ALPHA=27
+smapfcc: MORE_THAN ARG=fcc SWITCH={SMAP R_0=0.5 A=8 B=8}
+smapfcc_grp: GROUP ATOMS=1-20736
+# This calculates the position of the center of the solid region of the simulation box.  What we are computing here a weighted average position
+# the weights are the order parameters computed using the two commands above.
+center: CENTER PHASES ATOMS=fcc WEIGHTS=smapfcc
+# This calculates the phase field that tells us whether the structure in each part of the simulation box is solid-like or liquid like.
+dens: MULTICOLVARDENS DATA=smapfcc ORIGIN=center DIR=xyz NBINS=50,80,80 BANDWIDTH=1.0,1.0,1.0 GRID_MIN=0.0,auto,auto GRID_MAX=20.0,auto,auto STRIDE=1 CLEAR=1
+# This finds the instantaneous location of the interface between the solid and liquid phases
+contour: FIND_CONTOUR_SURFACE ARG=dens CONTOUR=0.5 SEARCHDIR=dens_dist.x
+DUMPGRID ARG=contour FILE=contour.dat
+# This does the fourier transform of the location of the interface.  We can extract the interfacial stiffness from the average of this fourier transform
+ft: FOURIER_TRANSFORM ARG=contour FT_TYPE=norm FOURIER_PARAMETERS=-1,1
+DUMPGRID ARG=ft FILE=fourier.dat STRIDE=10

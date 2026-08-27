@@ -1,0 +1,963 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Parsing - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#parsing-action-input" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Parsing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parsing-action-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parsing action input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-input-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing input files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading constants
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-replica-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special replica syntax
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Parsing</h1>
+
+<h2 id="parsing-action-input">Parsing action input</h2>
+<p>The input to any PLUMED <a href="../actions/">action</a> consists of a series of keyword value pairs and flags that turn on or off various options.<br />
+In the example input below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_parsing.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../parsing.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="parsing.md_working_1.datd1" onclick='showPath("parsing.md_working_1.dat","parsing.md_working_1.datd1","parsing.md_working_1.datd1","black")'>d1</b><span style="display:none;" id="parsing.md_working_1.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span>
+</pre></div>
+
+<p><code>d1</code> is the action's <a href="../specifying_arguments/">label</a> and <code>DISTANCE</code> is the action's name.  The input to the action is then the keyword value pair ATOMS and the flag NOPBC.
+Every example input you encounter in this manual, in the <a href="https://www.plumed-nest.org">nest</a> and the <a href="https://www.plumed-tutorials.org">tutorials</a> has tooltips
+that explain what options are turned on by flags and what the values provided in each keyword pair represents.  You will also find details of
+all the keywords and flags that are available for an action on the manual page for that action.</p>
+<p>By default the following units are used when reading the parameters that are specified using keywords.  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Quantity</th>
+<th style="text-align: left;">Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Length</td>
+<td style="text-align: left;">nm</td>
+</tr>
+<tr>
+<td style="text-align: left;">Energy</td>
+<td style="text-align: left;">kj/mol</td>
+</tr>
+<tr>
+<td style="text-align: left;">Time</td>
+<td style="text-align: left;">ps</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mass</td>
+<td style="text-align: left;">amu</td>
+</tr>
+<tr>
+<td style="text-align: left;">Charge</td>
+<td style="text-align: left;">e</td>
+</tr>
+</tbody>
+</table>
+<p>These are also the units in any output files.  If you would like to change these units you can use the <a href="../UNITS/">UNITS</a> command.</p>
+<h2 id="writing-input-files">Writing input files</h2>
+<p>If you edit your PLUMED input files using VIM you can add the following to the .vimrc file:</p>
+<div class="highlight"><pre><span></span><code>" Enable syntax
+:syntax on
+" This allows including the proper PLUMED syntax file:
+:let &amp;runtimepath.=','.$PLUMED_VIMPATH
+" The former command requires PLUMED_VIMPATH to be set. Alternatively, use this:
+" let &amp;runtimepath.=',/usr/local/lib/plumed/vim'
+" properly adjusted to the path where PLUMED is installed.
+" This makes autocompletion work in the expected way:
+:set completeopt=longest,menuone
+" This enables bindings of F2/F3/F4 to plumed specific commands:
+:let plumed_shortcuts=1
+</code></pre></div>
+<p>Then when you open a PLUMED input file, you can enable syntax highlighting with:</p>
+<div class="highlight"><pre><span></span><code>:set ft=plumed 
+</code></pre></div>
+<p>You can read more about the features that are available in vim for working with PLUMED input files <a href="../vim/">here</a>.</p>
+<h2 id="reading-constants">Reading constants</h2>
+<p>In the input to keywords that read real numbers you can use constants that are specified using strings rather than numbers.
+An example is the following</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_parsing.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../parsing.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS MOLFILE=extras/AA.pdb</span>
+<span class="plumedtooltip" style="color:green">MOLINFO<span class="right">This command is used to provide information on the molecules that are present in your system. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">STRUCTURE<span class="right">a file in pdb format containing a reference structure<i></i></span></span>=<div class="plumedtooltip">extras/AA.pdb<div class="right"> Click <a onclick='openModal("parsing.md_working_2.datextras/AA.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="parsing.md_working_2.datextras/AA.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("parsing.md_working_2.datextras/AA.pdb1")'>&times;</span>  <h2>FILE: extras/AA.pdb</h2></div><div class="plumedmodal-body">    <pre>TITLE     Great Red Owns Many ACres of Sand 
+REMARK    THIS IS A SIMULATION BOX
+CRYST1    6.958   11.030   10.714  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM     1   H5T   A     1      14.820  -3.670   5.260  1.00  0.00            
+...
+ATOM     63 2HO'   A     2      13.980   7.360   7.150  1.00  0.00            
+ATOM     64  O3'   A     2      13.300   5.500   8.180  1.00  0.00            
+ATOM     65  H3T   A     2      12.360   5.840   8.100  1.00  0.00            
+TER
+ENDMDL
+</pre></div>  </div></div>  <span class="plumedtooltip">MOLTYPE<span class="right"> what kind of molecule is contained in the pdb file - usually not needed since protein/RNA/DNA are compatible<i></i></span></span>=rna
+<span style="display:none;" id="parsing.md_working_2.dat">The MOLINFO action with label <b></b> calculates something</span><b name="parsing.md_working_2.date1" onclick='showPath("parsing.md_working_2.dat","parsing.md_working_2.date1","parsing.md_working_2.date1","black")'>e1</b><span style="display:none;" id="parsing.md_working_2.date1">The TORSION action with label <b>e1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">e1</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=<span class="plumedtooltip">@epsilon-1<span class="right">the four atoms that are required to calculate the backbone epsilon dihedral for residue 1. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>
+<span id="parsing.md_working_2.datdeft_short"><b name="parsing.md_working_2.datt" onclick='showPath("parsing.md_working_2.dat","parsing.md_working_2.datt","parsing.md_working_2.datt","black")'>t</b><span style="display:none;" id="parsing.md_working_2.datt">The METAD action with label <b>t</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("parsing.md_working_2.datdeft");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="parsing.md_working_2.date1">e1</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.15 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=10 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=2 <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=-pi <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=pi <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=200
+</span><span id="parsing.md_working_2.datdeft_long" style="display:none;"><b name="parsing.md_working_2.datt" onclick='showPath("parsing.md_working_2.dat","parsing.md_working_2.datt","parsing.md_working_2.datt","black")'>t</b>: <span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("parsing.md_working_2.datdeft");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="parsing.md_working_2.date1">e1</b> <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=0.15 <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=10 <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=2 <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=-pi <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=pi <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=200  <span class="plumedtooltip">FILE<span class="right"> a file in which the list of added hills is stored<i></i></span></span>=HILLS
+</span></pre></div>
+
+<p>Notice here that the boundaries for <code>GRID_MIN</code> and <code>GRID_MAX</code> are <code>-pi</code> and <code>pi</code>. </p>
+<p>Any real numbers that are read in from input are interpretted using the [Lepton library] that is described in the documtation for the <a href="../CUSTOM/">CUSTOM</a> 
+action. You can thus employ complicated expressions such as <code>1+2</code> or <code>exp(10)</code> as shown in the in the input as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_parsing.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../parsing.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS MOLFILE=extras/AA.pdb</span>
+<span class="plumedtooltip" style="color:green">MOLINFO<span class="right">This command is used to provide information on the molecules that are present in your system. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">STRUCTURE<span class="right">a file in pdb format containing a reference structure<i></i></span></span>=<div class="plumedtooltip">extras/AA.pdb<div class="right"> Click <a onclick='openModal("parsing.md_working_3.datextras/AA.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="parsing.md_working_3.datextras/AA.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("parsing.md_working_3.datextras/AA.pdb1")'>&times;</span>  <h2>FILE: extras/AA.pdb</h2></div><div class="plumedmodal-body">    <pre>TITLE     Great Red Owns Many ACres of Sand 
+REMARK    THIS IS A SIMULATION BOX
+CRYST1    6.958   11.030   10.714  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM     1   H5T   A     1      14.820  -3.670   5.260  1.00  0.00            
+...
+ATOM     63 2HO'   A     2      13.980   7.360   7.150  1.00  0.00            
+ATOM     64  O3'   A     2      13.300   5.500   8.180  1.00  0.00            
+ATOM     65  H3T   A     2      12.360   5.840   8.100  1.00  0.00            
+TER
+ENDMDL
+</pre></div>  </div></div>  <span class="plumedtooltip">MOLTYPE<span class="right"> what kind of molecule is contained in the pdb file - usually not needed since protein/RNA/DNA are compatible<i></i></span></span>=rna
+<span style="display:none;" id="parsing.md_working_3.dat">The MOLINFO action with label <b></b> calculates something</span><b name="parsing.md_working_3.date1" onclick='showPath("parsing.md_working_3.dat","parsing.md_working_3.date1","parsing.md_working_3.date1","black")'>e1</b><span style="display:none;" id="parsing.md_working_3.date1">The TORSION action with label <b>e1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">e1</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=<span class="plumedtooltip">@epsilon-1<span class="right">the four atoms that are required to calculate the backbone epsilon dihedral for residue 1. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>
+<span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=<b name="parsing.md_working_3.date1">e1</b> <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=1+0.5
+</pre></div>
+
+<p>You can also also write expressions in terms of any of the following constants:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>e</code></td>
+<td style="text-align: left;">Euler's number - the base for the natural logarithm</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>log2e</code></td>
+<td style="text-align: left;">
+<script type="math/tex">1 / \log(2)</script>
+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>log10e</code></td>
+<td style="text-align: left;">
+<script type="math/tex">1 / \log(10)</script>
+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ln2</code></td>
+<td style="text-align: left;">
+<script type="math/tex">\log(2)</script>
+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ln10</code></td>
+<td style="text-align: left;">
+<script type="math/tex">\log(10)</script>
+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pi</code></td>
+<td style="text-align: left;">the circle constant <script type="math/tex">\pi</script>
+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pi_2</code></td>
+<td style="text-align: left;">
+<script type="math/tex">\pi / 2</script>
+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pi_4</code></td>
+<td style="text-align: left;">
+<script type="math/tex">\pi / 4</script>
+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sqrt2</code></td>
+<td style="text-align: left;">
+<script type="math/tex">\sqrt(2)</script>
+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sqrt1_2</code></td>
+<td style="text-align: left;">
+<script type="math/tex">\sqrt(0.5)</script>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Notice that this functionality cannot be used when the keyword takes integer numbers in input 
+(e.g.: the PACE argument for <a href="../METAD/">METAD</a>).</p>
+<h2 id="special-replica-syntax">Special replica syntax</h2>
+<p>PLUMED provides a number of ways to prepare the multiple replicas with almost identical PLUMED files that are required to run a multiple replica simulation:</p>
+<ul>
+<li>You can repare input files for such calculation using cut-and-paste but that is is very error prone.</li>
+<li>You can write a smart bash or python script to generate all the inputs.</li>
+<li>You can use different inputs for the various replicas that all contain an <a href="../INCLUDE/">INCLUDE</a> directive to include a file that contains the parts of the input that are common to all replicas </li>
+</ul>
+<p>We think, however, the best option is to use features that have been available from PLUMED 2.4 onwards that allow you 
+manipulate multiple replica inputs that have only tiny differences in the the input.  The following example illustrates how the syntax 
+for this option operates:  </p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_parsing.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../parsing.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS NREPLICAS=3</span>
+<span style="color:blue" class="comment"># Compute a distance</span>
+<b name="parsing.md_working_4.datd" onclick='showPath("parsing.md_working_4.dat","parsing.md_working_4.datd","parsing.md_working_4.datd","black")'>d</b><span style="display:none;" id="parsing.md_working_4.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+
+<span style="color:blue" class="comment"># Apply a restraint.</span>
+<span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=<b name="parsing.md_working_4.datd">d</b> <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=<span class="plumedtooltip">@replicas:<span class="right">This keyword specifies that different replicas have different values for this quantity.  See <a href="https://www.plumed.org/doc-master/user-doc/html/parsing.html">here for more details.</a><i></i></span></span>1.0,1.1,1.2 <span class="plumedtooltip">KAPPA<span class="right"> specifies that the restraint is harmonic and what the values of the force constants on each of the variables are<i></i></span></span>=1.0
+<span style="color:blue" class="comment"># On replica 0, this means:</span>
+<span style="color:blue" class="comment">#   RESTRAINT ARG=d AT=1.0 KAPPA=1.0</span>
+<span style="color:blue" class="comment"># On replica 1, this means:</span>
+<span style="color:blue" class="comment">#   RESTRAINT ARG=d AT=1.1 KAPPA=1.0</span>
+<span style="color:blue" class="comment"># On replica 2, this means:</span>
+<span style="color:blue" class="comment">#   RESTRAINT ARG=d AT=1.2 KAPPA=1.0</span>
+</pre></div>
+
+<p>If you prepare a single <code>plumed.dat</code> file like this one and feeds it to PLUMED while using 3 replicas,
+the 3 replicas will see PLUMED input files that are the same except for the <code>AT</code> keyword, that sets the position of the restraint.
+Replica 0 will see a restraint centered at 1.0, replica 1 centered at 1.1, and replica 2 centered at 1.2.</p>
+<p>The <code>@replicas:</code> keyword is not specific to <a href="../RESTRAINT/">RESTRAINT</a> and the <code>AT</code> keyword. Any keyword in PLUMED can accept that syntax.
+For instance, the following single input file can be used to setup a bias exchange metadynamics simulations:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_parsing.md_working_5.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../parsing.md_working_5.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS NREPLICAS=2 </span>
+<br/><span style="color:blue" class="comment"># Using this command ensures that exchanges between randomly chosen replicas are attempted</span>
+<span class="plumedtooltip" style="color:green">RANDOM_EXCHANGES<span class="right">Set random pattern for exchanges. <a href="https://www.plumed.org/doc-master/user-doc/html/RANDOM_EXCHANGES" style="color:green">More details</a><i></i></span></span>
+<br/><span style="color:blue" class="comment"># Compute distance between atoms 1 and 2</span>
+<span style="display:none;" id="parsing.md_working_5.dat">The RANDOM_EXCHANGES action with label <b></b> calculates something</span><b name="parsing.md_working_5.datd" onclick='showPath("parsing.md_working_5.dat","parsing.md_working_5.datd","parsing.md_working_5.datd","black")'>d</b><span style="display:none;" id="parsing.md_working_5.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+
+<span style="color:blue" class="comment"># Compute a torsional angle </span>
+<b name="parsing.md_working_5.datt" onclick='showPath("parsing.md_working_5.dat","parsing.md_working_5.datt","parsing.md_working_5.datt","black")'>t</b><span style="display:none;" id="parsing.md_working_5.datt">The TORSION action with label <b>t</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=30,31,32,33
+
+<span style="color:blue" class="comment"># Metadynamics.</span>
+<span class="plumedtooltip" style="color:green">METAD<span class="right">Used to performed metadynamics on one or more collective variables. <a href="https://www.plumed.org/doc-master/user-doc/html/METAD" style="color:green">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<span class="plumedtooltip">@replicas:<span class="right">This keyword specifies that different replicas have different values for this quantity.  See <a href="https://www.plumed.org/doc-master/user-doc/html/parsing.html">here for more details.</a><i></i></span></span><b name="parsing.md_working_5.datd">d</b>,<b name="parsing.md_working_5.datt">t</b>
+  <span class="plumedtooltip">HEIGHT<span class="right">the heights of the Gaussian hills<i></i></span></span>=1.0
+  <span class="plumedtooltip">PACE<span class="right">the frequency for hill addition<i></i></span></span>=100
+  <span class="plumedtooltip">SIGMA<span class="right">the widths of the Gaussian hills<i></i></span></span>=<span class="plumedtooltip">@replicas:<span class="right">This keyword specifies that different replicas have different values for this quantity.  See <a href="https://www.plumed.org/doc-master/user-doc/html/parsing.html">here for more details.</a><i></i></span></span>0.1,0.3
+  <span class="plumedtooltip">GRID_MIN<span class="right">the lower bounds for the grid<i></i></span></span>=<span class="plumedtooltip">@replicas:<span class="right">This keyword specifies that different replicas have different values for this quantity.  See <a href="https://www.plumed.org/doc-master/user-doc/html/parsing.html">here for more details.</a><i></i></span></span>0.0,-pi
+  <span class="plumedtooltip">GRID_MAX<span class="right">the upper bounds for the grid<i></i></span></span>=<span class="plumedtooltip">@replicas:<span class="right">This keyword specifies that different replicas have different values for this quantity.  See <a href="https://www.plumed.org/doc-master/user-doc/html/parsing.html">here for more details.</a><i></i></span></span>2.0,pi
+...
+<span style="color:blue" class="comment"># On replica 0, this means:</span>
+<span style="color:blue" class="comment">#  METAD ARG=d HEIGHT=1.0 PACE=100 SIGMA=0.1 GRID_MIN=0.0 GRID_MAX=2.0</span>
+<span style="color:blue" class="comment"># On replica 1, this means:</span>
+<span style="color:blue" class="comment">#  METAD ARG=t HEIGHT=1.0 PACE=100 SIGMA=0.3 GRID_MIN=-pi GRID_MAX=pi</span>
+</pre></div>
+
+<p>This input contains a typical setup for a bias exchange simulation.<br />
+Notice that even though the actions with labels <code>d</code> and <code>t</code> are read for both replicas,
+<code>d</code> is only computed on replica 0 (and <code>t</code> is only computed on replica 1).
+This is because variables that are defined but not used are never actually calculated by PLUMED.</p>
+<p>If the value that should be provided for each replica is a vector, you should use curly braces as delimiters.
+For instance, if you have a restraint that acts on two variables, you can use the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_parsing.md_working_6.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../parsing.md_working_6.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS NREPLICAS=3</span>
+<span style="color:blue" class="comment"># Compute distance between atoms 1 and 2</span>
+<b name="parsing.md_working_6.datd" onclick='showPath("parsing.md_working_6.dat","parsing.md_working_6.datd","parsing.md_working_6.datd","black")'>d</b><span style="display:none;" id="parsing.md_working_6.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=10,20
+
+<span style="color:blue" class="comment"># Compute a torsional angle</span>
+<b name="parsing.md_working_6.datt" onclick='showPath("parsing.md_working_6.dat","parsing.md_working_6.datt","parsing.md_working_6.datt","black")'>t</b><span style="display:none;" id="parsing.md_working_6.datt">The TORSION action with label <b>t</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=30,31,32,33
+
+<span style="color:blue" class="comment"># Apply a restraint:</span>
+<span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT" style="color:green">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=<b name="parsing.md_working_6.datd">d</b>,<b name="parsing.md_working_6.datt">t</b>
+ <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=<span class="plumedtooltip">@replicas:<span class="right">This keyword specifies that different replicas have different values for this quantity.  See <a href="https://www.plumed.org/doc-master/user-doc/html/parsing.html">here for more details.</a><i></i></span></span>{{1.0,2.0} {3.0,4.0} {5.0,6.0}}
+ <span class="plumedtooltip">KAPPA<span class="right"> specifies that the restraint is harmonic and what the values of the force constants on each of the variables are<i></i></span></span>=1.0,3.0
+...
+<span style="color:blue" class="comment"># On replica 0 this means:</span>
+<span style="color:blue" class="comment">#  RESTRAINT ARG=d AT=1.0,2.0 KAPPA=1.0,3.0</span>
+<span style="color:blue" class="comment"># On replica 1 this means:</span>
+<span style="color:blue" class="comment">#  RESTRAINT ARG=d AT=3.0,4.0 KAPPA=1.0,3.0</span>
+<span style="color:blue" class="comment"># On replica 2 this means:</span>
+<span style="color:blue" class="comment">#  RESTRAINT ARG=d AT=5.0,6.0 KAPPA=1.0,3.0</span>
+</pre></div>
+
+<p>Notice the double curly braces. The outer ones are used by PLUMED to know where the argument of the <code>AT</code> keyword ends,
+whereas the inner ones are used to group the values corresponding to each replica.
+Also notice that the last example can be split in multiple lines exploiting the fact that
+within multi-line statements (enclosed by pairs of <code>...</code>) newlines are replaced with simple spaces:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_parsing.md_working_7.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../parsing.md_working_7.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS NREPLICAS=3</span>
+<b name="parsing.md_working_7.datd" onclick='showPath("parsing.md_working_7.dat","parsing.md_working_7.datd","parsing.md_working_7.datd","black")'>d</b><span style="display:none;" id="parsing.md_working_7.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=10,20
+<b name="parsing.md_working_7.datt" onclick='showPath("parsing.md_working_7.dat","parsing.md_working_7.datt","parsing.md_working_7.datt","black")'>t</b><span style="display:none;" id="parsing.md_working_7.datt">The TORSION action with label <b>t</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=30,31,32,33
+<span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT" style="color:green">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=<b name="parsing.md_working_7.datd">d</b>,<b name="parsing.md_working_7.datt">t</b>
+<span style="color:blue" class="comment"># indentation is not required (this is not python!)</span>
+<span style="color:blue" class="comment"># but makes the input easier to read</span>
+ <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=<span class="plumedtooltip">@replicas:<span class="right">This keyword specifies that different replicas have different values for this quantity.  See <a href="https://www.plumed.org/doc-master/user-doc/html/parsing.html">here for more details.</a><i></i></span></span>{
+   {1.0,2.0}
+   {3.0,4.0}
+   {5.0,6.0}
+ }
+ <span class="plumedtooltip">KAPPA<span class="right"> specifies that the restraint is harmonic and what the values of the force constants on each of the variables are<i></i></span></span>=1.0,3.0
+...
+</pre></div>
+
+<p>In short, whenever there are keywords that should vary across replicas, you should set them using the <code>@replicas:</code> keyword.
+As mentioned above, you can always use the old syntax with separate input files and this is fact recommended when the
+differences in the inputs for the various replicas are substantial.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

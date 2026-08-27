@@ -1,0 +1,5 @@
+td_uni: TD_UNIFORM
+
+td_chi: TD_CHI  MINIMUM=-10.0  SIGMA=2.0  KAPPA=2
+
+td_pd: TD_PRODUCT_DISTRIBUTION DISTRIBUTIONS=td_uni,td_chi

@@ -1,0 +1,2 @@
+#SETTINGS NATOMS=108 INPUTFILES=regtest/basic/rt-readmasscharge/test.pdb
+mq: READMASSCHARGE PDBFILE=regtest/basic/rt-readmasscharge/test.pdb

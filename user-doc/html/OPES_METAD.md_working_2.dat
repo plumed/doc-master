@@ -1,0 +1,18 @@
+phi: TORSION ATOMS=5,7,9,15
+psi: TORSION ATOMS=7,9,15,17
+opes: OPES_METAD ...
+  FILE=Kernels.data
+  TEMP=300
+  ARG=phi,psi
+  PACE=500
+  BARRIER=50
+  SIGMA=0.15,0.15
+  SIGMA_MIN=0.01,0.01
+  STATE_RFILE=Restart.data
+  STATE_WFILE=State.data
+  STATE_WSTRIDE=500*100
+  STORE_STATES
+  WALKERS_MPI
+  NLIST
+...
+PRINT FMT=%g STRIDE=500 FILE=Colvar.data ARG=phi,psi,opes.*

@@ -1,0 +1,2 @@
+c: CONSTANT VALUES=1,2,3,4,5 SCALARS
+PRINT ARG=c.v-0,c.v-1,c.v-2,c.v-3,c.v-4 FILE=five_scalars

@@ -1,0 +1,3 @@
+# vim:ft=plumed
+d: DISTANCE ATOMS=1,2
+RESTRAINT ARG=d AT=0.0 KAPPA=1.0

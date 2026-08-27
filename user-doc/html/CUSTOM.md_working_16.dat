@@ -1,0 +1,26 @@
+# Calculate the distances between atoms
+d_mat: DISTANCE_MATRIX GROUP=1-64 CUTOFF=4.5 COMPONENTS
+# Find the six nearest atom to each of the coordinates
+nn: NEIGHBORS ARG=d_mat.w NLOWEST=6
+# Evalulate the lengths of the bonds connecting each atom to its nearest neighbors
+r: CUSTOM ...
+   ARG=d_mat.x,d_mat.y,d_mat.z MASK=nn
+   FUNC=sqrt(x*x+y*y+z*z)
+   PERIODIC=NO
+...
+# Evaluate a function of the nearest neighbors
+d_wvfunc: CUSTOM ...
+   ARG=nn,d_mat.x,d_mat.y,d_mat.z,r MASK=nn
+   FUNC=w*(((x+y+z)/r)^3+((x-y-z)/r)^3+((-x+y-z)/r)^3+((-x-y+z)/r)^3)
+   VAR=w,x,y,z,r
+   PERIODIC=NO
+...
+# Calculate the sum of fcc cubic function values for each atom
+d_ones: ONES SIZE=64
+d: MATRIX_VECTOR_PRODUCT ARG=d_wvfunc,d_ones
+# Calculate the number of neighbours
+d_denom: MATRIX_VECTOR_PRODUCT ARG=nn,d_ones
+# Calculate the average value of the fcc cubic function per bonds
+d_n: CUSTOM ARG=d,d_denom FUNC=x/y PERIODIC=NO
+d_mean: MEAN ARG=d_n PERIODIC=NO
+PRINT ARG=d_mean FILE=colv

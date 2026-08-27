@@ -1,0 +1,9 @@
+cs: CS2BACKBONE ...
+   ATOMS=1-174
+   DATADIR=regtest/isdb/rt-cs2backbone/data/
+   SIGMA_MEAN0=1.0 DOSCORE
+...
+csbias: BIASVALUE ARG=cs.score
+
+PRINT ARG=(cs\.hn-.*),(cs\.nh-.*) FILE=CS.dat STRIDE=1000
+PRINT ARG=cs.score FILE=BIAS STRIDE=100

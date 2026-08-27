@@ -1,0 +1,1246 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: HBPAMM_SD - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-hbpamm_sd" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: HBPAMM_SD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-nopbc-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The NOPBC flag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mask-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The MASK keyword
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimisation-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimisation details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-hbpamm_sd"><a href="../actions/">Action</a>: HBPAMM_SD</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_pamm/"><strong>pamm</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate the number of hydrogen bonds each donor participates in using the HBPamm method</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">a vector specifiying the number of hydrogen bonds each of the specified atoms participates within</td>
+<td style="text-align: center;">vector</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate the number of hydrogen bonds each donor participates in using the HBPamm method</p>
+<p>This shortcut action allows you to calculate the number of hydrogen bonds each of the atoms specified using the SITES
+keyword donates to its neighbours. The number of hydrogen bonds that a particular site donates is determined by using the
+PAMM tehcnique that is discussed in the articles from the bibliography below and in the documentation for the <a href="../PAMM/">PAMM</a> action</p>
+<p>The following example shows how you can use this action to calculate how many hydrogen bonds each of the water moecules in
+a box of water donates to its neighbours.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_HBPAMM_SD.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../HBPAMM_SD.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/pamm/rt-hbpamm/b3lyp.pamm</span>
+<span id="HBPAMM_SD.md_working_1.datdonors_short"><b name="HBPAMM_SD.md_working_1.datdonors" onclick='showPath("HBPAMM_SD.md_working_1.dat","HBPAMM_SD.md_working_1.datdonors","HBPAMM_SD.md_working_1.datdonors_shortcut","blue")'>donors</b><span style="display:none;" id="HBPAMM_SD.md_working_1.datdonors_shortcut">The HBPAMM_SD action with label <b>donors</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors</td><td width="5%"><font color="blue">vector</font></td><td>a vector specifiying the number of hydrogen bonds each of the specified atoms participates within</td></tr></table></span>: <span class="plumedtooltip" style="color:green">HBPAMM_SD<span class="right">Calculate the number of hydrogen bonds each donor participates in using the HBPamm method This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("HBPAMM_SD.md_working_1.datdonors");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/HBPAMM_SD">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">SITES<span class="right">The list of atoms which can be part of a hydrogen bond<i></i></span></span>=1-192:3 <span class="plumedtooltip">HYDROGENS<span class="right">The list of hydrogen atoms that can form part of a hydrogen bond<i></i></span></span>=2-192:3,3-192:3
+  <span class="plumedtooltip">CLUSTERS<span class="right">the name of the file that contains the definitions of all the kernels for PAMM<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-hbpamm/b3lyp.pamm<div class="right"> Click <a onclick='openModal("HBPAMM_SD.md_working_1.datregtest/pamm/rt-hbpamm/b3lyp.pamm1")'>here</a> to see an extract from this file.<i></i></div></div><div id="HBPAMM_SD.md_working_1.datregtest/pamm/rt-hbpamm/b3lyp.pamm1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("HBPAMM_SD.md_working_1.datregtest/pamm/rt-hbpamm/b3lyp.pamm1")'>&times;</span>  <h2>FILE: regtest/pamm/rt-hbpamm/b3lyp.pamm</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height ptc ssc adc sigma_ptc_ptc sigma_ptc_ssc sigma_ptc_adc sigma_ssc_ptc sigma_ssc_ssc sigma_ssc_adc sigma_adc_ptc sigma_adc_ssc sigma_adc_adc
+#! SET multivariate true
+#! SET kerneltype gaussian
+      7.62333341E-0002     -8.18288945E-0001      2.82463003E+0000      2.74063420E+0000      8.16250857E-0002     -6.73769671E-0002     -4.59932811E-0002     -6.73769671E-0002      6.75337422E-0002      4.53759149E-0002     -4.59932811E-0002      4.53759149E-0002      4.43189576E-0002 
+      6.99310782E-0002      8.69642605E-0001      2.87365811E+0000      2.79326509E+0000      4.26992535E-0002      3.05953458E-0002      2.05388393E-0002      3.05953458E-0002      3.29012486E-0002      2.12273873E-0002      2.05388393E-0002      2.12273873E-0002      2.45196159E-0002 
+      1.98671093E-0001     -2.27062808E+0000      4.25703566E+0000      2.78401408E+0000      7.98163641E-0002     -7.27264015E-0002     -1.99919283E-0002     -7.27264015E-0002      8.18886784E-0002      2.09866914E-0002     -1.99919283E-0002      2.09866914E-0002      4.62997869E-0002 
+      1.45233007E-0002     -1.21470165E+0000      4.79894096E+0000      2.84314625E+0000      1.86259108E-0001     -2.27095842E-0002      2.85921248E-0002     -2.27095842E-0002      3.74404487E-0002     -3.26295559E-0003      2.85921248E-0002     -3.26295559E-0003      5.65919817E-0002 
+      2.04518164E-0001      2.26156229E+0000      4.22597375E+0000      2.79821642E+0000      7.75379113E-0002      6.98466908E-0002      2.95665680E-0002      6.98466908E-0002      8.00913946E-0002      3.26640646E-0002      2.95665680E-0002      3.26640646E-0002      5.40779543E-0002 
+      1.46258706E-0002      1.26722013E+0000      4.80633662E+0000      2.89897290E+0000      8.80357941E-0002      2.26981492E-0002      4.05790153E-0003      2.26981492E-0002      4.60485360E-0002     -7.70322510E-0003      4.05790153E-0003     -7.70322510E-0003      5.45100475E-0002 
+      1.84562156E-0001     -2.60991008E+0000      4.59285310E+0000      4.03390174E+0000      1.51456600E-0001     -1.42734555E-0001     -1.17741061E-0001     -1.42734555E-0001      1.50000160E-0001      1.19653950E-0001     -1.17741061E-0001      1.19653950E-0001      2.01301812E-0001 
+      2.87297679E-0002     -1.34664608E+0000      4.81762077E+0000      4.11037008E+0000      1.20169846E-0001     -2.40092647E-0002     -9.50215564E-0002     -2.40092647E-0002      3.53100140E-0002      4.17402875E-0002     -9.50215564E-0002      4.17402875E-0002      2.59240031E-0001 
+      1.12880383E-0001      2.26335545E+0000      4.25751027E+0000      3.68162217E+0000      1.34662241E-0001      1.26724092E-0001      7.24910086E-0002      1.26724092E-0001      1.35760215E-0001      7.81381697E-0002      7.24910086E-0002      7.81381697E-0002      1.13119071E-0001 
+      2.86798480E-0002      1.33616209E+0000      4.85052180E+0000      4.23465934E+0000      1.80874139E-0001      3.35404961E-0002      1.71858062E-0001      3.35404961E-0002      3.57517317E-0002      5.62338216E-0002      1.71858062E-0001      5.62338216E-0002      3.56622291E-0001 
+      6.66450035E-0002      2.74946369E+0000      4.74656373E+0000      4.24763632E+0000      2.54371954E-0002      1.64469606E-0002      4.36734028E-0003      1.64469606E-0002      2.24742542E-0002      6.72714867E-0003      4.36734028E-0003      6.72714867E-0003      9.75985896E-0002 
+</pre></div>  </div></div>
+  <span class="plumedtooltip">REGULARISE<span class="right"> don't allow the denominator to be smaller then this value<i></i></span></span>=0.001 <span class="plumedtooltip">GAUSS_CUTOFF<span class="right"> the cutoff at which to stop evaluating the kernel function is set equal to sqrt(2*x)*(max(adc)+cov(adc))<i></i></span></span>=6.25
+...
+</span><span id="HBPAMM_SD.md_working_1.datdonors_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("HBPAMM_SD.md_working_1.datdonors")'># donors: HBPAMM_SD ...</span>
+<span style="color:blue" class="comment">#   SITES=1-192:3 HYDROGENS=2-192:3,3-192:3</span>
+<span style="color:blue" class="comment">#   CLUSTERS=regtest/pamm/rt-hbpamm/b3lyp.pamm</span>
+<span style="color:blue" class="comment">#   REGULARISE=0.001 GAUSS_CUTOFF=6.25</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="HBPAMM_SD.md_working_1.datdonors_mat" onclick='showPath("HBPAMM_SD.md_working_1.dat","HBPAMM_SD.md_working_1.datdonors_mat","HBPAMM_SD.md_working_1.datdonors_mat","red")'>donors_mat</b><span style="display:none;" id="HBPAMM_SD.md_working_1.datdonors_mat">The HBPAMM_MATRIX action with label <b>donors_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors_mat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">HBPAMM_MATRIX<span class="right">Adjacency matrix in which two electronegative atoms are adjacent if they are hydrogen bonded <a href="https://www.plumed.org/doc-master/user-doc/html/HBPAMM_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">the atoms for which you would like to calculate the adjacency matrix<i></i></span></span>=1-192:3 <span class="plumedtooltip">GROUPC<span class="right">a group of atoms that must be summed over when calculating each element of the adjacency matrix<i></i></span></span>=2-192:3,3-192:3 <span class="plumedtooltip">ORDER<span class="right"> the order in which the groups are specified in the input<i></i></span></span>=dah  <span class="plumedtooltip">CLUSTERS<span class="right">the name of the file that contains the definitions of all the kernels for PAMM<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-hbpamm/b3lyp.pamm<div class="right"> Click <a onclick='openModal("HBPAMM_SD.md_working_1.datregtest/pamm/rt-hbpamm/b3lyp.pamm2")'>here</a> to see an extract from this file.<i></i></div></div><div id="HBPAMM_SD.md_working_1.datregtest/pamm/rt-hbpamm/b3lyp.pamm2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("HBPAMM_SD.md_working_1.datregtest/pamm/rt-hbpamm/b3lyp.pamm2")'>&times;</span>  <h2>FILE: regtest/pamm/rt-hbpamm/b3lyp.pamm</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height ptc ssc adc sigma_ptc_ptc sigma_ptc_ssc sigma_ptc_adc sigma_ssc_ptc sigma_ssc_ssc sigma_ssc_adc sigma_adc_ptc sigma_adc_ssc sigma_adc_adc
+#! SET multivariate true
+#! SET kerneltype gaussian
+      7.62333341E-0002     -8.18288945E-0001      2.82463003E+0000      2.74063420E+0000      8.16250857E-0002     -6.73769671E-0002     -4.59932811E-0002     -6.73769671E-0002      6.75337422E-0002      4.53759149E-0002     -4.59932811E-0002      4.53759149E-0002      4.43189576E-0002 
+      6.99310782E-0002      8.69642605E-0001      2.87365811E+0000      2.79326509E+0000      4.26992535E-0002      3.05953458E-0002      2.05388393E-0002      3.05953458E-0002      3.29012486E-0002      2.12273873E-0002      2.05388393E-0002      2.12273873E-0002      2.45196159E-0002 
+      1.98671093E-0001     -2.27062808E+0000      4.25703566E+0000      2.78401408E+0000      7.98163641E-0002     -7.27264015E-0002     -1.99919283E-0002     -7.27264015E-0002      8.18886784E-0002      2.09866914E-0002     -1.99919283E-0002      2.09866914E-0002      4.62997869E-0002 
+      1.45233007E-0002     -1.21470165E+0000      4.79894096E+0000      2.84314625E+0000      1.86259108E-0001     -2.27095842E-0002      2.85921248E-0002     -2.27095842E-0002      3.74404487E-0002     -3.26295559E-0003      2.85921248E-0002     -3.26295559E-0003      5.65919817E-0002 
+      2.04518164E-0001      2.26156229E+0000      4.22597375E+0000      2.79821642E+0000      7.75379113E-0002      6.98466908E-0002      2.95665680E-0002      6.98466908E-0002      8.00913946E-0002      3.26640646E-0002      2.95665680E-0002      3.26640646E-0002      5.40779543E-0002 
+      1.46258706E-0002      1.26722013E+0000      4.80633662E+0000      2.89897290E+0000      8.80357941E-0002      2.26981492E-0002      4.05790153E-0003      2.26981492E-0002      4.60485360E-0002     -7.70322510E-0003      4.05790153E-0003     -7.70322510E-0003      5.45100475E-0002 
+      1.84562156E-0001     -2.60991008E+0000      4.59285310E+0000      4.03390174E+0000      1.51456600E-0001     -1.42734555E-0001     -1.17741061E-0001     -1.42734555E-0001      1.50000160E-0001      1.19653950E-0001     -1.17741061E-0001      1.19653950E-0001      2.01301812E-0001 
+      2.87297679E-0002     -1.34664608E+0000      4.81762077E+0000      4.11037008E+0000      1.20169846E-0001     -2.40092647E-0002     -9.50215564E-0002     -2.40092647E-0002      3.53100140E-0002      4.17402875E-0002     -9.50215564E-0002      4.17402875E-0002      2.59240031E-0001 
+      1.12880383E-0001      2.26335545E+0000      4.25751027E+0000      3.68162217E+0000      1.34662241E-0001      1.26724092E-0001      7.24910086E-0002      1.26724092E-0001      1.35760215E-0001      7.81381697E-0002      7.24910086E-0002      7.81381697E-0002      1.13119071E-0001 
+      2.86798480E-0002      1.33616209E+0000      4.85052180E+0000      4.23465934E+0000      1.80874139E-0001      3.35404961E-0002      1.71858062E-0001      3.35404961E-0002      3.57517317E-0002      5.62338216E-0002      1.71858062E-0001      5.62338216E-0002      3.56622291E-0001 
+      6.66450035E-0002      2.74946369E+0000      4.74656373E+0000      4.24763632E+0000      2.54371954E-0002      1.64469606E-0002      4.36734028E-0003      1.64469606E-0002      2.24742542E-0002      6.72714867E-0003      4.36734028E-0003      6.72714867E-0003      9.75985896E-0002 
+</pre></div>  </div></div> <span class="plumedtooltip">GAUSS_CUTOFF<span class="right"> the cutoff at which to stop evaluating the kernel function is set equal to sqrt(2*x)*(max(adc)+cov(adc))<i></i></span></span>=6.25 <span class="plumedtooltip">REGULARISE<span class="right"> don't allow the denominator to be smaller then this value<i></i></span></span>=0.001
+<b name="HBPAMM_SD.md_working_1.datdonors_ones" onclick='showPath("HBPAMM_SD.md_working_1.dat","HBPAMM_SD.md_working_1.datdonors_ones","HBPAMM_SD.md_working_1.datdonors_ones","blue")'>donors_ones</b><span style="display:none;" id="HBPAMM_SD.md_working_1.datdonors_ones">The CONSTANT action with label <b>donors_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=64
+<b name="HBPAMM_SD.md_working_1.datdonors" onclick='showPath("HBPAMM_SD.md_working_1.dat","HBPAMM_SD.md_working_1.datdonors","HBPAMM_SD.md_working_1.datdonors","blue")'>donors</b><span style="display:none;" id="HBPAMM_SD.md_working_1.datdonors">The MATRIX_VECTOR_PRODUCT action with label <b>donors</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="HBPAMM_SD.md_working_1.datdonors_mat">donors_mat</b>,<b name="HBPAMM_SD.md_working_1.datdonors_ones">donors_ones</b>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">DUMPATOMS<span class="right">Dump selected atoms on a file. <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPATOMS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of vectors that should be output in the xyz file<i></i></span></span>=<b name="HBPAMM_SD.md_working_1.datdonors">donors</b> <span class="plumedtooltip">ATOMS<span class="right">the atom indices whose positions you would like to print out<i></i></span></span>=1-192:3 <span class="plumedtooltip">FILE<span class="right">file on which to output coordinates; extension is automatically detected<i></i></span></span>=<b name="HBPAMM_SD.md_working_1.datdonors">donors.xyz</b>
+</pre></div>
+
+<p>The output here is an xyz with five columns. As explained in the documentation for <a href="../DUMPATOMS/">DUMPATOMS</a>, the first four
+columns are the usual columns that you would expect in an xyz file.  The fifth column then contains the number of hydrogen bonds
+that have been donated by each of the atoms.</p>
+<p>In the example input above all the atoms specified using the SITE keyword can both accept and donate hydrogen bonds.  If the group
+of atoms that can accept hydrogen bonds is different from the group of atoms that can donate hydrogen bonds then you use the ACCEPTORS and
+DONORS keyword as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_HBPAMM_SD.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../HBPAMM_SD.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/pamm/rt-hbpamm/b3lyp.pamm</span>
+<span id="HBPAMM_SD.md_working_2.datdonors_short"><b name="HBPAMM_SD.md_working_2.datdonors" onclick='showPath("HBPAMM_SD.md_working_2.dat","HBPAMM_SD.md_working_2.datdonors","HBPAMM_SD.md_working_2.datdonors_shortcut","blue")'>donors</b><span style="display:none;" id="HBPAMM_SD.md_working_2.datdonors_shortcut">The HBPAMM_SD action with label <b>donors</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors</td><td width="5%"><font color="blue">vector</font></td><td>a vector specifiying the number of hydrogen bonds each of the specified atoms participates within</td></tr></table></span>: <span class="plumedtooltip" style="color:green">HBPAMM_SD<span class="right">Calculate the number of hydrogen bonds each donor participates in using the HBPamm method This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("HBPAMM_SD.md_working_2.datdonors");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/HBPAMM_SD">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">DONORS<span class="right">The list of atoms which can donate a hydrogen bond<i></i></span></span>=1-9:3 <span class="plumedtooltip">ACCEPTORS<span class="right">The list of atoms which can accept a hydrogen bond<i></i></span></span>=1-192:3
+  <span class="plumedtooltip">CLUSTERS<span class="right">the name of the file that contains the definitions of all the kernels for PAMM<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-hbpamm/b3lyp.pamm<div class="right"> Click <a onclick='openModal("HBPAMM_SD.md_working_2.datregtest/pamm/rt-hbpamm/b3lyp.pamm1")'>here</a> to see an extract from this file.<i></i></div></div><div id="HBPAMM_SD.md_working_2.datregtest/pamm/rt-hbpamm/b3lyp.pamm1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("HBPAMM_SD.md_working_2.datregtest/pamm/rt-hbpamm/b3lyp.pamm1")'>&times;</span>  <h2>FILE: regtest/pamm/rt-hbpamm/b3lyp.pamm</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height ptc ssc adc sigma_ptc_ptc sigma_ptc_ssc sigma_ptc_adc sigma_ssc_ptc sigma_ssc_ssc sigma_ssc_adc sigma_adc_ptc sigma_adc_ssc sigma_adc_adc
+#! SET multivariate true
+#! SET kerneltype gaussian
+      7.62333341E-0002     -8.18288945E-0001      2.82463003E+0000      2.74063420E+0000      8.16250857E-0002     -6.73769671E-0002     -4.59932811E-0002     -6.73769671E-0002      6.75337422E-0002      4.53759149E-0002     -4.59932811E-0002      4.53759149E-0002      4.43189576E-0002 
+      6.99310782E-0002      8.69642605E-0001      2.87365811E+0000      2.79326509E+0000      4.26992535E-0002      3.05953458E-0002      2.05388393E-0002      3.05953458E-0002      3.29012486E-0002      2.12273873E-0002      2.05388393E-0002      2.12273873E-0002      2.45196159E-0002 
+      1.98671093E-0001     -2.27062808E+0000      4.25703566E+0000      2.78401408E+0000      7.98163641E-0002     -7.27264015E-0002     -1.99919283E-0002     -7.27264015E-0002      8.18886784E-0002      2.09866914E-0002     -1.99919283E-0002      2.09866914E-0002      4.62997869E-0002 
+      1.45233007E-0002     -1.21470165E+0000      4.79894096E+0000      2.84314625E+0000      1.86259108E-0001     -2.27095842E-0002      2.85921248E-0002     -2.27095842E-0002      3.74404487E-0002     -3.26295559E-0003      2.85921248E-0002     -3.26295559E-0003      5.65919817E-0002 
+      2.04518164E-0001      2.26156229E+0000      4.22597375E+0000      2.79821642E+0000      7.75379113E-0002      6.98466908E-0002      2.95665680E-0002      6.98466908E-0002      8.00913946E-0002      3.26640646E-0002      2.95665680E-0002      3.26640646E-0002      5.40779543E-0002 
+      1.46258706E-0002      1.26722013E+0000      4.80633662E+0000      2.89897290E+0000      8.80357941E-0002      2.26981492E-0002      4.05790153E-0003      2.26981492E-0002      4.60485360E-0002     -7.70322510E-0003      4.05790153E-0003     -7.70322510E-0003      5.45100475E-0002 
+      1.84562156E-0001     -2.60991008E+0000      4.59285310E+0000      4.03390174E+0000      1.51456600E-0001     -1.42734555E-0001     -1.17741061E-0001     -1.42734555E-0001      1.50000160E-0001      1.19653950E-0001     -1.17741061E-0001      1.19653950E-0001      2.01301812E-0001 
+      2.87297679E-0002     -1.34664608E+0000      4.81762077E+0000      4.11037008E+0000      1.20169846E-0001     -2.40092647E-0002     -9.50215564E-0002     -2.40092647E-0002      3.53100140E-0002      4.17402875E-0002     -9.50215564E-0002      4.17402875E-0002      2.59240031E-0001 
+      1.12880383E-0001      2.26335545E+0000      4.25751027E+0000      3.68162217E+0000      1.34662241E-0001      1.26724092E-0001      7.24910086E-0002      1.26724092E-0001      1.35760215E-0001      7.81381697E-0002      7.24910086E-0002      7.81381697E-0002      1.13119071E-0001 
+      2.86798480E-0002      1.33616209E+0000      4.85052180E+0000      4.23465934E+0000      1.80874139E-0001      3.35404961E-0002      1.71858062E-0001      3.35404961E-0002      3.57517317E-0002      5.62338216E-0002      1.71858062E-0001      5.62338216E-0002      3.56622291E-0001 
+      6.66450035E-0002      2.74946369E+0000      4.74656373E+0000      4.24763632E+0000      2.54371954E-0002      1.64469606E-0002      4.36734028E-0003      1.64469606E-0002      2.24742542E-0002      6.72714867E-0003      4.36734028E-0003      6.72714867E-0003      9.75985896E-0002 
+</pre></div>  </div></div>
+  <span class="plumedtooltip">HYDROGENS<span class="right">The list of hydrogen atoms that can form part of a hydrogen bond<i></i></span></span>=2-192:3,3-192:3
+...
+</span><span id="HBPAMM_SD.md_working_2.datdonors_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("HBPAMM_SD.md_working_2.datdonors")'># donors: HBPAMM_SD ...</span>
+<span style="color:blue" class="comment">#   DONORS=1-9:3 ACCEPTORS=1-192:3</span>
+<span style="color:blue" class="comment">#   CLUSTERS=regtest/pamm/rt-hbpamm/b3lyp.pamm</span>
+<span style="color:blue" class="comment">#   HYDROGENS=2-192:3,3-192:3</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="HBPAMM_SD.md_working_2.datdonors_mat" onclick='showPath("HBPAMM_SD.md_working_2.dat","HBPAMM_SD.md_working_2.datdonors_mat","HBPAMM_SD.md_working_2.datdonors_mat","red")'>donors_mat</b><span style="display:none;" id="HBPAMM_SD.md_working_2.datdonors_mat">The HBPAMM_MATRIX action with label <b>donors_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors_mat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">HBPAMM_MATRIX<span class="right">Adjacency matrix in which two electronegative atoms are adjacent if they are hydrogen bonded <a href="https://www.plumed.org/doc-master/user-doc/html/HBPAMM_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPB<i></i></span></span>=1-9:3 <span class="plumedtooltip">GROUPB<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPA<i></i></span></span>=1-192:3 <span class="plumedtooltip">GROUPC<span class="right">a group of atoms that must be summed over when calculating each element of the adjacency matrix<i></i></span></span>=2-192:3,3-192:3 <span class="plumedtooltip">ORDER<span class="right"> the order in which the groups are specified in the input<i></i></span></span>=dah  <span class="plumedtooltip">CLUSTERS<span class="right">the name of the file that contains the definitions of all the kernels for PAMM<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-hbpamm/b3lyp.pamm<div class="right"> Click <a onclick='openModal("HBPAMM_SD.md_working_2.datregtest/pamm/rt-hbpamm/b3lyp.pamm2")'>here</a> to see an extract from this file.<i></i></div></div><div id="HBPAMM_SD.md_working_2.datregtest/pamm/rt-hbpamm/b3lyp.pamm2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("HBPAMM_SD.md_working_2.datregtest/pamm/rt-hbpamm/b3lyp.pamm2")'>&times;</span>  <h2>FILE: regtest/pamm/rt-hbpamm/b3lyp.pamm</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height ptc ssc adc sigma_ptc_ptc sigma_ptc_ssc sigma_ptc_adc sigma_ssc_ptc sigma_ssc_ssc sigma_ssc_adc sigma_adc_ptc sigma_adc_ssc sigma_adc_adc
+#! SET multivariate true
+#! SET kerneltype gaussian
+      7.62333341E-0002     -8.18288945E-0001      2.82463003E+0000      2.74063420E+0000      8.16250857E-0002     -6.73769671E-0002     -4.59932811E-0002     -6.73769671E-0002      6.75337422E-0002      4.53759149E-0002     -4.59932811E-0002      4.53759149E-0002      4.43189576E-0002 
+      6.99310782E-0002      8.69642605E-0001      2.87365811E+0000      2.79326509E+0000      4.26992535E-0002      3.05953458E-0002      2.05388393E-0002      3.05953458E-0002      3.29012486E-0002      2.12273873E-0002      2.05388393E-0002      2.12273873E-0002      2.45196159E-0002 
+      1.98671093E-0001     -2.27062808E+0000      4.25703566E+0000      2.78401408E+0000      7.98163641E-0002     -7.27264015E-0002     -1.99919283E-0002     -7.27264015E-0002      8.18886784E-0002      2.09866914E-0002     -1.99919283E-0002      2.09866914E-0002      4.62997869E-0002 
+      1.45233007E-0002     -1.21470165E+0000      4.79894096E+0000      2.84314625E+0000      1.86259108E-0001     -2.27095842E-0002      2.85921248E-0002     -2.27095842E-0002      3.74404487E-0002     -3.26295559E-0003      2.85921248E-0002     -3.26295559E-0003      5.65919817E-0002 
+      2.04518164E-0001      2.26156229E+0000      4.22597375E+0000      2.79821642E+0000      7.75379113E-0002      6.98466908E-0002      2.95665680E-0002      6.98466908E-0002      8.00913946E-0002      3.26640646E-0002      2.95665680E-0002      3.26640646E-0002      5.40779543E-0002 
+      1.46258706E-0002      1.26722013E+0000      4.80633662E+0000      2.89897290E+0000      8.80357941E-0002      2.26981492E-0002      4.05790153E-0003      2.26981492E-0002      4.60485360E-0002     -7.70322510E-0003      4.05790153E-0003     -7.70322510E-0003      5.45100475E-0002 
+      1.84562156E-0001     -2.60991008E+0000      4.59285310E+0000      4.03390174E+0000      1.51456600E-0001     -1.42734555E-0001     -1.17741061E-0001     -1.42734555E-0001      1.50000160E-0001      1.19653950E-0001     -1.17741061E-0001      1.19653950E-0001      2.01301812E-0001 
+      2.87297679E-0002     -1.34664608E+0000      4.81762077E+0000      4.11037008E+0000      1.20169846E-0001     -2.40092647E-0002     -9.50215564E-0002     -2.40092647E-0002      3.53100140E-0002      4.17402875E-0002     -9.50215564E-0002      4.17402875E-0002      2.59240031E-0001 
+      1.12880383E-0001      2.26335545E+0000      4.25751027E+0000      3.68162217E+0000      1.34662241E-0001      1.26724092E-0001      7.24910086E-0002      1.26724092E-0001      1.35760215E-0001      7.81381697E-0002      7.24910086E-0002      7.81381697E-0002      1.13119071E-0001 
+      2.86798480E-0002      1.33616209E+0000      4.85052180E+0000      4.23465934E+0000      1.80874139E-0001      3.35404961E-0002      1.71858062E-0001      3.35404961E-0002      3.57517317E-0002      5.62338216E-0002      1.71858062E-0001      5.62338216E-0002      3.56622291E-0001 
+      6.66450035E-0002      2.74946369E+0000      4.74656373E+0000      4.24763632E+0000      2.54371954E-0002      1.64469606E-0002      4.36734028E-0003      1.64469606E-0002      2.24742542E-0002      6.72714867E-0003      4.36734028E-0003      6.72714867E-0003      9.75985896E-0002 
+</pre></div>  </div></div>
+<b name="HBPAMM_SD.md_working_2.datdonors_ones" onclick='showPath("HBPAMM_SD.md_working_2.dat","HBPAMM_SD.md_working_2.datdonors_ones","HBPAMM_SD.md_working_2.datdonors_ones","blue")'>donors_ones</b><span style="display:none;" id="HBPAMM_SD.md_working_2.datdonors_ones">The CONSTANT action with label <b>donors_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=64
+<b name="HBPAMM_SD.md_working_2.datdonors" onclick='showPath("HBPAMM_SD.md_working_2.dat","HBPAMM_SD.md_working_2.datdonors","HBPAMM_SD.md_working_2.datdonors","blue")'>donors</b><span style="display:none;" id="HBPAMM_SD.md_working_2.datdonors">The MATRIX_VECTOR_PRODUCT action with label <b>donors</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="HBPAMM_SD.md_working_2.datdonors_mat">donors_mat</b>,<b name="HBPAMM_SD.md_working_2.datdonors_ones">donors_ones</b>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">DUMPATOMS<span class="right">Dump selected atoms on a file. <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPATOMS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of vectors that should be output in the xyz file<i></i></span></span>=<b name="HBPAMM_SD.md_working_2.datdonors">donors</b> <span class="plumedtooltip">ATOMS<span class="right">the atom indices whose positions you would like to print out<i></i></span></span>=1-9:3 <span class="plumedtooltip">FILE<span class="right">file on which to output coordinates; extension is automatically detected<i></i></span></span>=<b name="HBPAMM_SD.md_working_2.datdonors">donors.xyz</b>
+</pre></div>
+
+<p>This input will still output an xyz file with five columns. The fifth column in this file will give the number of hydrogen bonds that each
+of the three atoms that were specified using the DONORS keyword donate to atoms that were specified by the ACCEPTORS keyword.  Notice also that the
+as the REGULARISE and GAUSS_CUTOFF keywords were not used in this input these quantities are set to the default values that are given in the table below.</p>
+<h2 id="the-nopbc-flag">The NOPBC flag</h2>
+<p>When you use the <a href="../HBPAMM_MATRIX/">HBPAMM_MATRIX</a> you need to calculate the distances between various pairs of atoms.  In all the inputs that have been provided
+above we calculate these distances between pairs of atoms in a way that takes the periodic boundary conditions into account.  If you want to ignore the periodic
+boundary conditions you can use the NOPBC flag as shown below.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_HBPAMM_SD.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../HBPAMM_SD.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/pamm/rt-hbpamm/b3lyp.pamm</span>
+<span id="HBPAMM_SD.md_working_3.datdonors_short"><b name="HBPAMM_SD.md_working_3.datdonors" onclick='showPath("HBPAMM_SD.md_working_3.dat","HBPAMM_SD.md_working_3.datdonors","HBPAMM_SD.md_working_3.datdonors_shortcut","blue")'>donors</b><span style="display:none;" id="HBPAMM_SD.md_working_3.datdonors_shortcut">The HBPAMM_SD action with label <b>donors</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors</td><td width="5%"><font color="blue">vector</font></td><td>a vector specifiying the number of hydrogen bonds each of the specified atoms participates within</td></tr></table></span>: <span class="plumedtooltip" style="color:green">HBPAMM_SD<span class="right">Calculate the number of hydrogen bonds each donor participates in using the HBPamm method This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("HBPAMM_SD.md_working_3.datdonors");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/HBPAMM_SD">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">SITES<span class="right">The list of atoms which can be part of a hydrogen bond<i></i></span></span>=1-192:3 <span class="plumedtooltip">HYDROGENS<span class="right">The list of hydrogen atoms that can form part of a hydrogen bond<i></i></span></span>=2-192:3,3-192:3
+   <span class="plumedtooltip">CLUSTERS<span class="right">the name of the file that contains the definitions of all the kernels for PAMM<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-hbpamm/b3lyp.pamm<div class="right"> Click <a onclick='openModal("HBPAMM_SD.md_working_3.datregtest/pamm/rt-hbpamm/b3lyp.pamm1")'>here</a> to see an extract from this file.<i></i></div></div><div id="HBPAMM_SD.md_working_3.datregtest/pamm/rt-hbpamm/b3lyp.pamm1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("HBPAMM_SD.md_working_3.datregtest/pamm/rt-hbpamm/b3lyp.pamm1")'>&times;</span>  <h2>FILE: regtest/pamm/rt-hbpamm/b3lyp.pamm</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height ptc ssc adc sigma_ptc_ptc sigma_ptc_ssc sigma_ptc_adc sigma_ssc_ptc sigma_ssc_ssc sigma_ssc_adc sigma_adc_ptc sigma_adc_ssc sigma_adc_adc
+#! SET multivariate true
+#! SET kerneltype gaussian
+      7.62333341E-0002     -8.18288945E-0001      2.82463003E+0000      2.74063420E+0000      8.16250857E-0002     -6.73769671E-0002     -4.59932811E-0002     -6.73769671E-0002      6.75337422E-0002      4.53759149E-0002     -4.59932811E-0002      4.53759149E-0002      4.43189576E-0002 
+      6.99310782E-0002      8.69642605E-0001      2.87365811E+0000      2.79326509E+0000      4.26992535E-0002      3.05953458E-0002      2.05388393E-0002      3.05953458E-0002      3.29012486E-0002      2.12273873E-0002      2.05388393E-0002      2.12273873E-0002      2.45196159E-0002 
+      1.98671093E-0001     -2.27062808E+0000      4.25703566E+0000      2.78401408E+0000      7.98163641E-0002     -7.27264015E-0002     -1.99919283E-0002     -7.27264015E-0002      8.18886784E-0002      2.09866914E-0002     -1.99919283E-0002      2.09866914E-0002      4.62997869E-0002 
+      1.45233007E-0002     -1.21470165E+0000      4.79894096E+0000      2.84314625E+0000      1.86259108E-0001     -2.27095842E-0002      2.85921248E-0002     -2.27095842E-0002      3.74404487E-0002     -3.26295559E-0003      2.85921248E-0002     -3.26295559E-0003      5.65919817E-0002 
+      2.04518164E-0001      2.26156229E+0000      4.22597375E+0000      2.79821642E+0000      7.75379113E-0002      6.98466908E-0002      2.95665680E-0002      6.98466908E-0002      8.00913946E-0002      3.26640646E-0002      2.95665680E-0002      3.26640646E-0002      5.40779543E-0002 
+      1.46258706E-0002      1.26722013E+0000      4.80633662E+0000      2.89897290E+0000      8.80357941E-0002      2.26981492E-0002      4.05790153E-0003      2.26981492E-0002      4.60485360E-0002     -7.70322510E-0003      4.05790153E-0003     -7.70322510E-0003      5.45100475E-0002 
+      1.84562156E-0001     -2.60991008E+0000      4.59285310E+0000      4.03390174E+0000      1.51456600E-0001     -1.42734555E-0001     -1.17741061E-0001     -1.42734555E-0001      1.50000160E-0001      1.19653950E-0001     -1.17741061E-0001      1.19653950E-0001      2.01301812E-0001 
+      2.87297679E-0002     -1.34664608E+0000      4.81762077E+0000      4.11037008E+0000      1.20169846E-0001     -2.40092647E-0002     -9.50215564E-0002     -2.40092647E-0002      3.53100140E-0002      4.17402875E-0002     -9.50215564E-0002      4.17402875E-0002      2.59240031E-0001 
+      1.12880383E-0001      2.26335545E+0000      4.25751027E+0000      3.68162217E+0000      1.34662241E-0001      1.26724092E-0001      7.24910086E-0002      1.26724092E-0001      1.35760215E-0001      7.81381697E-0002      7.24910086E-0002      7.81381697E-0002      1.13119071E-0001 
+      2.86798480E-0002      1.33616209E+0000      4.85052180E+0000      4.23465934E+0000      1.80874139E-0001      3.35404961E-0002      1.71858062E-0001      3.35404961E-0002      3.57517317E-0002      5.62338216E-0002      1.71858062E-0001      5.62338216E-0002      3.56622291E-0001 
+      6.66450035E-0002      2.74946369E+0000      4.74656373E+0000      4.24763632E+0000      2.54371954E-0002      1.64469606E-0002      4.36734028E-0003      1.64469606E-0002      2.24742542E-0002      6.72714867E-0003      4.36734028E-0003      6.72714867E-0003      9.75985896E-0002 
+</pre></div>  </div></div>
+   <span class="plumedtooltip">NOPBC<span class="right"> don't use pbc<i></i></span></span>
+...
+</span><span id="HBPAMM_SD.md_working_3.datdonors_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("HBPAMM_SD.md_working_3.datdonors")'># donors: HBPAMM_SD ...</span>
+<span style="color:blue" class="comment">#    SITES=1-192:3 HYDROGENS=2-192:3,3-192:3</span>
+<span style="color:blue" class="comment">#    CLUSTERS=regtest/pamm/rt-hbpamm/b3lyp.pamm</span>
+<span style="color:blue" class="comment">#    NOPBC</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="HBPAMM_SD.md_working_3.datdonors_mat" onclick='showPath("HBPAMM_SD.md_working_3.dat","HBPAMM_SD.md_working_3.datdonors_mat","HBPAMM_SD.md_working_3.datdonors_mat","red")'>donors_mat</b><span style="display:none;" id="HBPAMM_SD.md_working_3.datdonors_mat">The HBPAMM_MATRIX action with label <b>donors_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors_mat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">HBPAMM_MATRIX<span class="right">Adjacency matrix in which two electronegative atoms are adjacent if they are hydrogen bonded <a href="https://www.plumed.org/doc-master/user-doc/html/HBPAMM_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">the atoms for which you would like to calculate the adjacency matrix<i></i></span></span>=1-192:3 <span class="plumedtooltip">GROUPC<span class="right">a group of atoms that must be summed over when calculating each element of the adjacency matrix<i></i></span></span>=2-192:3,3-192:3 <span class="plumedtooltip">ORDER<span class="right"> the order in which the groups are specified in the input<i></i></span></span>=dah  <span class="plumedtooltip">CLUSTERS<span class="right">the name of the file that contains the definitions of all the kernels for PAMM<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-hbpamm/b3lyp.pamm<div class="right"> Click <a onclick='openModal("HBPAMM_SD.md_working_3.datregtest/pamm/rt-hbpamm/b3lyp.pamm2")'>here</a> to see an extract from this file.<i></i></div></div><div id="HBPAMM_SD.md_working_3.datregtest/pamm/rt-hbpamm/b3lyp.pamm2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("HBPAMM_SD.md_working_3.datregtest/pamm/rt-hbpamm/b3lyp.pamm2")'>&times;</span>  <h2>FILE: regtest/pamm/rt-hbpamm/b3lyp.pamm</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height ptc ssc adc sigma_ptc_ptc sigma_ptc_ssc sigma_ptc_adc sigma_ssc_ptc sigma_ssc_ssc sigma_ssc_adc sigma_adc_ptc sigma_adc_ssc sigma_adc_adc
+#! SET multivariate true
+#! SET kerneltype gaussian
+      7.62333341E-0002     -8.18288945E-0001      2.82463003E+0000      2.74063420E+0000      8.16250857E-0002     -6.73769671E-0002     -4.59932811E-0002     -6.73769671E-0002      6.75337422E-0002      4.53759149E-0002     -4.59932811E-0002      4.53759149E-0002      4.43189576E-0002 
+      6.99310782E-0002      8.69642605E-0001      2.87365811E+0000      2.79326509E+0000      4.26992535E-0002      3.05953458E-0002      2.05388393E-0002      3.05953458E-0002      3.29012486E-0002      2.12273873E-0002      2.05388393E-0002      2.12273873E-0002      2.45196159E-0002 
+      1.98671093E-0001     -2.27062808E+0000      4.25703566E+0000      2.78401408E+0000      7.98163641E-0002     -7.27264015E-0002     -1.99919283E-0002     -7.27264015E-0002      8.18886784E-0002      2.09866914E-0002     -1.99919283E-0002      2.09866914E-0002      4.62997869E-0002 
+      1.45233007E-0002     -1.21470165E+0000      4.79894096E+0000      2.84314625E+0000      1.86259108E-0001     -2.27095842E-0002      2.85921248E-0002     -2.27095842E-0002      3.74404487E-0002     -3.26295559E-0003      2.85921248E-0002     -3.26295559E-0003      5.65919817E-0002 
+      2.04518164E-0001      2.26156229E+0000      4.22597375E+0000      2.79821642E+0000      7.75379113E-0002      6.98466908E-0002      2.95665680E-0002      6.98466908E-0002      8.00913946E-0002      3.26640646E-0002      2.95665680E-0002      3.26640646E-0002      5.40779543E-0002 
+      1.46258706E-0002      1.26722013E+0000      4.80633662E+0000      2.89897290E+0000      8.80357941E-0002      2.26981492E-0002      4.05790153E-0003      2.26981492E-0002      4.60485360E-0002     -7.70322510E-0003      4.05790153E-0003     -7.70322510E-0003      5.45100475E-0002 
+      1.84562156E-0001     -2.60991008E+0000      4.59285310E+0000      4.03390174E+0000      1.51456600E-0001     -1.42734555E-0001     -1.17741061E-0001     -1.42734555E-0001      1.50000160E-0001      1.19653950E-0001     -1.17741061E-0001      1.19653950E-0001      2.01301812E-0001 
+      2.87297679E-0002     -1.34664608E+0000      4.81762077E+0000      4.11037008E+0000      1.20169846E-0001     -2.40092647E-0002     -9.50215564E-0002     -2.40092647E-0002      3.53100140E-0002      4.17402875E-0002     -9.50215564E-0002      4.17402875E-0002      2.59240031E-0001 
+      1.12880383E-0001      2.26335545E+0000      4.25751027E+0000      3.68162217E+0000      1.34662241E-0001      1.26724092E-0001      7.24910086E-0002      1.26724092E-0001      1.35760215E-0001      7.81381697E-0002      7.24910086E-0002      7.81381697E-0002      1.13119071E-0001 
+      2.86798480E-0002      1.33616209E+0000      4.85052180E+0000      4.23465934E+0000      1.80874139E-0001      3.35404961E-0002      1.71858062E-0001      3.35404961E-0002      3.57517317E-0002      5.62338216E-0002      1.71858062E-0001      5.62338216E-0002      3.56622291E-0001 
+      6.66450035E-0002      2.74946369E+0000      4.74656373E+0000      4.24763632E+0000      2.54371954E-0002      1.64469606E-0002      4.36734028E-0003      1.64469606E-0002      2.24742542E-0002      6.72714867E-0003      4.36734028E-0003      6.72714867E-0003      9.75985896E-0002 
+</pre></div>  </div></div> <span class="plumedtooltip">NOPBC<span class="right"> don't use pbc<i></i></span></span>
+<b name="HBPAMM_SD.md_working_3.datdonors_ones" onclick='showPath("HBPAMM_SD.md_working_3.dat","HBPAMM_SD.md_working_3.datdonors_ones","HBPAMM_SD.md_working_3.datdonors_ones","blue")'>donors_ones</b><span style="display:none;" id="HBPAMM_SD.md_working_3.datdonors_ones">The CONSTANT action with label <b>donors_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=64
+<b name="HBPAMM_SD.md_working_3.datdonors" onclick='showPath("HBPAMM_SD.md_working_3.dat","HBPAMM_SD.md_working_3.datdonors","HBPAMM_SD.md_working_3.datdonors","blue")'>donors</b><span style="display:none;" id="HBPAMM_SD.md_working_3.datdonors">The MATRIX_VECTOR_PRODUCT action with label <b>donors</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="HBPAMM_SD.md_working_3.datdonors_mat">donors_mat</b>,<b name="HBPAMM_SD.md_working_3.datdonors_ones">donors_ones</b>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">DUMPATOMS<span class="right">Dump selected atoms on a file. <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPATOMS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of vectors that should be output in the xyz file<i></i></span></span>=<b name="HBPAMM_SD.md_working_3.datdonors">donors</b> <span class="plumedtooltip">ATOMS<span class="right">the atom indices whose positions you would like to print out<i></i></span></span>=1-192:3 <span class="plumedtooltip">FILE<span class="right">file on which to output coordinates; extension is automatically detected<i></i></span></span>=<b name="HBPAMM_SD.md_working_3.datdonors">donors.xyz</b>
+</pre></div>
+
+<h2 id="the-mask-keyword">The MASK keyword</h2>
+<p>You can use the MASK keyword with this action in the same way that it is used with <a href="../COORDINATIONNUMBER/">COORDINATIONNUMBER</a>.  This keyword thus expects a vector in
+input, which tells PLUMED the atoms for which you do not need to calculate the number of hydrogen bonds.  As illustrated below, this is useful if you are using functionality
+from the <a href="../module_volumes/">volumes module</a> to calculate the average number of hydrogen bonds those atoms that lie in a certain part of the simulation box donoate to their neighbors.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_HBPAMM_SD.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../HBPAMM_SD.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/pamm/rt-hbpamm/b3lyp.pamm</span>
+<span style="color:blue" class="comment"># Fixed virtual atom which serves as the probe volume&#x27;s center (pos. in nm)</span>
+<span id="HBPAMM_SD.md_working_4.datdefcenter_short"><b name="HBPAMM_SD.md_working_4.datcenter" onclick='showPath("HBPAMM_SD.md_working_4.dat","HBPAMM_SD.md_working_4.datcenter","HBPAMM_SD.md_working_4.datcenter","violet")'>center</b><span style="display:none;" id="HBPAMM_SD.md_working_4.datcenter">The FIXEDATOM action with label <b>center</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">center</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by FIXEDATOM action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("HBPAMM_SD.md_working_4.datdefcenter");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=2.5,2.5,2.5
+</span><span id="HBPAMM_SD.md_working_4.datdefcenter_long" style="display:none;"><b name="HBPAMM_SD.md_working_4.datcenter" onclick='showPath("HBPAMM_SD.md_working_4.dat","HBPAMM_SD.md_working_4.datcenter","HBPAMM_SD.md_working_4.datcenter","violet")'>center</b>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("HBPAMM_SD.md_working_4.datdefcenter");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=2.5,2.5,2.5  <span class="plumedtooltip">SET_MASS<span class="right"> mass of the virtual atom<i></i></span></span>=1 <span class="plumedtooltip">SET_CHARGE<span class="right"> charge of the virtual atom<i></i></span></span>=0
+</span><span style="color:blue" class="comment"># Vector in which element i is one if atom i is in sphere of interest and zero otherwise</span>
+<b name="HBPAMM_SD.md_working_4.datsphere" onclick='showPath("HBPAMM_SD.md_working_4.dat","HBPAMM_SD.md_working_4.datsphere","HBPAMM_SD.md_working_4.datsphere","blue")'>sphere</b><span style="display:none;" id="HBPAMM_SD.md_working_4.datsphere">The INSPHERE action with label <b>sphere</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">sphere</td><td width="5%"><font color="blue">vector</font></td><td>vector of numbers between 0 and 1 that measure the degree to which each atom is within the volume of interest</td></tr></table></span>: <span class="plumedtooltip" style="color:green">INSPHERE<span class="right">This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a particular, user-specified part of of the cell. <a href="https://www.plumed.org/doc-master/user-doc/html/INSPHERE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that you would like to investigate<i></i></span></span>=1-192:3 <span class="plumedtooltip">CENTER<span class="right">the atom whose vicinity we are interested in examining<i></i></span></span>=<b name="HBPAMM_SD.md_working_4.datcenter">center</b> <span class="plumedtooltip">RADIUS<span class="right">the switching function that tells us the extent of the sphereical region of interest. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={GAUSSIAN D_0=0.5 R_0=0.01 D_MAX=0.52}
+<span style="color:blue" class="comment"># Calculate the number of hydrogen bonds that have been donated</span>
+<span id="HBPAMM_SD.md_working_4.datdonors_short"><b name="HBPAMM_SD.md_working_4.datdonors" onclick='showPath("HBPAMM_SD.md_working_4.dat","HBPAMM_SD.md_working_4.datdonors","HBPAMM_SD.md_working_4.datdonors_shortcut","blue")'>donors</b><span style="display:none;" id="HBPAMM_SD.md_working_4.datdonors_shortcut">The HBPAMM_SD action with label <b>donors</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors</td><td width="5%"><font color="blue">vector</font></td><td>a vector specifiying the number of hydrogen bonds each of the specified atoms participates within</td></tr></table></span>: <span class="plumedtooltip" style="color:green">HBPAMM_SD<span class="right">Calculate the number of hydrogen bonds each donor participates in using the HBPamm method This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("HBPAMM_SD.md_working_4.datdonors");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/HBPAMM_SD">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">SITES<span class="right">The list of atoms which can be part of a hydrogen bond<i></i></span></span>=1-192:3 <span class="plumedtooltip">HYDROGENS<span class="right">The list of hydrogen atoms that can form part of a hydrogen bond<i></i></span></span>=2-192:3,3-192:3
+   <span class="plumedtooltip">CLUSTERS<span class="right">the name of the file that contains the definitions of all the kernels for PAMM<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-hbpamm/b3lyp.pamm<div class="right"> Click <a onclick='openModal("HBPAMM_SD.md_working_4.datregtest/pamm/rt-hbpamm/b3lyp.pamm1")'>here</a> to see an extract from this file.<i></i></div></div><div id="HBPAMM_SD.md_working_4.datregtest/pamm/rt-hbpamm/b3lyp.pamm1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("HBPAMM_SD.md_working_4.datregtest/pamm/rt-hbpamm/b3lyp.pamm1")'>&times;</span>  <h2>FILE: regtest/pamm/rt-hbpamm/b3lyp.pamm</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height ptc ssc adc sigma_ptc_ptc sigma_ptc_ssc sigma_ptc_adc sigma_ssc_ptc sigma_ssc_ssc sigma_ssc_adc sigma_adc_ptc sigma_adc_ssc sigma_adc_adc
+#! SET multivariate true
+#! SET kerneltype gaussian
+      7.62333341E-0002     -8.18288945E-0001      2.82463003E+0000      2.74063420E+0000      8.16250857E-0002     -6.73769671E-0002     -4.59932811E-0002     -6.73769671E-0002      6.75337422E-0002      4.53759149E-0002     -4.59932811E-0002      4.53759149E-0002      4.43189576E-0002 
+      6.99310782E-0002      8.69642605E-0001      2.87365811E+0000      2.79326509E+0000      4.26992535E-0002      3.05953458E-0002      2.05388393E-0002      3.05953458E-0002      3.29012486E-0002      2.12273873E-0002      2.05388393E-0002      2.12273873E-0002      2.45196159E-0002 
+      1.98671093E-0001     -2.27062808E+0000      4.25703566E+0000      2.78401408E+0000      7.98163641E-0002     -7.27264015E-0002     -1.99919283E-0002     -7.27264015E-0002      8.18886784E-0002      2.09866914E-0002     -1.99919283E-0002      2.09866914E-0002      4.62997869E-0002 
+      1.45233007E-0002     -1.21470165E+0000      4.79894096E+0000      2.84314625E+0000      1.86259108E-0001     -2.27095842E-0002      2.85921248E-0002     -2.27095842E-0002      3.74404487E-0002     -3.26295559E-0003      2.85921248E-0002     -3.26295559E-0003      5.65919817E-0002 
+      2.04518164E-0001      2.26156229E+0000      4.22597375E+0000      2.79821642E+0000      7.75379113E-0002      6.98466908E-0002      2.95665680E-0002      6.98466908E-0002      8.00913946E-0002      3.26640646E-0002      2.95665680E-0002      3.26640646E-0002      5.40779543E-0002 
+      1.46258706E-0002      1.26722013E+0000      4.80633662E+0000      2.89897290E+0000      8.80357941E-0002      2.26981492E-0002      4.05790153E-0003      2.26981492E-0002      4.60485360E-0002     -7.70322510E-0003      4.05790153E-0003     -7.70322510E-0003      5.45100475E-0002 
+      1.84562156E-0001     -2.60991008E+0000      4.59285310E+0000      4.03390174E+0000      1.51456600E-0001     -1.42734555E-0001     -1.17741061E-0001     -1.42734555E-0001      1.50000160E-0001      1.19653950E-0001     -1.17741061E-0001      1.19653950E-0001      2.01301812E-0001 
+      2.87297679E-0002     -1.34664608E+0000      4.81762077E+0000      4.11037008E+0000      1.20169846E-0001     -2.40092647E-0002     -9.50215564E-0002     -2.40092647E-0002      3.53100140E-0002      4.17402875E-0002     -9.50215564E-0002      4.17402875E-0002      2.59240031E-0001 
+      1.12880383E-0001      2.26335545E+0000      4.25751027E+0000      3.68162217E+0000      1.34662241E-0001      1.26724092E-0001      7.24910086E-0002      1.26724092E-0001      1.35760215E-0001      7.81381697E-0002      7.24910086E-0002      7.81381697E-0002      1.13119071E-0001 
+      2.86798480E-0002      1.33616209E+0000      4.85052180E+0000      4.23465934E+0000      1.80874139E-0001      3.35404961E-0002      1.71858062E-0001      3.35404961E-0002      3.57517317E-0002      5.62338216E-0002      1.71858062E-0001      5.62338216E-0002      3.56622291E-0001 
+      6.66450035E-0002      2.74946369E+0000      4.74656373E+0000      4.24763632E+0000      2.54371954E-0002      1.64469606E-0002      4.36734028E-0003      1.64469606E-0002      2.24742542E-0002      6.72714867E-0003      4.36734028E-0003      6.72714867E-0003      9.75985896E-0002 
+</pre></div>  </div></div>
+   <span class="plumedtooltip">MASK<span class="right">a vector that is used to used to determine which rows of the adjancency matrix to compute<i></i></span></span>=<b name="HBPAMM_SD.md_working_4.datsphere">sphere</b>
+...
+</span><span id="HBPAMM_SD.md_working_4.datdonors_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("HBPAMM_SD.md_working_4.datdonors")'># donors: HBPAMM_SD ...</span>
+<span style="color:blue" class="comment">#    SITES=1-192:3 HYDROGENS=2-192:3,3-192:3</span>
+<span style="color:blue" class="comment">#    CLUSTERS=regtest/pamm/rt-hbpamm/b3lyp.pamm</span>
+<span style="color:blue" class="comment">#    MASK=sphere</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="HBPAMM_SD.md_working_4.datdonors_mat" onclick='showPath("HBPAMM_SD.md_working_4.dat","HBPAMM_SD.md_working_4.datdonors_mat","HBPAMM_SD.md_working_4.datdonors_mat","red")'>donors_mat</b><span style="display:none;" id="HBPAMM_SD.md_working_4.datdonors_mat">The HBPAMM_MATRIX action with label <b>donors_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors_mat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">HBPAMM_MATRIX<span class="right">Adjacency matrix in which two electronegative atoms are adjacent if they are hydrogen bonded <a href="https://www.plumed.org/doc-master/user-doc/html/HBPAMM_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">the atoms for which you would like to calculate the adjacency matrix<i></i></span></span>=1-192:3 <span class="plumedtooltip">GROUPC<span class="right">a group of atoms that must be summed over when calculating each element of the adjacency matrix<i></i></span></span>=2-192:3,3-192:3 <span class="plumedtooltip">ORDER<span class="right"> the order in which the groups are specified in the input<i></i></span></span>=dah  <span class="plumedtooltip">CLUSTERS<span class="right">the name of the file that contains the definitions of all the kernels for PAMM<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-hbpamm/b3lyp.pamm<div class="right"> Click <a onclick='openModal("HBPAMM_SD.md_working_4.datregtest/pamm/rt-hbpamm/b3lyp.pamm2")'>here</a> to see an extract from this file.<i></i></div></div><div id="HBPAMM_SD.md_working_4.datregtest/pamm/rt-hbpamm/b3lyp.pamm2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("HBPAMM_SD.md_working_4.datregtest/pamm/rt-hbpamm/b3lyp.pamm2")'>&times;</span>  <h2>FILE: regtest/pamm/rt-hbpamm/b3lyp.pamm</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height ptc ssc adc sigma_ptc_ptc sigma_ptc_ssc sigma_ptc_adc sigma_ssc_ptc sigma_ssc_ssc sigma_ssc_adc sigma_adc_ptc sigma_adc_ssc sigma_adc_adc
+#! SET multivariate true
+#! SET kerneltype gaussian
+      7.62333341E-0002     -8.18288945E-0001      2.82463003E+0000      2.74063420E+0000      8.16250857E-0002     -6.73769671E-0002     -4.59932811E-0002     -6.73769671E-0002      6.75337422E-0002      4.53759149E-0002     -4.59932811E-0002      4.53759149E-0002      4.43189576E-0002 
+      6.99310782E-0002      8.69642605E-0001      2.87365811E+0000      2.79326509E+0000      4.26992535E-0002      3.05953458E-0002      2.05388393E-0002      3.05953458E-0002      3.29012486E-0002      2.12273873E-0002      2.05388393E-0002      2.12273873E-0002      2.45196159E-0002 
+      1.98671093E-0001     -2.27062808E+0000      4.25703566E+0000      2.78401408E+0000      7.98163641E-0002     -7.27264015E-0002     -1.99919283E-0002     -7.27264015E-0002      8.18886784E-0002      2.09866914E-0002     -1.99919283E-0002      2.09866914E-0002      4.62997869E-0002 
+      1.45233007E-0002     -1.21470165E+0000      4.79894096E+0000      2.84314625E+0000      1.86259108E-0001     -2.27095842E-0002      2.85921248E-0002     -2.27095842E-0002      3.74404487E-0002     -3.26295559E-0003      2.85921248E-0002     -3.26295559E-0003      5.65919817E-0002 
+      2.04518164E-0001      2.26156229E+0000      4.22597375E+0000      2.79821642E+0000      7.75379113E-0002      6.98466908E-0002      2.95665680E-0002      6.98466908E-0002      8.00913946E-0002      3.26640646E-0002      2.95665680E-0002      3.26640646E-0002      5.40779543E-0002 
+      1.46258706E-0002      1.26722013E+0000      4.80633662E+0000      2.89897290E+0000      8.80357941E-0002      2.26981492E-0002      4.05790153E-0003      2.26981492E-0002      4.60485360E-0002     -7.70322510E-0003      4.05790153E-0003     -7.70322510E-0003      5.45100475E-0002 
+      1.84562156E-0001     -2.60991008E+0000      4.59285310E+0000      4.03390174E+0000      1.51456600E-0001     -1.42734555E-0001     -1.17741061E-0001     -1.42734555E-0001      1.50000160E-0001      1.19653950E-0001     -1.17741061E-0001      1.19653950E-0001      2.01301812E-0001 
+      2.87297679E-0002     -1.34664608E+0000      4.81762077E+0000      4.11037008E+0000      1.20169846E-0001     -2.40092647E-0002     -9.50215564E-0002     -2.40092647E-0002      3.53100140E-0002      4.17402875E-0002     -9.50215564E-0002      4.17402875E-0002      2.59240031E-0001 
+      1.12880383E-0001      2.26335545E+0000      4.25751027E+0000      3.68162217E+0000      1.34662241E-0001      1.26724092E-0001      7.24910086E-0002      1.26724092E-0001      1.35760215E-0001      7.81381697E-0002      7.24910086E-0002      7.81381697E-0002      1.13119071E-0001 
+      2.86798480E-0002      1.33616209E+0000      4.85052180E+0000      4.23465934E+0000      1.80874139E-0001      3.35404961E-0002      1.71858062E-0001      3.35404961E-0002      3.57517317E-0002      5.62338216E-0002      1.71858062E-0001      5.62338216E-0002      3.56622291E-0001 
+      6.66450035E-0002      2.74946369E+0000      4.74656373E+0000      4.24763632E+0000      2.54371954E-0002      1.64469606E-0002      4.36734028E-0003      1.64469606E-0002      2.24742542E-0002      6.72714867E-0003      4.36734028E-0003      6.72714867E-0003      9.75985896E-0002 
+</pre></div>  </div></div> <span class="plumedtooltip">MASK<span class="right">a vector that is used to used to determine which rows of the adjancency matrix to compute<i></i></span></span>=<b name="HBPAMM_SD.md_working_4.datsphere">sphere</b>
+<b name="HBPAMM_SD.md_working_4.datdonors_ones" onclick='showPath("HBPAMM_SD.md_working_4.dat","HBPAMM_SD.md_working_4.datdonors_ones","HBPAMM_SD.md_working_4.datdonors_ones","blue")'>donors_ones</b><span style="display:none;" id="HBPAMM_SD.md_working_4.datdonors_ones">The CONSTANT action with label <b>donors_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=64
+<b name="HBPAMM_SD.md_working_4.datdonors" onclick='showPath("HBPAMM_SD.md_working_4.dat","HBPAMM_SD.md_working_4.datdonors","HBPAMM_SD.md_working_4.datdonors","blue")'>donors</b><span style="display:none;" id="HBPAMM_SD.md_working_4.datdonors">The MATRIX_VECTOR_PRODUCT action with label <b>donors</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">donors</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="HBPAMM_SD.md_working_4.datdonors_mat">donors_mat</b>,<b name="HBPAMM_SD.md_working_4.datdonors_ones">donors_ones</b>
+<span style="color:blue"># --- End of included input --- </span></span><span style="color:blue" class="comment"># Multiply number of hydrogen bonds by sphere vector</span>
+<b name="HBPAMM_SD.md_working_4.datprod" onclick='showPath("HBPAMM_SD.md_working_4.dat","HBPAMM_SD.md_working_4.datprod","HBPAMM_SD.md_working_4.datprod","blue")'>prod</b><span style="display:none;" id="HBPAMM_SD.md_working_4.datprod">The CUSTOM action with label <b>prod</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">prod</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="HBPAMM_SD.md_working_4.datdonors">donors</b>,<b name="HBPAMM_SD.md_working_4.datsphere">sphere</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue" class="comment"># Total number of hydrogen bonds donated for atoms that are in the sphere of interest</span>
+<b name="HBPAMM_SD.md_working_4.datnumer" onclick='showPath("HBPAMM_SD.md_working_4.dat","HBPAMM_SD.md_working_4.datnumer","HBPAMM_SD.md_working_4.datnumer","black")'>numer</b><span style="display:none;" id="HBPAMM_SD.md_working_4.datnumer">The SUM action with label <b>numer</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">numer</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="HBPAMM_SD.md_working_4.datprod">prod</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue" class="comment"># Number of atoms that are in sphere of interest</span>
+<b name="HBPAMM_SD.md_working_4.datdenom" onclick='showPath("HBPAMM_SD.md_working_4.dat","HBPAMM_SD.md_working_4.datdenom","HBPAMM_SD.md_working_4.datdenom","black")'>denom</b><span style="display:none;" id="HBPAMM_SD.md_working_4.datdenom">The SUM action with label <b>denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">denom</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="HBPAMM_SD.md_working_4.datsphere">sphere</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue" class="comment"># Average number of donated hydrogen bonds for atoms in sphere of interest</span>
+<b name="HBPAMM_SD.md_working_4.datav" onclick='showPath("HBPAMM_SD.md_working_4.dat","HBPAMM_SD.md_working_4.datav","HBPAMM_SD.md_working_4.datav","black")'>av</b><span style="display:none;" id="HBPAMM_SD.md_working_4.datav">The CUSTOM action with label <b>av</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">av</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="HBPAMM_SD.md_working_4.datnumer">numer</b>,<b name="HBPAMM_SD.md_working_4.datdenom">denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue" class="comment"># And print out final CV to a file</span>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="HBPAMM_SD.md_working_4.datav">av</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=1
+</pre></div>
+
+<p>This input calculate the number of hydrogen bonds that have been donated by those atoms that are within a spherical region that is centered on the point
+<script type="math/tex">(2.5,2.5,2.5)</script>.</p>
+<h2 id="optimisation-details">Optimisation details</h2>
+<p>If you expand the inputs above you will see that they all the <a href="../HBPAMM_MATRIX/">HBPAMM_MATRIX</a> action.  The matrix that this action computes is sparse
+as each atom only forms hydroen bonds with a relatively small number of neighbors.  The vast majority of the elements in the <a href="../HBPAMM_MATRIX/">HBPAMM_MATRIX</a>
+are thsu zero.  To reduce the amount of memory that PLUMED requires PLUMED uses sparse matrix storage.  Consequently, whenever you calculate and store a contact
+matrix only the elements of the matrix that are non-zero are stored.</p>
+<p>We also use the sparsity of the <a href="../HBPAMM_MATRIX/">HBPAMM_MATRIX</a> to make the time required to compute the matrix scale linearly rather than quadratically with
+the number of atoms. We know that element <script type="math/tex">i,j</script> is only non-zero if the donor and acceptor atoms are within:</p>
+<p>
+<script type="math/tex; mode=display">
+r_c = \textrm{max}_i \left( \mu_i^{(ad)} + \sqrt(2 g_{cut}) | \sqrt{\lambda_{i,max}} v_\textrm{i,max}^{(ad)} | \right)
+</script>
+</p>
+<p>where <script type="math/tex">i</script> runs over all the PAMM kernels.  <script type="math/tex">g_{cut}</script> is the gaussian cutoff that is specified using the REGULARIZE
+keyword,  <script type="math/tex">\mu_i^{(ad)}</script> is the mean acceptor-donor distance for the <script type="math/tex">i</script>th kernel, <script type="math/tex">\lambda_{i,max}</script> is the largest
+eigenvalue of the covariance for the <script type="math/tex">i</script>th kernel and <script type="math/tex">v_\textrm{i,max}^{(ad)}</script> is the acceptor-donor distance component
+of its corresponding eigenvector.  We can determine that many pairs of atoms are further appart than <script type="math/tex">r_c</script> without computing the
+distance between these atoms by using divide and conquer strategies such as linked lists and neighbour lists. Furthermore, we do not even
+need to set a <code>D_MAX</code> parameter as we would have to if we were using <a href="../CONTACT_MATRIX/">CONTACT_MATRIX</a> as the above cutoff can be determined
+from the parameters of the Gaussian kernels directly.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> and <a href="../specifying_atoms/">atoms</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MASK</td>
+<td style="text-align: center;">vector</td>
+<td style="text-align: left;">a vector that is used to used to determine which rows of the adjancency matrix to compute</td>
+</tr>
+<tr>
+<td style="text-align: left;">SITES</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">The list of atoms which can be part of a hydrogen bond</td>
+</tr>
+<tr>
+<td style="text-align: left;">DONORS</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">The list of atoms which can donate a hydrogen bond</td>
+</tr>
+<tr>
+<td style="text-align: left;">ACCEPTORS</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">The list of atoms which can accept a hydrogen bond</td>
+</tr>
+<tr>
+<td style="text-align: left;">HYDROGENS</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">The list of hydrogen atoms that can form part of a hydrogen bond</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-components">Output components</h2>
+<p>This action can calculate the <a href="../specifying_arguments/">values</a> in the following table when the associated keyword is included in the input for the action. These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">lessthan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">LESS_THAN</td>
+<td style="text-align: left;">the number of colvars that have a value less than a threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;">morethan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MORE_THAN</td>
+<td style="text-align: left;">the number of colvars that have a value more than a threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;">altmin</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">ALT_MIN</td>
+<td style="text-align: left;">the minimum value of the cv</td>
+</tr>
+<tr>
+<td style="text-align: left;">min</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MIN</td>
+<td style="text-align: left;">the minimum colvar</td>
+</tr>
+<tr>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MAX</td>
+<td style="text-align: left;">the maximum colvar</td>
+</tr>
+<tr>
+<td style="text-align: left;">between</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">BETWEEN</td>
+<td style="text-align: left;">the number of colvars that have a value that lies in a particular interval</td>
+</tr>
+<tr>
+<td style="text-align: left;">highest</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">HIGHEST</td>
+<td style="text-align: left;">the largest of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">lowest</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">LOWEST</td>
+<td style="text-align: left;">the smallest of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">sum</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">SUM</td>
+<td style="text-align: left;">the sum of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">mean</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MEAN</td>
+<td style="text-align: left;">the mean of the colvars</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MASK</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">a vector that is used to used to determine which rows of the adjancency matrix to compute</td>
+</tr>
+<tr>
+<td style="text-align: left;">SITES</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">The list of atoms which can be part of a hydrogen bond</td>
+</tr>
+<tr>
+<td style="text-align: left;">DONORS</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">The list of atoms which can donate a hydrogen bond</td>
+</tr>
+<tr>
+<td style="text-align: left;">ACCEPTORS</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">The list of atoms which can accept a hydrogen bond</td>
+</tr>
+<tr>
+<td style="text-align: left;">HYDROGENS</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">The list of hydrogen atoms that can form part of a hydrogen bond</td>
+</tr>
+<tr>
+<td style="text-align: left;">CLUSTERS</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the name of the file that contains the definitions of all the kernels for PAMM</td>
+</tr>
+<tr>
+<td style="text-align: left;">REGULARISE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.001</td>
+<td style="text-align: left;">don't allow the denominator to be smaller then this value</td>
+</tr>
+<tr>
+<td style="text-align: left;">GAUSS_CUTOFF</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">6.25</td>
+<td style="text-align: left;">the cutoff at which to stop evaluating the kernel function is set equal to sqrt(2<em>x)</em>(max(adc)+cov(adc))</td>
+</tr>
+<tr>
+<td style="text-align: left;">NOPBC</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">don't use pbc</td>
+</tr>
+<tr>
+<td style="text-align: left;">SERIAL</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">do the calculation in serial. Further information about this flag can be found <a href="../actions/">here</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">USEGPU</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">run this calculation on the GPU. Further information about this flag can be found <a href="../gpu/">here</a>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">deprecated keywords</p>
+<p>The keywords in the following table can still be used with this action but have been deprecated</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ATOMS</td>
+<td style="text-align: left;">You should use GROUP instead of this keyword which was used in older versions of PLUMED and is provided for back compatibility only</td>
+</tr>
+<tr>
+<td style="text-align: left;">LESS_THAN</td>
+<td style="text-align: left;">calculate the number of variables that are less than a certain target value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MORE_THAN</td>
+<td style="text-align: left;">calculate the number of variables that are more than a certain target value</td>
+</tr>
+<tr>
+<td style="text-align: left;">ALT_MIN</td>
+<td style="text-align: left;">calculate the minimum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MIN</td>
+<td style="text-align: left;">calculate the minimum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MAX</td>
+<td style="text-align: left;">calculate the maximum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">BETWEEN</td>
+<td style="text-align: left;">calculate the number of values that are within a certain range</td>
+</tr>
+<tr>
+<td style="text-align: left;">HIGHEST</td>
+<td style="text-align: left;">this flag allows you to recover the highest of these variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">HISTOGRAM</td>
+<td style="text-align: left;">calculate a discretized histogram of the distribution of values</td>
+</tr>
+<tr>
+<td style="text-align: left;">LOWEST</td>
+<td style="text-align: left;">this flag allows you to recover the lowest of these variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">SUM</td>
+<td style="text-align: left;">calculate the sum of all the quantities</td>
+</tr>
+<tr>
+<td style="text-align: left;">MEAN</td>
+<td style="text-align: left;">calculate the mean of all the quantities</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1063/1.4900655">P. Gasparotto, M. Ceriotti, Recognizing molecular patterns by machine learning: An agnostic structural definition of the hydrogen bond. The Journal of Chemical Physics 141 (2014)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jctc.7b00993">P. Gasparotto, R. H. Meißner, M. Ceriotti, Recognizing Local and Global Structural Motifs at
+the Atomic Scale. Journal of Chemical Theory and Computation 14, 486–498 (2018)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jctc.6b01073">G. A. Tribello, F. Giberti, G. C. Sosso, M. Salvalaglio, M. Parrinello, Analyzing and Driving Cluster Formation in Atomistic Simulations. Journal of Chemical Theory and Computation 13, 1317–1327 (2017)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

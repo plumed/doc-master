@@ -1,0 +1,7 @@
+phi: TORSION ATOMS=5,7,9,15
+psi: TORSION ATOMS=7,9,15,17
+model: PYTORCH_MODEL ...
+  FILE=regtest/pytorch/rt-pytorch_model_2d/torch_model.ptc
+  ARG=phi,psi
+...
+PRINT FILE=COLVAR ARG=model.node-0,model.node-1

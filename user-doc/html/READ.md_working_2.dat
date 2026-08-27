@@ -1,0 +1,4 @@
+#SETTINGS INPUTFILES=regtest/basic/rt41/input_colvar
+r1: READ VALUES=p2.X  FILE=regtest/basic/rt41/input_colvar
+r2: READ VALUES=p3.* FILE=regtest/basic/rt41/input_colvar
+PRINT ARG=r1.X,r2.* FILE=colvar

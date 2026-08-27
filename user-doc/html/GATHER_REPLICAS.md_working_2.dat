@@ -1,0 +1,8 @@
+#SETTINGS NREPLICAS=2
+d: DISTANCE ATOMS=1,2
+g: GATHER_REPLICAS ARG=d
+s: COMBINE ARG=g.rep-1,g.rep-2 COEFFICIENTS=0.5,0.5 PERIODIC=NO
+# This does the time averaging
+a: AVERAGE ARG=s
+# And output the final average
+PRINT ARG=a FILE=colvar

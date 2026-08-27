@@ -1,0 +1,20 @@
+# this is using Angstrom - kj/mol - fs
+UNITS LENGTH=A TIME=fs ENERGY=kj/mol MASS=amu CHARGE=e
+
+# compute distance between atoms 1 and 4
+d: DISTANCE ATOMS=1,4
+
+# print time and distance on a COLVAR file
+# times and distances in this file will be in fs and A respectively
+PRINT ARG=d FILE=COLVAR
+
+# dump atoms 1 to 100 on a 'out.gro' file
+# The positions in the gro file here will be written
+# in nm because this is the convention for gro files.
+DUMPATOMS FILE=out.gro STRIDE=10 ATOMS=1-100
+
+# dump atoms 1 to 100 on a 'out.xyz' file
+# The position in the xyz file here will be written
+# in A as there is no conventional units for xyz files
+# and the plumed length units has been set to Angstroms.
+DUMPATOMS FILE=out.xyz STRIDE=10 ATOMS=1-100

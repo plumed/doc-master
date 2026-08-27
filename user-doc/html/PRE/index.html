@@ -1,0 +1,1133 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: PRE - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-pre" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: PRE
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-pre"><a href="../actions/">Action</a>: PRE</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_isdb/"><strong>isdb</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculates the Paramagnetic Resonance Enhancement intensity ratio between a spin label atom and a list of atoms .</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculates the Paramagnetic Resonance Enhancement intensity ratio between a spin label atom and a list of atoms .</p>
+<p>The reference atom for the spin label is added with SPINLABEL, the affected atom(s)
+are give as numbered GROUPA1, GROUPA2, ...
+The additional parameters needed for the calculation are given as INEPT, the inept
+time, TAUC the correlation time, OMEGA, the Larmor frequency and RTWO for the relaxation
+time.</p>
+<p><a href="../METAINFERENCE/">METAINFERENCE</a> can be activated using DOSCORE and the other relevant keywords.</p>
+<h2 id="examples">Examples</h2>
+<p>In the following example five PRE intensities are calculated using the distance between the
+oxygen of the spin label and the backbone hydrogen atoms. Omega is the NMR frequency, RTWO the
+R2 for the hydrogen atoms, INEPT of 8 ms for the experiment and a TAUC of 1.21 ns</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PRE.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PRE.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="PRE.md_working_1.datdefHN_pre_short"><span class="plumedtooltip" style="color:green">PRE<span class="right">Calculates the Paramagnetic Resonance Enhancement intensity ratio between a spin label atom and a list of atoms . This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("PRE.md_working_1.datdefHN_pre");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PRE">More details</a><i></i></span></span> ...
+<span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="PRE.md_working_1.datHN_pre" onclick='showPath("PRE.md_working_1.dat","PRE.md_working_1.datHN_pre","PRE.md_working_1.datHN_pre","black")'>HN_pre</b><span style="display:none;" id="PRE.md_working_1.datHN_pre">The PRE action with label <b>HN_pre</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">HN_pre.pre-0</td><td width="5%"><font color="black">scalar</font></td><td>the # PRE  This is the 0th of these quantities</td></tr><tr><td width="5%">HN_pre.pre-1</td><td width="5%"><font color="black">scalar</font></td><td>the # PRE  This is the 1th of these quantities</td></tr><tr><td width="5%">HN_pre.pre-2</td><td width="5%"><font color="black">scalar</font></td><td>the # PRE  This is the 2th of these quantities</td></tr><tr><td width="5%">HN_pre.pre-3</td><td width="5%"><font color="black">scalar</font></td><td>the # PRE  This is the 3th of these quantities</td></tr><tr><td width="5%">HN_pre.pre-4</td><td width="5%"><font color="black">scalar</font></td><td>the # PRE  This is the 4th of these quantities</td></tr></table></span>
+<span class="plumedtooltip">INEPT<span class="right">is the INEPT time (in ms)<i></i></span></span>=8
+<span class="plumedtooltip">TAUC<span class="right">is the correlation time (in ns) for this electron-nuclear interaction<i></i></span></span>=1.21
+<span class="plumedtooltip">OMEGA<span class="right">is the Larmor frequency of the nuclear spin (in MHz)<i></i></span></span>=900
+<span class="plumedtooltip">SPINLABEL<span class="right">The atom to be used as the paramagnetic center<i></i></span></span>=1818
+<span class="plumedtooltip">GROUPA1<span class="right">the atoms involved in each of the contacts you wish to calculate<i></i></span></span>=86  <span class="plumedtooltip">RTWO1<span class="right">The relaxation of the atom/atoms in the corresponding GROUPA of atoms<i></i></span></span>=0.0120272827
+<span class="plumedtooltip">GROUPA2<span class="right">the atoms involved in each of the contacts you wish to calculate<i></i></span></span>=177 <span class="plumedtooltip">RTWO2<span class="right">The relaxation of the atom/atoms in the corresponding GROUPA of atoms<i></i></span></span>=0.0263953158
+<span class="plumedtooltip">GROUPA3<span class="right">the atoms involved in each of the contacts you wish to calculate<i></i></span></span>=285 <span class="plumedtooltip">RTWO3<span class="right">The relaxation of the atom/atoms in the corresponding GROUPA of atoms<i></i></span></span>=0.0058899829
+<span class="plumedtooltip">GROUPA4<span class="right">the atoms involved in each of the contacts you wish to calculate<i></i></span></span>=335 <span class="plumedtooltip">RTWO4<span class="right">The relaxation of the atom/atoms in the corresponding GROUPA of atoms<i></i></span></span>=0.0102072646
+<span class="plumedtooltip">GROUPA5<span class="right">the atoms involved in each of the contacts you wish to calculate<i></i></span></span>=451 <span class="plumedtooltip">RTWO5<span class="right">The relaxation of the atom/atoms in the corresponding GROUPA of atoms<i></i></span></span>=0.0086341843
+... PRE
+</span><span id="PRE.md_working_1.datdefHN_pre_long" style="display:none;"><span class="plumedtooltip" style="color:green">PRE<span class="right">Calculates the Paramagnetic Resonance Enhancement intensity ratio between a spin label atom and a list of atoms . This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("PRE.md_working_1.datdefHN_pre");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PRE">More details</a><i></i></span></span> ...
+<span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="PRE.md_working_1.datHN_pre" onclick='showPath("PRE.md_working_1.dat","PRE.md_working_1.datHN_pre","PRE.md_working_1.datHN_pre","black")'>HN_pre</b>
+<span class="plumedtooltip">INEPT<span class="right">is the INEPT time (in ms)<i></i></span></span>=8
+<span class="plumedtooltip">TAUC<span class="right">is the correlation time (in ns) for this electron-nuclear interaction<i></i></span></span>=1.21
+<span class="plumedtooltip">OMEGA<span class="right">is the Larmor frequency of the nuclear spin (in MHz)<i></i></span></span>=900
+<span class="plumedtooltip">SPINLABEL<span class="right">The atom to be used as the paramagnetic center<i></i></span></span>=1818
+<span class="plumedtooltip">GROUPA1<span class="right">the atoms involved in each of the contacts you wish to calculate<i></i></span></span>=86  <span class="plumedtooltip">RTWO1<span class="right">The relaxation of the atom/atoms in the corresponding GROUPA of atoms<i></i></span></span>=0.0120272827
+<span class="plumedtooltip">GROUPA2<span class="right">the atoms involved in each of the contacts you wish to calculate<i></i></span></span>=177 <span class="plumedtooltip">RTWO2<span class="right">The relaxation of the atom/atoms in the corresponding GROUPA of atoms<i></i></span></span>=0.0263953158
+<span class="plumedtooltip">GROUPA3<span class="right">the atoms involved in each of the contacts you wish to calculate<i></i></span></span>=285 <span class="plumedtooltip">RTWO3<span class="right">The relaxation of the atom/atoms in the corresponding GROUPA of atoms<i></i></span></span>=0.0058899829
+<span class="plumedtooltip">GROUPA4<span class="right">the atoms involved in each of the contacts you wish to calculate<i></i></span></span>=335 <span class="plumedtooltip">RTWO4<span class="right">The relaxation of the atom/atoms in the corresponding GROUPA of atoms<i></i></span></span>=0.0102072646
+<span class="plumedtooltip">GROUPA5<span class="right">the atoms involved in each of the contacts you wish to calculate<i></i></span></span>=451 <span class="plumedtooltip">RTWO5<span class="right">The relaxation of the atom/atoms in the corresponding GROUPA of atoms<i></i></span></span>=0.0086341843
+ <span class="plumedtooltip">NOISETYPE<span class="right"> functional form of the noise (GAUSS,MGAUSS,OUTLIERS,MOUTLIERS,GENERIC)<i></i></span></span>=MGAUSS <span class="plumedtooltip">WRITE_STRIDE<span class="right"> write the status to a file every N steps, this can be used for restart/continuation<i></i></span></span>=10000 <span class="plumedtooltip">OPTSIGMAMEAN<span class="right"> Set to NONE/SEM to manually set sigma mean, or to estimate it on the fly<i></i></span></span>=NONE <span class="plumedtooltip">SIGMA0<span class="right"> initial value of the uncertainty parameter<i></i></span></span>=1.0 <span class="plumedtooltip">SIGMA_MIN<span class="right"> minimum value of the uncertainty parameter<i></i></span></span>=0.0 <span class="plumedtooltip">SIGMA_MAX<span class="right"> maximum value of the uncertainty parameter<i></i></span></span>=10.
+... PRE
+</span><br/><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="PRE.md_working_1.datHN_pre">HN_pre.*</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=PRE.dat <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=1
+</pre></div>
+
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> and <a href="../specifying_atoms/">atoms</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">scalar</td>
+<td style="text-align: left;">the labels of the values from which the function is calculated</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPINLABEL</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">The atom to be used as the paramagnetic center</td>
+</tr>
+<tr>
+<td style="text-align: left;">GROUPA</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">the atoms involved in each of the contacts you wish to calculate</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-components">Output components</h2>
+<p>This action can calculate the <a href="../specifying_arguments/">values</a> in the following table when the associated keyword is included in the input for the action. These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">score</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">default</td>
+<td style="text-align: left;">the Metainference score</td>
+</tr>
+<tr>
+<td style="text-align: left;">sigma</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">default</td>
+<td style="text-align: left;">uncertainty parameter</td>
+</tr>
+<tr>
+<td style="text-align: left;">sigmaMean</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">default</td>
+<td style="text-align: left;">uncertainty in the mean estimate</td>
+</tr>
+<tr>
+<td style="text-align: left;">neff</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">default</td>
+<td style="text-align: left;">effective number of replicas</td>
+</tr>
+<tr>
+<td style="text-align: left;">acceptSigma</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">default</td>
+<td style="text-align: left;">MC acceptance for sigma values</td>
+</tr>
+<tr>
+<td style="text-align: left;">acceptScale</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">SCALEDATA</td>
+<td style="text-align: left;">MC acceptance for scale value</td>
+</tr>
+<tr>
+<td style="text-align: left;">acceptFT</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">GENERIC</td>
+<td style="text-align: left;">MC acceptance for general metainference f tilde value</td>
+</tr>
+<tr>
+<td style="text-align: left;">weight</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">REWEIGHT</td>
+<td style="text-align: left;">weights of the weighted average</td>
+</tr>
+<tr>
+<td style="text-align: left;">biasDer</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">REWEIGHT</td>
+<td style="text-align: left;">derivatives with respect to the bias</td>
+</tr>
+<tr>
+<td style="text-align: left;">scale</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">SCALEDATA</td>
+<td style="text-align: left;">scale parameter</td>
+</tr>
+<tr>
+<td style="text-align: left;">offset</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">ADDOFFSET</td>
+<td style="text-align: left;">offset parameter</td>
+</tr>
+<tr>
+<td style="text-align: left;">ftilde</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">GENERIC</td>
+<td style="text-align: left;">ensemble average estimator</td>
+</tr>
+<tr>
+<td style="text-align: left;">pre</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">default</td>
+<td style="text-align: left;">the # PRE</td>
+</tr>
+<tr>
+<td style="text-align: left;">exp</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">PREINT</td>
+<td style="text-align: left;">the # PRE experimental intensity</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">ARG<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the labels of the values from which the function is calculated</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPINLABEL</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">The atom to be used as the paramagnetic center</td>
+</tr>
+<tr>
+<td style="text-align: left;">GROUPA</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the atoms involved in each of the contacts you wish to calculate</td>
+</tr>
+<tr>
+<td style="text-align: left;">NOISETYPE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">MGAUSS</td>
+<td style="text-align: left;">functional form of the noise (GAUSS,MGAUSS,OUTLIERS,MOUTLIERS,GENERIC)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">LIKELIHOOD<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">GAUSS</td>
+<td style="text-align: left;">the likelihood for the GENERIC metainference model, GAUSS or LOGN</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">DFTILDE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.1</td>
+<td style="text-align: left;">fraction of sigma_mean used to evolve ftilde</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">SCALE0<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: left;">initial value of the scaling factor</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">SCALE_PRIOR<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">FLAT</td>
+<td style="text-align: left;">either FLAT or GAUSSIAN</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">OFFSET0<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: left;">initial value of the offset</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">OFFSET_PRIOR<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">FLAT</td>
+<td style="text-align: left;">either FLAT or GAUSSIAN</td>
+</tr>
+<tr>
+<td style="text-align: left;">SIGMA0</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: left;">initial value of the uncertainty parameter</td>
+</tr>
+<tr>
+<td style="text-align: left;">SIGMA_MIN</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: left;">minimum value of the uncertainty parameter</td>
+</tr>
+<tr>
+<td style="text-align: left;">SIGMA_MAX</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">10.</td>
+<td style="text-align: left;">maximum value of the uncertainty parameter</td>
+</tr>
+<tr>
+<td style="text-align: left;">OPTSIGMAMEAN</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">NONE</td>
+<td style="text-align: left;">Set to NONE/SEM to manually set sigma mean, or to estimate it on the fly</td>
+</tr>
+<tr>
+<td style="text-align: left;">WRITE_STRIDE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">10000</td>
+<td style="text-align: left;">write the status to a file every N steps, this can be used for restart/continuation</td>
+</tr>
+<tr>
+<td style="text-align: left;">INEPT</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">is the INEPT time (in ms)</td>
+</tr>
+<tr>
+<td style="text-align: left;">TAUC</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">is the correlation time (in ns) for this electron-nuclear interaction</td>
+</tr>
+<tr>
+<td style="text-align: left;">OMEGA</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">is the Larmor frequency of the nuclear spin (in MHz)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NUMERICAL_DERIVATIVES<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the derivatives for these quantities numerically</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">DOSCORE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">activate metainference</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NOENSEMBLE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">don't perform any replica-averaging</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">REWEIGHT<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">simple REWEIGHT using the ARG as energy</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">AVERAGING<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Stride for calculation of averaged weights and sigma_mean</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">SCALEDATA<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Set to TRUE if you want to sample a scaling factor common to all values and replicas</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">SCALE_MIN<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">minimum value of the scaling factor</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">SCALE_MAX<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">maximum value of the scaling factor</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">DSCALE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">maximum MC move of the scaling factor</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">ADDOFFSET<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Set to TRUE if you want to sample an offset common to all values and replicas</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">OFFSET_MIN<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">minimum value of the offset</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">OFFSET_MAX<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">maximum value of the offset</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">DOFFSET<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">maximum MC move of the offset</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">REGRES_ZERO<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">stride for regression with zero offset</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">DSIGMA<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">maximum MC move of the uncertainty parameter</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">SIGMA_MEAN0<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">starting value for the uncertainty in the mean estimate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">SIGMA_MAX_STEPS<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Number of steps used to optimise SIGMA_MAX, before that the SIGMA_MAX value is used</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">TEMP<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the system temperature - this is only needed if code doesn't pass the temperature to plumed</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">MC_STEPS<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">number of MC steps</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">MC_CHUNKSIZE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">MC chunksize</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">STATUS_FILE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">write a file with all the data useful for restart/continuation of Metainference</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">FMT<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">specify format for STATUS files (useful for decrease the number of digits in regtests)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">SELECTOR<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">name of selector</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NSELECT<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">range of values for selector [0, N-1]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">RESTART<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">allows per-action setting of restart (YES/NO/AUTO)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NOPBC<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">ignore the periodic boundary conditions when calculating distances</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NORATIO<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Set to TRUE if you want to compute PRE without Intensity Ratio</td>
+</tr>
+<tr>
+<td style="text-align: left;">RTWO</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">The relaxation of the atom/atoms in the corresponding GROUPA of atoms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">PREINT<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Add an experimental value for each PRE</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

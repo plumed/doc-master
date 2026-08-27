@@ -1,0 +1,4 @@
+#SETTINGS INPUTFILES=extras/restart.eds
+d1: DISTANCE ATOMS=1,2
+
+eds: EDS ARG=d1 CENTER=2.0 TEMP=1.0 IN_RESTART=extras/restart.eds FREEZE MEAN
