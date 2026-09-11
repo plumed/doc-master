@@ -1,0 +1,8 @@
+# This stores the positions of all the first 10 atoms in the system for later analysis
+cc: COLLECT_FRAMES ATOMS=1,2,3,4,5,6,7,8,9,10 ALIGN=OPTIMAL STRIDE=1 CLEAR=1000
+
+# Select landmarks
+ll: LANDMARK_SELECT_STRIDE ARG=cc NLANDMARKS=100
+
+# Output the data to a file
+DUMPPDB ATOMS=ll_data ATOM_INDICES=1,2,3,4,5,6,7,8,9,10 FILE=traj.pdb STRIDE=1000

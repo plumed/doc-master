@@ -1,0 +1,6 @@
+pp: PAIRENTROPY ...
+   GROUP=1-108 MAXR=2.0 GRID_BIN=20
+   BANDWIDTH=0.13 KERNEL=gaussian
+   CUTOFF=6.25
+...
+PRINT ARG=pp FILE=colvar

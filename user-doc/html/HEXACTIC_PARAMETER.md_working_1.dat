@@ -1,0 +1,3 @@
+hex: HEXACTIC_PARAMETER SPECIES=1-400 PLANE=xy R_0=0.2 D_0=1.4 NN=6 MM=12
+hex_mean: MEAN ARG=hex_norm PERIODIC=NO
+PRINT ARG=hex_mean FILE=colvar

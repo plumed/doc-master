@@ -1,0 +1,1 @@
+plumed show_graph --plumed plumed.dat --force

@@ -1,0 +1,33 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$struct_p_l_m_d_1_1_atom_distribution.html" title="tested in regtest/tools/rt&#45;make&#45;AtomicDistribution Acts as a template for any distribution" alt="" coords="5,381,184,407"/>
+<area shape="rect" id="Node000001" href="$class_p_l_m_d_1_1file_traj.html" title="atomic distribution from a trajectory file" alt="" coords="289,5,399,31"/>
+<area shape="poly" id="edge568_Node000000_Node000001" title=" " alt="" coords="95,367,105,301,127,212,144,165,167,119,195,77,230,40,258,24,288,17,289,22,260,29,234,44,199,80,171,122,149,167,132,214,110,302,101,368"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1fixed_trajectory.html" title="A decorator for fixing the state of the trajectory." alt="" coords="263,55,425,80"/>
+<area shape="poly" id="edge569_Node000000_Node000002" title=" " alt="" coords="97,367,109,309,133,234,151,194,173,155,199,120,230,89,261,73,264,78,234,93,203,123,177,158,156,196,138,236,115,311,102,368"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1force_box_trajectory.html" title="A decorator for forcing a box in the trajectory." alt="" coords="249,104,439,129"/>
+<area shape="poly" id="edge570_Node000000_Node000003" title=" " alt="" coords="100,367,115,318,141,256,179,193,203,165,230,140,253,127,256,132,234,144,207,168,183,196,146,259,120,320,105,369"/>
+<area shape="rect" id="Node000004" href="$struct_p_l_m_d_1_1inscribed_body_centered_cubic.html" title="This BCC is contained in a orthogonal cubic box." alt="" coords="235,154,453,194"/>
+<area shape="poly" id="edge571_Node000000_Node000004" title=" " alt="" coords="105,368,124,331,152,287,187,242,230,204,252,192,255,196,234,208,191,246,156,290,129,334,110,370"/>
+<area shape="rect" id="Node000005" href="$struct_p_l_m_d_1_1inscribed_face_centered_cubic.html" title="This FCC is contained in a orthogonal cubic box." alt="" coords="237,218,451,258"/>
+<area shape="poly" id="edge572_Node000000_Node000005" title=" " alt="" coords="114,369,163,318,196,291,231,268,257,256,259,261,233,272,199,295,167,322,117,373"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1replied_trajectory.html" title="a decorator for replicating the atomic distribution" alt="" coords="256,283,432,308"/>
+<area shape="poly" id="edge573_Node000000_Node000006" title=" " alt="" coords="125,372,174,343,231,317,269,305,271,311,233,322,176,348,128,376"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1scaled_trajectory.html" title="a decorator for scaling the atomic positions" alt="" coords="257,332,431,357"/>
+<area shape="poly" id="edge574_Node000000_Node000007" title=" " alt="" coords="172,376,278,355,279,360,173,381"/>
+<area shape="rect" id="Node000008" href="$struct_p_l_m_d_1_1the_line.html" title="A wiggly line of atoms." alt="" coords="287,381,401,407"/>
+<area shape="poly" id="edge575_Node000000_Node000008" title=" " alt="" coords="197,391,287,391,287,397,197,397"/>
+<area shape="rect" id="Node000009" href="$struct_p_l_m_d_1_1tiled_body_centered_cubic.html" title="This BCC is contained in a &quot;standard&quot; FCC box." alt="" coords="232,431,456,456"/>
+<area shape="poly" id="edge576_Node000000_Node000009" title=" " alt="" coords="173,407,279,428,278,433,172,412"/>
+<area shape="rect" id="Node000010" href="$struct_p_l_m_d_1_1tiled_face_centered_cubic.html" title="This FCC is contained in a &quot;standard&quot; FCC box." alt="" coords="234,480,454,505"/>
+<area shape="poly" id="edge577_Node000000_Node000010" title=" " alt="" coords="128,412,177,439,233,465,275,477,273,483,231,470,174,444,126,416"/>
+<area shape="rect" id="Node000011" href="$struct_p_l_m_d_1_1tiled_simple_cubic.html" title=" " alt="" coords="255,529,433,555"/>
+<area shape="poly" id="edge578_Node000000_Node000011" title=" " alt="" coords="117,415,166,466,198,492,233,514,265,527,263,532,231,519,195,497,163,470,113,419"/>
+<area shape="rect" id="Node000012" href="$struct_p_l_m_d_1_1two_globs.html" title="Atom randomly distribuited between two not overlapping a spheres." alt="" coords="280,579,408,604"/>
+<area shape="poly" id="edge579_Node000000_Node000012" title=" " alt="" coords="111,417,130,451,158,491,192,531,233,564,256,575,280,582,279,587,254,580,231,568,189,535,154,494,126,454,106,420"/>
+<area shape="rect" id="Node000013" href="$struct_p_l_m_d_1_1uniform_cube.html" title=" " alt="" coords="269,628,419,653"/>
+<area shape="poly" id="edge580_Node000000_Node000013" title=" " alt="" coords="107,419,124,462,150,515,187,568,209,592,233,613,269,630,267,635,231,618,205,596,183,572,146,518,119,464,102,421"/>
+<area shape="rect" id="Node000014" href="$struct_p_l_m_d_1_1uniform_sphere.html" title="Atom randomly distribuited in a sphere." alt="" coords="263,677,425,703"/>
+<area shape="poly" id="edge581_Node000000_Node000014" title=" " alt="" coords="104,420,118,472,143,538,181,606,205,636,234,662,264,678,261,683,230,667,202,640,177,609,138,540,113,473,99,421"/>
+<area shape="rect" id="Node000015" href="$class_p_l_m_d_1_1wiggle_trajectory.html" title="A decorator for displacing the atoms from the generated underline distribution." alt="" coords="257,727,431,752"/>
+<area shape="poly" id="edge582_Node000000_Node000015" title=" " alt="" coords="102,420,113,481,136,560,154,602,175,642,202,680,234,712,258,726,255,731,230,716,198,683,171,645,149,604,131,562,108,482,97,421"/>
+</map>

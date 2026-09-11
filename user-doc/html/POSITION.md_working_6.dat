@@ -1,0 +1,5 @@
+#SETTINGS INPUTFILES=regtest/basic/rt63/align.pdb
+# align to a template
+FIT_TO_TEMPLATE REFERENCE=regtest/basic/rt63/align.pdb
+p: POSITION ATOM=3
+PRINT ARG=p.x,p.y,p.z

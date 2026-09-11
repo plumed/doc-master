@@ -1,0 +1,1244 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: LOGMFD - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-logmfd" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: LOGMFD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logmfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LogMFD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LogPD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-logmfdpd-with-a-thermostat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using LogMFD/PD with a thermostat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nose-hoover-logmfdpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nose-Hoover LogMFD/PD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#velocity-scaling-logmfdpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Velocity scaling LogMFD/PD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-logmfd-example-of-logmfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example-LoGMFD Example of LogMFD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-logpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example of LogPD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-logmfd"><a href="../actions/">Action</a>: LOGMFD</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_logmfd/"><strong>logmfd</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Used to perform LogMFD, LogPD, and TAMD/d-AFED.</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Used to perform LogMFD, LogPD, and TAMD/d-AFED.</p>
+<h2 id="logmfd">LogMFD</h2>
+<p>Consider a physical system of <script type="math/tex">N_q</script> particles, for which the Hamiltonian is given as</p>
+<p>
+<script type="math/tex; mode=display">
+  {H_{\rm MD}}\left( {\bf{\Gamma}} \right) = \sum\limits_{j = 1}^{{N_q}} {\frac{{{\bf{p}}_j^2}}{{2{m_j}}}}  + \Phi \left( {\bf{q}} \right)
+</script>
+</p>
+<p>where <script type="math/tex">{\bf q}_j</script>, <script type="math/tex">{\bf p}_j</script> (<script type="math/tex">\bf{\Gamma}={\bf q},{\bf p}</script>), and <script type="math/tex">m_j</script> are the position, momentum, and mass of particle <script type="math/tex">j</script> respectively,
+and <script type="math/tex">\Phi</script> is the potential energy function for <script type="math/tex">{\bf q}</script>.
+The free energy <script type="math/tex">F({\bf X})</script> as a function of a set of <script type="math/tex">N</script> collective variables (CVs) is given as</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+  F\left( {{\bf X}} \right) &=  - {k_B}T\log \int {\exp \left[ { - \beta {H_{\rm MD}}} \right]\prod\limits_{i = 1}^N {\delta \left( {{s_i}\left( {{\bf q}} \right) - {X_i}} \right)} d{\bf{\Gamma }}} \\
+  &\simeq  - {k_B}T\log \int {\exp \left[ { - \beta \left\{ {{H_{\rm MD}} + \sum\limits_i^N {\frac{{{K_i}}}{2}{{\left( {{s_i}\left( {{\bf q}} \right) - {X_i}} \right)}^2}} } \right\}} \right]} d{\bf{\Gamma }}
+\end{aligned}
+</script>
+</p>
+<p>where <script type="math/tex">\bf{s}</script> are the CVs, <script type="math/tex">k_B</script> is Boltzmann constant, <script type="math/tex">\beta=1/k_BT</script>,
+and <script type="math/tex">K_i</script> is the spring constant which is large enough to invoke</p>
+<p>
+<script type="math/tex; mode=display">
+ \delta \left( x \right) = \lim_{k \to \infty } \sqrt {\beta k/2\pi} \exp \left( -\beta kx^2/2 \right)
+</script>
+</p>
+<p>In mean-force dynamics, <script type="math/tex">{\bf X}</script> are treated as fictitious dynamical variables, which are associated with the following Hamiltonian,</p>
+<p>
+<script type="math/tex; mode=display">
+ {H_{\rm log}} = \sum\limits_{i = 1}^N {\frac{{P_{{X_i}}^2}}{{2{M_i}}} + \Psi \left( {{\bf X}} \right)}
+</script>
+</p>
+<p>where <script type="math/tex">{P_{{X_i}}}</script>  and <script type="math/tex">M_i</script> are the momentum and mass of <script type="math/tex">X_i</script>, respectively, and <script type="math/tex">\Psi</script> is the potential function for <script type="math/tex">{\bf X}</script>.
+We assume that <script type="math/tex">\Psi</script> is a functional of <script type="math/tex">F({\bf X})</script>; <script type="math/tex">Ψ[F({\bf X})]</script>. The simplest form of <script type="math/tex">\Psi</script> is <script type="math/tex">\Psi = F({\bf X})</script>,
+which corresponds to the TAMD/d-AFED methods that are discussed in the first two papers cited below (or the extended Lagrangian dynamics in the limit of the adiabatic decoupling between <script type="math/tex">\bf{q}</script> and <script type="math/tex">{\bf X}</script>).
+ In the case of LogMFD, the following form of <script type="math/tex">\Psi</script> is introduced and discussed in the third paper cited below.</p>
+<p>
+<script type="math/tex; mode=display">
+  {\Psi _{\rm log}}\left( {{\bf X}} \right) = \gamma \log \left[ {\alpha F\left( {{\bf X}} \right) + 1} \right]
+</script>
+</p>
+<p>where <script type="math/tex">\alpha</script> (ALPHA) and <script type="math/tex">\gamma</script> (GAMMA) are positive parameters. The logarithmic form of <script type="math/tex">\Psi_{\rm log}</script> ensures the dynamics of <script type="math/tex">{\bf X}</script> on a much smoother energy surface [i.e., <script type="math/tex">\Psi_{\rm log}({\bf X})</script>] than <script type="math/tex">F({\bf X})</script>, thus enhancing the sampling in the <script type="math/tex">{\bf X}</script>-space. The parameters <script type="math/tex">\alpha</script> and <script type="math/tex">\gamma</script> determine the degree of flatness of <script type="math/tex">\Psi_{\rm log}</script>, but adjusting only <script type="math/tex">\alpha</script> is normally sufficient to have a relatively flat surface (with keeping the relation <script type="math/tex">\gamma=1/\alpha</script>).</p>
+<p>The equation of motion for <script type="math/tex">X_i</script> in LogMFD (no thermostat) is</p>
+<p>
+<script type="math/tex; mode=display">
+ {M_i}{\ddot X_i} =  - \left( {\frac{{\alpha \gamma }}{{\alpha F + 1}}} \right)\frac{{\partial F}}{{\partial {X_i}}}
+</script>
+</p>
+<p>where <script type="math/tex">-\partial F/\partial X_i</script>  is evaluated as a canonical average under the condition that <script type="math/tex">{\bf X}</script> is fixed;</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+ - \frac{{\partial F}}{{\partial {X_i}}} &\simeq \frac{1}{Z}\int {{K_i}\left( {{s_i}\left( {{\bf q}} \right) - {X_i}} \right)\exp \left[ { - \beta \left\{ {{H_{\rm MD}} + \sum\limits_i^N {\frac{{{K_i}}}{2}{{\left( {{s_i}\left( {{\bf q}} \right) - {X_i}} \right)}^2}} } \right\}} \right]} d{\bf{\Gamma }}\\
+ &\equiv {\left\langle {{K_i}\left( {{s_i}\left( {{\bf q}} \right) - {X_i}} \right)} \right\rangle _{{\bf X}}}
+\end{aligned}
+</script>
+</p>
+<p>where</p>
+<p>
+<script type="math/tex; mode=display">
+ Z = \int {\exp \left[ { - \beta \left\{ {{H_{\rm MD}} + \sum\limits_i^N {\frac{{{K_i}}}{2}{{\left( {{s_i}\left( {{\bf q}} \right) - {X_i}} \right)}^2}} } \right\}} \right]} d{\bf{\Gamma }}
+</script>
+</p>
+<p>The mean-force (MF) is practically evaluated by performing a shot-time canonical MD run of <script type="math/tex">N_m</script> steps each time <script type="math/tex">{\bf X}</script> is updated according to the equation of motion for <script type="math/tex">{\bf X}</script>.</p>
+<p>If the canonical average for the MF is effectively converged, the dynamical variables <script type="math/tex">{\bf q}</script> and <script type="math/tex">{\bf X}</script> are decoupled and they evolve adiabatically, which can be exploited for the on-the-fly evaluation of <script type="math/tex">F({\bf X})</script>. I.e., <script type="math/tex">H_{\rm log}</script> should be a constant of motion in this case, thus <script type="math/tex">F({\bf X})</script> can be evaluated each time <script type="math/tex">{\bf X}</script> is updated as</p>
+<p>
+<script type="math/tex; mode=display">
+ F\left( {{{\bf X}}\left( t \right)} \right) = \frac{1}{\alpha} \left[
+  \exp \frac{1}{\gamma} \left\{ \left( H_{\rm log} - \sum_i \frac{P_{X_i}^2}{2M_i} \right) \right\} - 1 \right]
+</script>
+</p>
+<p>This means that <script type="math/tex">F({\bf X})</script> can be constructed without post processing (on-the-fly free energy reconstruction). Note that the on-the-fly free energy reconstruction is also possible in TAMD/d-AFED if the Hamiltonian-like conserved quantity is available (e.g., the Nose-Hoover type dynamics).</p>
+<h2 id="logpd">LogPD</h2>
+<p>The accuracy in the MF is critical to the on-the-fly free energy reconstruction. To improve the evaluation of the MF, parallel-dynamics (PD) is incorporated into LogMFD, leading to logarithmic parallel-dynamics (LogPD) that is discussed in the fourth paper in the reference section.</p>
+<p>In PD, the MF is evaluated by a non-equilibrium path-ensemble based on the Crooks-Jarzynski non-equilibrium work relation. To this end, multiple replicas of the MD system which run in parallel are introduced. The CVs [<script type="math/tex">{\bf s}({\bf q})</script>] in each replica is restrained to the same value of <script type="math/tex">{\bf X}(t)</script>. A canonical MD run with <script type="math/tex">N_m</script> steps is performed in each replica, then the MF on <script type="math/tex">X_i</script> is evaluated using the MD trajectories from all replicas.
+The MF is practically calculated as</p>
+<p>
+<script type="math/tex; mode=display">
+ - \frac{{\partial F}}{{\partial {X_i}}} = \sum\limits_{k = 1}^{{N_r}} {{W_k}} \sum\limits_{n = 1}^{{N_m}} {\frac{1}{{{N_m}}}{K_i}\left[ {{s_i}\left( {{{\bf q}}_n^k} \right) - {X_i}} \right]}
+</script>
+</p>
+<p>where <script type="math/tex">{\bf q}^k_n</script>  indicates the <script type="math/tex">{\bf q}</script>-configuration at time step <script type="math/tex">n</script> in the <script type="math/tex">N_m</script>-step shot-time MD run in the <script type="math/tex">k</script>th replica among <script type="math/tex">N_r</script> replicas. <script type="math/tex">W_k</script> is given as</p>
+<p>
+<script type="math/tex; mode=display">
+ {W_k} = \frac{{{e^{ - \beta {w_k}\left( t \right)}}}}{{\sum\limits_{k=1}^{{N_r}} {{e^{ - \beta {w_k}\left( t \right)}}} }}
+</script>
+</p>
+<p>where</p>
+<p>
+<script type="math/tex; mode=display">
+ {w_k}\left( t \right) = \int\limits_{{X_0}}^{X\left( t \right)} {\sum\limits_{i=1}^N {\frac{{\partial H_{\rm MD}^k}}{{\partial {X_i}}}d{X_i}} }
+</script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+ H_{\rm MD}^k\left( {{\bf{\Gamma }},{{\bf X}}} \right) = {H_{\rm MD}}\left( {{{\bf{\Gamma }}^k}} \right) + \sum\limits_{i = 1}^N {\frac{{{K_i}}}{2}{{\left( {s_i^k - {X_i}} \right)}^2}}
+</script>
+</p>
+<p>and <script type="math/tex">s^k_i</script> is the <script type="math/tex">i</script>th CV in the <script type="math/tex">k</script>th replica.</p>
+<p>
+<script type="math/tex">W_k</script> comes from the Crooks-Jarzynski non-equilibrium work relation by which we can evaluate an equilibrium ensemble average from a set of non-equilibrium trajectories. Note that, to avoid possible numerical errors in the exponential function, the following form of <script type="math/tex">W_k</script> is instead used in PLUMED,</p>
+<p>
+<script type="math/tex; mode=display">
+ {W_k}\left( t \right) = \frac{{\exp \left[ { - \beta \left\{ {{w_k}\left( t \right) - {w_{\min }}\left( t \right)} \right\}} \right]}}{{\sum\nolimits_k {\exp \left[ { - \beta \left\{ {{w_k}\left( t \right) - {w_{\min }}\left( t \right)} \right\}} \right]} }}
+</script>
+</p>
+<p>where</p>
+<p>
+<script type="math/tex; mode=display">
+ {w_{\min }}\left( t \right) = {\rm Min}_k\left[ {{w_k}\left( t \right)} \right]
+</script>
+</p>
+<p>With the MF evaluated using the PD approach, free energy profiles can be reconstructed more efficiently (requiring less elapsed computing time) in LogPD than with a single MD system in LogMFD. In the case that there exist more than one stable state separated by high energy barriers in the hidden subspace orthogonal to the CV-subspace, LogPD is particularly of use to incorporate all the contributions from such hidden states with appropriate weights (in the limit <script type="math/tex">N_r\to\infty</script> ).</p>
+<p>Note that LogPD calculations should always be initiated with an equilibrium <script type="math/tex">{\bf q}</script>-configuration in each replica, because the Crooks-Jarzynski non-equilibrium work relation is invoked. Also note that LogPD is currently available only with Gromacs, while LogMFD can be performed with LAMMPS, Gromacs, Quantum Espresso, NAMD, and so on.</p>
+<h2 id="using-logmfdpd-with-a-thermostat">Using LogMFD/PD with a thermostat</h2>
+<p>Introducing a thermostat on <script type="math/tex">{\bf X}</script> is often recommended in LogMFD/PD to maintain the adiabatic decoupling between <script type="math/tex">{\bf q}</script> and <script type="math/tex">{\bf X}</script>. In the framework of the LogMFD approach, the Nose-Hoover type thermostat and the Gaussian isokinetic (velocity scaling) thermostat can be used to control the kinetic energy of <script type="math/tex">{\bf X}</script>.</p>
+<h2 id="nose-hoover-logmfdpd">Nose-Hoover LogMFD/PD</h2>
+<p>The equation of motion for <script type="math/tex">X_i</script> coupled to a Nose-Hoover thermostat variable <script type="math/tex">\eta</script> (single heat bath) is</p>
+<p>
+<script type="math/tex; mode=display">
+ {M_i}{\ddot X_i} =  - \left( {\frac{{\alpha \gamma }}{{\alpha F + 1}}} \right)\frac{{\partial F}}{{\partial {X_i}}} - {M_i}{\dot X_i}\dot \eta
+</script>
+</p>
+<p>The equation of motion for <script type="math/tex">\eta</script> is</p>
+<p>
+<script type="math/tex; mode=display">
+ Q\ddot \eta  = \sum\limits_{i = 1}^N {\frac{{P_{{X_i}}^2}}{{{M_i}}} - N{k_B}T}
+</script>
+</p>
+<p>where <script type="math/tex">N</script> is the number of the CVs. Since the following pseudo-Hamiltonian is a constant of motion in Nose-Hoover LogMFD/PD,</p>
+<p>
+<script type="math/tex; mode=display">
+ H_{\rm log}^{\rm NH} = \sum\limits_{i = 1}^N {\frac{{P_{{X_i}}^2}}{{2{M_i}}} + \gamma \log \left[ {\alpha F\left( {{\bf X}} \right) + 1} \right] + \frac{1}{2}Q{{\dot \eta }^2} + N{k_B}T\eta}
+</script>
+</p>
+<p>
+<script type="math/tex">F({\bf X}(t))</script> is obtained at each MFD step as</p>
+<p>
+<script type="math/tex; mode=display">
+ F\left( {{{\bf X}}\left( t \right)} \right) = \frac{1}{\alpha }\left[ {\exp \left\{ {{{ \frac{1}{\gamma} \left( {H_{\rm log}^{\rm NH} - \sum_i {\frac{{P_{{X_i}}^2}}{{2{M_i}}}}  - \frac{1}{2}Q{{\dot \eta }^2} - N{k_B}T\eta} \right)}  }} \right\} - 1} \right]
+</script>
+</p>
+<h2 id="velocity-scaling-logmfdpd">Velocity scaling LogMFD/PD</h2>
+<p>The velocity scaling algorithm (which is equivalent to the Gaussian isokinetic dynamics in the limit <script type="math/tex">\Delta t\to 0</script>) can also be employed to control the velocity of <script type="math/tex">{\bf X}</script>, <script type="math/tex">\bf{V}_x</script>.</p>
+<p>The following algorithm is introduced to perform the isokinetic LogMFD calculations that are discussed in the fifth paper cited belo;</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+{V_{{X_i}}}\left( {{t_{n + 1}}} \right)
+&=
+ V_{X_i}^\prime \left( {{t_n}} \right) + \Delta t \left[
+  { - \left( {\frac{{\alpha \gamma }}{{\alpha F\left( {{t_n}} \right) + 1}}} \right)
+  \frac{{\partial F\left( {{t_n}} \right)}}{{\partial {X_i}}}}
+ \right]\\
+S\left( {{t_{n + 1}}} \right)
+&=
+ \sqrt {\frac{{N{k_B}T}}{{\sum\limits_i {{M_i}V_{{X_i}}^2\left( {{t_{n + 1}}} \right)} }}} \\
+{V_{{X_i}}}^\prime \left( {{t_{n + 1}}} \right)
+&=
+S\left( {{t_{n + 1}}} \right){V_{{X_i}}}\left( {{t_{n + 1}}} \right)\\
+{X_i}\left( {{t_{n + 1}}} \right)
+&=
+{X_i}\left( {{t_n}} \right) + \Delta t V_{X_i}^\prime \left( {{t_{n + 1}}} \right)\\
+{\Psi_{\rm log}}\left( {{t_{n + 1}}} \right)
+&=
+N{k_B}T\log S\left( {{t_{n + 1}}} \right) + {\Psi_{\rm log}}\left( {{t_n}} \right)\\
+F\left( {{t_{n + 1}}} \right)
+&=
+\frac{1}{\alpha} \left[
+  \exp \left\{ \Psi_{\rm log} \left( t_{n+1} \right) / \gamma \right\} - 1
+\right]
+\end{aligned}
+</script>
+</p>
+<p>Note that <script type="math/tex">V_{X_i}^\prime\left( {{t_0}} \right)</script> is assumed to be initially given, which meets the following relation,</p>
+<p>
+<script type="math/tex; mode=display">
+  \sum\limits_{i = 1}^N M_i V_{X_i}^{\prime 2} \left( t_0 \right)  = N{k_B}{T}
+</script>
+</p>
+<p>It should be stressed that, in the same way as in the NVE and Nose-Hoover LogMFD/PD, <script type="math/tex">F({\bf X}(t))</script> can be evaluated at each MFD step (on-the-fly free energy reconstruction) in Velocity Scaling LogMFD/PD.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="example-logmfd-example-of-logmfd">Example-LoGMFD Example of LogMFD</h3>
+<p>The following input file is called plumed.dat and tells plumed to restrain collective variables
+to the fictitious dynamical variables in LogMFD/PD.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LOGMFD.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LOGMFD.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">UNITS<span class="right">This command sets the internal units for the code. <a href="https://www.plumed.org/doc-master/user-doc/html/UNITS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">TIME<span class="right">the units of time<i></i></span></span>=fs <span class="plumedtooltip">LENGTH<span class="right">the units of lengths<i></i></span></span>=1.0 <span class="plumedtooltip">ENERGY<span class="right">the units of energy<i></i></span></span>=kcal/mol <span class="plumedtooltip">MASS<span class="right">the units of masses<i></i></span></span>=1.0 <span class="plumedtooltip">CHARGE<span class="right">the units of charges<i></i></span></span>=1.0
+<span style="display:none;" id="LOGMFD.md_working_1.dat">The UNITS action with label <b></b> calculates something</span><b name="LOGMFD.md_working_1.datphi" onclick='showPath("LOGMFD.md_working_1.dat","LOGMFD.md_working_1.datphi","LOGMFD.md_working_1.datphi","black")'>phi</b><span style="display:none;" id="LOGMFD.md_working_1.datphi">The TORSION action with label <b>phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">phi</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=5,7,9,15
+<b name="LOGMFD.md_working_1.datpsi" onclick='showPath("LOGMFD.md_working_1.dat","LOGMFD.md_working_1.datpsi","LOGMFD.md_working_1.datpsi","black")'>psi</b><span style="display:none;" id="LOGMFD.md_working_1.datpsi">The TORSION action with label <b>psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">psi</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=7,9,15,17
+
+<span style="color:blue" class="comment"># LogMFD</span>
+<span class="plumedtooltip" style="color:green">LOGMFD<span class="right">Used to perform LogMFD, LogPD, and TAMD/d-AFED. <a href="https://www.plumed.org/doc-master/user-doc/html/LOGMFD" style="color:green">More details</a><i></i></span></span> ...
+<span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="LOGMFD.md_working_1.datlogmfd" onclick='showPath("LOGMFD.md_working_1.dat","LOGMFD.md_working_1.datlogmfd","LOGMFD.md_working_1.datlogmfd","black")'>logmfd</b><span style="display:none;" id="LOGMFD.md_working_1.datlogmfd">The LOGMFD action with label <b>logmfd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">logmfd.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">logmfd.phi_fict</td><td width="5%"><font color="black">scalar</font></td><td>For example, the fictitious collective variable for LogMFD is specified as ARG=dist12 and LABEL=logmfd in LOGMFD section in Plumed input file, the associated fictitious dynamical variable can be specified as PRINT ARG=dist12,logmfd.dist12_fict FILE=COLVAR This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">logmfd.phi_vfict</td><td width="5%"><font color="black">scalar</font></td><td>For example, the fictitious collective variable for LogMFD is specified as ARG=dist12 and LABEL=logmfd in LOGMFD section in Plumed input file, the velocity of the associated fictitious dynamical variable can be specified as PRINT ARG=dist12,logmfd.dist12_vfict FILE=COLVAR This particular component measures this quantity for the input CV named phi</td></tr><tr><td width="5%">logmfd.psi_fict</td><td width="5%"><font color="black">scalar</font></td><td>For example, the fictitious collective variable for LogMFD is specified as ARG=dist12 and LABEL=logmfd in LOGMFD section in Plumed input file, the associated fictitious dynamical variable can be specified as PRINT ARG=dist12,logmfd.dist12_fict FILE=COLVAR This particular component measures this quantity for the input CV named psi</td></tr><tr><td width="5%">logmfd.psi_vfict</td><td width="5%"><font color="black">scalar</font></td><td>For example, the fictitious collective variable for LogMFD is specified as ARG=dist12 and LABEL=logmfd in LOGMFD section in Plumed input file, the velocity of the associated fictitious dynamical variable can be specified as PRINT ARG=dist12,logmfd.dist12_vfict FILE=COLVAR This particular component measures this quantity for the input CV named psi</td></tr></table></span>
+<span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="LOGMFD.md_working_1.datphi">phi</b>,<b name="LOGMFD.md_working_1.datpsi">psi</b>
+<span class="plumedtooltip">KAPPA<span class="right">Spring constant of the harmonic restraining potential<i></i></span></span>=1000.0,1000.0
+<span class="plumedtooltip">DELTA_T<span class="right">Time step for the fictitious dynamical variables (DELTA_T=1 often works)<i></i></span></span>=1.0
+<span class="plumedtooltip">INTERVAL<span class="right">Period of MD steps (N_m) to update fictitious dynamical variables<i></i></span></span>=200
+<span class="plumedtooltip">TEMP<span class="right">Target temperature for the fictitious dynamical variables in LogMFD/PD<i></i></span></span>=300.0
+<span class="plumedtooltip">FLOG<span class="right">The initial free energy value in the LogMFD/PD run<i></i></span></span>=2.0
+<span class="plumedtooltip">MFICT<span class="right">Masses of each fictitious dynamical variable<i></i></span></span>=5000000,5000000
+<span class="plumedtooltip">VFICT<span class="right">The initial velocities of the fictitious dynamical variables<i></i></span></span>=3.5e-4,3.5e-4
+<span class="plumedtooltip">ALPHA<span class="right">Alpha parameter for LogMFD<i></i></span></span>=4.0
+<span class="plumedtooltip">THERMOSTAT<span class="right">Type of thermostat for the fictitious dynamical variables<i></i></span></span>=NVE
+<span class="plumedtooltip">FICT_MAX<span class="right">Maximum values reachable for the fictitious dynamical variables<i></i></span></span>=3.15,3.15
+<span class="plumedtooltip">FICT_MIN<span class="right">Minimum values reachable for the fictitious dynamical variables<i></i></span></span>=-3.15,-3.15
+... LOGMFD
+</pre></div>
+
+<p>To submit this simulation with Gromacs, use the following command line
+to execute a LogMFD run with Gromacs-MD.
+Here topol.tpr is the input file
+which contains atomic coordinates and Gromacs parameters.</p>
+<div class="highlight"><pre><span></span><code>gmx_mpi mdrun -s topol.tpr -plumed
+</code></pre></div>
+<p>This command will output files named logmfd.out and replica.out.</p>
+<p>The output file logmfd.out records free energy and all fictitious dynamical variables at every MFD step.</p>
+<div class="highlight"><pre><span></span><code># LogMFD
+# CVs : phi psi
+# Mass for CV particles : 5000000.000000 5000000.000000
+# Mass for thermostat   :   11923.224809
+# 1:iter_mfd, 2:Flog, 3:2*Ekin/gkb[K], 4:eta, 5:Veta,
+# 6:phi_fict(t), 7:phi_vfict(t), 8:phi_force(t),
+# 9:psi_fict(t), 10:psi_vfict(t), 11:psi_force(t),
+       0       2.000000     308.221983       0.000000       0.000000      -2.442363       0.000350       5.522717       2.426650       0.000350       7.443177
+       1       1.995466     308.475775       0.000000       0.000000      -2.442013       0.000350      -4.406246       2.427000       0.000350      11.531345
+       2       1.992970     308.615664       0.000000       0.000000      -2.441663       0.000350      -3.346513       2.427350       0.000350      15.763196
+       3       1.988619     308.859946       0.000000       0.000000      -2.441313       0.000350       6.463092       2.427701       0.000351       6.975422
+...
+</code></pre></div>
+<p>The output file replica.out records all collective variables at every MFD step.</p>
+<div class="highlight"><pre><span></span><code> Replica No. 0 of 1.
+# 1:iter_mfd, 2:work, 3:weight,
+# 4:phi(q)
+# 5:psi(q)
+       0    0.000000e+00     1.000000e+00       -2.436841       2.434093
+       1   -4.539972e-03     1.000000e+00       -2.446420       2.438531
+       2   -7.038516e-03     1.000000e+00       -2.445010       2.443114
+       3   -1.139672e-02     1.000000e+00       -2.434850       2.434677
+...
+</code></pre></div>
+<h3 id="example-of-logpd">Example of LogPD</h3>
+<p>Use the following command line to execute a LogPD run using two MD replicas (note that only Gromacs is currently available for LogPD).
+Here 0/topol.tpr and 1/topol.tpr are the input files,
+each containing the atomic coordinates for the corresponding replica and Gromacs parameters. All the directories, 0/ and 1/, should contain the same plumed.dat.</p>
+<div class="highlight"><pre><span></span><code>mpirun -np 2 gmx_mpi mdrun -s topol -plumed -multidir 0 1
+</code></pre></div>
+<p>This command will output files named logmfd.out in 0/, and replica.out.0 and replica.out.1 in 0/ and 1/, respectively.</p>
+<p>The output file logmfd.out records free energy and all fictitious dynamical variables at every MFD step.</p>
+<div class="highlight"><pre><span></span><code># LogPD, replica parallel of LogMFD
+# number of replica : 2
+# CVs : phi psi
+# Mass for CV particles : 5000000.000000 5000000.000000
+# Mass for thermostat   :   11923.224809
+# 1:iter_mfd, 2:Flog, 3:2*Ekin/gkb[K], 4:eta, 5:Veta,
+# 6:phi_fict(t), 7:phi_vfict(t), 8:phi_force(t),
+# 9:psi_fict(t), 10:psi_vfict(t), 11:psi_force(t),
+       0       2.000000     308.221983       0.000000       0.000000      -2.417903       0.000350       4.930899       2.451475       0.000350      -3.122024
+       1       1.999367     308.257404       0.000000       0.000000      -2.417552       0.000350       0.851133       2.451825       0.000350      -1.552718
+       2       1.999612     308.243683       0.000000       0.000000      -2.417202       0.000350      -1.588175       2.452175       0.000350       1.601274
+       3       1.999608     308.243922       0.000000       0.000000      -2.416852       0.000350       4.267745       2.452525       0.000350      -4.565621
+...
+</code></pre></div>
+<p>The output file replica.out.0 records all collective variables and the Jarzynski weight of replica No.0 at every MFD step.</p>
+<div class="highlight"><pre><span></span><code># Replica No. 0 of 2.
+# 1:iter_mfd, 2:work, 3:weight,
+# 4:phi(q)
+# 5:psi(q)
+       0    0.000000e+00     5.000000e-01       -2.412607       2.446191
+       1   -4.649101e-06     4.994723e-01       -2.421403       2.451318
+       2    1.520985e-03     4.983996e-01       -2.420269       2.455049
+       3    1.588855e-03     4.983392e-01       -2.411081       2.447394
+...
+</code></pre></div>
+<p>The output file replica.out.1 records all collective variables and the Jarzynski weight of replica No.1 at every MFD step.</p>
+<div class="highlight"><pre><span></span><code># Replica No. 1 of 2.
+# 1:iter_mfd, 2:work, 3:weight,
+# 4:phi(q)
+# 5:psi(q)
+       0    0.000000e+00     5.000000e-01       -2.413336       2.450516
+       1   -1.263077e-03     5.005277e-01       -2.412009       2.449229
+       2   -2.295444e-03     5.016004e-01       -2.417322       2.452512
+       3   -2.371507e-03     5.016608e-01       -2.414078       2.448521
+...
+</code></pre></div>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">scalar</td>
+<td style="text-align: left;">the labels of the scalars on which the bias will act</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-components">Output components</h2>
+<p>This action calculates the <a href="../specifying_arguments/">values</a> in the following table.  These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">bias</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">the instantaneous value of the bias potential</td>
+</tr>
+<tr>
+<td style="text-align: left;">_fict</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">For example, the fictitious collective variable for LogMFD is specified as ARG=dist12 and LABEL=logmfd in LOGMFD section in Plumed input file, the associated fictitious dynamical variable can be specified as PRINT ARG=dist12,logmfd</td>
+</tr>
+<tr>
+<td style="text-align: left;">_vfict</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">For example, the fictitious collective variable for LogMFD is specified as ARG=dist12 and LABEL=logmfd in LOGMFD section in Plumed input file, the velocity of the associated fictitious dynamical variable can be specified as PRINT ARG=dist12,logmfd</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the labels of the scalars on which the bias will act</td>
+</tr>
+<tr>
+<td style="text-align: left;">INTERVAL</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Period of MD steps (N_m) to update fictitious dynamical variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">DELTA_T</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Time step for the fictitious dynamical variables (DELTA_T=1 often works)</td>
+</tr>
+<tr>
+<td style="text-align: left;">THERMOSTAT</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Type of thermostat for the fictitious dynamical variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">KAPPA</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Spring constant of the harmonic restraining potential</td>
+</tr>
+<tr>
+<td style="text-align: left;">FICT_MAX</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Maximum values reachable for the fictitious dynamical variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">FICT_MIN</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Minimum values reachable for the fictitious dynamical variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">FLOG</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">The initial free energy value in the LogMFD/PD run</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NUMERICAL_DERIVATIVES<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the derivatives for these quantities numerically</td>
+</tr>
+<tr>
+<td style="text-align: left;">TEMP</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Target temperature for the fictitious dynamical variables in LogMFD/PD</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">TAMD<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">When TAMD=1, TAMD/d-AFED calculations can be performed instead of LogMFD</td>
+</tr>
+<tr>
+<td style="text-align: left;">ALPHA</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Alpha parameter for LogMFD</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">GAMMA<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Gamma parameter for LogMFD</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">FICT<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">The initial values of the fictitious dynamical variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">VFICT</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">The initial velocities of the fictitious dynamical variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">MFICT</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Masses of each fictitious dynamical variable</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">XETA<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">The initial eta variable of the Nose-Hoover thermostat for the fictitious dynamical variables</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">VETA<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">The initial velocity of eta variable</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">META<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Mass of eta variable</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">WORK<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">The initial value of the work done by fictitious dynamical variables in each replica</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">TEMPPD<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Temperature of the Boltzmann factor in the Jarzynski weight in LogPD (Gromacs only)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1021/jp805039u">J. B. Abrams, M. E. Tuckerman, Efficient and Direct Generation of Multidimensional Free Energy Surfaces via Adiabatic Dynamics without Coordinate Transformations. The Journal of Physical Chemistry B 112, 15742–15757 (2008)</a></li>
+<li><a href="http://dx.doi.org/10.1016/j.cplett.2006.05.062">L. Maragliano, E. Vanden-Eijnden, A temperature accelerated method for sampling free energy and determining reaction pathways in rare events simulations. Chemical Physics Letters 426, 168–175 (2006)</a></li>
+<li><a href="http://dx.doi.org/10.1103/PhysRevE.85.066702">T. Morishita, S. G. Itoh, H. Okumura, M. Mikami, Free-energy calculation via mean-force dynamics using a logarithmic energy landscape. Physical Review E 85 (2012)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jctc.7b00252">T. Morishita, Y. Yonezawa, A. M. Ito, Free Energy Reconstruction from Logarithmic Mean-Force Dynamics Using Multiple Nonequilibrium Trajectories. Journal of Chemical Theory and Computation 13, 3106–3119 (2017)</a></li>
+<li><a href="http://dx.doi.org/10.1016/j.cplett.2018.07.011">T. Morishita, T. Nakamura, W. Shinoda, A. M. Ito, Isokinetic approach in logarithmic mean-force dynamics for on-the-fly free energy reconstruction. Chemical Physics Letters 706, 633–640 (2018)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3 @@
+bf_cos: BF_COSINE MINIMUM=-pi MAXIMUM=+pi ORDER=10
+bf_sin: BF_SINE   MINIMUM=-pi MAXIMUM=+pi ORDER=10
+bf_comb: BF_COMBINED BASIS_FUNCTIONS=bf_cos,bf_sin

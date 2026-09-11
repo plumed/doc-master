@@ -1,0 +1,17 @@
+#SETTINGS MOLFILE=regtest/basic/rt32/helix.pdb
+MOLINFO MOLTYPE=protein STRUCTURE=peptide.pdb
+WHOLEMOLECULES ENTITY0=1-111
+
+JCOUPLING ...
+    TYPE=HAN
+    ATOMS1=@psi-2 COUPLING1=-0.49
+    ATOMS2=@psi-4 COUPLING2=-0.54
+    ATOMS3=@psi-5 COUPLING3=-0.53
+    ATOMS4=@psi-7 COUPLING4=-0.39
+    ATOMS5=@psi-8 COUPLING5=-0.39
+    LABEL=jhan
+... JCOUPLING
+
+jhanst: STATS ARG=(jhan\.j-.*) PARARG=(jhan\.exp-.*)
+
+PRINT ARG=jhanst.*,jhan.* FILE=COLVAR STRIDE=100

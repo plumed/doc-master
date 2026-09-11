@@ -1,0 +1,19 @@
+#SETTINGS NREPLICAS=3
+# Compute distance between atoms 1 and 2
+d: DISTANCE ATOMS=10,20
+
+# Compute a torsional angle
+t: TORSION ATOMS=30,31,32,33
+
+# Apply a restraint:
+RESTRAINT ...
+ ARG=d,t
+ AT=@replicas:{{1.0,2.0} {3.0,4.0} {5.0,6.0}}
+ KAPPA=1.0,3.0
+...
+# On replica 0 this means:
+#  RESTRAINT ARG=d AT=1.0,2.0 KAPPA=1.0,3.0
+# On replica 1 this means:
+#  RESTRAINT ARG=d AT=3.0,4.0 KAPPA=1.0,3.0
+# On replica 2 this means:
+#  RESTRAINT ARG=d AT=5.0,6.0 KAPPA=1.0,3.0

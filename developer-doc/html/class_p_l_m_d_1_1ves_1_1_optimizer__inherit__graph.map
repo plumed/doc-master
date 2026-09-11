@@ -1,0 +1,18 @@
+<map id="PLMD::ves::Optimizer" name="PLMD::ves::Optimizer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="384,80,547,105"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1ves_1_1_opt___adam.html" title="Provides the keyword OPT_ADAM" alt="" coords="636,5,803,31"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="506,72,594,39,641,28,642,33,595,45,508,77"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1ves_1_1_opt___bach_averaged_s_g_d.html" title="Provides the keyword OPT_AVERAGED_SGD" alt="" coords="595,55,844,80"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="560,81,594,77,595,82,561,86"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1ves_1_1_opt___dummy.html" title="Provides the keyword OPT_DUMMY" alt="" coords="629,104,809,129"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="561,99,629,106,629,111,560,104"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1ves_1_1_opt___robbins_monro_s_g_d.html" title="Provides the keyword OPT_ROBBINS_MONRO_SGD" alt="" coords="595,153,844,179"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="509,108,595,139,642,151,641,156,594,145,507,113"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_pilot.html" title="This is used to create PLMD::Action objects that are run with some set frequency." alt="" coords="180,55,317,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="332,74,384,81,383,86,331,80"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,80,113,105"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,81,180,74,180,79,127,86"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="161,104,336,129"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="128,99,161,103,161,108,127,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="349,103,384,99,384,104,350,108"/>
+</map>

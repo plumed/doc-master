@@ -1,0 +1,2487 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: KL_ENTROPY - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-kl_entropy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: KL_ENTROPY
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-kl_entropy"><a href="../shortcuts/">Shortcut</a>: KL_ENTROPY</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_gridtools/"><strong>gridtools</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate the KL entropy of a distribution</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the value of the KL-Entropy</td>
+<td style="text-align: center;">scalar</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate the KL entropy of a distribution</p>
+<p>This shortcut was implemented in order to make the implementation of CVs like those described in the paper that is cited below straightforward.
+An example input that can be used to implement one of the CVs that is introduced in that paper is shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_KL_ENTROPY.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../KL_ENTROPY.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/gridtools/rt-weights-integral/kde.grid</span>
+<br/><span style="color:blue" class="comment"># These two commands compute a set of weights that allow us to determine if each distance in our system is a bond</span>
+<b name="KL_ENTROPY.md_working_1.datd1" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datd1","KL_ENTROPY.md_working_1.datd1","blue")'>d1</b><span style="display:none;" id="KL_ENTROPY.md_working_1.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,3 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,4 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,5 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,3 <span class="plumedtooltip">ATOMS6<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,4 <span class="plumedtooltip">ATOMS7<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,5 <span class="plumedtooltip">ATOMS8<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4 <span class="plumedtooltip">ATOMS9<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5 <span class="plumedtooltip">ATOMS10<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=4,5
+<b name="KL_ENTROPY.md_working_1.datd1lt" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datd1lt","KL_ENTROPY.md_working_1.datd1lt","blue")'>d1lt</b><span style="display:none;" id="KL_ENTROPY.md_working_1.datd1lt">The LESS_THAN action with label <b>d1lt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1lt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL D_0=2.0 R_0=0.5 D_MAX=5.0}
+<br/><span style="color:blue" class="comment"># These commands caluclate the angle between the z axis and the bond directions</span>
+<b name="KL_ENTROPY.md_working_1.datd1c" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datd1c","KL_ENTROPY.md_working_1.datd1c","blue")'>d1c</b><span style="display:none;" id="KL_ENTROPY.md_working_1.datd1c">The DISTANCE action with label <b>d1c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1c.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1c.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1c.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,1 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,1 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=4,1 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,1 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,2 <span class="plumedtooltip">ATOMS6<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=4,2 <span class="plumedtooltip">ATOMS7<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,2 <span class="plumedtooltip">ATOMS8<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=4,3 <span class="plumedtooltip">ATOMS9<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,3 <span class="plumedtooltip">ATOMS10<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,4 <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+<b name="KL_ENTROPY.md_working_1.datd2" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datd2","KL_ENTROPY.md_working_1.datd2","blue")'>d2</b><span style="display:none;" id="KL_ENTROPY.md_working_1.datd2">The COMBINE action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a linear combination to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datd1c">d1c.x</b>,<b name="KL_ENTROPY.md_working_1.datd1c">d1c.y</b>,<b name="KL_ENTROPY.md_working_1.datd1c">d1c.z</b> <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2,2,2 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="KL_ENTROPY.md_working_1.dataa" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.dataa","KL_ENTROPY.md_working_1.dataa","blue")'>aa</b><span style="display:none;" id="KL_ENTROPY.md_working_1.dataa">The MATHEVAL action with label <b>aa</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">aa</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATHEVAL<span class="right">An alias to the CUSTOM function that can also be used to calaculate combinations of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/MATHEVAL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datd1c">d1c.z</b>,<b name="KL_ENTROPY.md_working_1.datd2">d2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=acos(x/sqrt(y)) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+
+<span style="color:blue" class="comment"># These commands compute the torsion angle between the bond direction and the positive x direction around the z axis</span>
+<span id="KL_ENTROPY.md_working_1.datdefdd0_short"><b name="KL_ENTROPY.md_working_1.datdd0" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datdd0","KL_ENTROPY.md_working_1.datdd0","violet")'>dd0</b><span style="display:none;" id="KL_ENTROPY.md_working_1.datdd0">The FIXEDATOM action with label <b>dd0</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd0</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by FIXEDATOM action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("KL_ENTROPY.md_working_1.datdefdd0");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=0,0,0
+</span><span id="KL_ENTROPY.md_working_1.datdefdd0_long" style="display:none;"><b name="KL_ENTROPY.md_working_1.datdd0" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datdd0","KL_ENTROPY.md_working_1.datdd0","violet")'>dd0</b>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("KL_ENTROPY.md_working_1.datdefdd0");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=0,0,0  <span class="plumedtooltip">SET_MASS<span class="right"> mass of the virtual atom<i></i></span></span>=1 <span class="plumedtooltip">SET_CHARGE<span class="right"> charge of the virtual atom<i></i></span></span>=0
+</span><span id="KL_ENTROPY.md_working_1.datdefddx_short"><b name="KL_ENTROPY.md_working_1.datddx" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datddx","KL_ENTROPY.md_working_1.datddx","violet")'>ddx</b><span style="display:none;" id="KL_ENTROPY.md_working_1.datddx">The FIXEDATOM action with label <b>ddx</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ddx</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by FIXEDATOM action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("KL_ENTROPY.md_working_1.datdefddx");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=1,0,0
+</span><span id="KL_ENTROPY.md_working_1.datdefddx_long" style="display:none;"><b name="KL_ENTROPY.md_working_1.datddx" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datddx","KL_ENTROPY.md_working_1.datddx","violet")'>ddx</b>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("KL_ENTROPY.md_working_1.datdefddx");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=1,0,0  <span class="plumedtooltip">SET_MASS<span class="right"> mass of the virtual atom<i></i></span></span>=1 <span class="plumedtooltip">SET_CHARGE<span class="right"> charge of the virtual atom<i></i></span></span>=0
+</span><span id="KL_ENTROPY.md_working_1.datdefddz_short"><b name="KL_ENTROPY.md_working_1.datddz" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datddz","KL_ENTROPY.md_working_1.datddz","violet")'>ddz</b><span style="display:none;" id="KL_ENTROPY.md_working_1.datddz">The FIXEDATOM action with label <b>ddz</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ddz</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by FIXEDATOM action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("KL_ENTROPY.md_working_1.datdefddz");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=0,0,1
+</span><span id="KL_ENTROPY.md_working_1.datdefddz_long" style="display:none;"><b name="KL_ENTROPY.md_working_1.datddz" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datddz","KL_ENTROPY.md_working_1.datddz","violet")'>ddz</b>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("KL_ENTROPY.md_working_1.datdefddz");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=0,0,1  <span class="plumedtooltip">SET_MASS<span class="right"> mass of the virtual atom<i></i></span></span>=1 <span class="plumedtooltip">SET_CHARGE<span class="right"> charge of the virtual atom<i></i></span></span>=0
+</span><br/><b name="KL_ENTROPY.md_working_1.dattt" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.dattt","KL_ENTROPY.md_working_1.dattt","blue")'>tt</b><span style="display:none;" id="KL_ENTROPY.md_working_1.dattt">The TORSION action with label <b>tt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">tt</td><td width="5%"><font color="blue">vector</font></td><td>the TORSION for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">VECTORA1<span class="right">two atoms that define a vector<i></i></span></span>=2,1 <span class="plumedtooltip">VECTORB1<span class="right">two atoms that define a vector<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddx">ddx</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b> <span class="plumedtooltip">AXIS1<span class="right">two atoms that define an axis<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddz">ddz</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b>
+   <span class="plumedtooltip">VECTORA2<span class="right">two atoms that define a vector<i></i></span></span>=3,1 <span class="plumedtooltip">VECTORB2<span class="right">two atoms that define a vector<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddx">ddx</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b> <span class="plumedtooltip">AXIS2<span class="right">two atoms that define an axis<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddz">ddz</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b>
+   <span class="plumedtooltip">VECTORA3<span class="right">two atoms that define a vector<i></i></span></span>=4,1 <span class="plumedtooltip">VECTORB3<span class="right">two atoms that define a vector<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddx">ddx</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b> <span class="plumedtooltip">AXIS3<span class="right">two atoms that define an axis<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddz">ddz</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b>
+   <span class="plumedtooltip">VECTORA4<span class="right">two atoms that define a vector<i></i></span></span>=5,1 <span class="plumedtooltip">VECTORB4<span class="right">two atoms that define a vector<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddx">ddx</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b> <span class="plumedtooltip">AXIS4<span class="right">two atoms that define an axis<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddz">ddz</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b>
+   <span class="plumedtooltip">VECTORA5<span class="right">two atoms that define a vector<i></i></span></span>=3,2 <span class="plumedtooltip">VECTORB5<span class="right">two atoms that define a vector<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddx">ddx</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b> <span class="plumedtooltip">AXIS5<span class="right">two atoms that define an axis<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddz">ddz</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b>
+   <span class="plumedtooltip">VECTORA6<span class="right">two atoms that define a vector<i></i></span></span>=4,2 <span class="plumedtooltip">VECTORB6<span class="right">two atoms that define a vector<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddx">ddx</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b> <span class="plumedtooltip">AXIS6<span class="right">two atoms that define an axis<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddz">ddz</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b>
+   <span class="plumedtooltip">VECTORA7<span class="right">two atoms that define a vector<i></i></span></span>=5,2 <span class="plumedtooltip">VECTORB7<span class="right">two atoms that define a vector<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddx">ddx</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b> <span class="plumedtooltip">AXIS7<span class="right">two atoms that define an axis<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddz">ddz</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b>
+   <span class="plumedtooltip">VECTORA8<span class="right">two atoms that define a vector<i></i></span></span>=4,3 <span class="plumedtooltip">VECTORB8<span class="right">two atoms that define a vector<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddx">ddx</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b> <span class="plumedtooltip">AXIS8<span class="right">two atoms that define an axis<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddz">ddz</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b>
+   <span class="plumedtooltip">VECTORA9<span class="right">two atoms that define a vector<i></i></span></span>=5,3 <span class="plumedtooltip">VECTORB9<span class="right">two atoms that define a vector<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddx">ddx</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b> <span class="plumedtooltip">AXIS9<span class="right">two atoms that define an axis<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddz">ddz</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b>
+   <span class="plumedtooltip">VECTORA10<span class="right">two atoms that define a vector<i></i></span></span>=5,4 <span class="plumedtooltip">VECTORB10<span class="right">two atoms that define a vector<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddx">ddx</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b> <span class="plumedtooltip">AXIS10<span class="right">two atoms that define an axis<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datddz">ddz</b>,<b name="KL_ENTROPY.md_working_1.datdd0">dd0</b>
+...
+<br/><span style="color:blue" class="comment"># We now compute our instaneous normalised histogram of the bond directions.  Notice that the weights are used here so that we do not consider</span>
+<span style="color:blue" class="comment"># non-bonded atoms</span>
+<span id="KL_ENTROPY.md_working_1.datdefhu_short"><b name="KL_ENTROPY.md_working_1.dathu" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.dathu","KL_ENTROPY.md_working_1.dathu","green")'>hu</b><span style="display:none;" id="KL_ENTROPY.md_working_1.dathu">The KDE action with label <b>hu</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hu</td><td width="5%"><font color="green">grid</font></td><td>a function on a grid that was obtained by doing a Kernel Density Estimation using the input arguments</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KDE<span class="right">Create a histogram from the input scalar/vector/matrix using KDE This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("KL_ENTROPY.md_working_1.datdefhu");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/KDE">More details</a><i></i></span></span> <span class="plumedtooltip">VOLUMES<span class="right">this keyword take the label of an action that calculates a vector of values<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datd1lt">d1lt</b> <span class="plumedtooltip">ARG<span class="right">the label for the value that should be used to construct the histogram<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.dataa">aa</b>,<b name="KL_ENTROPY.md_working_1.dattt">tt</b> <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=20,20 <span class="plumedtooltip">GRID_MIN<span class="right"> the lower bounds for the grid<i></i></span></span>=0,-pi <span class="plumedtooltip">GRID_MAX<span class="right"> the upper bounds for the grid<i></i></span></span>=pi,pi <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=0.2,0.2
+</span><span id="KL_ENTROPY.md_working_1.datdefhu_long" style="display:none;"><b name="KL_ENTROPY.md_working_1.dathu" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.dathu","KL_ENTROPY.md_working_1.dathu","green")'>hu</b>: <span class="plumedtooltip" style="color:green">KDE<span class="right">Create a histogram from the input scalar/vector/matrix using KDE This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("KL_ENTROPY.md_working_1.datdefhu");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/KDE">More details</a><i></i></span></span> <span class="plumedtooltip">VOLUMES<span class="right">this keyword take the label of an action that calculates a vector of values<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datd1lt">d1lt</b> <span class="plumedtooltip">ARG<span class="right">the label for the value that should be used to construct the histogram<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.dataa">aa</b>,<b name="KL_ENTROPY.md_working_1.dattt">tt</b> <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=20,20 <span class="plumedtooltip">GRID_MIN<span class="right"> the lower bounds for the grid<i></i></span></span>=0,-pi <span class="plumedtooltip">GRID_MAX<span class="right"> the upper bounds for the grid<i></i></span></span>=pi,pi <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=0.2,0.2  <span class="plumedtooltip">KERNEL<span class="right"> the kernel function you are using<i></i></span></span>=GAUSSIAN
+</span><b name="KL_ENTROPY.md_working_1.datde" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datde","KL_ENTROPY.md_working_1.datde","black")'>de</b><span style="display:none;" id="KL_ENTROPY.md_working_1.datde">The SUM action with label <b>de</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">de</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datd1lt">d1lt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="KL_ENTROPY.md_working_1.dath" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.dath","KL_ENTROPY.md_working_1.dath","green")'>h</b><span style="display:none;" id="KL_ENTROPY.md_working_1.dath">The CUSTOM action with label <b>h</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">h</td><td width="5%"><font color="green">grid</font></td><td>the grid obtained by doing an element-wise application of an arbitrary function to the input grid</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.dathu">hu</b>,<b name="KL_ENTROPY.md_working_1.datde">de</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+
+<span style="color:blue" class="comment"># And lastly compute the KL_ENTROPY</span>
+<span id="KL_ENTROPY.md_working_1.datkl_short"><b name="KL_ENTROPY.md_working_1.datkl" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datkl","KL_ENTROPY.md_working_1.datkl_shortcut","black")'>kl</b><span style="display:none;" id="KL_ENTROPY.md_working_1.datkl_shortcut">The KL_ENTROPY action with label <b>kl</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">kl</td><td width="5%"><font color="black">scalar</font></td><td>the value of the KL-Entropy</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KL_ENTROPY<span class="right">Calculate the KL entropy of a distribution This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("KL_ENTROPY.md_working_1.datkl");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/KL_ENTROPY">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the grid that you wish to use in the KL entropy calculation<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.dath">h</b> <span class="plumedtooltip">REFERENCE<span class="right">a file containing the reference density in grid format<i></i></span></span>=<div class="plumedtooltip">regtest/gridtools/rt-weights-integral/kde.grid<div class="right"> Click <a onclick='openModal("KL_ENTROPY.md_working_1.datregtest/gridtools/rt-weights-integral/kde.grid1")'>here</a> to see an extract from this file.<i></i></div></div><div id="KL_ENTROPY.md_working_1.datregtest/gridtools/rt-weights-integral/kde.grid1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("KL_ENTROPY.md_working_1.datregtest/gridtools/rt-weights-integral/kde.grid1")'>&times;</span>  <h2>FILE: regtest/gridtools/rt-weights-integral/kde.grid</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS aa tt h dh_aa dh_tt
+#! SET min_aa 0
+#! SET max_aa pi
+#! SET nbins_aa  20
+#! SET periodic_aa false
+#! SET min_tt -pi
+#! SET max_tt pi
+#! SET nbins_tt  20
+#! SET periodic_tt true
+  0.00000 -3.14159  0.00000  0.00000  0.00000
+  0.15708 -3.14159  0.00000  0.00000  0.00000
+  0.31416 -3.14159  0.00000  0.00000  0.00000
+  0.47124 -3.14159  0.00000  0.00000  0.00000
+  0.62832 -3.14159  0.00000  0.00000  0.00000
+  0.78540 -3.14159  0.00000  0.00000  0.00000
+  0.94248 -3.14159  0.00000  0.00000  0.00000
+  1.09956 -3.14159  0.00000  0.00000  0.00000
+  1.25664 -3.14159  0.00000  0.00000  0.00000
+  1.41372 -3.14159  0.00000  0.00000  0.00000
+  1.57080 -3.14159  0.00000  0.00000  0.00000
+  1.72788 -3.14159  0.00000  0.00000  0.00000
+  1.88496 -3.14159  0.00000  0.00000 -0.00000
+  2.04204 -3.14159  0.00000  0.00000 -0.00000
+  2.19911 -3.14159  0.00000  0.00000 -0.00000
+  2.35619 -3.14159  0.00000  0.00001 -0.00000
+  2.51327 -3.14159  0.00000  0.00003 -0.00002
+  2.67035 -3.14159  0.00001  0.00003 -0.00004
+  2.82743 -3.14159  0.00001 -0.00001 -0.00005
+  2.98451 -3.14159  0.00001 -0.00004 -0.00003
+  3.14159 -3.14159  0.00000 -0.00003 -0.00001
+
+  0.00000 -2.82743  0.00000  0.00000  0.00000
+  0.15708 -2.82743  0.00000  0.00000  0.00000
+  0.31416 -2.82743  0.00000  0.00000  0.00000
+  0.47124 -2.82743  0.00000  0.00000  0.00000
+  0.62832 -2.82743  0.00000  0.00000  0.00000
+  0.78540 -2.82743  0.00000  0.00000  0.00000
+  0.94248 -2.82743  0.00000  0.00000  0.00000
+  1.09956 -2.82743  0.00000  0.00000  0.00000
+  1.25664 -2.82743  0.00000  0.00000  0.00000
+  1.41372 -2.82743  0.00000  0.00000  0.00000
+  1.57080 -2.82743  0.00000  0.00000  0.00000
+  1.72788 -2.82743  0.00000  0.00000  0.00000
+  1.88496 -2.82743  0.00000  0.00000 -0.00000
+  2.04204 -2.82743  0.00000  0.00000 -0.00000
+  2.19911 -2.82743  0.00000  0.00000 -0.00000
+  2.35619 -2.82743  0.00000  0.00000 -0.00000
+  2.51327 -2.82743  0.00000  0.00000 -0.00000
+  2.67035 -2.82743  0.00000  0.00000 -0.00001
+  2.82743 -2.82743  0.00000 -0.00000 -0.00001
+  2.98451 -2.82743  0.00000 -0.00000 -0.00001
+  3.14159 -2.82743  0.00000 -0.00000 -0.00000
+
+  0.00000 -2.51327  0.00000  0.00000  0.00000
+  0.15708 -2.51327  0.00000  0.00000  0.00000
+  0.31416 -2.51327  0.00000  0.00000  0.00000
+  0.47124 -2.51327  0.00000  0.00000  0.00000
+  0.62832 -2.51327  0.00000  0.00000  0.00000
+  0.78540 -2.51327  0.00000  0.00000  0.00000
+  0.94248 -2.51327  0.00000  0.00000  0.00000
+  1.09956 -2.51327  0.00000  0.00000  0.00000
+  1.25664 -2.51327  0.00000  0.00000  0.00000
+  1.41372 -2.51327  0.00000  0.00000  0.00000
+  1.57080 -2.51327  0.00000  0.00000  0.00000
+  1.72788 -2.51327  0.00000  0.00000  0.00000
+  1.88496 -2.51327  0.00000  0.00000 -0.00000
+  2.04204 -2.51327  0.00000  0.00000 -0.00000
+  2.19911 -2.51327  0.00000  0.00000 -0.00000
+  2.35619 -2.51327  0.00000  0.00000 -0.00000
+  2.51327 -2.51327  0.00000  0.00000 -0.00000
+  2.67035 -2.51327  0.00000  0.00000 -0.00000
+  2.82743 -2.51327  0.00000 -0.00000 -0.00000
+  2.98451 -2.51327  0.00000 -0.00000 -0.00000
+  3.14159 -2.51327  0.00000 -0.00000 -0.00000
+
+  0.00000 -2.19911  0.00000  0.00000  0.00000
+  0.15708 -2.19911  0.00000  0.00000  0.00000
+  0.31416 -2.19911  0.00000  0.00000  0.00000
+  0.47124 -2.19911  0.00000  0.00000  0.00000
+  0.62832 -2.19911  0.00000  0.00000  0.00000
+  0.78540 -2.19911  0.00000  0.00000  0.00000
+  0.94248 -2.19911  0.00000  0.00000  0.00000
+  1.09956 -2.19911  0.00000  0.00000  0.00000
+  1.25664 -2.19911  0.00000  0.00000  0.00000
+  1.41372 -2.19911  0.00000  0.00000  0.00000
+  1.57080 -2.19911  0.00000  0.00000  0.00000
+  1.72788 -2.19911  0.00000  0.00000  0.00000
+  1.88496 -2.19911  0.00000  0.00000  0.00000
+  2.04204 -2.19911  0.00000  0.00000  0.00000
+  2.19911 -2.19911  0.00000  0.00000  0.00000
+  2.35619 -2.19911  0.00000  0.00000  0.00000
+  2.51327 -2.19911  0.00000  0.00000  0.00000
+  2.67035 -2.19911  0.00000  0.00000  0.00000
+  2.82743 -2.19911  0.00000  0.00000  0.00000
+  2.98451 -2.19911  0.00000  0.00000  0.00000
+  3.14159 -2.19911  0.00000  0.00000  0.00000
+
+  0.00000 -1.88496  0.00000  0.00000  0.00000
+  0.15708 -1.88496  0.00000  0.00000  0.00000
+  0.31416 -1.88496  0.00000  0.00000  0.00000
+  0.47124 -1.88496  0.00000  0.00000  0.00000
+  0.62832 -1.88496  0.00000  0.00000  0.00000
+  0.78540 -1.88496  0.00000  0.00000  0.00000
+  0.94248 -1.88496  0.00000  0.00000  0.00000
+  1.09956 -1.88496  0.00000  0.00000  0.00000
+  1.25664 -1.88496  0.00000  0.00000  0.00000
+  1.41372 -1.88496  0.00000  0.00000  0.00000
+  1.57080 -1.88496  0.00000  0.00000  0.00000
+  1.72788 -1.88496  0.00000  0.00000  0.00000
+  1.88496 -1.88496  0.00000  0.00000  0.00000
+  2.04204 -1.88496  0.00000  0.00000  0.00000
+  2.19911 -1.88496  0.00000  0.00000  0.00000
+  2.35619 -1.88496  0.00000  0.00000  0.00000
+  2.51327 -1.88496  0.00000  0.00000  0.00000
+  2.67035 -1.88496  0.00000  0.00000  0.00000
+  2.82743 -1.88496  0.00000  0.00000  0.00000
+  2.98451 -1.88496  0.00000  0.00000  0.00000
+  3.14159 -1.88496  0.00000  0.00000  0.00000
+
+  0.00000 -1.57080  0.00000  0.00000  0.00000
+  0.15708 -1.57080  0.00000  0.00000  0.00000
+  0.31416 -1.57080  0.00000  0.00000  0.00000
+  0.47124 -1.57080  0.00000  0.00000  0.00000
+  0.62832 -1.57080  0.00000  0.00000  0.00000
+  0.78540 -1.57080  0.00000  0.00000  0.00000
+  0.94248 -1.57080  0.00000  0.00000  0.00000
+  1.09956 -1.57080  0.00000  0.00000  0.00000
+  1.25664 -1.57080  0.00000 -0.00000  0.00000
+  1.41372 -1.57080  0.00000 -0.00000  0.00000
+  1.57080 -1.57080  0.00000 -0.00000  0.00000
+  1.72788 -1.57080  0.00000 -0.00000  0.00000
+  1.88496 -1.57080  0.00000 -0.00000  0.00000
+  2.04204 -1.57080  0.00000  0.00000  0.00000
+  2.19911 -1.57080  0.00000  0.00000  0.00000
+  2.35619 -1.57080  0.00000  0.00000  0.00000
+  2.51327 -1.57080  0.00000  0.00000  0.00000
+  2.67035 -1.57080  0.00000  0.00000  0.00000
+  2.82743 -1.57080  0.00000  0.00000  0.00000
+  2.98451 -1.57080  0.00000  0.00000  0.00000
+  3.14159 -1.57080  0.00000  0.00000  0.00000
+
+  0.00000 -1.25664  0.00000  0.00000  0.00000
+  0.15708 -1.25664  0.00000  0.00000  0.00000
+  0.31416 -1.25664  0.00000  0.00000  0.00000
+  0.47124 -1.25664  0.00000  0.00000  0.00000
+  0.62832 -1.25664  0.00000  0.00002  0.00003
+  0.78540 -1.25664  0.00001  0.00015  0.00029
+  0.94248 -1.25664  0.00006  0.00047  0.00133
+  1.09956 -1.25664  0.00015  0.00058  0.00334
+  1.25664 -1.25664  0.00020 -0.00001  0.00451
+  1.41372 -1.25664  0.00015 -0.00059  0.00329
+  1.57080 -1.25664  0.00006 -0.00046  0.00129
+  1.72788 -1.25664  0.00001 -0.00015  0.00027
+  1.88496 -1.25664  0.00000 -0.00002  0.00003
+  2.04204 -1.25664  0.00000  0.00000  0.00000
+  2.19911 -1.25664  0.00000  0.00000  0.00000
+  2.35619 -1.25664  0.00000  0.00000  0.00000
+  2.51327 -1.25664  0.00000  0.00000  0.00000
+  2.67035 -1.25664  0.00000  0.00000  0.00000
+  2.82743 -1.25664  0.00000  0.00000  0.00000
+  2.98451 -1.25664  0.00000  0.00000  0.00000
+  3.14159 -1.25664  0.00000  0.00000  0.00000
+
+  0.00000 -0.94248  0.00000  0.00000  0.00000
+  0.15708 -0.94248  0.00000  0.00000  0.00000
+  0.31416 -0.94248  0.00000  0.00002  0.00001
+  0.47124 -0.94248  0.00003  0.00058  0.00042
+  0.62832 -0.94248  0.00047  0.00735  0.00674
+  0.78540 -0.94248  0.00404  0.04737  0.05795
+  0.94248 -0.94248  0.01873  0.14626  0.26892
+  1.09956 -0.94248  0.04691  0.18203  0.67341
+  1.25664 -0.94248  0.06339 -0.00296  0.91000
+  1.41372 -0.94248  0.04623 -0.18370  0.66360
+  1.57080 -0.94248  0.01819 -0.14373  0.26114
+  1.72788 -0.94248  0.00386 -0.04569  0.05546
+  1.88496 -0.94248  0.00044 -0.00698  0.00636
+  2.04204 -0.94248  0.00000  0.00000  0.00000
+  2.19911 -0.94248  0.00000  0.00000  0.00000
+  2.35619 -0.94248  0.00000  0.00000  0.00000
+  2.51327 -0.94248  0.00000  0.00000  0.00000
+  2.67035 -0.94248  0.00000  0.00000  0.00000
+  2.82743 -0.94248  0.00000  0.00000  0.00000
+  2.98451 -0.94248  0.00000  0.00000  0.00000
+  3.14159 -0.94248  0.00000  0.00000  0.00000
+
+  0.00000 -0.62832  0.00000  0.00000  0.00000
+  0.15708 -0.62832  0.00000  0.00000  0.00000
+  0.31416 -0.62832  0.00003  0.00062  0.00017
+  0.47124 -0.62832  0.00078  0.01528  0.00507
+  0.62832 -0.62832  0.01243  0.19462  0.08078
+  0.78540 -0.62832  0.10686  1.25389  0.69464
+  0.94248 -0.62832  0.49585  3.87126  3.22336
+  1.09956 -0.62832  1.24168  4.81806  8.07169
+  1.25664 -0.62832  1.67791 -0.07837 10.90751
+  1.41372 -0.62832  1.22359 -4.86218  7.95412
+  1.57080 -0.62832  0.48151 -3.80428  3.13014
+  1.72788 -0.62832  0.10226 -1.20944  0.66472
+  1.88496 -0.62832  0.01172 -0.18462  0.07618
+  2.04204 -0.62832  0.00000  0.00000  0.00000
+  2.19911 -0.62832  0.00000  0.00000  0.00000
+  2.35619 -0.62832  0.00000  0.00000  0.00000
+  2.51327 -0.62832  0.00000  0.00000  0.00000
+  2.67035 -0.62832  0.00000  0.00000  0.00000
+  2.82743 -0.62832  0.00000  0.00000  0.00000
+  2.98451 -0.62832  0.00000  0.00000  0.00000
+  3.14159 -0.62832  0.00000  0.00000  0.00000
+
+  0.00000 -0.31416  0.00000  0.00000  0.00000
+  0.15708 -0.31416  0.00000  0.00000  0.00000
+  0.31416 -0.31416  0.00006  0.00139 -0.00008
+  0.47124 -0.31416  0.00175  0.03429 -0.00237
+  0.62832 -0.31416  0.02789  0.43684 -0.03775
+  0.78540 -0.31416  0.23985  2.81450 -0.32460
+  0.94248 -0.31416  1.11300  8.68950 -1.50627
+  1.09956 -0.31416  2.78709 10.81470 -3.77189
+  1.25664 -0.31416  3.76628 -0.17591 -5.09706
+  1.41372 -0.31416  2.74649 -10.91373 -3.71695
+  1.57080 -0.31416  1.08081 -8.53916 -1.46271
+  1.72788 -0.31416  0.22952 -2.71473 -0.31062
+  1.88496 -0.31416  0.02630 -0.41440 -0.03560
+  2.04204 -0.31416  0.00000  0.00000  0.00000
+  2.19911 -0.31416  0.00000  0.00000  0.00000
+  2.35619 -0.31416  0.00000 -0.00000  0.00000
+  2.51327 -0.31416  0.00000 -0.00000  0.00000
+  2.67035 -0.31416  0.00000 -0.00000  0.00000
+  2.82743 -0.31416  0.00000 -0.00000  0.00000
+  2.98451 -0.31416  0.00000 -0.00000  0.00000
+  3.14159 -0.31416  0.00000  0.00000  0.00000
+
+  0.00000  0.00000  0.00000  0.00000  0.00000
+  0.15708  0.00000  0.00000  0.00000  0.00000
+  0.31416  0.00000  0.00001  0.00027 -0.00010
+  0.47124  0.00000  0.00033  0.00653 -0.00307
+  0.62832  0.00000  0.00531  0.08316 -0.04889
+  0.78540  0.00000  0.04566  0.53575 -0.42038
+  0.94248  0.00000  0.21186  1.65409 -1.95071
+  1.09956  0.00000  0.53054  2.05863 -4.88482
+  1.25664  0.00000  0.71693 -0.03349 -6.60099
+  1.41372  0.00000  0.52281 -2.07748 -4.81366
+  1.57080  0.00000  0.20574 -1.62547 -1.89429
+  1.72788  0.00000  0.04369 -0.51675 -0.40226
+  1.88496  0.00000  0.00501 -0.07885 -0.04603
+  2.04204  0.00000  0.00001  0.00007  0.00024
+  2.19911  0.00000  0.00002  0.00004  0.00042
+  2.35619  0.00000  0.00002 -0.00004  0.00041
+  2.51327  0.00000  0.00001 -0.00006  0.00021
+  2.67035  0.00000  0.00000 -0.00003  0.00006
+  2.82743  0.00000  0.00000 -0.00001  0.00001
+  2.98451  0.00000  0.00000 -0.00000  0.00000
+  3.14159  0.00000  0.00000  0.00000  0.00000
+
+  0.00000  0.31416  0.00000  0.00000  0.00000
+  0.15708  0.31416  0.00000  0.00000  0.00000
+  0.31416  0.31416  0.00000  0.00000 -0.00000
+  0.47124  0.31416  0.00001  0.00011 -0.00009
+  0.62832  0.31416  0.00009  0.00134 -0.00146
+  0.78540  0.31416  0.00074  0.00865 -0.01257
+  0.94248  0.31416  0.00342  0.02670 -0.05835
+  1.09956  0.31416  0.00856  0.03323 -0.14612
+  1.25664  0.31416  0.01157 -0.00054 -0.19746
+  1.41372  0.31416  0.00844 -0.03353 -0.14399
+  1.57080  0.31416  0.00333 -0.02610 -0.05657
+  1.72788  0.31416  0.00080 -0.00709 -0.01090
+  1.88496  0.31416  0.00065  0.00418  0.00558
+  2.04204  0.31416  0.00188  0.01068  0.02308
+  2.19911  0.31416  0.00337  0.00587  0.04129
+  2.35619  0.31416  0.00326 -0.00712  0.03987
+  2.51327  0.31416  0.00170 -0.01037  0.02078
+  2.67035  0.31416  0.00048 -0.00479  0.00584
+  2.82743  0.31416  0.00007 -0.00101  0.00089
+  2.98451  0.31416  0.00001 -0.00011  0.00007
+  3.14159  0.31416  0.00000  0.00000  0.00000
+
+  0.00000  0.62832  0.00000  0.00000  0.00000
+  0.15708  0.62832  0.00000  0.00000  0.00000
+  0.31416  0.62832  0.00000  0.00000  0.00000
+  0.47124  0.62832  0.00000  0.00000  0.00000
+  0.62832  0.62832  0.00000  0.00000  0.00000
+  0.78540  0.62832  0.00000  0.00000  0.00000
+  0.94248  0.62832  0.00000  0.00000  0.00000
+  1.09956  0.62832  0.00000  0.00000  0.00000
+  1.25664  0.62832  0.00000  0.00000  0.00000
+  1.41372  0.62832  0.00001  0.00011  0.00002
+  1.57080  0.62832  0.00011  0.00193  0.00049
+  1.72788  0.62832  0.00126  0.01707  0.00554
+  1.88496  0.62832  0.00775  0.07440  0.03406
+  2.04204  0.62832  0.02571  0.14573  0.11292
+  2.19911  0.62832  0.04601  0.08008  0.20204
+  2.35619  0.62832  0.04442 -0.09713  0.19509
+  2.51327  0.62832  0.02315 -0.14152  0.10165
+  2.67035  0.62832  0.00651 -0.06535  0.02858
+  2.82743  0.62832  0.00099 -0.01380  0.00434
+  2.98451  0.62832  0.00008 -0.00145  0.00036
+  3.14159  0.62832  0.00000  0.00000  0.00000
+
+  0.00000  0.94248  0.00000  0.00000  0.00000
+  0.15708  0.94248  0.00000  0.00000  0.00000
+  0.31416  0.94248  0.00000  0.00000  0.00000
+  0.47124  0.94248  0.00000  0.00000  0.00000
+  0.62832  0.94248  0.00000  0.00000  0.00000
+  0.78540  0.94248  0.00000  0.00000  0.00000
+  0.94248  0.94248  0.00000  0.00000  0.00000
+  1.09956  0.94248  0.00000  0.00000  0.00000
+  1.25664  0.94248  0.00000  0.00000  0.00000
+  1.41372  0.94248  0.00001  0.00013 -0.00002
+  1.57080  0.94248  0.00013  0.00224 -0.00044
+  1.72788  0.94248  0.00146  0.01975 -0.00506
+  1.88496  0.94248  0.00897  0.08609 -0.03107
+  2.04204  0.94248  0.02975  0.16862 -0.10302
+  2.19911  0.94248  0.05324  0.09265 -0.18433
+  2.35619  0.94248  0.05140 -0.11239 -0.17799
+  2.51327  0.94248  0.02678 -0.16374 -0.09274
+  2.67035  0.94248  0.00753 -0.07562 -0.02608
+  2.82743  0.94248  0.00114 -0.01596 -0.00396
+  2.98451  0.94248  0.00009 -0.00167 -0.00032
+  3.14159  0.94248  0.00000  0.00000  0.00000
+
+  0.00000  1.25664  0.00000  0.00000  0.00000
+  0.15708  1.25664  0.00000  0.00000  0.00000
+  0.31416  1.25664  0.00000  0.00000  0.00000
+  0.47124  1.25664  0.00000  0.00000  0.00000
+  0.62832  1.25664  0.00000  0.00000  0.00000
+  0.78540  1.25664  0.00000  0.00000  0.00000
+  0.94248  1.25664  0.00000  0.00000  0.00000
+  1.09956  1.25664  0.00000  0.00000  0.00000
+  1.25664  1.25664  0.00000  0.00000  0.00000
+  1.41372  1.25664  0.00000  0.00001 -0.00001
+  1.57080  1.25664  0.00001  0.00022 -0.00014
+  1.72788  1.25664  0.00014  0.00194 -0.00162
+  1.88496  1.25664  0.00088  0.00845 -0.00996
+  2.04204  1.25664  0.00292  0.01655 -0.03304
+  2.19911  1.25664  0.00522  0.00909 -0.05911
+  2.35619  1.25664  0.00504 -0.01103 -0.05708
+  2.51327  1.25664  0.00263 -0.01607 -0.02974
+  2.67035  1.25664  0.00074 -0.00742 -0.00836
+  2.82743  1.25664  0.00011 -0.00157 -0.00127
+  2.98451  1.25664  0.00001 -0.00016 -0.00010
+  3.14159  1.25664  0.00000  0.00000  0.00000
+
+  0.00000  1.57080  0.00000  0.00000  0.00000
+  0.15708  1.57080  0.00000  0.00000  0.00000
+  0.31416  1.57080  0.00000  0.00000  0.00000
+  0.47124  1.57080  0.00000  0.00000  0.00000
+  0.62832  1.57080  0.00000  0.00000  0.00000
+  0.78540  1.57080  0.00000  0.00000  0.00000
+  0.94248  1.57080  0.00000  0.00000  0.00000
+  1.09956  1.57080  0.00000  0.00000  0.00000
+  1.25664  1.57080  0.00000  0.00000  0.00000
+  1.41372  1.57080  0.00000  0.00000 -0.00000
+  1.57080  1.57080  0.00000  0.00000 -0.00000
+  1.72788  1.57080  0.00000  0.00002 -0.00002
+  1.88496  1.57080  0.00001  0.00007 -0.00014
+  2.04204  1.57080  0.00002  0.00014 -0.00047
+  2.19911  1.57080  0.00004  0.00008 -0.00083
+  2.35619  1.57080  0.00004 -0.00009 -0.00080
+  2.51327  1.57080  0.00002 -0.00013 -0.00042
+  2.67035  1.57080  0.00001 -0.00006 -0.00012
+  2.82743  1.57080  0.00000 -0.00001 -0.00002
+  2.98451  1.57080  0.00000 -0.00000 -0.00000
+  3.14159  1.57080  0.00000  0.00000  0.00000
+
+  0.00000  1.88496  0.00000  0.00000  0.00000
+  0.15708  1.88496  0.00000  0.00000  0.00000
+  0.31416  1.88496  0.00000  0.00000  0.00000
+  0.47124  1.88496  0.00000  0.00000  0.00000
+  0.62832  1.88496  0.00000  0.00000  0.00000
+  0.78540  1.88496  0.00000  0.00000  0.00000
+  0.94248  1.88496  0.00000  0.00000  0.00000
+  1.09956  1.88496  0.00000  0.00000  0.00000
+  1.25664  1.88496  0.00000  0.00000  0.00000
+  1.41372  1.88496  0.00000  0.00000  0.00000
+  1.57080  1.88496  0.00000  0.00000  0.00000
+  1.72788  1.88496  0.00000  0.00000  0.00000
+  1.88496  1.88496  0.00000  0.00000  0.00000
+  2.04204  1.88496  0.00000  0.00000  0.00000
+  2.19911  1.88496  0.00000  0.00000  0.00000
+  2.35619  1.88496  0.00000  0.00000  0.00000
+  2.51327  1.88496  0.00000  0.00000  0.00000
+  2.67035  1.88496  0.00000  0.00000  0.00000
+  2.82743  1.88496  0.00000 -0.00000  0.00000
+  2.98451  1.88496  0.00000 -0.00000  0.00000
+  3.14159  1.88496  0.00000 -0.00000  0.00000
+
+  0.00000  2.19911  0.00000  0.00000  0.00000
+  0.15708  2.19911  0.00000  0.00000  0.00000
+  0.31416  2.19911  0.00000  0.00000  0.00000
+  0.47124  2.19911  0.00000  0.00000  0.00000
+  0.62832  2.19911  0.00000  0.00000  0.00000
+  0.78540  2.19911  0.00000  0.00000  0.00000
+  0.94248  2.19911  0.00000  0.00000  0.00000
+  1.09956  2.19911  0.00000  0.00000  0.00000
+  1.25664  2.19911  0.00000  0.00000  0.00000
+  1.41372  2.19911  0.00000  0.00000  0.00000
+  1.57080  2.19911  0.00000  0.00000  0.00000
+  1.72788  2.19911  0.00000  0.00000  0.00000
+  1.88496  2.19911  0.00000  0.00000  0.00000
+  2.04204  2.19911  0.00000  0.00000  0.00000
+  2.19911  2.19911  0.00000  0.00000  0.00000
+  2.35619  2.19911  0.00000  0.00000  0.00000
+  2.51327  2.19911  0.00000  0.00000  0.00000
+  2.67035  2.19911  0.00000  0.00000  0.00000
+  2.82743  2.19911  0.00000 -0.00000  0.00000
+  2.98451  2.19911  0.00000 -0.00000  0.00000
+  3.14159  2.19911  0.00000 -0.00000  0.00000
+
+  0.00000  2.51327  0.00000  0.00000  0.00000
+  0.15708  2.51327  0.00000  0.00000  0.00000
+  0.31416  2.51327  0.00000  0.00000  0.00000
+  0.47124  2.51327  0.00000  0.00000  0.00000
+  0.62832  2.51327  0.00000  0.00000  0.00000
+  0.78540  2.51327  0.00000  0.00000  0.00000
+  0.94248  2.51327  0.00000  0.00000  0.00000
+  1.09956  2.51327  0.00000  0.00000  0.00000
+  1.25664  2.51327  0.00000  0.00000  0.00000
+  1.41372  2.51327  0.00000  0.00000  0.00000
+  1.57080  2.51327  0.00000  0.00000  0.00000
+  1.72788  2.51327  0.00000  0.00000  0.00000
+  1.88496  2.51327  0.00000  0.00000  0.00000
+  2.04204  2.51327  0.00000  0.00000  0.00000
+  2.19911  2.51327  0.00000  0.00000  0.00000
+  2.35619  2.51327  0.00000  0.00000  0.00000
+  2.51327  2.51327  0.00000  0.00000  0.00001
+  2.67035  2.51327  0.00000  0.00000  0.00001
+  2.82743  2.51327  0.00000 -0.00000  0.00001
+  2.98451  2.51327  0.00000 -0.00000  0.00001
+  3.14159  2.51327  0.00000 -0.00000  0.00000
+
+  0.00000  2.82743  0.00000  0.00000  0.00000
+  0.15708  2.82743  0.00000  0.00000  0.00000
+  0.31416  2.82743  0.00000  0.00000  0.00000
+  0.47124  2.82743  0.00000  0.00000  0.00000
+  0.62832  2.82743  0.00000  0.00000  0.00000
+  0.78540  2.82743  0.00000  0.00000  0.00000
+  0.94248  2.82743  0.00000  0.00000  0.00000
+  1.09956  2.82743  0.00000  0.00000  0.00000
+  1.25664  2.82743  0.00000  0.00000  0.00000
+  1.41372  2.82743  0.00000  0.00000  0.00000
+  1.57080  2.82743  0.00000  0.00000  0.00000
+  1.72788  2.82743  0.00000  0.00000  0.00000
+  1.88496  2.82743  0.00000  0.00000  0.00000
+  2.04204  2.82743  0.00000  0.00000  0.00000
+  2.19911  2.82743  0.00000  0.00000  0.00000
+  2.35619  2.82743  0.00000  0.00001  0.00000
+  2.51327  2.82743  0.00000  0.00004  0.00002
+  2.67035  2.82743  0.00001  0.00004  0.00004
+  2.82743  2.82743  0.00001 -0.00001  0.00005
+  2.98451  2.82743  0.00001 -0.00004  0.00003
+  3.14159  2.82743  0.00000 -0.00003  0.00001
+</pre></div>  </div></div> <span class="plumedtooltip">VALUE<span class="right">the name of the value that should be read from the grid<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.dath">h</b>
+</span><span id="KL_ENTROPY.md_working_1.datkl_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("KL_ENTROPY.md_working_1.datkl")'># kl: KL_ENTROPY ARG=h REFERENCE=regtest/gridtools/rt-weights-integral/kde.grid VALUE=h</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="KL_ENTROPY.md_working_1.datkl_ref" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datkl_ref","KL_ENTROPY.md_working_1.datkl_ref","green")'>kl_ref</b><span style="display:none;" id="KL_ENTROPY.md_working_1.datkl_ref">The REFERENCE_GRID action with label <b>kl_ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">kl_ref</td><td width="5%"><font color="green">grid</font></td><td>the constant function on the grid that was specified in input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">REFERENCE_GRID<span class="right">Setup a constant grid by either reading values from a file or definining a function in input <a href="https://www.plumed.org/doc-master/user-doc/html/REFERENCE_GRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUE<span class="right">the name of the value that should be read from the grid<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.dath">h</b> <span class="plumedtooltip">FILE<span class="right">the name of the file that contains the reference data<i></i></span></span>=<div class="plumedtooltip">regtest/gridtools/rt-weights-integral/kde.grid<div class="right"> Click <a onclick='openModal("KL_ENTROPY.md_working_1.datregtest/gridtools/rt-weights-integral/kde.grid2")'>here</a> to see an extract from this file.<i></i></div></div><div id="KL_ENTROPY.md_working_1.datregtest/gridtools/rt-weights-integral/kde.grid2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("KL_ENTROPY.md_working_1.datregtest/gridtools/rt-weights-integral/kde.grid2")'>&times;</span>  <h2>FILE: regtest/gridtools/rt-weights-integral/kde.grid</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS aa tt h dh_aa dh_tt
+#! SET min_aa 0
+#! SET max_aa pi
+#! SET nbins_aa  20
+#! SET periodic_aa false
+#! SET min_tt -pi
+#! SET max_tt pi
+#! SET nbins_tt  20
+#! SET periodic_tt true
+  0.00000 -3.14159  0.00000  0.00000  0.00000
+  0.15708 -3.14159  0.00000  0.00000  0.00000
+  0.31416 -3.14159  0.00000  0.00000  0.00000
+  0.47124 -3.14159  0.00000  0.00000  0.00000
+  0.62832 -3.14159  0.00000  0.00000  0.00000
+  0.78540 -3.14159  0.00000  0.00000  0.00000
+  0.94248 -3.14159  0.00000  0.00000  0.00000
+  1.09956 -3.14159  0.00000  0.00000  0.00000
+  1.25664 -3.14159  0.00000  0.00000  0.00000
+  1.41372 -3.14159  0.00000  0.00000  0.00000
+  1.57080 -3.14159  0.00000  0.00000  0.00000
+  1.72788 -3.14159  0.00000  0.00000  0.00000
+  1.88496 -3.14159  0.00000  0.00000 -0.00000
+  2.04204 -3.14159  0.00000  0.00000 -0.00000
+  2.19911 -3.14159  0.00000  0.00000 -0.00000
+  2.35619 -3.14159  0.00000  0.00001 -0.00000
+  2.51327 -3.14159  0.00000  0.00003 -0.00002
+  2.67035 -3.14159  0.00001  0.00003 -0.00004
+  2.82743 -3.14159  0.00001 -0.00001 -0.00005
+  2.98451 -3.14159  0.00001 -0.00004 -0.00003
+  3.14159 -3.14159  0.00000 -0.00003 -0.00001
+
+  0.00000 -2.82743  0.00000  0.00000  0.00000
+  0.15708 -2.82743  0.00000  0.00000  0.00000
+  0.31416 -2.82743  0.00000  0.00000  0.00000
+  0.47124 -2.82743  0.00000  0.00000  0.00000
+  0.62832 -2.82743  0.00000  0.00000  0.00000
+  0.78540 -2.82743  0.00000  0.00000  0.00000
+  0.94248 -2.82743  0.00000  0.00000  0.00000
+  1.09956 -2.82743  0.00000  0.00000  0.00000
+  1.25664 -2.82743  0.00000  0.00000  0.00000
+  1.41372 -2.82743  0.00000  0.00000  0.00000
+  1.57080 -2.82743  0.00000  0.00000  0.00000
+  1.72788 -2.82743  0.00000  0.00000  0.00000
+  1.88496 -2.82743  0.00000  0.00000 -0.00000
+  2.04204 -2.82743  0.00000  0.00000 -0.00000
+  2.19911 -2.82743  0.00000  0.00000 -0.00000
+  2.35619 -2.82743  0.00000  0.00000 -0.00000
+  2.51327 -2.82743  0.00000  0.00000 -0.00000
+  2.67035 -2.82743  0.00000  0.00000 -0.00001
+  2.82743 -2.82743  0.00000 -0.00000 -0.00001
+  2.98451 -2.82743  0.00000 -0.00000 -0.00001
+  3.14159 -2.82743  0.00000 -0.00000 -0.00000
+
+  0.00000 -2.51327  0.00000  0.00000  0.00000
+  0.15708 -2.51327  0.00000  0.00000  0.00000
+  0.31416 -2.51327  0.00000  0.00000  0.00000
+  0.47124 -2.51327  0.00000  0.00000  0.00000
+  0.62832 -2.51327  0.00000  0.00000  0.00000
+  0.78540 -2.51327  0.00000  0.00000  0.00000
+  0.94248 -2.51327  0.00000  0.00000  0.00000
+  1.09956 -2.51327  0.00000  0.00000  0.00000
+  1.25664 -2.51327  0.00000  0.00000  0.00000
+  1.41372 -2.51327  0.00000  0.00000  0.00000
+  1.57080 -2.51327  0.00000  0.00000  0.00000
+  1.72788 -2.51327  0.00000  0.00000  0.00000
+  1.88496 -2.51327  0.00000  0.00000 -0.00000
+  2.04204 -2.51327  0.00000  0.00000 -0.00000
+  2.19911 -2.51327  0.00000  0.00000 -0.00000
+  2.35619 -2.51327  0.00000  0.00000 -0.00000
+  2.51327 -2.51327  0.00000  0.00000 -0.00000
+  2.67035 -2.51327  0.00000  0.00000 -0.00000
+  2.82743 -2.51327  0.00000 -0.00000 -0.00000
+  2.98451 -2.51327  0.00000 -0.00000 -0.00000
+  3.14159 -2.51327  0.00000 -0.00000 -0.00000
+
+  0.00000 -2.19911  0.00000  0.00000  0.00000
+  0.15708 -2.19911  0.00000  0.00000  0.00000
+  0.31416 -2.19911  0.00000  0.00000  0.00000
+  0.47124 -2.19911  0.00000  0.00000  0.00000
+  0.62832 -2.19911  0.00000  0.00000  0.00000
+  0.78540 -2.19911  0.00000  0.00000  0.00000
+  0.94248 -2.19911  0.00000  0.00000  0.00000
+  1.09956 -2.19911  0.00000  0.00000  0.00000
+  1.25664 -2.19911  0.00000  0.00000  0.00000
+  1.41372 -2.19911  0.00000  0.00000  0.00000
+  1.57080 -2.19911  0.00000  0.00000  0.00000
+  1.72788 -2.19911  0.00000  0.00000  0.00000
+  1.88496 -2.19911  0.00000  0.00000  0.00000
+  2.04204 -2.19911  0.00000  0.00000  0.00000
+  2.19911 -2.19911  0.00000  0.00000  0.00000
+  2.35619 -2.19911  0.00000  0.00000  0.00000
+  2.51327 -2.19911  0.00000  0.00000  0.00000
+  2.67035 -2.19911  0.00000  0.00000  0.00000
+  2.82743 -2.19911  0.00000  0.00000  0.00000
+  2.98451 -2.19911  0.00000  0.00000  0.00000
+  3.14159 -2.19911  0.00000  0.00000  0.00000
+
+  0.00000 -1.88496  0.00000  0.00000  0.00000
+  0.15708 -1.88496  0.00000  0.00000  0.00000
+  0.31416 -1.88496  0.00000  0.00000  0.00000
+  0.47124 -1.88496  0.00000  0.00000  0.00000
+  0.62832 -1.88496  0.00000  0.00000  0.00000
+  0.78540 -1.88496  0.00000  0.00000  0.00000
+  0.94248 -1.88496  0.00000  0.00000  0.00000
+  1.09956 -1.88496  0.00000  0.00000  0.00000
+  1.25664 -1.88496  0.00000  0.00000  0.00000
+  1.41372 -1.88496  0.00000  0.00000  0.00000
+  1.57080 -1.88496  0.00000  0.00000  0.00000
+  1.72788 -1.88496  0.00000  0.00000  0.00000
+  1.88496 -1.88496  0.00000  0.00000  0.00000
+  2.04204 -1.88496  0.00000  0.00000  0.00000
+  2.19911 -1.88496  0.00000  0.00000  0.00000
+  2.35619 -1.88496  0.00000  0.00000  0.00000
+  2.51327 -1.88496  0.00000  0.00000  0.00000
+  2.67035 -1.88496  0.00000  0.00000  0.00000
+  2.82743 -1.88496  0.00000  0.00000  0.00000
+  2.98451 -1.88496  0.00000  0.00000  0.00000
+  3.14159 -1.88496  0.00000  0.00000  0.00000
+
+  0.00000 -1.57080  0.00000  0.00000  0.00000
+  0.15708 -1.57080  0.00000  0.00000  0.00000
+  0.31416 -1.57080  0.00000  0.00000  0.00000
+  0.47124 -1.57080  0.00000  0.00000  0.00000
+  0.62832 -1.57080  0.00000  0.00000  0.00000
+  0.78540 -1.57080  0.00000  0.00000  0.00000
+  0.94248 -1.57080  0.00000  0.00000  0.00000
+  1.09956 -1.57080  0.00000  0.00000  0.00000
+  1.25664 -1.57080  0.00000 -0.00000  0.00000
+  1.41372 -1.57080  0.00000 -0.00000  0.00000
+  1.57080 -1.57080  0.00000 -0.00000  0.00000
+  1.72788 -1.57080  0.00000 -0.00000  0.00000
+  1.88496 -1.57080  0.00000 -0.00000  0.00000
+  2.04204 -1.57080  0.00000  0.00000  0.00000
+  2.19911 -1.57080  0.00000  0.00000  0.00000
+  2.35619 -1.57080  0.00000  0.00000  0.00000
+  2.51327 -1.57080  0.00000  0.00000  0.00000
+  2.67035 -1.57080  0.00000  0.00000  0.00000
+  2.82743 -1.57080  0.00000  0.00000  0.00000
+  2.98451 -1.57080  0.00000  0.00000  0.00000
+  3.14159 -1.57080  0.00000  0.00000  0.00000
+
+  0.00000 -1.25664  0.00000  0.00000  0.00000
+  0.15708 -1.25664  0.00000  0.00000  0.00000
+  0.31416 -1.25664  0.00000  0.00000  0.00000
+  0.47124 -1.25664  0.00000  0.00000  0.00000
+  0.62832 -1.25664  0.00000  0.00002  0.00003
+  0.78540 -1.25664  0.00001  0.00015  0.00029
+  0.94248 -1.25664  0.00006  0.00047  0.00133
+  1.09956 -1.25664  0.00015  0.00058  0.00334
+  1.25664 -1.25664  0.00020 -0.00001  0.00451
+  1.41372 -1.25664  0.00015 -0.00059  0.00329
+  1.57080 -1.25664  0.00006 -0.00046  0.00129
+  1.72788 -1.25664  0.00001 -0.00015  0.00027
+  1.88496 -1.25664  0.00000 -0.00002  0.00003
+  2.04204 -1.25664  0.00000  0.00000  0.00000
+  2.19911 -1.25664  0.00000  0.00000  0.00000
+  2.35619 -1.25664  0.00000  0.00000  0.00000
+  2.51327 -1.25664  0.00000  0.00000  0.00000
+  2.67035 -1.25664  0.00000  0.00000  0.00000
+  2.82743 -1.25664  0.00000  0.00000  0.00000
+  2.98451 -1.25664  0.00000  0.00000  0.00000
+  3.14159 -1.25664  0.00000  0.00000  0.00000
+
+  0.00000 -0.94248  0.00000  0.00000  0.00000
+  0.15708 -0.94248  0.00000  0.00000  0.00000
+  0.31416 -0.94248  0.00000  0.00002  0.00001
+  0.47124 -0.94248  0.00003  0.00058  0.00042
+  0.62832 -0.94248  0.00047  0.00735  0.00674
+  0.78540 -0.94248  0.00404  0.04737  0.05795
+  0.94248 -0.94248  0.01873  0.14626  0.26892
+  1.09956 -0.94248  0.04691  0.18203  0.67341
+  1.25664 -0.94248  0.06339 -0.00296  0.91000
+  1.41372 -0.94248  0.04623 -0.18370  0.66360
+  1.57080 -0.94248  0.01819 -0.14373  0.26114
+  1.72788 -0.94248  0.00386 -0.04569  0.05546
+  1.88496 -0.94248  0.00044 -0.00698  0.00636
+  2.04204 -0.94248  0.00000  0.00000  0.00000
+  2.19911 -0.94248  0.00000  0.00000  0.00000
+  2.35619 -0.94248  0.00000  0.00000  0.00000
+  2.51327 -0.94248  0.00000  0.00000  0.00000
+  2.67035 -0.94248  0.00000  0.00000  0.00000
+  2.82743 -0.94248  0.00000  0.00000  0.00000
+  2.98451 -0.94248  0.00000  0.00000  0.00000
+  3.14159 -0.94248  0.00000  0.00000  0.00000
+
+  0.00000 -0.62832  0.00000  0.00000  0.00000
+  0.15708 -0.62832  0.00000  0.00000  0.00000
+  0.31416 -0.62832  0.00003  0.00062  0.00017
+  0.47124 -0.62832  0.00078  0.01528  0.00507
+  0.62832 -0.62832  0.01243  0.19462  0.08078
+  0.78540 -0.62832  0.10686  1.25389  0.69464
+  0.94248 -0.62832  0.49585  3.87126  3.22336
+  1.09956 -0.62832  1.24168  4.81806  8.07169
+  1.25664 -0.62832  1.67791 -0.07837 10.90751
+  1.41372 -0.62832  1.22359 -4.86218  7.95412
+  1.57080 -0.62832  0.48151 -3.80428  3.13014
+  1.72788 -0.62832  0.10226 -1.20944  0.66472
+  1.88496 -0.62832  0.01172 -0.18462  0.07618
+  2.04204 -0.62832  0.00000  0.00000  0.00000
+  2.19911 -0.62832  0.00000  0.00000  0.00000
+  2.35619 -0.62832  0.00000  0.00000  0.00000
+  2.51327 -0.62832  0.00000  0.00000  0.00000
+  2.67035 -0.62832  0.00000  0.00000  0.00000
+  2.82743 -0.62832  0.00000  0.00000  0.00000
+  2.98451 -0.62832  0.00000  0.00000  0.00000
+  3.14159 -0.62832  0.00000  0.00000  0.00000
+
+  0.00000 -0.31416  0.00000  0.00000  0.00000
+  0.15708 -0.31416  0.00000  0.00000  0.00000
+  0.31416 -0.31416  0.00006  0.00139 -0.00008
+  0.47124 -0.31416  0.00175  0.03429 -0.00237
+  0.62832 -0.31416  0.02789  0.43684 -0.03775
+  0.78540 -0.31416  0.23985  2.81450 -0.32460
+  0.94248 -0.31416  1.11300  8.68950 -1.50627
+  1.09956 -0.31416  2.78709 10.81470 -3.77189
+  1.25664 -0.31416  3.76628 -0.17591 -5.09706
+  1.41372 -0.31416  2.74649 -10.91373 -3.71695
+  1.57080 -0.31416  1.08081 -8.53916 -1.46271
+  1.72788 -0.31416  0.22952 -2.71473 -0.31062
+  1.88496 -0.31416  0.02630 -0.41440 -0.03560
+  2.04204 -0.31416  0.00000  0.00000  0.00000
+  2.19911 -0.31416  0.00000  0.00000  0.00000
+  2.35619 -0.31416  0.00000 -0.00000  0.00000
+  2.51327 -0.31416  0.00000 -0.00000  0.00000
+  2.67035 -0.31416  0.00000 -0.00000  0.00000
+  2.82743 -0.31416  0.00000 -0.00000  0.00000
+  2.98451 -0.31416  0.00000 -0.00000  0.00000
+  3.14159 -0.31416  0.00000  0.00000  0.00000
+
+  0.00000  0.00000  0.00000  0.00000  0.00000
+  0.15708  0.00000  0.00000  0.00000  0.00000
+  0.31416  0.00000  0.00001  0.00027 -0.00010
+  0.47124  0.00000  0.00033  0.00653 -0.00307
+  0.62832  0.00000  0.00531  0.08316 -0.04889
+  0.78540  0.00000  0.04566  0.53575 -0.42038
+  0.94248  0.00000  0.21186  1.65409 -1.95071
+  1.09956  0.00000  0.53054  2.05863 -4.88482
+  1.25664  0.00000  0.71693 -0.03349 -6.60099
+  1.41372  0.00000  0.52281 -2.07748 -4.81366
+  1.57080  0.00000  0.20574 -1.62547 -1.89429
+  1.72788  0.00000  0.04369 -0.51675 -0.40226
+  1.88496  0.00000  0.00501 -0.07885 -0.04603
+  2.04204  0.00000  0.00001  0.00007  0.00024
+  2.19911  0.00000  0.00002  0.00004  0.00042
+  2.35619  0.00000  0.00002 -0.00004  0.00041
+  2.51327  0.00000  0.00001 -0.00006  0.00021
+  2.67035  0.00000  0.00000 -0.00003  0.00006
+  2.82743  0.00000  0.00000 -0.00001  0.00001
+  2.98451  0.00000  0.00000 -0.00000  0.00000
+  3.14159  0.00000  0.00000  0.00000  0.00000
+
+  0.00000  0.31416  0.00000  0.00000  0.00000
+  0.15708  0.31416  0.00000  0.00000  0.00000
+  0.31416  0.31416  0.00000  0.00000 -0.00000
+  0.47124  0.31416  0.00001  0.00011 -0.00009
+  0.62832  0.31416  0.00009  0.00134 -0.00146
+  0.78540  0.31416  0.00074  0.00865 -0.01257
+  0.94248  0.31416  0.00342  0.02670 -0.05835
+  1.09956  0.31416  0.00856  0.03323 -0.14612
+  1.25664  0.31416  0.01157 -0.00054 -0.19746
+  1.41372  0.31416  0.00844 -0.03353 -0.14399
+  1.57080  0.31416  0.00333 -0.02610 -0.05657
+  1.72788  0.31416  0.00080 -0.00709 -0.01090
+  1.88496  0.31416  0.00065  0.00418  0.00558
+  2.04204  0.31416  0.00188  0.01068  0.02308
+  2.19911  0.31416  0.00337  0.00587  0.04129
+  2.35619  0.31416  0.00326 -0.00712  0.03987
+  2.51327  0.31416  0.00170 -0.01037  0.02078
+  2.67035  0.31416  0.00048 -0.00479  0.00584
+  2.82743  0.31416  0.00007 -0.00101  0.00089
+  2.98451  0.31416  0.00001 -0.00011  0.00007
+  3.14159  0.31416  0.00000  0.00000  0.00000
+
+  0.00000  0.62832  0.00000  0.00000  0.00000
+  0.15708  0.62832  0.00000  0.00000  0.00000
+  0.31416  0.62832  0.00000  0.00000  0.00000
+  0.47124  0.62832  0.00000  0.00000  0.00000
+  0.62832  0.62832  0.00000  0.00000  0.00000
+  0.78540  0.62832  0.00000  0.00000  0.00000
+  0.94248  0.62832  0.00000  0.00000  0.00000
+  1.09956  0.62832  0.00000  0.00000  0.00000
+  1.25664  0.62832  0.00000  0.00000  0.00000
+  1.41372  0.62832  0.00001  0.00011  0.00002
+  1.57080  0.62832  0.00011  0.00193  0.00049
+  1.72788  0.62832  0.00126  0.01707  0.00554
+  1.88496  0.62832  0.00775  0.07440  0.03406
+  2.04204  0.62832  0.02571  0.14573  0.11292
+  2.19911  0.62832  0.04601  0.08008  0.20204
+  2.35619  0.62832  0.04442 -0.09713  0.19509
+  2.51327  0.62832  0.02315 -0.14152  0.10165
+  2.67035  0.62832  0.00651 -0.06535  0.02858
+  2.82743  0.62832  0.00099 -0.01380  0.00434
+  2.98451  0.62832  0.00008 -0.00145  0.00036
+  3.14159  0.62832  0.00000  0.00000  0.00000
+
+  0.00000  0.94248  0.00000  0.00000  0.00000
+  0.15708  0.94248  0.00000  0.00000  0.00000
+  0.31416  0.94248  0.00000  0.00000  0.00000
+  0.47124  0.94248  0.00000  0.00000  0.00000
+  0.62832  0.94248  0.00000  0.00000  0.00000
+  0.78540  0.94248  0.00000  0.00000  0.00000
+  0.94248  0.94248  0.00000  0.00000  0.00000
+  1.09956  0.94248  0.00000  0.00000  0.00000
+  1.25664  0.94248  0.00000  0.00000  0.00000
+  1.41372  0.94248  0.00001  0.00013 -0.00002
+  1.57080  0.94248  0.00013  0.00224 -0.00044
+  1.72788  0.94248  0.00146  0.01975 -0.00506
+  1.88496  0.94248  0.00897  0.08609 -0.03107
+  2.04204  0.94248  0.02975  0.16862 -0.10302
+  2.19911  0.94248  0.05324  0.09265 -0.18433
+  2.35619  0.94248  0.05140 -0.11239 -0.17799
+  2.51327  0.94248  0.02678 -0.16374 -0.09274
+  2.67035  0.94248  0.00753 -0.07562 -0.02608
+  2.82743  0.94248  0.00114 -0.01596 -0.00396
+  2.98451  0.94248  0.00009 -0.00167 -0.00032
+  3.14159  0.94248  0.00000  0.00000  0.00000
+
+  0.00000  1.25664  0.00000  0.00000  0.00000
+  0.15708  1.25664  0.00000  0.00000  0.00000
+  0.31416  1.25664  0.00000  0.00000  0.00000
+  0.47124  1.25664  0.00000  0.00000  0.00000
+  0.62832  1.25664  0.00000  0.00000  0.00000
+  0.78540  1.25664  0.00000  0.00000  0.00000
+  0.94248  1.25664  0.00000  0.00000  0.00000
+  1.09956  1.25664  0.00000  0.00000  0.00000
+  1.25664  1.25664  0.00000  0.00000  0.00000
+  1.41372  1.25664  0.00000  0.00001 -0.00001
+  1.57080  1.25664  0.00001  0.00022 -0.00014
+  1.72788  1.25664  0.00014  0.00194 -0.00162
+  1.88496  1.25664  0.00088  0.00845 -0.00996
+  2.04204  1.25664  0.00292  0.01655 -0.03304
+  2.19911  1.25664  0.00522  0.00909 -0.05911
+  2.35619  1.25664  0.00504 -0.01103 -0.05708
+  2.51327  1.25664  0.00263 -0.01607 -0.02974
+  2.67035  1.25664  0.00074 -0.00742 -0.00836
+  2.82743  1.25664  0.00011 -0.00157 -0.00127
+  2.98451  1.25664  0.00001 -0.00016 -0.00010
+  3.14159  1.25664  0.00000  0.00000  0.00000
+
+  0.00000  1.57080  0.00000  0.00000  0.00000
+  0.15708  1.57080  0.00000  0.00000  0.00000
+  0.31416  1.57080  0.00000  0.00000  0.00000
+  0.47124  1.57080  0.00000  0.00000  0.00000
+  0.62832  1.57080  0.00000  0.00000  0.00000
+  0.78540  1.57080  0.00000  0.00000  0.00000
+  0.94248  1.57080  0.00000  0.00000  0.00000
+  1.09956  1.57080  0.00000  0.00000  0.00000
+  1.25664  1.57080  0.00000  0.00000  0.00000
+  1.41372  1.57080  0.00000  0.00000 -0.00000
+  1.57080  1.57080  0.00000  0.00000 -0.00000
+  1.72788  1.57080  0.00000  0.00002 -0.00002
+  1.88496  1.57080  0.00001  0.00007 -0.00014
+  2.04204  1.57080  0.00002  0.00014 -0.00047
+  2.19911  1.57080  0.00004  0.00008 -0.00083
+  2.35619  1.57080  0.00004 -0.00009 -0.00080
+  2.51327  1.57080  0.00002 -0.00013 -0.00042
+  2.67035  1.57080  0.00001 -0.00006 -0.00012
+  2.82743  1.57080  0.00000 -0.00001 -0.00002
+  2.98451  1.57080  0.00000 -0.00000 -0.00000
+  3.14159  1.57080  0.00000  0.00000  0.00000
+
+  0.00000  1.88496  0.00000  0.00000  0.00000
+  0.15708  1.88496  0.00000  0.00000  0.00000
+  0.31416  1.88496  0.00000  0.00000  0.00000
+  0.47124  1.88496  0.00000  0.00000  0.00000
+  0.62832  1.88496  0.00000  0.00000  0.00000
+  0.78540  1.88496  0.00000  0.00000  0.00000
+  0.94248  1.88496  0.00000  0.00000  0.00000
+  1.09956  1.88496  0.00000  0.00000  0.00000
+  1.25664  1.88496  0.00000  0.00000  0.00000
+  1.41372  1.88496  0.00000  0.00000  0.00000
+  1.57080  1.88496  0.00000  0.00000  0.00000
+  1.72788  1.88496  0.00000  0.00000  0.00000
+  1.88496  1.88496  0.00000  0.00000  0.00000
+  2.04204  1.88496  0.00000  0.00000  0.00000
+  2.19911  1.88496  0.00000  0.00000  0.00000
+  2.35619  1.88496  0.00000  0.00000  0.00000
+  2.51327  1.88496  0.00000  0.00000  0.00000
+  2.67035  1.88496  0.00000  0.00000  0.00000
+  2.82743  1.88496  0.00000 -0.00000  0.00000
+  2.98451  1.88496  0.00000 -0.00000  0.00000
+  3.14159  1.88496  0.00000 -0.00000  0.00000
+
+  0.00000  2.19911  0.00000  0.00000  0.00000
+  0.15708  2.19911  0.00000  0.00000  0.00000
+  0.31416  2.19911  0.00000  0.00000  0.00000
+  0.47124  2.19911  0.00000  0.00000  0.00000
+  0.62832  2.19911  0.00000  0.00000  0.00000
+  0.78540  2.19911  0.00000  0.00000  0.00000
+  0.94248  2.19911  0.00000  0.00000  0.00000
+  1.09956  2.19911  0.00000  0.00000  0.00000
+  1.25664  2.19911  0.00000  0.00000  0.00000
+  1.41372  2.19911  0.00000  0.00000  0.00000
+  1.57080  2.19911  0.00000  0.00000  0.00000
+  1.72788  2.19911  0.00000  0.00000  0.00000
+  1.88496  2.19911  0.00000  0.00000  0.00000
+  2.04204  2.19911  0.00000  0.00000  0.00000
+  2.19911  2.19911  0.00000  0.00000  0.00000
+  2.35619  2.19911  0.00000  0.00000  0.00000
+  2.51327  2.19911  0.00000  0.00000  0.00000
+  2.67035  2.19911  0.00000  0.00000  0.00000
+  2.82743  2.19911  0.00000 -0.00000  0.00000
+  2.98451  2.19911  0.00000 -0.00000  0.00000
+  3.14159  2.19911  0.00000 -0.00000  0.00000
+
+  0.00000  2.51327  0.00000  0.00000  0.00000
+  0.15708  2.51327  0.00000  0.00000  0.00000
+  0.31416  2.51327  0.00000  0.00000  0.00000
+  0.47124  2.51327  0.00000  0.00000  0.00000
+  0.62832  2.51327  0.00000  0.00000  0.00000
+  0.78540  2.51327  0.00000  0.00000  0.00000
+  0.94248  2.51327  0.00000  0.00000  0.00000
+  1.09956  2.51327  0.00000  0.00000  0.00000
+  1.25664  2.51327  0.00000  0.00000  0.00000
+  1.41372  2.51327  0.00000  0.00000  0.00000
+  1.57080  2.51327  0.00000  0.00000  0.00000
+  1.72788  2.51327  0.00000  0.00000  0.00000
+  1.88496  2.51327  0.00000  0.00000  0.00000
+  2.04204  2.51327  0.00000  0.00000  0.00000
+  2.19911  2.51327  0.00000  0.00000  0.00000
+  2.35619  2.51327  0.00000  0.00000  0.00000
+  2.51327  2.51327  0.00000  0.00000  0.00001
+  2.67035  2.51327  0.00000  0.00000  0.00001
+  2.82743  2.51327  0.00000 -0.00000  0.00001
+  2.98451  2.51327  0.00000 -0.00000  0.00001
+  3.14159  2.51327  0.00000 -0.00000  0.00000
+
+  0.00000  2.82743  0.00000  0.00000  0.00000
+  0.15708  2.82743  0.00000  0.00000  0.00000
+  0.31416  2.82743  0.00000  0.00000  0.00000
+  0.47124  2.82743  0.00000  0.00000  0.00000
+  0.62832  2.82743  0.00000  0.00000  0.00000
+  0.78540  2.82743  0.00000  0.00000  0.00000
+  0.94248  2.82743  0.00000  0.00000  0.00000
+  1.09956  2.82743  0.00000  0.00000  0.00000
+  1.25664  2.82743  0.00000  0.00000  0.00000
+  1.41372  2.82743  0.00000  0.00000  0.00000
+  1.57080  2.82743  0.00000  0.00000  0.00000
+  1.72788  2.82743  0.00000  0.00000  0.00000
+  1.88496  2.82743  0.00000  0.00000  0.00000
+  2.04204  2.82743  0.00000  0.00000  0.00000
+  2.19911  2.82743  0.00000  0.00000  0.00000
+  2.35619  2.82743  0.00000  0.00001  0.00000
+  2.51327  2.82743  0.00000  0.00004  0.00002
+  2.67035  2.82743  0.00001  0.00004  0.00004
+  2.82743  2.82743  0.00001 -0.00001  0.00005
+  2.98451  2.82743  0.00001 -0.00004  0.00003
+  3.14159  2.82743  0.00000 -0.00003  0.00001
+</pre></div>  </div></div>
+<b name="KL_ENTROPY.md_working_1.datkl_kl" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datkl_kl","KL_ENTROPY.md_working_1.datkl_kl","green")'>kl_kl</b><span style="display:none;" id="KL_ENTROPY.md_working_1.datkl_kl">The CUSTOM action with label <b>kl_kl</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">kl_kl</td><td width="5%"><font color="green">grid</font></td><td>the grid obtained by doing an element-wise application of an arbitrary function to the input grid</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.dath">h</b>,<b name="KL_ENTROPY.md_working_1.datkl_ref">kl_ref</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=y*log(y/(0.5*(x+y))) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="KL_ENTROPY.md_working_1.datkl" onclick='showPath("KL_ENTROPY.md_working_1.dat","KL_ENTROPY.md_working_1.datkl","KL_ENTROPY.md_working_1.datkl","black")'>kl</b><span style="display:none;" id="KL_ENTROPY.md_working_1.datkl">The CUSTOM action with label <b>kl</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">kl</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">INTEGRATE_GRID<span class="right">Calculate the numerical integral of the function stored on the grid <a href="https://www.plumed.org/doc-master/user-doc/html/INTEGRATE_GRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the function on a grid that is being integrated<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datkl_kl">kl_kl</b> <span class="plumedtooltip">PERIODIC<span class="right">if the value of the output integral has a periodid domain then you use this keyword to specify the periodicity<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="KL_ENTROPY.md_working_1.datkl">kl</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>The CV <code>kl</code> that is defined in the input above describes the disribution of bond directions that is observed in the structure.  To compute it we first define the orientations
+of all the bonds in our structure relative to the lab frame by computing the angle between each bond direction and the z axis and the torsional angle around the z axis between
+our bond vector and the positive x direction.  In other words, we compute two of the three <a href="https://en.wikipedia.org/wiki/Spherical_coordinate_system">spherical polar coordinates</a>
+for each of the bond directions in our crystal structure.</p>
+<p>A normalised histogram that describes the instaneous distribution for these bond directions is then computed by using the <a href="../KDE/">KDE</a> action. The final scalar value for the CV is computed by
+determining the <a href="https://en.wikipedia.org/wiki/Kullback–Leibler_divergence">Kullbeck-Leibler divergence</a> between this instaneous distribution and a reference distribution that is provided in input.</p>
+<p>Notice that this action will also works if you use KDEs computed using the <a href="../SPHERICAL_KDE/">SPHERICAL_KDE</a> action in input as is illustrated in the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_KL_ENTROPY.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../KL_ENTROPY.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/gridtools/rt-kldiv/averageSp_X240.grid</span>
+<br/><span style="color:blue" class="comment"># These two commands compute a set of weights that allow us to determine if each distance in our system is a bond</span>
+<b name="KL_ENTROPY.md_working_2.datd1" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.datd1","KL_ENTROPY.md_working_2.datd1","blue")'>d1</b><span style="display:none;" id="KL_ENTROPY.md_working_2.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,3 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,4 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,5 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,3 <span class="plumedtooltip">ATOMS6<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,4 <span class="plumedtooltip">ATOMS7<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,5 <span class="plumedtooltip">ATOMS8<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4 <span class="plumedtooltip">ATOMS9<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5 <span class="plumedtooltip">ATOMS10<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=4,5
+<b name="KL_ENTROPY.md_working_2.datd1lt" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.datd1lt","KL_ENTROPY.md_working_2.datd1lt","blue")'>d1lt</b><span style="display:none;" id="KL_ENTROPY.md_working_2.datd1lt">The LESS_THAN action with label <b>d1lt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1lt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL D_0=2.0 R_0=0.5 D_MAX=5.0}
+<br/><span style="color:blue" class="comment"># These commands compute the directors of the bonds between the atoms</span>
+<b name="KL_ENTROPY.md_working_2.datd1c" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.datd1c","KL_ENTROPY.md_working_2.datd1c","blue")'>d1c</b><span style="display:none;" id="KL_ENTROPY.md_working_2.datd1c">The DISTANCE action with label <b>d1c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1c.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1c.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1c.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,1 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,1 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=4,1 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,1 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,2 <span class="plumedtooltip">ATOMS6<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=4,2 <span class="plumedtooltip">ATOMS7<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,2 <span class="plumedtooltip">ATOMS8<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=4,3 <span class="plumedtooltip">ATOMS9<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,3 <span class="plumedtooltip">ATOMS10<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,4 <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+<b name="KL_ENTROPY.md_working_2.datd1l" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.datd1l","KL_ENTROPY.md_working_2.datd1l","blue")'>d1l</b><span style="display:none;" id="KL_ENTROPY.md_working_2.datd1l">The CUSTOM action with label <b>d1l</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1l</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.datd1c">d1c.x</b>,<b name="KL_ENTROPY.md_working_2.datd1c">d1c.y</b>,<b name="KL_ENTROPY.md_working_2.datd1c">d1c.z</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x*x+y*y+z*z) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="KL_ENTROPY.md_working_2.datd1nx" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.datd1nx","KL_ENTROPY.md_working_2.datd1nx","blue")'>d1nx</b><span style="display:none;" id="KL_ENTROPY.md_working_2.datd1nx">The CUSTOM action with label <b>d1nx</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1nx</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.datd1c">d1c.x</b>,<b name="KL_ENTROPY.md_working_2.datd1l">d1l</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="KL_ENTROPY.md_working_2.datd1ny" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.datd1ny","KL_ENTROPY.md_working_2.datd1ny","blue")'>d1ny</b><span style="display:none;" id="KL_ENTROPY.md_working_2.datd1ny">The CUSTOM action with label <b>d1ny</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1ny</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.datd1c">d1c.y</b>,<b name="KL_ENTROPY.md_working_2.datd1l">d1l</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="KL_ENTROPY.md_working_2.datd1nz" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.datd1nz","KL_ENTROPY.md_working_2.datd1nz","blue")'>d1nz</b><span style="display:none;" id="KL_ENTROPY.md_working_2.datd1nz">The CUSTOM action with label <b>d1nz</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1nz</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.datd1c">d1c.z</b>,<b name="KL_ENTROPY.md_working_2.datd1l">d1l</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+
+<span style="color:blue" class="comment"># Now compute our instaneous normalised histogram of the bond directions</span>
+<b name="KL_ENTROPY.md_working_2.dathu" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.dathu","KL_ENTROPY.md_working_2.dathu","green")'>hu</b><span style="display:none;" id="KL_ENTROPY.md_working_2.dathu">The SPHERICAL_KDE action with label <b>hu</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hu</td><td width="5%"><font color="green">grid</font></td><td>a function on a grid that was obtained by doing a Kernel Density Estimation using the input arguments</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SPHERICAL_KDE<span class="right">Create a histogram from the input scalar/vector/matrix using SPHERICAL_KDE <a href="https://www.plumed.org/doc-master/user-doc/html/SPHERICAL_KDE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">HEIGHTS<span class="right"> this keyword takes the label of an action that calculates a vector of values<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.datd1lt">d1lt</b> <span class="plumedtooltip">ARG<span class="right">the label for the value that should be used to construct the histogram<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.datd1nx">d1nx</b>,<b name="KL_ENTROPY.md_working_2.datd1ny">d1ny</b>,<b name="KL_ENTROPY.md_working_2.datd1nz">d1nz</b> <span class="plumedtooltip">GRID_BIN<span class="right">the number of points on the fibonacci sphere at which the density should be evaluated<i></i></span></span>=400 <span class="plumedtooltip">CONCENTRATION<span class="right">the concentration parameter for the Von Mises-Fisher distributions<i></i></span></span>=100.0
+<b name="KL_ENTROPY.md_working_2.datde" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.datde","KL_ENTROPY.md_working_2.datde","black")'>de</b><span style="display:none;" id="KL_ENTROPY.md_working_2.datde">The SUM action with label <b>de</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">de</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.datd1lt">d1lt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="KL_ENTROPY.md_working_2.dath" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.dath","KL_ENTROPY.md_working_2.dath","green")'>h</b><span style="display:none;" id="KL_ENTROPY.md_working_2.dath">The CUSTOM action with label <b>h</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">h</td><td width="5%"><font color="green">grid</font></td><td>the grid obtained by doing an element-wise application of an arbitrary function to the input grid</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.dathu">hu</b>,<b name="KL_ENTROPY.md_working_2.datde">de</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+
+<span style="color:blue" class="comment"># And lastly compute the KL_ENTROPY</span>
+<span id="KL_ENTROPY.md_working_2.datkl_short"><b name="KL_ENTROPY.md_working_2.datkl" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.datkl","KL_ENTROPY.md_working_2.datkl_shortcut","black")'>kl</b><span style="display:none;" id="KL_ENTROPY.md_working_2.datkl_shortcut">The KL_ENTROPY action with label <b>kl</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">kl</td><td width="5%"><font color="black">scalar</font></td><td>the value of the KL-Entropy</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KL_ENTROPY<span class="right">Calculate the KL entropy of a distribution This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("KL_ENTROPY.md_working_2.datkl");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/KL_ENTROPY">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the grid that you wish to use in the KL entropy calculation<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.dath">h</b> <span class="plumedtooltip">REFERENCE<span class="right">a file containing the reference density in grid format<i></i></span></span>=<div class="plumedtooltip">regtest/gridtools/rt-kldiv/averageSp_X240.grid<div class="right"> Click <a onclick='openModal("KL_ENTROPY.md_working_2.datregtest/gridtools/rt-kldiv/averageSp_X240.grid1")'>here</a> to see an extract from this file.<i></i></div></div><div id="KL_ENTROPY.md_working_2.datregtest/gridtools/rt-kldiv/averageSp_X240.grid1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("KL_ENTROPY.md_working_2.datregtest/gridtools/rt-kldiv/averageSp_X240.grid1")'>&times;</span>  <h2>FILE: regtest/gridtools/rt-kldiv/averageSp_X240.grid</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS X_vectors.x X_vectors.y X_vectors.z av_Sp_X dav_Sp_X_X_vectors.x dav_Sp_X_X_vectors.y dav_Sp_X_X_vectors.z
+#! SET nbins  400
+ 0.070666 -0.997500 0.000000 0.000001 0.000005 -0.000065 0.000000
+ -0.090139 -0.992500 -0.082575 0.000006 -0.000026 -0.000291 -0.000024
+ 0.013780 -0.987500 0.157015 0.000001 0.000001 -0.000064 0.000010
+ 0.113329 -0.982500 -0.147818 0.000000 0.000003 -0.000022 -0.000003
+ -0.207711 -0.977500 0.036741 0.000029 -0.000300 -0.001412 0.000053
+ 0.196513 -0.972500 0.125006 0.000153 0.001506 -0.007450 0.000958
+ -0.065646 -0.967500 -0.244201 0.000011 -0.000037 -0.000538 -0.000136
+ -0.125036 -0.962500 0.240749 0.000000 -0.000001 -0.000006 0.000001
+ 0.270932 -0.957500 -0.098944 0.000050 0.000675 -0.002385 -0.000246
+ -0.281499 -0.952500 -0.116199 0.001040 -0.014640 -0.049538 -0.006043
+ 0.135527 -0.947500 0.289614 0.000100 0.000677 -0.004731 0.001446
+ 0.100023 -0.942500 -0.318888 0.000000 0.000000 -0.000004 -0.000001
+ -0.301081 -0.937500 0.174482 0.000025 -0.000374 -0.001164 0.000217
+ 0.352746 -0.932500 0.077550 0.003155 0.055643 -0.147095 0.012233
+ -0.214997 -0.927500 -0.305811 0.000829 -0.008912 -0.038446 -0.012676
+ -0.049605 -0.922500 0.382796 0.000001 -0.000001 -0.000023 0.000010
+ 0.304128 -0.917500 -0.256320 0.000005 0.000079 -0.000240 -0.000067
+ -0.408727 -0.912500 -0.016902 0.004371 -0.089333 -0.199440 -0.003694
+ 0.297745 -0.907500 0.296296 0.005445 0.081067 -0.247083 0.080672
+ -0.019894 -0.902500 -0.430230 0.000005 -0.000005 -0.000216 -0.000103
+ -0.282562 -0.897500 0.338604 0.000000 -0.000007 -0.000021 0.000008
+ 0.447019 -0.892500 -0.060146 0.002839 0.063444 -0.126670 -0.008536
+ -0.378258 -0.887500 -0.263182 0.024252 -0.458681 -1.076195 -0.319138
+ 0.103225 -0.882500 0.458845 0.000055 0.000282 -0.002409 0.001252
+ 0.238436 -0.877500 -0.416103 0.000000 0.000000 -0.000001 -0.000001
+ -0.465499 -0.872500 0.148507 0.000835 -0.019443 -0.036442 0.006203
+ 0.451569 -0.867500 0.208636 0.064165 1.448755 -2.783174 0.669362
+ -0.195369 -0.862500 -0.466824 0.000637 -0.006224 -0.027477 -0.014872
+ -0.174128 -0.857500 0.484121 0.000000 -0.000000 -0.000000 0.000000
+ 0.462713 -0.852500 -0.243189 0.000120 0.002780 -0.005122 -0.001461
+ -0.513263 -0.847500 -0.135295 0.090593 -2.324904 -3.838881 -0.612837
+ 0.291347 -0.842500 0.453112 0.006252 0.091080 -0.263378 0.141650
+ 0.092553 -0.837500 -0.538542 0.000000 0.000000 -0.000004 -0.000002
+ -0.438025 -0.832500 0.339231 0.000008 -0.000179 -0.000340 0.000139
+ 0.559549 -0.827500 0.046357 0.063445 1.775024 -2.625031 0.147057
+ -0.386237 -0.822500 -0.417510 0.043715 -0.844212 -1.797769 -0.912568
+ 0.002810 -0.817500 0.575922 0.000002 0.000000 -0.000071 0.000050
+ 0.391683 -0.812500 -0.431773 0.000000 0.000006 -0.000013 -0.000007
+ -0.587350 -0.807500 0.054436 0.020991 -0.616463 -0.847525 0.057134
+ 0.475269 -0.802500 0.360712 0.188031 4.468262 -7.544740 3.391251
+ -0.107984 -0.797500 -0.593577 0.000037 -0.000200 -0.001477 -0.001099
+ -0.324821 -0.792500 0.516173 0.000000 -0.000000 -0.000000 0.000000
+ 0.594397 -0.787500 -0.162900 0.003274 0.097299 -0.128908 -0.026666
+ -0.553964 -0.782500 -0.284285 0.437943 -12.130231 -17.134527 -6.225034
+ 0.218610 -0.777500 0.589664 0.000702 0.007671 -0.027283 0.020692
+ 0.239428 -0.772500 -0.588148 0.000000 0.000000 -0.000000 -0.000000
+ -0.579288 -0.767500 0.274535 0.000242 -0.007001 -0.009276 0.003318
+ 0.618270 -0.762500 0.190619 0.504532 15.596844 -19.235270 4.808674
+ -0.330088 -0.757500 -0.563237 0.009837 -0.162346 -0.372560 -0.277015
+ -0.138273 -0.752500 0.643913 0.000000 -0.000000 -0.000000 0.000000
+ 0.541537 -0.747500 -0.384683 0.000009 0.000247 -0.000341 -0.000175
+ -0.664704 -0.742500 -0.082841 0.268621 -8.927674 -9.972559 -1.112639
+ 0.437739 -0.737500 0.514274 0.088499 1.936982 -3.263413 2.275646
+ 0.024809 -0.732500 -0.680315 0.000000 0.000000 -0.000010 -0.000009
+ -0.481588 -0.727500 0.488688 0.000000 -0.000004 -0.000007 0.000004
+ 0.690469 -0.722500 -0.035304 0.064145 2.214514 -2.317246 -0.113230
+ -0.536977 -0.717500 -0.443677 0.437670 -11.750948 -15.701426 -9.709218
+ 0.096957 -0.712500 0.694941 0.000011 0.000051 -0.000375 0.000366
+ 0.400792 -0.707500 -0.582074 0.000000 0.000000 -0.000000 -0.000000
+ -0.693560 -0.702500 0.159587 0.006873 -0.238358 -0.241431 0.054846
+ 0.623473 -0.697500 0.353235 1.074789 33.505118 -37.483281 18.982661
+ -0.222614 -0.692500 -0.686212 0.000314 -0.003497 -0.010879 -0.010781
+ -0.301359 -0.687500 0.660702 0.000000 -0.000000 -0.000000 0.000000
+ 0.672838 -0.682500 -0.285452 0.000338 0.011364 -0.011527 -0.004821
+ -0.693321 -0.677500 -0.245560 1.193025 -41.357471 -40.413728 -14.647967
+ 0.347508 -0.672500 0.653439 0.006560 0.113984 -0.220583 0.214331
+ 0.186279 -0.667500 -0.720933 0.000000 0.000000 -0.000000 -0.000000
+ -0.628072 -0.662500 0.408190 0.000008 -0.000259 -0.000273 0.000168
+ 0.743182 -0.657500 0.123993 0.571654 21.242147 -18.793125 3.544063
+ -0.466914 -0.652500 -0.596855 0.078536 -1.833466 -2.562223 -2.343716
+ -0.059214 -0.647500 0.759761 0.000000 -0.000000 -0.000001 0.000001
+ 0.559958 -0.642500 -0.523107 0.000000 0.000003 -0.000003 -0.000003
+ -0.770414 -0.637500 0.007517 0.115088 -4.433276 -3.668436 0.043255
+ 0.576214 -0.632500 0.517611 0.481194 13.863535 -15.217755 12.453557
+ -0.075635 -0.627500 -0.774934 0.000002 -0.000006 -0.000051 -0.000063
+ -0.470094 -0.622500 0.625704 0.000000 -0.000000 -0.000000 0.000000
+ 0.773173 -0.617500 -0.144557 0.009790 0.378478 -0.302274 -0.070762
+ -0.671071 -0.612500 -0.417740 1.338467 -44.910355 -40.990564 -27.956592
+ 0.213683 -0.607500 0.765038 0.000079 0.000843 -0.002397 0.003019
+ 0.360931 -0.602500 -0.711845 0.000000 0.000000 -0.000000 -0.000000
+ -0.750493 -0.597500 0.282408 0.000373 -0.013979 -0.011129 0.005260
+ 0.747589 -0.592500 0.300091 1.575281 58.883129 -46.667701 23.636387
+ -0.350121 -0.587500 -0.729561 0.002354 -0.041217 -0.069163 -0.085886
+ -0.235689 -0.582500 0.777910 0.000000 -0.000000 -0.000000 0.000000
+ 0.702323 -0.577500 -0.416216 0.000006 0.000227 -0.000187 -0.000135
+ -0.802461 -0.572500 -0.168228 0.743407 -29.827754 -21.280035 -6.253108
+ 0.480095 -0.567500 0.668919 0.038748 0.930135 -1.099472 1.295960
+ 0.098248 -0.562500 -0.820939 0.000000 0.000000 -0.000000 -0.000000
+ -0.629544 -0.557500 0.541173 0.000000 -0.000002 -0.000002 0.000002
+ 0.833097 -0.552500 0.026312 0.139165 5.796917 -3.844444 0.183087
+ -0.598883 -0.547500 -0.584451 0.301156 -9.017858 -8.244142 -8.800539
+ 0.046989 -0.542500 0.838741 0.000000 0.000000 -0.000005 0.000007
+ 0.533944 -0.537500 -0.652685 0.000000 0.000000 -0.000000 -0.000000
+ -0.837730 -0.532500 0.121048 0.010509 -0.440172 -0.279794 0.063603
+ 0.702065 -0.527500 0.478381 0.996995 34.997750 -26.295731 23.847165
+ -0.195245 -0.522500 -0.829984 0.000012 -0.000118 -0.000315 -0.000501
+ -0.418166 -0.517500 0.746546 0.000000 -0.000000 -0.000000 0.000000
+ 0.815480 -0.512500 -0.268954 0.000329 0.013398 -0.008420 -0.004419
+ -0.785689 -0.507500 -0.353747 1.308818 -51.416149 -33.211246 -23.149546
+ 0.341545 -0.502500 0.794255 0.000533 0.009094 -0.013380 0.021148
+ 0.285617 -0.497500 -0.819095 0.000000 0.000000 -0.000000 -0.000000
+ -0.766404 -0.492500 0.412393 0.000005 -0.000185 -0.000119 0.000100
+ 0.846415 -0.487500 0.214303 0.652007 27.593420 -15.892671 6.986343
+ -0.480883 -0.482500 -0.732083 0.011907 -0.286302 -0.287264 -0.435858
+ -0.140364 -0.477500 0.867348 0.000000 -0.000000 -0.000000 0.000000
+ 0.691502 -0.472500 -0.546414 0.000000 0.000001 -0.000001 -0.000001
+ -0.881645 -0.467500 -0.064388 0.121675 -5.363700 -2.844149 -0.391722
+ 0.608406 -0.462500 0.644931 0.118874 3.616184 -2.748962 3.833277
+ -0.013013 -0.457500 -0.889114 0.000000 -0.000000 -0.000000 -0.000001
+ -0.592691 -0.452500 0.666304 0.000000 -0.000000 -0.000000 0.000000
+ 0.889620 -0.447500 -0.091212 0.008656 0.385014 -0.193671 -0.039475
+ -0.719585 -0.442500 -0.535155 0.484233 -17.422355 -10.713666 -12.957009
+ 0.169569 -0.437500 0.883086 0.000001 0.000011 -0.000029 0.000058
+ 0.472747 -0.432500 -0.767759 0.000000 0.000000 -0.000000 -0.000000
+ -0.869493 -0.427500 0.247437 0.000250 -0.010882 -0.005350 0.003097
+ 0.810378 -0.422500 0.405933 0.734194 29.748717 -15.509845 14.901681
+ -0.324169 -0.417500 -0.848886 0.000081 -0.001306 -0.001682 -0.003420
+ -0.335222 -0.412500 0.847036 0.000000 -0.000000 -0.000000 0.000000
+ 0.821368 -0.407500 -0.399121 0.000003 0.000125 -0.000062 -0.000061
+ -0.877377 -0.402500 -0.261159 0.404071 -17.726138 -8.131935 -5.276333
+ 0.471662 -0.397500 0.787102 0.002436 0.057441 -0.048409 0.095856
+ 0.184321 -0.392500 -0.901093 0.000000 0.000000 -0.000000 -0.000000
+ -0.746307 -0.387500 0.541174 0.000000 -0.000001 -0.000000 0.000001
+ 0.917934 -0.382500 0.105316 0.079254 3.637493 -1.515732 0.417336
+ -0.607062 -0.377500 -0.699263 0.032003 -0.971385 -0.604053 -1.118919
+ -0.024771 -0.372500 0.927702 0.000000 -0.000000 -0.000000 0.000000
+ 0.646302 -0.367500 -0.668758 0.000000 0.000000 -0.000000 -0.000000
+ -0.930259 -0.362500 0.056670 0.005690 -0.264648 -0.103127 0.016122
+ 0.725723 -0.357500 0.587809 0.159281 5.779705 -2.847152 4.681348
+ -0.138347 -0.352500 -0.925529 0.000000 -0.000001 -0.000002 -0.000005
+ -0.524217 -0.347500 0.777457 0.000000 -0.000000 -0.000000 0.000000
+ 0.913493 -0.342500 -0.219599 0.000156 0.007110 -0.002666 -0.001709
+ -0.823500 -0.337500 -0.456006 0.291251 -11.992264 -4.914864 -6.640622
+ 0.299760 -0.332500 0.894197 0.000009 0.000131 -0.000145 0.000390
+ 0.383697 -0.327500 -0.863435 0.000000 0.000000 -0.000000 -0.000000
+ -0.867744 -0.322500 0.378173 0.000002 -0.000079 -0.000029 0.000034
+ 0.896897 -0.317500 0.307848 0.181520 8.140231 -2.881629 2.794024
+ -0.454189 -0.312500 -0.834300 0.000357 -0.008097 -0.005571 -0.014873
+ -0.229049 -0.307500 0.923569 0.000000 -0.000000 -0.000000 0.000000
+ 0.794090 -0.302500 -0.527177 0.000000 0.000000 -0.000000 -0.000000
+ -0.943193 -0.297500 -0.147920 0.039189 -1.848155 -0.582941 -0.289844
+ 0.596526 -0.292500 0.747396 0.005923 0.176670 -0.086628 0.221352
+ 0.065102 -0.287500 -0.955566 0.000000 0.000000 -0.000000 -0.000000
+ -0.694556 -0.282500 0.661654 0.000000 -0.000000 -0.000000 0.000000
+ 0.960543 -0.277500 -0.018746 0.002951 0.141735 -0.040947 -0.002766
+ -0.722010 -0.272500 -0.635960 0.037875 -1.367310 -0.516048 -1.204353
+ 0.102953 -0.267500 0.958042 0.000000 0.000000 -0.000000 0.000000
+ 0.572049 -0.262500 -0.777080 0.000000 0.000000 -0.000000 -0.000000
+ -0.948042 -0.257500 0.186842 0.000082 -0.003910 -0.001062 0.000771
+ 0.826393 -0.252500 0.503308 0.081770 3.378711 -1.032347 2.057776
+ -0.269736 -0.247500 -0.930584 0.000001 -0.000010 -0.000009 -0.000033
+ -0.430265 -0.242500 0.869520 0.000000 -0.000000 -0.000000 0.000000
+ 0.905769 -0.237500 -0.350964 0.000001 0.000041 -0.000011 -0.000016
+ -0.906085 -0.232500 -0.353488 0.060729 -2.751299 -0.705979 -1.073356
+ 0.429863 -0.227500 0.873763 0.000037 0.000801 -0.000424 0.001629
+ 0.273575 -0.222500 -0.935762 0.000000 0.000000 -0.000000 -0.000000
+ -0.834788 -0.217500 0.505789 0.000000 -0.000000 -0.000000 0.000000
+ 0.958282 -0.212500 0.191154 0.014682 0.703451 -0.155991 0.140321
+ -0.578119 -0.207500 -0.789127 0.000818 -0.023640 -0.008485 -0.032269
+ -0.106875 -0.202500 0.973433 0.000000 -0.000000 -0.000000 0.000000
+ 0.737118 -0.197500 -0.646259 0.000000 0.000000 -0.000000 -0.000000
+ -0.981063 -0.192500 -0.021407 0.001216 -0.059663 -0.011707 -0.001302
+ 0.709645 -0.187500 0.679152 0.006316 0.224111 -0.059214 0.214481
+ -0.064571 -0.182500 -0.981083 0.000000 -0.000000 -0.000000 -0.000000
+ -0.615672 -0.177500 0.767751 0.000000 -0.000000 -0.000000 0.000000
+ 0.973464 -0.172500 -0.150371 0.000036 0.001745 -0.000309 -0.000269
+ -0.820094 -0.167500 -0.547165 0.017235 -0.706705 -0.144341 -0.471512
+ 0.235306 -0.162500 0.958240 0.000000 0.000001 -0.000000 0.000002
+ 0.474164 -0.157500 -0.866235 0.000000 0.000000 -0.000000 -0.000000
+ -0.935509 -0.152500 0.318694 0.000000 -0.000019 -0.000003 0.000007
+ 0.905785 -0.147500 0.397237 0.014788 0.669737 -0.109061 0.293717
+ -0.399864 -0.142500 -0.905429 0.000003 -0.000060 -0.000022 -0.000137
+ -0.316988 -0.137500 0.938410 0.000000 -0.000000 -0.000000 0.000000
+ 0.868220 -0.132500 -0.478161 0.000000 0.000000 -0.000000 -0.000000
+ -0.963828 -0.127500 -0.234048 0.004238 -0.204250 -0.027019 -0.049598
+ 0.552951 -0.122500 0.824160 0.000081 0.002246 -0.000498 0.003347
+ 0.149074 -0.117500 -0.981820 0.000000 0.000000 -0.000000 -0.000000
+ -0.773583 -0.112500 0.623629 0.000000 -0.000000 -0.000000 0.000000
+ 0.992224 -0.107500 0.062738 0.000394 0.019534 -0.002116 0.001235
+ -0.689622 -0.102500 -0.716879 0.000812 -0.027989 -0.004160 -0.029095
+ 0.024273 -0.097500 0.994939 0.000000 0.000000 -0.000000 0.000000
+ 0.654488 -0.092500 -0.750393 0.000000 0.000000 -0.000000 -0.000000
+ -0.989931 -0.087500 0.111267 0.000013 -0.000633 -0.000056 0.000071
+ 0.805449 -0.082500 0.586895 0.002619 0.105476 -0.010804 0.076855
+ -0.197550 -0.077500 -0.977224 0.000000 -0.000000 -0.000000 -0.000000
+ -0.514632 -0.072500 0.854340 0.000000 -0.000000 -0.000000 0.000000
+ 0.956909 -0.067500 -0.282434 0.000000 0.000008 -0.000001 -0.000002
+ -0.896669 -0.062500 -0.438267 0.002892 -0.129655 -0.009037 -0.063372
+ 0.365240 -0.057500 0.929136 0.000000 0.000004 -0.000001 0.000009
+ 0.358404 -0.052500 -0.932089 0.000000 0.000000 -0.000000 -0.000000
+ -0.894117 -0.047500 0.445307 0.000000 -0.000000 -0.000000 0.000000
+ 0.960311 -0.042500 0.275674 0.001014 0.048666 -0.002154 0.013971
+ -0.521993 -0.037500 -0.852125 0.000007 -0.000188 -0.000014 -0.000307
+ -0.190735 -0.032500 0.981104 0.000000 -0.000000 -0.000000 0.000000
+ 0.803488 -0.027500 -0.594685 0.000000 0.000000 -0.000000 -0.000000
+ -0.994296 -0.022500 -0.104259 0.000130 -0.006444 -0.000146 -0.000676
+ 0.662803 -0.017500 0.748589 0.000106 0.003509 -0.000093 0.003963
+ 0.016936 -0.012500 -0.999778 0.000000 0.000000 -0.000000 -0.000000
+ -0.687863 -0.007500 0.725802 0.000000 -0.000000 -0.000000 0.000000
+ 0.997506 -0.002500 -0.070541 0.000007 0.000333 -0.000001 -0.000024
+ -0.783179 0.002500 -0.621791 0.000629 -0.024624 0.000079 -0.019550
+ 0.157474 0.007500 0.987495 0.000000 0.000000 0.000000 0.000000
+ 0.550899 0.012500 -0.834478 0.000000 0.000000 0.000000 -0.000000
+ -0.969825 0.017500 0.243173 0.000000 -0.000008 0.000000 0.000002
+ 0.879292 0.022500 0.475751 0.001450 0.063735 0.001631 0.034485
+ -0.326956 0.027500 -0.944639 0.000000 -0.000001 0.000000 -0.000002
+ -0.396948 0.032500 0.917266 0.000000 -0.000000 0.000000 0.000000
+ 0.912141 0.037500 -0.408157 0.000000 0.000000 0.000000 -0.000000
+ -0.948101 0.042500 -0.315117 0.001310 -0.062111 0.002784 -0.020644
+ 0.486132 0.047500 0.872594 0.000004 0.000090 0.000009 0.000161
+ 0.230912 0.052500 -0.971557 0.000000 0.000000 0.000000 -0.000000
+ -0.826317 0.057500 0.560263 0.000000 -0.000000 0.000000 0.000000
+ 0.987455 0.062500 0.145005 0.000428 0.021110 0.001336 0.003100
+ -0.629963 0.067500 -0.773686 0.000127 -0.003990 0.000428 -0.004900
+ -0.058081 0.072500 0.995676 0.000000 -0.000000 0.000000 0.000000
+ 0.715127 0.077500 -0.694685 0.000000 0.000000 0.000000 -0.000000
+ -0.996164 0.082500 0.029166 0.000052 -0.002611 0.000216 0.000076
+ 0.753919 0.087500 0.651114 0.001586 0.059795 0.006940 0.051641
+ -0.116042 0.092500 -0.988928 0.000000 -0.000000 0.000000 -0.000000
+ -0.582166 0.097500 0.807203 0.000000 -0.000000 0.000000 0.000000
+ 0.974037 0.102500 -0.201857 0.000002 0.000121 0.000013 -0.000025
+ -0.854123 0.107500 -0.508839 0.006504 -0.277763 0.034959 -0.165476
+ 0.285929 0.112500 0.951624 0.000000 0.000001 0.000000 0.000003
+ 0.431726 0.117500 -0.894319 0.000000 0.000000 0.000000 -0.000000
+ -0.921884 0.122500 0.367592 0.000000 -0.000002 0.000000 0.000001
+ 0.927484 0.127500 0.351450 0.008663 0.401734 0.055226 0.152228
+ -0.446202 0.132500 -0.885069 0.000008 -0.000170 0.000051 -0.000337
+ -0.268655 0.137500 0.953372 0.000000 -0.000000 0.000000 0.000000
+ 0.841491 0.142500 -0.521141 0.000000 0.000000 0.000000 -0.000000
+ -0.971794 0.147500 -0.184010 0.003932 -0.191056 0.028999 -0.036176
+ 0.591820 0.152500 0.791513 0.000356 0.010544 0.002717 0.014102
+ 0.098192 0.157500 -0.982625 0.000000 0.000000 0.000000 -0.000000
+ -0.735553 0.162500 0.657689 0.000000 -0.000000 0.000000 0.000000
+ 0.985800 0.167500 0.011889 0.000629 0.030986 0.005265 0.000374
+ -0.718239 0.172500 -0.674075 0.005418 -0.194580 0.046733 -0.182616
+ 0.074209 0.177500 0.981319 0.000000 0.000000 0.000000 0.000000
+ 0.607587 0.182500 -0.773002 0.000000 0.000000 0.000000 -0.000000
+ -0.969242 0.187500 0.159416 0.000040 -0.001915 0.000370 0.000315
+ 0.821563 0.192500 0.536636 0.027608 1.134101 0.265731 0.740783
+ -0.243056 0.197500 -0.949693 0.000000 -0.000001 0.000001 -0.000005
+ -0.461806 0.202500 0.863556 0.000000 -0.000000 0.000000 0.000000
+ 0.922857 0.207500 -0.324467 0.000001 0.000048 0.000011 -0.000017
+ -0.898673 0.212500 -0.383708 0.046794 -2.102625 0.497186 -0.897761
+ 0.403008 0.217500 0.888976 0.000015 0.000312 0.000168 0.000688
+ 0.302979 0.222500 -0.926659 0.000000 0.000000 0.000000 -0.000000
+ -0.848351 0.227500 0.478064 0.000000 -0.000001 0.000000 0.000000
+ 0.947324 0.232500 0.220276 0.026861 1.272295 0.312257 0.295839
+ -0.549050 0.237500 -0.801335 0.000769 -0.021110 0.009132 -0.030810
+ -0.136268 0.242500 0.960534 0.000000 -0.000000 0.000000 0.000000
+ 0.748335 0.247500 -0.615417 0.000000 0.000000 0.000000 -0.000000
+ -0.966218 0.252500 -0.051635 0.005616 -0.271315 0.070902 -0.014499
+ 0.676657 0.257500 0.689804 0.014050 0.475353 0.180894 0.484589
+ -0.032944 0.262500 -0.964369 0.000000 -0.000000 0.000000 -0.000000
+ -0.626237 0.267500 0.732305 0.000000 -0.000000 0.000000 0.000000
+ 0.955041 0.272500 -0.116792 0.000453 0.021650 0.006177 -0.002648
+ -0.781945 0.277500 -0.558171 0.086213 -3.370676 1.196200 -2.406070
+ 0.199240 0.282500 0.938348 0.000000 0.000002 0.000002 0.000008
+ 0.486177 0.287500 -0.825212 0.000000 0.000000 0.000000 -0.000000
+ -0.914466 0.292500 0.279635 0.000016 -0.000745 0.000238 0.000228
+ 0.861796 0.297500 0.410855 0.179901 7.751909 2.676031 3.695663
+ -0.357344 0.302500 -0.883628 0.000024 -0.000420 0.000356 -0.001039
+ -0.332828 0.307500 0.891442 0.000000 -0.000000 0.000000 0.000000
+ 0.846125 0.312500 -0.431758 0.000000 0.000012 0.000004 -0.000006
+ -0.913956 0.317500 -0.252742 0.131495 -6.009009 2.087475 -1.661709
+ 0.502302 0.322500 0.802301 0.001345 0.033787 0.021693 0.053967
+ 0.171253 0.327500 -0.929202 0.000000 0.000000 0.000000 -0.000000
+ -0.752549 0.332500 0.568431 0.000000 -0.000000 0.000000 0.000000
+ 0.937106 0.337500 0.089028 0.035167 1.647764 0.593445 0.156543
+ -0.629644 0.342500 -0.697311 0.027088 -0.852796 0.463885 -0.944445
+ -0.006734 0.347500 0.937656 0.000000 -0.000000 0.000000 0.000000
+ 0.637071 0.352500 -0.685481 0.000000 0.000000 0.000000 -0.000000
+ -0.930900 0.357500 0.074965 0.003801 -0.176896 0.067935 0.014245
+ 0.735532 0.362500 0.572352 0.195543 7.191419 3.544224 5.595984
+ -0.155412 0.367500 -0.916946 0.000000 -0.000002 0.000004 -0.000010
+ -0.503711 0.372500 0.779435 0.000000 -0.000000 0.000000 0.000000
+ 0.895965 0.377500 -0.233968 0.000179 0.008005 0.003373 -0.002090
+ -0.816883 0.382500 -0.431735 0.492444 -20.113484 9.417999 -10.630277
+ 0.310010 0.387500 0.868181 0.000032 0.000498 0.000623 0.001395
+ 0.357034 0.392500 -0.847627 0.000000 0.000000 0.000000 -0.000000
+ -0.833875 0.397500 0.382943 0.000004 -0.000182 0.000087 0.000084
+ 0.871471 0.402500 0.280236 0.446521 19.456482 8.986226 6.256558
+ -0.452202 0.407500 -0.793383 0.001804 -0.040799 0.036766 -0.071582
+ -0.201985 0.412500 0.888283 0.000000 -0.000000 0.000000 0.000000
+ 0.747088 0.417500 -0.517255 0.000000 0.000002 0.000001 -0.000002
+ -0.897988 0.422500 -0.122929 0.154234 -6.925033 3.258203 -0.947997
+ 0.577611 0.427500 0.695420 0.039975 1.154488 0.854457 1.389957
+ 0.043722 0.432500 -0.900573 0.000000 0.000000 0.000000 -0.000000
+ -0.638852 0.437500 0.632821 0.000000 -0.000000 0.000000 0.000000
+ 0.896086 0.442500 -0.034989 0.021650 0.969995 0.478998 -0.037875
+ -0.682484 0.447500 -0.577892 0.319211 -10.892835 7.142355 -9.223486
+ 0.112564 0.452500 0.884632 0.000000 0.000002 0.000006 0.000013
+ 0.513085 0.457500 -0.726249 0.000000 0.000000 0.000000 -0.000000
+ -0.866376 0.462500 0.188379 0.001411 -0.061105 0.032620 0.013286
+ 0.763818 0.467500 0.445001 0.941851 35.970136 22.015772 20.956248
+ -0.261830 0.472500 -0.841539 0.000036 -0.000471 0.000851 -0.001515
+ -0.374236 0.477500 0.794947 0.000000 -0.000000 0.000000 0.000000
+ 0.810398 0.482500 -0.332338 0.000046 0.001870 0.001113 -0.000767
+ -0.819451 0.487500 -0.301403 1.035397 -42.422839 25.237792 -15.603587
+ 0.399353 0.492500 0.773279 0.002007 0.040079 0.049428 0.077607
+ 0.227126 0.497500 -0.837202 0.000000 0.000000 0.000000 -0.000000
+ -0.730558 0.502500 0.462361 0.000001 -0.000034 0.000024 0.000022
+ 0.848132 0.507500 0.152038 0.448154 19.004680 11.371901 3.406820
+ -0.520888 0.512500 -0.682656 0.043732 -1.138961 1.120620 -1.492680
+ -0.076772 0.517500 0.852232 0.000000 -0.000000 0.000000 0.000000
+ 0.630035 0.522500 -0.574500 0.000000 0.000000 0.000000 -0.000000
+ -0.849553 0.527500 -0.001957 0.083413 -3.543177 2.200011 -0.008161
+ 0.622813 0.532500 0.573191 0.375732 11.700529 10.003862 10.768312
+ -0.071788 0.537500 -0.840202 0.000000 -0.000001 0.000009 -0.000014
+ -0.512657 0.542500 0.665490 0.000000 -0.000000 0.000000 0.000000
+ 0.824347 0.547500 -0.143858 0.007207 0.297049 0.197288 -0.051838
+ -0.702249 0.552500 -0.448988 1.221164 -42.878027 33.734646 -27.414414
+ 0.213670 0.557500 0.802209 0.000037 0.000390 0.001019 0.001466
+ 0.382766 0.562500 -0.732860 0.000000 0.000000 0.000000 -0.000000
+ -0.774061 0.567500 0.280667 0.000342 -0.013256 0.009718 0.004806
+ 0.757153 0.572500 0.314585 1.570554 59.457445 44.957095 24.703600
+ -0.344320 0.577500 -0.740228 0.001759 -0.030281 0.050788 -0.065100
+ -0.245053 0.582500 0.775012 0.000000 -0.000000 0.000000 0.000000
+ 0.701082 0.587500 -0.404137 0.000010 0.000337 0.000282 -0.000194
+ -0.786381 0.592500 -0.174783 0.835327 -32.844267 24.746575 -7.300064
+ 0.459666 0.597500 0.657039 0.036506 0.839024 1.090611 1.199287
+ 0.104390 0.602500 -0.791263 0.000000 0.000000 0.000000 -0.000000
+ -0.608553 0.607500 0.510497 0.000000 -0.000006 0.000006 0.000005
+ 0.789718 0.612500 0.034480 0.197362 7.793026 6.044217 0.340248
+ -0.556265 0.617500 -0.556114 0.303815 -8.450080 9.380282 -8.447783
+ 0.034350 0.622500 0.781866 0.000000 0.000001 0.000012 0.000016
+ 0.500242 0.627500 -0.596659 0.000000 0.000000 0.000000 -0.000000
+ -0.767879 0.632500 0.101517 0.023490 -0.901891 0.742885 0.119234
+ 0.631415 0.637500 0.441484 1.038865 32.797761 33.113813 22.932118
+ -0.166463 0.642500 -0.747986 0.000033 -0.000271 0.001047 -0.001219
+ -0.380406 0.647500 0.660329 0.000000 -0.000000 0.000000 0.000000
+ 0.722468 0.652500 -0.228655 0.001526 0.055107 0.049770 -0.017441
+ -0.683250 0.657500 -0.317590 1.466475 -50.098432 48.210368 -23.286915
+ 0.287591 0.662500 0.691654 0.001264 0.018172 0.041861 0.043703
+ 0.253628 0.667500 -0.700083 0.000000 0.000000 0.000000 -0.000000
+ -0.655917 0.672500 0.342806 0.000066 -0.002167 0.002222 0.001133
+ 0.710795 0.677500 0.189115 0.908885 32.301521 30.788466 8.594193
+ -0.393874 0.682500 -0.615676 0.021834 -0.429996 0.745092 -0.672140
+ -0.124646 0.687500 0.715407 0.000000 -0.000000 0.000000 0.000000
+ 0.571386 0.692500 -0.440411 0.000002 0.000058 0.000071 -0.000045
+ -0.714000 0.697500 -0.060810 0.269615 -9.625266 9.402834 -0.819759
+ 0.482085 0.702500 0.523534 0.164222 3.958447 5.768293 4.298785
+ -0.001820 0.707500 -0.706711 0.000000 -0.000000 0.000017 -0.000017
+ -0.472639 0.712500 0.518610 0.000000 -0.000001 0.000002 0.000001
+ 0.693732 0.717500 -0.062684 0.041514 1.439971 1.489306 -0.130112
+ -0.549754 0.722500 -0.419243 0.528616 -14.530442 19.096262 -11.080924
+ 0.121247 0.727500 0.675310 0.000026 0.000156 0.000938 0.000870
+ 0.363906 0.732500 -0.575340 0.000000 0.000000 0.000000 -0.000000
+ -0.651739 0.737500 0.177002 0.003898 -0.127021 0.143735 0.034497
+ 0.595247 0.742500 0.307205 0.757066 22.532061 28.106077 11.628723
+ -0.229473 0.747500 -0.623366 0.000705 -0.008091 0.026357 -0.021980
+ -0.249722 0.752500 0.609412 0.000000 -0.000000 0.000000 0.000000
+ 0.590581 0.757500 -0.278223 0.000243 0.007175 0.009203 -0.003380
+ -0.617830 0.762500 -0.192043 0.510182 -15.760260 19.450670 -4.898835
+ 0.322854 0.767500 0.553813 0.008972 0.144833 0.344303 0.248442
+ 0.134752 0.772500 -0.620553 0.000000 0.000000 0.000000 -0.000000
+ -0.513532 0.777500 0.363013 0.000012 -0.000318 0.000481 0.000225
+ 0.617692 0.782500 0.078427 0.174349 5.384703 6.821413 0.683684
+ -0.398394 0.787500 -0.470240 0.052161 -1.039035 2.053845 -1.226413
+ -0.023629 0.792500 0.609414 0.000001 -0.000001 0.000022 0.000017
+ 0.424466 0.797500 -0.428745 0.000001 0.000012 0.000023 -0.000012
+ -0.595942 0.802500 0.029095 0.034337 -1.023133 1.377757 0.049951
+ 0.453862 0.807500 0.376766 0.138278 3.137953 5.582963 2.604918
+ -0.079224 0.812500 -0.577553 0.000018 -0.000070 0.000721 -0.000513
+ -0.327713 0.817500 0.473601 0.000000 -0.000000 0.000001 0.000001
+ 0.554573 0.822500 -0.126262 0.004293 0.119035 0.176544 -0.027101
+ -0.487871 0.827500 -0.277895 0.173762 -4.238666 7.189389 -2.414372
+ 0.169746 0.832500 0.527380 0.000279 0.002364 0.011596 0.007346
+ 0.227910 0.837500 -0.496639 0.000000 0.000000 0.000000 -0.000000
+ -0.496396 0.842500 0.209249 0.000405 -0.010059 0.017072 0.004240
+ 0.499931 0.847500 0.178362 0.109554 2.738471 4.642351 0.977014
+ -0.244379 0.852500 -0.462085 0.002119 -0.025895 0.090334 -0.048964
+ -0.129855 0.857500 0.497827 0.000000 -0.000000 0.000001 0.000001
+ 0.424952 0.862500 -0.274790 0.000033 0.000701 0.001424 -0.000454
+ -0.490465 0.867500 -0.082991 0.038312 -0.939525 1.661765 -0.158976
+ 0.300174 0.872500 0.385538 0.007462 0.112000 0.325546 0.143851
+ 0.038365 0.877500 -0.478040 0.000001 0.000001 0.000029 -0.000016
+ -0.344416 0.882500 0.320267 0.000003 -0.000046 0.000118 0.000043
+ 0.460795 0.887500 -0.003435 0.008239 0.189828 0.365613 -0.001415
+ -0.334850 0.892500 -0.302191 0.012365 -0.207029 0.551809 -0.186836
+ 0.041829 0.897500 0.439026 0.000009 0.000019 0.000404 0.000198
+ 0.259494 0.902500 -0.343739 0.000000 0.000004 0.000013 -0.000005
+ -0.413074 0.907500 0.076246 0.001248 -0.025770 0.056614 0.004757
+ 0.346788 0.912500 0.216984 0.009876 0.171252 0.450614 0.107152
+ -0.106114 0.917500 -0.383319 0.000058 -0.000307 0.002651 -0.001107
+ -0.175351 0.922500 0.343869 0.000000 -0.000000 0.000002 0.000001
+ 0.350175 0.927500 -0.130849 0.000158 0.002769 0.007333 -0.001035
+ -0.334864 0.932500 -0.135315 0.003983 -0.066694 0.185724 -0.026950
+ 0.149837 0.937500 0.314074 0.000161 0.001204 0.007533 0.002524
+ 0.097643 0.942500 -0.319624 0.000000 0.000000 0.000004 -0.000001
+ -0.275454 0.947500 0.162386 0.000018 -0.000252 0.000868 0.000149
+ 0.297915 0.952500 0.063172 0.000873 0.012998 0.041557 0.002756
+ -0.167641 0.957500 -0.234713 0.000172 -0.001444 0.008246 -0.002021
+ -0.032856 0.962500 0.269285 0.000001 -0.000001 0.000029 0.000008
+ 0.192138 0.967500 -0.164399 0.000003 0.000026 0.000131 -0.000022
+ -0.232769 0.972500 -0.007888 0.000099 -0.001149 0.004799 -0.000039
+ 0.150622 0.977500 0.147671 0.000059 0.000443 0.002872 0.000434
+ -0.009990 0.982500 -0.185994 0.000001 -0.000001 0.000068 -0.000013
+ -0.100083 0.987500 0.121767 0.000000 -0.000002 0.000024 0.000003
+ 0.121028 0.992500 -0.017203 0.000004 0.000027 0.000218 -0.000004
+ -0.058306 0.997500 -0.039926 0.000001 -0.000004 0.000072 -0.000003
+</pre></div>  </div></div> <span class="plumedtooltip">VALUE<span class="right">the name of the value that should be read from the grid<i></i></span></span>=av_Sp_X
+</span><span id="KL_ENTROPY.md_working_2.datkl_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("KL_ENTROPY.md_working_2.datkl")'># kl: KL_ENTROPY ARG=h REFERENCE=regtest/gridtools/rt-kldiv/averageSp_X240.grid VALUE=av_Sp_X</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="KL_ENTROPY.md_working_2.datkl_ref" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.datkl_ref","KL_ENTROPY.md_working_2.datkl_ref","green")'>kl_ref</b><span style="display:none;" id="KL_ENTROPY.md_working_2.datkl_ref">The REFERENCE_GRID action with label <b>kl_ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">kl_ref</td><td width="5%"><font color="green">grid</font></td><td>the constant function on the grid that was specified in input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">REFERENCE_GRID<span class="right">Setup a constant grid by either reading values from a file or definining a function in input <a href="https://www.plumed.org/doc-master/user-doc/html/REFERENCE_GRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUE<span class="right">the name of the value that should be read from the grid<i></i></span></span>=av_Sp_X <span class="plumedtooltip">FILE<span class="right">the name of the file that contains the reference data<i></i></span></span>=<div class="plumedtooltip">regtest/gridtools/rt-kldiv/averageSp_X240.grid<div class="right"> Click <a onclick='openModal("KL_ENTROPY.md_working_2.datregtest/gridtools/rt-kldiv/averageSp_X240.grid2")'>here</a> to see an extract from this file.<i></i></div></div><div id="KL_ENTROPY.md_working_2.datregtest/gridtools/rt-kldiv/averageSp_X240.grid2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("KL_ENTROPY.md_working_2.datregtest/gridtools/rt-kldiv/averageSp_X240.grid2")'>&times;</span>  <h2>FILE: regtest/gridtools/rt-kldiv/averageSp_X240.grid</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS X_vectors.x X_vectors.y X_vectors.z av_Sp_X dav_Sp_X_X_vectors.x dav_Sp_X_X_vectors.y dav_Sp_X_X_vectors.z
+#! SET nbins  400
+ 0.070666 -0.997500 0.000000 0.000001 0.000005 -0.000065 0.000000
+ -0.090139 -0.992500 -0.082575 0.000006 -0.000026 -0.000291 -0.000024
+ 0.013780 -0.987500 0.157015 0.000001 0.000001 -0.000064 0.000010
+ 0.113329 -0.982500 -0.147818 0.000000 0.000003 -0.000022 -0.000003
+ -0.207711 -0.977500 0.036741 0.000029 -0.000300 -0.001412 0.000053
+ 0.196513 -0.972500 0.125006 0.000153 0.001506 -0.007450 0.000958
+ -0.065646 -0.967500 -0.244201 0.000011 -0.000037 -0.000538 -0.000136
+ -0.125036 -0.962500 0.240749 0.000000 -0.000001 -0.000006 0.000001
+ 0.270932 -0.957500 -0.098944 0.000050 0.000675 -0.002385 -0.000246
+ -0.281499 -0.952500 -0.116199 0.001040 -0.014640 -0.049538 -0.006043
+ 0.135527 -0.947500 0.289614 0.000100 0.000677 -0.004731 0.001446
+ 0.100023 -0.942500 -0.318888 0.000000 0.000000 -0.000004 -0.000001
+ -0.301081 -0.937500 0.174482 0.000025 -0.000374 -0.001164 0.000217
+ 0.352746 -0.932500 0.077550 0.003155 0.055643 -0.147095 0.012233
+ -0.214997 -0.927500 -0.305811 0.000829 -0.008912 -0.038446 -0.012676
+ -0.049605 -0.922500 0.382796 0.000001 -0.000001 -0.000023 0.000010
+ 0.304128 -0.917500 -0.256320 0.000005 0.000079 -0.000240 -0.000067
+ -0.408727 -0.912500 -0.016902 0.004371 -0.089333 -0.199440 -0.003694
+ 0.297745 -0.907500 0.296296 0.005445 0.081067 -0.247083 0.080672
+ -0.019894 -0.902500 -0.430230 0.000005 -0.000005 -0.000216 -0.000103
+ -0.282562 -0.897500 0.338604 0.000000 -0.000007 -0.000021 0.000008
+ 0.447019 -0.892500 -0.060146 0.002839 0.063444 -0.126670 -0.008536
+ -0.378258 -0.887500 -0.263182 0.024252 -0.458681 -1.076195 -0.319138
+ 0.103225 -0.882500 0.458845 0.000055 0.000282 -0.002409 0.001252
+ 0.238436 -0.877500 -0.416103 0.000000 0.000000 -0.000001 -0.000001
+ -0.465499 -0.872500 0.148507 0.000835 -0.019443 -0.036442 0.006203
+ 0.451569 -0.867500 0.208636 0.064165 1.448755 -2.783174 0.669362
+ -0.195369 -0.862500 -0.466824 0.000637 -0.006224 -0.027477 -0.014872
+ -0.174128 -0.857500 0.484121 0.000000 -0.000000 -0.000000 0.000000
+ 0.462713 -0.852500 -0.243189 0.000120 0.002780 -0.005122 -0.001461
+ -0.513263 -0.847500 -0.135295 0.090593 -2.324904 -3.838881 -0.612837
+ 0.291347 -0.842500 0.453112 0.006252 0.091080 -0.263378 0.141650
+ 0.092553 -0.837500 -0.538542 0.000000 0.000000 -0.000004 -0.000002
+ -0.438025 -0.832500 0.339231 0.000008 -0.000179 -0.000340 0.000139
+ 0.559549 -0.827500 0.046357 0.063445 1.775024 -2.625031 0.147057
+ -0.386237 -0.822500 -0.417510 0.043715 -0.844212 -1.797769 -0.912568
+ 0.002810 -0.817500 0.575922 0.000002 0.000000 -0.000071 0.000050
+ 0.391683 -0.812500 -0.431773 0.000000 0.000006 -0.000013 -0.000007
+ -0.587350 -0.807500 0.054436 0.020991 -0.616463 -0.847525 0.057134
+ 0.475269 -0.802500 0.360712 0.188031 4.468262 -7.544740 3.391251
+ -0.107984 -0.797500 -0.593577 0.000037 -0.000200 -0.001477 -0.001099
+ -0.324821 -0.792500 0.516173 0.000000 -0.000000 -0.000000 0.000000
+ 0.594397 -0.787500 -0.162900 0.003274 0.097299 -0.128908 -0.026666
+ -0.553964 -0.782500 -0.284285 0.437943 -12.130231 -17.134527 -6.225034
+ 0.218610 -0.777500 0.589664 0.000702 0.007671 -0.027283 0.020692
+ 0.239428 -0.772500 -0.588148 0.000000 0.000000 -0.000000 -0.000000
+ -0.579288 -0.767500 0.274535 0.000242 -0.007001 -0.009276 0.003318
+ 0.618270 -0.762500 0.190619 0.504532 15.596844 -19.235270 4.808674
+ -0.330088 -0.757500 -0.563237 0.009837 -0.162346 -0.372560 -0.277015
+ -0.138273 -0.752500 0.643913 0.000000 -0.000000 -0.000000 0.000000
+ 0.541537 -0.747500 -0.384683 0.000009 0.000247 -0.000341 -0.000175
+ -0.664704 -0.742500 -0.082841 0.268621 -8.927674 -9.972559 -1.112639
+ 0.437739 -0.737500 0.514274 0.088499 1.936982 -3.263413 2.275646
+ 0.024809 -0.732500 -0.680315 0.000000 0.000000 -0.000010 -0.000009
+ -0.481588 -0.727500 0.488688 0.000000 -0.000004 -0.000007 0.000004
+ 0.690469 -0.722500 -0.035304 0.064145 2.214514 -2.317246 -0.113230
+ -0.536977 -0.717500 -0.443677 0.437670 -11.750948 -15.701426 -9.709218
+ 0.096957 -0.712500 0.694941 0.000011 0.000051 -0.000375 0.000366
+ 0.400792 -0.707500 -0.582074 0.000000 0.000000 -0.000000 -0.000000
+ -0.693560 -0.702500 0.159587 0.006873 -0.238358 -0.241431 0.054846
+ 0.623473 -0.697500 0.353235 1.074789 33.505118 -37.483281 18.982661
+ -0.222614 -0.692500 -0.686212 0.000314 -0.003497 -0.010879 -0.010781
+ -0.301359 -0.687500 0.660702 0.000000 -0.000000 -0.000000 0.000000
+ 0.672838 -0.682500 -0.285452 0.000338 0.011364 -0.011527 -0.004821
+ -0.693321 -0.677500 -0.245560 1.193025 -41.357471 -40.413728 -14.647967
+ 0.347508 -0.672500 0.653439 0.006560 0.113984 -0.220583 0.214331
+ 0.186279 -0.667500 -0.720933 0.000000 0.000000 -0.000000 -0.000000
+ -0.628072 -0.662500 0.408190 0.000008 -0.000259 -0.000273 0.000168
+ 0.743182 -0.657500 0.123993 0.571654 21.242147 -18.793125 3.544063
+ -0.466914 -0.652500 -0.596855 0.078536 -1.833466 -2.562223 -2.343716
+ -0.059214 -0.647500 0.759761 0.000000 -0.000000 -0.000001 0.000001
+ 0.559958 -0.642500 -0.523107 0.000000 0.000003 -0.000003 -0.000003
+ -0.770414 -0.637500 0.007517 0.115088 -4.433276 -3.668436 0.043255
+ 0.576214 -0.632500 0.517611 0.481194 13.863535 -15.217755 12.453557
+ -0.075635 -0.627500 -0.774934 0.000002 -0.000006 -0.000051 -0.000063
+ -0.470094 -0.622500 0.625704 0.000000 -0.000000 -0.000000 0.000000
+ 0.773173 -0.617500 -0.144557 0.009790 0.378478 -0.302274 -0.070762
+ -0.671071 -0.612500 -0.417740 1.338467 -44.910355 -40.990564 -27.956592
+ 0.213683 -0.607500 0.765038 0.000079 0.000843 -0.002397 0.003019
+ 0.360931 -0.602500 -0.711845 0.000000 0.000000 -0.000000 -0.000000
+ -0.750493 -0.597500 0.282408 0.000373 -0.013979 -0.011129 0.005260
+ 0.747589 -0.592500 0.300091 1.575281 58.883129 -46.667701 23.636387
+ -0.350121 -0.587500 -0.729561 0.002354 -0.041217 -0.069163 -0.085886
+ -0.235689 -0.582500 0.777910 0.000000 -0.000000 -0.000000 0.000000
+ 0.702323 -0.577500 -0.416216 0.000006 0.000227 -0.000187 -0.000135
+ -0.802461 -0.572500 -0.168228 0.743407 -29.827754 -21.280035 -6.253108
+ 0.480095 -0.567500 0.668919 0.038748 0.930135 -1.099472 1.295960
+ 0.098248 -0.562500 -0.820939 0.000000 0.000000 -0.000000 -0.000000
+ -0.629544 -0.557500 0.541173 0.000000 -0.000002 -0.000002 0.000002
+ 0.833097 -0.552500 0.026312 0.139165 5.796917 -3.844444 0.183087
+ -0.598883 -0.547500 -0.584451 0.301156 -9.017858 -8.244142 -8.800539
+ 0.046989 -0.542500 0.838741 0.000000 0.000000 -0.000005 0.000007
+ 0.533944 -0.537500 -0.652685 0.000000 0.000000 -0.000000 -0.000000
+ -0.837730 -0.532500 0.121048 0.010509 -0.440172 -0.279794 0.063603
+ 0.702065 -0.527500 0.478381 0.996995 34.997750 -26.295731 23.847165
+ -0.195245 -0.522500 -0.829984 0.000012 -0.000118 -0.000315 -0.000501
+ -0.418166 -0.517500 0.746546 0.000000 -0.000000 -0.000000 0.000000
+ 0.815480 -0.512500 -0.268954 0.000329 0.013398 -0.008420 -0.004419
+ -0.785689 -0.507500 -0.353747 1.308818 -51.416149 -33.211246 -23.149546
+ 0.341545 -0.502500 0.794255 0.000533 0.009094 -0.013380 0.021148
+ 0.285617 -0.497500 -0.819095 0.000000 0.000000 -0.000000 -0.000000
+ -0.766404 -0.492500 0.412393 0.000005 -0.000185 -0.000119 0.000100
+ 0.846415 -0.487500 0.214303 0.652007 27.593420 -15.892671 6.986343
+ -0.480883 -0.482500 -0.732083 0.011907 -0.286302 -0.287264 -0.435858
+ -0.140364 -0.477500 0.867348 0.000000 -0.000000 -0.000000 0.000000
+ 0.691502 -0.472500 -0.546414 0.000000 0.000001 -0.000001 -0.000001
+ -0.881645 -0.467500 -0.064388 0.121675 -5.363700 -2.844149 -0.391722
+ 0.608406 -0.462500 0.644931 0.118874 3.616184 -2.748962 3.833277
+ -0.013013 -0.457500 -0.889114 0.000000 -0.000000 -0.000000 -0.000001
+ -0.592691 -0.452500 0.666304 0.000000 -0.000000 -0.000000 0.000000
+ 0.889620 -0.447500 -0.091212 0.008656 0.385014 -0.193671 -0.039475
+ -0.719585 -0.442500 -0.535155 0.484233 -17.422355 -10.713666 -12.957009
+ 0.169569 -0.437500 0.883086 0.000001 0.000011 -0.000029 0.000058
+ 0.472747 -0.432500 -0.767759 0.000000 0.000000 -0.000000 -0.000000
+ -0.869493 -0.427500 0.247437 0.000250 -0.010882 -0.005350 0.003097
+ 0.810378 -0.422500 0.405933 0.734194 29.748717 -15.509845 14.901681
+ -0.324169 -0.417500 -0.848886 0.000081 -0.001306 -0.001682 -0.003420
+ -0.335222 -0.412500 0.847036 0.000000 -0.000000 -0.000000 0.000000
+ 0.821368 -0.407500 -0.399121 0.000003 0.000125 -0.000062 -0.000061
+ -0.877377 -0.402500 -0.261159 0.404071 -17.726138 -8.131935 -5.276333
+ 0.471662 -0.397500 0.787102 0.002436 0.057441 -0.048409 0.095856
+ 0.184321 -0.392500 -0.901093 0.000000 0.000000 -0.000000 -0.000000
+ -0.746307 -0.387500 0.541174 0.000000 -0.000001 -0.000000 0.000001
+ 0.917934 -0.382500 0.105316 0.079254 3.637493 -1.515732 0.417336
+ -0.607062 -0.377500 -0.699263 0.032003 -0.971385 -0.604053 -1.118919
+ -0.024771 -0.372500 0.927702 0.000000 -0.000000 -0.000000 0.000000
+ 0.646302 -0.367500 -0.668758 0.000000 0.000000 -0.000000 -0.000000
+ -0.930259 -0.362500 0.056670 0.005690 -0.264648 -0.103127 0.016122
+ 0.725723 -0.357500 0.587809 0.159281 5.779705 -2.847152 4.681348
+ -0.138347 -0.352500 -0.925529 0.000000 -0.000001 -0.000002 -0.000005
+ -0.524217 -0.347500 0.777457 0.000000 -0.000000 -0.000000 0.000000
+ 0.913493 -0.342500 -0.219599 0.000156 0.007110 -0.002666 -0.001709
+ -0.823500 -0.337500 -0.456006 0.291251 -11.992264 -4.914864 -6.640622
+ 0.299760 -0.332500 0.894197 0.000009 0.000131 -0.000145 0.000390
+ 0.383697 -0.327500 -0.863435 0.000000 0.000000 -0.000000 -0.000000
+ -0.867744 -0.322500 0.378173 0.000002 -0.000079 -0.000029 0.000034
+ 0.896897 -0.317500 0.307848 0.181520 8.140231 -2.881629 2.794024
+ -0.454189 -0.312500 -0.834300 0.000357 -0.008097 -0.005571 -0.014873
+ -0.229049 -0.307500 0.923569 0.000000 -0.000000 -0.000000 0.000000
+ 0.794090 -0.302500 -0.527177 0.000000 0.000000 -0.000000 -0.000000
+ -0.943193 -0.297500 -0.147920 0.039189 -1.848155 -0.582941 -0.289844
+ 0.596526 -0.292500 0.747396 0.005923 0.176670 -0.086628 0.221352
+ 0.065102 -0.287500 -0.955566 0.000000 0.000000 -0.000000 -0.000000
+ -0.694556 -0.282500 0.661654 0.000000 -0.000000 -0.000000 0.000000
+ 0.960543 -0.277500 -0.018746 0.002951 0.141735 -0.040947 -0.002766
+ -0.722010 -0.272500 -0.635960 0.037875 -1.367310 -0.516048 -1.204353
+ 0.102953 -0.267500 0.958042 0.000000 0.000000 -0.000000 0.000000
+ 0.572049 -0.262500 -0.777080 0.000000 0.000000 -0.000000 -0.000000
+ -0.948042 -0.257500 0.186842 0.000082 -0.003910 -0.001062 0.000771
+ 0.826393 -0.252500 0.503308 0.081770 3.378711 -1.032347 2.057776
+ -0.269736 -0.247500 -0.930584 0.000001 -0.000010 -0.000009 -0.000033
+ -0.430265 -0.242500 0.869520 0.000000 -0.000000 -0.000000 0.000000
+ 0.905769 -0.237500 -0.350964 0.000001 0.000041 -0.000011 -0.000016
+ -0.906085 -0.232500 -0.353488 0.060729 -2.751299 -0.705979 -1.073356
+ 0.429863 -0.227500 0.873763 0.000037 0.000801 -0.000424 0.001629
+ 0.273575 -0.222500 -0.935762 0.000000 0.000000 -0.000000 -0.000000
+ -0.834788 -0.217500 0.505789 0.000000 -0.000000 -0.000000 0.000000
+ 0.958282 -0.212500 0.191154 0.014682 0.703451 -0.155991 0.140321
+ -0.578119 -0.207500 -0.789127 0.000818 -0.023640 -0.008485 -0.032269
+ -0.106875 -0.202500 0.973433 0.000000 -0.000000 -0.000000 0.000000
+ 0.737118 -0.197500 -0.646259 0.000000 0.000000 -0.000000 -0.000000
+ -0.981063 -0.192500 -0.021407 0.001216 -0.059663 -0.011707 -0.001302
+ 0.709645 -0.187500 0.679152 0.006316 0.224111 -0.059214 0.214481
+ -0.064571 -0.182500 -0.981083 0.000000 -0.000000 -0.000000 -0.000000
+ -0.615672 -0.177500 0.767751 0.000000 -0.000000 -0.000000 0.000000
+ 0.973464 -0.172500 -0.150371 0.000036 0.001745 -0.000309 -0.000269
+ -0.820094 -0.167500 -0.547165 0.017235 -0.706705 -0.144341 -0.471512
+ 0.235306 -0.162500 0.958240 0.000000 0.000001 -0.000000 0.000002
+ 0.474164 -0.157500 -0.866235 0.000000 0.000000 -0.000000 -0.000000
+ -0.935509 -0.152500 0.318694 0.000000 -0.000019 -0.000003 0.000007
+ 0.905785 -0.147500 0.397237 0.014788 0.669737 -0.109061 0.293717
+ -0.399864 -0.142500 -0.905429 0.000003 -0.000060 -0.000022 -0.000137
+ -0.316988 -0.137500 0.938410 0.000000 -0.000000 -0.000000 0.000000
+ 0.868220 -0.132500 -0.478161 0.000000 0.000000 -0.000000 -0.000000
+ -0.963828 -0.127500 -0.234048 0.004238 -0.204250 -0.027019 -0.049598
+ 0.552951 -0.122500 0.824160 0.000081 0.002246 -0.000498 0.003347
+ 0.149074 -0.117500 -0.981820 0.000000 0.000000 -0.000000 -0.000000
+ -0.773583 -0.112500 0.623629 0.000000 -0.000000 -0.000000 0.000000
+ 0.992224 -0.107500 0.062738 0.000394 0.019534 -0.002116 0.001235
+ -0.689622 -0.102500 -0.716879 0.000812 -0.027989 -0.004160 -0.029095
+ 0.024273 -0.097500 0.994939 0.000000 0.000000 -0.000000 0.000000
+ 0.654488 -0.092500 -0.750393 0.000000 0.000000 -0.000000 -0.000000
+ -0.989931 -0.087500 0.111267 0.000013 -0.000633 -0.000056 0.000071
+ 0.805449 -0.082500 0.586895 0.002619 0.105476 -0.010804 0.076855
+ -0.197550 -0.077500 -0.977224 0.000000 -0.000000 -0.000000 -0.000000
+ -0.514632 -0.072500 0.854340 0.000000 -0.000000 -0.000000 0.000000
+ 0.956909 -0.067500 -0.282434 0.000000 0.000008 -0.000001 -0.000002
+ -0.896669 -0.062500 -0.438267 0.002892 -0.129655 -0.009037 -0.063372
+ 0.365240 -0.057500 0.929136 0.000000 0.000004 -0.000001 0.000009
+ 0.358404 -0.052500 -0.932089 0.000000 0.000000 -0.000000 -0.000000
+ -0.894117 -0.047500 0.445307 0.000000 -0.000000 -0.000000 0.000000
+ 0.960311 -0.042500 0.275674 0.001014 0.048666 -0.002154 0.013971
+ -0.521993 -0.037500 -0.852125 0.000007 -0.000188 -0.000014 -0.000307
+ -0.190735 -0.032500 0.981104 0.000000 -0.000000 -0.000000 0.000000
+ 0.803488 -0.027500 -0.594685 0.000000 0.000000 -0.000000 -0.000000
+ -0.994296 -0.022500 -0.104259 0.000130 -0.006444 -0.000146 -0.000676
+ 0.662803 -0.017500 0.748589 0.000106 0.003509 -0.000093 0.003963
+ 0.016936 -0.012500 -0.999778 0.000000 0.000000 -0.000000 -0.000000
+ -0.687863 -0.007500 0.725802 0.000000 -0.000000 -0.000000 0.000000
+ 0.997506 -0.002500 -0.070541 0.000007 0.000333 -0.000001 -0.000024
+ -0.783179 0.002500 -0.621791 0.000629 -0.024624 0.000079 -0.019550
+ 0.157474 0.007500 0.987495 0.000000 0.000000 0.000000 0.000000
+ 0.550899 0.012500 -0.834478 0.000000 0.000000 0.000000 -0.000000
+ -0.969825 0.017500 0.243173 0.000000 -0.000008 0.000000 0.000002
+ 0.879292 0.022500 0.475751 0.001450 0.063735 0.001631 0.034485
+ -0.326956 0.027500 -0.944639 0.000000 -0.000001 0.000000 -0.000002
+ -0.396948 0.032500 0.917266 0.000000 -0.000000 0.000000 0.000000
+ 0.912141 0.037500 -0.408157 0.000000 0.000000 0.000000 -0.000000
+ -0.948101 0.042500 -0.315117 0.001310 -0.062111 0.002784 -0.020644
+ 0.486132 0.047500 0.872594 0.000004 0.000090 0.000009 0.000161
+ 0.230912 0.052500 -0.971557 0.000000 0.000000 0.000000 -0.000000
+ -0.826317 0.057500 0.560263 0.000000 -0.000000 0.000000 0.000000
+ 0.987455 0.062500 0.145005 0.000428 0.021110 0.001336 0.003100
+ -0.629963 0.067500 -0.773686 0.000127 -0.003990 0.000428 -0.004900
+ -0.058081 0.072500 0.995676 0.000000 -0.000000 0.000000 0.000000
+ 0.715127 0.077500 -0.694685 0.000000 0.000000 0.000000 -0.000000
+ -0.996164 0.082500 0.029166 0.000052 -0.002611 0.000216 0.000076
+ 0.753919 0.087500 0.651114 0.001586 0.059795 0.006940 0.051641
+ -0.116042 0.092500 -0.988928 0.000000 -0.000000 0.000000 -0.000000
+ -0.582166 0.097500 0.807203 0.000000 -0.000000 0.000000 0.000000
+ 0.974037 0.102500 -0.201857 0.000002 0.000121 0.000013 -0.000025
+ -0.854123 0.107500 -0.508839 0.006504 -0.277763 0.034959 -0.165476
+ 0.285929 0.112500 0.951624 0.000000 0.000001 0.000000 0.000003
+ 0.431726 0.117500 -0.894319 0.000000 0.000000 0.000000 -0.000000
+ -0.921884 0.122500 0.367592 0.000000 -0.000002 0.000000 0.000001
+ 0.927484 0.127500 0.351450 0.008663 0.401734 0.055226 0.152228
+ -0.446202 0.132500 -0.885069 0.000008 -0.000170 0.000051 -0.000337
+ -0.268655 0.137500 0.953372 0.000000 -0.000000 0.000000 0.000000
+ 0.841491 0.142500 -0.521141 0.000000 0.000000 0.000000 -0.000000
+ -0.971794 0.147500 -0.184010 0.003932 -0.191056 0.028999 -0.036176
+ 0.591820 0.152500 0.791513 0.000356 0.010544 0.002717 0.014102
+ 0.098192 0.157500 -0.982625 0.000000 0.000000 0.000000 -0.000000
+ -0.735553 0.162500 0.657689 0.000000 -0.000000 0.000000 0.000000
+ 0.985800 0.167500 0.011889 0.000629 0.030986 0.005265 0.000374
+ -0.718239 0.172500 -0.674075 0.005418 -0.194580 0.046733 -0.182616
+ 0.074209 0.177500 0.981319 0.000000 0.000000 0.000000 0.000000
+ 0.607587 0.182500 -0.773002 0.000000 0.000000 0.000000 -0.000000
+ -0.969242 0.187500 0.159416 0.000040 -0.001915 0.000370 0.000315
+ 0.821563 0.192500 0.536636 0.027608 1.134101 0.265731 0.740783
+ -0.243056 0.197500 -0.949693 0.000000 -0.000001 0.000001 -0.000005
+ -0.461806 0.202500 0.863556 0.000000 -0.000000 0.000000 0.000000
+ 0.922857 0.207500 -0.324467 0.000001 0.000048 0.000011 -0.000017
+ -0.898673 0.212500 -0.383708 0.046794 -2.102625 0.497186 -0.897761
+ 0.403008 0.217500 0.888976 0.000015 0.000312 0.000168 0.000688
+ 0.302979 0.222500 -0.926659 0.000000 0.000000 0.000000 -0.000000
+ -0.848351 0.227500 0.478064 0.000000 -0.000001 0.000000 0.000000
+ 0.947324 0.232500 0.220276 0.026861 1.272295 0.312257 0.295839
+ -0.549050 0.237500 -0.801335 0.000769 -0.021110 0.009132 -0.030810
+ -0.136268 0.242500 0.960534 0.000000 -0.000000 0.000000 0.000000
+ 0.748335 0.247500 -0.615417 0.000000 0.000000 0.000000 -0.000000
+ -0.966218 0.252500 -0.051635 0.005616 -0.271315 0.070902 -0.014499
+ 0.676657 0.257500 0.689804 0.014050 0.475353 0.180894 0.484589
+ -0.032944 0.262500 -0.964369 0.000000 -0.000000 0.000000 -0.000000
+ -0.626237 0.267500 0.732305 0.000000 -0.000000 0.000000 0.000000
+ 0.955041 0.272500 -0.116792 0.000453 0.021650 0.006177 -0.002648
+ -0.781945 0.277500 -0.558171 0.086213 -3.370676 1.196200 -2.406070
+ 0.199240 0.282500 0.938348 0.000000 0.000002 0.000002 0.000008
+ 0.486177 0.287500 -0.825212 0.000000 0.000000 0.000000 -0.000000
+ -0.914466 0.292500 0.279635 0.000016 -0.000745 0.000238 0.000228
+ 0.861796 0.297500 0.410855 0.179901 7.751909 2.676031 3.695663
+ -0.357344 0.302500 -0.883628 0.000024 -0.000420 0.000356 -0.001039
+ -0.332828 0.307500 0.891442 0.000000 -0.000000 0.000000 0.000000
+ 0.846125 0.312500 -0.431758 0.000000 0.000012 0.000004 -0.000006
+ -0.913956 0.317500 -0.252742 0.131495 -6.009009 2.087475 -1.661709
+ 0.502302 0.322500 0.802301 0.001345 0.033787 0.021693 0.053967
+ 0.171253 0.327500 -0.929202 0.000000 0.000000 0.000000 -0.000000
+ -0.752549 0.332500 0.568431 0.000000 -0.000000 0.000000 0.000000
+ 0.937106 0.337500 0.089028 0.035167 1.647764 0.593445 0.156543
+ -0.629644 0.342500 -0.697311 0.027088 -0.852796 0.463885 -0.944445
+ -0.006734 0.347500 0.937656 0.000000 -0.000000 0.000000 0.000000
+ 0.637071 0.352500 -0.685481 0.000000 0.000000 0.000000 -0.000000
+ -0.930900 0.357500 0.074965 0.003801 -0.176896 0.067935 0.014245
+ 0.735532 0.362500 0.572352 0.195543 7.191419 3.544224 5.595984
+ -0.155412 0.367500 -0.916946 0.000000 -0.000002 0.000004 -0.000010
+ -0.503711 0.372500 0.779435 0.000000 -0.000000 0.000000 0.000000
+ 0.895965 0.377500 -0.233968 0.000179 0.008005 0.003373 -0.002090
+ -0.816883 0.382500 -0.431735 0.492444 -20.113484 9.417999 -10.630277
+ 0.310010 0.387500 0.868181 0.000032 0.000498 0.000623 0.001395
+ 0.357034 0.392500 -0.847627 0.000000 0.000000 0.000000 -0.000000
+ -0.833875 0.397500 0.382943 0.000004 -0.000182 0.000087 0.000084
+ 0.871471 0.402500 0.280236 0.446521 19.456482 8.986226 6.256558
+ -0.452202 0.407500 -0.793383 0.001804 -0.040799 0.036766 -0.071582
+ -0.201985 0.412500 0.888283 0.000000 -0.000000 0.000000 0.000000
+ 0.747088 0.417500 -0.517255 0.000000 0.000002 0.000001 -0.000002
+ -0.897988 0.422500 -0.122929 0.154234 -6.925033 3.258203 -0.947997
+ 0.577611 0.427500 0.695420 0.039975 1.154488 0.854457 1.389957
+ 0.043722 0.432500 -0.900573 0.000000 0.000000 0.000000 -0.000000
+ -0.638852 0.437500 0.632821 0.000000 -0.000000 0.000000 0.000000
+ 0.896086 0.442500 -0.034989 0.021650 0.969995 0.478998 -0.037875
+ -0.682484 0.447500 -0.577892 0.319211 -10.892835 7.142355 -9.223486
+ 0.112564 0.452500 0.884632 0.000000 0.000002 0.000006 0.000013
+ 0.513085 0.457500 -0.726249 0.000000 0.000000 0.000000 -0.000000
+ -0.866376 0.462500 0.188379 0.001411 -0.061105 0.032620 0.013286
+ 0.763818 0.467500 0.445001 0.941851 35.970136 22.015772 20.956248
+ -0.261830 0.472500 -0.841539 0.000036 -0.000471 0.000851 -0.001515
+ -0.374236 0.477500 0.794947 0.000000 -0.000000 0.000000 0.000000
+ 0.810398 0.482500 -0.332338 0.000046 0.001870 0.001113 -0.000767
+ -0.819451 0.487500 -0.301403 1.035397 -42.422839 25.237792 -15.603587
+ 0.399353 0.492500 0.773279 0.002007 0.040079 0.049428 0.077607
+ 0.227126 0.497500 -0.837202 0.000000 0.000000 0.000000 -0.000000
+ -0.730558 0.502500 0.462361 0.000001 -0.000034 0.000024 0.000022
+ 0.848132 0.507500 0.152038 0.448154 19.004680 11.371901 3.406820
+ -0.520888 0.512500 -0.682656 0.043732 -1.138961 1.120620 -1.492680
+ -0.076772 0.517500 0.852232 0.000000 -0.000000 0.000000 0.000000
+ 0.630035 0.522500 -0.574500 0.000000 0.000000 0.000000 -0.000000
+ -0.849553 0.527500 -0.001957 0.083413 -3.543177 2.200011 -0.008161
+ 0.622813 0.532500 0.573191 0.375732 11.700529 10.003862 10.768312
+ -0.071788 0.537500 -0.840202 0.000000 -0.000001 0.000009 -0.000014
+ -0.512657 0.542500 0.665490 0.000000 -0.000000 0.000000 0.000000
+ 0.824347 0.547500 -0.143858 0.007207 0.297049 0.197288 -0.051838
+ -0.702249 0.552500 -0.448988 1.221164 -42.878027 33.734646 -27.414414
+ 0.213670 0.557500 0.802209 0.000037 0.000390 0.001019 0.001466
+ 0.382766 0.562500 -0.732860 0.000000 0.000000 0.000000 -0.000000
+ -0.774061 0.567500 0.280667 0.000342 -0.013256 0.009718 0.004806
+ 0.757153 0.572500 0.314585 1.570554 59.457445 44.957095 24.703600
+ -0.344320 0.577500 -0.740228 0.001759 -0.030281 0.050788 -0.065100
+ -0.245053 0.582500 0.775012 0.000000 -0.000000 0.000000 0.000000
+ 0.701082 0.587500 -0.404137 0.000010 0.000337 0.000282 -0.000194
+ -0.786381 0.592500 -0.174783 0.835327 -32.844267 24.746575 -7.300064
+ 0.459666 0.597500 0.657039 0.036506 0.839024 1.090611 1.199287
+ 0.104390 0.602500 -0.791263 0.000000 0.000000 0.000000 -0.000000
+ -0.608553 0.607500 0.510497 0.000000 -0.000006 0.000006 0.000005
+ 0.789718 0.612500 0.034480 0.197362 7.793026 6.044217 0.340248
+ -0.556265 0.617500 -0.556114 0.303815 -8.450080 9.380282 -8.447783
+ 0.034350 0.622500 0.781866 0.000000 0.000001 0.000012 0.000016
+ 0.500242 0.627500 -0.596659 0.000000 0.000000 0.000000 -0.000000
+ -0.767879 0.632500 0.101517 0.023490 -0.901891 0.742885 0.119234
+ 0.631415 0.637500 0.441484 1.038865 32.797761 33.113813 22.932118
+ -0.166463 0.642500 -0.747986 0.000033 -0.000271 0.001047 -0.001219
+ -0.380406 0.647500 0.660329 0.000000 -0.000000 0.000000 0.000000
+ 0.722468 0.652500 -0.228655 0.001526 0.055107 0.049770 -0.017441
+ -0.683250 0.657500 -0.317590 1.466475 -50.098432 48.210368 -23.286915
+ 0.287591 0.662500 0.691654 0.001264 0.018172 0.041861 0.043703
+ 0.253628 0.667500 -0.700083 0.000000 0.000000 0.000000 -0.000000
+ -0.655917 0.672500 0.342806 0.000066 -0.002167 0.002222 0.001133
+ 0.710795 0.677500 0.189115 0.908885 32.301521 30.788466 8.594193
+ -0.393874 0.682500 -0.615676 0.021834 -0.429996 0.745092 -0.672140
+ -0.124646 0.687500 0.715407 0.000000 -0.000000 0.000000 0.000000
+ 0.571386 0.692500 -0.440411 0.000002 0.000058 0.000071 -0.000045
+ -0.714000 0.697500 -0.060810 0.269615 -9.625266 9.402834 -0.819759
+ 0.482085 0.702500 0.523534 0.164222 3.958447 5.768293 4.298785
+ -0.001820 0.707500 -0.706711 0.000000 -0.000000 0.000017 -0.000017
+ -0.472639 0.712500 0.518610 0.000000 -0.000001 0.000002 0.000001
+ 0.693732 0.717500 -0.062684 0.041514 1.439971 1.489306 -0.130112
+ -0.549754 0.722500 -0.419243 0.528616 -14.530442 19.096262 -11.080924
+ 0.121247 0.727500 0.675310 0.000026 0.000156 0.000938 0.000870
+ 0.363906 0.732500 -0.575340 0.000000 0.000000 0.000000 -0.000000
+ -0.651739 0.737500 0.177002 0.003898 -0.127021 0.143735 0.034497
+ 0.595247 0.742500 0.307205 0.757066 22.532061 28.106077 11.628723
+ -0.229473 0.747500 -0.623366 0.000705 -0.008091 0.026357 -0.021980
+ -0.249722 0.752500 0.609412 0.000000 -0.000000 0.000000 0.000000
+ 0.590581 0.757500 -0.278223 0.000243 0.007175 0.009203 -0.003380
+ -0.617830 0.762500 -0.192043 0.510182 -15.760260 19.450670 -4.898835
+ 0.322854 0.767500 0.553813 0.008972 0.144833 0.344303 0.248442
+ 0.134752 0.772500 -0.620553 0.000000 0.000000 0.000000 -0.000000
+ -0.513532 0.777500 0.363013 0.000012 -0.000318 0.000481 0.000225
+ 0.617692 0.782500 0.078427 0.174349 5.384703 6.821413 0.683684
+ -0.398394 0.787500 -0.470240 0.052161 -1.039035 2.053845 -1.226413
+ -0.023629 0.792500 0.609414 0.000001 -0.000001 0.000022 0.000017
+ 0.424466 0.797500 -0.428745 0.000001 0.000012 0.000023 -0.000012
+ -0.595942 0.802500 0.029095 0.034337 -1.023133 1.377757 0.049951
+ 0.453862 0.807500 0.376766 0.138278 3.137953 5.582963 2.604918
+ -0.079224 0.812500 -0.577553 0.000018 -0.000070 0.000721 -0.000513
+ -0.327713 0.817500 0.473601 0.000000 -0.000000 0.000001 0.000001
+ 0.554573 0.822500 -0.126262 0.004293 0.119035 0.176544 -0.027101
+ -0.487871 0.827500 -0.277895 0.173762 -4.238666 7.189389 -2.414372
+ 0.169746 0.832500 0.527380 0.000279 0.002364 0.011596 0.007346
+ 0.227910 0.837500 -0.496639 0.000000 0.000000 0.000000 -0.000000
+ -0.496396 0.842500 0.209249 0.000405 -0.010059 0.017072 0.004240
+ 0.499931 0.847500 0.178362 0.109554 2.738471 4.642351 0.977014
+ -0.244379 0.852500 -0.462085 0.002119 -0.025895 0.090334 -0.048964
+ -0.129855 0.857500 0.497827 0.000000 -0.000000 0.000001 0.000001
+ 0.424952 0.862500 -0.274790 0.000033 0.000701 0.001424 -0.000454
+ -0.490465 0.867500 -0.082991 0.038312 -0.939525 1.661765 -0.158976
+ 0.300174 0.872500 0.385538 0.007462 0.112000 0.325546 0.143851
+ 0.038365 0.877500 -0.478040 0.000001 0.000001 0.000029 -0.000016
+ -0.344416 0.882500 0.320267 0.000003 -0.000046 0.000118 0.000043
+ 0.460795 0.887500 -0.003435 0.008239 0.189828 0.365613 -0.001415
+ -0.334850 0.892500 -0.302191 0.012365 -0.207029 0.551809 -0.186836
+ 0.041829 0.897500 0.439026 0.000009 0.000019 0.000404 0.000198
+ 0.259494 0.902500 -0.343739 0.000000 0.000004 0.000013 -0.000005
+ -0.413074 0.907500 0.076246 0.001248 -0.025770 0.056614 0.004757
+ 0.346788 0.912500 0.216984 0.009876 0.171252 0.450614 0.107152
+ -0.106114 0.917500 -0.383319 0.000058 -0.000307 0.002651 -0.001107
+ -0.175351 0.922500 0.343869 0.000000 -0.000000 0.000002 0.000001
+ 0.350175 0.927500 -0.130849 0.000158 0.002769 0.007333 -0.001035
+ -0.334864 0.932500 -0.135315 0.003983 -0.066694 0.185724 -0.026950
+ 0.149837 0.937500 0.314074 0.000161 0.001204 0.007533 0.002524
+ 0.097643 0.942500 -0.319624 0.000000 0.000000 0.000004 -0.000001
+ -0.275454 0.947500 0.162386 0.000018 -0.000252 0.000868 0.000149
+ 0.297915 0.952500 0.063172 0.000873 0.012998 0.041557 0.002756
+ -0.167641 0.957500 -0.234713 0.000172 -0.001444 0.008246 -0.002021
+ -0.032856 0.962500 0.269285 0.000001 -0.000001 0.000029 0.000008
+ 0.192138 0.967500 -0.164399 0.000003 0.000026 0.000131 -0.000022
+ -0.232769 0.972500 -0.007888 0.000099 -0.001149 0.004799 -0.000039
+ 0.150622 0.977500 0.147671 0.000059 0.000443 0.002872 0.000434
+ -0.009990 0.982500 -0.185994 0.000001 -0.000001 0.000068 -0.000013
+ -0.100083 0.987500 0.121767 0.000000 -0.000002 0.000024 0.000003
+ 0.121028 0.992500 -0.017203 0.000004 0.000027 0.000218 -0.000004
+ -0.058306 0.997500 -0.039926 0.000001 -0.000004 0.000072 -0.000003
+</pre></div>  </div></div>
+<b name="KL_ENTROPY.md_working_2.datkl_kl" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.datkl_kl","KL_ENTROPY.md_working_2.datkl_kl","green")'>kl_kl</b><span style="display:none;" id="KL_ENTROPY.md_working_2.datkl_kl">The CUSTOM action with label <b>kl_kl</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">kl_kl</td><td width="5%"><font color="green">grid</font></td><td>the grid obtained by doing an element-wise application of an arbitrary function to the input grid</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.dath">h</b>,<b name="KL_ENTROPY.md_working_2.datkl_ref">kl_ref</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=y*log(y/(0.5*(x+y))) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="KL_ENTROPY.md_working_2.datkl" onclick='showPath("KL_ENTROPY.md_working_2.dat","KL_ENTROPY.md_working_2.datkl","KL_ENTROPY.md_working_2.datkl","black")'>kl</b><span style="display:none;" id="KL_ENTROPY.md_working_2.datkl">The CUSTOM action with label <b>kl</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">kl</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">INTEGRATE_GRID<span class="right">Calculate the numerical integral of the function stored on the grid <a href="https://www.plumed.org/doc-master/user-doc/html/INTEGRATE_GRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the function on a grid that is being integrated<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.datkl_kl">kl_kl</b> <span class="plumedtooltip">PERIODIC<span class="right">if the value of the output integral has a periodid domain then you use this keyword to specify the periodicity<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="KL_ENTROPY.md_working_2.datkl">kl</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the grid that you wish to use in the KL entropy calculation</td>
+</tr>
+<tr>
+<td style="text-align: left;">REFERENCE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">a file containing the reference density in grid format</td>
+</tr>
+<tr>
+<td style="text-align: left;">VALUE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the name of the value that should be read from the grid</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1021/acs.jctc.7b01027">G. Gobbo, M. A. Bellucci, G. A. Tribello, G. Ciccotti, B. L. Trout, Nucleation of Molecular Crystals Driven by Relative
+Information Entropy. Journal of Chemical Theory and Computation 14, 959–972 (2017)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

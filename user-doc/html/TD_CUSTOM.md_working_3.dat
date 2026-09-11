@@ -1,0 +1,4 @@
+TD_CUSTOM ...
+ FUNCTION=exp(-(beta/10.0)*FE)
+ LABEL=td
+... TD_CUSTOM

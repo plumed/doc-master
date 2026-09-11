@@ -1,0 +1,1159 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Plugin: pycv - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#plugin-pycv" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Plugin: pycv
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regression-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regression tests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-runtime-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common runtime problems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common runtime problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#developing-pycv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developing pycv
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialization-the-init-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initialization: the INIT keyword
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-step-the-calculate-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculate step: the CALCULATE keyword
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-step-the-prepare-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prepare step: the PREPARE keyword
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-step-the-update-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update step: the UPDATE keyword
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Some Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Some Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bare-minimum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bare minimum
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JAX
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-a-cv-with-automatic-gradient-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: a CV with automatic gradient calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contributing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copyright" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copyright
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="plugin-pycv"><a href="../modules/">Plugin</a>: pycv</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">functionality for calling python from PLUMED to calculate CVs and functions</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Authors:</strong> Daniele Rapetti and Toni Giorgino</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?search=pycv"><img alt="used in 1 tutorials" src="https://img.shields.io/badge/tutorials-1-green.svg" /></a><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details">Details</h2>
+<p>The PYCV module enables
+PLUMED2 Collective Variables (CVs) and arbitrary functions to be
+defined and auto-differentiated in the Python language.</p>
+<p>Advantages of using PYCV over standard development of CVs in C++ are:
+ 1. functions may be prototyped in  high-level code, using
+    extensive mathematical libraries, and no boilerplate;
+ 2. just-in-time compilation
+    occurs transparently: there are no compilation and link delays
+    for code changes (using external tools such as JAX);
+ 3. CVs may be automatically differentiated in common cases. (using external tools such as JAX)</p>
+<p>You can see the original PyCV <a href="https://giorginolab.github.io/plumed2-pycv">here</a>
+<a href="https://doi.org/10.21105/joss.01773"><img alt="DOI" src="https://joss.theoj.org/papers/10.21105/joss.01773/status.svg" /></a>
+<a href="https://www.plumed-nest.org/eggs/19/075/"><img alt="plumID:19.075" src="https://www.plumed-nest.org/eggs/19/075/badge.svg" /></a>. </p>
+<p>Note that the current syntax is different than the one described in the original paper.</p>
+<p>As usual if you are not working in a virtual environment you are doing this at your own risk
+<code>pip install .</code> should be enough, with a plumed version (&gt;=2.10) avaiable with a pkg-config or in the <code>PATH</code>s.</p>
+<blockquote>
+<p>[!NOTE]
+On linux If you use <code>make</code> and <code>make check</code> note that the tests will find pycv only if you are working in the same python environment that you had active when compiling/installing plumed</p>
+<p>[!NOTE]
+We have some problem with the macs:
+you may need to explicitly declare and export some environmental variables like the <code>PYTHON_PATH</code> to make pycv work when plumed is called</p>
+</blockquote>
+<h2 id="documentation">Documentation</h2>
+<blockquote>
+<p>[!NOTE]
+The regtests <code>regtest/pycvcomm/rt-doc</code> and <code>regtest/pycvfunc/rt-doc</code> can be used both as
+ an example and a way to create a (very) basic code documentation for the action/function interface.
+The example in <code>regtest/pycvcomm/rt-doc</code> will produce very basic html pages,
+ and the one in <code>regtest/pycvfunc/rt-doc</code> will dump a few simple textfiles</p>
+</blockquote>
+<p>The PYCV module defines the following actions:</p>
+<ul>
+<li><code>PYCVINTERFACE</code>, to implement single- and multi-component CVs in Python;</li>
+<li><code>PYFUNCTION</code>, to implement arbitrary functions.</li>
+</ul>
+<p>Plumed will start an embedded Python interpreter.
+Then Plumed will import a python module with the <code>IMPORT=</code> keyword. This module
+must contain at least two objects: a <em>calculate</em> function that will be called at
+the <code>calculate()</code> step, and an <em>init</em> function or dictionary that will be used at
+time of constructing the PYCV.
+The module that can be imported can be a <code>*.py</code> file or a directory that contains
+an <code>__init__.py</code>, or a module in the your Python path.</p>
+<p><code>PYCVINTERFACE</code> will accept also functions during the <code>prepare()</code> and <code>update()</code>
+steps.</p>
+<p><code>PYCVINTERFACE</code> will accept also the <code>ATOMS</code> keyword (see <code>DISTANCE</code> CV)
+<strong>or</strong> a series of keyword relative to the neighbour list (see <code>COORDINATION</code> CV).
+If both the flavour of asking atom is used, <code>PYCVINTERFACE</code> will raise and error.</p>
+<p>The interface to Python, as anticipated above, depends on the following keywords:</p>
+<table>
+<thead>
+<tr>
+<th>keyword</th>
+<th>description</th>
+<th>PYCVINTERFACE</th>
+<th>PYFUNCTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IMPORT</td>
+<td>the module to import</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>INIT</td>
+<td>the function/dict to call/get @ construction</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>CALCULATE</td>
+<td>the function to call at <code>calculate()</code> step</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PREPARE</td>
+<td>the function to call at <code>prepare()</code> step</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>the function to call at <code>update()</code> step</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<p>If not specified, <code>INIT</code> will default to <code>plumedInit</code> and <code>CALCULATE</code>  to 
+<code>plumedCalculate</code>. On the other hand, if <code>PREPARE</code> and <code>UPDATE</code> are not present, they will be ignored.</p>
+<h2 id="installation">Installation</h2>
+<p>It should be sufficient to run, ideally in a virtual or conda environment:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>plugins/pycv
+pip<span class="w"> </span>install<span class="w"> </span>.
+</code></pre></div>
+You will need to have plumed avaiable in your path or through <code>pkg-config</code></p>
+<p>Required dependencies <code>numpy</code> and <code>pybind11</code> are installed as part of the installation process.</p>
+<p>Note that an in-place installation, <code>pip install -e .</code>, won't work. </p>
+<p>Now you can get the position of the shared object to load with <code>python -m pycv</code>, see <a href="#some-examples">below</a></p>
+<h2 id="regression-tests">Regression tests</h2>
+<p>A suite of regression tests are provided in the <code>regtest</code> subdirectory. They can be run e.g. with 
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>-C<span class="w"> </span>regtest
+</code></pre></div></p>
+<h2 id="common-runtime-problems">Common runtime problems</h2>
+<p>On some platforms, <em>embedded</em> Python interpreters  (such as the one used in PYCV) appear to behave 
+differently than the plain ones, raising surprising errors.  For example:</p>
+<blockquote>
+<p>[!NOTE]
+Some Python configurations (e.g. Conda under Linux) require the
+ Python shared library to be found in the LD_LIBRARY_PATH, 
+ ignoring the activated environment.  This manifests itself with an
+ error like:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>      libpython3.13.so.1.0: cannot open shared object file: No such file or directory
+</code></pre></div>
+<blockquote>
+<p>[!NOTE]
+Similarly, some Python configurations (e.g. MacOS) ignore the current
+ environment when searching for packages (e.g. <code>numpy</code>). Hence,
+ one should set PYTHONPATH manually.  This manifests itself with an
+ error like:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>      No module named numpy
+</code></pre></div>
+<h3 id="developing-pycv">Developing pycv</h3>
+<p>If you are developing pycv can be compiled and tested from the pycv dir with <code>make</code></p>
+<div class="highlight"><pre><span></span><code>make
+make<span class="w"> </span>check
+</code></pre></div>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="initialization-the-init-keyword">Initialization: the INIT keyword</h3>
+<p>Both <code>PYFUNCTION</code> and <code>PYCVINTERFACE</code> use the keyword INIT to finalize the set up for the action.
+If not specified INIT wil default to <code>"plumedInit"</code>.
+INIT instruct plumed to call a function that returns a dict or read directly a dict.</p>
+<p>The function must accept a <code>plumedCommunications.PythonFunction</code> or a <code>plumedCommunications.PythonCVInterface</code> object that can be used to interact with plumed (this will be explained better in the CALCULATE section)
+The init dict must contain at least the "Value" or the "COMPONENTS" keys: 
+ - to the "Value" key must be assigned a value-dict
+ - to  the "COMPONENTS" key must be assigne a dict whose keys are assigned to a value-dict. The keys of the COMPONTENTS-dict will be used as name of the components of the action.
+What I am calling a "value-dict" is a dict with two entries: <code>{'derivative': bool, 'period': None or [min,max]}</code> "derivative" simply tells plumed that the component will returns derivatice, the "period" will set up the periodicity for that componentd ("min" an "max" are parsed with lepton, so you can also use strings containing <code>pi</code>, <code>e</code>, etc...)</p>
+<p>To help setting up a value/components plumedCommunications has a submodule defaults that contains 2 possible defaults (see the example): 
+  - <code>plumedCommunications.defaults.COMPONENT = {'derivative': True, 'period': None}</code>
+  - <code>plumedCommunications.defaults.COMPONENT_NODEV = {'derivative': False, 'period': None}</code></p>
+<p>The init dictionary for <code>PYCVINTERFACE</code> can contain nearly all the keywords of the input line:
+ - NOPBC -flag, needs True/False explicitly set-
+ - ATOMS
+ - GROUPA
+ - GROUPB
+ - PAIR -flag, needs True/False explicitly set-
+ - NLIST -flag, needs True/False explicitly set-
+ - NL_CUTOFF
+ - NL_STRIDE
+Note that if the keyword is both in the input line of the plumed file and in the init-dict an error will be raised.</p>
+<p>Nothe that if you use ATOMS and the NL keywords (GROUPA, GROUPB, PAIR, NLIST, NL_CUTOFF, NL_STRIDE) an error will be raised.</p>
+<p><code>PYCVINTERFACE</code> has a  <code>.data</code> attribute that is a dict, that can be used to store long term data, this dict will not be accessed by plumed.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">plumedCommunications</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">PLMD</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plumedInit</span><span class="p">(</span><span class="n">action</span><span class="p">:</span> <span class="n">PLMD</span><span class="o">.</span><span class="n">PythonCVInterface</span><span class="p">):</span>
+    <span class="n">action</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">=</span><span class="mf">0.0</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">"NOPBC"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">"Value"</span><span class="p">:</span> <span class="n">PLMD</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="n">COMPONENT_NODEV</span><span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plumedCalculate</span><span class="p">(</span><span class="n">action</span><span class="p">:</span> <span class="n">PLMD</span><span class="o">.</span><span class="n">PythonCVInterface</span><span class="p">):</span>
+    <span class="c1">#...something is defined...</span>
+    <span class="k">if</span> <span class="n">g</span><span class="p">(</span><span class="n">something</span><span class="p">):</span>
+        <span class="n">action</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">"example"</span><span class="p">]</span><span class="o">+=</span><span class="mf">1.0</span>
+    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">something</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="calculate-step-the-calculate-keyword">Calculate step: the CALCULATE keyword</h3>
+<p>Both <code>PYFUNCTION</code> and <code>PYCVINTERFACE</code> use the keyword CALCULATE to call a function in the <code>calculate()</code> step
+If not specified CALCULATE will default to <code>"plumedCalculate"</code>.</p>
+<p>Plumed will expect CALCULATE to return either a tuple or a dict:
+ - the tuple can have up to 3 components: <code>[value, derivative, boxDerivative]</code>: if "derivative" is set to <code>True</code> an error will be raised if the tuple contain only one element, or if contains more than one element in the other case.
+ - in the case of multiple COMPONETS plumed will expect a dict with a key per defined component. Each key  must contain a tuple with the previous criterions.</p>
+<p>Instead of a tuple you can return a single float (or a dict of floats), but plumed will complain with a warning.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">plumedCommunications</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">PLMD</span>
+
+
+<span class="n">plumedInit</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"COMPONENTS"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"first"</span><span class="p">:</span> <span class="n">PLMD</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="n">COMPONENT_NODEV</span><span class="p">,</span>
+        <span class="s2">"second"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"derivative"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">"period"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"-pi"</span><span class="p">,</span> <span class="s2">"pi"</span><span class="p">]},</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plumedCalculate</span><span class="p">(</span><span class="n">action</span><span class="p">:</span> <span class="n">PLMD</span><span class="o">.</span><span class="n">PythonCVInterface</span><span class="p">):</span>
+    <span class="c1">#...complex calculation are called here...</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">"first"</span><span class="p">:</span> <span class="p">[</span><span class="n">resForFirst</span><span class="p">],</span>
+        <span class="s2">"second"</span><span class="p">:</span> <span class="p">[</span><span class="n">resForSecond</span><span class="p">,</span> <span class="n">derivativeForSecond</span><span class="p">,</span> <span class="n">boxDerivativeForSecond</span><span class="p">],</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h3 id="prepare-step-the-prepare-keyword">Prepare step: the PREPARE keyword</h3>
+<p><strong>Only</strong> <code>PYCVINTERFACE</code> use the keyword PREPARE to call a function in the <code>prepare()</code> step, before <code>calculate()</code></p>
+<p>If not specified PREPARE will be ignored.
+Python expect this PREPARE to return a dict.</p>
+<p>If that dict contains a key called 'setAtomRequest' with a list of atoms (you can pass a string that will be parsed by plumed like the one in ATOMS) the new list will be requested.</p>
+<h3 id="update-step-the-update-keyword">Update step: the UPDATE keyword</h3>
+<p><strong>Only</strong> <code>PYCVINTERFACE</code> use the keyword UPDATE to call a function in the <code>update()</code> step, after <code>calculate()</code></p>
+<p>If not specified UPDATE will be ignored.
+Python expect this UPDATE to return a dict.</p>
+<p>As now nothing will be done after the python UPDATE call.</p>
+<p>You can however act on the <code>.data</code> dict or access to all the parameters accessible from python, and for example update a plot or accumulate an histogram or any other thing that may be useful for your analysis/simulation.</p>
+<h2 id="some-examples">Some Examples</h2>
+<p>In the following paragraphs I am showing a few examples, for a short description of the python interface look <a href="PythonInterface.md">here</a></p>
+<blockquote>
+<p>![IMPORTANT]
+In the following examples you will see often <code>path/to/PythonCVInterface.so</code> as the path to load pycv into plumed
+If you are using a standalone plumed you can get the path to that file simply by calling <code>python -m pycv</code>
+If you are using plumed within python by importing the <code>pycv</code> python module
+  and loading the pycv plumed module with the convenient function  <code>pycv.getPythonCVInterface()</code>,
+  like <code>plmd.cmd("readInputLine", f"LOAD FILE={pycv.getPythonCVInterface()}")</code></p>
+</blockquote>
+<h3 id="bare-minimum">Bare minimum</h3>
+<p>The minimum invocation can be the following:</p>
+<p><strong>plumed.dat</strong>
+<div class="highlight"><pre><span></span><code>LOAD GLOBAL FILE=path/to/PythonCVInterface.so
+cvPY: PYFUNCTION IMPORT=pycv
+PRINT FILE=colvar.out ARG=*
+</code></pre></div></p>
+<p><strong>pycv.py</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">plumedCommunications</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">PLMD</span>
+<span class="n">plumedInit</span><span class="o">=</span><span class="p">{</span><span class="s2">"Value"</span><span class="p">:</span><span class="n">PLMD</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="n">COMPONENT_NODEV</span><span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plumedCalculate</span><span class="p">(</span><span class="n">action</span><span class="p">:</span> <span class="n">PLMD</span><span class="o">.</span><span class="n">PythonFunction</span><span class="p">):</span>
+    <span class="n">action</span><span class="o">.</span><span class="n">lognl</span><span class="p">(</span><span class="s2">"Hello, world!"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mf">0.0</span>
+</code></pre></div>
+This simply prints an "Hello, world!" at each step of the simulation/trajectory.</p>
+<h2 id="jax">JAX</h2>
+<p>Transparent auto-differentiation, JIT compilation, neural networks and vectorization
+are readily available through Google's <a href="https://github.com/google/jax">JAX
+library</a> (recommended).</p>
+<h3 id="installation_1">Installation</h3>
+<p>As described in the  <a href="https://jax.readthedocs.io/en/latest/installation.html">jax documenation</a>, there are several installation routes, and calculations can be accelerated with various hardware. For example:
+ - example if you have a cuda12 compatible device (a wheel for cuda will be installed alongside jax):
+<code>pip install "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html</code>
+ - example if you have a cuda12 compatible device, and <strong>cuda already installed on your system</strong>:
+<code>pip install "jax[cuda12_local]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html</code></p>
+<h3 id="example-a-cv-with-automatic-gradient-calculation">Example: a CV with automatic gradient calculation</h3>
+<p>Here's a numpy-style calculation of an angle between three atoms, with automatic differentiation:</p>
+<p><strong>plumed.dat</strong></p>
+<div class="highlight"><pre><span></span><code>cv1:  PYCVINTERFACE ATOMS=1,4,3 IMPORT=jaxcv CALCULATE=cv1
+</code></pre></div>
+<p><strong>jaxcv.py</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Import the JAX library</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">jax.numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">jax</span><span class="w"> </span><span class="kn">import</span> <span class="n">grad</span><span class="p">,</span> <span class="n">jit</span><span class="p">,</span> <span class="n">vmap</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plumedCommunications</span>
+
+<span class="n">plumedInit</span><span class="o">=</span><span class="p">{</span><span class="s2">"Value"</span><span class="p">:</span> <span class="n">plumedCommunications</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="n">COMPONENT</span><span class="p">}</span>
+
+<span class="c1"># Implementation of the angle function. @jit really improves speed</span>
+<span class="nd">@jit</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">angle</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">r1</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span>
+    <span class="n">r2</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">,:]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span>
+
+    <span class="n">costheta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">r1</span><span class="p">,</span><span class="n">r2</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">r1</span><span class="p">,</span><span class="n">r1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span><span class="n">r2</span><span class="p">))</span>
+    <span class="c1"># OR: costheta = np.dot(r1,r2) / np.linalg.norm(r1) / np.linalg.norm(r2)</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">costheta</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">theta</span>
+
+<span class="c1"># Use JAX to auto-gradient it</span>
+<span class="n">grad_angle</span> <span class="o">=</span> <span class="n">jit</span><span class="p">(</span><span class="n">grad</span><span class="p">(</span><span class="n">angle</span><span class="p">))</span>
+
+<span class="c1"># The CV function actually called</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cv1</span><span class="p">(</span><span class="n">action</span><span class="p">):</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">action</span><span class="o">.</span><span class="n">getPositions</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">angle</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">grad_angle</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="limitations">Limitations</h2>
+<ul>
+<li>No test have been done with MPI</li>
+<li>JAX's GPU/TPU offloading are not 100% tested.</li>
+</ul>
+<p>If you are using an older Plumed version you must know that:
+ - On linux the plug-in can be loaded only if <code>LOAD</code> supports the <code>GLOBAL</code> keyword
+ - mklib won't work (supports only single file compilations), so you'll need to use <code>./prepareMakeForDevelop.sh</code></p>
+<h2 id="authors">Authors</h2>
+<p>Original author: Toni Giorgino <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#111;&#110;&#105;&#46;&#103;&#105;&#111;&#114;&#103;&#105;&#110;&#111;&#64;&#99;&#110;&#114;&#46;&#105;&#116;">&#116;&#111;&#110;&#105;&#46;&#103;&#105;&#111;&#114;&#103;&#105;&#110;&#111;&#64;&#99;&#110;&#114;&#46;&#105;&#116;</a></p>
+<p>Daniele Rapetti <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#68;&#97;&#110;&#105;&#101;&#108;&#101;&#46;&#82;&#97;&#112;&#101;&#116;&#116;&#105;&#64;&#115;&#105;&#115;&#115;&#97;&#46;&#105;&#116;">&#68;&#97;&#110;&#105;&#101;&#108;&#101;&#46;&#82;&#97;&#112;&#101;&#116;&#116;&#105;&#64;&#115;&#105;&#115;&#115;&#97;&#46;&#105;&#116;</a></p>
+<h2 id="contributing">Contributing</h2>
+<p>Please report bugs and ideas via this repository's <em>Issues</em>. </p>
+<h2 id="citation">Citation</h2>
+<p>Giorgino T. PYCV: a PLUMED 2 Module Enabling the Rapid Prototyping of
+Collective Variables in Python. The Journal of Open Source Software
+4(42):1773 </p>
+<p><a href="https://doi.org/10.21105/joss.01773"><img alt="DOI" src="https://joss.theoj.org/papers/10.21105/joss.01773/status.svg" /></a>
+<a href="https://www.plumed-nest.org/eggs/19/075/"><img alt="plumID:19.075" src="https://www.plumed-nest.org/eggs/19/075/badge.svg" /></a></p>
+<h2 id="copyright">Copyright</h2>
+<p>PYCV is distributed under the LGPL terms: see COPYRIGHT.</p>
+<p>PYCV includes the <a href="https://github.com/pybind/pybind11">pybind11</a>
+library, distributed under its own license terms (BSD-3).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

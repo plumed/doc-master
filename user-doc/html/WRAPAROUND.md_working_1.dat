@@ -1,0 +1,6 @@
+rna: GROUP ATOMS=1-100
+ions: GROUP ATOMS=101-110
+# first make the rna molecule whole
+WHOLEMOLECULES ENTITY0=rna
+WRAPAROUND ATOMS=ions AROUND=rna
+DUMPATOMS FILE=dump.xyz ATOMS=rna,ions

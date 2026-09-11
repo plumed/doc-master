@@ -1,0 +1,1145 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: FCCUBIC - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-fccubic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: FCCUBIC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-two-types-of-atom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with two types of atom
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mask-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The MASK keyword
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deprecated syntax
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-fccubic"><a href="../shortcuts/">Shortcut</a>: FCCUBIC</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_symfunc/"><strong>symfunc</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Measure how similar the environment around atoms is to that found in a FCC structure.</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=FCCUBIC"><img alt="used in 1 tutorials" src="https://img.shields.io/badge/tutorials-1-green.svg" /></a><a href="https://www.plumed-nest.org/browse.html?action=FCCUBIC"><img alt="used in 3 eggs" src="https://img.shields.io/badge/nest-3-green.svg" /></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the symmetry function for each of the specified atoms</td>
+<td style="text-align: center;">vector</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Measure how similar the environment around atoms is to that found in a FCC structure.</p>
+<p>This shortcut is an example of a <a href="../COORDINATION_SHELL_AVERAGE/">COORDINATION_SHELL_AVERAGE</a>,
+which we can use to measure how similar the environment around atom <script type="math/tex">i</script> is to an fcc structure.
+The function that is used to make this determination is as follows:</p>
+<p>
+<script type="math/tex; mode=display">
+s_i = \frac{ \sum_{i \ne j} \sigma(r_{ij}) \left\{ a\left[ \frac{(x_{ij}y_{ij})^4 + (x_{ij}z_{ij})^4 + (y_{ij}z_{ij})^4}{r_{ij}^8} - \frac{\alpha (x_{ij}y_{ij}z_{ij})^4}{r_{ij}^{12}} \right] + b \right\} }{ \sum_{i \ne j} \sigma(r_{ij}) }
+</script>
+</p>
+<p>In this expression <script type="math/tex">x_{ij}</script>, <script type="math/tex">y_{ij}</script> and <script type="math/tex">z_{ij}</script> are the <script type="math/tex">x</script>, <script type="math/tex">y</script> and <script type="math/tex">z</script> components of the vector connecting atom <script type="math/tex">i</script> to
+atom <script type="math/tex">j</script> and <script type="math/tex">r_{ij}</script> is the magnitude of this vector.  <script type="math/tex">\sigma(r_{ij})</script> is a switching function that acts on the distance between
+atom <script type="math/tex">i</script> and atom <script type="math/tex">j</script> and its inclusion in the numerator and the denominator of the above expression as well as the fact that we are summing
+over all of the other atoms in the system ensures that we are calculating an average
+of the function of <script type="math/tex">x_{ij}</script>, <script type="math/tex">y_{ij}</script> and <script type="math/tex">z_{ij}</script> for the atoms in the first coordination sphere around atom <script type="math/tex">i</script>.  Lastly, <script type="math/tex">\alpha</script>
+is a parameter that can be set by the user, which by default is equal to three.  The values of <script type="math/tex">a</script> and <script type="math/tex">b</script> are calculated from <script type="math/tex">\alpha</script> using:</p>
+<p>
+<script type="math/tex; mode=display">
+a = \frac{ 80080}{ 2717 + 16 \alpha} \qquad \textrm{and} \qquad b = \frac{ 16(\alpha - 143) }{2717 + 16\alpha}
+</script>
+</p>
+<p>This action was been used in all the articles in the bibliography. We thus wrote an explict
+action to calculate it in PLUMED instead of using a shortcut as we did for <a href="../SIMPLECUBIC/">SIMPLECUBIC</a> so that we could get
+good computational performance.  Notice also that you can you can rotate the bond vectors before computing the
+function in the above expression by using the PHI, THETA and PSI keywords as is discussed in the documentation for <a href="../COORDINATION_SHELL_FUNCTION/">COORDINATION_SHELL_FUNCTION</a>.</p>
+<p>The following input calculates the FCCUBIC parameter for the 64 atoms in the system
+and then calculates and prints the average value for this quantity.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_FCCUBIC.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../FCCUBIC.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="FCCUBIC.md_working_1.datd_short"><span id="FCCUBIC.md_working_1.datdefd_short"><b name="FCCUBIC.md_working_1.datd" onclick='showPath("FCCUBIC.md_working_1.dat","FCCUBIC.md_working_1.datd","FCCUBIC.md_working_1.datd_shortcut","blue")'>d</b><span style="display:none;" id="FCCUBIC.md_working_1.datd_shortcut">The FCCUBIC action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the symmetry function for each of the specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FCCUBIC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_1.datd");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_1.datdefd");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIES<span class="right">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments<i></i></span></span>=1-64 <span class="plumedtooltip">D_0<span class="right"> The d_0 parameter of the switching function<i></i></span></span>=3.0 <span class="plumedtooltip">R_0<span class="right">The r_0 parameter of the switching function<i></i></span></span>=1.5 <span class="plumedtooltip">NN<span class="right"> The n parameter of the switching function <i></i></span></span>=6 <span class="plumedtooltip">MM<span class="right"> The m parameter of the switching function; 0 implies 2*NN<i></i></span></span>=12
+</span><span id="FCCUBIC.md_working_1.datdefd_long" style="display:none;"><b name="FCCUBIC.md_working_1.datd" onclick='showPath("FCCUBIC.md_working_1.dat","FCCUBIC.md_working_1.datd","FCCUBIC.md_working_1.datd_shortcut","blue")'>d</b>: <span class="plumedtooltip" style="color:green">FCCUBIC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_1.datd");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_1.datdefd");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIES<span class="right">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments<i></i></span></span>=1-64 <span class="plumedtooltip">D_0<span class="right"> The d_0 parameter of the switching function<i></i></span></span>=3.0 <span class="plumedtooltip">R_0<span class="right">The r_0 parameter of the switching function<i></i></span></span>=1.5 <span class="plumedtooltip">NN<span class="right"> The n parameter of the switching function <i></i></span></span>=6 <span class="plumedtooltip">MM<span class="right"> The m parameter of the switching function; 0 implies 2*NN<i></i></span></span>=12  <span class="plumedtooltip">PHI<span class="right"> The Euler rotational angle phi<i></i></span></span>=0.0 <span class="plumedtooltip">THETA<span class="right"> The Euler rotational angle theta<i></i></span></span>=0.0 <span class="plumedtooltip">PSI<span class="right"> The Euler rotational angle psi<i></i></span></span>=0.0 <span class="plumedtooltip">ALPHA<span class="right"> The alpha parameter of the angular function that is used for FCCUBIC<i></i></span></span>=3.0
+</span></span><span id="FCCUBIC.md_working_1.datd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("FCCUBIC.md_working_1.datd")'># d: FCCUBIC SPECIES=1-64 D_0=3.0 R_0=1.5 NN=6 MM=12</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="FCCUBIC.md_working_1.datd_grp" onclick='showPath("FCCUBIC.md_working_1.dat","FCCUBIC.md_working_1.datd_grp","FCCUBIC.md_working_1.datd_grp","violet")'>d_grp</b><span style="display:none;" id="FCCUBIC.md_working_1.datd_grp">The GROUP action with label <b>d_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-64
+<b name="FCCUBIC.md_working_1.datd_mat" onclick='showPath("FCCUBIC.md_working_1.dat","FCCUBIC.md_working_1.datd_mat","FCCUBIC.md_working_1.datd_mat","red")'>d_mat</b><span style="display:none;" id="FCCUBIC.md_working_1.datd_mat">The CONTACT_MATRIX action with label <b>d_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_mat.w</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr><tr><td width="5%">d_mat.x</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the x axis</td></tr><tr><td width="5%">d_mat.y</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the y axis</td></tr><tr><td width="5%">d_mat.z</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the z axis</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-64 <span class="plumedtooltip">R_0<span class="right">The r_0 parameter of the switching function<i></i></span></span>=1.5 <span class="plumedtooltip">D_0<span class="right"> The d_0 parameter of the switching function<i></i></span></span>=3.0 <span class="plumedtooltip">NN<span class="right"> The n parameter of the switching function <i></i></span></span>=6 <span class="plumedtooltip">MM<span class="right"> The m parameter of the switching function; 0 implies 2*NN<i></i></span></span>=12 <span class="plumedtooltip">COMPONENTS<span class="right"> also calculate the components of the vector connecting the atoms in the contact matrix<i></i></span></span>
+<b name="FCCUBIC.md_working_1.datd_vfunc" onclick='showPath("FCCUBIC.md_working_1.dat","FCCUBIC.md_working_1.datd_vfunc","FCCUBIC.md_working_1.datd_vfunc","red")'>d_vfunc</b><span style="display:none;" id="FCCUBIC.md_working_1.datd_vfunc">The FCCUBIC_FUNC action with label <b>d_vfunc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_vfunc</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a function that measures the similarity with an fcc environment to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FCCUBIC_FUNC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC_FUNC" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_1.datd_mat">d_mat.x</b>,<b name="FCCUBIC.md_working_1.datd_mat">d_mat.y</b>,<b name="FCCUBIC.md_working_1.datd_mat">d_mat.z</b> <span class="plumedtooltip">ALPHA<span class="right"> The alpha parameter of the angular function<i></i></span></span>=3.0
+<b name="FCCUBIC.md_working_1.datd_wvfunc" onclick='showPath("FCCUBIC.md_working_1.dat","FCCUBIC.md_working_1.datd_wvfunc","FCCUBIC.md_working_1.datd_wvfunc","red")'>d_wvfunc</b><span style="display:none;" id="FCCUBIC.md_working_1.datd_wvfunc">The CUSTOM action with label <b>d_wvfunc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_wvfunc</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_1.datd_vfunc">d_vfunc</b>,<b name="FCCUBIC.md_working_1.datd_mat">d_mat.w</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FCCUBIC.md_working_1.datd_ones" onclick='showPath("FCCUBIC.md_working_1.dat","FCCUBIC.md_working_1.datd_ones","FCCUBIC.md_working_1.datd_ones","blue")'>d_ones</b><span style="display:none;" id="FCCUBIC.md_working_1.datd_ones">The CONSTANT action with label <b>d_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=64
+<b name="FCCUBIC.md_working_1.datd" onclick='showPath("FCCUBIC.md_working_1.dat","FCCUBIC.md_working_1.datd","FCCUBIC.md_working_1.datd","blue")'>d</b><span style="display:none;" id="FCCUBIC.md_working_1.datd">The MATRIX_VECTOR_PRODUCT action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="FCCUBIC.md_working_1.datd_wvfunc">d_wvfunc</b>,<b name="FCCUBIC.md_working_1.datd_ones">d_ones</b>
+<b name="FCCUBIC.md_working_1.datd_denom" onclick='showPath("FCCUBIC.md_working_1.dat","FCCUBIC.md_working_1.datd_denom","FCCUBIC.md_working_1.datd_denom","blue")'>d_denom</b><span style="display:none;" id="FCCUBIC.md_working_1.datd_denom">The MATRIX_VECTOR_PRODUCT action with label <b>d_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_denom</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="FCCUBIC.md_working_1.datd_mat">d_mat.w</b>,<b name="FCCUBIC.md_working_1.datd_ones">d_ones</b>
+<b name="FCCUBIC.md_working_1.datd_n" onclick='showPath("FCCUBIC.md_working_1.dat","FCCUBIC.md_working_1.datd_n","FCCUBIC.md_working_1.datd_n","blue")'>d_n</b><span style="display:none;" id="FCCUBIC.md_working_1.datd_n">The CUSTOM action with label <b>d_n</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_n</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_1.datd">d</b>,<b name="FCCUBIC.md_working_1.datd_denom">d_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><b name="FCCUBIC.md_working_1.datdm" onclick='showPath("FCCUBIC.md_working_1.dat","FCCUBIC.md_working_1.datdm","FCCUBIC.md_working_1.datdm","black")'>dm</b><span style="display:none;" id="FCCUBIC.md_working_1.datdm">The MEAN action with label <b>dm</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dm</td><td width="5%"><font color="black">scalar</font></td><td>the MEAN of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MEAN<span class="right">Calculate the arithmetic mean of the elements in a vector <a href="https://www.plumed.org/doc-master/user-doc/html/MEAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FCCUBIC.md_working_1.datd">d</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="FCCUBIC.md_working_1.datdm">dm</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colv
+</pre></div>
+
+<p>In the input above we use a rational <a href="../LESS_THAN/">switching function</a> with the parameters above. We would recommend using SWITCH syntax
+rather than the syntax above when giving the parameters for the switching function as you can then use any of the switching functions described
+in the documentation for <a href="../LESS_THAN/">LESS_THAN</a>.  More importantly, however, using this syntax allows you to set the D_MAX parameter for the
+switching function as demonstrated below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_FCCUBIC.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../FCCUBIC.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="FCCUBIC.md_working_2.datd_short"><span id="FCCUBIC.md_working_2.datdefd_short"><b name="FCCUBIC.md_working_2.datd" onclick='showPath("FCCUBIC.md_working_2.dat","FCCUBIC.md_working_2.datd","FCCUBIC.md_working_2.datd_shortcut","blue")'>d</b><span style="display:none;" id="FCCUBIC.md_working_2.datd_shortcut">The FCCUBIC action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the symmetry function for each of the specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FCCUBIC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_2.datd");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_2.datdefd");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIES<span class="right">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments<i></i></span></span>=1-64 <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0}
+</span><span id="FCCUBIC.md_working_2.datdefd_long" style="display:none;"><b name="FCCUBIC.md_working_2.datd" onclick='showPath("FCCUBIC.md_working_2.dat","FCCUBIC.md_working_2.datd","FCCUBIC.md_working_2.datd_shortcut","blue")'>d</b>: <span class="plumedtooltip" style="color:green">FCCUBIC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_2.datd");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_2.datdefd");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIES<span class="right">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments<i></i></span></span>=1-64 <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0}  <span class="plumedtooltip">PHI<span class="right"> The Euler rotational angle phi<i></i></span></span>=0.0 <span class="plumedtooltip">THETA<span class="right"> The Euler rotational angle theta<i></i></span></span>=0.0 <span class="plumedtooltip">PSI<span class="right"> The Euler rotational angle psi<i></i></span></span>=0.0 <span class="plumedtooltip">ALPHA<span class="right"> The alpha parameter of the angular function that is used for FCCUBIC<i></i></span></span>=3.0
+</span></span><span id="FCCUBIC.md_working_2.datd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("FCCUBIC.md_working_2.datd")'># d: FCCUBIC SPECIES=1-64 SWITCH={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="FCCUBIC.md_working_2.datd_grp" onclick='showPath("FCCUBIC.md_working_2.dat","FCCUBIC.md_working_2.datd_grp","FCCUBIC.md_working_2.datd_grp","violet")'>d_grp</b><span style="display:none;" id="FCCUBIC.md_working_2.datd_grp">The GROUP action with label <b>d_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-64
+<b name="FCCUBIC.md_working_2.datd_mat" onclick='showPath("FCCUBIC.md_working_2.dat","FCCUBIC.md_working_2.datd_mat","FCCUBIC.md_working_2.datd_mat","red")'>d_mat</b><span style="display:none;" id="FCCUBIC.md_working_2.datd_mat">The CONTACT_MATRIX action with label <b>d_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_mat.w</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr><tr><td width="5%">d_mat.x</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the x axis</td></tr><tr><td width="5%">d_mat.y</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the y axis</td></tr><tr><td width="5%">d_mat.z</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the z axis</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-64 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0} <span class="plumedtooltip">COMPONENTS<span class="right"> also calculate the components of the vector connecting the atoms in the contact matrix<i></i></span></span>
+<b name="FCCUBIC.md_working_2.datd_vfunc" onclick='showPath("FCCUBIC.md_working_2.dat","FCCUBIC.md_working_2.datd_vfunc","FCCUBIC.md_working_2.datd_vfunc","red")'>d_vfunc</b><span style="display:none;" id="FCCUBIC.md_working_2.datd_vfunc">The FCCUBIC_FUNC action with label <b>d_vfunc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_vfunc</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a function that measures the similarity with an fcc environment to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FCCUBIC_FUNC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC_FUNC" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_2.datd_mat">d_mat.x</b>,<b name="FCCUBIC.md_working_2.datd_mat">d_mat.y</b>,<b name="FCCUBIC.md_working_2.datd_mat">d_mat.z</b> <span class="plumedtooltip">ALPHA<span class="right"> The alpha parameter of the angular function<i></i></span></span>=3.0
+<b name="FCCUBIC.md_working_2.datd_wvfunc" onclick='showPath("FCCUBIC.md_working_2.dat","FCCUBIC.md_working_2.datd_wvfunc","FCCUBIC.md_working_2.datd_wvfunc","red")'>d_wvfunc</b><span style="display:none;" id="FCCUBIC.md_working_2.datd_wvfunc">The CUSTOM action with label <b>d_wvfunc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_wvfunc</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_2.datd_vfunc">d_vfunc</b>,<b name="FCCUBIC.md_working_2.datd_mat">d_mat.w</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FCCUBIC.md_working_2.datd_ones" onclick='showPath("FCCUBIC.md_working_2.dat","FCCUBIC.md_working_2.datd_ones","FCCUBIC.md_working_2.datd_ones","blue")'>d_ones</b><span style="display:none;" id="FCCUBIC.md_working_2.datd_ones">The CONSTANT action with label <b>d_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=64
+<b name="FCCUBIC.md_working_2.datd" onclick='showPath("FCCUBIC.md_working_2.dat","FCCUBIC.md_working_2.datd","FCCUBIC.md_working_2.datd","blue")'>d</b><span style="display:none;" id="FCCUBIC.md_working_2.datd">The MATRIX_VECTOR_PRODUCT action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="FCCUBIC.md_working_2.datd_wvfunc">d_wvfunc</b>,<b name="FCCUBIC.md_working_2.datd_ones">d_ones</b>
+<b name="FCCUBIC.md_working_2.datd_denom" onclick='showPath("FCCUBIC.md_working_2.dat","FCCUBIC.md_working_2.datd_denom","FCCUBIC.md_working_2.datd_denom","blue")'>d_denom</b><span style="display:none;" id="FCCUBIC.md_working_2.datd_denom">The MATRIX_VECTOR_PRODUCT action with label <b>d_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_denom</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="FCCUBIC.md_working_2.datd_mat">d_mat.w</b>,<b name="FCCUBIC.md_working_2.datd_ones">d_ones</b>
+<b name="FCCUBIC.md_working_2.datd_n" onclick='showPath("FCCUBIC.md_working_2.dat","FCCUBIC.md_working_2.datd_n","FCCUBIC.md_working_2.datd_n","blue")'>d_n</b><span style="display:none;" id="FCCUBIC.md_working_2.datd_n">The CUSTOM action with label <b>d_n</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_n</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_2.datd">d</b>,<b name="FCCUBIC.md_working_2.datd_denom">d_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><b name="FCCUBIC.md_working_2.datdm" onclick='showPath("FCCUBIC.md_working_2.dat","FCCUBIC.md_working_2.datdm","FCCUBIC.md_working_2.datdm","black")'>dm</b><span style="display:none;" id="FCCUBIC.md_working_2.datdm">The MEAN action with label <b>dm</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dm</td><td width="5%"><font color="black">scalar</font></td><td>the MEAN of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MEAN<span class="right">Calculate the arithmetic mean of the elements in a vector <a href="https://www.plumed.org/doc-master/user-doc/html/MEAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FCCUBIC.md_working_2.datd">d</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="FCCUBIC.md_working_2.datdm">dm</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colv
+</pre></div>
+
+<p>Setting the <code>D_MAX</code> can substantially improve PLUMED performance as it turns on the linked list algorithm that is discussed in the optimisation details part
+of the documentation for <a href="../CONTACT_MATRIX/">CONTACT_MATRIX</a>.</p>
+<h2 id="working-with-two-types-of-atom">Working with two types of atom</h2>
+<p>If you would like to calculate whether the atoms in GROUPB are arranged around the atoms in GROUPA as they in in an FCC structure you use an input like the one
+shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_FCCUBIC.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../FCCUBIC.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="FCCUBIC.md_working_3.datd_short"><span id="FCCUBIC.md_working_3.datdefd_short"><b name="FCCUBIC.md_working_3.datd" onclick='showPath("FCCUBIC.md_working_3.dat","FCCUBIC.md_working_3.datd","FCCUBIC.md_working_3.datd_shortcut","blue")'>d</b><span style="display:none;" id="FCCUBIC.md_working_3.datd_shortcut">The FCCUBIC action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the symmetry function for each of the specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FCCUBIC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_3.datd");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_3.datdefd");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIESA<span class="right">the list of atoms for which the symmetry function is being calculated<i></i></span></span>=1-64 <span class="plumedtooltip">SPECIESB<span class="right">the list of atoms that can be in the environments of each of the atoms for which the symmetry function is being calculated<i></i></span></span>=65-200 <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0}
+</span><span id="FCCUBIC.md_working_3.datdefd_long" style="display:none;"><b name="FCCUBIC.md_working_3.datd" onclick='showPath("FCCUBIC.md_working_3.dat","FCCUBIC.md_working_3.datd","FCCUBIC.md_working_3.datd_shortcut","blue")'>d</b>: <span class="plumedtooltip" style="color:green">FCCUBIC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_3.datd");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_3.datdefd");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIESA<span class="right">the list of atoms for which the symmetry function is being calculated<i></i></span></span>=1-64 <span class="plumedtooltip">SPECIESB<span class="right">the list of atoms that can be in the environments of each of the atoms for which the symmetry function is being calculated<i></i></span></span>=65-200 <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0}  <span class="plumedtooltip">PHI<span class="right"> The Euler rotational angle phi<i></i></span></span>=0.0 <span class="plumedtooltip">THETA<span class="right"> The Euler rotational angle theta<i></i></span></span>=0.0 <span class="plumedtooltip">PSI<span class="right"> The Euler rotational angle psi<i></i></span></span>=0.0 <span class="plumedtooltip">ALPHA<span class="right"> The alpha parameter of the angular function that is used for FCCUBIC<i></i></span></span>=3.0
+</span></span><span id="FCCUBIC.md_working_3.datd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("FCCUBIC.md_working_3.datd")'># d: FCCUBIC SPECIESA=1-64 SPECIESB=65-200 SWITCH={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="FCCUBIC.md_working_3.datd_grp" onclick='showPath("FCCUBIC.md_working_3.dat","FCCUBIC.md_working_3.datd_grp","FCCUBIC.md_working_3.datd_grp","violet")'>d_grp</b><span style="display:none;" id="FCCUBIC.md_working_3.datd_grp">The GROUP action with label <b>d_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-64
+<b name="FCCUBIC.md_working_3.datd_mat" onclick='showPath("FCCUBIC.md_working_3.dat","FCCUBIC.md_working_3.datd_mat","FCCUBIC.md_working_3.datd_mat","red")'>d_mat</b><span style="display:none;" id="FCCUBIC.md_working_3.datd_mat">The CONTACT_MATRIX action with label <b>d_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_mat.w</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr><tr><td width="5%">d_mat.x</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the x axis</td></tr><tr><td width="5%">d_mat.y</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the y axis</td></tr><tr><td width="5%">d_mat.z</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the z axis</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPB<i></i></span></span>=1-64 <span class="plumedtooltip">GROUPB<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPA<i></i></span></span>=65-200 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0} <span class="plumedtooltip">COMPONENTS<span class="right"> also calculate the components of the vector connecting the atoms in the contact matrix<i></i></span></span>
+<b name="FCCUBIC.md_working_3.datd_vfunc" onclick='showPath("FCCUBIC.md_working_3.dat","FCCUBIC.md_working_3.datd_vfunc","FCCUBIC.md_working_3.datd_vfunc","red")'>d_vfunc</b><span style="display:none;" id="FCCUBIC.md_working_3.datd_vfunc">The FCCUBIC_FUNC action with label <b>d_vfunc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_vfunc</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a function that measures the similarity with an fcc environment to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FCCUBIC_FUNC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC_FUNC" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_3.datd_mat">d_mat.x</b>,<b name="FCCUBIC.md_working_3.datd_mat">d_mat.y</b>,<b name="FCCUBIC.md_working_3.datd_mat">d_mat.z</b> <span class="plumedtooltip">ALPHA<span class="right"> The alpha parameter of the angular function<i></i></span></span>=3.0
+<b name="FCCUBIC.md_working_3.datd_wvfunc" onclick='showPath("FCCUBIC.md_working_3.dat","FCCUBIC.md_working_3.datd_wvfunc","FCCUBIC.md_working_3.datd_wvfunc","red")'>d_wvfunc</b><span style="display:none;" id="FCCUBIC.md_working_3.datd_wvfunc">The CUSTOM action with label <b>d_wvfunc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_wvfunc</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_3.datd_vfunc">d_vfunc</b>,<b name="FCCUBIC.md_working_3.datd_mat">d_mat.w</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FCCUBIC.md_working_3.datd_ones" onclick='showPath("FCCUBIC.md_working_3.dat","FCCUBIC.md_working_3.datd_ones","FCCUBIC.md_working_3.datd_ones","blue")'>d_ones</b><span style="display:none;" id="FCCUBIC.md_working_3.datd_ones">The CONSTANT action with label <b>d_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=136
+<b name="FCCUBIC.md_working_3.datd" onclick='showPath("FCCUBIC.md_working_3.dat","FCCUBIC.md_working_3.datd","FCCUBIC.md_working_3.datd","blue")'>d</b><span style="display:none;" id="FCCUBIC.md_working_3.datd">The MATRIX_VECTOR_PRODUCT action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="FCCUBIC.md_working_3.datd_wvfunc">d_wvfunc</b>,<b name="FCCUBIC.md_working_3.datd_ones">d_ones</b>
+<b name="FCCUBIC.md_working_3.datd_denom" onclick='showPath("FCCUBIC.md_working_3.dat","FCCUBIC.md_working_3.datd_denom","FCCUBIC.md_working_3.datd_denom","blue")'>d_denom</b><span style="display:none;" id="FCCUBIC.md_working_3.datd_denom">The MATRIX_VECTOR_PRODUCT action with label <b>d_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_denom</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="FCCUBIC.md_working_3.datd_mat">d_mat.w</b>,<b name="FCCUBIC.md_working_3.datd_ones">d_ones</b>
+<b name="FCCUBIC.md_working_3.datd_n" onclick='showPath("FCCUBIC.md_working_3.dat","FCCUBIC.md_working_3.datd_n","FCCUBIC.md_working_3.datd_n","blue")'>d_n</b><span style="display:none;" id="FCCUBIC.md_working_3.datd_n">The CUSTOM action with label <b>d_n</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d_n</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_3.datd">d</b>,<b name="FCCUBIC.md_working_3.datd_denom">d_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><b name="FCCUBIC.md_working_3.datlt" onclick='showPath("FCCUBIC.md_working_3.dat","FCCUBIC.md_working_3.datlt","FCCUBIC.md_working_3.datlt","blue")'>lt</b><span style="display:none;" id="FCCUBIC.md_working_3.datlt">The MORE_THAN action with label <b>lt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">lt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_3.datd">d</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.5}
+<b name="FCCUBIC.md_working_3.dats" onclick='showPath("FCCUBIC.md_working_3.dat","FCCUBIC.md_working_3.dats","FCCUBIC.md_working_3.dats","black")'>s</b><span style="display:none;" id="FCCUBIC.md_working_3.dats">The SUM action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FCCUBIC.md_working_3.datlt">lt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="FCCUBIC.md_working_3.dats">s</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colv
+</pre></div>
+
+<p>This input calculates how many of the 64 atoms that were input to the SPECIESA keyword have an fcc value that is greater than 0.5.</p>
+<h2 id="the-mask-keyword">The MASK keyword</h2>
+<p>You can use the MASK keyword with this action in the same way that it is used with <a href="../COORDINATIONNUMBER/">COORDINATIONNUMBER</a>.  This keyword thus expects a vector in
+input, which tells FCCUBIC that it is safe not to calculate the FCCUBIC parameter for some of the atoms.  As illustrated below, this is useful if you are using functionality
+from the <a href="../module_volumes/">volumes module</a> to calculate the average value of the FCCUBIC parameter for only those atoms that lie in a certain part of the simulation box.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_FCCUBIC.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../FCCUBIC.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment"># Fixed virtual atom which serves as the probe volume&#x27;s center (pos. in nm)</span>
+<span id="FCCUBIC.md_working_4.datdefcenter_short"><b name="FCCUBIC.md_working_4.datcenter" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datcenter","FCCUBIC.md_working_4.datcenter","violet")'>center</b><span style="display:none;" id="FCCUBIC.md_working_4.datcenter">The FIXEDATOM action with label <b>center</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">center</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by FIXEDATOM action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_4.datdefcenter");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=2.5,2.5,2.5
+</span><span id="FCCUBIC.md_working_4.datdefcenter_long" style="display:none;"><b name="FCCUBIC.md_working_4.datcenter" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datcenter","FCCUBIC.md_working_4.datcenter","violet")'>center</b>: <span class="plumedtooltip" style="color:green">FIXEDATOM<span class="right">Add a virtual atom in a fixed position. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_4.datdefcenter");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FIXEDATOM">More details</a><i></i></span></span> <span class="plumedtooltip">AT<span class="right">coordinates of the virtual atom<i></i></span></span>=2.5,2.5,2.5  <span class="plumedtooltip">SET_MASS<span class="right"> mass of the virtual atom<i></i></span></span>=1 <span class="plumedtooltip">SET_CHARGE<span class="right"> charge of the virtual atom<i></i></span></span>=0
+</span><span style="color:blue" class="comment"># Vector in which element i is one if atom i is in sphere of interest and zero otherwise</span>
+<b name="FCCUBIC.md_working_4.datsphere" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datsphere","FCCUBIC.md_working_4.datsphere","blue")'>sphere</b><span style="display:none;" id="FCCUBIC.md_working_4.datsphere">The INSPHERE action with label <b>sphere</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">sphere</td><td width="5%"><font color="blue">vector</font></td><td>vector of numbers between 0 and 1 that measure the degree to which each atom is within the volume of interest</td></tr></table></span>: <span class="plumedtooltip" style="color:green">INSPHERE<span class="right">This quantity can be used to calculate functions of the distribution of collective variables for the atoms that lie in a particular, user-specified part of of the cell. <a href="https://www.plumed.org/doc-master/user-doc/html/INSPHERE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that you would like to investigate<i></i></span></span>=1-400 <span class="plumedtooltip">CENTER<span class="right">the atom whose vicinity we are interested in examining<i></i></span></span>=<b name="FCCUBIC.md_working_4.datcenter">center</b> <span class="plumedtooltip">RADIUS<span class="right">the switching function that tells us the extent of the sphereical region of interest. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={GAUSSIAN D_0=0.5 R_0=0.01 D_MAX=0.52}
+<span style="color:blue" class="comment"># Calculate the fccubic parameter of the atoms</span>
+<span id="FCCUBIC.md_working_4.datcc_short"><span id="FCCUBIC.md_working_4.datdefcc_short"><b name="FCCUBIC.md_working_4.datcc" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datcc","FCCUBIC.md_working_4.datcc_shortcut","blue")'>cc</b><span style="display:none;" id="FCCUBIC.md_working_4.datcc_shortcut">The FCCUBIC action with label <b>cc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc</td><td width="5%"><font color="blue">vector</font></td><td>the symmetry function for each of the specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FCCUBIC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_4.datcc");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_4.datdefcc");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">SPECIES<span class="right">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments<i></i></span></span>=1-400 <span class="plumedtooltip">MASK<span class="right">the label for a vector that is used to determine which rows of the matrix are computed<i></i></span></span>=<b name="FCCUBIC.md_working_4.datsphere">sphere</b>
+  <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0}
+...
+</span><span id="FCCUBIC.md_working_4.datdefcc_long" style="display:none;"><b name="FCCUBIC.md_working_4.datcc" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datcc","FCCUBIC.md_working_4.datcc_shortcut","blue")'>cc</b>: <span class="plumedtooltip" style="color:green">FCCUBIC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_4.datcc");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("FCCUBIC.md_working_4.datdefcc");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">SPECIES<span class="right">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments<i></i></span></span>=1-400 <span class="plumedtooltip">MASK<span class="right">the label for a vector that is used to determine which rows of the matrix are computed<i></i></span></span>=<b name="FCCUBIC.md_working_4.datsphere">sphere</b>
+  <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0}
+ <span class="plumedtooltip">PHI<span class="right"> The Euler rotational angle phi<i></i></span></span>=0.0 <span class="plumedtooltip">THETA<span class="right"> The Euler rotational angle theta<i></i></span></span>=0.0 <span class="plumedtooltip">PSI<span class="right"> The Euler rotational angle psi<i></i></span></span>=0.0 <span class="plumedtooltip">ALPHA<span class="right"> The alpha parameter of the angular function that is used for FCCUBIC<i></i></span></span>=3.0
+...
+</span></span><span id="FCCUBIC.md_working_4.datcc_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("FCCUBIC.md_working_4.datcc")'># cc: FCCUBIC ...</span>
+<span style="color:blue" class="comment">#   SPECIES=1-400 MASK=sphere</span>
+<span style="color:blue" class="comment">#   SWITCH={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0}</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="FCCUBIC.md_working_4.datcc_grp" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datcc_grp","FCCUBIC.md_working_4.datcc_grp","violet")'>cc_grp</b><span style="display:none;" id="FCCUBIC.md_working_4.datcc_grp">The GROUP action with label <b>cc_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-400
+<b name="FCCUBIC.md_working_4.datcc_mat" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datcc_mat","FCCUBIC.md_working_4.datcc_mat","red")'>cc_mat</b><span style="display:none;" id="FCCUBIC.md_working_4.datcc_mat">The CONTACT_MATRIX action with label <b>cc_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_mat.w</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr><tr><td width="5%">cc_mat.x</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the x axis</td></tr><tr><td width="5%">cc_mat.y</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the y axis</td></tr><tr><td width="5%">cc_mat.z</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the z axis</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-400 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0} <span class="plumedtooltip">COMPONENTS<span class="right"> also calculate the components of the vector connecting the atoms in the contact matrix<i></i></span></span> <span class="plumedtooltip">MASK<span class="right">a vector that is used to used to determine which rows of the adjancency matrix to compute<i></i></span></span>=<b name="FCCUBIC.md_working_4.datsphere">sphere</b>
+<b name="FCCUBIC.md_working_4.datcc_vfunc" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datcc_vfunc","FCCUBIC.md_working_4.datcc_vfunc","red")'>cc_vfunc</b><span style="display:none;" id="FCCUBIC.md_working_4.datcc_vfunc">The FCCUBIC_FUNC action with label <b>cc_vfunc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_vfunc</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a function that measures the similarity with an fcc environment to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FCCUBIC_FUNC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC_FUNC" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_4.datcc_mat">cc_mat.x</b>,<b name="FCCUBIC.md_working_4.datcc_mat">cc_mat.y</b>,<b name="FCCUBIC.md_working_4.datcc_mat">cc_mat.z</b> <span class="plumedtooltip">ALPHA<span class="right"> The alpha parameter of the angular function<i></i></span></span>=3.0
+<b name="FCCUBIC.md_working_4.datcc_wvfunc" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datcc_wvfunc","FCCUBIC.md_working_4.datcc_wvfunc","red")'>cc_wvfunc</b><span style="display:none;" id="FCCUBIC.md_working_4.datcc_wvfunc">The CUSTOM action with label <b>cc_wvfunc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_wvfunc</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_4.datcc_vfunc">cc_vfunc</b>,<b name="FCCUBIC.md_working_4.datcc_mat">cc_mat.w</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="FCCUBIC.md_working_4.datcc_ones" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datcc_ones","FCCUBIC.md_working_4.datcc_ones","blue")'>cc_ones</b><span style="display:none;" id="FCCUBIC.md_working_4.datcc_ones">The CONSTANT action with label <b>cc_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=400
+<b name="FCCUBIC.md_working_4.datcc" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datcc","FCCUBIC.md_working_4.datcc","blue")'>cc</b><span style="display:none;" id="FCCUBIC.md_working_4.datcc">The MATRIX_VECTOR_PRODUCT action with label <b>cc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="FCCUBIC.md_working_4.datcc_wvfunc">cc_wvfunc</b>,<b name="FCCUBIC.md_working_4.datcc_ones">cc_ones</b>
+<b name="FCCUBIC.md_working_4.datcc_denom" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datcc_denom","FCCUBIC.md_working_4.datcc_denom","blue")'>cc_denom</b><span style="display:none;" id="FCCUBIC.md_working_4.datcc_denom">The MATRIX_VECTOR_PRODUCT action with label <b>cc_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_denom</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="FCCUBIC.md_working_4.datcc_mat">cc_mat.w</b>,<b name="FCCUBIC.md_working_4.datcc_ones">cc_ones</b>
+<b name="FCCUBIC.md_working_4.datcc_n" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datcc_n","FCCUBIC.md_working_4.datcc_n","blue")'>cc_n</b><span style="display:none;" id="FCCUBIC.md_working_4.datcc_n">The CUSTOM action with label <b>cc_n</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_n</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_4.datcc">cc</b>,<b name="FCCUBIC.md_working_4.datcc_denom">cc_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span style="color:blue" class="comment"># Multiply fccubic parameters numbers by sphere vector</span>
+<b name="FCCUBIC.md_working_4.datprod" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datprod","FCCUBIC.md_working_4.datprod","blue")'>prod</b><span style="display:none;" id="FCCUBIC.md_working_4.datprod">The CUSTOM action with label <b>prod</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">prod</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_4.datcc">cc</b>,<b name="FCCUBIC.md_working_4.datsphere">sphere</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue" class="comment"># Sum of coordination numbers for atoms that are in the sphere of interest</span>
+<b name="FCCUBIC.md_working_4.datnumer" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datnumer","FCCUBIC.md_working_4.datnumer","black")'>numer</b><span style="display:none;" id="FCCUBIC.md_working_4.datnumer">The SUM action with label <b>numer</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">numer</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FCCUBIC.md_working_4.datprod">prod</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue" class="comment"># Number of atoms that are in sphere of interest</span>
+<b name="FCCUBIC.md_working_4.datdenom" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datdenom","FCCUBIC.md_working_4.datdenom","black")'>denom</b><span style="display:none;" id="FCCUBIC.md_working_4.datdenom">The SUM action with label <b>denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">denom</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="FCCUBIC.md_working_4.datsphere">sphere</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue" class="comment"># Average coordination number for atoms in sphere of interest</span>
+<b name="FCCUBIC.md_working_4.datav" onclick='showPath("FCCUBIC.md_working_4.dat","FCCUBIC.md_working_4.datav","FCCUBIC.md_working_4.datav","black")'>av</b><span style="display:none;" id="FCCUBIC.md_working_4.datav">The CUSTOM action with label <b>av</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">av</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="FCCUBIC.md_working_4.datnumer">numer</b>,<b name="FCCUBIC.md_working_4.datdenom">denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue" class="comment"># And print out final CV to a file</span>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="FCCUBIC.md_working_4.datav">av</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=1
+</pre></div>
+
+<p>This input calculate the average value of the FCCUBIC parameter for only those atoms that are within a spherical region that is centered on the point
+<script type="math/tex">(2.5,2.5,2.5)</script>.</p>
+<h2 id="deprecated-syntax">Deprecated syntax</h2>
+<p>More information on the deprecated keywords that are given below is available in the documentation for the <a href="../DISTANCES/">DISTANCES</a> command.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_atoms/">atoms</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SPECIES</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPECIESA</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">the list of atoms for which the symmetry function is being calculated</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPECIESB</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">the list of atoms that can be in the environments of each of the atoms for which the symmetry function is being calculated</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-components">Output components</h2>
+<p>This action can calculate the <a href="../specifying_arguments/">values</a> in the following table when the associated keyword is included in the input for the action. These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">lessthan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">LESS_THAN</td>
+<td style="text-align: left;">the number of colvars that have a value less than a threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;">morethan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MORE_THAN</td>
+<td style="text-align: left;">the number of colvars that have a value more than a threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;">altmin</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">ALT_MIN</td>
+<td style="text-align: left;">the minimum value of the cv</td>
+</tr>
+<tr>
+<td style="text-align: left;">min</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MIN</td>
+<td style="text-align: left;">the minimum colvar</td>
+</tr>
+<tr>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MAX</td>
+<td style="text-align: left;">the maximum colvar</td>
+</tr>
+<tr>
+<td style="text-align: left;">between</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">BETWEEN</td>
+<td style="text-align: left;">the number of colvars that have a value that lies in a particular interval</td>
+</tr>
+<tr>
+<td style="text-align: left;">highest</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">HIGHEST</td>
+<td style="text-align: left;">the largest of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">lowest</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">LOWEST</td>
+<td style="text-align: left;">the smallest of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">sum</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">SUM</td>
+<td style="text-align: left;">the sum of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">mean</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MEAN</td>
+<td style="text-align: left;">the mean of the colvars</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SPECIES</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPECIESA</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the list of atoms for which the symmetry function is being calculated</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPECIESB</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the list of atoms that can be in the environments of each of the atoms for which the symmetry function is being calculated</td>
+</tr>
+<tr>
+<td style="text-align: left;">NN</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">The n parameter of the switching function</td>
+</tr>
+<tr>
+<td style="text-align: left;">MM</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">The m parameter of the switching function; 0 implies 2*NN</td>
+</tr>
+<tr>
+<td style="text-align: left;">D_0</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: left;">The d_0 parameter of the switching function</td>
+</tr>
+<tr>
+<td style="text-align: left;">R_0</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">The r_0 parameter of the switching function</td>
+</tr>
+<tr>
+<td style="text-align: left;">PHI</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: left;">The Euler rotational angle phi</td>
+</tr>
+<tr>
+<td style="text-align: left;">THETA</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: left;">The Euler rotational angle theta</td>
+</tr>
+<tr>
+<td style="text-align: left;">PSI</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: left;">The Euler rotational angle psi</td>
+</tr>
+<tr>
+<td style="text-align: left;">ALPHA</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">3.0</td>
+<td style="text-align: left;">The alpha parameter of the angular function that is used for FCCUBIC</td>
+</tr>
+<tr>
+<td style="text-align: left;">SWITCH</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="../LESS_THAN/">LESS_THAN</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">MASK</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the label for a vector that is used to determine which rows of the matrix are computed</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">USEGPU<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">run part of this calculation on the GPU</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">deprecated keywords</p>
+<p>The keywords in the following table can still be used with this action but have been deprecated</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">LESS_THAN</td>
+<td style="text-align: left;">calculate the number of variables that are less than a certain target value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MORE_THAN</td>
+<td style="text-align: left;">calculate the number of variables that are more than a certain target value</td>
+</tr>
+<tr>
+<td style="text-align: left;">ALT_MIN</td>
+<td style="text-align: left;">calculate the minimum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MIN</td>
+<td style="text-align: left;">calculate the minimum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MAX</td>
+<td style="text-align: left;">calculate the maximum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">BETWEEN</td>
+<td style="text-align: left;">calculate the number of values that are within a certain range</td>
+</tr>
+<tr>
+<td style="text-align: left;">HIGHEST</td>
+<td style="text-align: left;">this flag allows you to recover the highest of these variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">HISTOGRAM</td>
+<td style="text-align: left;">calculate a discretized histogram of the distribution of values</td>
+</tr>
+<tr>
+<td style="text-align: left;">LOWEST</td>
+<td style="text-align: left;">this flag allows you to recover the lowest of these variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">SUM</td>
+<td style="text-align: left;">calculate the sum of all the quantities</td>
+</tr>
+<tr>
+<td style="text-align: left;">MEAN</td>
+<td style="text-align: left;">calculate the mean of all the quantities</td>
+</tr>
+<tr>
+<td style="text-align: left;">LOWMEM</td>
+<td style="text-align: left;">Including this keyword in the input to this action makes no difference to the calculation performed it was used in older versions of PLUMED and is provided here for back compatibility only</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1021/ct500320c">A. D. White, G. A. Voth, Efficient and Minimal Method to Bias Molecular Simulations with Experimental Data. Journal of Chemical Theory and Computation 10, 3023–3030 (2014)</a></li>
+<li><a href="http://dx.doi.org/10.1103/PhysRevB.81.125416">S. Angioletti-Uberti, M. Ceriotti, P. D. Lee, M. W. Finnis, Solid-liquid interface free energy through metadynamics simulations. Physical Review B 81 (2010)</a></li>
+<li><a href="http://dx.doi.org/10.1103/PhysRevB.92.180102">B. Cheng, G. A. Tribello, M. Ceriotti, Solid-liquid interfacial free energy out of equilibrium. Physical Review B 92 (2015)</a></li>
+<li><a href="http://dx.doi.org/10.1063/1.4997180">B. Cheng, G. A. Tribello, M. Ceriotti, The Gibbs free energy of homogeneous nucleation: From atomistic nuclei to the planar limit. The Journal of Chemical Physics 147 (2017)</a></li>
+<li><a href="http://dx.doi.org/10.1063/1.5134461">B. Cheng, M. Ceriotti, G. A. Tribello, Classical nucleation theory predicts the shape of the nucleus in homogeneous solidification. The Journal of Chemical Physics 152 (2020)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,8 @@
+metatomic_cv: METATOMIC ...
+    MODEL=custom_cv.pt
+
+    SPECIES1=1-26
+    SPECIES2=27-62
+    SPECIES3=63-76
+    SPECIES_TO_TYPES=6,1,8
+...

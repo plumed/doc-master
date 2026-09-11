@@ -1,0 +1,21 @@
+#SETTINGS INPUTFILES=regtest/pamm/rt-hbpamm/b3lyp.pamm
+# Fixed virtual atom which serves as the probe volume's center (pos. in nm)
+center: FIXEDATOM AT=2.5,2.5,2.5
+# Vector in which element i is one if hydrogen i is in sphere of interest and zero otherwise
+sphere: INSPHERE ATOMS=2-192:3,3-192:3 CENTER=center RADIUS={GAUSSIAN D_0=0.5 R_0=0.01 D_MAX=0.52}
+# Calculate the number of bonds each hydrogen participates in
+hyd: HBPAMM_SH ...
+   SITES=1-192:3 HYDROGENS=2-192:3,3-192:3
+   CLUSTERS=regtest/pamm/rt-hbpamm/b3lyp.pamm
+   MASK=sphere
+...
+# Multiply number of hydrogen bonds by sphere vector
+prod: CUSTOM ARG=hyd,sphere FUNC=x*y PERIODIC=NO
+# Total number of hydrogn bonds that the atoms in the sphere of interest participate in
+numer: SUM ARG=prod PERIODIC=NO
+# Number of hydrogen atoms that are in sphere of interest
+denom: SUM ARG=sphere PERIODIC=NO
+# Average number of hydrogen bonds each hydrogen atoms in sphere of interest participates in
+av: CUSTOM ARG=numer,denom FUNC=x/y PERIODIC=NO
+# And print out final CV to a file
+PRINT ARG=av FILE=colvar STRIDE=1

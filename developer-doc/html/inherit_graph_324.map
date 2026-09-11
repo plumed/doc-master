@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_p_l_m_d_1_1_register.html" title="Base class, with type independent information." alt="" coords="5,77,127,102"/>
+<area shape="rect" id="Node000001" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="175,5,375,45"/>
+<area shape="poly" id="edge697_Node000000_Node000001" title=" " alt="" coords="121,70,208,43,209,48,122,75"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="175,69,375,109"/>
+<area shape="poly" id="edge699_Node000000_Node000003" title=" " alt="" coords="140,87,174,87,174,92,140,92"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_register_base.html" title="General register." alt="" coords="198,133,351,173"/>
+<area shape="poly" id="edge701_Node000000_Node000005" title=" " alt="" coords="122,104,209,131,208,136,121,109"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_register.html" title="Register holding all the allowed keywords." alt="" coords="423,13,585,38"/>
+<area shape="poly" id="edge698_Node000001_Node000002" title=" " alt="" coords="388,23,423,23,423,28,388,28"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_c_l_tool_register.html" title="Same as ActionRegister, but for CLTools." alt="" coords="423,77,585,102"/>
+<area shape="poly" id="edge700_Node000003_Node000004" title=" " alt="" coords="388,87,423,87,423,92,388,92"/>
+</map>

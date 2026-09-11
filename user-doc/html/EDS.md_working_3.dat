@@ -1,0 +1,8 @@
+dist: DISTANCE ATOMS=1,2
+dist2: COMBINE ARG=dist POWERS=2 PERIODIC=NO
+
+# ramp couplings from 0,0 to -1,1 over 50000 steps
+eds: EDS ARG=dist,dist2 CENTER=2.0,1.0 FIXED=-1,1 RAMP PERIOD=50000 TEMP=1.0
+
+# same as above, except starting at -0.5,0.5 rather than default of 0,0
+eds2: EDS ARG=dist,dist2 CENTER=2.0,1.0 FIXED=-1,1 INIT=-0.5,0.5 RAMP PERIOD=50000 TEMP=1.0

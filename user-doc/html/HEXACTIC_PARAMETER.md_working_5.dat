@@ -1,0 +1,24 @@
+# Fixed virtual atom which serves as the probe volume's center (pos. in nm)
+center: FIXEDATOM AT=2.5,2.5,2.5
+# Vector in which element i is one if atom i is in sphere of interest and zero otherwise
+sphere: INSPHERE ATOMS=1-400 CENTER=center RADIUS={GAUSSIAN D_0=0.5 R_0=0.01 D_MAX=0.52}
+# Calculate the tetrahedral parameter of the atoms
+hex: HEXACTIC_PARAMETER ...
+   SPECIES=1-400 MASK=sphere PLANE=xy
+   SWITCH={RATIONAL D_0=3.0 R_0=1.5 D_MAX=6.0}
+...
+# Multiply hexatic parameters by sphere vector
+prod_rm: CUSTOM ARG=hex_rm,sphere FUNC=x*y PERIODIC=NO
+prod_im: CUSTOM ARG=hex_im,sphere FUNC=x*y PERIODIC=NO
+# Sum of coordination numbers for atoms that are in the sphere of interest
+numer_rm: SUM ARG=prod_rm PERIODIC=NO
+numer_im: SUM ARG=prod_im PERIODIC=NO
+# Number of atoms that are in sphere of interest
+denom: SUM ARG=sphere PERIODIC=NO
+# Average coordination number for atoms in sphere of interest
+av_rm: CUSTOM ARG=numer_rm,denom FUNC=x/y PERIODIC=NO
+av_im: CUSTOM ARG=numer_im,denom FUNC=x/y PERIODIC=NO
+# Take the square modulus
+av: CUSTOM ARG=av_rm,av_im FUNC=x*x+y*y PERIODIC=NO
+# And print out final CV to a file
+PRINT ARG=av FILE=colvar STRIDE=1

@@ -1,0 +1,10 @@
+#SETTINGS INPUTFILES=regtest/basic/rt63/align.pdb
+# dump coordinates before fitting, to see the difference:
+DUMPATOMS FILE=dump-before.xyz ATOMS=1-20
+
+# fit coordinates to ref.pdb template
+# this is a "TYPE=SIMPLE" fit, so that only translations are used.
+FIT_TO_TEMPLATE STRIDE=1 REFERENCE=regtest/basic/rt63/align.pdb TYPE=SIMPLE
+
+# dump coordinates after fitting, to see the difference:
+DUMPATOMS FILE=dump-after.xyz ATOMS=1-20

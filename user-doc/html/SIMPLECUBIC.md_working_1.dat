@@ -1,0 +1,3 @@
+sc: SIMPLECUBIC SPECIES=1-100 R_0=1.0
+sc_mean: MEAN ARG=sc PERIODIC=NO
+PRINT ARG=sc_mean FILE=colvar

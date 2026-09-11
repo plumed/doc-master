@@ -1,0 +1,9 @@
+#SETTINGS INPUTFILES=regtest/mapping/rt-tpath/epath.pdb
+t1: TORSION ATOMS=5,7,9,15
+t2: TORSION ATOMS=7,9,15,17
+pp: PATH ...
+  ARG=t1,t2 COEFFICIENTS=0.2,0.3
+  REFERENCE=regtest/mapping/rt-tpath/epath.pdb
+  LAMBDA=1.0
+...
+PRINT ARG=pp.* FILE=colvar

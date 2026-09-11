@@ -1,0 +1,22 @@
+<map id="PLMD::matrixtools::MatrixOperationBase" name="PLMD::matrixtools::MatrixOperationBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="419,119,579,159"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1clusters_1_1_clustering_base.html" title=" " alt="" coords="627,5,851,31"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="529,108,573,73,626,41,661,28,663,33,628,46,576,77,533,112"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1landmarks_1_1_farthest_point_sampling.html" title="Provides the keyword FARTHEST_POINT_SAMPLING" alt="" coords="641,55,837,95"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="587,113,662,93,664,98,588,118"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1matrixtools_1_1_diagonalize_matrix.html" title="Provides the keyword DIAGONALIZE" alt="" coords="663,119,814,159"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="593,137,663,137,663,142,593,142"/>
+<area shape="rect" id="Node000009" href="$class_p_l_m_d_1_1matrixtools_1_1_invert_matrix.html" title="Provides the keyword INVERT_MATRIX" alt="" coords="663,183,814,223"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="588,160,664,181,662,186,587,166"/>
+<area shape="rect" id="Node000010" href="$class_p_l_m_d_1_1matrixtools_1_1_transpose_matrix.html" title="Provides the keyword TRANSPOSE" alt="" coords="663,247,814,287"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="533,166,577,201,628,233,664,248,662,252,625,238,573,205,530,171"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="161,101,371,127"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="385,124,419,128,418,133,384,130"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,127,113,152"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,128,162,124,163,129,127,134"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="179,151,353,176"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="127,144,179,151,178,156,127,150"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="367,150,418,145,419,150,368,156"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1clusters_1_1_d_f_s_clustering.html" title="Provides the keyword DFSCLUSTERING" alt="" coords="899,5,1116,31"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="865,15,898,15,898,21,865,21"/>
+</map>

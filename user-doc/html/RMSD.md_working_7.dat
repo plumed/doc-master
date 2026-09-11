@@ -1,0 +1,3 @@
+#SETTINGS INPUTFILES=regtest/mapping/rt39/all1.pdb
+rmsd: RMSD TYPE=OPTIMAL REFERENCE=regtest/mapping/rt39/all1.pdb
+PRINT ARG=rmsd FILE=colvar

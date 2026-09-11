@@ -1,0 +1,7 @@
+#SETTINGS NREPLICAS=2
+cs: CS2BACKBONE ATOMS=1-174 DATADIR=regtest/isdb/rt-cs2backbone/data/
+encs: ENSEMBLE ARG=(cs\.hn-.*),(cs\.nh-.*)
+stcs: STATS ARG=encs.* SQDEVSUM PARARG=(cs\.exphn-.*),(cs\.expnh-.*)
+RESTRAINT ARG=stcs.sqdevsum AT=0 KAPPA=0 SLOPE=24
+
+PRINT ARG=(cs\.hn-.*),(cs\.nh-.*) FILE=RESTRAINT STRIDE=100

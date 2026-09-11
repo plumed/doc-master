@@ -1,0 +1,2 @@
+com1: COM ATOMS=1,10
+d: DISTANCE ATOMS=11,com1

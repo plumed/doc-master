@@ -1,0 +1,6 @@
+#SETTINGS INPUTFILES=regtest/trajectories/path_msd/allv.pdb
+p2: GPROPERTYMAP ...
+   REFERENCE=regtest/trajectories/path_msd/allv.pdb
+   PROPERTY=X,Y LAMBDA=69087 NOZPATH
+...
+PRINT ARG=p2_X,p2_Y STRIDE=1 FILE=colvar

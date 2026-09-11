@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_p_l_m_d_1_1_with_cmd.html" title="Base for classes with cmd() method." alt="" coords="5,80,132,105"/>
+<area shape="rect" id="Node000001" href="$class_p_l_m_d_1_1_c_l_tool_main.html" title="Class providing cmd() access to command line tools." alt="" coords="191,5,331,31"/>
+<area shape="poly" id="edge721_Node000000_Node000001" title=" " alt="" coords="106,72,179,40,213,28,214,33,181,44,108,76"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_g_r_e_x.html" title=" " alt="" coords="210,55,313,80"/>
+<area shape="poly" id="edge722_Node000000_Node000002" title=" " alt="" coords="146,80,209,71,210,77,146,85"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_plumed_handle.html" title="Tiny local class to load a PLUMED kernel." alt="" coords="180,104,343,129"/>
+<area shape="poly" id="edge723_Node000000_Node000003" title=" " alt="" coords="146,100,180,104,180,109,145,105"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_plumed_main.html" title="Main plumed object." alt="" coords="187,153,335,179"/>
+<area shape="poly" id="edge724_Node000000_Node000004" title=" " alt="" coords="110,109,181,138,218,151,216,156,179,143,108,114"/>
+</map>

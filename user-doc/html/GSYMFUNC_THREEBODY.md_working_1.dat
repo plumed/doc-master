@@ -1,0 +1,13 @@
+# Calculate the contact matrix and the x,y and z components of the bond vectors
+# This action calculates 4 100x100 matrices
+cmat: CONTACT_MATRIX GROUP=1-100 SWITCH={CUSTOM R_0=4.5 D_MAX=4.5 FUNC=0.5*(cos(pi*x)+1)} COMPONENTS
+
+# Compute the symmetry function for the 100 atoms from the 4 100x100 matrices output
+# by cmat.  The output from this action is a vector with 100 elements
+beh3: GSYMFUNC_THREEBODY ...
+    WEIGHT=cmat.w ARG=cmat.x,cmat.y,cmat.z
+    FUNCTION1={FUNC=0.25*exp(-0.1*(rij+rik))*(1+3*cos(ajik))^3 LABEL=g5}
+...
+
+# Print the 100 symmetry function values to a file
+PRINT ARG=beh3.g5 FILE=colvar

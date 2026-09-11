@@ -1,0 +1,17 @@
+
+lMem: GROUP ATOMS=1-10752,21505-22728,23953-24420 #All the lower membrane beads.
+uMem: GROUP ATOMS=10753-21504,22729-23952,24421-24888 #All the upper membrane beads.
+tails: GROUP ATOMS=8-23948:12,12-23952:12,23966-24884:18,23970-24888:18 #All the lipid tails beads (from the lower and upper membrane).
+waters: GROUP ATOMS=24889-56490 #All the water beads.
+po4: GROUP ATOMS=2-23942:12,23957-24875:18 #All the lipid phosphateoxygens beads.
+
+fusionPoreNucleation: FUSIONPORENUCLEATIONP UMEMBRANE=uMem LMEMBRANE=lMem TAILS=tails WATERS=waters PHOSPHATEOXYGENS=po4 NSMEM=85 NS=45
+
+MOVINGRESTRAINT ...
+    ARG=fusionPoreNucleation
+    STEP0=0 AT0=0.2 KAPPA0=10000.0
+    STEP1=500000 AT1=1.0 KAPPA1=10000.0
+...
+
+PRINT ARG=fusionPoreNucleation FILE=COLVAR STRIDE=1
+

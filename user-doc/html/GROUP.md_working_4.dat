@@ -1,0 +1,1 @@
+DUMPATOMS ATOMS={@ndx:{extras/index.ndx Protein}} FILE=traj.gro

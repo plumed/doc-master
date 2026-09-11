@@ -1,0 +1,11 @@
+#SETTINGS INPUTFILES=extras/1d_bias.grid
+
+d1: DISTANCE ATOMS=1,2
+m: METAD ...
+  ARG=d1 SIGMA=0.1
+  HEIGHT=0.1 PACE=500
+  GRID_MIN=1.14 GRID_MAX=1.32 GRID_BIN=5
+  GRID_RFILE=extras/1d_bias.grid
+  RESTART=YES
+...
+PRINT ARG=d1,m.bias FILE=colvar STRIDE=10

@@ -1,0 +1,4 @@
+#SETTINGS INPUTFILES=regtest/basic/rt19/test0.pdb
+rmsd0: RMSD TYPE=OPTIMAL REFERENCE=regtest/basic/rt19/test0.pdb
+rmsd0n: RMSD TYPE=OPTIMAL NUMERICAL_DERIVATIVES REFERENCE=regtest/basic/rt19/test0.pdb
+DUMPDERIVATIVES ARG=rmsd0,rmsd0n FILE=deriv

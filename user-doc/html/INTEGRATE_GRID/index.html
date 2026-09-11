@@ -1,0 +1,783 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: INTEGRATE_GRID - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-integrate_grid" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: INTEGRATE_GRID
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-integrate_grid"><a href="../shortcuts/">Shortcut</a>: INTEGRATE_GRID</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_gridtools/"><strong>gridtools</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate the numerical integral of the function stored on the grid</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=INTEGRATE_GRID"><img alt="used in 1 tutorials" src="https://img.shields.io/badge/tutorials-1-green.svg" /></a><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the numerical integral of the input function over its whole domain</td>
+<td style="text-align: center;">scalar</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate the numerical integral of the function stored on the grid</p>
+<p>This action takes a function, <script type="math/tex">f(x)</script>, that is stored on a grid of points between <script type="math/tex">a</script> and <script type="math/tex">b</script>.  It then computes the following definite integral
+numerically:</p>
+<p>
+<script type="math/tex; mode=display">
+y = \int_a^b f(x) \textrm{d}x
+</script>
+</p>
+<p>The approximate value of this integral would be computed using:</p>
+<p>
+<script type="math/tex; mode=display">
+y = \frac{b-a}{n} \sum_{i=0}^{n} f\left( a + \frac{i(b-a)}{n} \right)
+</script>
+</p>
+<p>where <script type="math/tex">n</script> is the number of points at which the grid has been computed.</p>
+<p>The following example input demonstrates how this action can be used:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_INTEGRATE_GRID.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../INTEGRATE_GRID.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="INTEGRATE_GRID.md_working_1.datc1_short"><b name="INTEGRATE_GRID.md_working_1.datc1" onclick='showPath("INTEGRATE_GRID.md_working_1.dat","INTEGRATE_GRID.md_working_1.datc1","INTEGRATE_GRID.md_working_1.datc1_shortcut","blue")'>c1</b><span style="display:none;" id="INTEGRATE_GRID.md_working_1.datc1_shortcut">The COORDINATIONNUMBER action with label <b>c1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1</td><td width="5%"><font color="blue">vector</font></td><td>the coordination numbers of the specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COORDINATIONNUMBER<span class="right">Calculate the coordination numbers of atoms so that you can then calculate functions of the distribution of This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("INTEGRATE_GRID.md_working_1.datc1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/COORDINATIONNUMBER">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIESA<span class="right">the list of atoms for which the symmetry function is being calculated<i></i></span></span>=1-10 <span class="plumedtooltip">SPECIESB<span class="right">the list of atoms that can be in the environments of each of the atoms for which the symmetry function is being calculated<i></i></span></span>=1-200 <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=1.0}
+</span><span id="INTEGRATE_GRID.md_working_1.datc1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("INTEGRATE_GRID.md_working_1.datc1")'># c1: COORDINATIONNUMBER SPECIESA=1-10 SPECIESB=1-200 SWITCH={RATIONAL R_0=1.0}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="INTEGRATE_GRID.md_working_1.datc1_grp" onclick='showPath("INTEGRATE_GRID.md_working_1.dat","INTEGRATE_GRID.md_working_1.datc1_grp","INTEGRATE_GRID.md_working_1.datc1_grp","violet")'>c1_grp</b><span style="display:none;" id="INTEGRATE_GRID.md_working_1.datc1_grp">The GROUP action with label <b>c1_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-10
+<b name="INTEGRATE_GRID.md_working_1.datc1_mat" onclick='showPath("INTEGRATE_GRID.md_working_1.dat","INTEGRATE_GRID.md_working_1.datc1_mat","INTEGRATE_GRID.md_working_1.datc1_mat","red")'>c1_mat</b><span style="display:none;" id="INTEGRATE_GRID.md_working_1.datc1_mat">The CONTACT_MATRIX action with label <b>c1_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1_mat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPB<i></i></span></span>=1-10 <span class="plumedtooltip">GROUPB<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPA<i></i></span></span>=1-200 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=1.0}
+<b name="INTEGRATE_GRID.md_working_1.datc1_ones" onclick='showPath("INTEGRATE_GRID.md_working_1.dat","INTEGRATE_GRID.md_working_1.datc1_ones","INTEGRATE_GRID.md_working_1.datc1_ones","blue")'>c1_ones</b><span style="display:none;" id="INTEGRATE_GRID.md_working_1.datc1_ones">The CONSTANT action with label <b>c1_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=200
+<b name="INTEGRATE_GRID.md_working_1.datc1" onclick='showPath("INTEGRATE_GRID.md_working_1.dat","INTEGRATE_GRID.md_working_1.datc1","INTEGRATE_GRID.md_working_1.datc1","blue")'>c1</b><span style="display:none;" id="INTEGRATE_GRID.md_working_1.datc1">The MATRIX_VECTOR_PRODUCT action with label <b>c1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span>  <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_1.datc1_mat">c1_mat</b>,<b name="INTEGRATE_GRID.md_working_1.datc1_ones">c1_ones</b>
+<span style="color:blue"># --- End of included input --- </span></span><span id="INTEGRATE_GRID.md_working_1.datdefhu_short"><b name="INTEGRATE_GRID.md_working_1.dathu" onclick='showPath("INTEGRATE_GRID.md_working_1.dat","INTEGRATE_GRID.md_working_1.dathu","INTEGRATE_GRID.md_working_1.dathu","green")'>hu</b><span style="display:none;" id="INTEGRATE_GRID.md_working_1.dathu">The KDE action with label <b>hu</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hu</td><td width="5%"><font color="green">grid</font></td><td>a function on a grid that was obtained by doing a Kernel Density Estimation using the input arguments</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KDE<span class="right">Create a histogram from the input scalar/vector/matrix using KDE This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("INTEGRATE_GRID.md_working_1.datdefhu");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/KDE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the value that should be used to construct the histogram<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_1.datc1">c1</b> <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=200 <span class="plumedtooltip">GRID_MIN<span class="right"> the lower bounds for the grid<i></i></span></span>=0 <span class="plumedtooltip">GRID_MAX<span class="right"> the upper bounds for the grid<i></i></span></span>=10 <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=0.1
+</span><span id="INTEGRATE_GRID.md_working_1.datdefhu_long" style="display:none;"><b name="INTEGRATE_GRID.md_working_1.dathu" onclick='showPath("INTEGRATE_GRID.md_working_1.dat","INTEGRATE_GRID.md_working_1.dathu","INTEGRATE_GRID.md_working_1.dathu","green")'>hu</b>: <span class="plumedtooltip" style="color:green">KDE<span class="right">Create a histogram from the input scalar/vector/matrix using KDE This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("INTEGRATE_GRID.md_working_1.datdefhu");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/KDE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the value that should be used to construct the histogram<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_1.datc1">c1</b> <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=200 <span class="plumedtooltip">GRID_MIN<span class="right"> the lower bounds for the grid<i></i></span></span>=0 <span class="plumedtooltip">GRID_MAX<span class="right"> the upper bounds for the grid<i></i></span></span>=10 <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=0.1  <span class="plumedtooltip">KERNEL<span class="right"> the kernel function you are using<i></i></span></span>=GAUSSIAN
+</span><b name="INTEGRATE_GRID.md_working_1.dath" onclick='showPath("INTEGRATE_GRID.md_working_1.dat","INTEGRATE_GRID.md_working_1.dath","INTEGRATE_GRID.md_working_1.dath","green")'>h</b><span style="display:none;" id="INTEGRATE_GRID.md_working_1.dath">The CUSTOM action with label <b>h</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">h</td><td width="5%"><font color="green">grid</font></td><td>the grid obtained by doing an element-wise application of an arbitrary function to the input grid</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_1.dathu">hu</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/10 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span id="INTEGRATE_GRID.md_working_1.dativ_short"><b name="INTEGRATE_GRID.md_working_1.dativ" onclick='showPath("INTEGRATE_GRID.md_working_1.dat","INTEGRATE_GRID.md_working_1.dativ","INTEGRATE_GRID.md_working_1.dativ_shortcut","black")'>iv</b><span style="display:none;" id="INTEGRATE_GRID.md_working_1.dativ_shortcut">The INTEGRATE_GRID action with label <b>iv</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">iv</td><td width="5%"><font color="black">scalar</font></td><td>the numerical integral of the input function over its whole domain</td></tr></table></span>: <span class="plumedtooltip" style="color:green">INTEGRATE_GRID<span class="right">Calculate the numerical integral of the function stored on the grid This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("INTEGRATE_GRID.md_working_1.dativ");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/INTEGRATE_GRID">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the function on a grid that is being integrated<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_1.dath">h</b> <span class="plumedtooltip">PERIODIC<span class="right">if the value of the output integral has a periodid domain then you use this keyword to specify the periodicity<i></i></span></span>=NO
+</span><span id="INTEGRATE_GRID.md_working_1.dativ_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("INTEGRATE_GRID.md_working_1.dativ")'># iv: INTEGRATE_GRID ARG=h PERIODIC=NO</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="INTEGRATE_GRID.md_working_1.dativ_volelem" onclick='showPath("INTEGRATE_GRID.md_working_1.dat","INTEGRATE_GRID.md_working_1.dativ_volelem","INTEGRATE_GRID.md_working_1.dativ_volelem","black")'>iv_volelem</b><span style="display:none;" id="INTEGRATE_GRID.md_working_1.dativ_volelem">The GET_VOLUME_ELEMENT action with label <b>iv_volelem</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">iv_volelem</td><td width="5%"><font color="black">scalar</font></td><td>the volume element </td></tr></table></span>: <span class="plumedtooltip" style="color:green">GET_VOLUME_ELEMENT<span class="right">Get the volume element from the input grid <a href="https://www.plumed.org/doc-master/user-doc/html/GET_VOLUME_ELEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for function on the grid that you need the volume element for<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_1.dath">h</b>
+<b name="INTEGRATE_GRID.md_working_1.dativ_sum" onclick='showPath("INTEGRATE_GRID.md_working_1.dat","INTEGRATE_GRID.md_working_1.dativ_sum","INTEGRATE_GRID.md_working_1.dativ_sum","black")'>iv_sum</b><span style="display:none;" id="INTEGRATE_GRID.md_working_1.dativ_sum">The SUM action with label <b>iv_sum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">iv_sum</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_1.dath">h</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="INTEGRATE_GRID.md_working_1.dativ" onclick='showPath("INTEGRATE_GRID.md_working_1.dat","INTEGRATE_GRID.md_working_1.dativ","INTEGRATE_GRID.md_working_1.dativ","black")'>iv</b><span style="display:none;" id="INTEGRATE_GRID.md_working_1.dativ">The CUSTOM action with label <b>iv</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">iv</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_1.dativ_volelem">iv_volelem</b>,<b name="INTEGRATE_GRID.md_working_1.dativ_sum">iv_sum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span></pre></div>
+
+<p>In this case, the <a href="../KDE/">KDE</a> action is used to compute a histogram that shows the instanenous distribution for 10 coordination numbers. This distribution is
+unormalised so that <a href="../CUSTOM/">CUSTOM</a> command here is used to normalise the distribution.  The resulting integral that is computed here should thsu be one.</p>
+<p>Notice also that the action can still be used if the function stored on the grid is a function of 2 or more variables.  For example, the following input performs an integral
+that is very similar to the one performed in the previous.  Now, however, the input grid is two dimensional.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_INTEGRATE_GRID.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../INTEGRATE_GRID.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="INTEGRATE_GRID.md_working_2.datc1_short"><b name="INTEGRATE_GRID.md_working_2.datc1" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datc1","INTEGRATE_GRID.md_working_2.datc1_shortcut","blue")'>c1</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datc1_shortcut">The COORDINATIONNUMBER action with label <b>c1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1</td><td width="5%"><font color="blue">vector</font></td><td>the coordination numbers of the specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COORDINATIONNUMBER<span class="right">Calculate the coordination numbers of atoms so that you can then calculate functions of the distribution of This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("INTEGRATE_GRID.md_working_2.datc1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/COORDINATIONNUMBER">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIESA<span class="right">the list of atoms for which the symmetry function is being calculated<i></i></span></span>=1-10 <span class="plumedtooltip">SPECIESB<span class="right">the list of atoms that can be in the environments of each of the atoms for which the symmetry function is being calculated<i></i></span></span>=1-200 <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=1.0}
+</span><span id="INTEGRATE_GRID.md_working_2.datc1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("INTEGRATE_GRID.md_working_2.datc1")'># c1: COORDINATIONNUMBER SPECIESA=1-10 SPECIESB=1-200 SWITCH={RATIONAL R_0=1.0}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="INTEGRATE_GRID.md_working_2.datc1_grp" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datc1_grp","INTEGRATE_GRID.md_working_2.datc1_grp","violet")'>c1_grp</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datc1_grp">The GROUP action with label <b>c1_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-10
+<b name="INTEGRATE_GRID.md_working_2.datc1_mat" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datc1_mat","INTEGRATE_GRID.md_working_2.datc1_mat","red")'>c1_mat</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datc1_mat">The CONTACT_MATRIX action with label <b>c1_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1_mat</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPB<i></i></span></span>=1-10 <span class="plumedtooltip">GROUPB<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPA<i></i></span></span>=1-200 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=1.0}
+<b name="INTEGRATE_GRID.md_working_2.datc1_ones" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datc1_ones","INTEGRATE_GRID.md_working_2.datc1_ones","blue")'>c1_ones</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datc1_ones">The CONSTANT action with label <b>c1_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=200
+<b name="INTEGRATE_GRID.md_working_2.datc1" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datc1","INTEGRATE_GRID.md_working_2.datc1","blue")'>c1</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datc1">The MATRIX_VECTOR_PRODUCT action with label <b>c1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span>  <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.datc1_mat">c1_mat</b>,<b name="INTEGRATE_GRID.md_working_2.datc1_ones">c1_ones</b>
+<span style="color:blue"># --- End of included input --- </span></span><span id="INTEGRATE_GRID.md_working_2.datq6_short"><b name="INTEGRATE_GRID.md_working_2.datq6" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datq6","INTEGRATE_GRID.md_working_2.datq6_shortcut","blue")'>q6</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datq6_shortcut">The Q6 action with label <b>q6</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6</td><td width="5%"><font color="blue">vector</font></td><td>the norms of the vectors of spherical harmonic coefficients</td></tr></table></span>: <span class="plumedtooltip" style="color:green">Q6<span class="right">Calculate sixth order Steinhardt parameters. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("INTEGRATE_GRID.md_working_2.datq6");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/Q6">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIESA<span class="right">the list of atoms for which the symmetry function is being calculated<i></i></span></span>=1-10 <span class="plumedtooltip">SPECIESB<span class="right">the list of atoms that can be in the environments of each of the atoms for which the symmetry function is being calculated<i></i></span></span>=1-200 <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=1.0}
+</span><span id="INTEGRATE_GRID.md_working_2.datq6_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("INTEGRATE_GRID.md_working_2.datq6")'># q6: Q6 SPECIESA=1-10 SPECIESB=1-200 SWITCH={RATIONAL R_0=1.0}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="INTEGRATE_GRID.md_working_2.datq6_grp" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datq6_grp","INTEGRATE_GRID.md_working_2.datq6_grp","violet")'>q6_grp</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datq6_grp">The GROUP action with label <b>q6_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-10
+<b name="INTEGRATE_GRID.md_working_2.datq6_mat" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datq6_mat","INTEGRATE_GRID.md_working_2.datq6_mat","red")'>q6_mat</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datq6_mat">The CONTACT_MATRIX action with label <b>q6_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_mat.w</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr><tr><td width="5%">q6_mat.x</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the x axis</td></tr><tr><td width="5%">q6_mat.y</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the y axis</td></tr><tr><td width="5%">q6_mat.z</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the z axis</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPB<i></i></span></span>=1-10 <span class="plumedtooltip">GROUPB<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPA<i></i></span></span>=1-200 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=1.0} <span class="plumedtooltip">COMPONENTS<span class="right"> also calculate the components of the vector connecting the atoms in the contact matrix<i></i></span></span>
+<b name="INTEGRATE_GRID.md_working_2.datq6_sh" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datq6_sh","INTEGRATE_GRID.md_working_2.datq6_sh","red")'>q6_sh</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datq6_sh">The SPHERICAL_HARMONIC action with label <b>q6_sh</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_sh.rm-n6</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n6th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-n5</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n5th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-n4</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n4th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-n3</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n3th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-n2</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n2th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-n1</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n1th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-0</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the 0th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-p1</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p1th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-p2</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p2th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-p3</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p3th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-p4</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p4th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-p5</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p5th of these quantities</td></tr><tr><td width="5%">q6_sh.rm-p6</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p6th of these quantities</td></tr><tr><td width="5%">q6_sh.im-n6</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n6th of these quantities</td></tr><tr><td width="5%">q6_sh.im-n5</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n5th of these quantities</td></tr><tr><td width="5%">q6_sh.im-n4</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n4th of these quantities</td></tr><tr><td width="5%">q6_sh.im-n3</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n3th of these quantities</td></tr><tr><td width="5%">q6_sh.im-n2</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n2th of these quantities</td></tr><tr><td width="5%">q6_sh.im-n1</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the n1th of these quantities</td></tr><tr><td width="5%">q6_sh.im-0</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the 0th of these quantities</td></tr><tr><td width="5%">q6_sh.im-p1</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p1th of these quantities</td></tr><tr><td width="5%">q6_sh.im-p2</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p2th of these quantities</td></tr><tr><td width="5%">q6_sh.im-p3</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p3th of these quantities</td></tr><tr><td width="5%">q6_sh.im-p4</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p4th of these quantities</td></tr><tr><td width="5%">q6_sh.im-p5</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p5th of these quantities</td></tr><tr><td width="5%">q6_sh.im-p6</td><td width="5%"><font color="red">matrix</font></td><td>the real parts of the spherical harmonic values with the m value given  This is the p6th of these quantities</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SPHERICAL_HARMONIC<span class="right">Calculate the values of all the spherical harmonic funtions for a particular value of l. <a href="https://www.plumed.org/doc-master/user-doc/html/SPHERICAL_HARMONIC" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.datq6_mat">q6_mat.x</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_mat">q6_mat.y</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_mat">q6_mat.z</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_mat">q6_mat.w</b> <span class="plumedtooltip">L<span class="right">the value of the angular momentum<i></i></span></span>=6
+<b name="INTEGRATE_GRID.md_working_2.datq6_denom_ones" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datq6_denom_ones","INTEGRATE_GRID.md_working_2.datq6_denom_ones","blue")'>q6_denom_ones</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datq6_denom_ones">The CONSTANT action with label <b>q6_denom_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_denom_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=200
+<b name="INTEGRATE_GRID.md_working_2.datq6_denom" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datq6_denom","INTEGRATE_GRID.md_working_2.datq6_denom","blue")'>q6_denom</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datq6_denom">The MATRIX_VECTOR_PRODUCT action with label <b>q6_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_denom</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.datq6_mat">q6_mat.w</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_denom_ones">q6_denom_ones</b>
+<b name="INTEGRATE_GRID.md_working_2.datq6_sp" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datq6_sp","INTEGRATE_GRID.md_working_2.datq6_sp","blue")'>q6_sp</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datq6_sp">The MATRIX_VECTOR_PRODUCT action with label <b>q6_sp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_sp.rm-n6</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-n6 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-n5</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-n5 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-n4</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-n4 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-n3</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-n3 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-n2</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-n2 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-n1</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-n1 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-0</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-0 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-p1</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-p1 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-p2</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-p2 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-p3</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-p3 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-p4</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-p4 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-p5</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-p5 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.rm-p6</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.rm-p6 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-n6</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-n6 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-n5</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-n5 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-n4</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-n4 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-n3</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-n3 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-n2</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-n2 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-n1</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-n1 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-0</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-0 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-p1</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-p1 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-p2</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-p2 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-p3</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-p3 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-p4</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-p4 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-p5</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-p5 and the vector q6_denom_ones</td></tr><tr><td width="5%">q6_sp.im-p6</td><td width="5%"><font color="blue">vector</font></td><td>the product of the matrix q6_sh.im-p6 and the vector q6_denom_ones</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.datq6_sh">q6_sh.*</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_denom_ones">q6_denom_ones</b>
+<b name="INTEGRATE_GRID.md_working_2.datq6_norm2" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datq6_norm2","INTEGRATE_GRID.md_working_2.datq6_norm2","blue")'>q6_norm2</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datq6_norm2">The COMBINE action with label <b>q6_norm2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_norm2</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a linear combination to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2 <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-n6</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-n6</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-n5</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-n5</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-n4</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-n4</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-n3</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-n3</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-n2</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-n2</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-n1</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-n1</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-0</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-0</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-p1</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-p1</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-p2</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-p2</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-p3</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-p3</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-p4</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-p4</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-p5</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-p5</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.rm-p6</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_sp">q6_sp.im-p6</b>
+<b name="INTEGRATE_GRID.md_working_2.datq6_norm" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datq6_norm","INTEGRATE_GRID.md_working_2.datq6_norm","blue")'>q6_norm</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datq6_norm">The CUSTOM action with label <b>q6_norm</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6_norm</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.datq6_norm2">q6_norm2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="INTEGRATE_GRID.md_working_2.datq6" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.datq6","INTEGRATE_GRID.md_working_2.datq6","blue")'>q6</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.datq6">The CUSTOM action with label <b>q6</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">q6</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.datq6_norm">q6_norm</b>,<b name="INTEGRATE_GRID.md_working_2.datq6_denom">q6_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span id="INTEGRATE_GRID.md_working_2.datdefhu_short"><b name="INTEGRATE_GRID.md_working_2.dathu" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.dathu","INTEGRATE_GRID.md_working_2.dathu","green")'>hu</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.dathu">The KDE action with label <b>hu</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hu</td><td width="5%"><font color="green">grid</font></td><td>a function on a grid that was obtained by doing a Kernel Density Estimation using the input arguments</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KDE<span class="right">Create a histogram from the input scalar/vector/matrix using KDE This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("INTEGRATE_GRID.md_working_2.datdefhu");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/KDE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the value that should be used to construct the histogram<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.datc1">c1</b>,<b name="INTEGRATE_GRID.md_working_2.datq6">q6</b> <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=200,200 <span class="plumedtooltip">GRID_MIN<span class="right"> the lower bounds for the grid<i></i></span></span>=0,-0.5 <span class="plumedtooltip">GRID_MAX<span class="right"> the upper bounds for the grid<i></i></span></span>=10,2 <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=0.1,0.1
+</span><span id="INTEGRATE_GRID.md_working_2.datdefhu_long" style="display:none;"><b name="INTEGRATE_GRID.md_working_2.dathu" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.dathu","INTEGRATE_GRID.md_working_2.dathu","green")'>hu</b>: <span class="plumedtooltip" style="color:green">KDE<span class="right">Create a histogram from the input scalar/vector/matrix using KDE This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("INTEGRATE_GRID.md_working_2.datdefhu");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/KDE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the value that should be used to construct the histogram<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.datc1">c1</b>,<b name="INTEGRATE_GRID.md_working_2.datq6">q6</b> <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=200,200 <span class="plumedtooltip">GRID_MIN<span class="right"> the lower bounds for the grid<i></i></span></span>=0,-0.5 <span class="plumedtooltip">GRID_MAX<span class="right"> the upper bounds for the grid<i></i></span></span>=10,2 <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=0.1,0.1  <span class="plumedtooltip">KERNEL<span class="right"> the kernel function you are using<i></i></span></span>=GAUSSIAN
+</span><b name="INTEGRATE_GRID.md_working_2.dath" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.dath","INTEGRATE_GRID.md_working_2.dath","green")'>h</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.dath">The CUSTOM action with label <b>h</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">h</td><td width="5%"><font color="green">grid</font></td><td>the grid obtained by doing an element-wise application of an arbitrary function to the input grid</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.dathu">hu</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/10 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span id="INTEGRATE_GRID.md_working_2.dativ_short"><b name="INTEGRATE_GRID.md_working_2.dativ" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.dativ","INTEGRATE_GRID.md_working_2.dativ_shortcut","black")'>iv</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.dativ_shortcut">The INTEGRATE_GRID action with label <b>iv</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">iv</td><td width="5%"><font color="black">scalar</font></td><td>the numerical integral of the input function over its whole domain</td></tr></table></span>: <span class="plumedtooltip" style="color:green">INTEGRATE_GRID<span class="right">Calculate the numerical integral of the function stored on the grid This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("INTEGRATE_GRID.md_working_2.dativ");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/INTEGRATE_GRID">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the function on a grid that is being integrated<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.dath">h</b> <span class="plumedtooltip">PERIODIC<span class="right">if the value of the output integral has a periodid domain then you use this keyword to specify the periodicity<i></i></span></span>=NO
+</span><span id="INTEGRATE_GRID.md_working_2.dativ_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("INTEGRATE_GRID.md_working_2.dativ")'># iv: INTEGRATE_GRID ARG=h PERIODIC=NO</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="INTEGRATE_GRID.md_working_2.dativ_volelem" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.dativ_volelem","INTEGRATE_GRID.md_working_2.dativ_volelem","black")'>iv_volelem</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.dativ_volelem">The GET_VOLUME_ELEMENT action with label <b>iv_volelem</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">iv_volelem</td><td width="5%"><font color="black">scalar</font></td><td>the volume element </td></tr></table></span>: <span class="plumedtooltip" style="color:green">GET_VOLUME_ELEMENT<span class="right">Get the volume element from the input grid <a href="https://www.plumed.org/doc-master/user-doc/html/GET_VOLUME_ELEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for function on the grid that you need the volume element for<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.dath">h</b>
+<b name="INTEGRATE_GRID.md_working_2.dativ_sum" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.dativ_sum","INTEGRATE_GRID.md_working_2.dativ_sum","black")'>iv_sum</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.dativ_sum">The SUM action with label <b>iv_sum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">iv_sum</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.dath">h</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="INTEGRATE_GRID.md_working_2.dativ" onclick='showPath("INTEGRATE_GRID.md_working_2.dat","INTEGRATE_GRID.md_working_2.dativ","INTEGRATE_GRID.md_working_2.dativ","black")'>iv</b><span style="display:none;" id="INTEGRATE_GRID.md_working_2.dativ">The CUSTOM action with label <b>iv</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">iv</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="INTEGRATE_GRID.md_working_2.dativ_volelem">iv_volelem</b>,<b name="INTEGRATE_GRID.md_working_2.dativ_sum">iv_sum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span></pre></div>
+
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">grid</td>
+<td style="text-align: left;">the label of the function on a grid that is being integrated</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the label of the function on a grid that is being integrated</td>
+</tr>
+<tr>
+<td style="text-align: left;">PERIODIC</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">if the value of the output integral has a periodid domain then you use this keyword to specify the periodicity</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

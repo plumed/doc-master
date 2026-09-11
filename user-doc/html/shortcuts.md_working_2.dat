@@ -1,0 +1,4 @@
+# This is a shortcut
+d1: DISTANCES ATOMS1=1,2 ATOMS2=3,4 ATOMS3=5,6 ATOMS4=7,8 ATOMS5=9,10 LESS_THAN={RATIONAL R_0=0.1}
+# This is not a shortcut
+PRINT ARG=d1.lessthan FILE=colvar1

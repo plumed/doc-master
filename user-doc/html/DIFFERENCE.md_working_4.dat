@@ -1,0 +1,4 @@
+ref_psi: CONSTANT VALUES=2.25029540
+t: TORSION ATOMS=1,2,3,4
+diff: DIFFERENCE ARG=t,ref_psi
+PRINT ARG=diff FILE=colvar

@@ -1,0 +1,18 @@
+t: TIME
+# this just print cos and sin of time
+cos: MATHEVAL ARG=t VAR=t FUNC=cos(t) PERIODIC=NO
+sin: MATHEVAL ARG=t VAR=t FUNC=sin(t) PERIODIC=NO
+c1: COM ATOMS=1,2
+c2: COM ATOMS=3,4
+d: DISTANCE COMPONENTS ATOMS=c1,c2
+PRINT ARG=t,cos,sin,d.x,d.y,d.z STRIDE=1 FILE=colvar FMT=%8.4f
+# this calculates sine and cosine of a projected component of distance
+mycos:  MATHEVAL ARG=d.x,d.y  VAR=x,y   FUNC=x/sqrt(x*x+y*y) PERIODIC=NO
+mysin:  MATHEVAL ARG=d.x,d.y  VAR=x,y   FUNC=y/sqrt(x*x+y*y) PERIODIC=NO
+# this creates a moving spring so that the system follows a circle-like dynamics
+# but it is not a bias, it is a simple value now
+vv1:  MATHEVAL ARG=mycos,mysin,cos,sin VAR=mc,ms,c,s  FUNC=100*((mc-c)^2+(ms-s)^2) PERIODIC=NO
+# this takes the value calculated with matheval and uses as a bias
+cc: BIASVALUE ARG=vv1
+# some printout
+PRINT ARG=t,cos,sin,d.x,d.y,d.z,mycos,mysin,cc.vv1_bias STRIDE=1 FILE=colvar FMT=%8.4f

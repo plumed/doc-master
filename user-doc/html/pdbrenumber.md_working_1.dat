@@ -1,0 +1,1 @@
+plumed pdbrenumber --ipdb input.pdb --opdb output.pdb

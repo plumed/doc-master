@@ -1,0 +1,6 @@
+#SETTINGS INPUTFILES=regtest/pamm/rt-hbpamm/b3lyp.pamm
+m: HBPAMM_MATRIX ...
+  GROUP=1-192:3 GROUPC=2-192:3,3-192:3
+  CLUSTERS=regtest/pamm/rt-hbpamm/b3lyp.pamm
+...
+PRINT ARG=m FILE=colvar

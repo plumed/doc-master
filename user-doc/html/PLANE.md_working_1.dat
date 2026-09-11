@@ -1,0 +1,2 @@
+p: PLANE ATOMS=1,2,3
+PRINT ARG=p.x,p.y,p.z FILE=colvar

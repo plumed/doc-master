@@ -1,0 +1,22 @@
+#SETTINGS INPUTFILES=regtest/mapping/rt-pca-two-frames/two-frames.pdb
+
+# Read in two reference configuratioms from PDB file
+ref1: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pca-two-frames/two-frames.pdb NUMBER=1
+ref1T: TRANSPOSE ARG=ref1
+ref2: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pca-two-frames/two-frames.pdb NUMBER=2
+# Calculate the displacement vector that takes you from ref1 to ref2
+eigu: RMSD ARG=ref1T,ref2 DISPLACEMENT TYPE=OPTIMAL
+# Normalise the reference vector
+eigu2: CUSTOM ARG=eigu.disp FUNC=x*x PERIODIC=NO
+eign2: SUM ARG=eigu2 PERIODIC=NO
+eig: CUSTOM ARG=eigu.disp,eign2 FUNC=x/sqrt(y) PERIODIC=NO
+eigT: TRANSPOSE ARG=eig
+# Everything prior to this point is only done in setup.  From here onwards we have the commands that are done during the main calculate loop.
+
+# Calculate the RMSD displacement between the instaneous structure and the first reference structure
+rmsd: RMSD REFERENCE=regtest/mapping/rt-pca-two-frames/two-frames.pdb NUMBER=1 TYPE=OPTIMAL DISPLACEMENT SQUARED
+# Project the displacement computed above on the director of the vector that connects reference structure ref1 to refeference structure ref2
+pca: MATRIX_VECTOR_PRODUCT ARG=eigT,rmsd.disp
+
+# Print the final CV to a file
+PRINT ARG=pca FILE=colvar
