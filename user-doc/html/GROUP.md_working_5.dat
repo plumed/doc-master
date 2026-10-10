@@ -1,0 +1,6 @@
+# take one atom every three, that is oxygens
+ox: GROUP ATOMS=1-90:3
+# take the remaining atoms, that is hydrogens
+hy: GROUP ATOMS=1-90 REMOVE=ox
+DUMPATOMS ATOMS=ox FILE=ox.gro
+DUMPATOMS ATOMS=hy FILE=hy.gro

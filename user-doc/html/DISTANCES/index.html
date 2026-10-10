@@ -1,0 +1,1260 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: DISTANCES - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-distances" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: DISTANCES
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculating-minimum-distances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculating minimum distances
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculating-maximum-distances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculating maximum distances
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-parts-of-the-old-multicolvar-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other parts of the old multicolvar syntax
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-distances"><a href="../shortcuts/">Shortcut</a>: DISTANCES</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_multicolvar/"><strong>multicolvar</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate the distances between multiple piars of atoms</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=DISTANCES"><img alt="used in 3 tutorials" src="https://img.shields.io/badge/tutorials-3-green.svg" /></a><a href="https://www.plumed-nest.org/browse.html?action=DISTANCES"><img alt="used in 29 eggs" src="https://img.shields.io/badge/nest-29-green.svg" /></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the DISTANCES between the each pair of atoms that were specified</td>
+<td style="text-align: center;">vector</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Deprecated</p>
+<p>This action has been deprecated and is no longer supported. Use <a href="../DISTANCE/">DISTANCE</a> instead.</p>
+</div>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate the distances between multiple piars of atoms</p>
+<p><strong>This shortcut action allows you to calculate function of the distribution of distances and reproduces the syntax in older PLUMED versions.
+We think that the syntax in newer versions is more flexible and easier to use and that you should try to avoid using this old syntax.  If you look at the example inputs below you can
+see how the new syntax can be used to replace this old one. We would strongly encourage you to use the newer syntax.</strong></p>
+<p>The following input tells plumed to calculate the distances between atoms 3 and 5 and
+between atoms 1 and 2 and to print the shorter of these two distances.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DISTANCES.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DISTANCES.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="DISTANCES.md_working_1.datd1_short"><b name="DISTANCES.md_working_1.datd1" onclick='showPath("DISTANCES.md_working_1.dat","DISTANCES.md_working_1.datd1","DISTANCES.md_working_1.datd1_shortcut","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_1.datd1_shortcut">The DISTANCES action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCES between the each pair of atoms that were specified</td></tr><tr><td width="5%">d1_lowest</td><td width="5%"><font color="black">scalar</font></td><td>the smallest of the colvars</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("DISTANCES.md_working_1.datd1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=3,5 <span class="plumedtooltip">ATOMS2<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=1,2 <span class="plumedtooltip">LOWEST<span class="right"> this flag allows you to recover the lowest of these variables<i></i></span></span>
+</span><span id="DISTANCES.md_working_1.datd1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("DISTANCES.md_working_1.datd1")'># d1: DISTANCES ATOMS1=3,5 ATOMS2=1,2 LOWEST</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="DISTANCES.md_working_1.datd1_vatom1" onclick='showPath("DISTANCES.md_working_1.dat","DISTANCES.md_working_1.datd1_vatom1","DISTANCES.md_working_1.datd1_vatom1","violet")'>d1_vatom1</b><span style="display:none;" id="DISTANCES.md_working_1.datd1_vatom1">The CENTER_FAST action with label <b>d1_vatom1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_vatom1</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by CENTER_FAST action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CENTER<span class="right">Calculate the center for a group of atoms, with arbitrary weights. <a href="https://www.plumed.org/doc-master/user-doc/html/CENTER" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that appear in the definition of this center<i></i></span></span>=3,5
+<b name="DISTANCES.md_working_1.datd1_vatom2" onclick='showPath("DISTANCES.md_working_1.dat","DISTANCES.md_working_1.datd1_vatom2","DISTANCES.md_working_1.datd1_vatom2","violet")'>d1_vatom2</b><span style="display:none;" id="DISTANCES.md_working_1.datd1_vatom2">The CENTER_FAST action with label <b>d1_vatom2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_vatom2</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by CENTER_FAST action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CENTER<span class="right">Calculate the center for a group of atoms, with arbitrary weights. <a href="https://www.plumed.org/doc-master/user-doc/html/CENTER" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that appear in the definition of this center<i></i></span></span>=1,2
+<b name="DISTANCES.md_working_1.datd1_grp" onclick='showPath("DISTANCES.md_working_1.dat","DISTANCES.md_working_1.datd1_grp","DISTANCES.md_working_1.datd1_grp","violet")'>d1_grp</b><span style="display:none;" id="DISTANCES.md_working_1.datd1_grp">The GROUP action with label <b>d1_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=<b name="DISTANCES.md_working_1.datd1_vatom1">d1_vatom1</b>,<b name="DISTANCES.md_working_1.datd1_vatom2">d1_vatom2</b>
+<b name="DISTANCES.md_working_1.datd1" onclick='showPath("DISTANCES.md_working_1.dat","DISTANCES.md_working_1.datd1","DISTANCES.md_working_1.datd1","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_1.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="DISTANCES.md_working_1.datd1_lowest" onclick='showPath("DISTANCES.md_working_1.dat","DISTANCES.md_working_1.datd1_lowest","DISTANCES.md_working_1.datd1_lowest","black")'>d1_lowest</b><span style="display:none;" id="DISTANCES.md_working_1.datd1_lowest">The LOWEST action with label <b>d1_lowest</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_lowest</td><td width="5%"><font color="black">scalar</font></td><td>the highest of the input values</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LOWEST<span class="right">This function can be used to find the lowest colvar by magnitude in a set. <a href="https://www.plumed.org/doc-master/user-doc/html/LOWEST" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_1.datd1">d1</b>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DISTANCES.md_working_1.datd1">d1.lowest</b>
+</pre></div>
+
+<p>The following input tells plumed to calculate the distances between atoms 3 and 5 and between atoms 1 and 2
+and then to calculate the number of these distances that are less than 0.1 nm.  The number of distances
+less than 0.1nm is then printed to a file.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DISTANCES.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DISTANCES.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="DISTANCES.md_working_2.datd1_short"><b name="DISTANCES.md_working_2.datd1" onclick='showPath("DISTANCES.md_working_2.dat","DISTANCES.md_working_2.datd1","DISTANCES.md_working_2.datd1_shortcut","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_2.datd1_shortcut">The DISTANCES action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCES between the each pair of atoms that were specified</td></tr><tr><td width="5%">d1_lessthan</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value less than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("DISTANCES.md_working_2.datd1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=3,5 <span class="plumedtooltip">ATOMS2<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=1,2 <span class="plumedtooltip">LESS_THAN<span class="right">calculate the number of variables that are less than a certain target value. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.1}
+</span><span id="DISTANCES.md_working_2.datd1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("DISTANCES.md_working_2.datd1")'># d1: DISTANCES ATOMS1=3,5 ATOMS2=1,2 LESS_THAN={RATIONAL R_0=0.1}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="DISTANCES.md_working_2.datd1_vatom1" onclick='showPath("DISTANCES.md_working_2.dat","DISTANCES.md_working_2.datd1_vatom1","DISTANCES.md_working_2.datd1_vatom1","violet")'>d1_vatom1</b><span style="display:none;" id="DISTANCES.md_working_2.datd1_vatom1">The CENTER_FAST action with label <b>d1_vatom1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_vatom1</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by CENTER_FAST action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CENTER<span class="right">Calculate the center for a group of atoms, with arbitrary weights. <a href="https://www.plumed.org/doc-master/user-doc/html/CENTER" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that appear in the definition of this center<i></i></span></span>=3,5
+<b name="DISTANCES.md_working_2.datd1_vatom2" onclick='showPath("DISTANCES.md_working_2.dat","DISTANCES.md_working_2.datd1_vatom2","DISTANCES.md_working_2.datd1_vatom2","violet")'>d1_vatom2</b><span style="display:none;" id="DISTANCES.md_working_2.datd1_vatom2">The CENTER_FAST action with label <b>d1_vatom2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_vatom2</td><td width="5%"><font color="violet">atoms</font></td><td>virtual atom calculated by CENTER_FAST action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CENTER<span class="right">Calculate the center for a group of atoms, with arbitrary weights. <a href="https://www.plumed.org/doc-master/user-doc/html/CENTER" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the group of atoms that appear in the definition of this center<i></i></span></span>=1,2
+<b name="DISTANCES.md_working_2.datd1_grp" onclick='showPath("DISTANCES.md_working_2.dat","DISTANCES.md_working_2.datd1_grp","DISTANCES.md_working_2.datd1_grp","violet")'>d1_grp</b><span style="display:none;" id="DISTANCES.md_working_2.datd1_grp">The GROUP action with label <b>d1_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=<b name="DISTANCES.md_working_2.datd1_vatom1">d1_vatom1</b>,<b name="DISTANCES.md_working_2.datd1_vatom2">d1_vatom2</b>
+<b name="DISTANCES.md_working_2.datd1" onclick='showPath("DISTANCES.md_working_2.dat","DISTANCES.md_working_2.datd1","DISTANCES.md_working_2.datd1","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_2.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,5 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="DISTANCES.md_working_2.datd1_lt" onclick='showPath("DISTANCES.md_working_2.dat","DISTANCES.md_working_2.datd1_lt","DISTANCES.md_working_2.datd1_lt","blue")'>d1_lt</b><span style="display:none;" id="DISTANCES.md_working_2.datd1_lt">The LESS_THAN action with label <b>d1_lt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_lt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_2.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.1}
+<b name="DISTANCES.md_working_2.datd1_lessthan" onclick='showPath("DISTANCES.md_working_2.dat","DISTANCES.md_working_2.datd1_lessthan","DISTANCES.md_working_2.datd1_lessthan","black")'>d1_lessthan</b><span style="display:none;" id="DISTANCES.md_working_2.datd1_lessthan">The SUM action with label <b>d1_lessthan</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_lessthan</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_2.datd1_lt">d1_lt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DISTANCES.md_working_2.datd1">d1.lessthan</b>
+</pre></div>
+
+<p>The following input tells plumed to calculate all 3 distances between atoms 1, 2 and 3 (i.e. the distances between atoms
+1 and 2, atoms 1 and 3 and atoms 2 and 3).  The average of these distances is then calculated in two ways.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DISTANCES.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DISTANCES.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="DISTANCES.md_working_3.datd1_short"><b name="DISTANCES.md_working_3.datd1" onclick='showPath("DISTANCES.md_working_3.dat","DISTANCES.md_working_3.datd1","DISTANCES.md_working_3.datd1_shortcut","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_3.datd1_shortcut">The DISTANCES action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCES between the each pair of atoms that were specified</td></tr><tr><td width="5%">d1_sum</td><td width="5%"><font color="black">scalar</font></td><td>the sum of the colvars</td></tr><tr><td width="5%">d1_mean</td><td width="5%"><font color="black">scalar</font></td><td>the mean of the colvars</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("DISTANCES.md_working_3.datd1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">Calculate the distance between each distinct pair of atoms in the group<i></i></span></span>=1-3 <span class="plumedtooltip">MEAN<span class="right"> calculate the mean of all the quantities<i></i></span></span> <span class="plumedtooltip">SUM<span class="right"> calculate the sum of all the quantities<i></i></span></span>
+</span><span id="DISTANCES.md_working_3.datd1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("DISTANCES.md_working_3.datd1")'># d1: DISTANCES GROUP=1-3 MEAN SUM</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="DISTANCES.md_working_3.datd1" onclick='showPath("DISTANCES.md_working_3.dat","DISTANCES.md_working_3.datd1","DISTANCES.md_working_3.datd1","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_3.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2,1 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,1 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,2
+<b name="DISTANCES.md_working_3.datd1_sum" onclick='showPath("DISTANCES.md_working_3.dat","DISTANCES.md_working_3.datd1_sum","DISTANCES.md_working_3.datd1_sum","black")'>d1_sum</b><span style="display:none;" id="DISTANCES.md_working_3.datd1_sum">The SUM action with label <b>d1_sum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_sum</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_3.datd1">d1</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_3.datd1_mean" onclick='showPath("DISTANCES.md_working_3.dat","DISTANCES.md_working_3.datd1_mean","DISTANCES.md_working_3.datd1_mean","black")'>d1_mean</b><span style="display:none;" id="DISTANCES.md_working_3.datd1_mean">The MEAN action with label <b>d1_mean</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_mean</td><td width="5%"><font color="black">scalar</font></td><td>the MEAN of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MEAN<span class="right">Calculate the arithmetic mean of the elements in a vector <a href="https://www.plumed.org/doc-master/user-doc/html/MEAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_3.datd1">d1</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><b name="DISTANCES.md_working_3.datd1mean" onclick='showPath("DISTANCES.md_working_3.dat","DISTANCES.md_working_3.datd1mean","DISTANCES.md_working_3.datd1mean","black")'>d1mean</b><span style="display:none;" id="DISTANCES.md_working_3.datd1mean">The CUSTOM action with label <b>d1mean</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1mean</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_3.datd1">d1.sum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/3 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DISTANCES.md_working_3.datd1">d1.mean</b>,<b name="DISTANCES.md_working_3.datd1mean">d1mean</b>
+</pre></div>
+
+<p>The following input tells plumed to calculate all the distances between the atoms in GROUPA and the atoms in GROUPB.
+In other words the distances between atoms 1 and 2 and the distance between atoms 1 and 3.  The number of distances
+more than 0.1 is then printed to a file.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DISTANCES.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DISTANCES.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="DISTANCES.md_working_4.datd1_short"><b name="DISTANCES.md_working_4.datd1" onclick='showPath("DISTANCES.md_working_4.dat","DISTANCES.md_working_4.datd1","DISTANCES.md_working_4.datd1_shortcut","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_4.datd1_shortcut">The DISTANCES action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCES between the each pair of atoms that were specified</td></tr><tr><td width="5%">d1_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value more than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("DISTANCES.md_working_4.datd1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=1 <span class="plumedtooltip">GROUPB<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=2,3 <span class="plumedtooltip">MORE_THAN<span class="right">calculate the number of variables that are more than a certain target value. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN">MORE_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.1}
+</span><span id="DISTANCES.md_working_4.datd1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("DISTANCES.md_working_4.datd1")'># d1: DISTANCES GROUPA=1 GROUPB=2,3 MORE_THAN={RATIONAL R_0=0.1}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="DISTANCES.md_working_4.datd1" onclick='showPath("DISTANCES.md_working_4.dat","DISTANCES.md_working_4.datd1","DISTANCES.md_working_4.datd1","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_4.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,3
+<b name="DISTANCES.md_working_4.datd1_mt" onclick='showPath("DISTANCES.md_working_4.dat","DISTANCES.md_working_4.datd1_mt","DISTANCES.md_working_4.datd1_mt","blue")'>d1_mt</b><span style="display:none;" id="DISTANCES.md_working_4.datd1_mt">The MORE_THAN action with label <b>d1_mt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_mt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_4.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.1}
+<b name="DISTANCES.md_working_4.datd1_morethan" onclick='showPath("DISTANCES.md_working_4.dat","DISTANCES.md_working_4.datd1_morethan","DISTANCES.md_working_4.datd1_morethan","black")'>d1_morethan</b><span style="display:none;" id="DISTANCES.md_working_4.datd1_morethan">The SUM action with label <b>d1_morethan</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_4.datd1_mt">d1_mt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DISTANCES.md_working_4.datd1">d1.morethan</b>
+</pre></div>
+
+<h2 id="calculating-minimum-distances">Calculating minimum distances</h2>
+<p>There are various way for calculating the minimum distance between two groups of atoms.  The simplest one
+is the one we saw above; namely:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DISTANCES.md_working_5.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DISTANCES.md_working_5.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="DISTANCES.md_working_5.datd1_short"><b name="DISTANCES.md_working_5.datd1" onclick='showPath("DISTANCES.md_working_5.dat","DISTANCES.md_working_5.datd1","DISTANCES.md_working_5.datd1_shortcut","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_5.datd1_shortcut">The DISTANCES action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCES between the each pair of atoms that were specified</td></tr><tr><td width="5%">d1_lowest</td><td width="5%"><font color="black">scalar</font></td><td>the smallest of the colvars</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("DISTANCES.md_working_5.datd1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=1-10 <span class="plumedtooltip">GROUPB<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=11-20 <span class="plumedtooltip">LOWEST<span class="right"> this flag allows you to recover the lowest of these variables<i></i></span></span>
+</span><span id="DISTANCES.md_working_5.datd1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("DISTANCES.md_working_5.datd1")'># d1: DISTANCES GROUPA=1-10 GROUPB=11-20 LOWEST</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="DISTANCES.md_working_5.datd1" onclick='showPath("DISTANCES.md_working_5.dat","DISTANCES.md_working_5.datd1","DISTANCES.md_working_5.datd1","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_5.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,11 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,12 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,13 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,14 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,15     <span style="color:blue" class="comment"># Action input conctinues with 95 further ATOMSn keywords, </span>
+<b name="DISTANCES.md_working_5.datd1_lowest" onclick='showPath("DISTANCES.md_working_5.dat","DISTANCES.md_working_5.datd1_lowest","DISTANCES.md_working_5.datd1_lowest","black")'>d1_lowest</b><span style="display:none;" id="DISTANCES.md_working_5.datd1_lowest">The LOWEST action with label <b>d1_lowest</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_lowest</td><td width="5%"><font color="black">scalar</font></td><td>the highest of the input values</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LOWEST<span class="right">This function can be used to find the lowest colvar by magnitude in a set. <a href="https://www.plumed.org/doc-master/user-doc/html/LOWEST" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_5.datd1">d1</b>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DISTANCES.md_working_5.datd1">d1.lowest</b>
+</pre></div>
+
+<p>A disadvantage of this approach is that the derivatives of the resulting value are not continuous. To be clear,
+the value of the shortest distance is continuous when you use this approach so you will likely be fine if you use
+the quantity output by the command above as an input in a bias. However, if you would like to use a quantity with
+continuous derivatives for the minimum distance you can use the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DISTANCES.md_working_6.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DISTANCES.md_working_6.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="DISTANCES.md_working_6.datd1_short"><b name="DISTANCES.md_working_6.datd1" onclick='showPath("DISTANCES.md_working_6.dat","DISTANCES.md_working_6.datd1","DISTANCES.md_working_6.datd1_shortcut","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_6.datd1_shortcut">The DISTANCES action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCES between the each pair of atoms that were specified</td></tr><tr><td width="5%">d1_min</td><td width="5%"><font color="black">scalar</font></td><td>the minimum colvar</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("DISTANCES.md_working_6.datd1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=1-10 <span class="plumedtooltip">GROUPB<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=11-20 <span class="plumedtooltip">MIN<span class="right">calculate the minimum value<i></i></span></span>={BETA=500.}
+</span><span id="DISTANCES.md_working_6.datd1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("DISTANCES.md_working_6.datd1")'># d1: DISTANCES GROUPA=1-10 GROUPB=11-20 MIN={BETA=500.}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="DISTANCES.md_working_6.datd1" onclick='showPath("DISTANCES.md_working_6.dat","DISTANCES.md_working_6.datd1","DISTANCES.md_working_6.datd1","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_6.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,11 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,12 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,13 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,14 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,15     <span style="color:blue" class="comment"># Action input conctinues with 95 further ATOMSn keywords, </span>
+<b name="DISTANCES.md_working_6.datd1_me_min" onclick='showPath("DISTANCES.md_working_6.dat","DISTANCES.md_working_6.datd1_me_min","DISTANCES.md_working_6.datd1_me_min","blue")'>d1_me_min</b><span style="display:none;" id="DISTANCES.md_working_6.datd1_me_min">The CUSTOM action with label <b>d1_me_min</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_me_min</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_6.datd1">d1</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=exp(500./x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_6.datd1_mec_min" onclick='showPath("DISTANCES.md_working_6.dat","DISTANCES.md_working_6.datd1_mec_min","DISTANCES.md_working_6.datd1_mec_min","black")'>d1_mec_min</b><span style="display:none;" id="DISTANCES.md_working_6.datd1_mec_min">The SUM action with label <b>d1_mec_min</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_mec_min</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_6.datd1_me_min">d1_me_min</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_6.datd1_min" onclick='showPath("DISTANCES.md_working_6.dat","DISTANCES.md_working_6.datd1_min","DISTANCES.md_working_6.datd1_min","black")'>d1_min</b><span style="display:none;" id="DISTANCES.md_working_6.datd1_min">The CUSTOM action with label <b>d1_min</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_min</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_6.datd1_mec_min">d1_mec_min</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=500./log(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DISTANCES.md_working_6.datd1">d1.min</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=10
+</pre></div>
+
+<p>In order to ensure that the minimum value has continuous derivatives we use the following function:</p>
+<p>
+<script type="math/tex; mode=display">
+d_{min} = \frac{\beta}{ \log \sum_i \exp\left( \frac{\beta}{d_i} \right) }
+</script>
+</p>
+<p>where <script type="math/tex">\beta</script> is a user specified parameter.</p>
+<p>This input is used rather than a separate MINDIST colvar so that the same routine and the same input style can be
+used to calculate minimum coordination numbers (see <a href="../COORDINATIONNUMBER/">COORDINATIONNUMBER</a>), minimum
+angles (see <a href="../ANGLES/">ANGLES</a>) and many other variables. If you expand the input above you will notice that
+the DISTANCES command is a shortcut.  By expanding this shortcut you can see how PLUMED calculates the minimum distance.</p>
+<p>An alternative implementation of the minimum distance is provided through the ALT_MIN keyword that is demonstrated below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DISTANCES.md_working_7.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DISTANCES.md_working_7.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="DISTANCES.md_working_7.datd1_short"><b name="DISTANCES.md_working_7.datd1" onclick='showPath("DISTANCES.md_working_7.dat","DISTANCES.md_working_7.datd1","DISTANCES.md_working_7.datd1_shortcut","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_7.datd1_shortcut">The DISTANCES action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCES between the each pair of atoms that were specified</td></tr><tr><td width="5%">d1_altmin</td><td width="5%"><font color="black">scalar</font></td><td>the minimum value of the cv</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("DISTANCES.md_working_7.datd1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=1-10 <span class="plumedtooltip">GROUPB<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=11-20 <span class="plumedtooltip">ALT_MIN<span class="right">calculate the minimum value<i></i></span></span>={BETA=500.}
+</span><span id="DISTANCES.md_working_7.datd1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("DISTANCES.md_working_7.datd1")'># d1: DISTANCES GROUPA=1-10 GROUPB=11-20 ALT_MIN={BETA=500.}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="DISTANCES.md_working_7.datd1" onclick='showPath("DISTANCES.md_working_7.dat","DISTANCES.md_working_7.datd1","DISTANCES.md_working_7.datd1","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_7.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,11 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,12 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,13 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,14 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,15     <span style="color:blue" class="comment"># Action input conctinues with 95 further ATOMSn keywords, </span>
+<b name="DISTANCES.md_working_7.datd1_me_altmin" onclick='showPath("DISTANCES.md_working_7.dat","DISTANCES.md_working_7.datd1_me_altmin","DISTANCES.md_working_7.datd1_me_altmin","blue")'>d1_me_altmin</b><span style="display:none;" id="DISTANCES.md_working_7.datd1_me_altmin">The CUSTOM action with label <b>d1_me_altmin</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_me_altmin</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_7.datd1">d1</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=exp(-x*500.) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_7.datd1_mec_altmin" onclick='showPath("DISTANCES.md_working_7.dat","DISTANCES.md_working_7.datd1_mec_altmin","DISTANCES.md_working_7.datd1_mec_altmin","black")'>d1_mec_altmin</b><span style="display:none;" id="DISTANCES.md_working_7.datd1_mec_altmin">The SUM action with label <b>d1_mec_altmin</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_mec_altmin</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_7.datd1_me_altmin">d1_me_altmin</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_7.datd1_altmin" onclick='showPath("DISTANCES.md_working_7.dat","DISTANCES.md_working_7.datd1_altmin","DISTANCES.md_working_7.datd1_altmin","black")'>d1_altmin</b><span style="display:none;" id="DISTANCES.md_working_7.datd1_altmin">The CUSTOM action with label <b>d1_altmin</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_altmin</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_7.datd1_mec_altmin">d1_mec_altmin</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=-log(x)/500. <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DISTANCES.md_working_7.datd1">d1.altmin</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=10
+</pre></div>
+
+<p>The minimum value output by this command also has continuous derivatives and is evaluated using the following function:</p>
+<p>
+<script type="math/tex; mode=display">
+d_{min} = -\frac{1}{\beta} \log \left( \sum_i \exp(-\beta d_i) \right)
+</script>
+</p>
+<h2 id="calculating-maximum-distances">Calculating maximum distances</h2>
+<p>There are two ways for calculating the maximum distance between two groups of atom. The simplest one is:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DISTANCES.md_working_8.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DISTANCES.md_working_8.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="DISTANCES.md_working_8.datd1_short"><b name="DISTANCES.md_working_8.datd1" onclick='showPath("DISTANCES.md_working_8.dat","DISTANCES.md_working_8.datd1","DISTANCES.md_working_8.datd1_shortcut","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_8.datd1_shortcut">The DISTANCES action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCES between the each pair of atoms that were specified</td></tr><tr><td width="5%">d1_highest</td><td width="5%"><font color="black">scalar</font></td><td>the largest of the colvars</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("DISTANCES.md_working_8.datd1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=1-10 <span class="plumedtooltip">GROUPB<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=11-20 <span class="plumedtooltip">HIGHEST<span class="right"> this flag allows you to recover the highest of these variables<i></i></span></span>
+</span><span id="DISTANCES.md_working_8.datd1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("DISTANCES.md_working_8.datd1")'># d1: DISTANCES GROUPA=1-10 GROUPB=11-20 HIGHEST</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="DISTANCES.md_working_8.datd1" onclick='showPath("DISTANCES.md_working_8.dat","DISTANCES.md_working_8.datd1","DISTANCES.md_working_8.datd1","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_8.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,11 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,12 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,13 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,14 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,15     <span style="color:blue" class="comment"># Action input conctinues with 95 further ATOMSn keywords, </span>
+<b name="DISTANCES.md_working_8.datd1_highest" onclick='showPath("DISTANCES.md_working_8.dat","DISTANCES.md_working_8.datd1_highest","DISTANCES.md_working_8.datd1_highest","black")'>d1_highest</b><span style="display:none;" id="DISTANCES.md_working_8.datd1_highest">The HIGHEST action with label <b>d1_highest</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_highest</td><td width="5%"><font color="black">scalar</font></td><td>the lowest of the input values</td></tr></table></span>: <span class="plumedtooltip" style="color:green">HIGHEST<span class="right">This function can be used to find the highest colvar by magnitude in a set. <a href="https://www.plumed.org/doc-master/user-doc/html/HIGHEST" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_8.datd1">d1</b>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DISTANCES.md_working_8.datd1">d1.highest</b>
+</pre></div>
+
+<p>As with LOWEST above a disadvantage of this approach is that the derivatives of the resulting value are not continuous.
+If you would like to use a quantity with continuous derivatives for the maximum distance you can use the following input:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DISTANCES.md_working_9.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DISTANCES.md_working_9.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="DISTANCES.md_working_9.datd1_short"><b name="DISTANCES.md_working_9.datd1" onclick='showPath("DISTANCES.md_working_9.dat","DISTANCES.md_working_9.datd1","DISTANCES.md_working_9.datd1_shortcut","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_9.datd1_shortcut">The DISTANCES action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCES between the each pair of atoms that were specified</td></tr><tr><td width="5%">d1_max</td><td width="5%"><font color="black">scalar</font></td><td>the maximum colvar</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("DISTANCES.md_working_9.datd1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=1-10 <span class="plumedtooltip">GROUPB<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=11-20 <span class="plumedtooltip">MAX<span class="right">calculate the maximum value<i></i></span></span>={BETA=500.}
+</span><span id="DISTANCES.md_working_9.datd1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("DISTANCES.md_working_9.datd1")'># d1: DISTANCES GROUPA=1-10 GROUPB=11-20 MAX={BETA=500.}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="DISTANCES.md_working_9.datd1" onclick='showPath("DISTANCES.md_working_9.dat","DISTANCES.md_working_9.datd1","DISTANCES.md_working_9.datd1","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_9.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,11 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,12 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,13 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,14 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,15     <span style="color:blue" class="comment"># Action input conctinues with 95 further ATOMSn keywords, </span>
+<b name="DISTANCES.md_working_9.datd1_me_max" onclick='showPath("DISTANCES.md_working_9.dat","DISTANCES.md_working_9.datd1_me_max","DISTANCES.md_working_9.datd1_me_max","blue")'>d1_me_max</b><span style="display:none;" id="DISTANCES.md_working_9.datd1_me_max">The CUSTOM action with label <b>d1_me_max</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_me_max</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_9.datd1">d1</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=exp(x/500.) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_9.datd1_mec_max" onclick='showPath("DISTANCES.md_working_9.dat","DISTANCES.md_working_9.datd1_mec_max","DISTANCES.md_working_9.datd1_mec_max","black")'>d1_mec_max</b><span style="display:none;" id="DISTANCES.md_working_9.datd1_mec_max">The SUM action with label <b>d1_mec_max</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_mec_max</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_9.datd1_me_max">d1_me_max</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_9.datd1_max" onclick='showPath("DISTANCES.md_working_9.dat","DISTANCES.md_working_9.datd1_max","DISTANCES.md_working_9.datd1_max","black")'>d1_max</b><span style="display:none;" id="DISTANCES.md_working_9.datd1_max">The CUSTOM action with label <b>d1_max</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_max</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_9.datd1_mec_max">d1_mec_max</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=500.*log(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DISTANCES.md_working_9.datd1">d1.max</b>
+</pre></div>
+
+<p>The maximum value output by this command is evaluated using the following function:</p>
+<p>
+<script type="math/tex; mode=display">
+d_{max} = \beta \log \left( \sum_i \exp\left( \frac{x}{\beta} \right) \right)
+</script>
+</p>
+<h2 id="other-parts-of-the-old-multicolvar-syntax">Other parts of the old multicolvar syntax</h2>
+<p>The ways of calculating the minimum and maximum distance described above are part of plumed 2's multicolvar functionality. In older
+versions of PLUMED these special actions
+allowed you to calculate multiple functions of a distribution of simple collective variables.  As an example you
+can calculate the number of distances less than 1.0, the minimum distance, the number of distances more than
+2.0, the number of distances between 1.0 and 2.0 and histogram that esimates the distribution of distances by using the following command:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_DISTANCES.md_working_10.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../DISTANCES.md_working_10.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="DISTANCES.md_working_10.datd1_short"><b name="DISTANCES.md_working_10.datd1" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1","DISTANCES.md_working_10.datd1_shortcut","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_shortcut">The DISTANCES action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCES between the each pair of atoms that were specified</td></tr><tr><td width="5%">d1_lessthan</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value less than a threshold</td></tr><tr><td width="5%">d1_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value more than a threshold</td></tr><tr><td width="5%">d1_min</td><td width="5%"><font color="black">scalar</font></td><td>the minimum colvar</td></tr><tr><td width="5%">d1_between</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">d1_between-1</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">d1_between-2</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">d1_between-3</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">d1_between-4</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">d1_between-5</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">d1_between-6</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">d1_between-7</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">d1_between-8</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">d1_between-9</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr><tr><td width="5%">d1_between-10</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value that lies in a particular interval</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("DISTANCES.md_working_10.datd1");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">GROUPA<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=1-10 <span class="plumedtooltip">GROUPB<span class="right">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB<i></i></span></span>=11-20
+ <span class="plumedtooltip">LESS_THAN<span class="right">calculate the number of variables that are less than a certain target value. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=1.0}
+ <span class="plumedtooltip">MORE_THAN<span class="right">calculate the number of variables that are more than a certain target value. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN">MORE_THAN</a>.<i></i></span></span>={RATIONAL R_0=2.0}
+ <span class="plumedtooltip">BETWEEN<span class="right">calculate the number of values that are within a certain range. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN">BETWEEN</a>.<i></i></span></span>={GAUSSIAN LOWER=1.0 UPPER=2.0}
+ <span class="plumedtooltip">HISTOGRAM<span class="right">calculate a discretized histogram of the distribution of values<i></i></span></span>={GAUSSIAN LOWER=0.0 UPPER=4.0 NBINS=10}
+ <span class="plumedtooltip">MIN<span class="right">calculate the minimum value<i></i></span></span>={BETA=500.}
+...
+</span><span id="DISTANCES.md_working_10.datd1_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("DISTANCES.md_working_10.datd1")'># d1: DISTANCES ...</span>
+<span style="color:blue" class="comment">#  GROUPA=1-10 GROUPB=11-20</span>
+<span style="color:blue" class="comment">#  LESS_THAN={RATIONAL R_0=1.0}</span>
+<span style="color:blue" class="comment">#  MORE_THAN={RATIONAL R_0=2.0}</span>
+<span style="color:blue" class="comment">#  BETWEEN={GAUSSIAN LOWER=1.0 UPPER=2.0}</span>
+<span style="color:blue" class="comment">#  HISTOGRAM={GAUSSIAN LOWER=0.0 UPPER=4.0 NBINS=10}</span>
+<span style="color:blue" class="comment">#  MIN={BETA=500.}</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="DISTANCES.md_working_10.datd1" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1","DISTANCES.md_working_10.datd1","blue")'>d1</b><span style="display:none;" id="DISTANCES.md_working_10.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,11 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,12 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,13 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,14 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,15     <span style="color:blue" class="comment"># Action input conctinues with 95 further ATOMSn keywords, </span>
+<b name="DISTANCES.md_working_10.datd1_lt" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_lt","DISTANCES.md_working_10.datd1_lt","blue")'>d1_lt</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_lt">The LESS_THAN action with label <b>d1_lt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_lt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=1.0}
+<b name="DISTANCES.md_working_10.datd1_lessthan" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_lessthan","DISTANCES.md_working_10.datd1_lessthan","black")'>d1_lessthan</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_lessthan">The SUM action with label <b>d1_lessthan</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_lessthan</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_lt">d1_lt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_mt" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_mt","DISTANCES.md_working_10.datd1_mt","blue")'>d1_mt</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_mt">The MORE_THAN action with label <b>d1_mt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_mt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=2.0}
+<b name="DISTANCES.md_working_10.datd1_morethan" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_morethan","DISTANCES.md_working_10.datd1_morethan","black")'>d1_morethan</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_morethan">The SUM action with label <b>d1_morethan</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_mt">d1_mt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_me_min" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_me_min","DISTANCES.md_working_10.datd1_me_min","blue")'>d1_me_min</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_me_min">The CUSTOM action with label <b>d1_me_min</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_me_min</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=exp(500./x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_mec_min" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_mec_min","DISTANCES.md_working_10.datd1_mec_min","black")'>d1_mec_min</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_mec_min">The SUM action with label <b>d1_mec_min</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_mec_min</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_me_min">d1_me_min</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_min" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_min","DISTANCES.md_working_10.datd1_min","black")'>d1_min</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_min">The CUSTOM action with label <b>d1_min</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_min</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_mec_min">d1_mec_min</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=500./log(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_bt" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_bt","DISTANCES.md_working_10.datd1_bt","blue")'>d1_bt</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_bt">The BETWEEN action with label <b>d1_bt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_bt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=1.0 UPPER=2.0}
+<b name="DISTANCES.md_working_10.datd1_between" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_between","DISTANCES.md_working_10.datd1_between","black")'>d1_between</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_between">The SUM action with label <b>d1_between</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_between</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_bt">d1_bt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_bt1" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_bt1","DISTANCES.md_working_10.datd1_bt1","blue")'>d1_bt1</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_bt1">The BETWEEN action with label <b>d1_bt1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_bt1</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=0 UPPER=0.4 SMEAR=0.5}
+<b name="DISTANCES.md_working_10.datd1_between-1" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_between-1","DISTANCES.md_working_10.datd1_between-1","black")'>d1_between-1</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_between-1">The SUM action with label <b>d1_between-1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_between-1</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_bt1">d1_bt1</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_bt2" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_bt2","DISTANCES.md_working_10.datd1_bt2","blue")'>d1_bt2</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_bt2">The BETWEEN action with label <b>d1_bt2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_bt2</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=0.4 UPPER=0.8 SMEAR=0.5}
+<b name="DISTANCES.md_working_10.datd1_between-2" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_between-2","DISTANCES.md_working_10.datd1_between-2","black")'>d1_between-2</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_between-2">The SUM action with label <b>d1_between-2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_between-2</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_bt2">d1_bt2</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_bt3" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_bt3","DISTANCES.md_working_10.datd1_bt3","blue")'>d1_bt3</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_bt3">The BETWEEN action with label <b>d1_bt3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_bt3</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=0.8 UPPER=1.2 SMEAR=0.5}
+<b name="DISTANCES.md_working_10.datd1_between-3" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_between-3","DISTANCES.md_working_10.datd1_between-3","black")'>d1_between-3</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_between-3">The SUM action with label <b>d1_between-3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_between-3</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_bt3">d1_bt3</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_bt4" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_bt4","DISTANCES.md_working_10.datd1_bt4","blue")'>d1_bt4</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_bt4">The BETWEEN action with label <b>d1_bt4</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_bt4</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=1.2 UPPER=1.6 SMEAR=0.5}
+<b name="DISTANCES.md_working_10.datd1_between-4" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_between-4","DISTANCES.md_working_10.datd1_between-4","black")'>d1_between-4</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_between-4">The SUM action with label <b>d1_between-4</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_between-4</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_bt4">d1_bt4</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_bt5" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_bt5","DISTANCES.md_working_10.datd1_bt5","blue")'>d1_bt5</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_bt5">The BETWEEN action with label <b>d1_bt5</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_bt5</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=1.6 UPPER=2 SMEAR=0.5}
+<b name="DISTANCES.md_working_10.datd1_between-5" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_between-5","DISTANCES.md_working_10.datd1_between-5","black")'>d1_between-5</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_between-5">The SUM action with label <b>d1_between-5</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_between-5</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_bt5">d1_bt5</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_bt6" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_bt6","DISTANCES.md_working_10.datd1_bt6","blue")'>d1_bt6</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_bt6">The BETWEEN action with label <b>d1_bt6</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_bt6</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=2 UPPER=2.4 SMEAR=0.5}
+<b name="DISTANCES.md_working_10.datd1_between-6" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_between-6","DISTANCES.md_working_10.datd1_between-6","black")'>d1_between-6</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_between-6">The SUM action with label <b>d1_between-6</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_between-6</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_bt6">d1_bt6</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_bt7" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_bt7","DISTANCES.md_working_10.datd1_bt7","blue")'>d1_bt7</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_bt7">The BETWEEN action with label <b>d1_bt7</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_bt7</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=2.4 UPPER=2.8 SMEAR=0.5}
+<b name="DISTANCES.md_working_10.datd1_between-7" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_between-7","DISTANCES.md_working_10.datd1_between-7","black")'>d1_between-7</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_between-7">The SUM action with label <b>d1_between-7</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_between-7</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_bt7">d1_bt7</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_bt8" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_bt8","DISTANCES.md_working_10.datd1_bt8","blue")'>d1_bt8</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_bt8">The BETWEEN action with label <b>d1_bt8</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_bt8</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=2.8 UPPER=3.2 SMEAR=0.5}
+<b name="DISTANCES.md_working_10.datd1_between-8" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_between-8","DISTANCES.md_working_10.datd1_between-8","black")'>d1_between-8</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_between-8">The SUM action with label <b>d1_between-8</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_between-8</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_bt8">d1_bt8</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_bt9" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_bt9","DISTANCES.md_working_10.datd1_bt9","blue")'>d1_bt9</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_bt9">The BETWEEN action with label <b>d1_bt9</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_bt9</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=3.2 UPPER=3.6 SMEAR=0.5}
+<b name="DISTANCES.md_working_10.datd1_between-9" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_between-9","DISTANCES.md_working_10.datd1_between-9","black")'>d1_between-9</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_between-9">The SUM action with label <b>d1_between-9</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_between-9</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_bt9">d1_bt9</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="DISTANCES.md_working_10.datd1_bt10" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_bt10","DISTANCES.md_working_10.datd1_bt10","blue")'>d1_bt10</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_bt10">The BETWEEN action with label <b>d1_bt10</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_bt10</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input falls within a particular range and zero otherwise to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BETWEEN<span class="right">Use a switching function to determine how many of the input variables are within a certain range. <a href="https://www.plumed.org/doc-master/user-doc/html/BETWEEN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous function defined above<i></i></span></span>={GAUSSIAN LOWER=3.6 UPPER=4 SMEAR=0.5}
+<b name="DISTANCES.md_working_10.datd1_between-10" onclick='showPath("DISTANCES.md_working_10.dat","DISTANCES.md_working_10.datd1_between-10","DISTANCES.md_working_10.datd1_between-10","black")'>d1_between-10</b><span style="display:none;" id="DISTANCES.md_working_10.datd1_between-10">The SUM action with label <b>d1_between-10</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1_between-10</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1_bt10">d1_bt10</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="DISTANCES.md_working_10.datd1">d1.*</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=10
+</pre></div>
+
+<p>A calculation performed this way is fast because the expensive part of the calculation - the calculation of all the distances - is only done once per step.
+If you expand the shortcut in the input above you can see how this result is achieved using a combination of many actions.  We recommend you use these combinations of
+actions rather than the shortcut when using newer versions of PLUMED as you will have a more control over what you are doing.  This newer input syntax is easier to
+understand especially when you start evaluating more complicated CVs.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_atoms/">atoms</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">GROUP</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">Calculate the distance between each distinct pair of atoms in the group</td>
+</tr>
+<tr>
+<td style="text-align: left;">GROUPA</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB</td>
+</tr>
+<tr>
+<td style="text-align: left;">GROUPB</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB</td>
+</tr>
+<tr>
+<td style="text-align: left;">ATOMS</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">the pairs of atoms that you would like to calculate the angles for</td>
+</tr>
+<tr>
+<td style="text-align: left;">ORIGIN</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">calculate the distance of all the atoms specified using the ATOMS keyword from this point</td>
+</tr>
+<tr>
+<td style="text-align: left;">LOCATION</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">the location at which the CV is assumed to be in space</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-components">Output components</h2>
+<p>This action can calculate the <a href="../specifying_arguments/">values</a> in the following table when the associated keyword is included in the input for the action. These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">lessthan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">LESS_THAN</td>
+<td style="text-align: left;">the number of colvars that have a value less than a threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;">morethan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MORE_THAN</td>
+<td style="text-align: left;">the number of colvars that have a value more than a threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;">altmin</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">ALT_MIN</td>
+<td style="text-align: left;">the minimum value of the cv</td>
+</tr>
+<tr>
+<td style="text-align: left;">min</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MIN</td>
+<td style="text-align: left;">the minimum colvar</td>
+</tr>
+<tr>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MAX</td>
+<td style="text-align: left;">the maximum colvar</td>
+</tr>
+<tr>
+<td style="text-align: left;">between</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">BETWEEN</td>
+<td style="text-align: left;">the number of colvars that have a value that lies in a particular interval</td>
+</tr>
+<tr>
+<td style="text-align: left;">highest</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">HIGHEST</td>
+<td style="text-align: left;">the largest of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">lowest</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">LOWEST</td>
+<td style="text-align: left;">the smallest of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">sum</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">SUM</td>
+<td style="text-align: left;">the sum of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">mean</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MEAN</td>
+<td style="text-align: left;">the mean of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">vector</td>
+<td style="text-align: center;">COMPONENTS</td>
+<td style="text-align: left;">the x-components of the distance vectors</td>
+</tr>
+<tr>
+<td style="text-align: left;">y</td>
+<td style="text-align: left;">vector</td>
+<td style="text-align: center;">COMPONENTS</td>
+<td style="text-align: left;">the y-components of the distance vectors</td>
+</tr>
+<tr>
+<td style="text-align: left;">z</td>
+<td style="text-align: left;">vector</td>
+<td style="text-align: center;">COMPONENTS</td>
+<td style="text-align: left;">the z-components of the distance vectors</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">GROUP</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Calculate the distance between each distinct pair of atoms in the group</td>
+</tr>
+<tr>
+<td style="text-align: left;">GROUPA</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB</td>
+</tr>
+<tr>
+<td style="text-align: left;">GROUPB</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Calculate the distances between all the atoms in GROUPA and all the atoms in GROUPB</td>
+</tr>
+<tr>
+<td style="text-align: left;">ATOMS</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the pairs of atoms that you would like to calculate the angles for</td>
+</tr>
+<tr>
+<td style="text-align: left;">ORIGIN</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">calculate the distance of all the atoms specified using the ATOMS keyword from this point</td>
+</tr>
+<tr>
+<td style="text-align: left;">LOCATION</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the location at which the CV is assumed to be in space</td>
+</tr>
+<tr>
+<td style="text-align: left;">NOPBC</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">ignore the periodic boundary conditions when calculating distances</td>
+</tr>
+<tr>
+<td style="text-align: left;">COMPONENTS</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the x, y and z components of the distance separately and store them as label</td>
+</tr>
+<tr>
+<td style="text-align: left;">SCALED_COMPONENTS</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the a, b and c scaled components of the distance separately and store them as label</td>
+</tr>
+<tr>
+<td style="text-align: left;">LOWMEM</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Including this keyword in the input to this action makes no difference to the calculation performed it was used in older versions of PLUMED and is provided here for back compatibility only</td>
+</tr>
+<tr>
+<td style="text-align: left;">LESS_THAN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">calculate the number of variables that are less than a certain target value. Options for this keyword are explained in the documentation for <a href="../LESS_THAN/">LESS_THAN</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">MORE_THAN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">calculate the number of variables that are more than a certain target value. Options for this keyword are explained in the documentation for <a href="../MORE_THAN/">MORE_THAN</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">ALT_MIN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">calculate the minimum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MIN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">calculate the minimum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MAX</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">calculate the maximum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">BETWEEN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">calculate the number of values that are within a certain range. Options for this keyword are explained in the documentation for <a href="../BETWEEN/">BETWEEN</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">HIGHEST</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">this flag allows you to recover the highest of these variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">HISTOGRAM</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">calculate a discretized histogram of the distribution of values</td>
+</tr>
+<tr>
+<td style="text-align: left;">LOWEST</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">this flag allows you to recover the lowest of these variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">SUM</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">calculate the sum of all the quantities</td>
+</tr>
+<tr>
+<td style="text-align: left;">MEAN</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">calculate the mean of all the quantities</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

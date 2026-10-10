@@ -1,0 +1,12 @@
+<map id="PLMD::vatom::Ghost" name="PLMD::vatom::Ghost">
+<area shape="rect" id="Node000001" title="Provides the keyword GHOST" alt="" coords="112,225,267,251"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_with_virtual_atom.html" title="Inherit from here if you are calculating the position of a virtual atom (eg a center of mass)" alt="" coords="81,152,297,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,191,192,225,187,225,187,191"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="5,79,176,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,110,175,150,172,154,116,114"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="135,5,243,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="164,41,108,81,105,76,161,36"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="201,79,375,104"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="218,36,273,76,270,81,214,41"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="263,114,207,154,204,150,260,110"/>
+</map>

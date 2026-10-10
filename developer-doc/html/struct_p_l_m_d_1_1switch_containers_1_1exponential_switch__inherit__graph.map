@@ -1,0 +1,7 @@
+<map id="PLMD::switchContainers::exponentialSwitch" name="PLMD::switchContainers::exponentialSwitch">
+<area shape="rect" id="Node000001" title=" " alt="" coords="43,197,222,237"/>
+<area shape="rect" id="Node000002" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="5,108,260,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,162,135,197,130,197,130,162"/>
+<area shape="rect" id="Node000003" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title="container for the actual switching function used by PLMD::SwitchingFunction" alt="" coords="35,5,231,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="135,59,135,108,130,108,130,59"/>
+</map>

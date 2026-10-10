@@ -1,0 +1,1168 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>V2.4 - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#version-24-dec-15-2017" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              V2.4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-24-dec-15-2017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 2.4 (Dec 15, 2017)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 2.4 (Dec 15, 2017)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changes-from-version-23-which-are-relevant-for-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changes from version 2.3 which are relevant for users:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-241-mar-2-2018" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 2.4.1 (Mar 2, 2018)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 2.4.1 (Mar 2, 2018)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For developers:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-242-jul-2-2018" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 2.4.2 (Jul 2, 2018)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 2.4.2 (Jul 2, 2018)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-users_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-developers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For developers:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-243-oct-5-2018" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 2.4.3 (Oct 5, 2018)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 2.4.3 (Oct 5, 2018)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-users_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-244-dec-19-2018" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 2.4.4 (Dec 19, 2018)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 2.4.4 (Dec 19, 2018)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-users_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-developers_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For developers:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-245-apr-1-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 2.4.5 (Apr 1, 2019)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 2.4.5 (Apr 1, 2019)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-users_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-246-jul-19-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 2.4.6 (Jul 19, 2019)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 2.4.6 (Jul 19, 2019)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-users_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-247-jan-27-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 2.4.7 (Jan 27, 2020)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 2.4.7 (Jan 27, 2020)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-users_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-248-jul-8-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 2.4.8 (Jul 8, 2020)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 2.4.8 (Jul 8, 2020)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-users_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-developers_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For developers:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>V2.4</h1>
+
+<h2 id="version-24-dec-15-2017">Version 2.4 (Dec 15, 2017)</h2>
+<p>Version 2.4 contains several improvements with respect to 2.3. Users currently working with 2.3
+should have a look at the section "Changes leading to incompatible behavior" below and
+might need tiny adjustments in their input files.
+Notice that version 2.4 includes already all the fixes in branch 2.3 up to 2.3.3 described in <a href="../v2.3/">the change log</a> for version 2.3.</p>
+<h3 id="changes-from-version-23-which-are-relevant-for-users">Changes from version 2.3 which are relevant for users:</h3>
+<p><strong>Changes leading to incompatible behavior:</strong></p>
+<ul>
+<li>A c++11 compliant compiler is required (see <a href="https://github.com/plumed/plumed2/issues/212">here</a>). This should mean:<ul>
+<li>gcc 4.8</li>
+<li>clang 3.3</li>
+<li>intel 15
+Since the number of c++11 features that we use is limited, older compilers might work as well.</li>
+</ul>
+</li>
+<li>The meaning of <code>BIASFACTOR=1</code> in <a href="../METAD/">METAD</a> has been modified and can now be used to indicate unbiased
+    simulations. Non-well-tempered metadynamics is BIASFACTOR=-1, which is the new default value.
+    Notice that this has an implication on the bias factor written in the HILLS file when doing
+    non-well-tempered metadynamics.</li>
+<li>Due to a change in <a href="../COMMITTOR/">COMMITTOR</a>, the format of its output file has been slightly changed.</li>
+<li><a href="../HISTOGRAM/">HISTOGRAM</a> : When using weights default is now to output histogram divided by number of frames from which data was taken.  In addition the 
+    UNORMALIZED flag has been replaced with the keyword <code>NORMALIZATION</code>, which can be set equal to true, false or ndata.</li>
+<li>All switching functions are now stretched by default, also when using the "simple syntax" (e.g. <code>COORDINATION NN=6</code>).
+    Switching functions were already stretched by default when using the advanced syntax (e.g. <code>COORDINATION SWITCH={}</code>)
+    since version 2.2.  Notice that this will introduce small numerical differences in the computed switching functions.</li>
+</ul>
+<p><strong>New modules:</strong></p>
+<ul>
+<li>A new PLUMED-ISDB module have been included, this module includes a number of CVs to calculate experimental data with the internal ability
+    to also calculate a <a href="../METAINFERENCE/">METAINFERENCE</a> score.<ul>
+<li>New actions include:</li>
+<li><a href="../EMMI/">EMMI</a></li>
+<li><a href="../SAXS/">SAXS</a></li>
+<li><a href="../RESCALE/">RESCALE</a>, <a href="../SELECT/">SELECT</a>, <a href="../SELECTOR/">SELECTOR</a></li>
+<li>Updated actions include:</li>
+<li><a href="../CS2BACKBONE/">CS2BACKBONE</a></li>
+<li><a href="../FRET/">FRET</a></li>
+<li><a href="../JCOUPLING/">JCOUPLING</a></li>
+<li><a href="../METAINFERENCE/">METAINFERENCE</a></li>
+<li><a href="../NOE/">NOE</a></li>
+<li><a href="../PRE/">PRE</a></li>
+<li><a href="../RDC/">RDC</a>, <a href="../PCS/">PCS</a></li>
+<li><a href="../PBMETAD/">PBMETAD</a></li>
+</ul>
+</li>
+<li>A new EDS module have been included, contributed by Glen Hocky and Andrew White.
+    This module implements the following methods:<ul>
+<li><a href="../EDS/">EDS</a></li>
+</ul>
+</li>
+<li>A new DRR module have been included, contributed by Haochuan Chen and Haohao Fu.
+    This module implements the following methods:<ul>
+<li><a href="../DRR/">DRR</a></li>
+<li><a href="../drr_tool/">drr_tool</a></li>
+</ul>
+</li>
+<li>A new VES module have been included, contributed by Omar Valsson.
+    This module implements the following methods:<ul>
+<li><a href="../BF_CHEBYSHEV/">BF_CHEBYSHEV</a></li>
+<li><a href="../BF_COMBINED/">BF_COMBINED</a></li>
+<li><a href="../BF_COSINE/">BF_COSINE</a></li>
+<li><a href="../BF_CUSTOM/">BF_CUSTOM</a></li>
+<li><a href="../BF_FOURIER/">BF_FOURIER</a></li>
+<li><a href="../BF_LEGENDRE/">BF_LEGENDRE</a></li>
+<li><a href="../BF_POWERS/">BF_POWERS</a></li>
+<li><a href="../BF_SINE/">BF_SINE</a></li>
+<li><a href="../OPT_AVERAGED_SGD/">OPT_AVERAGED_SGD</a></li>
+<li><a href="../OPT_DUMMY/">OPT_DUMMY</a></li>
+<li><a href="../TD_CHI/">TD_CHI</a></li>
+<li><a href="../TD_CHISQUARED/">TD_CHISQUARED</a></li>
+<li><a href="../TD_CUSTOM/">TD_CUSTOM</a></li>
+<li><a href="../TD_EXPONENTIAL/">TD_EXPONENTIAL</a></li>
+<li><a href="../TD_EXPONENTIALLY_MODIFIED_GAUSSIAN/">TD_EXPONENTIALLY_MODIFIED_GAUSSIAN</a></li>
+<li><a href="../TD_GAUSSIAN/">TD_GAUSSIAN</a></li>
+<li><a href="../TD_GENERALIZED_EXTREME_VALUE/">TD_GENERALIZED_EXTREME_VALUE</a></li>
+<li><a href="../TD_GENERALIZED_NORMAL/">TD_GENERALIZED_NORMAL</a></li>
+<li><a href="../TD_GRID/">TD_GRID</a></li>
+<li><a href="../TD_LINEAR_COMBINATION/">TD_LINEAR_COMBINATION</a></li>
+<li><a href="../TD_PRODUCT_COMBINATION/">TD_PRODUCT_COMBINATION</a></li>
+<li><a href="../TD_PRODUCT_DISTRIBUTION/">TD_PRODUCT_DISTRIBUTION</a></li>
+<li><a href="../TD_UNIFORM/">TD_UNIFORM</a></li>
+<li><a href="../TD_VONMISES/">TD_VONMISES</a></li>
+<li><a href="../TD_WELLTEMPERED/">TD_WELLTEMPERED</a></li>
+<li><a href="../VES_LINEAR_EXPANSION/">VES_LINEAR_EXPANSION</a></li>
+<li><a href="../VES_OUTPUT_BASISFUNCTIONS/">VES_OUTPUT_BASISFUNCTIONS</a></li>
+<li><a href="../VES_OUTPUT_FES/">VES_OUTPUT_FES</a></li>
+<li><a href="../VES_OUTPUT_TARGET_DISTRIBUTION/">VES_OUTPUT_TARGET_DISTRIBUTION</a></li>
+<li><a href="../ves_md_linearexpansion/">ves_md_linearexpansion</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>New collective variables:</strong></p>
+<ul>
+<li><a href="../DIMER/">DIMER</a> (thanks to Marco Nava).</li>
+<li><a href="../EEFSOLV/">EEFSOLV</a> : EEF1 implicit solvent solvation energy</li>
+<li><a href="../ADAPTIVE_PATH/">ADAPTIVE_PATH</a> : Adaptive path variables using the method from <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.109.020601">here</a></li>
+</ul>
+<p><strong>New actions:</strong></p>
+<ul>
+<li><a href="../INENVELOPE/">INENVELOPE</a></li>
+<li><a href="../TOPOLOGY_MATRIX/">TOPOLOGY_MATRIX</a></li>
+<li><a href="https://www.plumed.org/doc-v2.4/user-doc/html/_b_o_n_d__d_i_r_e_c_t_i_o_n_s.html">BOND_DIRECTIONS</a></li>
+<li><a href="https://www.plumed.org/doc-v2.4/user-doc/html/_d_u_m_p_g_r_a_p_h.html">DUMPGRAPH</a></li>
+<li><a href="https://www.plumed.org/doc-v2.4/user-doc/html/_g_r_i_d__t_o__x_y_z.html">GRID_TO_XYZ</a></li>
+<li><a href="../INTEGRATE_GRID/">INTEGRATE_GRID</a></li>
+<li><a href="https://www.plumed.org/doc-v2.4/user-doc/html/_l_w_a_l_l_s.html">LWALLS</a></li>
+<li><a href="../MAXENT/">MAXENT</a></li>
+<li><a href="https://www.plumed.org/doc-v2.4/user-doc/html/_m_c_o_l_v__c_o_m_b_i_n_e.html">MCOLV_COMBINE</a></li>
+<li><a href="https://www.plumed.org/doc-v2.4/user-doc/html/_m_c_o_l_v__p_r_o_d_u_c_t.html">MCOLV_PRODUCT</a></li>
+<li><a href="https://www.plumed.org/doc-v2.4/user-doc/html/_p_o_l_y_m_e_r__a_n_g_l_e_s.html">POLYMER_ANGLES</a></li>
+<li><a href="../XANGLES/">XANGLES</a>, <a href="../YANGLES/">YANGLES</a>, <a href="../ZANGLES/">ZANGLES</a></li>
+<li><a href="../XYTORSIONS/">XYTORSIONS</a>, <a href="../XZTORSIONS/">XZTORSIONS</a>, <a href="../YXTORSIONS/">YXTORSIONS</a>, <a href="../YZTORSIONS/">YZTORSIONS</a>, <a href="../ZXTORSIONS/">ZXTORSIONS</a>, and <a href="../ZYTORSIONS/">ZYTORSIONS</a></li>
+</ul>
+<p><strong>New command line tools:</strong></p>
+<ul>
+<li><a href="../pesmd/">pesmd</a> : Tool for performing Langevin dynamics on an energy landscape that is specified using a PLUMED input file</li>
+<li><a href="../pathtools/">pathtools</a> </li>
+</ul>
+<p><strong>Other changes:</strong></p>
+<ul>
+<li>Sharing coordinates and applying force is now faster (in some cases these can result in much better scaling of the performances in parallel).</li>
+<li><a href="../COMMITTOR/">COMMITTOR</a> : new flag to use committor to keep track of the visited basins without stopping the simulation</li>
+<li><a href="../PBMETAD/">PBMETAD</a> : multiple walkers using files (thanks to Marco De La Pierre).</li>
+<li><a href="../PBMETAD/">PBMETAD</a> : adaptive Gaussian kernels</li>
+<li><a href="../PBMETAD/">PBMETAD</a> : default names for <code>GRID</code> and <code>FILE</code> (useful with many collective variables) </li>
+<li><a href="../METAD/">METAD</a> : BIASFACTOR=1 is allowed and performs unbiased sampling. HILLS file can be used
+    to recover free energy also in this case.</li>
+<li><a href="../METAD/">METAD</a> : a RECT option is available that allows setting an array of bias factors, one for each replica.</li>
+<li><a href="../METAD/">METAD</a> : added options to perform Transition Tempered Metadynamics (thanks to James Dama)</li>
+<li><a href="../PATHMSD/">PATHMSD</a> and <a href="../PROPERTYMAP/">PROPERTYMAP</a> now support alignment to a close structure (thanks to Jana Pazurikova)</li>
+<li>PDB files with more than 100k atoms can now be read using <a href="http://cci.lbl.gov/hybrid_36/">hybrid 36</a> format,
+    see <a href="https://github.com/plumed/plumed2/issues/226">here</a>.</li>
+<li>Added lepton support. Set env var <code>export PLUMED_USE_LEPTON=yes</code> to activate lepton as a matheval replacement
+    in <a href="../MATHEVAL/">MATHEVAL</a>, <a href="../CUSTOM/">CUSTOM</a>, and the MATHEVAL switching function".
+    Notice that in v2.5 matheval support will be dropped and all these keywords will use lepton.
+    See <a href="https://github.com/plumed/plumed2/issues/244">here</a>.</li>
+<li>When parsing constants, PLUMED uses lepton library. This allows to pass
+    arguments such as <code>HEIGHT=exp(0.5)</code> (see <a href="../parsing/">here</a>).</li>
+<li><a href="../CUSTOM/">CUSTOM</a> function has been added as an alias to <a href="../MATHEVAL/">MATHEVAL</a> .</li>
+<li>Trajectories read in <a href="../driver/">driver</a> also support the usual replica convention, that is if
+    trajectory with replica suffix is not found the driver will look for a trajectory without the replica suffix.</li>
+<li>A new syntax (<code>@replicas:</code>) can be used to specify different arguments for different replicas (see <a href="../parsing/">here</a>).</li>
+<li>Internal molfile implementation has been updated to VMD 1.9.3.</li>
+<li>Examples in the documentation now have syntax highlighting and links to the documentation of used actions.</li>
+<li><a href="../COORDINATIONNUMBER/">COORDINATIONNUMBER</a> : Added option to have pairwise distance moments of coordination number in the multicolvar module</li>
+<li>GROMACS patch updated to gromacs-2016.4</li>
+<li>Implemented HREX for gromacs-2016.4.</li>
+<li>Added patch for Quantum ESPRESSO 6.2 (thanks to Ralf Meyer).</li>
+<li>Fixed a bug in <a href="../LOCAL_AVERAGE/">LOCAL_AVERAGE</a> which appears when you use <code>SPECIESA</code> and <code>SPECIESB</code> keywords instead of just <code>SPECIES</code></li>
+<li>Added possibility to pass <code>--kt</code> from <a href="../driver/">driver</a>.</li>
+</ul>
+<p><strong>Changes from version 2.3 which are relevant for developers:</strong></p>
+<ul>
+<li>A few fixes has been made to improve exception safety. Although we still cannot declare
+    PLUMED totally exception safe (there are still many non-safe pointers around),
+    this made it possible to add a regtest that actually tests erroneous cmd strings
+    and erroneous inputs.</li>
+<li>Due to the required c++11 support, travis-ci test on Ubuntu Precise has been removed.</li>
+<li><code>gettimeofdate</code> and <code>gettime</code> have been replaced with portable <code>chrono</code> classes introduced in c++11.</li>
+<li>C++ exceptions are enabled by default.</li>
+<li>A large number of loops have been changed to use the <code>auto</code> keyword in order to improve code readability.</li>
+<li>Stack trace is not written upon error anymore, unless environment variable <code>PLUMED_STACK_TRACE</code> is set at runtime.</li>
+<li>Fixed a potential bug using single precision system BLAS on a mac (notice that currently plumed only uses
+    double precision, so it is harmless).</li>
+<li>Added <code>--enable-rpath</code> option for autoconf (off by default).</li>
+<li>Files related to changelog are now stored as <code>.md</code> files. This makes
+    it possible to navigate them from github.</li>
+<li><code>configure.ac</code> has been simplified and improved in order to more easily probe C++ libraries.</li>
+<li>added <code>plumed_custom_skip</code> function to regtests in order to skip specific tests based on specific conditions (e.g. OS).</li>
+<li>environment variable <code>LDSO</code> has been renamed to <code>LDSHARED</code>, which is standard in the python community.</li>
+<li>a <code>libplumedWrapper.a</code> library is installed as well, that is used in <code>--runtime</code> patching.</li>
+<li>pkgconfig files are installed.</li>
+<li><code>plumed config makefile_conf</code> can be used to retrieve <code>Makefile.conf</code> file a posteriori.</li>
+<li>Store <code>MPIEXEC</code> variable at configure time and use it later for running regtests. Notice that in case
+    <code>MPIEXEC</code> is not specified regtests will be run using the command stored in env var <code>PLUMED_MPIRUN</code> or, if this is
+    also not defined, using <code>mpirun</code>.</li>
+<li>Added canonical Makefile targets <code>check</code> and <code>installcheck</code>. Notice that <code>check</code> runs checks with
+    non-installed plumed whereas <code>installcheck</code> uses the installed one, including its correct program name if it
+    was personalized (e.g. with suffixes). Notice that this modifies the previously available <code>check</code> target.</li>
+</ul>
+<h2 id="version-241-mar-2-2018">Version 2.4.1 (Mar 2, 2018)</h2>
+<h3 id="for-users">For users:</h3>
+<ul>
+<li>Fixed an important bug affecting RMSD calculations with compilers supporting OpenMP 4 (e.g.: intel compiler). Notice that this bug might potentially affect not only
+    <a href="../RMSD/">RMSD</a> variable, but also <a href="../PATHMSD/">PATHMSD</a> variables using RMSD, <a href="../FIT_TO_TEMPLATE/">FIT_TO_TEMPLATE</a>, <a href="../PCAVARS/">PCAVARS</a>, and possibly other variables based on RMSD calculations and optimal alignments
+    (see <a href="https://github.com/plumed/plumed2/issues/343">here</a>). Results might depend on the exact architecture and on how aggressive is the compiler. The bug is a consequence of some erroneous SIMD directives introduced in 2.4.0, so it does not affect PLUMED 2.3.x. </li>
+<li>Resolved a problem with <a href="../CS2BACKBONE/">CS2BACKBONE</a> and glycine atom names.</li>
+<li>Module VES: Fixed a bug with basis functions that have a constant function different from 1 (e.g. scaled version of the Legendre basis functions, <a href="../BF_LEGENDRE/">BF_LEGENDRE</a>) that was causing a time-dependent shift in the bias potential.</li>
+<li>Module VES: In optimizers (<a href="../OPT_AVERAGED_SGD/">OPT_AVERAGED_SGD</a> and <a href="../OPT_DUMMY/">OPT_DUMMY</a>) the output of quantities related to the instantaneous gradients are now off by default as these quantities are generally not useful for normal users, their output can instead by re-enabled by using the <code>MONITOR_INSTANTANEOUS_GRADIENT</code> keyword. Also added an keyword <code>MONITOR_AVERAGE_GRADIENT</code> that allows to monitor the averaged gradient and output quantities related to it. </li>
+<li><a href="../RMSD/">RMSD</a> variable and other collective variables using reference PDB files now crash when zero weights are passed (see <a href="https://github.com/plumed/plumed2/issues/247">here</a>).</li>
+<li>Using <a href="../COM/">COM</a> with <a href="../driver/">driver</a> without passing masses now triggers an error instead of reporting NaNs (see <a href="https://github.com/plumed/plumed2/issues/251">here</a>).</li>
+</ul>
+<h3 id="for-developers">For developers:</h3>
+<ul>
+<li><code>plumed patch -p</code> command can be used twice without triggering an error. This will allow e.g. building again
+    on MacPorts in cases where the build was interrupted. Notice that this only works for patches without special
+    after/before patch/revert functions.</li>
+</ul>
+<h2 id="version-242-jul-2-2018">Version 2.4.2 (Jul 2, 2018)</h2>
+<h3 id="for-users_1">For users:</h3>
+<ul>
+<li>All fixes done in version 2.3.6. Notice that <a href="https://github.com/plumed/plumed2/issues/363">this issue</a> in version 2.4 also applies to <a href="../pathtools/">pathtools</a>.</li>
+<li>Additional residue names (without the prefix <code>D</code>) are now supported by <a href="../MOLINFO/">MOLINFO</a> for DNA. See <a href="https://github.com/plumed/plumed2/issues/367">here</a>.</li>
+<li>Solved an important bug appearing in NAMD interface. Notice that the bug was a regression introduced in 2.4.0. As consequence, versions &lt;= 2.3 and versions &gt;=2.4.2
+    are expected to work correctly. See <a href="https://github.com/plumed/plumed2/issues/254">here</a>.</li>
+<li>GROMACS patch for gromacs-2018.1.</li>
+<li>The vim syntax discussed <a href="../parsing/">here</a> now highlights <code>__FILL__</code> strings.</li>
+<li><a href="../METAD/">METAD</a> and <a href="../PBMETAD/">PBMETAD</a> give a warning when one restarts a simulation and the old hills file is not found. See <a href="https://github.com/plumed/plumed2/issues/366">here</a>.</li>
+</ul>
+<h3 id="for-developers_1">For developers:</h3>
+<ul>
+<li><code>LDSHARED</code> is now correctly taken into account when launching <code>./configure</code>.</li>
+<li>Fixed installation with <code>--disable-shared</code>.</li>
+<li>Cppcheck upgraded to 1.84.</li>
+</ul>
+<h2 id="version-243-oct-5-2018">Version 2.4.3 (Oct 5, 2018)</h2>
+<h3 id="for-users_2">For users:</h3>
+<ul>
+<li>All fixes done in version 2.3.7.</li>
+<li>Module VES: Fixed a bug in <code>TD_GRID</code> for 2D grids where the grid spacing is not the same for both dimensions.</li>
+<li>GROMACS patch for gromacs-2018.3.</li>
+</ul>
+<h2 id="version-244-dec-19-2018">Version 2.4.4 (Dec 19, 2018)</h2>
+<h3 id="for-users_3">For users:</h3>
+<ul>
+<li>Fixed some performances regression issue with OpenMP</li>
+<li>Updated NAMD patches to version 2.12 and 2.13. Old patches have been removed.</li>
+<li>GROMACS patch for gromacs-2018.4.</li>
+<li>Fixed a thread safety issue using forces on <a href="../HISTOGRAM/">HISTOGRAM</a> </li>
+<li>Fixed error message suggesting wrong actions (see <a href="https://github.com/plumed/plumed2/issues/421">here</a>).</li>
+</ul>
+<h3 id="for-developers_2">For developers:</h3>
+<ul>
+<li>All fixed done in version 2.3.8</li>
+<li>Cppcheck updated to 1.85</li>
+</ul>
+<h2 id="version-245-apr-1-2019">Version 2.4.5 (Apr 1, 2019)</h2>
+<h3 id="for-users_4">For users:</h3>
+<ul>
+<li>Fixed an inconsistency in parsing of braces.
+    It is now possible to pass individual options
+    including spaces (e.g. with <code>FILE={/path with space/file}</code>). Notice 
+    that this invalidates syntax such as <code>ATOMS={1}{2}{3}{4}</code>. See more
+    <a href="https://github.com/plumed/plumed2/issues/434">here</a>.</li>
+<li>Fixed <a href="../simplemd/">simplemd</a> so as to call "runFinalJobs" at the end of the simulation.</li>
+<li>GROMACS patch for gromacs-2016.6.</li>
+<li>GROMACS patch for gromacs-2018.6.</li>
+<li>Added aliases for some actions/options containing dashes (<code>-</code>) in their name. This will improve
+    backward compatibility when these actions/options will be removed (see <a href="https://github.com/plumed/plumed2/issues/449">here</a>).</li>
+</ul>
+<h2 id="version-246-jul-19-2019">Version 2.4.6 (Jul 19, 2019)</h2>
+<h3 id="for-users_5">For users:</h3>
+<ul>
+<li>Fixed a bug in <a href="../COORDINATIONNUMBER/">COORDINATIONNUMBER</a> where derivatives were wrong when using <code>R_POWER</code> &gt; 2, thanks to <code>@MoleOrbitalHybridAnalyst</code> for spotting and fixing</li>
+<li>Fixed a bug in library search, possibly affecting linked blas/lapack on OSX (see <a href="https://github.com/plumed/plumed2/issues/476">here</a>).</li>
+<li>Fixed a bug in <a href="../METAD/">METAD</a> with <code>TARGET</code> and <code>GRID_SPARSE</code> (see <a href="https://github.com/plumed/plumed2/issues/467">here</a>).</li>
+</ul>
+<h2 id="version-247-jan-27-2020">Version 2.4.7 (Jan 27, 2020)</h2>
+<h3 id="for-users_6">For users:</h3>
+<ul>
+<li>Fixed a bug with <a href="../CONVERT_TO_FES/">CONVERT_TO_FES</a> and periodic variables, see <a href="https://github.com/plumed/plumed2/issues/441">here</a> (backported from v2.5.3).</li>
+<li>More robust backup for output files when running over multiple processes</li>
+<li>Fixed a regression in the performances of <code>GEOMETRY</code> based flexible hills in <a href="../METAD/">METAD</a> and <a href="../PBMETAD/">PBMETAD</a></li>
+<li>Fixed <a href="https://github.com/plumed/plumed2/issues/538">here</a>.</li>
+<li>Fixed potential issue with VMD plugins from 1.9.4 (<a href="https://github.com/plumed/plumed2/issues/545">here</a>, thanks to Lixin Sun).</li>
+<li>Module VES: Fixed an off-by-one bug in the output of target distribution averages. The bug only affects the output and does not affect results. The bug also affected the output of coefficients when using a bias cutoff. </li>
+<li>Module VES: Made sure that all relevant output files are written out at the final step when shutting down the simulation. This solves issues reported by @PabloPiaggi with restarting when there is a mismatch been the output of files and the number of MD steps. </li>
+</ul>
+<h2 id="version-248-jul-8-2020">Version 2.4.8 (Jul 8, 2020)</h2>
+<div class="admonition warning">
+<p class="admonition-title">Not maintained</p>
+<p>This branch is not maintained Users are invited to upgrade to a newer version.</p>
+</div>
+<h3 id="for-users_7">For users:</h3>
+<ul>
+<li>Take into account <code>UNITS</code> when using MD codes that feeds one line at a time to PLUMED (e.g., OpenMM). See <a href="https://github.com/plumed/plumed2/issues/582">here</a>.</li>
+<li>Fix PDB parser for non justified atom numbers. See <a href="https://github.com/plumed/plumed2/issues/592">here</a>.</li>
+<li>Fix in <a href="../INPLANEDISTANCES/">INPLANEDISTANCES</a>. See <a href="https://github.com/plumed/plumed2/issues/595">here</a>.</li>
+</ul>
+<h3 id="for-developers_3">For developers:</h3>
+<ul>
+<li>Tests and doc building moved from Travis-CI to <a href="https://github.com/plumed/plumed2/actions">GitHub Actions</a> (see <a href="https://github.com/plumed/plumed2/issues/634">here</a>).</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

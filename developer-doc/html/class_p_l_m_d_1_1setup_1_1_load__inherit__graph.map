@@ -1,0 +1,7 @@
+<map id="PLMD::setup::Load" name="PLMD::setup::Load">
+<area shape="rect" id="Node000001" title="Provides the keyword LOAD" alt="" coords="17,152,160,177"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_anyorder.html" title="Action used to create a PLMD::Action that can go both before and after ActionSetup actions." alt="" coords="5,79,172,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,118,91,152,86,152,86,118"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="35,5,143,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,44,91,79,86,79,86,44"/>
+</map>

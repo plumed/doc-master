@@ -1,0 +1,2 @@
+ones: ONES SIZE=10
+PRINT ARG=ones FILE=onesfile

@@ -1,0 +1,2 @@
+a1: ANGLE ATOMS=1,2,3
+PRINT ARG=a1 FILE=colvar

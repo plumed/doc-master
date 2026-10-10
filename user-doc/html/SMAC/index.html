@@ -1,0 +1,1014 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: SMAC - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-smac" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: SMAC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-two-types-of-molecule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with two types of molecule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-smac"><a href="../shortcuts/">Shortcut</a>: SMAC</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_symfunc/"><strong>symfunc</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate the SMAC order parameter for a set of molecules</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><a href="https://www.plumed-nest.org/browse.html?action=SMAC"><img alt="used in 2 eggs" src="https://img.shields.io/badge/nest-2-green.svg" /></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the value of the smac parameter for each of the input molecules</td>
+<td style="text-align: center;">vector</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate the SMAC order parameter for a set of molecules</p>
+<p>This shortcut action provides a quantity that can be thought of as a <a href="https://www.plumed-tutorials.org/lessons/23/001/data/SymmetryFunction.html">symmetry function</a> for molecules.
+You can thus use it to detect whether the molecules in a sample are ordered in the way that they would expect to be ordered in the crystal. If you are using this CV you normally use
+the <a href="../COM/">COM</a> command to define centers of mass for your molecules and the <a href="../DISTANCE/">DISTANCE</a> or <a href="../PLANE/">PLANE</a> command to define each molecules orientation.  You can thus calculate
+the relative orientation molecules <script type="math/tex">i</script> and <script type="math/tex">j</script> by calculating the torsional angle, <script type="math/tex">\theta_{ij}</script>, between the two molecular orientations around the vector <script type="math/tex">r_{ij}</script> connecting the centers of
+mass of the two molecules. The value of the molecular order parameter for molecule <script type="math/tex">i</script> is thus calculated as:</p>
+<p>
+<script type="math/tex; mode=display">
+s_i = frac{1-\gamma(c_i)}{c_i} \sum_j \sigma(|r_{ij}|) \sum_k K\left( \frac{\theta_{ij} - \phi_k}{b} \right) \qquad \textrm{where} \qquad c_i = \sum_j \sigma(|r_{ij}|)
+</script>
+</p>
+<p>In this expression <script type="math/tex">\sigma</script> is a switching function that acts on the distance between the centers of mass of molecules <script type="math/tex">i</script> and <script type="math/tex">j</script>. <script type="math/tex">c_i</script> is thus the number of molecules that are within
+a certain cutoff of molecule <script type="math/tex">i</script> and <script type="math/tex">\gamma</script> is another switching function that acts upon this quantity. This switching function ensures that the symmetry function is zero for atoms that are
+regions where the density of molecules are low.  <script type="math/tex">K</script> is then a kernel function with bandwidth <script type="math/tex">b</script> that is centered at <script type="math/tex">\phi_k</script>.  The function above is thus only large if molecule <script type="math/tex">i</script> is surrounded
+by molecules whose relative orientations are as the user has requested by specifying <script type="math/tex">\phi_k</script> parameters.</p>
+<p>The following example illustrates how the SMAC order parameter in PLUMED is used:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_SMAC.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../SMAC.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="SMAC.md_working_1.datm3_short"><b name="SMAC.md_working_1.datm3" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.datm3","SMAC.md_working_1.datm3","blue")'>m3</b><span style="display:none;" id="SMAC.md_working_1.datm3">The DISTANCE action with label <b>m3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m3.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">m3.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">m3.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("SMAC.md_working_1.datm3");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">ATOMS1<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=9,10 <span class="plumedtooltip">LOCATION1<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=9
+   <span class="plumedtooltip">ATOMS2<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=89,90 <span class="plumedtooltip">LOCATION2<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=89
+   <span class="plumedtooltip">ATOMS3<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=473,474 <span class="plumedtooltip">LOCATION3<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=473
+   <span class="plumedtooltip">ATOMS4<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=1161,1162 <span class="plumedtooltip">LOCATION4<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=1161
+   <span class="plumedtooltip">ATOMS5<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=1521,1522 <span class="plumedtooltip">LOCATION5<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=1521
+   <span class="plumedtooltip">ATOMS6<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=1593,1594 <span class="plumedtooltip">LOCATION6<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=1593
+   <span class="plumedtooltip">ATOMS7<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=1601,1602 <span class="plumedtooltip">LOCATION7<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=1601
+   <span class="plumedtooltip">ATOMS8<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=2201,2202 <span class="plumedtooltip">LOCATION8<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=2201
+   <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+...
+</span><span id="SMAC.md_working_1.datm3_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("SMAC.md_working_1.datm3")'># m3: DISTANCES ...</span>
+<span style="color:blue" class="comment">#    ATOMS1=9,10 LOCATION1=9</span>
+<span style="color:blue" class="comment">#    ATOMS2=89,90 LOCATION2=89</span>
+<span style="color:blue" class="comment">#    ATOMS3=473,474 LOCATION3=473</span>
+<span style="color:blue" class="comment">#    ATOMS4=1161,1162 LOCATION4=1161</span>
+<span style="color:blue" class="comment">#    ATOMS5=1521,1522 LOCATION5=1521</span>
+<span style="color:blue" class="comment">#    ATOMS6=1593,1594 LOCATION6=1593</span>
+<span style="color:blue" class="comment">#    ATOMS7=1601,1602 LOCATION7=1601</span>
+<span style="color:blue" class="comment">#    ATOMS8=2201,2202 LOCATION8=2201</span>
+<span style="color:blue" class="comment">#    COMPONENTS</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="SMAC.md_working_1.datm3_grp" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.datm3_grp","SMAC.md_working_1.datm3_grp","violet")'>m3_grp</b><span style="display:none;" id="SMAC.md_working_1.datm3_grp">The GROUP action with label <b>m3_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m3_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=9,89,473,1161,1521,1593,1601,2201
+<b name="SMAC.md_working_1.datm3" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.datm3","SMAC.md_working_1.datm3","blue")'>m3</b>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=9,10 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=89,90 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=473,474 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1161,1162 <span class="plumedtooltip">ATOMS5<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1521,1522     <span style="color:blue" class="comment"># Action input conctinues with 3 further ATOMSn keywords, </span>
+<span style="color:blue"># --- End of included input --- </span></span><br/><span id="SMAC.md_working_1.dats2_short"><b name="SMAC.md_working_1.dats2" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2","SMAC.md_working_1.dats2_shortcut","blue")'>s2</b><span style="display:none;" id="SMAC.md_working_1.dats2_shortcut">The SMAC action with label <b>s2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2</td><td width="5%"><font color="blue">vector</font></td><td>the value of the smac parameter for each of the input molecules</td></tr><tr><td width="5%">s2_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value more than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SMAC<span class="right">Calculate the SMAC order parameter for a set of molecules This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("SMAC.md_working_1.dats2");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/SMAC">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIES<span class="right">the label of the DISTANCES or PLANES action that computes the orientations of the molecules for which you would like to compute SMAC<i></i></span></span>=<b name="SMAC.md_working_1.datm3">m3</b> <span class="plumedtooltip">KERNEL1<span class="right">The kernels used in the function of the angle<i></i></span></span>={GAUSSIAN CENTER=0 SIGMA=0.480} <span class="plumedtooltip">KERNEL2<span class="right">The kernels used in the function of the angle<i></i></span></span>={GAUSSIAN CENTER=pi SIGMA=0.480} <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.6} <span class="plumedtooltip">MORE_THAN<span class="right">calculate the number of variables that are more than a certain target value. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN">MORE_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.7} <span class="plumedtooltip">SWITCH_COORD<span class="right">This keyword is used to define the coordination switching function. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={EXP R_0=4}
+</span><span id="SMAC.md_working_1.dats2_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("SMAC.md_working_1.dats2")'># s2: SMAC SPECIES=m3 KERNEL1={GAUSSIAN CENTER=0 SIGMA=0.480} KERNEL2={GAUSSIAN CENTER=pi SIGMA=0.480} SWITCH={RATIONAL R_0=0.6} MORE_THAN={RATIONAL R_0=0.7} SWITCH_COORD={EXP R_0=4}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="SMAC.md_working_1.dats2_vecs" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_vecs","SMAC.md_working_1.dats2_vecs","red")'>s2_vecs</b><span style="display:none;" id="SMAC.md_working_1.dats2_vecs">The VSTACK action with label <b>s2_vecs</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_vecs</td><td width="5%"><font color="red">matrix</font></td><td>a matrix that contains the input vectors in its columns</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VSTACK<span class="right">Create a matrix by stacking vectors together <a href="https://www.plumed.org/doc-master/user-doc/html/VSTACK" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values that you would like to stack together to construct the output matrix<i></i></span></span>=<b name="SMAC.md_working_1.datm3">m3.x</b>,<b name="SMAC.md_working_1.datm3">m3.y</b>,<b name="SMAC.md_working_1.datm3">m3.z</b>
+<b name="SMAC.md_working_1.dats2_vecsT" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_vecsT","SMAC.md_working_1.dats2_vecsT","red")'>s2_vecsT</b><span style="display:none;" id="SMAC.md_working_1.dats2_vecsT">The TRANSPOSE action with label <b>s2_vecsT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_vecsT</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="SMAC.md_working_1.dats2_vecs">s2_vecs</b>
+<b name="SMAC.md_working_1.dats2_cmap" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_cmap","SMAC.md_working_1.dats2_cmap","red")'>s2_cmap</b><span style="display:none;" id="SMAC.md_working_1.dats2_cmap">The CONTACT_MATRIX action with label <b>s2_cmap</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_cmap</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=<b name="SMAC.md_working_1.datm3">m3</b> <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.6}
+<b name="SMAC.md_working_1.dats2_tpmat" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_tpmat","SMAC.md_working_1.dats2_tpmat","red")'>s2_tpmat</b><span style="display:none;" id="SMAC.md_working_1.dats2_tpmat">The TORSIONS_MATRIX action with label <b>s2_tpmat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_tpmat</td><td width="5%"><font color="red">matrix</font></td><td>the matrix of torsions between the two vectors of input directors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSIONS_MATRIX<span class="right">Calculate the matrix of torsions between two vectors of molecules <a href="https://www.plumed.org/doc-master/user-doc/html/TORSIONS_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">an Nx3 and a 3xN matrix that contain the bond vectors that you would like to determine the torsion angles between<i></i></span></span>=<b name="SMAC.md_working_1.dats2_vecs">s2_vecs</b>,<b name="SMAC.md_working_1.dats2_vecsT">s2_vecsT</b> <span class="plumedtooltip">POSITIONS1<span class="right">the positions to use for the molecules specified using the first argument<i></i></span></span>=<b name="SMAC.md_working_1.datm3">m3</b> <span class="plumedtooltip">POSITIONS2<span class="right">the positions to use for the molecules specified using the second argument<i></i></span></span>=<b name="SMAC.md_working_1.datm3">m3</b> <span class="plumedtooltip">MASK<span class="right">a matrix that is used to used to determine which elements of this matrix to compute<i></i></span></span>=<b name="SMAC.md_working_1.dats2_cmap">s2_cmap</b>
+<b name="SMAC.md_working_1.dats2_kf1_r2" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_kf1_r2","SMAC.md_working_1.dats2_kf1_r2","red")'>s2_kf1_r2</b><span style="display:none;" id="SMAC.md_working_1.dats2_kf1_r2">The COMBINE action with label <b>s2_kf1_r2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_kf1_r2</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a linear combination to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="SMAC.md_working_1.dats2_cmap">s2_cmap</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_1.dats2_tpmat">s2_tpmat</b> <span class="plumedtooltip">COEFFICIENTS<span class="right"> the coefficients of the arguments in your function<i></i></span></span>=4.34028 <span class="plumedtooltip">PARAMETERS<span class="right"> the parameters of the arguments in your function<i></i></span></span>=0 <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2
+<b name="SMAC.md_working_1.dats2_kf1" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_kf1","SMAC.md_working_1.dats2_kf1","red")'>s2_kf1</b><span style="display:none;" id="SMAC.md_working_1.dats2_kf1">The CUSTOM action with label <b>s2_kf1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_kf1</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="SMAC.md_working_1.dats2_cmap">s2_cmap</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=exp(-x/2) <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_1.dats2_kf1_r2">s2_kf1_r2</b>
+<b name="SMAC.md_working_1.dats2_kf2_r2" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_kf2_r2","SMAC.md_working_1.dats2_kf2_r2","red")'>s2_kf2_r2</b><span style="display:none;" id="SMAC.md_working_1.dats2_kf2_r2">The COMBINE action with label <b>s2_kf2_r2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_kf2_r2</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a linear combination to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="SMAC.md_working_1.dats2_cmap">s2_cmap</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_1.dats2_tpmat">s2_tpmat</b> <span class="plumedtooltip">COEFFICIENTS<span class="right"> the coefficients of the arguments in your function<i></i></span></span>=4.34028 <span class="plumedtooltip">PARAMETERS<span class="right"> the parameters of the arguments in your function<i></i></span></span>=pi <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2
+<b name="SMAC.md_working_1.dats2_kf2" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_kf2","SMAC.md_working_1.dats2_kf2","red")'>s2_kf2</b><span style="display:none;" id="SMAC.md_working_1.dats2_kf2">The CUSTOM action with label <b>s2_kf2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_kf2</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="SMAC.md_working_1.dats2_cmap">s2_cmap</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=exp(-x/2) <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_1.dats2_kf2_r2">s2_kf2_r2</b>
+<b name="SMAC.md_working_1.dats2_ksum" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_ksum","SMAC.md_working_1.dats2_ksum","red")'>s2_ksum</b><span style="display:none;" id="SMAC.md_working_1.dats2_ksum">The COMBINE action with label <b>s2_ksum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_ksum</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a linear combination to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="SMAC.md_working_1.dats2_cmap">s2_cmap</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_1.dats2_kf1">s2_kf1</b>,<b name="SMAC.md_working_1.dats2_kf2">s2_kf2</b>
+<b name="SMAC.md_working_1.dats2_prod" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_prod","SMAC.md_working_1.dats2_prod","red")'>s2_prod</b><span style="display:none;" id="SMAC.md_working_1.dats2_prod">The CUSTOM action with label <b>s2_prod</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_prod</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_1.dats2_cmap">s2_cmap</b>,<b name="SMAC.md_working_1.dats2_ksum">s2_ksum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="SMAC.md_working_1.dats2_ones" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_ones","SMAC.md_working_1.dats2_ones","blue")'>s2_ones</b><span style="display:none;" id="SMAC.md_working_1.dats2_ones">The CONSTANT action with label <b>s2_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=8
+<b name="SMAC.md_working_1.dats2" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2","SMAC.md_working_1.dats2","blue")'>s2</b><span style="display:none;" id="SMAC.md_working_1.dats2">The MATRIX_VECTOR_PRODUCT action with label <b>s2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="SMAC.md_working_1.dats2_prod">s2_prod</b>,<b name="SMAC.md_working_1.dats2_ones">s2_ones</b>
+<b name="SMAC.md_working_1.dats2_denom" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_denom","SMAC.md_working_1.dats2_denom","blue")'>s2_denom</b><span style="display:none;" id="SMAC.md_working_1.dats2_denom">The MATRIX_VECTOR_PRODUCT action with label <b>s2_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_denom</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="SMAC.md_working_1.dats2_cmap">s2_cmap</b>,<b name="SMAC.md_working_1.dats2_ones">s2_ones</b>
+<b name="SMAC.md_working_1.dats2_mtdenom" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_mtdenom","SMAC.md_working_1.dats2_mtdenom","blue")'>s2_mtdenom</b><span style="display:none;" id="SMAC.md_working_1.dats2_mtdenom">The MORE_THAN action with label <b>s2_mtdenom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_mtdenom</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_1.dats2_denom">s2_denom</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={EXP R_0=4}
+<b name="SMAC.md_working_1.dats2_smac" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_smac","SMAC.md_working_1.dats2_smac","blue")'>s2_smac</b><span style="display:none;" id="SMAC.md_working_1.dats2_smac">The CUSTOM action with label <b>s2_smac</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_smac</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_1.dats2">s2</b>,<b name="SMAC.md_working_1.dats2_mtdenom">s2_mtdenom</b>,<b name="SMAC.md_working_1.dats2_denom">s2_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=(x*y)/z <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="SMAC.md_working_1.dats2_mt" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_mt","SMAC.md_working_1.dats2_mt","blue")'>s2_mt</b><span style="display:none;" id="SMAC.md_working_1.dats2_mt">The MORE_THAN action with label <b>s2_mt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_mt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_1.dats2_smac">s2_smac</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.7}
+<b name="SMAC.md_working_1.dats2_morethan" onclick='showPath("SMAC.md_working_1.dat","SMAC.md_working_1.dats2_morethan","SMAC.md_working_1.dats2_morethan","black")'>s2_morethan</b><span style="display:none;" id="SMAC.md_working_1.dats2_morethan">The SUM action with label <b>s2_morethan</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="SMAC.md_working_1.dats2_mt">s2_mt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><br/><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="SMAC.md_working_1.dats2_morethan">s2_morethan</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>Here the orientations of the molecules are specified by calculating the vectors connecting pairs of atoms in the molecules.  The LOCATION keywords in the distance command are used to specify the
+positions of the molecules from which the <script type="math/tex">r_{ij}</script> vectors in the above expression are calculated.  The sum over <script type="math/tex">k</script> in the above expression has two terms corresponding to the two Gaussian kernels
+that have been specified using KERNEL keywords.  The SWITCH keyword has been used to specify the parameters of the switching function <script type="math/tex">\sigma</script>, while the SWITCH_COORD keyword has been used to specify
+the parameters of the switching function <script type="math/tex">\gamma</script>.</p>
+<p>A vector of 8 values for <script type="math/tex">s_i</script> is calculated.  The elements of this vector are transformed by a switching function that is one if the <script type="math/tex">s_i</script> value is larger than 0.7.  The eight elements of the resulting vector
+of transformed <script type="math/tex">s_i</script> are then added together to determine the final quantity that is output to the colvar file.</p>
+<p>Incidentally, the authors who designed the SMAC symmetry function have forgotten what the letters in this acronym stand for.</p>
+<h2 id="working-with-two-types-of-molecule">Working with two types of molecule</h2>
+<p>You can use two different sets of vectors in the input to this action as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_SMAC.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../SMAC.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span id="SMAC.md_working_2.datm3_short"><b name="SMAC.md_working_2.datm3" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.datm3","SMAC.md_working_2.datm3","blue")'>m3</b><span style="display:none;" id="SMAC.md_working_2.datm3">The DISTANCE action with label <b>m3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m3.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">m3.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">m3.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("SMAC.md_working_2.datm3");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">ATOMS1<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=9,10 <span class="plumedtooltip">LOCATION1<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=9
+   <span class="plumedtooltip">ATOMS2<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=89,90 <span class="plumedtooltip">LOCATION2<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=89
+   <span class="plumedtooltip">ATOMS3<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=473,474 <span class="plumedtooltip">LOCATION3<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=473
+   <span class="plumedtooltip">ATOMS4<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=1161,1162 <span class="plumedtooltip">LOCATION4<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=1161
+   <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+...
+</span><span id="SMAC.md_working_2.datm3_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("SMAC.md_working_2.datm3")'># m3: DISTANCES ...</span>
+<span style="color:blue" class="comment">#    ATOMS1=9,10 LOCATION1=9</span>
+<span style="color:blue" class="comment">#    ATOMS2=89,90 LOCATION2=89</span>
+<span style="color:blue" class="comment">#    ATOMS3=473,474 LOCATION3=473</span>
+<span style="color:blue" class="comment">#    ATOMS4=1161,1162 LOCATION4=1161</span>
+<span style="color:blue" class="comment">#    COMPONENTS</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="SMAC.md_working_2.datm3_grp" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.datm3_grp","SMAC.md_working_2.datm3_grp","violet")'>m3_grp</b><span style="display:none;" id="SMAC.md_working_2.datm3_grp">The GROUP action with label <b>m3_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m3_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=9,89,473,1161
+<b name="SMAC.md_working_2.datm3" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.datm3","SMAC.md_working_2.datm3","blue")'>m3</b>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=9,10 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=89,90 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=473,474 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1161,1162
+<span style="color:blue"># --- End of included input --- </span></span><br/><span id="SMAC.md_working_2.datm4_short"><b name="SMAC.md_working_2.datm4" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.datm4","SMAC.md_working_2.datm4","blue")'>m4</b><span style="display:none;" id="SMAC.md_working_2.datm4">The DISTANCE action with label <b>m4</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m4.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">m4.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">m4.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCES<span class="right">Calculate the distances between multiple piars of atoms This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("SMAC.md_working_2.datm4");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCES">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">ATOMS1<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=1521,1522 <span class="plumedtooltip">LOCATION1<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=1521
+   <span class="plumedtooltip">ATOMS2<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=1593,1594 <span class="plumedtooltip">LOCATION2<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=1593
+   <span class="plumedtooltip">ATOMS3<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=1601,1602 <span class="plumedtooltip">LOCATION3<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=1601
+   <span class="plumedtooltip">ATOMS4<span class="right">the pairs of atoms that you would like to calculate the angles for<i></i></span></span>=2201,2202 <span class="plumedtooltip">LOCATION4<span class="right">the location at which the CV is assumed to be in space<i></i></span></span>=2201
+   <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+...
+</span><span id="SMAC.md_working_2.datm4_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("SMAC.md_working_2.datm4")'># m4: DISTANCES ...</span>
+<span style="color:blue" class="comment">#    ATOMS1=1521,1522 LOCATION1=1521</span>
+<span style="color:blue" class="comment">#    ATOMS2=1593,1594 LOCATION2=1593</span>
+<span style="color:blue" class="comment">#    ATOMS3=1601,1602 LOCATION3=1601</span>
+<span style="color:blue" class="comment">#    ATOMS4=2201,2202 LOCATION4=2201</span>
+<span style="color:blue" class="comment">#    COMPONENTS</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="SMAC.md_working_2.datm4_grp" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.datm4_grp","SMAC.md_working_2.datm4_grp","violet")'>m4_grp</b><span style="display:none;" id="SMAC.md_working_2.datm4_grp">The GROUP action with label <b>m4_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m4_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1521,1593,1601,2201
+<b name="SMAC.md_working_2.datm4" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.datm4","SMAC.md_working_2.datm4","blue")'>m4</b>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1521,1522 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1593,1594 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1601,1602 <span class="plumedtooltip">ATOMS4<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=2201,2202
+<span style="color:blue"># --- End of included input --- </span></span><br/><span id="SMAC.md_working_2.dats2_short"><b name="SMAC.md_working_2.dats2" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2","SMAC.md_working_2.dats2_shortcut","blue")'>s2</b><span style="display:none;" id="SMAC.md_working_2.dats2_shortcut">The SMAC action with label <b>s2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2</td><td width="5%"><font color="blue">vector</font></td><td>the value of the smac parameter for each of the input molecules</td></tr><tr><td width="5%">s2_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value more than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SMAC<span class="right">Calculate the SMAC order parameter for a set of molecules This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("SMAC.md_working_2.dats2");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/SMAC">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIESA<span class="right">the label of the DISTANCES or PLANES action that computes the orientations of the molecules for which you would like to compute SMAC<i></i></span></span>=<b name="SMAC.md_working_2.datm3">m3</b> <span class="plumedtooltip">SPECIESB<span class="right">the label of the DISTANCES or PLANES action that computes the orientations of the molecules that should be considered as part of the coordination sphere<i></i></span></span>=<b name="SMAC.md_working_2.datm4">m4</b> <span class="plumedtooltip">KERNEL1<span class="right">The kernels used in the function of the angle<i></i></span></span>={GAUSSIAN CENTER=0 SIGMA=0.480} <span class="plumedtooltip">KERNEL2<span class="right">The kernels used in the function of the angle<i></i></span></span>={GAUSSIAN CENTER=pi SIGMA=0.480} <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.6} <span class="plumedtooltip">MORE_THAN<span class="right">calculate the number of variables that are more than a certain target value. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN">MORE_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.7} <span class="plumedtooltip">SWITCH_COORD<span class="right">This keyword is used to define the coordination switching function. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={EXP R_0=4}
+</span><span id="SMAC.md_working_2.dats2_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("SMAC.md_working_2.dats2")'># s2: SMAC SPECIESA=m3 SPECIESB=m4 KERNEL1={GAUSSIAN CENTER=0 SIGMA=0.480} KERNEL2={GAUSSIAN CENTER=pi SIGMA=0.480} SWITCH={RATIONAL R_0=0.6} MORE_THAN={RATIONAL R_0=0.7} SWITCH_COORD={EXP R_0=4}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="SMAC.md_working_2.dats2_vecsa" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_vecsa","SMAC.md_working_2.dats2_vecsa","red")'>s2_vecsa</b><span style="display:none;" id="SMAC.md_working_2.dats2_vecsa">The VSTACK action with label <b>s2_vecsa</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_vecsa</td><td width="5%"><font color="red">matrix</font></td><td>a matrix that contains the input vectors in its columns</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VSTACK<span class="right">Create a matrix by stacking vectors together <a href="https://www.plumed.org/doc-master/user-doc/html/VSTACK" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values that you would like to stack together to construct the output matrix<i></i></span></span>=<b name="SMAC.md_working_2.datm3">m3.x</b>,<b name="SMAC.md_working_2.datm3">m3.y</b>,<b name="SMAC.md_working_2.datm3">m3.z</b>
+<b name="SMAC.md_working_2.dats2_vecsb" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_vecsb","SMAC.md_working_2.dats2_vecsb","red")'>s2_vecsb</b><span style="display:none;" id="SMAC.md_working_2.dats2_vecsb">The VSTACK action with label <b>s2_vecsb</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_vecsb</td><td width="5%"><font color="red">matrix</font></td><td>a matrix that contains the input vectors in its columns</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VSTACK<span class="right">Create a matrix by stacking vectors together <a href="https://www.plumed.org/doc-master/user-doc/html/VSTACK" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values that you would like to stack together to construct the output matrix<i></i></span></span>=<b name="SMAC.md_working_2.datm4">m4.x</b>,<b name="SMAC.md_working_2.datm4">m4.y</b>,<b name="SMAC.md_working_2.datm4">m4.z</b>
+<b name="SMAC.md_working_2.dats2_vecsbT" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_vecsbT","SMAC.md_working_2.dats2_vecsbT","red")'>s2_vecsbT</b><span style="display:none;" id="SMAC.md_working_2.dats2_vecsbT">The TRANSPOSE action with label <b>s2_vecsbT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_vecsbT</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="SMAC.md_working_2.dats2_vecsb">s2_vecsb</b>
+<b name="SMAC.md_working_2.dats2_cmap" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_cmap","SMAC.md_working_2.dats2_cmap","red")'>s2_cmap</b><span style="display:none;" id="SMAC.md_working_2.dats2_cmap">The CONTACT_MATRIX action with label <b>s2_cmap</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_cmap</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUPA<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPB<i></i></span></span>=<b name="SMAC.md_working_2.datm3">m3</b> <span class="plumedtooltip">GROUPB<span class="right">when you are calculating the adjacency matrix between two sets of atoms this keyword is used to specify the atoms along with the keyword GROUPA<i></i></span></span>=<b name="SMAC.md_working_2.datm4">m4</b> <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.6}
+<b name="SMAC.md_working_2.dats2_tpmat" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_tpmat","SMAC.md_working_2.dats2_tpmat","red")'>s2_tpmat</b><span style="display:none;" id="SMAC.md_working_2.dats2_tpmat">The TORSIONS_MATRIX action with label <b>s2_tpmat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_tpmat</td><td width="5%"><font color="red">matrix</font></td><td>the matrix of torsions between the two vectors of input directors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSIONS_MATRIX<span class="right">Calculate the matrix of torsions between two vectors of molecules <a href="https://www.plumed.org/doc-master/user-doc/html/TORSIONS_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">an Nx3 and a 3xN matrix that contain the bond vectors that you would like to determine the torsion angles between<i></i></span></span>=<b name="SMAC.md_working_2.dats2_vecsa">s2_vecsa</b>,<b name="SMAC.md_working_2.dats2_vecsbT">s2_vecsbT</b> <span class="plumedtooltip">POSITIONS1<span class="right">the positions to use for the molecules specified using the first argument<i></i></span></span>=<b name="SMAC.md_working_2.datm3">m3</b> <span class="plumedtooltip">POSITIONS2<span class="right">the positions to use for the molecules specified using the second argument<i></i></span></span>=<b name="SMAC.md_working_2.datm4">m4</b> <span class="plumedtooltip">MASK<span class="right">a matrix that is used to used to determine which elements of this matrix to compute<i></i></span></span>=<b name="SMAC.md_working_2.dats2_cmap">s2_cmap</b>
+<b name="SMAC.md_working_2.dats2_kf1_r2" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_kf1_r2","SMAC.md_working_2.dats2_kf1_r2","red")'>s2_kf1_r2</b><span style="display:none;" id="SMAC.md_working_2.dats2_kf1_r2">The COMBINE action with label <b>s2_kf1_r2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_kf1_r2</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a linear combination to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="SMAC.md_working_2.dats2_cmap">s2_cmap</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_2.dats2_tpmat">s2_tpmat</b> <span class="plumedtooltip">COEFFICIENTS<span class="right"> the coefficients of the arguments in your function<i></i></span></span>=4.34028 <span class="plumedtooltip">PARAMETERS<span class="right"> the parameters of the arguments in your function<i></i></span></span>=0 <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2
+<b name="SMAC.md_working_2.dats2_kf1" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_kf1","SMAC.md_working_2.dats2_kf1","red")'>s2_kf1</b><span style="display:none;" id="SMAC.md_working_2.dats2_kf1">The CUSTOM action with label <b>s2_kf1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_kf1</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="SMAC.md_working_2.dats2_cmap">s2_cmap</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=exp(-x/2) <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_2.dats2_kf1_r2">s2_kf1_r2</b>
+<b name="SMAC.md_working_2.dats2_kf2_r2" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_kf2_r2","SMAC.md_working_2.dats2_kf2_r2","red")'>s2_kf2_r2</b><span style="display:none;" id="SMAC.md_working_2.dats2_kf2_r2">The COMBINE action with label <b>s2_kf2_r2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_kf2_r2</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a linear combination to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="SMAC.md_working_2.dats2_cmap">s2_cmap</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_2.dats2_tpmat">s2_tpmat</b> <span class="plumedtooltip">COEFFICIENTS<span class="right"> the coefficients of the arguments in your function<i></i></span></span>=4.34028 <span class="plumedtooltip">PARAMETERS<span class="right"> the parameters of the arguments in your function<i></i></span></span>=pi <span class="plumedtooltip">POWERS<span class="right"> the powers to which you are raising each of the arguments in your function<i></i></span></span>=2
+<b name="SMAC.md_working_2.dats2_kf2" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_kf2","SMAC.md_working_2.dats2_kf2","red")'>s2_kf2</b><span style="display:none;" id="SMAC.md_working_2.dats2_kf2">The CUSTOM action with label <b>s2_kf2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_kf2</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="SMAC.md_working_2.dats2_cmap">s2_cmap</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=exp(-x/2) <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_2.dats2_kf2_r2">s2_kf2_r2</b>
+<b name="SMAC.md_working_2.dats2_ksum" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_ksum","SMAC.md_working_2.dats2_ksum","red")'>s2_ksum</b><span style="display:none;" id="SMAC.md_working_2.dats2_ksum">The COMBINE action with label <b>s2_ksum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_ksum</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a linear combination to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">MASK<span class="right">the label for a sparse vector/matrix that should be used to determine which elements of the vector/matrix should be computed<i></i></span></span>=<b name="SMAC.md_working_2.dats2_cmap">s2_cmap</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_2.dats2_kf1">s2_kf1</b>,<b name="SMAC.md_working_2.dats2_kf2">s2_kf2</b>
+<b name="SMAC.md_working_2.dats2_prod" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_prod","SMAC.md_working_2.dats2_prod","red")'>s2_prod</b><span style="display:none;" id="SMAC.md_working_2.dats2_prod">The CUSTOM action with label <b>s2_prod</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_prod</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_2.dats2_cmap">s2_cmap</b>,<b name="SMAC.md_working_2.dats2_ksum">s2_ksum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="SMAC.md_working_2.dats2_ones" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_ones","SMAC.md_working_2.dats2_ones","blue")'>s2_ones</b><span style="display:none;" id="SMAC.md_working_2.dats2_ones">The CONSTANT action with label <b>s2_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=4
+<b name="SMAC.md_working_2.dats2" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2","SMAC.md_working_2.dats2","blue")'>s2</b><span style="display:none;" id="SMAC.md_working_2.dats2">The MATRIX_VECTOR_PRODUCT action with label <b>s2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="SMAC.md_working_2.dats2_prod">s2_prod</b>,<b name="SMAC.md_working_2.dats2_ones">s2_ones</b>
+<b name="SMAC.md_working_2.dats2_denom" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_denom","SMAC.md_working_2.dats2_denom","blue")'>s2_denom</b><span style="display:none;" id="SMAC.md_working_2.dats2_denom">The MATRIX_VECTOR_PRODUCT action with label <b>s2_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_denom</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="SMAC.md_working_2.dats2_cmap">s2_cmap</b>,<b name="SMAC.md_working_2.dats2_ones">s2_ones</b>
+<b name="SMAC.md_working_2.dats2_mtdenom" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_mtdenom","SMAC.md_working_2.dats2_mtdenom","blue")'>s2_mtdenom</b><span style="display:none;" id="SMAC.md_working_2.dats2_mtdenom">The MORE_THAN action with label <b>s2_mtdenom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_mtdenom</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_2.dats2_denom">s2_denom</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={EXP R_0=4}
+<b name="SMAC.md_working_2.dats2_smac" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_smac","SMAC.md_working_2.dats2_smac","blue")'>s2_smac</b><span style="display:none;" id="SMAC.md_working_2.dats2_smac">The CUSTOM action with label <b>s2_smac</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_smac</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_2.dats2">s2</b>,<b name="SMAC.md_working_2.dats2_mtdenom">s2_mtdenom</b>,<b name="SMAC.md_working_2.dats2_denom">s2_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=(x*y)/z <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="SMAC.md_working_2.dats2_mt" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_mt","SMAC.md_working_2.dats2_mt","blue")'>s2_mt</b><span style="display:none;" id="SMAC.md_working_2.dats2_mt">The MORE_THAN action with label <b>s2_mt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_mt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="SMAC.md_working_2.dats2_smac">s2_smac</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.7}
+<b name="SMAC.md_working_2.dats2_morethan" onclick='showPath("SMAC.md_working_2.dat","SMAC.md_working_2.dats2_morethan","SMAC.md_working_2.dats2_morethan","black")'>s2_morethan</b><span style="display:none;" id="SMAC.md_working_2.dats2_morethan">The SUM action with label <b>s2_morethan</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s2_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="SMAC.md_working_2.dats2_mt">s2_mt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><br/><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="SMAC.md_working_2.dats2_morethan">s2_morethan</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>In this input the <script type="math/tex">s_i</script> values defined using the equation above is evaluated for the four vectors that are specified in the DISTANCE action with label m3.  In evaluating the sum in that expression
+we run over the four vectors that are specified in the action with label <code>m4</code> above.</p>
+<h2 id="output-components">Output components</h2>
+<p>This action can calculate the <a href="../specifying_arguments/">values</a> in the following table when the associated keyword is included in the input for the action. These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">lessthan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">LESS_THAN</td>
+<td style="text-align: left;">the number of colvars that have a value less than a threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;">morethan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MORE_THAN</td>
+<td style="text-align: left;">the number of colvars that have a value more than a threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;">altmin</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">ALT_MIN</td>
+<td style="text-align: left;">the minimum value of the cv</td>
+</tr>
+<tr>
+<td style="text-align: left;">min</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MIN</td>
+<td style="text-align: left;">the minimum colvar</td>
+</tr>
+<tr>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MAX</td>
+<td style="text-align: left;">the maximum colvar</td>
+</tr>
+<tr>
+<td style="text-align: left;">between</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">BETWEEN</td>
+<td style="text-align: left;">the number of colvars that have a value that lies in a particular interval</td>
+</tr>
+<tr>
+<td style="text-align: left;">highest</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">HIGHEST</td>
+<td style="text-align: left;">the largest of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">lowest</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">LOWEST</td>
+<td style="text-align: left;">the smallest of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">sum</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">SUM</td>
+<td style="text-align: left;">the sum of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">mean</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MEAN</td>
+<td style="text-align: left;">the mean of the colvars</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SPECIES</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the label of the DISTANCES or PLANES action that computes the orientations of the molecules for which you would like to compute SMAC</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPECIESA</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the label of the DISTANCES or PLANES action that computes the orientations of the molecules for which you would like to compute SMAC</td>
+</tr>
+<tr>
+<td style="text-align: left;">SPECIESB</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the label of the DISTANCES or PLANES action that computes the orientations of the molecules that should be considered as part of the coordination sphere</td>
+</tr>
+<tr>
+<td style="text-align: left;">SWITCH</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">This keyword is used if you want to employ an alternative to the continuous swiching function defined above. Options for this keyword are explained in the documentation for <a href="../LESS_THAN/">LESS_THAN</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">KERNEL</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">The kernels used in the function of the angle</td>
+</tr>
+<tr>
+<td style="text-align: left;">SWITCH_COORD</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">This keyword is used to define the coordination switching function. Options for this keyword are explained in the documentation for <a href="../LESS_THAN/">LESS_THAN</a>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">deprecated keywords</p>
+<p>The keywords in the following table can still be used with this action but have been deprecated</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">LESS_THAN</td>
+<td style="text-align: left;">calculate the number of variables that are less than a certain target value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MORE_THAN</td>
+<td style="text-align: left;">calculate the number of variables that are more than a certain target value</td>
+</tr>
+<tr>
+<td style="text-align: left;">ALT_MIN</td>
+<td style="text-align: left;">calculate the minimum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MIN</td>
+<td style="text-align: left;">calculate the minimum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MAX</td>
+<td style="text-align: left;">calculate the maximum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">BETWEEN</td>
+<td style="text-align: left;">calculate the number of values that are within a certain range</td>
+</tr>
+<tr>
+<td style="text-align: left;">HIGHEST</td>
+<td style="text-align: left;">this flag allows you to recover the highest of these variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">HISTOGRAM</td>
+<td style="text-align: left;">calculate a discretized histogram of the distribution of values</td>
+</tr>
+<tr>
+<td style="text-align: left;">LOWEST</td>
+<td style="text-align: left;">this flag allows you to recover the lowest of these variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">SUM</td>
+<td style="text-align: left;">calculate the sum of all the quantities</td>
+</tr>
+<tr>
+<td style="text-align: left;">MEAN</td>
+<td style="text-align: left;">calculate the mean of all the quantities</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1016/j.ces.2014.08.032">F. Giberti, M. Salvalaglio, M. Mazzotti, M. Parrinello, Insight into the nucleation of urea crystals from the melt. Chemical Engineering Science 121, 51–59 (2015)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jctc.6b01073">G. A. Tribello, F. Giberti, G. C. Sosso, M. Salvalaglio, M. Parrinello, Analyzing and Driving Cluster Formation in Atomistic Simulations. Journal of Chemical Theory and Computation 13, 1317–1327 (2017)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

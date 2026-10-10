@@ -1,0 +1,3 @@
+#SETTINGS INPUTFILES=regtest/trajectories/path_msd/all.pdb
+p1: PATH REFERENCE=regtest/trajectories/path_msd/all.pdb TYPE=OPTIMAL NOSPATH LAMBDA=69087
+PRINT ARG=p1.zpath STRIDE=1 FILE=colvar

@@ -1,0 +1,916 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Actions - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#actions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Actions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding comments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-include-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using INCLUDE files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallelism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parallelism
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parallelism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MPI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenMP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Actions</h1>
+
+<h2 id="actions">Actions</h2>
+<p>Every line in a PLUMED input file gives the input for an action or a <a href="../shortcuts/">shortcut</a>. The input for an action 
+can all be on a single line as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="actions.md_working_1.datd1" onclick='showPath("actions.md_working_1.dat","actions.md_working_1.datd1","actions.md_working_1.datd1","black")'>d1</b><span style="display:none;" id="actions.md_working_1.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1.x</td><td width="5%"><font color="black">scalar</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1.y</td><td width="5%"><font color="black">scalar</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1.z</td><td width="5%"><font color="black">scalar</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+</pre></div>
+
+<p>Alternatively, you can split the input for an action over multiple lines by using a continuation as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="actions.md_working_2.datd1" onclick='showPath("actions.md_working_2.dat","actions.md_working_2.datd1","actions.md_working_2.datd1","black")'>d1</b><span style="display:none;" id="actions.md_working_2.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1.x</td><td width="5%"><font color="black">scalar</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1.y</td><td width="5%"><font color="black">scalar</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1.z</td><td width="5%"><font color="black">scalar</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 
+   <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+...
+</pre></div>
+
+<p>The input for this action can also be written as follows:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+   <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+   <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="actions.md_working_3.datd1" onclick='showPath("actions.md_working_3.dat","actions.md_working_3.datd1","actions.md_working_3.datd1","black")'>d1</b><span style="display:none;" id="actions.md_working_3.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1.x</td><td width="5%"><font color="black">scalar</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1.y</td><td width="5%"><font color="black">scalar</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1.z</td><td width="5%"><font color="black">scalar</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>
+... DISTANCE
+</pre></div>
+
+<p>Notice that the closing <code>...</code> is followed by the word <code>DISTANCE</code> here. This might be
+useful when it comes to matching the start and ends of multi-line statements.  However, 
+it is important to note that PLUMED checks that the word following the closing <code>...</code> is identical to
+the first word in the line with the first <code>...</code>. If these are not, it will throw an error. This is why we used 
+<code>LABEL=d1</code> here in place of <code>d1: DISTANCE</code>. If you want to have matching action names at the start and end of your 
+multiline statements you are perhaps best off doing:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="actions.md_working_4.datd1" onclick='showPath("actions.md_working_4.dat","actions.md_working_4.datd1","actions.md_working_4.datd1","black")'>d1</b><span style="display:none;" id="actions.md_working_4.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1.x</td><td width="5%"><font color="black">scalar</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1.y</td><td width="5%"><font color="black">scalar</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1.z</td><td width="5%"><font color="black">scalar</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span> ...
+   <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+   <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+... DISTANCE
+</pre></div>
+
+<p>so as to ensure that the label appears at the start of the multiline input.</p>
+<h2 id="adding-comments">Adding comments</h2>
+<p>If you are an organized sort of person who likes to remember what the hell you were trying to do when you ran a
+particular simulation you might find it useful to put comments in your input file.  In PLUMED you can do this as
+comments can be added using a # sign.  On any given line everything after the # sign is ignored so
+erm... yes add lines of comments or trailing comments to your hearts content as shown below (using Shakespeare is optional):</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_5.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_5.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment"># This is the distance between two atoms:</span>
+<b name="actions.md_working_5.datd1" onclick='showPath("actions.md_working_5.dat","actions.md_working_5.datd1","actions.md_working_5.datd1","black")'>d1</b><span style="display:none;" id="actions.md_working_5.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="actions.md_working_5.datSnout" onclick='showPath("actions.md_working_5.dat","actions.md_working_5.datSnout","actions.md_working_5.datSnout","black")'>Snout</b><span style="display:none;" id="actions.md_working_5.datSnout">The UPPER_WALLS action with label <b>Snout</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">Snout.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">Snout.force2</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the squared force due to this bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">UPPER_WALLS<span class="right">Defines a wall for the value of one or more collective variables, <a href="https://www.plumed.org/doc-master/user-doc/html/UPPER_WALLS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the arguments on which the bias is acting<i></i></span></span>=<b name="actions.md_working_5.datd1">d1</b> <span class="plumedtooltip">AT<span class="right">the positions of the wall<i></i></span></span>=3.0 <span class="plumedtooltip">KAPPA<span class="right">the force constant for the wall<i></i></span></span>=3.0   <span style="color:blue" class="comment"># In this same interlude it doth befall.</span>
+<span style="color:blue" class="comment"># That I, one Snout by name, present a wall.</span>
+</pre></div>
+
+<p>PLUMED ignores any text in comments.  Consequently, if you provide the input for an action in a comment like this:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_6.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_6.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment"># d1: DISTANCE ATOMS=1,2 COMPONENTS</span>
+</pre></div>
+
+<p>a <a href="../DISTANCE/">DISTANCE</a> command is not created. Similar behaviour is observed when you use the <a href="../ENDPLUMED/">ENDPLUMED</a> comand.  For example, if your 
+input is as follows:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_7.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_7.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="actions.md_working_7.datd1" onclick='showPath("actions.md_working_7.dat","actions.md_working_7.datd1","actions.md_working_7.datd1","black")'>d1</b><span style="display:none;" id="actions.md_working_7.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1.x</td><td width="5%"><font color="black">scalar</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1.y</td><td width="5%"><font color="black">scalar</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1.z</td><td width="5%"><font color="black">scalar</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+<span class="plumedtooltip" style="color:green">ENDPLUMED<span class="right">Terminate plumed input. <a href="https://www.plumed.org/doc-master/user-doc/html/ENDPLUMED" style="color:green">More details</a><i></i></span></span><span style="color:blue" class="comment">
+d2: DISTANCE ATOMS=3,4
+</span></pre></div>
+
+<p>PLUMED will evaluate the distance between atom 1 and 2 but will not evaluate the distance between atoms 3 and 4.</p>
+<p>Lastly, note that you can include comments in the input for an action or <a href="../shortcuts/">shortcut</a> that is split over multiple lines as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_8.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_8.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="actions.md_working_8.datdist" onclick='showPath("actions.md_working_8.dat","actions.md_working_8.datdist","actions.md_working_8.datdist","blue")'>dist</b><span style="display:none;" id="actions.md_working_8.datdist">The DISTANCE action with label <b>dist</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dist</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> ...
+<span style="color:blue" class="comment"># we can also insert comments here</span>
+  <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,300
+<span style="color:blue" class="comment"># multiple kewords per line are allowed</span>
+  <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,400 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,500
+<span style="color:blue" class="comment">#empty lines are also allowed</span>
+
+... 
+</pre></div>
+
+<h2 id="using-include-files">Using INCLUDE files</h2>
+<p>If, for some reason, you want to spread your PLUMED input over a number of files you can use <a href="../INCLUDE/">INCLUDE</a> as shown below:</p>
+<div class="highlight"><pre><span></span><code>INCLUDE FILE=filename
+</code></pre></div>
+<p>So, for example, instead of having a single "plumed.dat" file:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_9.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_9.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="actions.md_working_9.datdist" onclick='showPath("actions.md_working_9.dat","actions.md_working_9.datdist","actions.md_working_9.datdist","black")'>dist</b><span style="display:none;" id="actions.md_working_9.datdist">The DISTANCE action with label <b>dist</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dist</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>
+<span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=<b name="actions.md_working_9.datdist">dist</b> <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=2.0 <span class="plumedtooltip">KAPPA<span class="right"> specifies that the restraint is harmonic and what the values of the force constants on each of the variables are<i></i></span></span>=1.0
+</pre></div>
+
+<p>you can split the input over a file like the one below and a file called <code>extras/toBeIncluded.inc</code> </p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_10.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_10.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="actions.md_working_10.datdist" onclick='showPath("actions.md_working_10.dat","actions.md_working_10.datdist","actions.md_working_10.datdist","black")'>dist</b><span style="display:none;" id="actions.md_working_10.datdist">The DISTANCE action with label <b>dist</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dist</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>
+<span id="actions.md_working_10.datextras/toBeIncluded.inc_short"><span class="plumedtooltip" style="color:green">INCLUDE<span class="right">Includes an external input file, similar to #include in C preprocessor. <a href="https://www.plumed.org/doc-master/user-doc/html/INCLUDE">More details</a>. Show <a class="toggler" href='javascript:;' onclick='toggleDisplay("actions.md_working_10.datextras/toBeIncluded.inc");'>included file</a><i></i></span></span> <span class="plumedtooltip">FILE<span class="right">file to be included<i></i></span></span>=<a class="toggler" href='javascript:;' onclick='toggleDisplay("actions.md_working_10.datextras/toBeIncluded.inc");'>extras/toBeIncluded.inc</a>
+</span><span id="actions.md_working_10.datextras/toBeIncluded.inc_long" style="display:none;"><span style="color:blue" class="comment"># The command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("actions.md_working_10.datextras/toBeIncluded.inc")'># INCLUDE FILE=extras/toBeIncluded.inc
+</span><span style="color:blue" class="comment"># ensures PLUMED loads the contents of the file called extras/toBeIncluded.inc</span>
+<span style="color:blue" class="comment"># The contents of this file are shown below (click the red comment to hide them).</span>
+<span style="display:none;" id="actions.md_working_10.datextras/toBeIncluded.inc">The INCLUDE action with label <b>extras/toBeIncluded.inc</b> calculates something</span><span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=<b name="actions.md_working_10.datdist">dist</b> <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=2.0 <span class="plumedtooltip">KAPPA<span class="right"> specifies that the restraint is harmonic and what the values of the force constants on each of the variables are<i></i></span></span>=1.0
+<span style="color:blue"># --- End of included input --- </span></span></pre></div>
+
+<p>However, when you do this it is important to recognize that INCLUDE is a real directive that is only resolved
+after all the comments have been stripped and the continuation lines have been unrolled.  This means it
+is not possible to do things like:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_11.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_11.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-failed-red.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment"># this is wrong:</span>
+<span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> INCLUDE FILE=options.dat
+<span style="display:none;" id="actions.md_working_11.dat">The DISTANCE action with label <b></b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">.value</td><td>the DISTANCE between this pair of atoms</td></tr></table></span><span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=dist <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=2.0 <span class="plumedtooltip">KAPPA<span class="right"> specifies that the restraint is harmonic and what the values of the force constants on each of the variables are<i></i></span></span>=1.0
+</pre></div>
+
+<h2 id="parallelism">Parallelism</h2>
+<p>PLUMED uses parallelism to improve the performance of many actions.  Within PLUMED parallelisation is done using a combination of
+<a href="https://en.wikipedia.org/wiki/Message_Passing_Interface">MPI</a> and <a href="https://en.wikipedia.org/wiki/OpenMP">OpenMP</a>.  In addition, 
+we are starting to use <a href="https://www.openacc.org">openACC</a> in some actions in order to write code than can run on GPUs.</p>
+<p>Importantly, all parallism within PLUMED is implemented within actions.  <strong>We do not parallelise over actions.</strong>  Consequently, if you run 
+this input with MPI or openMP:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_12.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_12.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="actions.md_working_12.datd1" onclick='showPath("actions.md_working_12.dat","actions.md_working_12.datd1","actions.md_working_12.datd1","black")'>d1</b><span style="display:none;" id="actions.md_working_12.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<b name="actions.md_working_12.datd2" onclick='showPath("actions.md_working_12.dat","actions.md_working_12.datd2","actions.md_working_12.datd2","black")'>d2</b><span style="display:none;" id="actions.md_working_12.datd2">The DISTANCE action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4
+<b name="actions.md_working_12.datd3" onclick='showPath("actions.md_working_12.dat","actions.md_working_12.datd3","actions.md_working_12.datd3","black")'>d3</b><span style="display:none;" id="actions.md_working_12.datd3">The DISTANCE action with label <b>d3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d3</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,6
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="actions.md_working_12.datd1">d1</b>,<b name="actions.md_working_12.datd2">d2</b>,<b name="actions.md_working_12.datd3">d3</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>all the three distances will be calculated on "the same processor/thread."  If, however, you run the following input with MPI or openMP:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_actions.md_working_13.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../actions.md_working_13.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="actions.md_working_13.datd" onclick='showPath("actions.md_working_13.dat","actions.md_working_13.datd","actions.md_working_13.datd","blue")'>d</b><span style="display:none;" id="actions.md_working_13.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4 <span class="plumedtooltip">ATOMS3<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=5,6
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="actions.md_working_13.datd">d</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>the three distances are calculated by different processors/threads.</p>
+<h3 id="mpi">MPI</h3>
+<p>Unless you disable it by using the option <code>--disable-mpi</code> during configuration, PLUMED will search for an MPI installation during configuration.
+If an MPI installation is found then PLUMED will build with MPI when you run make.  To run a PLUMED <a href="../driver/">driver</a> calculation with MPI you 
+will run a command something like this:</p>
+<pre class="plumedlisting">
+<span id="cltool14defplumed_short"><span class="plumedtooltip">mpirun -np<span class="right">Run instances of PLUMED on this number of MPI processes<i></i></span></span> 4 <b name="cltool14plumed" onclick='showPath("cltool14","cltool14plumed","cltool14plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">driver<span class="right">analyze trajectories with plumed This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("cltool14defplumed");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/driver">More details</a><i></i></span></span> <span class="plumedtooltip">--ixyz<span class="right">the trajectory in xyz format<i></i></span></span> traj.xyz
+
+</span><span id="cltool14defplumed_long" style="display:none;"><span class="plumedtooltip">mpirun -np<span class="right">Run instances of PLUMED on this number of MPI processes<i></i></span></span> 4 <span style="display:none;" id="cltool14plumed">The driver action with label <b>plumed</b> calculates something</span><b name="cltool14plumed" onclick='showPath("cltool14","cltool14plumed","cltool14plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">driver<span class="right">analyze trajectories with plumed This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("cltool14defplumed");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/driver">More details</a><i></i></span></span> <span class="plumedtooltip">--ixyz<span class="right">the trajectory in xyz format<i></i></span></span> traj.xyz
+ <span class="plumedtooltip">--plumed<span class="right"> specify the name of the plumed input file<i></i></span></span> plumed.dat <span class="plumedtooltip">--timestep<span class="right"> the timestep that was used in the calculation that produced this trajectory in picoseconds<i></i></span></span> 1.0 <span class="plumedtooltip">--trajectory-stride<span class="right"> the frequency with which frames were output to this trajectory during the simulation (0 means that the number of the step is read from the trajectory file, currently working only for xtc/trr files read with --ixtc/--trr)<i></i></span></span> 1 <span class="plumedtooltip">--multi<span class="right"> set number of replicas for multi environment (needs MPI)<i></i></span></span> 0 <span class="plumedtooltip">--dump-forces-fmt<span class="right"> the format to use to dump the forces<i></i></span></span> %%f 
+</span></pre>
+<p>When this command is run, any actions that can use MPI will run on four MPI processes unless you use the <code>SERIAL</code> keyword in the input for those 
+actions in which case any MPI parallism in that action is turned off.</p>
+<h3 id="openmp">OpenMP</h3>
+<p>If your compiler supports openMP then the features of PLUMED that use it have it enabled by default.  However, if you want to disable 
+these features you can do so by configuring PLUMED with the option  <code>--disable-openmp</code>.</p>
+<p>When you use PLUMED with some MD codes the number of OpenMD threads is set automatically by the MD code. If, however, you are using <a href="../driver/">driver</a>,
+another <a href="../module_cltools/">command line tool</a> or an MD code that does not set the number of OpenMD threads to be used you will need to set the environment 
+variable PLUMED_NUM_THREADS equal to the number of threads you wish PLUMED to use at runtime.  To be clear, you can use the PLUMED_NUM_THREADS to set 
+the number of threads to use with PLUMED even if your MD code has an option for setting the number of threads.  With gromacs for instance you can ensure
+that PLUMED runs on 8 threads by using the following commands: </p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PLUMED_NUM_THREADS</span><span class="o">=</span><span class="m">8</span>
+mdrun<span class="w"> </span>-plumed
+</code></pre></div>
+<p>or by using this single command:</p>
+<div class="highlight"><pre><span></span><code>mdrun<span class="w"> </span>-plumed<span class="w"> </span>-ntomp<span class="w"> </span><span class="m">8</span>
+</code></pre></div>
+<p>In the first case PLLUMED uses 8 OpenMP threads while gromacs only uses 1 (this is usually sub optimal).
+In the second case GROMACS and plumed will the same number of OpenMP threads.</p>
+<p>Notice that:</p>
+<ul>
+<li>Using OpenMP is likely to improve the performance, but could also slow down the code in some case.</li>
+<li>Using OpenMP can give results that are slightly different because of numerical round off and different order in summations. This should be harmless.</li>
+<li>The optimum number of threads is not necessary "all of them", nor should be equal to the number of threads used to parallelize the MD calculation. </li>
+<li>Not all CVs are parallelized with openMP. </li>
+<li>You might also want to tune the environmental variable PLUMED_CACHELINE_SIZE.
+  The default of 512 is the size of cache lines on your machine. The PLUMED_CACHELINE_SIZE variable is used
+  by PLUMED to decrease the number of threads to be used in each loop so as to avoid clashes in memory access. This variable is expected to affect performance only, not results.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

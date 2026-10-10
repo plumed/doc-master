@@ -1,0 +1,31 @@
+<map id="PLMD::adjmat::AdjacencyMatrixBase&lt; CV, myPTM &gt;" name="PLMD::adjmat::AdjacencyMatrixBase&lt; CV, myPTM &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="879,197,1109,237"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1adjmat_1_1_adjacency_matrix_base.html" title=" " alt="" coords="1295,5,1525,45"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="1021,185,1070,139,1100,116,1132,96,1213,63,1294,41,1295,46,1214,68,1135,101,1103,121,1073,143,1024,189"/>
+<area shape="rect" id="Node000009" href="$class_p_l_m_d_1_1adjmat_1_1_adjacency_matrix_base.html" title=" " alt="" coords="1295,69,1525,109"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="1047,189,1132,153,1221,127,1306,107,1307,112,1222,132,1134,159,1049,194"/>
+<area shape="rect" id="Node000010" href="$class_p_l_m_d_1_1adjmat_1_1_adjacency_matrix_base.html" title=" " alt="" coords="1295,133,1525,173"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="1122,195,1294,168,1295,174,1123,200"/>
+<area shape="rect" id="Node000011" href="$class_p_l_m_d_1_1adjmat_1_1_adjacency_matrix_base.html" title=" " alt="" coords="1295,197,1525,237"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="1123,215,1295,215,1295,220,1123,220"/>
+<area shape="rect" id="Node000012" href="$class_p_l_m_d_1_1adjmat_1_1_adjacency_matrix_base.html" title=" " alt="" coords="1295,261,1525,301"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="1123,234,1295,261,1294,266,1122,240"/>
+<area shape="rect" id="Node000013" href="$class_p_l_m_d_1_1adjmat_1_1_adjacency_matrix_base.html" title=" " alt="" coords="1295,325,1525,365"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="1049,241,1134,276,1222,302,1307,323,1306,328,1221,307,1132,281,1047,246"/>
+<area shape="rect" id="Node000014" href="$class_p_l_m_d_1_1adjmat_1_1_adjacency_matrix_base.html" title=" " alt="" coords="1295,389,1525,429"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="1024,245,1073,291,1103,314,1135,334,1214,367,1295,388,1294,394,1213,372,1132,338,1100,318,1070,295,1021,249"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_with_matrix.html" title=" " alt="" coords="649,205,829,230"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="843,215,879,215,879,220,843,220"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_with_vector.html" title=" " alt="" coords="421,205,600,230"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="613,215,649,215,649,220,613,220"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="182,155,353,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="345,181,448,202,447,207,343,186"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,205,113,230"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="124,199,162,189,210,178,211,183,163,195,125,204"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="180,205,355,230"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="127,215,180,215,180,220,127,220"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="163,254,372,279"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="127,231,214,251,212,257,126,236"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="369,215,421,215,421,220,369,220"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="343,249,447,227,448,233,345,254"/>
+</map>

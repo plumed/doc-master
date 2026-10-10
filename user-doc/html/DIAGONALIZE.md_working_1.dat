@@ -1,0 +1,3 @@
+d: DISTANCE_MATRIX GROUP=1-4
+diag: DIAGONALIZE ARG=d
+PRINT ARG=diag.vals-1,diag.vals-2,diag.vals-3,diag.vals-4 FILE=colvar

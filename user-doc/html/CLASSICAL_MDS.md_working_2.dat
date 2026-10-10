@@ -1,0 +1,10 @@
+phi1: TORSION ATOMS=1,2,3,4
+phi2: TORSION ATOMS=5,6,7,8
+phi3: TORSION ATOMS=9,10,11,12
+phi4: TORSION ATOMS=13,14,15,16
+phi5: TORSION ATOMS=17,18,19,20
+
+angles: COLLECT_FRAMES ARG=phi1,phi2,phi3,phi4,phi5
+mds: CLASSICAL_MDS ARG=angles NLOW_DIM=2
+weights: CUSTOM ARG=angles.logweights FUNC=exp(x) PERIODIC=NO
+DUMPVECTOR ARG=mds,weights FILE=list_embed

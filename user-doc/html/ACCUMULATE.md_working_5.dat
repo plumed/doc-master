@@ -1,0 +1,11 @@
+c: CONSTANT VALUE=5
+d: DISTANCE ATOMS1=1,2 ATOMS2=3,4 ATOMS3=5,6 ATOMS4=7,8 ATOMS5=9,10
+# Construct the instantaneous histogram from the instantaneous value of the distance
+kde: KDE ARG=d BANDWIDTH=0.05 GRID_MIN=0 GRID_MAX=5 GRID_BIN=250
+# Now add together all the instantaneous histograms
+hist: ACCUMULATE ARG=kde STRIDE=1
+# And normalise the histogram
+n: ACCUMULATE ARG=c STRIDE=1
+a: CUSTOM ARG=hist,n FUNC=x/y PERIODIC=NO
+# And print out the final histogram
+DUMPGRID ARG=a FILE=histo.grid

@@ -1,0 +1,7 @@
+#SETTINGS INPUTFILES=regtest/mapping/rt-adapt/mypath.pdb
+d1: DISTANCE ATOMS=1,2 COMPONENTS
+pp: GPATH ...
+   ARG=d1.x,d1.y PROPERTY=path
+   REFERENCE=regtest/mapping/rt-adapt/mypath.pdb
+...
+PRINT ARG=d1.x,d1.y,pp.* FILE=colvar

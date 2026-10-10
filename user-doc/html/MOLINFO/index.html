@@ -1,0 +1,1165 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: MOLINFO - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-molinfo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: MOLINFO
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-atom-selection-with-mdtraj-or-mdanalysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced atom selection with mdtraj or MDAnalysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-atom-selection-with-vmd-experimental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced atom selection with VMD (experimental)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-molinfo"><a href="../actions/">Action</a>: MOLINFO</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_generic/"><strong>generic</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">This command is used to provide information on the molecules that are present in your system.</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=MOLINFO"><img alt="used in 14 tutorials" src="https://img.shields.io/badge/tutorials-14-green.svg" /></a><a href="https://www.plumed-nest.org/browse.html?action=MOLINFO"><img alt="used in 111 eggs" src="https://img.shields.io/badge/nest-111-green.svg" /></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>This action outputs data to a file</strong>. You can read more about how PLUMED manages output files <a href="../Files/">here</a></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>This command is used to provide information on the molecules that are present in your system.
+A simple examples where this command is used to provide the information on which atoms
+are in the backbone of a protein to the <a href="../ALPHARMSD/">ALPHARMSD</a> action is shown below.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MOLINFO.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MOLINFO.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS MOLFILE=regtest/basic/rt32/helix.pdb</span>
+<span class="plumedtooltip" style="color:green">MOLINFO<span class="right">This command is used to provide information on the molecules that are present in your system. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">STRUCTURE<span class="right">a file in pdb format containing a reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt32/helix.pdb<div class="right"> Click <a onclick='openModal("MOLINFO.md_working_1.datregtest/basic/rt32/helix.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="MOLINFO.md_working_1.datregtest/basic/rt32/helix.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("MOLINFO.md_working_1.datregtest/basic/rt32/helix.pdb1")'>&times;</span>  <h2>FILE: regtest/basic/rt32/helix.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1 HH31 ACE     1      -9.105  -2.402  21.804  0.00  0.00            
+ATOM      2  CH3 ACE     1      -8.930  -3.352  22.308  0.00  0.00            
+ATOM      3 HH32 ACE     1      -9.504  -3.501  23.223  0.00  0.00            
+ATOM      4 HH33 ACE     1      -9.067  -4.173  21.604  0.00  0.00            
+ATOM      5  C   ACE     1      -7.450  -3.303  22.659  0.00  0.00            
+...
+ATOM    129  CH3 NME    14      -1.690  -7.089  20.487  0.00  0.00            
+ATOM    130 HH31 NME    14      -1.873  -6.629  21.459  0.00  0.00            
+ATOM    131 HH32 NME    14      -1.152  -6.284  19.986  0.00  0.00            
+ATOM    132 HH33 NME    14      -1.135  -8.020  20.602  0.00  0.00            
+END
+</pre></div>  </div></div>
+<span style="display:none;" id="MOLINFO.md_working_1.dat">The MOLINFO action with label <b></b> calculates something</span><span id="MOLINFO.md_working_1.data_short"><span class="plumedtooltip" style="color:green">ALPHARMSD<span class="right">Probe the alpha helical content of a protein structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("MOLINFO.md_working_1.data");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/ALPHARMSD">More details</a><i></i></span></span> <span class="plumedtooltip">RESIDUES<span class="right">this command is used to specify the set of residues that could conceivably form part of the secondary structure<i></i></span></span>=all <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=DRMSD <span class="plumedtooltip">LESS_THAN<span class="right">calculate the number of a residue segments that are within a certain target distance of this secondary structure type<i></i></span></span>={RATIONAL R_0=0.08 NN=8 MM=12} <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="MOLINFO.md_working_1.data" onclick='showPath("MOLINFO.md_working_1.dat","MOLINFO.md_working_1.data","MOLINFO.md_working_1.data_shortcut","blue")'>a</b><span style="display:none;" id="MOLINFO.md_working_1.data_shortcut">The ALPHARMSD action with label <b>a</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">a</td><td width="5%"><font color="blue">vector</font></td><td>if LESS_THAN is present the RMSD distance between each residue and the ideal alpha helix.  If LESS_THAN is not present the number of residue segments where the structure is similar to an alpha helix</td></tr><tr><td width="5%">a_lessthan</td><td width="5%"><font color="black">scalar</font></td><td>the number blocks of residues that have an RMSD from the secondary structure that is less than the threshold</td></tr></table></span>
+</span><span id="MOLINFO.md_working_1.data_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("MOLINFO.md_working_1.data")'># ALPHARMSD RESIDUES=all TYPE=DRMSD LESS_THAN={RATIONAL R_0=0.08 NN=8 MM=12} LABEL=a</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="MOLINFO.md_working_1.data" onclick='showPath("MOLINFO.md_working_1.dat","MOLINFO.md_working_1.data","MOLINFO.md_working_1.data","blue")'>a</b><span style="display:none;" id="MOLINFO.md_working_1.data">The SECONDARY_STRUCTURE_DRMSD action with label <b>a</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">a</td><td width="5%"><font color="blue">vector</font></td><td>the value calculated by this action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SECONDARY_STRUCTURE_DRMSD<span class="right">Calclulate the DRMSD between segments of a protein and a reference structure of interest <a href="https://www.plumed.org/doc-master/user-doc/html/SECONDARY_STRUCTURE_DRMSD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">BONDLENGTH<span class="right"> the length to use for bonds<i></i></span></span>=0.17 <span class="plumedtooltip">ATOMS<span class="right">this is the full list of atoms that we are investigating<i></i></span></span>=7,9,11,15,16,17,19,21,25,26,27,29,31,35,36,37,39,41,45,46,47,49,51,55,56,57,59,61,65,66,67,69,71,75,76,77,79,81,85,86,87,89,91,95,96,97,99,101,105,106,107,109,111,115,116,117,119,121,125,126 <span class="plumedtooltip">SEGMENT1<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29 <span class="plumedtooltip">SEGMENT2<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34 <span class="plumedtooltip">SEGMENT3<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39 <span class="plumedtooltip">SEGMENT4<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44 <span class="plumedtooltip">SEGMENT5<span class="right">this is the lists of atoms in the segment that are being considered<i></i></span></span>=20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 <span class="plumedtooltip">STRUCTURE1<span class="right">the reference structure<i></i></span></span>=0.733,0.519,5.298,1.763,0.81,4.301,3.166,0.543,4.881,1.527,-0.045,3.053,1.646,0.436,1.928,1.18,-1.312,3.254,0.924,-2.203,2.126,0.65,-3.626,2.626,-0.239,-1.711,1.261,-0.19,-1.815,0.032,-1.28,-1.172,1.891,-2.416,-0.661,1.127,-3.548,-0.217,2.056,-1.964,0.529,0.276,-2.364,0.659,-0.88,-1.13,1.391,0.856,-0.62,2.565,0.148,0.228,3.439,1.077,0.231,2.129,-1.032,0.179,2.733,-2.099,1.028,1.084,-0.833,1.872,0.593,-1.919,2.85,-0.462,-1.397,1.02,0.02,-3.049,1.317,0.227,-4.224,-0.051,-0.684,-2.696,-0.927,-1.261,-3.713,-1.933,-2.219,-3.074,-1.663,-0.171,-4.475,-1.916,-0.296,-5.673     <span style="color:blue" class="comment"># Action input conctinues with 2 further SEGMENTn keywords, </span>
+<b name="MOLINFO.md_working_1.data_lt" onclick='showPath("MOLINFO.md_working_1.dat","MOLINFO.md_working_1.data_lt","MOLINFO.md_working_1.data_lt","blue")'>a_lt</b><span style="display:none;" id="MOLINFO.md_working_1.data_lt">The LESS_THAN action with label <b>a_lt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">a_lt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the input is less than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LESS_THAN<span class="right">Use a switching function to determine how many of the input variables are less than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MOLINFO.md_working_1.data">a</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.08 NN=8 MM=12}
+<b name="MOLINFO.md_working_1.data_lessthan" onclick='showPath("MOLINFO.md_working_1.dat","MOLINFO.md_working_1.data_lessthan","MOLINFO.md_working_1.data_lessthan","black")'>a_lessthan</b><span style="display:none;" id="MOLINFO.md_working_1.data_lessthan">The SUM action with label <b>a_lessthan</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">a_lessthan</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="MOLINFO.md_working_1.data_lt">a_lt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span></pre></div>
+
+<p>The following example prints the distance corresponding to the hydrogen bonds
+in a GC Watson-Crick pair.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MOLINFO.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MOLINFO.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS MOLFILE=regtest/basic/rt-ermsd/ref.pdb</span>
+<span class="plumedtooltip" style="color:green">MOLINFO<span class="right">This command is used to provide information on the molecules that are present in your system. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">STRUCTURE<span class="right">a file in pdb format containing a reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt-ermsd/ref.pdb<div class="right"> Click <a onclick='openModal("MOLINFO.md_working_2.datregtest/basic/rt-ermsd/ref.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="MOLINFO.md_working_2.datregtest/basic/rt-ermsd/ref.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("MOLINFO.md_working_2.datregtest/basic/rt-ermsd/ref.pdb1")'>&times;</span>  <h2>FILE: regtest/basic/rt-ermsd/ref.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK    GENERATED BY TRJCONV
+TITLE     add Villa in water t=   0.00000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   79.904   79.904   79.904  60.00  60.00  90.00 P 1           1
+MODEL        1
+...
+ATOM   2255 2HO' RG3    71      23.000  58.930  29.250  1.00  0.00            
+ATOM   2256  O3' RG3    71      21.250  59.670  32.300  1.00  0.00            
+ATOM   2257  H3T RG3    71      21.130  59.570  31.350  1.00  0.00            
+TER
+ENDMDL
+</pre></div>  </div></div> <span class="plumedtooltip">MOLTYPE<span class="right"> what kind of molecule is contained in the pdb file - usually not needed since protein/RNA/DNA are compatible<i></i></span></span>=dna
+<span style="display:none;" id="MOLINFO.md_working_2.dat">The MOLINFO action with label <b></b> calculates something</span><b name="MOLINFO.md_working_2.dathb1" onclick='showPath("MOLINFO.md_working_2.dat","MOLINFO.md_working_2.dathb1","MOLINFO.md_working_2.dathb1","black")'>hb1</b><span style="display:none;" id="MOLINFO.md_working_2.dathb1">The DISTANCE action with label <b>hb1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hb1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<span class="plumedtooltip">@N2-2<span class="right">the N2 atom in residue 2. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>,<span class="plumedtooltip">@O2-15<span class="right">the O2 atom in residue 15. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>
+<b name="MOLINFO.md_working_2.dathb2" onclick='showPath("MOLINFO.md_working_2.dat","MOLINFO.md_working_2.dathb2","MOLINFO.md_working_2.dathb2","black")'>hb2</b><span style="display:none;" id="MOLINFO.md_working_2.dathb2">The DISTANCE action with label <b>hb2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hb2</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<span class="plumedtooltip">@N1-2<span class="right">the N1 atom in residue 2. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>,<span class="plumedtooltip">@N3-15<span class="right">the N3 atom in residue 15. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>
+<b name="MOLINFO.md_working_2.dathb3" onclick='showPath("MOLINFO.md_working_2.dat","MOLINFO.md_working_2.dathb3","MOLINFO.md_working_2.dathb3","black")'>hb3</b><span style="display:none;" id="MOLINFO.md_working_2.dathb3">The DISTANCE action with label <b>hb3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hb3</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=<span class="plumedtooltip">@O6-2<span class="right">the O6 atom in residue 2. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>,<span class="plumedtooltip">@N4-15<span class="right">the N4 atom in residue 15. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="MOLINFO.md_working_2.dathb1">hb1</b>,<b name="MOLINFO.md_working_2.dathb2">hb2</b>,<b name="MOLINFO.md_working_2.dathb3">hb3</b>
+</pre></div>
+
+<p>The last example shows you how you can use MOLINFO to calculate torsion angles</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MOLINFO.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MOLINFO.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS MOLFILE=regtest/basic/rt32/helix.pdb</span>
+<span class="plumedtooltip" style="color:green">MOLINFO<span class="right">This command is used to provide information on the molecules that are present in your system. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">MOLTYPE<span class="right"> what kind of molecule is contained in the pdb file - usually not needed since protein/RNA/DNA are compatible<i></i></span></span>=protein <span class="plumedtooltip">STRUCTURE<span class="right">a file in pdb format containing a reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt32/helix.pdb<div class="right"> Click <a onclick='openModal("MOLINFO.md_working_3.datregtest/basic/rt32/helix.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="MOLINFO.md_working_3.datregtest/basic/rt32/helix.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("MOLINFO.md_working_3.datregtest/basic/rt32/helix.pdb1")'>&times;</span>  <h2>FILE: regtest/basic/rt32/helix.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1 HH31 ACE     1      -9.105  -2.402  21.804  0.00  0.00            
+ATOM      2  CH3 ACE     1      -8.930  -3.352  22.308  0.00  0.00            
+ATOM      3 HH32 ACE     1      -9.504  -3.501  23.223  0.00  0.00            
+ATOM      4 HH33 ACE     1      -9.067  -4.173  21.604  0.00  0.00            
+ATOM      5  C   ACE     1      -7.450  -3.303  22.659  0.00  0.00            
+...
+ATOM    129  CH3 NME    14      -1.690  -7.089  20.487  0.00  0.00            
+ATOM    130 HH31 NME    14      -1.873  -6.629  21.459  0.00  0.00            
+ATOM    131 HH32 NME    14      -1.152  -6.284  19.986  0.00  0.00            
+ATOM    132 HH33 NME    14      -1.135  -8.020  20.602  0.00  0.00            
+END
+</pre></div>  </div></div>
+<span style="display:none;" id="MOLINFO.md_working_3.dat">The MOLINFO action with label <b></b> calculates something</span><b name="MOLINFO.md_working_3.datt1" onclick='showPath("MOLINFO.md_working_3.dat","MOLINFO.md_working_3.datt1","MOLINFO.md_working_3.datt1","black")'>t1</b><span style="display:none;" id="MOLINFO.md_working_3.datt1">The TORSION action with label <b>t1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=<span class="plumedtooltip">@phi-3<span class="right">the four atoms that are required to calculate the phi dihedral for residue 3. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>
+<b name="MOLINFO.md_working_3.datt2" onclick='showPath("MOLINFO.md_working_3.dat","MOLINFO.md_working_3.datt2","MOLINFO.md_working_3.datt2","black")'>t2</b><span style="display:none;" id="MOLINFO.md_working_3.datt2">The TORSION action with label <b>t2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t2</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=<span class="plumedtooltip">@psi-4<span class="right">the four atoms that are required to calculate the psi dihedral for residue 4. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="MOLINFO.md_working_3.datt1">t1</b>,<b name="MOLINFO.md_working_3.datt2">t2</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=10
+</pre></div>
+
+<p>The information on the molecules in your system can either be provided in the form of a pdb file
+or as a set of lists of atoms that describe the various chains in your system. If a pdb file
+is used plumed the MOLINFO command will endeavor to recognize the various chains and residues that
+make up the molecules in your system using the chainIDs and resnumbers from the pdb file. You can
+then use this information in later commands to specify atom lists in terms residues.  For example
+using this command you can find the backbone atoms in your structure automatically.
+Since the introduction of PLUMED 2.7 you have been able to use multiple MOLINFO actions. Every time you perform an atom
+selection, the last available MOLINFO action will be used. This allows you to provide multiple PDB
+files, for instance using different naming conventions (see issue 134).</p>
+<div class="admonition caution">
+<p class="admonition-title">check PDB parser</p>
+<p>Please be aware that the PDB parser in plumed is far from perfect. You should thus check the log file
+and examine what plumed is actually doing whenever you use the MOLINFO action.
+Also make sure that the atoms are listed in the pdb with the correct order.
+If you are using gromacs, the safest way is to use reference pdb file
+generated with <code>gmx editconf -f topol.tpr -o reference.pdb</code>.</p>
+</div>
+<p>More information of the PDB parser implemented in PLUMED can be found in the documentation for the <a href="../PDB2CONSTANT/">PDB2CONSTANT</a> command.</p>
+<p>If the flag <code>WHOLE</code> is used, the reference structure is assumed to be whole, i.e. not broken by PBC.
+<strong>This will impact PBC calculations in all the actions following the MOLINFO action!</strong>.
+In particular, actions that reconstruct molecules locally will do the reconstruction using a
+minimum spanning tree rather than the order in which atoms are provided.
+Notice that in PLUMED 2.8, 2.9, and 2.10 this would only have affected the behavior of \ref WHOLEMOLECULES
+actions, whereas starting with PLUMED 2.11 all actions that reconstruct PBCs are affected.
+If you want a variable to ignore this, you can just repeate the MOLINFO action without
+the <code>WHOLE</code> flag: all the following actions will use the traditional reconstruction algorithm,
+based on the order in which atoms are listed.</p>
+<p>Providing <code>MOLTYPE=protein</code>, <code>MOLTYPE=rna</code>, or <code>MOLTYPE=dna</code> will instruct plumed to look
+for known residues from these three types of molecule. In other words, this keyword is available for
+historical reasons and to allow future extensions where alternative lists will be provided.
+As of now, you can just ignore this keyword.</p>
+<p>Using MOLINFO extends the possibility of atoms selection using the @ special
+symbol. All the various ways that the @ symbol can be used are listed in the following table:</p>
+<table id="browse-table" class="display">
+<thead><tr>
+<th style="text-align: left" >Name</th>
+<th style="text-align: left" >Description</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left">@allatoms</td>
+<td style="text-align: left">refers to all the MD codes atoms and PLUMEDs vatoms</td>
+</tr>
+<tr>
+<td style="text-align: left">@mdatoms</td>
+<td style="text-align: left">refers to all the MD codes atoms but not PLUMEDs vatoms</td>
+</tr>
+<tr>
+<td style="text-align: left">@ndx:</td>
+<td style="text-align: left">load a group from a GROMACS index file</td>
+</tr>
+<tr>
+<td style="text-align: left">@alpha-</td>
+<td style="text-align: left">the four atoms that are required to calculate the alpha backbone dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@back-</td>
+<td style="text-align: left">the protein/dna/rna backbone atoms in</td>
+</tr>
+<tr>
+<td style="text-align: left">@base-</td>
+<td style="text-align: left">the heavy atoms of the base in</td>
+</tr>
+<tr>
+<td style="text-align: left">@beta-</td>
+<td style="text-align: left">the four atoms that are required to calculate the beta backbone dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@chi-</td>
+<td style="text-align: left">the four atoms that are required to alcullate the chi dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@chi1-</td>
+<td style="text-align: left">the four atoms that are required to calculate the chi1 dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@chi2-</td>
+<td style="text-align: left">the four atoms that are required to calculate the chi2 dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@chi3-</td>
+<td style="text-align: left">the four atoms that are required to calculate the chi3 dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@chi4-</td>
+<td style="text-align: left">the four atoms that are required to calculate the chi4 dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@chi5-</td>
+<td style="text-align: left">the four atoms that are required to calculate the chi5 dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@delta-</td>
+<td style="text-align: left">the four atoms that are required to calculate the delta backbone dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@epsilon-</td>
+<td style="text-align: left">the four atoms that are required to calculate the backbone epsilon dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@gamma-</td>
+<td style="text-align: left">the four atoms that are required to calculate the gamma backbone dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@hydrogens</td>
+<td style="text-align: left">all hydrogen atoms</td>
+</tr>
+<tr>
+<td style="text-align: left">@ions</td>
+<td style="text-align: left">all the ions</td>
+</tr>
+<tr>
+<td style="text-align: left">@lcs-</td>
+<td style="text-align: left">an ordered triplet of atoms on the 6-membered ring of the nucleobase in</td>
+</tr>
+<tr>
+<td style="text-align: left">@mda:</td>
+<td style="text-align: left">atom selection built using syntax for <a href="https://docs.mdanalysis.org/stable/documentation_pages/selections.html">MDAnalysis</a></td>
+</tr>
+<tr>
+<td style="text-align: left">@mdt:</td>
+<td style="text-align: left">atom selection built using syntax for <a href="https://www.mdtraj.org/1.9.8.dev0/index.html">mdtraj</a></td>
+</tr>
+<tr>
+<td style="text-align: left">@nonhydrogens</td>
+<td style="text-align: left">all non hydrogen atoms</td>
+</tr>
+<tr>
+<td style="text-align: left">@nucleic</td>
+<td style="text-align: left">all atoms that are part of a DNA or RNA molecule</td>
+</tr>
+<tr>
+<td style="text-align: left">@omega-</td>
+<td style="text-align: left">the four atoms that are required to calculate the omega dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@phi-</td>
+<td style="text-align: left">the four atoms that are required to calculate the phi dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@protein</td>
+<td style="text-align: left">all atoms that are part of a protein</td>
+</tr>
+<tr>
+<td style="text-align: left">@psi-</td>
+<td style="text-align: left">the four atoms that are required to calculate the psi dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@sidechain-</td>
+<td style="text-align: left">the protein sidechain atoms in</td>
+</tr>
+<tr>
+<td style="text-align: left">@sugar-</td>
+<td style="text-align: left">the heavy atoms of the sugar in</td>
+</tr>
+<tr>
+<td style="text-align: left">@v0-</td>
+<td style="text-align: left">the four atoms that are required to calculate the v0 sugar dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@v1-</td>
+<td style="text-align: left">the four atoms that are required to calculate the v1 sugar dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@v2-</td>
+<td style="text-align: left">the four atoms that are required to calculate the v2 sugar dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@v3-</td>
+<td style="text-align: left">the four atoms that are required to calculate the v3 sugar dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@v4-</td>
+<td style="text-align: left">the four atoms that are required to calculate the v4 sugar dihedral for</td>
+</tr>
+<tr>
+<td style="text-align: left">@vmd:</td>
+<td style="text-align: left">atom selection built using syntax for <a href="https://www.ks.uiuc.edu/Research/vmd/">VMD</a> python module</td>
+</tr>
+<tr>
+<td style="text-align: left">@vmdexec:</td>
+<td style="text-align: left">atom selection built using syntax for <a href="https://www.ks.uiuc.edu/Research/vmd/">VMD</a></td>
+</tr>
+<tr>
+<td style="text-align: left">@water</td>
+<td style="text-align: left">all water molecules</td>
+</tr>
+<tr>
+<td style="text-align: left">@zeta-</td>
+<td style="text-align: left">the four atoms that are required to calculate the zeta backbone dihedral for</td>
+</tr>
+</tbody></table>
+
+<p>In the table above you will find the following shortcuts that allow you to select atoms that are not part of one specific residue:</p>
+<div class="highlight"><pre><span></span><code>@nucleic : all atoms that are part of a DNA or RNA molecule
+@protein : all atoms that are part of a protein
+@water : all water molecules
+@ions : all the ions
+@hydrogens : all hydrogen atoms (those for which the first non-number in the name is a H)
+@nonhydrogens : all non hydrogen atoms (those for which the first non-number in the name is not a H)
+</code></pre></div>
+<div class="admonition caution">
+<p>Be careful since these choices are based on common names used in PDB files. Always check if
+the selected atoms are correct.</p>
+</div>
+<p>When you would like atoms from a specific residue you will use one of the atom selection commands from the above table with the following form:</p>
+<div class="highlight"><pre><span></span><code>@"definition"-chain_residuenum
+@"definition"-chainresiduenum
+@"definition"-residuenum
+</code></pre></div>
+<p>So for example</p>
+<div class="highlight"><pre><span></span><code>@psi-1 will select the atoms defining the psi torsion of residue 1
+@psi-C1  or @psi-C_1 will define the same torsion for residue 1 of chain C.
+@psi-3_1 will define the same torsion for residue 1 of chain 3.
+</code></pre></div>
+<p>Using the underscore to separate chain and residue is available as of PLUMED 2.5 and allows you to select chains
+with a numeric id.</p>
+<p>Breaking the table above down we see that for protein residues, the following groups are available:</p>
+<div class="highlight"><pre><span></span><code># quadruplets for dihedral angles
+@phi-#
+@psi-#
+@omega-#
+@chi1-#
+@chi2-#
+@chi3-#
+@chi4-#
+@chi5-#
+
+# all sidechain atoms (excluding glycine, including all hydrogens)
+@sidechain-#
+# all backbone atoms (including hydrogens)
+@back-#
+</code></pre></div>
+<p>while for DNA or RNA residues, the following groups are available:</p>
+<div class="highlight"><pre><span></span><code># quadruplets for backbone dihedral angles
+@alpha-#
+@beta-#
+@gamma-#
+@delta-#
+@epsilon-#
+@zeta-#
+
+# quadruplets for sugar dihedral angles
+@v0-#
+@v1-#
+@v2-#
+@v3-#
+@v4-#
+
+# quadruplet corresponding to the chi torsional angle
+@chi-#
+
+# backbone, sugar, and base heavy atoms
+@back-#
+@sugar-#
+@base-#
+
+# ordered triplets of atoms on the 6-membered ring of nucleobases
+# namely:
+#  C2/C4/C6 for pyrimidines
+#  C2/C6/C4 for purines
+@lcs-#
+</code></pre></div>
+<p>Notice that <code>zeta</code> and <code>epsilon</code> groups should not be used on 3' end residue and <code>alpha</code> and <code>beta</code>
+should not be used on 5' end residue.</p>
+<p>Furthermore it is also possible to pick single atoms using the syntax
+<code>atom-chain_residuenum</code>, <code>@atom-chainresiduenum</code> or <code>@atom-residuenum</code>.
+As of PLUMED 2.5, this also works when the residue is not a protein/rna/dna residue.
+For instance, <code>@OW-100</code> will select oxygen of water molecule with residue number 100.</p>
+<p>Finally, notice that some shortcuts are available even when you not using the MOLINFO command.</p>
+<div class="admonition caution">
+<p>If a residue-chain is repeated twice in the reference pdb only the first entry will be selected.</p>
+</div>
+<div class="admonition caution">
+<p>At the moment the HA1 atoms in a GLY residues are treated as if they are the CB atoms. This may or
+may not be true - GLY is problematic for secondary structure residues as it is achiral.</p>
+</div>
+<div class="admonition caution">
+<p>If you use WHOLEMOLECULES RESIDUES=1-10 for a 18 amino acid protein
+( 18 amino acids + 2 terminal groups = 20 residues ) the code will fail as it will not be able to
+interpret terminal residue 1.</p>
+</div>
+<h2 id="advanced-atom-selection-with-mdtraj-or-mdanalysis">Advanced atom selection with mdtraj or MDAnalysis</h2>
+<p>Since PLUMED 2.6 it is possible to use the expressive selection syntax of <a href="http://mdtraj.org/latest/atom_selection.html">mdtraj</a> and/or <a href="https://www.mdanalysis.org/docs/documentation_pages/selections.html">MDAnalysis</a>:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MOLINFO.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MOLINFO.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS MOLFILE=regtest/basic/rt32/helix.pdb</span>
+<span class="plumedtooltip" style="color:green">MOLINFO<span class="right">This command is used to provide information on the molecules that are present in your system. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">STRUCTURE<span class="right">a file in pdb format containing a reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt32/helix.pdb<div class="right"> Click <a onclick='openModal("MOLINFO.md_working_4.datregtest/basic/rt32/helix.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="MOLINFO.md_working_4.datregtest/basic/rt32/helix.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("MOLINFO.md_working_4.datregtest/basic/rt32/helix.pdb1")'>&times;</span>  <h2>FILE: regtest/basic/rt32/helix.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1 HH31 ACE     1      -9.105  -2.402  21.804  0.00  0.00            
+ATOM      2  CH3 ACE     1      -8.930  -3.352  22.308  0.00  0.00            
+ATOM      3 HH32 ACE     1      -9.504  -3.501  23.223  0.00  0.00            
+ATOM      4 HH33 ACE     1      -9.067  -4.173  21.604  0.00  0.00            
+ATOM      5  C   ACE     1      -7.450  -3.303  22.659  0.00  0.00            
+...
+ATOM    129  CH3 NME    14      -1.690  -7.089  20.487  0.00  0.00            
+ATOM    130 HH31 NME    14      -1.873  -6.629  21.459  0.00  0.00            
+ATOM    131 HH32 NME    14      -1.152  -6.284  19.986  0.00  0.00            
+ATOM    132 HH33 NME    14      -1.135  -8.020  20.602  0.00  0.00            
+END
+</pre></div>  </div></div> <span class="plumedtooltip">PYTHON_BIN<span class="right"> python interpreter<i></i></span></span>=python
+<span style="display:none;" id="MOLINFO.md_working_4.dat">The MOLINFO action with label <b></b> calculates something</span><b name="MOLINFO.md_working_4.datg1" onclick='showPath("MOLINFO.md_working_4.dat","MOLINFO.md_working_4.datg1","MOLINFO.md_working_4.datg1","violet")'>g1</b><span style="display:none;" id="MOLINFO.md_working_4.datg1">The GROUP action with label <b>g1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g1</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=<span class="plumedtooltip">@mda:<span class="right">atom selection built using syntax for <a href="https://docs.mdanalysis.org/stable/documentation_pages/selections.html">MDAnalysis</a>.  <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>backbone
+<b name="MOLINFO.md_working_4.datg2" onclick='showPath("MOLINFO.md_working_4.dat","MOLINFO.md_working_4.datg2","MOLINFO.md_working_4.datg2","violet")'>g2</b><span style="display:none;" id="MOLINFO.md_working_4.datg2">The GROUP action with label <b>g2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g2</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>={<span class="plumedtooltip">@mda:<span class="right">atom selection built using syntax for <a href="https://docs.mdanalysis.org/stable/documentation_pages/selections.html">MDAnalysis</a>.  <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>{resnum 1 or resid 3:5}}
+<b name="MOLINFO.md_working_4.datg3" onclick='showPath("MOLINFO.md_working_4.dat","MOLINFO.md_working_4.datg3","MOLINFO.md_working_4.datg3","violet")'>g3</b><span style="display:none;" id="MOLINFO.md_working_4.datg3">The GROUP action with label <b>g3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g3</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>={<span class="plumedtooltip">@mda:<span class="right">atom selection built using syntax for <a href="https://docs.mdanalysis.org/stable/documentation_pages/selections.html">MDAnalysis</a>.  <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>{resid 3:5} @mda:{resnum 1}}
+<b name="MOLINFO.md_working_4.datg4" onclick='showPath("MOLINFO.md_working_4.dat","MOLINFO.md_working_4.datg4","MOLINFO.md_working_4.datg4","violet")'>g4</b><span style="display:none;" id="MOLINFO.md_working_4.datg4">The GROUP action with label <b>g4</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g4</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>={<span class="plumedtooltip">@mdt:<span class="right">atom selection built using syntax for <a href="https://www.mdtraj.org/1.9.8.dev0/index.html">mdtraj</a>.  <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>{protein and (backbone or resname ALA)}}
+<b name="MOLINFO.md_working_4.datg5" onclick='showPath("MOLINFO.md_working_4.dat","MOLINFO.md_working_4.datg5","MOLINFO.md_working_4.datg5","violet")'>g5</b><span style="display:none;" id="MOLINFO.md_working_4.datg5">The GROUP action with label <b>g5</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g5</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>={<span class="plumedtooltip">@mdt:<span class="right">atom selection built using syntax for <a href="https://www.mdtraj.org/1.9.8.dev0/index.html">mdtraj</a>.  <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>{mass 5.5 to 20}} <span style="color:blue" class="comment"># masses guessed by mdtraj based on atom type!</span>
+<b name="MOLINFO.md_working_4.datg6" onclick='showPath("MOLINFO.md_working_4.dat","MOLINFO.md_working_4.datg6","MOLINFO.md_working_4.datg6","violet")'>g6</b><span style="display:none;" id="MOLINFO.md_working_4.datg6">The GROUP action with label <b>g6</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">g6</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>={<span class="plumedtooltip">@mda:<span class="right">atom selection built using syntax for <a href="https://docs.mdanalysis.org/stable/documentation_pages/selections.html">MDAnalysis</a>.  <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span><span class="plumedtooltip">{resid 3:5} 1-10 @mda:{resnum 1}<span class="right">the resid 3:5} 1 atom in residue 10 @mda:{resnum 1}. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>}
+</pre></div>
+
+<p>Here <code>@mda:</code> indicates that the <code>MDAnalysis</code> language is used, whereas <code>@mdt:</code> indicates that the <code>mdtraj</code> language is used. Notice that these languages typically select atoms in order. If you want to specify a different order, you can chain definitions as in <code>g3</code> above (compare with <code>g2</code>). Selections can be also chained with standard PLUMED selections (see <code>g6</code>).</p>
+<p>The double braces are required due to the way PLUMED parses atom lists. In particular:</p>
+<ul>
+<li>The outer braces are needed to show PLUMED where the <code>ATOMS=...</code> option ends.</li>
+<li>The inner braces are needed to show PLUMED where each selector ends.</li>
+</ul>
+<p>MDAnalysis also supports geometric selectors based on atomic coordinates. These selectors <strong>are static</strong> and return lists computed using the coordinates stored in the <code>MOLINFO</code> pdb file.</p>
+<p>In order to use this syntax you should check the following points at runtime:</p>
+<ol>
+<li><code>plumed --no-mpi config has subprocess</code> prints <code>subprocess on</code> (should be ok on most UNIX systems).</li>
+<li>You have a python interpreter with mdtraj and/or MDAnalysis installed. You can check using:</li>
+<li><code>python -c "import mdtraj"</code></li>
+<li><code>python -c "import MDAnalysis"</code></li>
+</ol>
+<p>In order to install these packages refer to their documentation. Pip or conda install should be ok, provided you make sure the correct python interpreter is in the execution PATH at runtime. Notice that you will only need the package(s) related to the syntax that you want to use.
+3. In case you installed these modules on a python with a different name (e.g. <code>python3.6</code>), the correct check is:
+   - <code>python3.6 -c "import mdtraj"</code>
+   - <code>python3.6 -c "import MDAnalysis"</code></p>
+<p>If this is the case, you should set the environment variable <code>export PYTHON_BIN=python3.6</code> or <code>export PLUMED_PYTHON_BIN=python3.6</code> (higher priority). Alternatively, directly provide the interpreter in the PLUMED input file
+   using <code>MOLINFO PYTHON_BIN=python3.6</code> (even higher priority).
+4. The PDB file that you provide to <code>MOLINFO</code> should have consecutive atom numbers starting from 1. This is currently enforced since reading atom numbers out of order (as PLUMED does) is not supported by other packages.</p>
+<h2 id="advanced-atom-selection-with-vmd-experimental">Advanced atom selection with VMD (experimental)</h2>
+<p>Similarly to the <code>@mda:</code> and <code>@mdt:</code> selectors above, you can use the two following selectors in order to
+access to <a href="https://www.ks.uiuc.edu/Research/vmd/">VMD</a> syntax for atoms selection:
+- <code>@vmdexec:</code>: This selector launches an instance of VMD, so <code>vmd</code> executable should be in your execution path.
+  Might be very slow or even crash your simulation. Notice that even if <code>vmd</code> executable is used,
+  the implementation is still python based and so a working python interpreter should be provided.
+- <code>@vmd:</code>: This selector tries to import the <code>vmd</code> python module. Notice that the best way to obtain this module
+  is not within the standard VMD installer but rather by installing the python
+  module that can be found at <a href="http://github.com/Eigenstate/vmd-python">this link</a>.
+  The module is also available on <a href="https://anaconda.org/conda-forge/vmd-python">conda</a>.
+  You should make sure the module is available in the python interpreter used by MOLINFO
+  (check using the command <code>python -c "import vmd"</code>).</p>
+<p>These two selectors are experimental and might be removed at some point.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_atoms/">atoms</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CHAIN</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">(for masochists ( mostly Davide Branduardi ) ) The atoms involved in each of the chains of interest in the structure</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">CHAIN<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">(for masochists ( mostly Davide Branduardi ) ) The atoms involved in each of the chains of interest in the structure</td>
+</tr>
+<tr>
+<td style="text-align: left;">STRUCTURE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">a file in pdb format containing a reference structure</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOLTYPE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">protein</td>
+<td style="text-align: left;">what kind of molecule is contained in the pdb file - usually not needed since protein/RNA/DNA are compatible</td>
+</tr>
+<tr>
+<td style="text-align: left;">PYTHON_BIN</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">default</td>
+<td style="text-align: left;">python interpreter</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">WHOLE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">The reference structure is whole, i</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

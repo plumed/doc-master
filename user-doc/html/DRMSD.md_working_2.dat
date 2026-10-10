@@ -1,0 +1,6 @@
+#SETTINGS INPUTFILES=regtest/basic/rt-drmsd/test0.pdb
+d: DRMSD ...
+  REFERENCE=regtest/basic/rt-drmsd/test0.pdb
+  LOWER_CUTOFF=0.1 UPPER_CUTOFF=0.8 TYPE=INTER-DRMSD
+  SQUARED
+...

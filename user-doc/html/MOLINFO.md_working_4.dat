@@ -1,0 +1,8 @@
+#SETTINGS MOLFILE=regtest/basic/rt32/helix.pdb
+MOLINFO STRUCTURE=regtest/basic/rt32/helix.pdb PYTHON_BIN=python
+g1: GROUP ATOMS=@mda:backbone
+g2: GROUP ATOMS={@mda:{resnum 1 or resid 3:5}}
+g3: GROUP ATOMS={@mda:{resid 3:5} @mda:{resnum 1}}
+g4: GROUP ATOMS={@mdt:{protein and (backbone or resname ALA)}}
+g5: GROUP ATOMS={@mdt:{mass 5.5 to 20}} # masses guessed by mdtraj based on atom type!
+g6: GROUP ATOMS={@mda:{resid 3:5} 1-10 @mda:{resnum 1}}

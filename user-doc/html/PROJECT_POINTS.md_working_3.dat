@@ -1,0 +1,18 @@
+#SETTINGS INPUTFILES=regtest/trajectories/path_msd/allv.pdb
+
+# This action reads in the landmarks in the high dimensional space and calculates the
+# distances from the instantaneous configuration
+rmsd: RMSD SQUARED TYPE=OPTIMAL REFERENCE=regtest/trajectories/path_msd/allv.pdb
+
+# The weights of the landmarks
+weights: ONES SIZE=42
+
+# The projections of the landmarks in the low dimensional space
+X: PDB2CONSTANT ARG=X NOARGS REFERENCE=regtest/trajectories/path_msd/allv.pdb
+Y: PDB2CONSTANT ARG=Y NOARGS REFERENCE=regtest/trajectories/path_msd/allv.pdb
+
+# Generate the projection of the instantaneous coordinates
+proj: PROJECT_POINTS ARG=X,Y TARGET1=rmsd WEIGHTS1=weights
+
+# And output the projection to a file
+PRINT ARG=proj.* FILE=colvar

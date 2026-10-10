@@ -1,0 +1,14 @@
+soap: METATOMIC ...
+    MODEL=path/to/model.pt
+    EXTENSIONS_DIRECTORY=path/to/extensions/
+    DEVICE=cuda
+    CHECK_CONSISTENCY
+
+    SPECIES1=1-10
+    SPECIES2=11-20
+    SPECIES_TO_TYPES=8,13
+
+    # only run the calculation for the Aluminium (type 13) atoms,
+    # still including all other atoms as potential neighbors.
+    SELECTED_ATOMS=11-20
+...

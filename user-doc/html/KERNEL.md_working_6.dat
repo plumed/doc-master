@@ -1,0 +1,4 @@
+#SETTINGS INPUTFILES=regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp
+phi: TORSION ATOMS1=1,2,3,4 ATOMS2=9,10,11,12 ATOMS3=17,18,19,20
+psi: TORSION ATOMS1=5,6,7,8 ATOMS2=13,14,15,16 ATOMS3=21,22,23,24
+k: KERNEL ARG=phi,psi REFERENCE=regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp NUMBER=3

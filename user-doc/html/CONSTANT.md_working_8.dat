@@ -1,0 +1,4 @@
+cn: CONSTANT VALUE=1.0
+dis: DISTANCE ATOMS=1,2
+sss: SORT ARG=cn,dis
+PRINT ARG=sss.1

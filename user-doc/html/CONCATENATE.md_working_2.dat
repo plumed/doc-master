@@ -1,0 +1,23 @@
+# Define two groups of atoms
+g: GROUP ATOMS=1-5
+h: GROUP ATOMS=6-20
+
+# Calculate the CONTACT_MATRIX for the atoms in group g
+cg: CONTACT_MATRIX GROUP=g SWITCH={RATIONAL R_0=0.1}
+
+# Calculate the CONTACT_MATRIX for the atoms in group h
+ch: CONTACT_MATRIX GROUP=h SWITCH={RATIONAL R_0=0.2}
+
+# Calculate the CONTACT_MATRIX between the atoms in group g and group h
+cgh: CONTACT_MATRIX GROUPA=g GROUPB=h SWITCH={RATIONAL R_0=0.15}
+
+# Now calculate the contact matrix between the atoms in group h and group h
+# Notice this is just the transpose of cgh
+cghT: TRANSPOSE ARG=cgh
+
+# And concatenate the matrices together to construct the adjacency matrix between the
+# adjacency matrices
+m: CONCATENATE ...
+ MATRIX11=cg MATRIX12=cgh
+ MATRIX21=cghT MATRIX22=ch
+...

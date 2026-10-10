@@ -1,0 +1,9 @@
+#SETTINGS INPUTFILES=regtest/basic/rt15/Distance3.cpp
+# compute standard distance
+d: DISTANCE ATOMS=1,10
+# load the new definition
+LOAD FILE=regtest/basic/rt15/Distance3.cpp
+# compute modified distance
+d2: DISTANCE ATOMS=1,10
+# print them on a file
+PRINT ARG=d,d2 FILE=compare-them

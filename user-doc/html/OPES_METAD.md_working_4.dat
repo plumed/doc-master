@@ -1,0 +1,11 @@
+phi: TORSION ATOMS=5,7,9,15
+psi: TORSION ATOMS=7,9,15,17
+xx: CUSTOM PERIODIC=NO ARG=phi FUNC=step(x+0.6)-step(x-0.7)
+opes: OPES_METAD ...
+  ARG=phi,psi
+  PACE=500
+  BARRIER=30
+  EXCLUDED_REGION=xx
+  NLIST
+...
+PRINT FMT=%g STRIDE=500 FILE=COLVAR ARG=phi,psi,xx,opes.*

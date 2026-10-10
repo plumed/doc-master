@@ -1,0 +1,10 @@
+#in a system of 4 molecules, each with 3 atoms
+#define quaternions 1-4
+quats12: QUATERNION ATOMS1=1,2,3 ATOMS2=4,5,6
+quats34: QUATERNION ATOMS1=7,8,9 ATOMS2=10,11,12
+
+#take the outer product of 1,2 and 3,4
+qp: QUATERNION_PRODUCT_MATRIX ARG=quats12.*,quats34.* #notice the asterisk
+#the components need to be passed in the order w1,x1,y1,z1,w2,x2,y2,z2
+#now use in an order parameter
+bpw: CUSTOM ARG=qp.* VAR=w,x,y,z FUNC=exp(w/2+x/2+y/2+z/2) PERIODIC=NO

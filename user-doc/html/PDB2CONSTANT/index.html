@@ -1,0 +1,1572 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: PDB2CONSTANT - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-pdb2constant" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: PDB2CONSTANT
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pdb-file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The PDB file format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#including-arguments-in-pdb-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Including arguments in PDB files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#occupancy-and-beta-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Occupancy and beta factors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systems-with-more-than-100k-atoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systems with more than 100k atoms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-pdb2constant"><a href="../shortcuts/">Shortcut</a>: PDB2CONSTANT</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_generic/"><strong>generic</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Create a constant value from a PDB input file</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=PDB2CONSTANT"><img alt="used in 1 tutorials" src="https://img.shields.io/badge/tutorials-1-green.svg" /></a><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">a value that is constructed from the information in the PDB file</td>
+<td style="text-align: center;">scalar/vector/matrix</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Create a constant value from a PDB input file</p>
+<p>This shortcut converts the contents of a PDB file to one or more <a href="../CONSTANT/">CONSTANT</a> actions.
+Converting PDB files to Values in this way is useful because it means that when we implement methods, like those
+in the <a href="../module_refdist/">refdist</a> or <a href="../module_mapping/">mapping</a> modules or the <a href="../RMSD/">RMSD</a> action, that calculate the distance between two
+configurations those two configurations are both stored in PLUMED values. The same code can thus be used to
+calculate the difference between the instantaneous configuration
+and a constant reference configuration that was read from a file or between two reference configuration.</p>
+<p>The following example illustrates how this action can be used to read a set of reference atomic positions</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PDB2CONSTANT.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PDB2CONSTANT.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/basic/rt19/test0.pdb</span>
+<span id="PDB2CONSTANT.md_working_1.datref_short"><span id="PDB2CONSTANT.md_working_1.datdefref_short"><b name="PDB2CONSTANT.md_working_1.datref" onclick='showPath("PDB2CONSTANT.md_working_1.dat","PDB2CONSTANT.md_working_1.datref","PDB2CONSTANT.md_working_1.datref_shortcut","red")'>ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_1.datref_shortcut">The PDB2CONSTANT action with label <b>ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref</td><td width="5%"><font color="red">matrix</font></td><td>a value that is constructed from the information in the PDB file</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_1.datref");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_1.datdefref");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt19/test0.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_1.datregtest/basic/rt19/test0.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_1.datregtest/basic/rt19/test0.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_1.datregtest/basic/rt19/test0.pdb1")'>&times;</span>  <h2>FILE: regtest/basic/rt19/test0.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      2  O   ALA     2      -0.926  -2.447  -0.497  1.00  1.00      DIA  O
+ATOM      4  HNT ALA     2       0.533  -0.396   1.184  1.00  1.00      DIA  H
+ATOM      6  HT1 ALA     2      -0.216  -2.590   1.371  1.00  1.00      DIA  H
+ATOM      7  HT2 ALA     2      -0.309  -1.255   2.315  1.00  1.00      DIA  H
+ATOM      8  HT3 ALA     2      -1.480  -1.560   1.212  1.00  1.00      DIA  H
+ATOM      9  CAY ALA     2      -0.096   2.144  -0.669  1.00  1.00      DIA  C
+ATOM     10  HY1 ALA     2       0.871   2.385  -0.588  1.00  1.00      DIA  H
+ATOM     12  HY3 ALA     2      -0.520   2.679  -1.400  1.00  1.00      DIA  H
+ATOM     14  OY  ALA     2      -1.139   0.931  -0.973  1.00  1.00      DIA  O
+ATOM     16  HN  ALA     2       1.713   1.021  -0.873  1.00  1.00      DIA  H
+ATOM     18  HA  ALA     2       0.099  -0.774  -2.218  1.00  1.00      DIA  H
+ATOM     19  CB  ALA     2       2.063  -1.223  -1.276  1.00  1.00      DIA  C
+ATOM     20  HB1 ALA     2       2.670  -0.716  -2.057  1.00  1.00      DIA  H
+ATOM     21  HB2 ALA     2       2.556  -1.051  -0.295  1.00  1.00      DIA  H
+ATOM     22  HB3 ALA     2       2.070  -2.314  -1.490  1.00  1.00      DIA  H
+</pre></div>  </div></div>
+</span><span id="PDB2CONSTANT.md_working_1.datdefref_long" style="display:none;"><b name="PDB2CONSTANT.md_working_1.datref" onclick='showPath("PDB2CONSTANT.md_working_1.dat","PDB2CONSTANT.md_working_1.datref","PDB2CONSTANT.md_working_1.datref_shortcut","red")'>ref</b>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_1.datref");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_1.datdefref");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt19/test0.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_1.datregtest/basic/rt19/test0.pdb2")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_1.datregtest/basic/rt19/test0.pdb2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_1.datregtest/basic/rt19/test0.pdb2")'>&times;</span>  <h2>FILE: regtest/basic/rt19/test0.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      2  O   ALA     2      -0.926  -2.447  -0.497  1.00  1.00      DIA  O
+ATOM      4  HNT ALA     2       0.533  -0.396   1.184  1.00  1.00      DIA  H
+ATOM      6  HT1 ALA     2      -0.216  -2.590   1.371  1.00  1.00      DIA  H
+ATOM      7  HT2 ALA     2      -0.309  -1.255   2.315  1.00  1.00      DIA  H
+ATOM      8  HT3 ALA     2      -1.480  -1.560   1.212  1.00  1.00      DIA  H
+ATOM      9  CAY ALA     2      -0.096   2.144  -0.669  1.00  1.00      DIA  C
+ATOM     10  HY1 ALA     2       0.871   2.385  -0.588  1.00  1.00      DIA  H
+ATOM     12  HY3 ALA     2      -0.520   2.679  -1.400  1.00  1.00      DIA  H
+ATOM     14  OY  ALA     2      -1.139   0.931  -0.973  1.00  1.00      DIA  O
+ATOM     16  HN  ALA     2       1.713   1.021  -0.873  1.00  1.00      DIA  H
+ATOM     18  HA  ALA     2       0.099  -0.774  -2.218  1.00  1.00      DIA  H
+ATOM     19  CB  ALA     2       2.063  -1.223  -1.276  1.00  1.00      DIA  C
+ATOM     20  HB1 ALA     2       2.670  -0.716  -2.057  1.00  1.00      DIA  H
+ATOM     21  HB2 ALA     2       2.556  -1.051  -0.295  1.00  1.00      DIA  H
+ATOM     22  HB3 ALA     2       2.070  -2.314  -1.490  1.00  1.00      DIA  H
+</pre></div>  </div></div>  <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=0
+</span></span><span id="PDB2CONSTANT.md_working_1.datref_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PDB2CONSTANT.md_working_1.datref")'># ref: PDB2CONSTANT REFERENCE=regtest/basic/rt19/test0.pdb</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PDB2CONSTANT.md_working_1.datref" onclick='showPath("PDB2CONSTANT.md_working_1.dat","PDB2CONSTANT.md_working_1.datref","PDB2CONSTANT.md_working_1.datref","red")'>ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_1.datref">The CONSTANT action with label <b>ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=1 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=45 <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-0.145193,0.000706667,-0.0741933,-0.0834933,-0.200593,-0.0621933,0.0345067,-0.104593,-0.166493,0.118707,-0.0426933,0.153707,0.214407,0.203007,0.154407,-0.21026,-0.00516,-0.22456,-0.09106,-0.12156,0.24884,0.27294,0.30234,0.12754,0.13654,-0.04296,-0.08786,-0.03716,-0.07066,-0.19696,-0.00800667,0.160093,0.178793,0.273193,0.162893,-0.0252067,-0.0171067,-0.0983067,-0.0556067,-0.0456067,-0.180107,-0.0859067,-0.164007,0.0121933,-0.107307
+<span style="color:blue"># --- End of included input --- </span></span></pre></div>
+
+<p>You can see how the reference positions are converted to <a href="../CONSTANT/">CONSTANT</a> action that outputs a vector by expanding the shortcut.</p>
+<p>You can also use this command to read in multiple reference positions as illustrated below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PDB2CONSTANT.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PDB2CONSTANT.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/mapping/rt-pathtools-3/all.pdb</span>
+<span id="PDB2CONSTANT.md_working_2.datref_short"><span id="PDB2CONSTANT.md_working_2.datdefref_short"><b name="PDB2CONSTANT.md_working_2.datref" onclick='showPath("PDB2CONSTANT.md_working_2.dat","PDB2CONSTANT.md_working_2.datref","PDB2CONSTANT.md_working_2.datref_shortcut","red")'>ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_2.datref_shortcut">The PDB2CONSTANT action with label <b>ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref</td><td width="5%"><font color="red">matrix</font></td><td>a value that is constructed from the information in the PDB file</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_2.datref");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_2.datdefref");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pathtools-3/all.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_2.datregtest/mapping/rt-pathtools-3/all.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_2.datregtest/mapping/rt-pathtools-3/all.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_2.datregtest/mapping/rt-pathtools-3/all.pdb1")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pathtools-3/all.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1  CL  ALA     1      -3.171   0.295   2.045  1.00  1.00
+ATOM      5  CLP ALA     1      -1.819  -0.143   1.679  1.00  1.00
+ATOM      6  OL  ALA     1      -1.177  -0.889   2.401  1.00  1.00
+ATOM      7  NL  ALA     1      -1.313   0.341   0.529  1.00  1.00
+ATOM      8  HL  ALA     1      -1.845   0.961  -0.011  1.00  1.00
+ATOM      9  CA  ALA     1      -0.003  -0.019   0.021  1.00  1.00
+ATOM     10  HA  ALA     1       0.205  -1.051   0.259  1.00  1.00
+ATOM     11  CB  ALA     1       0.009   0.135  -1.509  1.00  1.00
+ATOM     15  CRP ALA     1       1.121   0.799   0.663  1.00  1.00
+ATOM     16  OR  ALA     1       1.723   1.669   0.043  1.00  1.00
+ATOM     17  NR  ALA     1       1.423   0.519   1.941  1.00  1.00
+ATOM     18  HR  ALA     1       0.873  -0.161   2.413  1.00  1.00
+ATOM     19  CR  ALA     1       2.477   1.187   2.675  1.00  1.00
+END
+FIXED
+ATOM      1  CL  ALA     1      -3.175   0.365   2.024  1.00  1.00
+ATOM      5  CLP ALA     1      -1.814  -0.106   1.685  1.00  1.00
+ATOM      6  OL  ALA     1      -1.201  -0.849   2.425  1.00  1.00
+ATOM      7  NL  ALA     1      -1.296   0.337   0.534  1.00  1.00
+ATOM      8  HL  ALA     1      -1.807   0.951  -0.044  1.00  1.00
+ATOM      9  CA  ALA     1       0.009  -0.067   0.033  1.00  1.00
+ATOM     10  HA  ALA     1       0.175  -1.105   0.283  1.00  1.00
+ATOM     11  CB  ALA     1       0.027   0.046  -1.501  1.00  1.00
+ATOM     15  CRP ALA     1       1.149   0.725   0.654  1.00  1.00
+ATOM     16  OR  ALA     1       1.835   1.491  -0.011  1.00  1.00
+ATOM     17  NR  ALA     1       1.380   0.537   1.968  1.00  1.00
+ATOM     18  HR  ALA     1       0.764  -0.060   2.461  1.00  1.00
+ATOM     19  CR  ALA     1       2.431   1.195   2.683  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -2.990   0.383   2.277  1.00  1.00
+ATOM      5  CLP ALA     1      -1.664  -0.085   1.831  1.00  1.00
+ATOM      6  OL  ALA     1      -0.987  -0.835   2.533  1.00  1.00
+ATOM      7  NL  ALA     1      -1.227   0.364   0.646  1.00  1.00
+ATOM      8  HL  ALA     1      -1.798   0.982   0.124  1.00  1.00
+ATOM      9  CA  ALA     1       0.026  -0.028   0.044  1.00  1.00
+ATOM     10  HA  ALA     1       0.224  -1.060   0.284  1.00  1.00
+ATOM     11  CB  ALA     1      -0.076   0.107  -1.483  1.00  1.00
+ATOM     15  CRP ALA     1       1.217   0.776   0.577  1.00  1.00
+ATOM     16  OR  ALA     1       1.900   1.463  -0.158  1.00  1.00
+ATOM     17  NR  ALA     1       1.494   0.666   1.888  1.00  1.00
+ATOM     18  HR  ALA     1       0.882   0.122   2.437  1.00  1.00
+ATOM     19  CR  ALA     1       2.580   1.341   2.529  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.006   0.350   2.252  1.00  1.00
+ATOM      5  CLP ALA     1      -1.680  -0.112   1.826  1.00  1.00
+ATOM      6  OL  ALA     1      -1.025  -0.896   2.508  1.00  1.00
+ATOM      7  NL  ALA     1      -1.220   0.368   0.654  1.00  1.00
+ATOM      8  HL  ALA     1      -1.771   1.013   0.137  1.00  1.00
+ATOM      9  CA  ALA     1       0.040  -0.029   0.062  1.00  1.00
+ATOM     10  HA  ALA     1       0.210  -1.076   0.277  1.00  1.00
+ATOM     11  CB  ALA     1      -0.066   0.148  -1.465  1.00  1.00
+ATOM     15  CRP ALA     1       1.241   0.738   0.605  1.00  1.00
+ATOM     16  OR  ALA     1       1.986   1.347  -0.125  1.00  1.00
+ATOM     17  NR  ALA     1       1.446   0.694   1.940  1.00  1.00
+ATOM     18  HR  ALA     1       0.796   0.210   2.481  1.00  1.00
+ATOM     19  CR  ALA     1       2.544   1.350   2.582  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.002   0.343   2.271  1.00  1.00
+ATOM      5  CLP ALA     1      -1.672  -0.125   1.828  1.00  1.00
+ATOM      6  OL  ALA     1      -1.028  -0.942   2.486  1.00  1.00
+ATOM      7  NL  ALA     1      -1.213   0.373   0.670  1.00  1.00
+ATOM      8  HL  ALA     1      -1.752   1.033   0.169  1.00  1.00
+ATOM      9  CA  ALA     1       0.041  -0.032   0.055  1.00  1.00
+ATOM     10  HA  ALA     1       0.201  -1.079   0.245  1.00  1.00
+ATOM     11  CB  ALA     1      -0.079   0.194  -1.466  1.00  1.00
+ATOM     15  CRP ALA     1       1.257   0.720   0.601  1.00  1.00
+ATOM     16  OR  ALA     1       2.057   1.240  -0.140  1.00  1.00
+ATOM     17  NR  ALA     1       1.422   0.730   1.942  1.00  1.00
+ATOM     18  HR  ALA     1       0.740   0.303   2.500  1.00  1.00
+ATOM     19  CR  ALA     1       2.528   1.373   2.598  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.144   1.457   1.417  1.00  1.00
+ATOM      5  CLP ALA     1      -1.943   0.587   1.450  1.00  1.00
+ATOM      6  OL  ALA     1      -1.588   0.028   2.480  1.00  1.00
+ATOM      7  NL  ALA     1      -1.281   0.449   0.306  1.00  1.00
+ATOM      8  HL  ALA     1      -1.578   0.914  -0.520  1.00  1.00
+ATOM      9  CA  ALA     1      -0.132  -0.428   0.139  1.00  1.00
+ATOM     10  HA  ALA     1      -0.264  -1.291   0.758  1.00  1.00
+ATOM     11  CB  ALA     1      -0.066  -0.855  -1.329  1.00  1.00
+ATOM     15  CRP ALA     1       1.193   0.220   0.554  1.00  1.00
+ATOM     16  OR  ALA     1       2.195   0.098  -0.140  1.00  1.00
+ATOM     17  NR  ALA     1       1.224   0.872   1.737  1.00  1.00
+ATOM     18  HR  ALA     1       0.399   0.943   2.273  1.00  1.00
+ATOM     19  CR  ALA     1       2.413   1.511   2.254  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.140   1.441   1.453  1.00  1.00
+ATOM      5  CLP ALA     1      -1.944   0.576   1.465  1.00  1.00
+ATOM      6  OL  ALA     1      -1.587  -0.018   2.487  1.00  1.00
+ATOM      7  NL  ALA     1      -1.274   0.465   0.322  1.00  1.00
+ATOM      8  HL  ALA     1      -1.571   0.957  -0.486  1.00  1.00
+ATOM      9  CA  ALA     1      -0.124  -0.418   0.135  1.00  1.00
+ATOM     10  HA  ALA     1      -0.274  -1.304   0.729  1.00  1.00
+ATOM     11  CB  ALA     1      -0.063  -0.813  -1.347  1.00  1.00
+ATOM     15  CRP ALA     1       1.201   0.199   0.572  1.00  1.00
+ATOM     16  OR  ALA     1       2.227   0.007  -0.072  1.00  1.00
+ATOM     17  NR  ALA     1       1.215   0.910   1.709  1.00  1.00
+ATOM     18  HR  ALA     1       0.369   1.020   2.200  1.00  1.00
+ATOM     19  CR  ALA     1       2.393   1.536   2.237  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.140   1.420   1.442  1.00  1.00
+ATOM      5  CLP ALA     1      -1.948   0.546   1.448  1.00  1.00
+ATOM      6  OL  ALA     1      -1.618  -0.065   2.460  1.00  1.00
+ATOM      7  NL  ALA     1      -1.255   0.469   0.311  1.00  1.00
+ATOM      8  HL  ALA     1      -1.538   0.979  -0.490  1.00  1.00
+ATOM      9  CA  ALA     1      -0.107  -0.412   0.124  1.00  1.00
+ATOM     10  HA  ALA     1      -0.257  -1.312   0.685  1.00  1.00
+ATOM     11  CB  ALA     1      -0.028  -0.770  -1.375  1.00  1.00
+ATOM     15  CRP ALA     1       1.217   0.186   0.600  1.00  1.00
+ATOM     16  OR  ALA     1       2.269  -0.069   0.026  1.00  1.00
+ATOM     17  NR  ALA     1       1.193   0.966   1.687  1.00  1.00
+ATOM     18  HR  ALA     1       0.333   1.114   2.120  1.00  1.00
+ATOM     19  CR  ALA     1       2.377   1.589   2.240  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.110   1.698   0.880  1.00  1.00
+ATOM      5  CLP ALA     1      -2.021   0.734   1.142  1.00  1.00
+ATOM      6  OL  ALA     1      -1.859   0.257   2.258  1.00  1.00
+ATOM      7  NL  ALA     1      -1.229   0.414   0.114  1.00  1.00
+ATOM      8  HL  ALA     1      -1.371   0.826  -0.771  1.00  1.00
+ATOM      9  CA  ALA     1      -0.173  -0.593   0.188  1.00  1.00
+ATOM     10  HA  ALA     1      -0.481  -1.374   0.851  1.00  1.00
+ATOM     11  CB  ALA     1       0.011  -1.180  -1.220  1.00  1.00
+ATOM     15  CRP ALA     1       1.163  -0.060   0.716  1.00  1.00
+ATOM     16  OR  ALA     1       2.227  -0.564   0.393  1.00  1.00
+ATOM     17  NR  ALA     1       1.127   0.960   1.594  1.00  1.00
+ATOM     18  HR  ALA     1       0.234   1.295   1.847  1.00  1.00
+ATOM     19  CR  ALA     1       2.303   1.549   2.172  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.139   1.652   0.924  1.00  1.00
+ATOM      5  CLP ALA     1      -2.039   0.698   1.169  1.00  1.00
+ATOM      6  OL  ALA     1      -1.868   0.201   2.278  1.00  1.00
+ATOM      7  NL  ALA     1      -1.239   0.411   0.139  1.00  1.00
+ATOM      8  HL  ALA     1      -1.385   0.842  -0.737  1.00  1.00
+ATOM      9  CA  ALA     1      -0.173  -0.574   0.193  1.00  1.00
+ATOM     10  HA  ALA     1      -0.477  -1.381   0.833  1.00  1.00
+ATOM     11  CB  ALA     1       0.029  -1.142  -1.231  1.00  1.00
+ATOM     15  CRP ALA     1       1.162  -0.048   0.731  1.00  1.00
+ATOM     16  OR  ALA     1       2.220  -0.597   0.472  1.00  1.00
+ATOM     17  NR  ALA     1       1.122   1.024   1.537  1.00  1.00
+ATOM     18  HR  ALA     1       0.233   1.395   1.752  1.00  1.00
+ATOM     19  CR  ALA     1       2.300   1.629   2.102  1.00  1.00
+END
+</pre></div>  </div></div>
+</span><span id="PDB2CONSTANT.md_working_2.datdefref_long" style="display:none;"><b name="PDB2CONSTANT.md_working_2.datref" onclick='showPath("PDB2CONSTANT.md_working_2.dat","PDB2CONSTANT.md_working_2.datref","PDB2CONSTANT.md_working_2.datref_shortcut","red")'>ref</b>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_2.datref");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_2.datdefref");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pathtools-3/all.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_2.datregtest/mapping/rt-pathtools-3/all.pdb2")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_2.datregtest/mapping/rt-pathtools-3/all.pdb2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_2.datregtest/mapping/rt-pathtools-3/all.pdb2")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pathtools-3/all.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1  CL  ALA     1      -3.171   0.295   2.045  1.00  1.00
+ATOM      5  CLP ALA     1      -1.819  -0.143   1.679  1.00  1.00
+ATOM      6  OL  ALA     1      -1.177  -0.889   2.401  1.00  1.00
+ATOM      7  NL  ALA     1      -1.313   0.341   0.529  1.00  1.00
+ATOM      8  HL  ALA     1      -1.845   0.961  -0.011  1.00  1.00
+ATOM      9  CA  ALA     1      -0.003  -0.019   0.021  1.00  1.00
+ATOM     10  HA  ALA     1       0.205  -1.051   0.259  1.00  1.00
+ATOM     11  CB  ALA     1       0.009   0.135  -1.509  1.00  1.00
+ATOM     15  CRP ALA     1       1.121   0.799   0.663  1.00  1.00
+ATOM     16  OR  ALA     1       1.723   1.669   0.043  1.00  1.00
+ATOM     17  NR  ALA     1       1.423   0.519   1.941  1.00  1.00
+ATOM     18  HR  ALA     1       0.873  -0.161   2.413  1.00  1.00
+ATOM     19  CR  ALA     1       2.477   1.187   2.675  1.00  1.00
+END
+FIXED
+ATOM      1  CL  ALA     1      -3.175   0.365   2.024  1.00  1.00
+ATOM      5  CLP ALA     1      -1.814  -0.106   1.685  1.00  1.00
+ATOM      6  OL  ALA     1      -1.201  -0.849   2.425  1.00  1.00
+ATOM      7  NL  ALA     1      -1.296   0.337   0.534  1.00  1.00
+ATOM      8  HL  ALA     1      -1.807   0.951  -0.044  1.00  1.00
+ATOM      9  CA  ALA     1       0.009  -0.067   0.033  1.00  1.00
+ATOM     10  HA  ALA     1       0.175  -1.105   0.283  1.00  1.00
+ATOM     11  CB  ALA     1       0.027   0.046  -1.501  1.00  1.00
+ATOM     15  CRP ALA     1       1.149   0.725   0.654  1.00  1.00
+ATOM     16  OR  ALA     1       1.835   1.491  -0.011  1.00  1.00
+ATOM     17  NR  ALA     1       1.380   0.537   1.968  1.00  1.00
+ATOM     18  HR  ALA     1       0.764  -0.060   2.461  1.00  1.00
+ATOM     19  CR  ALA     1       2.431   1.195   2.683  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -2.990   0.383   2.277  1.00  1.00
+ATOM      5  CLP ALA     1      -1.664  -0.085   1.831  1.00  1.00
+ATOM      6  OL  ALA     1      -0.987  -0.835   2.533  1.00  1.00
+ATOM      7  NL  ALA     1      -1.227   0.364   0.646  1.00  1.00
+ATOM      8  HL  ALA     1      -1.798   0.982   0.124  1.00  1.00
+ATOM      9  CA  ALA     1       0.026  -0.028   0.044  1.00  1.00
+ATOM     10  HA  ALA     1       0.224  -1.060   0.284  1.00  1.00
+ATOM     11  CB  ALA     1      -0.076   0.107  -1.483  1.00  1.00
+ATOM     15  CRP ALA     1       1.217   0.776   0.577  1.00  1.00
+ATOM     16  OR  ALA     1       1.900   1.463  -0.158  1.00  1.00
+ATOM     17  NR  ALA     1       1.494   0.666   1.888  1.00  1.00
+ATOM     18  HR  ALA     1       0.882   0.122   2.437  1.00  1.00
+ATOM     19  CR  ALA     1       2.580   1.341   2.529  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.006   0.350   2.252  1.00  1.00
+ATOM      5  CLP ALA     1      -1.680  -0.112   1.826  1.00  1.00
+ATOM      6  OL  ALA     1      -1.025  -0.896   2.508  1.00  1.00
+ATOM      7  NL  ALA     1      -1.220   0.368   0.654  1.00  1.00
+ATOM      8  HL  ALA     1      -1.771   1.013   0.137  1.00  1.00
+ATOM      9  CA  ALA     1       0.040  -0.029   0.062  1.00  1.00
+ATOM     10  HA  ALA     1       0.210  -1.076   0.277  1.00  1.00
+ATOM     11  CB  ALA     1      -0.066   0.148  -1.465  1.00  1.00
+ATOM     15  CRP ALA     1       1.241   0.738   0.605  1.00  1.00
+ATOM     16  OR  ALA     1       1.986   1.347  -0.125  1.00  1.00
+ATOM     17  NR  ALA     1       1.446   0.694   1.940  1.00  1.00
+ATOM     18  HR  ALA     1       0.796   0.210   2.481  1.00  1.00
+ATOM     19  CR  ALA     1       2.544   1.350   2.582  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.002   0.343   2.271  1.00  1.00
+ATOM      5  CLP ALA     1      -1.672  -0.125   1.828  1.00  1.00
+ATOM      6  OL  ALA     1      -1.028  -0.942   2.486  1.00  1.00
+ATOM      7  NL  ALA     1      -1.213   0.373   0.670  1.00  1.00
+ATOM      8  HL  ALA     1      -1.752   1.033   0.169  1.00  1.00
+ATOM      9  CA  ALA     1       0.041  -0.032   0.055  1.00  1.00
+ATOM     10  HA  ALA     1       0.201  -1.079   0.245  1.00  1.00
+ATOM     11  CB  ALA     1      -0.079   0.194  -1.466  1.00  1.00
+ATOM     15  CRP ALA     1       1.257   0.720   0.601  1.00  1.00
+ATOM     16  OR  ALA     1       2.057   1.240  -0.140  1.00  1.00
+ATOM     17  NR  ALA     1       1.422   0.730   1.942  1.00  1.00
+ATOM     18  HR  ALA     1       0.740   0.303   2.500  1.00  1.00
+ATOM     19  CR  ALA     1       2.528   1.373   2.598  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.144   1.457   1.417  1.00  1.00
+ATOM      5  CLP ALA     1      -1.943   0.587   1.450  1.00  1.00
+ATOM      6  OL  ALA     1      -1.588   0.028   2.480  1.00  1.00
+ATOM      7  NL  ALA     1      -1.281   0.449   0.306  1.00  1.00
+ATOM      8  HL  ALA     1      -1.578   0.914  -0.520  1.00  1.00
+ATOM      9  CA  ALA     1      -0.132  -0.428   0.139  1.00  1.00
+ATOM     10  HA  ALA     1      -0.264  -1.291   0.758  1.00  1.00
+ATOM     11  CB  ALA     1      -0.066  -0.855  -1.329  1.00  1.00
+ATOM     15  CRP ALA     1       1.193   0.220   0.554  1.00  1.00
+ATOM     16  OR  ALA     1       2.195   0.098  -0.140  1.00  1.00
+ATOM     17  NR  ALA     1       1.224   0.872   1.737  1.00  1.00
+ATOM     18  HR  ALA     1       0.399   0.943   2.273  1.00  1.00
+ATOM     19  CR  ALA     1       2.413   1.511   2.254  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.140   1.441   1.453  1.00  1.00
+ATOM      5  CLP ALA     1      -1.944   0.576   1.465  1.00  1.00
+ATOM      6  OL  ALA     1      -1.587  -0.018   2.487  1.00  1.00
+ATOM      7  NL  ALA     1      -1.274   0.465   0.322  1.00  1.00
+ATOM      8  HL  ALA     1      -1.571   0.957  -0.486  1.00  1.00
+ATOM      9  CA  ALA     1      -0.124  -0.418   0.135  1.00  1.00
+ATOM     10  HA  ALA     1      -0.274  -1.304   0.729  1.00  1.00
+ATOM     11  CB  ALA     1      -0.063  -0.813  -1.347  1.00  1.00
+ATOM     15  CRP ALA     1       1.201   0.199   0.572  1.00  1.00
+ATOM     16  OR  ALA     1       2.227   0.007  -0.072  1.00  1.00
+ATOM     17  NR  ALA     1       1.215   0.910   1.709  1.00  1.00
+ATOM     18  HR  ALA     1       0.369   1.020   2.200  1.00  1.00
+ATOM     19  CR  ALA     1       2.393   1.536   2.237  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.140   1.420   1.442  1.00  1.00
+ATOM      5  CLP ALA     1      -1.948   0.546   1.448  1.00  1.00
+ATOM      6  OL  ALA     1      -1.618  -0.065   2.460  1.00  1.00
+ATOM      7  NL  ALA     1      -1.255   0.469   0.311  1.00  1.00
+ATOM      8  HL  ALA     1      -1.538   0.979  -0.490  1.00  1.00
+ATOM      9  CA  ALA     1      -0.107  -0.412   0.124  1.00  1.00
+ATOM     10  HA  ALA     1      -0.257  -1.312   0.685  1.00  1.00
+ATOM     11  CB  ALA     1      -0.028  -0.770  -1.375  1.00  1.00
+ATOM     15  CRP ALA     1       1.217   0.186   0.600  1.00  1.00
+ATOM     16  OR  ALA     1       2.269  -0.069   0.026  1.00  1.00
+ATOM     17  NR  ALA     1       1.193   0.966   1.687  1.00  1.00
+ATOM     18  HR  ALA     1       0.333   1.114   2.120  1.00  1.00
+ATOM     19  CR  ALA     1       2.377   1.589   2.240  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.110   1.698   0.880  1.00  1.00
+ATOM      5  CLP ALA     1      -2.021   0.734   1.142  1.00  1.00
+ATOM      6  OL  ALA     1      -1.859   0.257   2.258  1.00  1.00
+ATOM      7  NL  ALA     1      -1.229   0.414   0.114  1.00  1.00
+ATOM      8  HL  ALA     1      -1.371   0.826  -0.771  1.00  1.00
+ATOM      9  CA  ALA     1      -0.173  -0.593   0.188  1.00  1.00
+ATOM     10  HA  ALA     1      -0.481  -1.374   0.851  1.00  1.00
+ATOM     11  CB  ALA     1       0.011  -1.180  -1.220  1.00  1.00
+ATOM     15  CRP ALA     1       1.163  -0.060   0.716  1.00  1.00
+ATOM     16  OR  ALA     1       2.227  -0.564   0.393  1.00  1.00
+ATOM     17  NR  ALA     1       1.127   0.960   1.594  1.00  1.00
+ATOM     18  HR  ALA     1       0.234   1.295   1.847  1.00  1.00
+ATOM     19  CR  ALA     1       2.303   1.549   2.172  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.139   1.652   0.924  1.00  1.00
+ATOM      5  CLP ALA     1      -2.039   0.698   1.169  1.00  1.00
+ATOM      6  OL  ALA     1      -1.868   0.201   2.278  1.00  1.00
+ATOM      7  NL  ALA     1      -1.239   0.411   0.139  1.00  1.00
+ATOM      8  HL  ALA     1      -1.385   0.842  -0.737  1.00  1.00
+ATOM      9  CA  ALA     1      -0.173  -0.574   0.193  1.00  1.00
+ATOM     10  HA  ALA     1      -0.477  -1.381   0.833  1.00  1.00
+ATOM     11  CB  ALA     1       0.029  -1.142  -1.231  1.00  1.00
+ATOM     15  CRP ALA     1       1.162  -0.048   0.731  1.00  1.00
+ATOM     16  OR  ALA     1       2.220  -0.597   0.472  1.00  1.00
+ATOM     17  NR  ALA     1       1.122   1.024   1.537  1.00  1.00
+ATOM     18  HR  ALA     1       0.233   1.395   1.752  1.00  1.00
+ATOM     19  CR  ALA     1       2.300   1.629   2.102  1.00  1.00
+END
+</pre></div>  </div></div>  <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=0
+</span></span><span id="PDB2CONSTANT.md_working_2.datref_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PDB2CONSTANT.md_working_2.datref")'># ref: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pathtools-3/all.pdb</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PDB2CONSTANT.md_working_2.datref" onclick='showPath("PDB2CONSTANT.md_working_2.dat","PDB2CONSTANT.md_working_2.datref","PDB2CONSTANT.md_working_2.datref","red")'>ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_2.datref">The CONSTANT action with label <b>ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=10 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=39 <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-0.305585,-0.170385,-0.106185,-0.119785,-0.172985,0.0112154,0.0320154,0.0124154,0.123615,0.183815,0.153815,0.0988154,0.259215,0.00147692,-0.0423231,-0.116923,0.00607692,0.0680769,-0.0299231,-0.133123,-0.0145231,0.0518769,0.138877,0.0238769,-0.0441231,0.0906769,0.103354,0.0667538,0.138954,-0.0482462,-0.102246,-0.0990462,-0.0752462,-0.252046,-0.0348462,-0.0968462,0.0929538,0.140154,0.166354,-0.305785,-0.169685,-0.108385,-0.117885,-0.168985,0.0126154,0.0292154,0.0144154,0.126615,0.195215,0.149715,0.0881154,0.254815,0.00988462,-0.0372154,-0.111515,0.00708462,0.0684846,-0.0333154,-0.137115,-0.0220154,0.0458846,0.122485,0.0270846,-0.0326154,0.0928846,0.100908,0.0670077,0.141008,-0.0480923,-0.105892,-0.0981923,-0.0731923,-0.251592,-0.0360923,-0.102592,0.0953077,0.144608,0.166808,-0.295777,-0.163177,-0.0954769,-0.119477,-0.176577,0.00582308,0.0256231,-0.00437692,0.124923,0.193223,0.152623,0.0914231,0.261223,0.00602308,-0.0407769,-0.115777,0.00412308,0.0659231,-0.0350769,-0.138277,-0.0215769,0.0453231,0.114023,0.0343231,-0.0200769,0.101823,0.123631,0.0790308,0.149231,-0.0394692,-0.0916692,-0.0996692,-0.0756692,-0.252369,-0.0463692,-0.119869,0.0847308,0.139631,0.148831,-0.296715,-0.164115,-0.0986154,-0.118115,-0.173215,0.00788462,0.0248846,-0.00271538,0.127985,0.202485,0.148485,0.0834846,0.258285,0.00342308,-0.0427769,-0.121177,0.00522308,0.0697231,-0.0344769,-0.139177,-0.0167769,0.0422231,0.103123,0.0378231,-0.0105769,0.103423,0.119554,0.0769538,0.145154,-0.0402462,-0.0919462,-0.0994462,-0.0779462,-0.252146,-0.0451462,-0.118146,0.0883538,0.142454,0.152554,-0.296354,-0.163354,-0.0989538,-0.117454,-0.171354,0.00794615,0.0239462,-0.00405385,0.129546,0.209546,0.146046,0.0778462,0.256646,0.00252308,-0.0442769,-0.125977,0.00552308,0.0715231,-0.0349769,-0.139677,-0.0123769,0.0402231,0.0922231,0.0412231,-0.00147692,0.105523,0.121262,0.0769615,0.142762,-0.0388385,-0.0889385,-0.100338,-0.0813385,-0.252438,-0.0457385,-0.119838,0.0883615,0.144162,0.153962,-0.294615,-0.174515,-0.139015,-0.108315,-0.138015,0.00658462,-0.00661538,0.0131846,0.139085,0.239285,0.142185,0.0596846,0.261085,0.111046,0.0240462,-0.0318538,0.0102462,0.0567462,-0.0774538,-0.163754,-0.120154,-0.0126538,-0.0248538,0.0525462,0.0596462,0.116446,0.0541692,0.0574692,0.160469,-0.0569308,-0.139531,-0.0736308,-0.0117308,-0.220431,-0.0321308,-0.101531,0.0861692,0.139769,0.137869,-0.294215,-0.174615,-0.138915,-0.107615,-0.137315,0.00738462,-0.00761538,0.0134846,0.139885,0.242485,0.141285,0.0566846,0.259085,0.109038,0.0225385,-0.0368615,0.0114385,0.0606385,-0.0768615,-0.165462,-0.116362,-0.0151615,-0.0343615,0.0559385,0.0669385,0.118538,0.0575769,0.0587769,0.160977,-0.0555231,-0.136323,-0.0742231,-0.0148231,-0.222423,-0.0305231,-0.0949231,0.0831769,0.132277,0.135977,-0.294754,-0.175554,-0.142554,-0.106254,-0.134554,0.00854615,-0.00645385,0.0164462,0.140946,0.246146,0.138546,0.0525462,0.256946,0.1063,0.0189,-0.0422,0.0112,0.0622,-0.0769,-0.1669,-0.1127,-0.0171,-0.0426,0.0609,0.0757,0.1232,0.0574462,0.0580462,0.159246,-0.0556538,-0.135754,-0.0743538,-0.0182538,-0.224254,-0.0267538,-0.0841538,0.0819462,0.125246,0.137246,-0.286546,-0.177646,-0.161446,-0.0984462,-0.112646,0.00715385,-0.0236462,0.0255538,0.140754,0.247154,0.137154,0.0478538,0.254754,0.139323,0.0429231,-0.00477692,0.0109231,0.0521231,-0.0897769,-0.167877,-0.148477,-0.0364769,-0.0868769,0.0655231,0.0990231,0.124423,0.00981538,0.0360154,0.147615,-0.0667846,-0.155285,-0.0593846,0.00691538,-0.200185,-0.00658462,-0.0388846,0.0812154,0.106515,0.139015,-0.288869,-0.178869,-0.161769,-0.0988692,-0.113469,0.00773077,-0.0226692,0.0279308,0.141231,0.247031,0.137231,0.0483308,0.255031,0.133585,0.0381846,-0.0115154,0.00948462,0.0525846,-0.0890154,-0.169715,-0.145815,-0.0364154,-0.0913154,0.0707846,0.107885,0.131285,0.0142308,0.0387308,0.149631,-0.0642692,-0.151869,-0.0588692,0.00513077,-0.201269,-0.00506923,-0.0309692,0.0755308,0.0970308,0.132031
+<span style="color:blue"># --- End of included input --- </span></span></pre></div>
+
+<p>The <a href="../CONSTANT/">CONSTANT</a> that is created by this action is a matrix. Each row of the output matrix contains one set of reference positions.
+Notice also that if you have a PDB input which contains multiple reference configurations you can create a vector constant by using the <code>NUMBER</code>
+keyword to specify the particular configuration that you would like to read in as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PDB2CONSTANT.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PDB2CONSTANT.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/mapping/rt-pathtools-3/all.pdb</span>
+<span id="PDB2CONSTANT.md_working_3.datref_short"><b name="PDB2CONSTANT.md_working_3.datref" onclick='showPath("PDB2CONSTANT.md_working_3.dat","PDB2CONSTANT.md_working_3.datref","PDB2CONSTANT.md_working_3.datref_shortcut","red")'>ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_3.datref_shortcut">The PDB2CONSTANT action with label <b>ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref</td><td width="5%"><font color="red">matrix</font></td><td>a value that is constructed from the information in the PDB file</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_3.datref");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pathtools-3/all.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_3.datregtest/mapping/rt-pathtools-3/all.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_3.datregtest/mapping/rt-pathtools-3/all.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_3.datregtest/mapping/rt-pathtools-3/all.pdb1")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pathtools-3/all.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1  CL  ALA     1      -3.171   0.295   2.045  1.00  1.00
+ATOM      5  CLP ALA     1      -1.819  -0.143   1.679  1.00  1.00
+ATOM      6  OL  ALA     1      -1.177  -0.889   2.401  1.00  1.00
+ATOM      7  NL  ALA     1      -1.313   0.341   0.529  1.00  1.00
+ATOM      8  HL  ALA     1      -1.845   0.961  -0.011  1.00  1.00
+ATOM      9  CA  ALA     1      -0.003  -0.019   0.021  1.00  1.00
+ATOM     10  HA  ALA     1       0.205  -1.051   0.259  1.00  1.00
+ATOM     11  CB  ALA     1       0.009   0.135  -1.509  1.00  1.00
+ATOM     15  CRP ALA     1       1.121   0.799   0.663  1.00  1.00
+ATOM     16  OR  ALA     1       1.723   1.669   0.043  1.00  1.00
+ATOM     17  NR  ALA     1       1.423   0.519   1.941  1.00  1.00
+ATOM     18  HR  ALA     1       0.873  -0.161   2.413  1.00  1.00
+ATOM     19  CR  ALA     1       2.477   1.187   2.675  1.00  1.00
+END
+FIXED
+ATOM      1  CL  ALA     1      -3.175   0.365   2.024  1.00  1.00
+ATOM      5  CLP ALA     1      -1.814  -0.106   1.685  1.00  1.00
+ATOM      6  OL  ALA     1      -1.201  -0.849   2.425  1.00  1.00
+ATOM      7  NL  ALA     1      -1.296   0.337   0.534  1.00  1.00
+ATOM      8  HL  ALA     1      -1.807   0.951  -0.044  1.00  1.00
+ATOM      9  CA  ALA     1       0.009  -0.067   0.033  1.00  1.00
+ATOM     10  HA  ALA     1       0.175  -1.105   0.283  1.00  1.00
+ATOM     11  CB  ALA     1       0.027   0.046  -1.501  1.00  1.00
+ATOM     15  CRP ALA     1       1.149   0.725   0.654  1.00  1.00
+ATOM     16  OR  ALA     1       1.835   1.491  -0.011  1.00  1.00
+ATOM     17  NR  ALA     1       1.380   0.537   1.968  1.00  1.00
+ATOM     18  HR  ALA     1       0.764  -0.060   2.461  1.00  1.00
+ATOM     19  CR  ALA     1       2.431   1.195   2.683  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -2.990   0.383   2.277  1.00  1.00
+ATOM      5  CLP ALA     1      -1.664  -0.085   1.831  1.00  1.00
+ATOM      6  OL  ALA     1      -0.987  -0.835   2.533  1.00  1.00
+ATOM      7  NL  ALA     1      -1.227   0.364   0.646  1.00  1.00
+ATOM      8  HL  ALA     1      -1.798   0.982   0.124  1.00  1.00
+ATOM      9  CA  ALA     1       0.026  -0.028   0.044  1.00  1.00
+ATOM     10  HA  ALA     1       0.224  -1.060   0.284  1.00  1.00
+ATOM     11  CB  ALA     1      -0.076   0.107  -1.483  1.00  1.00
+ATOM     15  CRP ALA     1       1.217   0.776   0.577  1.00  1.00
+ATOM     16  OR  ALA     1       1.900   1.463  -0.158  1.00  1.00
+ATOM     17  NR  ALA     1       1.494   0.666   1.888  1.00  1.00
+ATOM     18  HR  ALA     1       0.882   0.122   2.437  1.00  1.00
+ATOM     19  CR  ALA     1       2.580   1.341   2.529  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.006   0.350   2.252  1.00  1.00
+ATOM      5  CLP ALA     1      -1.680  -0.112   1.826  1.00  1.00
+ATOM      6  OL  ALA     1      -1.025  -0.896   2.508  1.00  1.00
+ATOM      7  NL  ALA     1      -1.220   0.368   0.654  1.00  1.00
+ATOM      8  HL  ALA     1      -1.771   1.013   0.137  1.00  1.00
+ATOM      9  CA  ALA     1       0.040  -0.029   0.062  1.00  1.00
+ATOM     10  HA  ALA     1       0.210  -1.076   0.277  1.00  1.00
+ATOM     11  CB  ALA     1      -0.066   0.148  -1.465  1.00  1.00
+ATOM     15  CRP ALA     1       1.241   0.738   0.605  1.00  1.00
+ATOM     16  OR  ALA     1       1.986   1.347  -0.125  1.00  1.00
+ATOM     17  NR  ALA     1       1.446   0.694   1.940  1.00  1.00
+ATOM     18  HR  ALA     1       0.796   0.210   2.481  1.00  1.00
+ATOM     19  CR  ALA     1       2.544   1.350   2.582  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.002   0.343   2.271  1.00  1.00
+ATOM      5  CLP ALA     1      -1.672  -0.125   1.828  1.00  1.00
+ATOM      6  OL  ALA     1      -1.028  -0.942   2.486  1.00  1.00
+ATOM      7  NL  ALA     1      -1.213   0.373   0.670  1.00  1.00
+ATOM      8  HL  ALA     1      -1.752   1.033   0.169  1.00  1.00
+ATOM      9  CA  ALA     1       0.041  -0.032   0.055  1.00  1.00
+ATOM     10  HA  ALA     1       0.201  -1.079   0.245  1.00  1.00
+ATOM     11  CB  ALA     1      -0.079   0.194  -1.466  1.00  1.00
+ATOM     15  CRP ALA     1       1.257   0.720   0.601  1.00  1.00
+ATOM     16  OR  ALA     1       2.057   1.240  -0.140  1.00  1.00
+ATOM     17  NR  ALA     1       1.422   0.730   1.942  1.00  1.00
+ATOM     18  HR  ALA     1       0.740   0.303   2.500  1.00  1.00
+ATOM     19  CR  ALA     1       2.528   1.373   2.598  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.144   1.457   1.417  1.00  1.00
+ATOM      5  CLP ALA     1      -1.943   0.587   1.450  1.00  1.00
+ATOM      6  OL  ALA     1      -1.588   0.028   2.480  1.00  1.00
+ATOM      7  NL  ALA     1      -1.281   0.449   0.306  1.00  1.00
+ATOM      8  HL  ALA     1      -1.578   0.914  -0.520  1.00  1.00
+ATOM      9  CA  ALA     1      -0.132  -0.428   0.139  1.00  1.00
+ATOM     10  HA  ALA     1      -0.264  -1.291   0.758  1.00  1.00
+ATOM     11  CB  ALA     1      -0.066  -0.855  -1.329  1.00  1.00
+ATOM     15  CRP ALA     1       1.193   0.220   0.554  1.00  1.00
+ATOM     16  OR  ALA     1       2.195   0.098  -0.140  1.00  1.00
+ATOM     17  NR  ALA     1       1.224   0.872   1.737  1.00  1.00
+ATOM     18  HR  ALA     1       0.399   0.943   2.273  1.00  1.00
+ATOM     19  CR  ALA     1       2.413   1.511   2.254  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.140   1.441   1.453  1.00  1.00
+ATOM      5  CLP ALA     1      -1.944   0.576   1.465  1.00  1.00
+ATOM      6  OL  ALA     1      -1.587  -0.018   2.487  1.00  1.00
+ATOM      7  NL  ALA     1      -1.274   0.465   0.322  1.00  1.00
+ATOM      8  HL  ALA     1      -1.571   0.957  -0.486  1.00  1.00
+ATOM      9  CA  ALA     1      -0.124  -0.418   0.135  1.00  1.00
+ATOM     10  HA  ALA     1      -0.274  -1.304   0.729  1.00  1.00
+ATOM     11  CB  ALA     1      -0.063  -0.813  -1.347  1.00  1.00
+ATOM     15  CRP ALA     1       1.201   0.199   0.572  1.00  1.00
+ATOM     16  OR  ALA     1       2.227   0.007  -0.072  1.00  1.00
+ATOM     17  NR  ALA     1       1.215   0.910   1.709  1.00  1.00
+ATOM     18  HR  ALA     1       0.369   1.020   2.200  1.00  1.00
+ATOM     19  CR  ALA     1       2.393   1.536   2.237  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.140   1.420   1.442  1.00  1.00
+ATOM      5  CLP ALA     1      -1.948   0.546   1.448  1.00  1.00
+ATOM      6  OL  ALA     1      -1.618  -0.065   2.460  1.00  1.00
+ATOM      7  NL  ALA     1      -1.255   0.469   0.311  1.00  1.00
+ATOM      8  HL  ALA     1      -1.538   0.979  -0.490  1.00  1.00
+ATOM      9  CA  ALA     1      -0.107  -0.412   0.124  1.00  1.00
+ATOM     10  HA  ALA     1      -0.257  -1.312   0.685  1.00  1.00
+ATOM     11  CB  ALA     1      -0.028  -0.770  -1.375  1.00  1.00
+ATOM     15  CRP ALA     1       1.217   0.186   0.600  1.00  1.00
+ATOM     16  OR  ALA     1       2.269  -0.069   0.026  1.00  1.00
+ATOM     17  NR  ALA     1       1.193   0.966   1.687  1.00  1.00
+ATOM     18  HR  ALA     1       0.333   1.114   2.120  1.00  1.00
+ATOM     19  CR  ALA     1       2.377   1.589   2.240  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.110   1.698   0.880  1.00  1.00
+ATOM      5  CLP ALA     1      -2.021   0.734   1.142  1.00  1.00
+ATOM      6  OL  ALA     1      -1.859   0.257   2.258  1.00  1.00
+ATOM      7  NL  ALA     1      -1.229   0.414   0.114  1.00  1.00
+ATOM      8  HL  ALA     1      -1.371   0.826  -0.771  1.00  1.00
+ATOM      9  CA  ALA     1      -0.173  -0.593   0.188  1.00  1.00
+ATOM     10  HA  ALA     1      -0.481  -1.374   0.851  1.00  1.00
+ATOM     11  CB  ALA     1       0.011  -1.180  -1.220  1.00  1.00
+ATOM     15  CRP ALA     1       1.163  -0.060   0.716  1.00  1.00
+ATOM     16  OR  ALA     1       2.227  -0.564   0.393  1.00  1.00
+ATOM     17  NR  ALA     1       1.127   0.960   1.594  1.00  1.00
+ATOM     18  HR  ALA     1       0.234   1.295   1.847  1.00  1.00
+ATOM     19  CR  ALA     1       2.303   1.549   2.172  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.139   1.652   0.924  1.00  1.00
+ATOM      5  CLP ALA     1      -2.039   0.698   1.169  1.00  1.00
+ATOM      6  OL  ALA     1      -1.868   0.201   2.278  1.00  1.00
+ATOM      7  NL  ALA     1      -1.239   0.411   0.139  1.00  1.00
+ATOM      8  HL  ALA     1      -1.385   0.842  -0.737  1.00  1.00
+ATOM      9  CA  ALA     1      -0.173  -0.574   0.193  1.00  1.00
+ATOM     10  HA  ALA     1      -0.477  -1.381   0.833  1.00  1.00
+ATOM     11  CB  ALA     1       0.029  -1.142  -1.231  1.00  1.00
+ATOM     15  CRP ALA     1       1.162  -0.048   0.731  1.00  1.00
+ATOM     16  OR  ALA     1       2.220  -0.597   0.472  1.00  1.00
+ATOM     17  NR  ALA     1       1.122   1.024   1.537  1.00  1.00
+ATOM     18  HR  ALA     1       0.233   1.395   1.752  1.00  1.00
+ATOM     19  CR  ALA     1       2.300   1.629   2.102  1.00  1.00
+END
+</pre></div>  </div></div> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=4
+</span><span id="PDB2CONSTANT.md_working_3.datref_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PDB2CONSTANT.md_working_3.datref")'># ref: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pathtools-3/all.pdb NUMBER=4</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PDB2CONSTANT.md_working_3.datref" onclick='showPath("PDB2CONSTANT.md_working_3.dat","PDB2CONSTANT.md_working_3.datref","PDB2CONSTANT.md_working_3.datref","red")'>ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_3.datref">The CONSTANT action with label <b>ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=1 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=39 <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-0.296715,-0.164115,-0.0986154,-0.118115,-0.173215,0.00788462,0.0248846,-0.00271538,0.127985,0.202485,0.148485,0.0834846,0.258285,0.00342308,-0.0427769,-0.121177,0.00522308,0.0697231,-0.0344769,-0.139177,-0.0167769,0.0422231,0.103123,0.0378231,-0.0105769,0.103423,0.119554,0.0769538,0.145154,-0.0402462,-0.0919462,-0.0994462,-0.0779462,-0.252146,-0.0451462,-0.118146,0.0883538,0.142454,0.152554
+<span style="color:blue"># --- End of included input --- </span></span></pre></div>
+
+<p>The input above will reads in the fourth configuration in the input PDB file only.</p>
+<h2 id="the-pdb-file-format">The PDB file format</h2>
+<p>PLUMED uses the PDB file format here and in several other places</p>
+<ul>
+<li>To read the molecular structure (<a href="../MOLINFO/">MOLINFO</a>).</li>
+<li>To read reference conformations (<a href="../RMSD/">RMSD</a>, but also in methods such as <a href="../FIT_TO_TEMPLATE/">FIT_TO_TEMPLATE</a>, etc).</li>
+</ul>
+<p>The implemented PDB reader expects a file formatted correctly according to the
+<a href="http://www.wwpdb.org/documentation/file-format-content/format33/v3.3.html">PDB standard</a>.
+In particular, the following columns are read from ATOM records</p>
+<div class="highlight"><pre><span></span><code>columns | content
+1-6     | record name (ATOM or HETATM)
+7-11    | serial number of the atom (starting from 1)
+13-16   | atom name
+18-20   | residue name
+22      | chain id
+23-26   | residue number
+31-38   | x coordinate
+39-46   | y coordinate
+47-54   | z coordinate
+55-60   | occupancy
+61-66   | beta factor
+</code></pre></div>
+<p>The PLUMED parser is slightly more permissive than the official PDB format
+in the fact that the format of real numbers is not fixed. In other words,
+any real number that can be parsed is OK and the dot can be placed anywhere. However,
+<strong>columns are interpret strictly</strong>. A sample PDB should look like the following</p>
+<div class="highlight"><pre><span></span><code>ATOM      2  CH3 ACE     1      12.932 -14.718  -6.016  1.00  1.00
+ATOM      5  C   ACE     1      21.312  -9.928  -5.946  1.00  1.00
+ATOM      9  CA  ALA     2      19.462 -11.088  -8.986  1.00  1.00
+</code></pre></div>
+<p>Notice that serial numbers need not to be consecutive. In the three-line example above,
+only the coordinates of three atoms are provided. This is perfectly legal and indicates to PLUMED
+that information about these atoms only is available. This could be both for structural
+information in <a href="../MOLINFO/">MOLINFO</a>, where the other atoms would have no name assigned, and for
+reference structures used in <a href="../RMSD/">RMSD</a>, where only the provided atoms would be used to compute RMSD.</p>
+<h2 id="including-arguments-in-pdb-files">Including arguments in PDB files</h2>
+<p>If you wish to specify reference values for PLUMED Values in the REMARKS of a PLUMED input file like this:</p>
+<div class="highlight"><pre><span></span><code>REMARK t1=-4.3345
+REMARK t2=3.4725
+END
+</code></pre></div>
+<p>You can read in these reference values by using the PDB2CONSTANT command as follows:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PDB2CONSTANT.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PDB2CONSTANT.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/mapping/rt-pathtools-4/epath.pdb</span>
+<b name="PDB2CONSTANT.md_working_4.datt1" onclick='showPath("PDB2CONSTANT.md_working_4.dat","PDB2CONSTANT.md_working_4.datt1","PDB2CONSTANT.md_working_4.datt1","black")'>t1</b><span style="display:none;" id="PDB2CONSTANT.md_working_4.datt1">The TORSION action with label <b>t1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,2,3,4
+<b name="PDB2CONSTANT.md_working_4.datt2" onclick='showPath("PDB2CONSTANT.md_working_4.dat","PDB2CONSTANT.md_working_4.datt2","PDB2CONSTANT.md_working_4.datt2","black")'>t2</b><span style="display:none;" id="PDB2CONSTANT.md_working_4.datt2">The TORSION action with label <b>t2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t2</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=5,6,7,8
+<span id="PDB2CONSTANT.md_working_4.datt1_ref_short"><span id="PDB2CONSTANT.md_working_4.datdeft1_ref_short"><b name="PDB2CONSTANT.md_working_4.datt1_ref" onclick='showPath("PDB2CONSTANT.md_working_4.dat","PDB2CONSTANT.md_working_4.datt1_ref","PDB2CONSTANT.md_working_4.datt1_ref_shortcut","blue")'>t1_ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_4.datt1_ref_shortcut">The PDB2CONSTANT action with label <b>t1_ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1_ref</td><td width="5%"><font color="blue">vector</font></td><td>a value that is constructed from the information in the PDB file</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_4.datt1_ref");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_4.datdeft1_ref");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pathtools-4/epath.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_4.datregtest/mapping/rt-pathtools-4/epath.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_4.datregtest/mapping/rt-pathtools-4/epath.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_4.datregtest/mapping/rt-pathtools-4/epath.pdb1")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pathtools-4/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK t1=-4.3345  t2=3.4725   
+END
+REMARK t1=-4.1940  t2=3.3420   
+END
+REMARK t1=-4.0535  t2=3.2114   
+END
+REMARK t1=-3.9130  t2=3.0809   
+END
+REMARK t1=-3.7724  t2=2.9504   
+END
+REMARK t1=-3.6319  t2=2.8199   
+END
+REMARK t1=-3.4914  t2=2.6893   
+END
+REMARK t1=-3.3508  t2=2.5588   
+END
+REMARK t1=-3.2103  t2=2.4283   
+END
+REMARK t1=-3.0698  t2=2.2978   
+END
+</pre></div>  </div></div> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=<b name="PDB2CONSTANT.md_working_4.datt1">t1</b>
+</span><span id="PDB2CONSTANT.md_working_4.datdeft1_ref_long" style="display:none;"><b name="PDB2CONSTANT.md_working_4.datt1_ref" onclick='showPath("PDB2CONSTANT.md_working_4.dat","PDB2CONSTANT.md_working_4.datt1_ref","PDB2CONSTANT.md_working_4.datt1_ref_shortcut","blue")'>t1_ref</b>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_4.datt1_ref");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_4.datdeft1_ref");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pathtools-4/epath.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_4.datregtest/mapping/rt-pathtools-4/epath.pdb2")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_4.datregtest/mapping/rt-pathtools-4/epath.pdb2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_4.datregtest/mapping/rt-pathtools-4/epath.pdb2")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pathtools-4/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK t1=-4.3345  t2=3.4725   
+END
+REMARK t1=-4.1940  t2=3.3420   
+END
+REMARK t1=-4.0535  t2=3.2114   
+END
+REMARK t1=-3.9130  t2=3.0809   
+END
+REMARK t1=-3.7724  t2=2.9504   
+END
+REMARK t1=-3.6319  t2=2.8199   
+END
+REMARK t1=-3.4914  t2=2.6893   
+END
+REMARK t1=-3.3508  t2=2.5588   
+END
+REMARK t1=-3.2103  t2=2.4283   
+END
+REMARK t1=-3.0698  t2=2.2978   
+END
+</pre></div>  </div></div> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=<b name="PDB2CONSTANT.md_working_4.datt1">t1</b>  <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=0
+</span></span><span id="PDB2CONSTANT.md_working_4.datt1_ref_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PDB2CONSTANT.md_working_4.datt1_ref")'># t1_ref: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pathtools-4/epath.pdb ARG=t1</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PDB2CONSTANT.md_working_4.datt1_ref" onclick='showPath("PDB2CONSTANT.md_working_4.dat","PDB2CONSTANT.md_working_4.datt1_ref","PDB2CONSTANT.md_working_4.datt1_ref","blue")'>t1_ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_4.datt1_ref">The CONSTANT action with label <b>t1_ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1_ref</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-4.3345,-4.194,-4.0535,-3.913,-3.7724,-3.6319,-3.4914,-3.3508,-3.2103,-3.0698
+<span style="color:blue"># --- End of included input --- </span></span><span id="PDB2CONSTANT.md_working_4.datt2_ref_short"><span id="PDB2CONSTANT.md_working_4.datdeft2_ref_short"><b name="PDB2CONSTANT.md_working_4.datt2_ref" onclick='showPath("PDB2CONSTANT.md_working_4.dat","PDB2CONSTANT.md_working_4.datt2_ref","PDB2CONSTANT.md_working_4.datt2_ref_shortcut","blue")'>t2_ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_4.datt2_ref_shortcut">The PDB2CONSTANT action with label <b>t2_ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t2_ref</td><td width="5%"><font color="blue">vector</font></td><td>a value that is constructed from the information in the PDB file</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_4.datt2_ref");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_4.datdeft2_ref");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pathtools-4/epath.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_4.datregtest/mapping/rt-pathtools-4/epath.pdb3")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_4.datregtest/mapping/rt-pathtools-4/epath.pdb3" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_4.datregtest/mapping/rt-pathtools-4/epath.pdb3")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pathtools-4/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK t1=-4.3345  t2=3.4725   
+END
+REMARK t1=-4.1940  t2=3.3420   
+END
+REMARK t1=-4.0535  t2=3.2114   
+END
+REMARK t1=-3.9130  t2=3.0809   
+END
+REMARK t1=-3.7724  t2=2.9504   
+END
+REMARK t1=-3.6319  t2=2.8199   
+END
+REMARK t1=-3.4914  t2=2.6893   
+END
+REMARK t1=-3.3508  t2=2.5588   
+END
+REMARK t1=-3.2103  t2=2.4283   
+END
+REMARK t1=-3.0698  t2=2.2978   
+END
+</pre></div>  </div></div> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=<b name="PDB2CONSTANT.md_working_4.datt2">t2</b>
+</span><span id="PDB2CONSTANT.md_working_4.datdeft2_ref_long" style="display:none;"><b name="PDB2CONSTANT.md_working_4.datt2_ref" onclick='showPath("PDB2CONSTANT.md_working_4.dat","PDB2CONSTANT.md_working_4.datt2_ref","PDB2CONSTANT.md_working_4.datt2_ref_shortcut","blue")'>t2_ref</b>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_4.datt2_ref");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_4.datdeft2_ref");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pathtools-4/epath.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_4.datregtest/mapping/rt-pathtools-4/epath.pdb4")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_4.datregtest/mapping/rt-pathtools-4/epath.pdb4" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_4.datregtest/mapping/rt-pathtools-4/epath.pdb4")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pathtools-4/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK t1=-4.3345  t2=3.4725   
+END
+REMARK t1=-4.1940  t2=3.3420   
+END
+REMARK t1=-4.0535  t2=3.2114   
+END
+REMARK t1=-3.9130  t2=3.0809   
+END
+REMARK t1=-3.7724  t2=2.9504   
+END
+REMARK t1=-3.6319  t2=2.8199   
+END
+REMARK t1=-3.4914  t2=2.6893   
+END
+REMARK t1=-3.3508  t2=2.5588   
+END
+REMARK t1=-3.2103  t2=2.4283   
+END
+REMARK t1=-3.0698  t2=2.2978   
+END
+</pre></div>  </div></div> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=<b name="PDB2CONSTANT.md_working_4.datt2">t2</b>  <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=0
+</span></span><span id="PDB2CONSTANT.md_working_4.datt2_ref_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PDB2CONSTANT.md_working_4.datt2_ref")'># t2_ref: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pathtools-4/epath.pdb ARG=t2</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PDB2CONSTANT.md_working_4.datt2_ref" onclick='showPath("PDB2CONSTANT.md_working_4.dat","PDB2CONSTANT.md_working_4.datt2_ref","PDB2CONSTANT.md_working_4.datt2_ref","blue")'>t2_ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_4.datt2_ref">The CONSTANT action with label <b>t2_ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t2_ref</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=3.4725,3.342,3.2114,3.0809,2.9504,2.8199,2.6893,2.5588,2.4283,2.2978
+<span style="color:blue"># --- End of included input --- </span></span></pre></div>
+
+<p>In this case the input must define values with the labels that are being read in from the reference file
+and separate PDB2CONSTANT commands are required for reading in <code>t1</code> and <code>t2</code>.  Furthermore, because the
+input PDB file contains multiple frames vectors containing all the values for <code>t1</code> and <code>t2</code> are output from
+the constant commands that are created by the shortcuts in the above input.  If you want to read only one of the
+configurations in the input PDB file you can use a pdb with a single frame or the <code>NUMBER</code> keyword described above.</p>
+<p>If, for any reason, you want to read data from a PDB file that is not a reference value for one of the values defined in
+your PLUMED input file you use the NOARGS flag as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PDB2CONSTANT.md_working_5.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PDB2CONSTANT.md_working_5.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/mapping/rt-pathtools-4/epath.pdb</span>
+<span id="PDB2CONSTANT.md_working_5.datt1_ref_short"><span id="PDB2CONSTANT.md_working_5.datdeft1_ref_short"><b name="PDB2CONSTANT.md_working_5.datt1_ref" onclick='showPath("PDB2CONSTANT.md_working_5.dat","PDB2CONSTANT.md_working_5.datt1_ref","PDB2CONSTANT.md_working_5.datt1_ref_shortcut","blue")'>t1_ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_5.datt1_ref_shortcut">The PDB2CONSTANT action with label <b>t1_ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1_ref</td><td width="5%"><font color="blue">vector</font></td><td>a value that is constructed from the information in the PDB file</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_5.datt1_ref");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_5.datdeft1_ref");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pathtools-4/epath.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_5.datregtest/mapping/rt-pathtools-4/epath.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_5.datregtest/mapping/rt-pathtools-4/epath.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_5.datregtest/mapping/rt-pathtools-4/epath.pdb1")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pathtools-4/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK t1=-4.3345  t2=3.4725   
+END
+REMARK t1=-4.1940  t2=3.3420   
+END
+REMARK t1=-4.0535  t2=3.2114   
+END
+REMARK t1=-3.9130  t2=3.0809   
+END
+REMARK t1=-3.7724  t2=2.9504   
+END
+REMARK t1=-3.6319  t2=2.8199   
+END
+REMARK t1=-3.4914  t2=2.6893   
+END
+REMARK t1=-3.3508  t2=2.5588   
+END
+REMARK t1=-3.2103  t2=2.4283   
+END
+REMARK t1=-3.0698  t2=2.2978   
+END
+</pre></div>  </div></div> <span class="plumedtooltip">NOARGS<span class="right"> the arguments that are being read from the PDB file are not in the plumed input<i></i></span></span> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=t1
+</span><span id="PDB2CONSTANT.md_working_5.datdeft1_ref_long" style="display:none;"><b name="PDB2CONSTANT.md_working_5.datt1_ref" onclick='showPath("PDB2CONSTANT.md_working_5.dat","PDB2CONSTANT.md_working_5.datt1_ref","PDB2CONSTANT.md_working_5.datt1_ref_shortcut","blue")'>t1_ref</b>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_5.datt1_ref");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_5.datdeft1_ref");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pathtools-4/epath.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_5.datregtest/mapping/rt-pathtools-4/epath.pdb2")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_5.datregtest/mapping/rt-pathtools-4/epath.pdb2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_5.datregtest/mapping/rt-pathtools-4/epath.pdb2")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pathtools-4/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK t1=-4.3345  t2=3.4725   
+END
+REMARK t1=-4.1940  t2=3.3420   
+END
+REMARK t1=-4.0535  t2=3.2114   
+END
+REMARK t1=-3.9130  t2=3.0809   
+END
+REMARK t1=-3.7724  t2=2.9504   
+END
+REMARK t1=-3.6319  t2=2.8199   
+END
+REMARK t1=-3.4914  t2=2.6893   
+END
+REMARK t1=-3.3508  t2=2.5588   
+END
+REMARK t1=-3.2103  t2=2.4283   
+END
+REMARK t1=-3.0698  t2=2.2978   
+END
+</pre></div>  </div></div> <span class="plumedtooltip">NOARGS<span class="right"> the arguments that are being read from the PDB file are not in the plumed input<i></i></span></span> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=t1  <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=0
+</span></span><span id="PDB2CONSTANT.md_working_5.datt1_ref_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PDB2CONSTANT.md_working_5.datt1_ref")'># t1_ref: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pathtools-4/epath.pdb NOARGS ARG=t1</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PDB2CONSTANT.md_working_5.datt1_ref" onclick='showPath("PDB2CONSTANT.md_working_5.dat","PDB2CONSTANT.md_working_5.datt1_ref","PDB2CONSTANT.md_working_5.datt1_ref","blue")'>t1_ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_5.datt1_ref">The CONSTANT action with label <b>t1_ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1_ref</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-4.3345,-4.194,-4.0535,-3.913,-3.7724,-3.6319,-3.4914,-3.3508,-3.2103,-3.0698
+<span style="color:blue"># --- End of included input --- </span></span><span id="PDB2CONSTANT.md_working_5.datt2_ref_short"><span id="PDB2CONSTANT.md_working_5.datdeft2_ref_short"><b name="PDB2CONSTANT.md_working_5.datt2_ref" onclick='showPath("PDB2CONSTANT.md_working_5.dat","PDB2CONSTANT.md_working_5.datt2_ref","PDB2CONSTANT.md_working_5.datt2_ref_shortcut","blue")'>t2_ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_5.datt2_ref_shortcut">The PDB2CONSTANT action with label <b>t2_ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t2_ref</td><td width="5%"><font color="blue">vector</font></td><td>a value that is constructed from the information in the PDB file</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_5.datt2_ref");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_5.datdeft2_ref");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pathtools-4/epath.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_5.datregtest/mapping/rt-pathtools-4/epath.pdb3")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_5.datregtest/mapping/rt-pathtools-4/epath.pdb3" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_5.datregtest/mapping/rt-pathtools-4/epath.pdb3")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pathtools-4/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK t1=-4.3345  t2=3.4725   
+END
+REMARK t1=-4.1940  t2=3.3420   
+END
+REMARK t1=-4.0535  t2=3.2114   
+END
+REMARK t1=-3.9130  t2=3.0809   
+END
+REMARK t1=-3.7724  t2=2.9504   
+END
+REMARK t1=-3.6319  t2=2.8199   
+END
+REMARK t1=-3.4914  t2=2.6893   
+END
+REMARK t1=-3.3508  t2=2.5588   
+END
+REMARK t1=-3.2103  t2=2.4283   
+END
+REMARK t1=-3.0698  t2=2.2978   
+END
+</pre></div>  </div></div> <span class="plumedtooltip">NOARGS<span class="right"> the arguments that are being read from the PDB file are not in the plumed input<i></i></span></span> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=t2
+</span><span id="PDB2CONSTANT.md_working_5.datdeft2_ref_long" style="display:none;"><b name="PDB2CONSTANT.md_working_5.datt2_ref" onclick='showPath("PDB2CONSTANT.md_working_5.dat","PDB2CONSTANT.md_working_5.datt2_ref","PDB2CONSTANT.md_working_5.datt2_ref_shortcut","blue")'>t2_ref</b>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_5.datt2_ref");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("PDB2CONSTANT.md_working_5.datdeft2_ref");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-pathtools-4/epath.pdb<div class="right"> Click <a onclick='openModal("PDB2CONSTANT.md_working_5.datregtest/mapping/rt-pathtools-4/epath.pdb4")'>here</a> to see an extract from this file.<i></i></div></div><div id="PDB2CONSTANT.md_working_5.datregtest/mapping/rt-pathtools-4/epath.pdb4" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PDB2CONSTANT.md_working_5.datregtest/mapping/rt-pathtools-4/epath.pdb4")'>&times;</span>  <h2>FILE: regtest/mapping/rt-pathtools-4/epath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK t1=-4.3345  t2=3.4725   
+END
+REMARK t1=-4.1940  t2=3.3420   
+END
+REMARK t1=-4.0535  t2=3.2114   
+END
+REMARK t1=-3.9130  t2=3.0809   
+END
+REMARK t1=-3.7724  t2=2.9504   
+END
+REMARK t1=-3.6319  t2=2.8199   
+END
+REMARK t1=-3.4914  t2=2.6893   
+END
+REMARK t1=-3.3508  t2=2.5588   
+END
+REMARK t1=-3.2103  t2=2.4283   
+END
+REMARK t1=-3.0698  t2=2.2978   
+END
+</pre></div>  </div></div> <span class="plumedtooltip">NOARGS<span class="right"> the arguments that are being read from the PDB file are not in the plumed input<i></i></span></span> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=t2  <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=0
+</span></span><span id="PDB2CONSTANT.md_working_5.datt2_ref_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PDB2CONSTANT.md_working_5.datt2_ref")'># t2_ref: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pathtools-4/epath.pdb NOARGS ARG=t2</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PDB2CONSTANT.md_working_5.datt2_ref" onclick='showPath("PDB2CONSTANT.md_working_5.dat","PDB2CONSTANT.md_working_5.datt2_ref","PDB2CONSTANT.md_working_5.datt2_ref","blue")'>t2_ref</b><span style="display:none;" id="PDB2CONSTANT.md_working_5.datt2_ref">The CONSTANT action with label <b>t2_ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t2_ref</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=3.4725,3.342,3.2114,3.0809,2.9504,2.8199,2.6893,2.5588,2.4283,2.2978
+<span style="color:blue"># --- End of included input --- </span></span></pre></div>
+
+<h2 id="occupancy-and-beta-factors">Occupancy and beta factors</h2>
+<p>PLUMED also reads the occupancy and beta factors from the input PDB files. However, these columns of data are
+given a very special meaning.
+In cases where the PDB structure is used as a reference for an alignment (that's the case
+for instance in <a href="../RMSD/">RMSD</a> and in <a href="../FIT_TO_TEMPLATE/">FIT_TO_TEMPLATE</a>), the occupancy column is used
+to provide the weight of each atom in the alignment. In cases where, perhaps after alignment,
+the displacement between running coordinates and the provided PDB is computed, the beta factors
+are used as weight for the displacement.
+Since setting the weights to zero is the same as <strong>not</strong> including an atom in the alignment or
+displacement calculation, the two following reference files would be equivalent when used in an <a href="../RMSD/">RMSD</a>
+calculation. First file:</p>
+<div class="highlight"><pre><span></span><code>ATOM      2  CH3 ACE     1      12.932 -14.718  -6.016  1.00  1.00
+ATOM      5  C   ACE     1      21.312  -9.928  -5.946  1.00  1.00
+ATOM      9  CA  ALA     2      19.462 -11.088  -8.986  0.00  0.00
+</code></pre></div>
+<p>Second file:</p>
+<div class="highlight"><pre><span></span><code>ATOM      2  CH3 ACE     1      12.932 -14.718  -6.016  1.00  1.00
+ATOM      5  C   ACE     1      21.312  -9.928  -5.946  1.00  1.00
+</code></pre></div>
+<p>However notice that many extra atoms with zero weight might slow down the calculation, so
+removing lines is better than setting their weights to zero.
+In addition, weights for alignment need not to be equivalent to weights for displacement.
+Starting with PLUMED 2.7, if all the weights are set to zero they will be normalized to be equal to the
+inverse of the number of involved atoms. This means that it will be possible to use files with
+the weight columns set to zero obtaining a meaningful result. In previous PLUMED versions,
+setting all weights to zero was resulting in an error instead.</p>
+<h2 id="systems-with-more-than-100k-atoms">Systems with more than 100k atoms</h2>
+<p>Notice that it very likely does not make any sense to compute the <a href="../RMSD/">RMSD</a> or any other structural
+deviation <strong>using</strong> many atoms. However, if the protein for which you want to compute <a href="../RMSD/">RMSD</a>
+has atoms with large serial numbers (e.g. because it is located <strong>after</strong> solvent in the sorted list of atoms)
+you might end up with troubles with the limitations of the PDB format. Indeed, since there are 5
+columns available for atom serial number, this number cannot be larger than 99999.
+In addition, providing <a href="../MOLINFO/">MOLINFO</a> with names associated to atoms with a serial larger than 99999 would be impossible.</p>
+<p>Since PLUMED 2.4 we allow the <a href="http://cci.lbl.gov/hybrid_36/">hybrid 36</a> format to be used to specify atom numbers.
+This format is not particularly widespread, but has the nice feature that it provides a one-to-one mapping
+between numbers up to approximately 80 millions and strings with 5 characters, plus it is backward compatible
+for numbers smaller than 100000. This is not true for notations like the hex notation exported by VMD.
+Using the hybrid 36 format, the ATOM records for atom ranging from 99997 to 100002 would read like these:</p>
+<div class="highlight"><pre><span></span><code>ATOM  99997  Ar      X   1      45.349  38.631  15.116  1.00  1.00
+ATOM  99998  Ar      X   1      46.189  38.631  15.956  1.00  1.00
+ATOM  99999  Ar      X   1      46.189  39.471  15.116  1.00  1.00
+ATOM  A0000  Ar      X   1      45.349  39.471  15.956  1.00  1.00
+ATOM  A0000  Ar      X   1      45.349  38.631  16.796  1.00  1.00
+ATOM  A0001  Ar      X   1      46.189  38.631  17.636  1.00  1.00
+</code></pre></div>
+<p>There are tools that can be found to translate from integers to strings and back using hybrid 36 format
+(a simple python script can be found <a href="https://sourceforge.net/p/cctbx/code/HEAD/tree/trunk/iotbx/pdb/hybrid_36.py">here</a>).
+In addition, as of PLUMED 2.5, we provide a command line tool that can be used to renumber atoms in a PDB file.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">scalar/vector</td>
+<td style="text-align: left;">read this single argument from the input rather than the atomic structure</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">read this single argument from the input rather than the atomic structure</td>
+</tr>
+<tr>
+<td style="text-align: left;">REFERENCE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">a file in pdb format containing the reference structure</td>
+</tr>
+<tr>
+<td style="text-align: left;">NUMBER</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here</td>
+</tr>
+<tr>
+<td style="text-align: left;">NOARGS</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">the arguments that are being read from the PDB file are not in the plumed input</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

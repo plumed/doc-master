@@ -1,0 +1,2837 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: ADAPTIVE_PATH - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-adaptive_path" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: ADAPTIVE_PATH
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-adaptive_path"><a href="../shortcuts/">Shortcut</a>: ADAPTIVE_PATH</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_mapping/"><strong>mapping</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Compute path collective variables that adapt to the lowest free energy path connecting states A and B.</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the position along and from the adaptive path</td>
+<td style="text-align: center;">scalar</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Compute path collective variables that adapt to the lowest free energy path connecting states A and B.</p>
+<p>This shortcut can be used to implement the method discussed in the second paper cited below. This method allows you to
+run a simulation with <a href="../PATH/">PATH</a> collective variables that forces the system to transition between state A and state B.
+If you run with ADAPTIVE_PATH rather than <a href="../PATH/">PATH</a> the CV adapts as the simulation progresses and should find the
+lowest free energy path that connects the two states.</p>
+<p>The Path Collective Variables developed by Branduardi that are described in the first paper cited below allow one
+to compute the progress along a high-dimensional path and the distance from the high-dimensional
+path.  Instad of computing progress along the path (<script type="math/tex">s</script>) using Branduardi's method we use the expressions that are used in
+<a href="../GEOMETRIC_PATH/">GEOMETRIC_PATH</a> and that are introduced in the second paper that is cited below.  The progress along the path is is thus computed using:</p>
+<p>
+<script type="math/tex; mode=display">
+s = i_2 + \textrm{sign}(i_2-i_1) \frac{ \sqrt{( \mathbf{v}_1\cdot\mathbf{v}_2 )^2 - |\mathbf{v}_3|^2(|\mathbf{v}_1|^2 - |\mathbf{v}_2|^2) } }{2|\mathbf{v}_3|^2} - \frac{\mathbf{v}_1\cdot\mathbf{v}_3 - |\mathbf{v}_3|^2}{2|\mathbf{v}_3|^2}
+</script>
+</p>
+<p>In this expression <script type="math/tex">\mathbf{v}_1</script> and <script type="math/tex">\mathbf{v}_3</script> are the vectors connecting the current position to the closest and second closest node of the path,
+respectfully and <script type="math/tex">i_1</script> and <script type="math/tex">i_2</script> are the projections of the closest and second closest frames of the path. <script type="math/tex">\mathbf{v}_2</script>, meanwhile, is the
+vector connecting the closest frame to the second closest frame.  The distance from the path, <script type="math/tex">z</script> is calculated using:</p>
+<p>
+<script type="math/tex; mode=display">
+z = \sqrt{ \left[ |\mathbf{v}_1|^2 - |\mathbf{v}_2| \left( \frac{ \sqrt{( \mathbf{v}_1\cdot\mathbf{v}_2 )^2 - |\mathbf{v}_3|^2(|\mathbf{v}_1|^2 - |\mathbf{v}_2|^2) } }{2|\mathbf{v}_3|^2} - \frac{\mathbf{v}_1\cdot\mathbf{v}_3 - |\mathbf{v}_3|^2}{2|\mathbf{v}_3|^2} \right) \right]^2 }
+</script>
+</p>
+<p>Notice that these are the definitions of <script type="math/tex">s</script> and <script type="math/tex">z</script> from the <a href="../GEOMETRIC_PATH/">GEOMETRIC_PATH</a>.  The reason for this is that
+the adaptive path method implemented in this action was inspired by the work of Diaz and Ensing that was introduced in the second paper cited below.
+To learn more about how the path is adapted we strongly recommend reading this paper.</p>
+<p>The example input below shows how to use the adaptive path.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_ADAPTIVE_PATH.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../ADAPTIVE_PATH.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/mapping/rt-adapt/mypath.pdb</span>
+<b name="ADAPTIVE_PATH.md_working_1.datd1" onclick='showPath("ADAPTIVE_PATH.md_working_1.dat","ADAPTIVE_PATH.md_working_1.datd1","ADAPTIVE_PATH.md_working_1.datd1","black")'>d1</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_1.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1.x</td><td width="5%"><font color="black">scalar</font></td><td>the x-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1.y</td><td width="5%"><font color="black">scalar</font></td><td>the y-component of the vector connecting the two atoms</td></tr><tr><td width="5%">d1.z</td><td width="5%"><font color="black">scalar</font></td><td>the z-component of the vector connecting the two atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">COMPONENTS<span class="right"> calculate the x, y and z components of the distance separately and store them as label<i></i></span></span>
+<span id="ADAPTIVE_PATH.md_working_1.datpp_short"><span id="ADAPTIVE_PATH.md_working_1.datdefpp_short"><b name="ADAPTIVE_PATH.md_working_1.datpp" onclick='showPath("ADAPTIVE_PATH.md_working_1.dat","ADAPTIVE_PATH.md_working_1.datpp","ADAPTIVE_PATH.md_working_1.datpp","black")'>pp</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_1.datpp">The GEOMETRIC_PATH action with label <b>pp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pp.s</td><td width="5%"><font color="black">scalar</font></td><td>the position on the path</td></tr><tr><td width="5%">pp.z</td><td width="5%"><font color="black">scalar</font></td><td>the distance from the path</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ADAPTIVE_PATH<span class="right">Compute path collective variables that adapt to the lowest free energy path connecting states A and B. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("ADAPTIVE_PATH.md_working_1.datpp");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("ADAPTIVE_PATH.md_working_1.datdefpp");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/ADAPTIVE_PATH">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">ARG<span class="right">the list of arguments you would like to use in your definition of the path<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datd1">d1.x</b>,<b name="ADAPTIVE_PATH.md_working_1.datd1">d1.y</b> <span class="plumedtooltip">UPDATE<span class="right">the frequency with which the path should be updated<i></i></span></span>=50 <span class="plumedtooltip">FIXED<span class="right">the positions in the list of input frames of the two path nodes whose positions remain fixed during the path optimization<i></i></span></span>=5,15
+   <span class="plumedtooltip">WFILE<span class="right">file on which to write out the path<i></i></span></span>=out-path.pdb <span class="plumedtooltip">WSTRIDE<span class="right"> frequency with which to write out the path<i></i></span></span>=50
+   <span class="plumedtooltip">REFERENCE<span class="right">a pdb file containing the set of reference configurations<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-adapt/mypath.pdb<div class="right"> Click <a onclick='openModal("ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb1")'>&times;</span>  <h2>FILE: regtest/mapping/rt-adapt/mypath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK d1.x=1.12000000000000000000 d1.y=-.60000000000000000000 path=-0.4
+END
+REMARK d1.x=.99000000000000000000 d1.y=-.45000000000000000000 path=-0.3 
+END
+REMARK d1.x=.86000000000000000000 d1.y=-.30000000000000000000 path=-0.2 
+END
+REMARK d1.x=.73000000000000000000 d1.y=-.15000000000000000000 path=-0.1
+END
+REMARK d1.x=.60000000000000000000 d1.y=0 path=0
+END
+REMARK d1.x=.47000000000000000000 d1.y=.15000000000000000000 path=0.1
+END
+REMARK d1.x=.34000000000000000000 d1.y=.30000000000000000000 path=0.2
+END
+REMARK d1.x=.21000000000000000000 d1.y=.45000000000000000000 path=0.3
+END
+REMARK d1.x=.08000000000000000000 d1.y=.60000000000000000000 path=0.4 
+END
+REMARK d1.x=-.05000000000000000000 d1.y=.75000000000000000000 path=0.5
+END
+REMARK d1.x=-.18000000000000000000 d1.y=.90000000000000000000 path=0.6
+END
+REMARK d1.x=-.31000000000000000000 d1.y=1.05000000000000000000 path=0.7 
+END
+REMARK d1.x=-.44000000000000000000 d1.y=1.20000000000000000000 path=0.8
+END
+REMARK d1.x=-.57000000000000000000 d1.y=1.35000000000000000000 path=0.9
+END
+REMARK d1.x=-.70000000000000000000 d1.y=1.50000000000000000000 path=1.0
+END
+REMARK d1.x=-.83000000000000000000 d1.y=1.65000000000000000000 path=1.1
+END
+REMARK d1.x=-.96000000000000000000 d1.y=1.80000000000000000000 path=1.2
+END
+REMARK d1.x=-1.09000000000000000000 d1.y=1.95000000000000000000 path=1.3
+END
+REMARK d1.x=-1.22000000000000000000 d1.y=2.10000000000000000000 path=1.4
+END
+REMARK d1.x=-1.35000000000000000000 d1.y=2.25000000000000000000 path=1.5
+END
+</pre></div>  </div></div>
+   <span class="plumedtooltip">PROPERTY<span class="right">read in path coordinates by finding option with this label in remark of pdb frames<i></i></span></span>=path
+...
+</span><span id="ADAPTIVE_PATH.md_working_1.datdefpp_long" style="display:none;"><b name="ADAPTIVE_PATH.md_working_1.datpp" onclick='showPath("ADAPTIVE_PATH.md_working_1.dat","ADAPTIVE_PATH.md_working_1.datpp","ADAPTIVE_PATH.md_working_1.datpp","black")'>pp</b>: <span class="plumedtooltip" style="color:green">ADAPTIVE_PATH<span class="right">Compute path collective variables that adapt to the lowest free energy path connecting states A and B. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("ADAPTIVE_PATH.md_working_1.datpp");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("ADAPTIVE_PATH.md_working_1.datdefpp");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/ADAPTIVE_PATH">More details</a><i></i></span></span> ...
+   <span class="plumedtooltip">ARG<span class="right">the list of arguments you would like to use in your definition of the path<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datd1">d1.x</b>,<b name="ADAPTIVE_PATH.md_working_1.datd1">d1.y</b> <span class="plumedtooltip">UPDATE<span class="right">the frequency with which the path should be updated<i></i></span></span>=50 <span class="plumedtooltip">FIXED<span class="right">the positions in the list of input frames of the two path nodes whose positions remain fixed during the path optimization<i></i></span></span>=5,15
+   <span class="plumedtooltip">WFILE<span class="right">file on which to write out the path<i></i></span></span>=out-path.pdb <span class="plumedtooltip">WSTRIDE<span class="right"> frequency with which to write out the path<i></i></span></span>=50
+   <span class="plumedtooltip">REFERENCE<span class="right">a pdb file containing the set of reference configurations<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-adapt/mypath.pdb<div class="right"> Click <a onclick='openModal("ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb2")'>here</a> to see an extract from this file.<i></i></div></div><div id="ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb2")'>&times;</span>  <h2>FILE: regtest/mapping/rt-adapt/mypath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK d1.x=1.12000000000000000000 d1.y=-.60000000000000000000 path=-0.4
+END
+REMARK d1.x=.99000000000000000000 d1.y=-.45000000000000000000 path=-0.3 
+END
+REMARK d1.x=.86000000000000000000 d1.y=-.30000000000000000000 path=-0.2 
+END
+REMARK d1.x=.73000000000000000000 d1.y=-.15000000000000000000 path=-0.1
+END
+REMARK d1.x=.60000000000000000000 d1.y=0 path=0
+END
+REMARK d1.x=.47000000000000000000 d1.y=.15000000000000000000 path=0.1
+END
+REMARK d1.x=.34000000000000000000 d1.y=.30000000000000000000 path=0.2
+END
+REMARK d1.x=.21000000000000000000 d1.y=.45000000000000000000 path=0.3
+END
+REMARK d1.x=.08000000000000000000 d1.y=.60000000000000000000 path=0.4 
+END
+REMARK d1.x=-.05000000000000000000 d1.y=.75000000000000000000 path=0.5
+END
+REMARK d1.x=-.18000000000000000000 d1.y=.90000000000000000000 path=0.6
+END
+REMARK d1.x=-.31000000000000000000 d1.y=1.05000000000000000000 path=0.7 
+END
+REMARK d1.x=-.44000000000000000000 d1.y=1.20000000000000000000 path=0.8
+END
+REMARK d1.x=-.57000000000000000000 d1.y=1.35000000000000000000 path=0.9
+END
+REMARK d1.x=-.70000000000000000000 d1.y=1.50000000000000000000 path=1.0
+END
+REMARK d1.x=-.83000000000000000000 d1.y=1.65000000000000000000 path=1.1
+END
+REMARK d1.x=-.96000000000000000000 d1.y=1.80000000000000000000 path=1.2
+END
+REMARK d1.x=-1.09000000000000000000 d1.y=1.95000000000000000000 path=1.3
+END
+REMARK d1.x=-1.22000000000000000000 d1.y=2.10000000000000000000 path=1.4
+END
+REMARK d1.x=-1.35000000000000000000 d1.y=2.25000000000000000000 path=1.5
+END
+</pre></div>  </div></div>
+   <span class="plumedtooltip">PROPERTY<span class="right">read in path coordinates by finding option with this label in remark of pdb frames<i></i></span></span>=path
+ <span class="plumedtooltip">TYPE<span class="right"> the manner in which distances are calculated<i></i></span></span>=OPTIMAL-FAST <span class="plumedtooltip">HALFLIFE<span class="right"> the number of MD steps after which a previously measured path distance weighs only 50 percent in the average<i></i></span></span>=-1 <span class="plumedtooltip">FMT<span class="right"> the format to use for output files<i></i></span></span>=%f
+...
+</span></span><span id="ADAPTIVE_PATH.md_working_1.datpp_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("ADAPTIVE_PATH.md_working_1.datpp")'># pp: ADAPTIVE_PATH ...</span>
+<span style="color:blue" class="comment">#    ARG=d1.x,d1.y UPDATE=50 FIXED=5,15</span>
+<span style="color:blue" class="comment">#    WFILE=out-path.pdb WSTRIDE=50</span>
+<span style="color:blue" class="comment">#    REFERENCE=regtest/mapping/rt-adapt/mypath.pdb</span>
+<span style="color:blue" class="comment">#    PROPERTY=path</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_x" onclick='showPath("ADAPTIVE_PATH.md_working_1.dat","ADAPTIVE_PATH.md_working_1.datpp_ref_d1_x","ADAPTIVE_PATH.md_working_1.datpp_ref_d1_x","blue")'>pp_ref_d1_x</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_x">The CONSTANT action with label <b>pp_ref_d1_x</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pp_ref_d1_x</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-adapt/mypath.pdb<div class="right"> Click <a onclick='openModal("ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb3")'>here</a> to see an extract from this file.<i></i></div></div><div id="ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb3" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb3")'>&times;</span>  <h2>FILE: regtest/mapping/rt-adapt/mypath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK d1.x=1.12000000000000000000 d1.y=-.60000000000000000000 path=-0.4
+END
+REMARK d1.x=.99000000000000000000 d1.y=-.45000000000000000000 path=-0.3 
+END
+REMARK d1.x=.86000000000000000000 d1.y=-.30000000000000000000 path=-0.2 
+END
+REMARK d1.x=.73000000000000000000 d1.y=-.15000000000000000000 path=-0.1
+END
+REMARK d1.x=.60000000000000000000 d1.y=0 path=0
+END
+REMARK d1.x=.47000000000000000000 d1.y=.15000000000000000000 path=0.1
+END
+REMARK d1.x=.34000000000000000000 d1.y=.30000000000000000000 path=0.2
+END
+REMARK d1.x=.21000000000000000000 d1.y=.45000000000000000000 path=0.3
+END
+REMARK d1.x=.08000000000000000000 d1.y=.60000000000000000000 path=0.4 
+END
+REMARK d1.x=-.05000000000000000000 d1.y=.75000000000000000000 path=0.5
+END
+REMARK d1.x=-.18000000000000000000 d1.y=.90000000000000000000 path=0.6
+END
+REMARK d1.x=-.31000000000000000000 d1.y=1.05000000000000000000 path=0.7 
+END
+REMARK d1.x=-.44000000000000000000 d1.y=1.20000000000000000000 path=0.8
+END
+REMARK d1.x=-.57000000000000000000 d1.y=1.35000000000000000000 path=0.9
+END
+REMARK d1.x=-.70000000000000000000 d1.y=1.50000000000000000000 path=1.0
+END
+REMARK d1.x=-.83000000000000000000 d1.y=1.65000000000000000000 path=1.1
+END
+REMARK d1.x=-.96000000000000000000 d1.y=1.80000000000000000000 path=1.2
+END
+REMARK d1.x=-1.09000000000000000000 d1.y=1.95000000000000000000 path=1.3
+END
+REMARK d1.x=-1.22000000000000000000 d1.y=2.10000000000000000000 path=1.4
+END
+REMARK d1.x=-1.35000000000000000000 d1.y=2.25000000000000000000 path=1.5
+END
+</pre></div>  </div></div> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datd1">d1.x</b>
+<b name="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_y" onclick='showPath("ADAPTIVE_PATH.md_working_1.dat","ADAPTIVE_PATH.md_working_1.datpp_ref_d1_y","ADAPTIVE_PATH.md_working_1.datpp_ref_d1_y","blue")'>pp_ref_d1_y</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_y">The CONSTANT action with label <b>pp_ref_d1_y</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pp_ref_d1_y</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-adapt/mypath.pdb<div class="right"> Click <a onclick='openModal("ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb4")'>here</a> to see an extract from this file.<i></i></div></div><div id="ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb4" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb4")'>&times;</span>  <h2>FILE: regtest/mapping/rt-adapt/mypath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK d1.x=1.12000000000000000000 d1.y=-.60000000000000000000 path=-0.4
+END
+REMARK d1.x=.99000000000000000000 d1.y=-.45000000000000000000 path=-0.3 
+END
+REMARK d1.x=.86000000000000000000 d1.y=-.30000000000000000000 path=-0.2 
+END
+REMARK d1.x=.73000000000000000000 d1.y=-.15000000000000000000 path=-0.1
+END
+REMARK d1.x=.60000000000000000000 d1.y=0 path=0
+END
+REMARK d1.x=.47000000000000000000 d1.y=.15000000000000000000 path=0.1
+END
+REMARK d1.x=.34000000000000000000 d1.y=.30000000000000000000 path=0.2
+END
+REMARK d1.x=.21000000000000000000 d1.y=.45000000000000000000 path=0.3
+END
+REMARK d1.x=.08000000000000000000 d1.y=.60000000000000000000 path=0.4 
+END
+REMARK d1.x=-.05000000000000000000 d1.y=.75000000000000000000 path=0.5
+END
+REMARK d1.x=-.18000000000000000000 d1.y=.90000000000000000000 path=0.6
+END
+REMARK d1.x=-.31000000000000000000 d1.y=1.05000000000000000000 path=0.7 
+END
+REMARK d1.x=-.44000000000000000000 d1.y=1.20000000000000000000 path=0.8
+END
+REMARK d1.x=-.57000000000000000000 d1.y=1.35000000000000000000 path=0.9
+END
+REMARK d1.x=-.70000000000000000000 d1.y=1.50000000000000000000 path=1.0
+END
+REMARK d1.x=-.83000000000000000000 d1.y=1.65000000000000000000 path=1.1
+END
+REMARK d1.x=-.96000000000000000000 d1.y=1.80000000000000000000 path=1.2
+END
+REMARK d1.x=-1.09000000000000000000 d1.y=1.95000000000000000000 path=1.3
+END
+REMARK d1.x=-1.22000000000000000000 d1.y=2.10000000000000000000 path=1.4
+END
+REMARK d1.x=-1.35000000000000000000 d1.y=2.25000000000000000000 path=1.5
+END
+</pre></div>  </div></div> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datd1">d1.y</b>
+<b name="ADAPTIVE_PATH.md_working_1.datpp_dataP" onclick='showPath("ADAPTIVE_PATH.md_working_1.dat","ADAPTIVE_PATH.md_working_1.datpp_dataP","ADAPTIVE_PATH.md_working_1.datpp_dataP","red")'>pp_dataP</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_1.datpp_dataP">The VSTACK action with label <b>pp_dataP</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pp_dataP</td><td width="5%"><font color="red">matrix</font></td><td>a matrix that contains the input vectors in its columns</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISPLACEMENT<span class="right">Calculate the displacement vector between the pair of input vectors <a href="https://www.plumed.org/doc-master/user-doc/html/DISPLACEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datd1">d1.x</b>,<b name="ADAPTIVE_PATH.md_working_1.datd1">d1.y</b> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_x">pp_ref_d1_x</b>,<b name="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_y">pp_ref_d1_y</b>
+<b name="ADAPTIVE_PATH.md_working_1.datpp_data" onclick='showPath("ADAPTIVE_PATH.md_working_1.dat","ADAPTIVE_PATH.md_working_1.datpp_data","ADAPTIVE_PATH.md_working_1.datpp_data","red")'>pp_data</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_1.datpp_data">The CUSTOM action with label <b>pp_data</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pp_data</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datpp_dataP">pp_dataP</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=-x <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="ADAPTIVE_PATH.md_working_1.datpath" onclick='showPath("ADAPTIVE_PATH.md_working_1.dat","ADAPTIVE_PATH.md_working_1.datpath","ADAPTIVE_PATH.md_working_1.datpath","black")'>path</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_1.datpath">The CONSTANT action with label <b>path</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">path</td><td width="5%"><font color="black">scalar</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUE<span class="right">the single number that you would like to store<i></i></span></span>=1
+<b name="ADAPTIVE_PATH.md_working_1.datpath_ref" onclick='showPath("ADAPTIVE_PATH.md_working_1.dat","ADAPTIVE_PATH.md_working_1.datpath_ref","ADAPTIVE_PATH.md_working_1.datpath_ref","blue")'>path_ref</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_1.datpath_ref">The CONSTANT action with label <b>path_ref</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">path_ref</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">PDB2CONSTANT<span class="right">Create a constant value from a PDB input file <a href="https://www.plumed.org/doc-master/user-doc/html/PDB2CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/mapping/rt-adapt/mypath.pdb<div class="right"> Click <a onclick='openModal("ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb5")'>here</a> to see an extract from this file.<i></i></div></div><div id="ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb5" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("ADAPTIVE_PATH.md_working_1.datregtest/mapping/rt-adapt/mypath.pdb5")'>&times;</span>  <h2>FILE: regtest/mapping/rt-adapt/mypath.pdb</h2></div><div class="plumedmodal-body">    <pre>REMARK d1.x=1.12000000000000000000 d1.y=-.60000000000000000000 path=-0.4
+END
+REMARK d1.x=.99000000000000000000 d1.y=-.45000000000000000000 path=-0.3 
+END
+REMARK d1.x=.86000000000000000000 d1.y=-.30000000000000000000 path=-0.2 
+END
+REMARK d1.x=.73000000000000000000 d1.y=-.15000000000000000000 path=-0.1
+END
+REMARK d1.x=.60000000000000000000 d1.y=0 path=0
+END
+REMARK d1.x=.47000000000000000000 d1.y=.15000000000000000000 path=0.1
+END
+REMARK d1.x=.34000000000000000000 d1.y=.30000000000000000000 path=0.2
+END
+REMARK d1.x=.21000000000000000000 d1.y=.45000000000000000000 path=0.3
+END
+REMARK d1.x=.08000000000000000000 d1.y=.60000000000000000000 path=0.4 
+END
+REMARK d1.x=-.05000000000000000000 d1.y=.75000000000000000000 path=0.5
+END
+REMARK d1.x=-.18000000000000000000 d1.y=.90000000000000000000 path=0.6
+END
+REMARK d1.x=-.31000000000000000000 d1.y=1.05000000000000000000 path=0.7 
+END
+REMARK d1.x=-.44000000000000000000 d1.y=1.20000000000000000000 path=0.8
+END
+REMARK d1.x=-.57000000000000000000 d1.y=1.35000000000000000000 path=0.9
+END
+REMARK d1.x=-.70000000000000000000 d1.y=1.50000000000000000000 path=1.0
+END
+REMARK d1.x=-.83000000000000000000 d1.y=1.65000000000000000000 path=1.1
+END
+REMARK d1.x=-.96000000000000000000 d1.y=1.80000000000000000000 path=1.2
+END
+REMARK d1.x=-1.09000000000000000000 d1.y=1.95000000000000000000 path=1.3
+END
+REMARK d1.x=-1.22000000000000000000 d1.y=2.10000000000000000000 path=1.4
+END
+REMARK d1.x=-1.35000000000000000000 d1.y=2.25000000000000000000 path=1.5
+END
+</pre></div>  </div></div> <span class="plumedtooltip">ARG<span class="right">read this single argument from the input rather than the atomic structure<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datpath">path</b>
+<b name="ADAPTIVE_PATH.md_working_1.datpp" onclick='showPath("ADAPTIVE_PATH.md_working_1.dat","ADAPTIVE_PATH.md_working_1.datpp","ADAPTIVE_PATH.md_working_1.datpp","black")'>pp</b>: <span class="plumedtooltip" style="color:green">GEOMETRIC_PATH<span class="right">Distance along and from a path calculated using geometric formulas <a href="https://www.plumed.org/doc-master/user-doc/html/GEOMETRIC_PATH" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the matrix that contains the vectors of displacements from each frame in the path<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datpp_data">pp_data</b>  <span class="plumedtooltip">PROPERTY<span class="right">the label of a value that contains the coordinates we are projecting these points onto<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datpath_ref">path_ref</b> <span class="plumedtooltip">REFERENCE<span class="right">labels for actions that contain reference coordinates for each point on the path<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_x">pp_ref_d1_x</b>,<b name="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_y">pp_ref_d1_y</b> <span class="plumedtooltip">METRIC<span class="right">the method to use for computing the displacement vectors between the reference frames<i></i></span></span>={DIFFERENCE}
+<b name="ADAPTIVE_PATH.md_working_1.datpp_disp" onclick='showPath("ADAPTIVE_PATH.md_working_1.dat","ADAPTIVE_PATH.md_working_1.datpp_disp","ADAPTIVE_PATH.md_working_1.datpp_disp","red")'>pp_disp</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_1.datpp_disp">The AVERAGE_PATH_DISPLACEMENT action with label <b>pp_disp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">pp_disp</td><td width="5%"><font color="red">matrix</font></td><td>matrix containing the average displacement between the trajectory and each of the landmarks that makes up the path</td></tr></table></span>: <span class="plumedtooltip" style="color:green">AVERAGE_PATH_DISPLACEMENT<span class="right">Accumulate the distances between the reference frames in the paths and the configurations visited <a href="https://www.plumed.org/doc-master/user-doc/html/AVERAGE_PATH_DISPLACEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the matrix that contains the vectors of displacements from each frame in the path<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datpp_data">pp_data</b> <span class="plumedtooltip">HALFLIFE<span class="right"> the number of MD steps after which a previously measured path distance weighs only 50 percent in the average<i></i></span></span>=-1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=50 <span class="plumedtooltip">METRIC<span class="right">the method to use for computing the displacement vectors between the reference frames<i></i></span></span>={DIFFERENCE} <span class="plumedtooltip">REFERENCE<span class="right">labels for actions that contain reference coordinates for each point on the path<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_x">pp_ref_d1_x</b>,<b name="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_y">pp_ref_d1_y</b>
+<span class="plumedtooltip" style="color:green">REPARAMETERIZE_PATH<span class="right">Take an input path with frames that are not equally spaced and make the frames equally spaced <a href="https://www.plumed.org/doc-master/user-doc/html/REPARAMETERIZE_PATH" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">DISPLACE_FRAMES<span class="right">label of an action that tells us how to displace the frames<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datpp_disp">pp_disp</b> <span class="plumedtooltip">FIXED<span class="right"> the frames in the path to fix<i></i></span></span>=5,15 <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which to reparameterize the path<i></i></span></span>=50 <span class="plumedtooltip">METRIC<span class="right">the method to use for computing the displacement vectors between the reference frames<i></i></span></span>={DIFFERENCE}  <span class="plumedtooltip">REFERENCE<span class="right">labels for actions that contain reference coordinates for each point on the path<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_x">pp_ref_d1_x</b>,<b name="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_y">pp_ref_d1_y</b>
+<span style="display:none;" id="ADAPTIVE_PATH.md_working_1.dat">The REPARAMETERIZE_PATH action with label <b></b> calculates something</span><span class="plumedtooltip" style="color:green">DUMPPDB<span class="right">Output PDB file. <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPPDB" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">DESCRIPTION<span class="right">the title to use for your PDB output<i></i></span></span>=PATH <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the atoms should be output<i></i></span></span>=50 <span class="plumedtooltip">FMT<span class="right">the format that should be used to output real numbers in the title<i></i></span></span>=%f <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=out-path.pdb <span class="plumedtooltip">ARG<span class="right">the values that are being output in the PDB file<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_x">pp_ref_d1_x</b>,<b name="ADAPTIVE_PATH.md_working_1.datpp_ref_d1_y">pp_ref_d1_y</b>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_1.datd1">d1.x</b>,<b name="ADAPTIVE_PATH.md_working_1.datd1">d1.y</b>,<b name="ADAPTIVE_PATH.md_working_1.datpp">pp.*</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>The curved path here is defined using a series of points in a two dimensional space.  Furthermore, the coordinates that these points should be projected at
+on the low dimensional path (the <script type="math/tex">i</script> values in the equation for <script type="math/tex">s</script> above) are specified in the <code>path</code> property of the input pdb file.</p>
+<p>If you expand the shortcuts in the input above you can see how
+we use a <a href="../GEOMETRIC_PATH/">GEOMETRIC_PATH</a> shortcut to calculate our position along the path and distance from the path.  In addition, we also collect
+information on the average displacement from the path using an <a href="../AVERAGE_PATH_DISPLACEMENT/">AVERAGE_PATH_DISPLACEMENT</a> so that we can update the path every step.
+During these update steps the reference points on the path are shifted by the values that are stored in the <a href="../AVERAGE_PATH_DISPLACEMENT/">AVERAGE_PATH_DISPLACEMENT</a>
+action.  We then use the <a href="../REPARAMETERIZE_PATH/">REPARAMETERIZE_PATH</a> to ensure that the new set of reference points on the path are all equally spaced.  After the adaption
+steps the new reference points are used when calculating are position on and distance from the reference path.</p>
+<p>The input below illustrates how to the positions of atoms to define the adaptive path:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_ADAPTIVE_PATH.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../ADAPTIVE_PATH.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">##SETTINGS INPUTFILES=regtest/trajectories/path_msd/all.pdb</span>
+<span id="ADAPTIVE_PATH.md_working_2.datp1b_short"><span id="ADAPTIVE_PATH.md_working_2.datdefp1b_short"><b name="ADAPTIVE_PATH.md_working_2.datp1b" onclick='showPath("ADAPTIVE_PATH.md_working_2.dat","ADAPTIVE_PATH.md_working_2.datp1b","ADAPTIVE_PATH.md_working_2.datp1b","black")'>p1b</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_2.datp1b">The GEOMETRIC_PATH action with label <b>p1b</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p1b.s</td><td width="5%"><font color="black">scalar</font></td><td>the position on the path</td></tr><tr><td width="5%">p1b.z</td><td width="5%"><font color="black">scalar</font></td><td>the distance from the path</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ADAPTIVE_PATH<span class="right">Compute path collective variables that adapt to the lowest free energy path connecting states A and B. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("ADAPTIVE_PATH.md_working_2.datp1b");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("ADAPTIVE_PATH.md_working_2.datdefp1b");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/ADAPTIVE_PATH">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a pdb file containing the set of reference configurations<i></i></span></span>=<div class="plumedtooltip">regtest/trajectories/path_msd/all.pdb<div class="right"> Click <a onclick='openModal("ADAPTIVE_PATH.md_working_2.datregtest/trajectories/path_msd/all.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="ADAPTIVE_PATH.md_working_2.datregtest/trajectories/path_msd/all.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("ADAPTIVE_PATH.md_working_2.datregtest/trajectories/path_msd/all.pdb1")'>&times;</span>  <h2>FILE: regtest/trajectories/path_msd/all.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1  CL  ALA     1      -3.171   0.295   2.045  1.00  1.00
+ATOM      5  CLP ALA     1      -1.819  -0.143   1.679  1.00  1.00
+ATOM      6  OL  ALA     1      -1.177  -0.889   2.401  1.00  1.00
+ATOM      7  NL  ALA     1      -1.313   0.341   0.529  1.00  1.00
+ATOM      8  HL  ALA     1      -1.845   0.961  -0.011  1.00  1.00
+ATOM      9  CA  ALA     1      -0.003  -0.019   0.021  1.00  1.00
+ATOM     10  HA  ALA     1       0.205  -1.051   0.259  1.00  1.00
+ATOM     11  CB  ALA     1       0.009   0.135  -1.509  1.00  1.00
+ATOM     15  CRP ALA     1       1.121   0.799   0.663  1.00  1.00
+ATOM     16  OR  ALA     1       1.723   1.669   0.043  1.00  1.00
+ATOM     17  NR  ALA     1       1.423   0.519   1.941  1.00  1.00
+ATOM     18  HR  ALA     1       0.873  -0.161   2.413  1.00  1.00
+ATOM     19  CR  ALA     1       2.477   1.187   2.675  1.00  1.00
+END
+FIXED
+ATOM      1  CL  ALA     1      -3.175   0.365   2.024  1.00  1.00
+ATOM      5  CLP ALA     1      -1.814  -0.106   1.685  1.00  1.00
+ATOM      6  OL  ALA     1      -1.201  -0.849   2.425  1.00  1.00
+ATOM      7  NL  ALA     1      -1.296   0.337   0.534  1.00  1.00
+ATOM      8  HL  ALA     1      -1.807   0.951  -0.044  1.00  1.00
+ATOM      9  CA  ALA     1       0.009  -0.067   0.033  1.00  1.00
+ATOM     10  HA  ALA     1       0.175  -1.105   0.283  1.00  1.00
+ATOM     11  CB  ALA     1       0.027   0.046  -1.501  1.00  1.00
+ATOM     15  CRP ALA     1       1.149   0.725   0.654  1.00  1.00
+ATOM     16  OR  ALA     1       1.835   1.491  -0.011  1.00  1.00
+ATOM     17  NR  ALA     1       1.380   0.537   1.968  1.00  1.00
+ATOM     18  HR  ALA     1       0.764  -0.060   2.461  1.00  1.00
+ATOM     19  CR  ALA     1       2.431   1.195   2.683  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -2.990   0.383   2.277  1.00  1.00
+ATOM      5  CLP ALA     1      -1.664  -0.085   1.831  1.00  1.00
+ATOM      6  OL  ALA     1      -0.987  -0.835   2.533  1.00  1.00
+ATOM      7  NL  ALA     1      -1.227   0.364   0.646  1.00  1.00
+ATOM      8  HL  ALA     1      -1.798   0.982   0.124  1.00  1.00
+ATOM      9  CA  ALA     1       0.026  -0.028   0.044  1.00  1.00
+ATOM     10  HA  ALA     1       0.224  -1.060   0.284  1.00  1.00
+ATOM     11  CB  ALA     1      -0.076   0.107  -1.483  1.00  1.00
+ATOM     15  CRP ALA     1       1.217   0.776   0.577  1.00  1.00
+ATOM     16  OR  ALA     1       1.900   1.463  -0.158  1.00  1.00
+ATOM     17  NR  ALA     1       1.494   0.666   1.888  1.00  1.00
+ATOM     18  HR  ALA     1       0.882   0.122   2.437  1.00  1.00
+ATOM     19  CR  ALA     1       2.580   1.341   2.529  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.006   0.350   2.252  1.00  1.00
+ATOM      5  CLP ALA     1      -1.680  -0.112   1.826  1.00  1.00
+ATOM      6  OL  ALA     1      -1.025  -0.896   2.508  1.00  1.00
+ATOM      7  NL  ALA     1      -1.220   0.368   0.654  1.00  1.00
+ATOM      8  HL  ALA     1      -1.771   1.013   0.137  1.00  1.00
+ATOM      9  CA  ALA     1       0.040  -0.029   0.062  1.00  1.00
+ATOM     10  HA  ALA     1       0.210  -1.076   0.277  1.00  1.00
+ATOM     11  CB  ALA     1      -0.066   0.148  -1.465  1.00  1.00
+ATOM     15  CRP ALA     1       1.241   0.738   0.605  1.00  1.00
+ATOM     16  OR  ALA     1       1.986   1.347  -0.125  1.00  1.00
+ATOM     17  NR  ALA     1       1.446   0.694   1.940  1.00  1.00
+ATOM     18  HR  ALA     1       0.796   0.210   2.481  1.00  1.00
+ATOM     19  CR  ALA     1       2.544   1.350   2.582  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.002   0.343   2.271  1.00  1.00
+ATOM      5  CLP ALA     1      -1.672  -0.125   1.828  1.00  1.00
+ATOM      6  OL  ALA     1      -1.028  -0.942   2.486  1.00  1.00
+ATOM      7  NL  ALA     1      -1.213   0.373   0.670  1.00  1.00
+ATOM      8  HL  ALA     1      -1.752   1.033   0.169  1.00  1.00
+ATOM      9  CA  ALA     1       0.041  -0.032   0.055  1.00  1.00
+ATOM     10  HA  ALA     1       0.201  -1.079   0.245  1.00  1.00
+ATOM     11  CB  ALA     1      -0.079   0.194  -1.466  1.00  1.00
+ATOM     15  CRP ALA     1       1.257   0.720   0.601  1.00  1.00
+ATOM     16  OR  ALA     1       2.057   1.240  -0.140  1.00  1.00
+ATOM     17  NR  ALA     1       1.422   0.730   1.942  1.00  1.00
+ATOM     18  HR  ALA     1       0.740   0.303   2.500  1.00  1.00
+ATOM     19  CR  ALA     1       2.528   1.373   2.598  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.144   1.457   1.417  1.00  1.00
+ATOM      5  CLP ALA     1      -1.943   0.587   1.450  1.00  1.00
+ATOM      6  OL  ALA     1      -1.588   0.028   2.480  1.00  1.00
+ATOM      7  NL  ALA     1      -1.281   0.449   0.306  1.00  1.00
+ATOM      8  HL  ALA     1      -1.578   0.914  -0.520  1.00  1.00
+ATOM      9  CA  ALA     1      -0.132  -0.428   0.139  1.00  1.00
+ATOM     10  HA  ALA     1      -0.264  -1.291   0.758  1.00  1.00
+ATOM     11  CB  ALA     1      -0.066  -0.855  -1.329  1.00  1.00
+ATOM     15  CRP ALA     1       1.193   0.220   0.554  1.00  1.00
+ATOM     16  OR  ALA     1       2.195   0.098  -0.140  1.00  1.00
+ATOM     17  NR  ALA     1       1.224   0.872   1.737  1.00  1.00
+ATOM     18  HR  ALA     1       0.399   0.943   2.273  1.00  1.00
+ATOM     19  CR  ALA     1       2.413   1.511   2.254  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.140   1.441   1.453  1.00  1.00
+ATOM      5  CLP ALA     1      -1.944   0.576   1.465  1.00  1.00
+ATOM      6  OL  ALA     1      -1.587  -0.018   2.487  1.00  1.00
+ATOM      7  NL  ALA     1      -1.274   0.465   0.322  1.00  1.00
+ATOM      8  HL  ALA     1      -1.571   0.957  -0.486  1.00  1.00
+ATOM      9  CA  ALA     1      -0.124  -0.418   0.135  1.00  1.00
+ATOM     10  HA  ALA     1      -0.274  -1.304   0.729  1.00  1.00
+ATOM     11  CB  ALA     1      -0.063  -0.813  -1.347  1.00  1.00
+ATOM     15  CRP ALA     1       1.201   0.199   0.572  1.00  1.00
+ATOM     16  OR  ALA     1       2.227   0.007  -0.072  1.00  1.00
+ATOM     17  NR  ALA     1       1.215   0.910   1.709  1.00  1.00
+ATOM     18  HR  ALA     1       0.369   1.020   2.200  1.00  1.00
+ATOM     19  CR  ALA     1       2.393   1.536   2.237  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.140   1.420   1.442  1.00  1.00
+ATOM      5  CLP ALA     1      -1.948   0.546   1.448  1.00  1.00
+ATOM      6  OL  ALA     1      -1.618  -0.065   2.460  1.00  1.00
+ATOM      7  NL  ALA     1      -1.255   0.469   0.311  1.00  1.00
+ATOM      8  HL  ALA     1      -1.538   0.979  -0.490  1.00  1.00
+ATOM      9  CA  ALA     1      -0.107  -0.412   0.124  1.00  1.00
+ATOM     10  HA  ALA     1      -0.257  -1.312   0.685  1.00  1.00
+ATOM     11  CB  ALA     1      -0.028  -0.770  -1.375  1.00  1.00
+ATOM     15  CRP ALA     1       1.217   0.186   0.600  1.00  1.00
+ATOM     16  OR  ALA     1       2.269  -0.069   0.026  1.00  1.00
+ATOM     17  NR  ALA     1       1.193   0.966   1.687  1.00  1.00
+ATOM     18  HR  ALA     1       0.333   1.114   2.120  1.00  1.00
+ATOM     19  CR  ALA     1       2.377   1.589   2.240  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.110   1.698   0.880  1.00  1.00
+ATOM      5  CLP ALA     1      -2.021   0.734   1.142  1.00  1.00
+ATOM      6  OL  ALA     1      -1.859   0.257   2.258  1.00  1.00
+ATOM      7  NL  ALA     1      -1.229   0.414   0.114  1.00  1.00
+ATOM      8  HL  ALA     1      -1.371   0.826  -0.771  1.00  1.00
+ATOM      9  CA  ALA     1      -0.173  -0.593   0.188  1.00  1.00
+ATOM     10  HA  ALA     1      -0.481  -1.374   0.851  1.00  1.00
+ATOM     11  CB  ALA     1       0.011  -1.180  -1.220  1.00  1.00
+ATOM     15  CRP ALA     1       1.163  -0.060   0.716  1.00  1.00
+ATOM     16  OR  ALA     1       2.227  -0.564   0.393  1.00  1.00
+ATOM     17  NR  ALA     1       1.127   0.960   1.594  1.00  1.00
+ATOM     18  HR  ALA     1       0.234   1.295   1.847  1.00  1.00
+ATOM     19  CR  ALA     1       2.303   1.549   2.172  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.139   1.652   0.924  1.00  1.00
+ATOM      5  CLP ALA     1      -2.039   0.698   1.169  1.00  1.00
+ATOM      6  OL  ALA     1      -1.868   0.201   2.278  1.00  1.00
+ATOM      7  NL  ALA     1      -1.239   0.411   0.139  1.00  1.00
+ATOM      8  HL  ALA     1      -1.385   0.842  -0.737  1.00  1.00
+ATOM      9  CA  ALA     1      -0.173  -0.574   0.193  1.00  1.00
+ATOM     10  HA  ALA     1      -0.477  -1.381   0.833  1.00  1.00
+ATOM     11  CB  ALA     1       0.029  -1.142  -1.231  1.00  1.00
+ATOM     15  CRP ALA     1       1.162  -0.048   0.731  1.00  1.00
+ATOM     16  OR  ALA     1       2.220  -0.597   0.472  1.00  1.00
+ATOM     17  NR  ALA     1       1.122   1.024   1.537  1.00  1.00
+ATOM     18  HR  ALA     1       0.233   1.395   1.752  1.00  1.00
+ATOM     19  CR  ALA     1       2.300   1.629   2.102  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.706   1.088   0.468  1.00  1.00
+ATOM      5  CLP ALA     1      -2.458   0.598   1.082  1.00  1.00
+ATOM      6  OL  ALA     1      -2.390   0.404   2.277  1.00  1.00
+ATOM      7  NL  ALA     1      -1.427   0.382   0.258  1.00  1.00
+ATOM      8  HL  ALA     1      -1.513   0.559  -0.713  1.00  1.00
+ATOM      9  CA  ALA     1      -0.157  -0.192   0.685  1.00  1.00
+ATOM     10  HA  ALA     1      -0.343  -0.912   1.470  1.00  1.00
+ATOM     11  CB  ALA     1       0.462  -0.936  -0.512  1.00  1.00
+ATOM     15  CRP ALA     1       0.840   0.814   1.241  1.00  1.00
+ATOM     16  OR  ALA     1       2.034   0.549   1.354  1.00  1.00
+ATOM     17  NR  ALA     1       0.368   2.017   1.650  1.00  1.00
+ATOM     18  HR  ALA     1      -0.613   2.169   1.589  1.00  1.00
+ATOM     19  CR  ALA     1       1.215   3.044   2.195  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.699   1.173   0.487  1.00  1.00
+ATOM      5  CLP ALA     1      -2.464   0.631   1.079  1.00  1.00
+ATOM      6  OL  ALA     1      -2.402   0.386   2.275  1.00  1.00
+ATOM      7  NL  ALA     1      -1.434   0.437   0.260  1.00  1.00
+ATOM      8  HL  ALA     1      -1.516   0.652  -0.701  1.00  1.00
+ATOM      9  CA  ALA     1      -0.174  -0.174   0.667  1.00  1.00
+ATOM     10  HA  ALA     1      -0.377  -0.924   1.411  1.00  1.00
+ATOM     11  CB  ALA     1       0.451  -0.859  -0.570  1.00  1.00
+ATOM     15  CRP ALA     1       0.839   0.801   1.280  1.00  1.00
+ATOM     16  OR  ALA     1       1.999   0.474   1.468  1.00  1.00
+ATOM     17  NR  ALA     1       0.404   2.024   1.627  1.00  1.00
+ATOM     18  HR  ALA     1      -0.565   2.225   1.505  1.00  1.00
+ATOM     19  CR  ALA     1       1.262   3.025   2.214  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.653   0.990   1.121  1.00  1.00
+ATOM      5  CLP ALA     1      -2.321   0.364   1.249  1.00  1.00
+ATOM      6  OL  ALA     1      -2.006  -0.222   2.265  1.00  1.00
+ATOM      7  NL  ALA     1      -1.498   0.501   0.205  1.00  1.00
+ATOM      8  HL  ALA     1      -1.794   0.978  -0.603  1.00  1.00
+ATOM      9  CA  ALA     1      -0.190  -0.127   0.128  1.00  1.00
+ATOM     10  HA  ALA     1      -0.216  -1.086   0.627  1.00  1.00
+ATOM     11  CB  ALA     1       0.159  -0.359  -1.359  1.00  1.00
+ATOM     15  CRP ALA     1       0.933   0.668   0.793  1.00  1.00
+ATOM     16  OR  ALA     1       2.107   0.313   0.705  1.00  1.00
+ATOM     17  NR  ALA     1       0.604   1.770   1.498  1.00  1.00
+ATOM     18  HR  ALA     1      -0.359   1.986   1.593  1.00  1.00
+ATOM     19  CR  ALA     1       1.573   2.595   2.158  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.641   0.954   1.179  1.00  1.00
+ATOM      5  CLP ALA     1      -2.294   0.335   1.290  1.00  1.00
+ATOM      6  OL  ALA     1      -1.964  -0.273   2.288  1.00  1.00
+ATOM      7  NL  ALA     1      -1.485   0.499   0.235  1.00  1.00
+ATOM      8  HL  ALA     1      -1.803   0.995  -0.564  1.00  1.00
+ATOM      9  CA  ALA     1      -0.175  -0.118   0.130  1.00  1.00
+ATOM     10  HA  ALA     1      -0.203  -1.077   0.601  1.00  1.00
+ATOM     11  CB  ALA     1       0.162  -0.300  -1.355  1.00  1.00
+ATOM     15  CRP ALA     1       0.952   0.671   0.815  1.00  1.00
+ATOM     16  OR  ALA     1       2.104   0.260   0.791  1.00  1.00
+ATOM     17  NR  ALA     1       0.633   1.808   1.450  1.00  1.00
+ATOM     18  HR  ALA     1      -0.328   2.065   1.503  1.00  1.00
+ATOM     19  CR  ALA     1       1.608   2.627   2.129  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.635   0.925   1.244  1.00  1.00
+ATOM      5  CLP ALA     1      -2.297   0.305   1.309  1.00  1.00
+ATOM      6  OL  ALA     1      -1.941  -0.334   2.290  1.00  1.00
+ATOM      7  NL  ALA     1      -1.500   0.490   0.251  1.00  1.00
+ATOM      8  HL  ALA     1      -1.827   1.009  -0.537  1.00  1.00
+ATOM      9  CA  ALA     1      -0.178  -0.110   0.119  1.00  1.00
+ATOM     10  HA  ALA     1      -0.205  -1.094   0.536  1.00  1.00
+ATOM     11  CB  ALA     1       0.147  -0.217  -1.379  1.00  1.00
+ATOM     15  CRP ALA     1       0.943   0.643   0.832  1.00  1.00
+ATOM     16  OR  ALA     1       2.074   0.198   0.871  1.00  1.00
+ATOM     17  NR  ALA     1       0.637   1.821   1.423  1.00  1.00
+ATOM     18  HR  ALA     1      -0.311   2.123   1.418  1.00  1.00
+ATOM     19  CR  ALA     1       1.602   2.629   2.109  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.632   0.856   1.331  1.00  1.00
+ATOM      5  CLP ALA     1      -2.282   0.250   1.355  1.00  1.00
+ATOM      6  OL  ALA     1      -1.906  -0.403   2.301  1.00  1.00
+ATOM      7  NL  ALA     1      -1.515   0.478   0.275  1.00  1.00
+ATOM      8  HL  ALA     1      -1.860   0.990  -0.485  1.00  1.00
+ATOM      9  CA  ALA     1      -0.192  -0.105   0.098  1.00  1.00
+ATOM     10  HA  ALA     1      -0.204  -1.121   0.473  1.00  1.00
+ATOM     11  CB  ALA     1       0.129  -0.136  -1.408  1.00  1.00
+ATOM     15  CRP ALA     1       0.931   0.615   0.844  1.00  1.00
+ATOM     16  OR  ALA     1       2.043   0.122   0.934  1.00  1.00
+ATOM     17  NR  ALA     1       0.651   1.819   1.388  1.00  1.00
+ATOM     18  HR  ALA     1      -0.283   2.155   1.349  1.00  1.00
+ATOM     19  CR  ALA     1       1.624   2.595   2.115  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.628   0.823   1.358  1.00  1.00
+ATOM      5  CLP ALA     1      -2.277   0.241   1.370  1.00  1.00
+ATOM      6  OL  ALA     1      -1.871  -0.396   2.325  1.00  1.00
+ATOM      7  NL  ALA     1      -1.525   0.469   0.284  1.00  1.00
+ATOM      8  HL  ALA     1      -1.898   0.970  -0.482  1.00  1.00
+ATOM      9  CA  ALA     1      -0.195  -0.094   0.086  1.00  1.00
+ATOM     10  HA  ALA     1      -0.203  -1.122   0.423  1.00  1.00
+ATOM     11  CB  ALA     1       0.146  -0.058  -1.413  1.00  1.00
+ATOM     15  CRP ALA     1       0.919   0.599   0.874  1.00  1.00
+ATOM     16  OR  ALA     1       1.997   0.065   1.039  1.00  1.00
+ATOM     17  NR  ALA     1       0.655   1.830   1.373  1.00  1.00
+ATOM     18  HR  ALA     1      -0.248   2.200   1.261  1.00  1.00
+ATOM     19  CR  ALA     1       1.625   2.581   2.124  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.539   0.055   1.657  1.00  1.00
+ATOM      5  CLP ALA     1      -2.117  -0.208   1.378  1.00  1.00
+ATOM      6  OL  ALA     1      -1.453  -0.902   2.125  1.00  1.00
+ATOM      7  NL  ALA     1      -1.602   0.351   0.289  1.00  1.00
+ATOM      8  HL  ALA     1      -2.185   0.875  -0.310  1.00  1.00
+ATOM      9  CA  ALA     1      -0.243   0.129  -0.186  1.00  1.00
+ATOM     10  HA  ALA     1      -0.041  -0.924  -0.159  1.00  1.00
+ATOM     11  CB  ALA     1      -0.153   0.625  -1.651  1.00  1.00
+ATOM     15  CRP ALA     1       0.852   0.806   0.637  1.00  1.00
+ATOM     16  OR  ALA     1       2.007   0.400   0.594  1.00  1.00
+ATOM     17  NR  ALA     1       0.508   1.855   1.401  1.00  1.00
+ATOM     18  HR  ALA     1      -0.445   2.112   1.454  1.00  1.00
+ATOM     19  CR  ALA     1       1.460   2.569   2.226  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.578   0.084   1.603  1.00  1.00
+ATOM      5  CLP ALA     1      -2.140  -0.156   1.375  1.00  1.00
+ATOM      6  OL  ALA     1      -1.473  -0.732   2.197  1.00  1.00
+ATOM      7  NL  ALA     1      -1.623   0.335   0.237  1.00  1.00
+ATOM      8  HL  ALA     1      -2.220   0.753  -0.416  1.00  1.00
+ATOM      9  CA  ALA     1      -0.253   0.120  -0.195  1.00  1.00
+ATOM     10  HA  ALA     1      -0.048  -0.931  -0.153  1.00  1.00
+ATOM     11  CB  ALA     1      -0.128   0.612  -1.663  1.00  1.00
+ATOM     15  CRP ALA     1       0.823   0.801   0.637  1.00  1.00
+ATOM     16  OR  ALA     1       1.969   0.367   0.665  1.00  1.00
+ATOM     17  NR  ALA     1       0.477   1.912   1.333  1.00  1.00
+ATOM     18  HR  ALA     1      -0.468   2.199   1.317  1.00  1.00
+ATOM     19  CR  ALA     1       1.410   2.627   2.163  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.113   1.661   1.504  1.00  1.00
+ATOM      5  CLP ALA     1      -1.769   1.059   1.566  1.00  1.00
+ATOM      6  OL  ALA     1      -1.201   0.940   2.629  1.00  1.00
+ATOM      7  NL  ALA     1      -1.219   0.714   0.392  1.00  1.00
+ATOM      8  HL  ALA     1      -1.742   0.797  -0.435  1.00  1.00
+ATOM      9  CA  ALA     1       0.058   0.023   0.242  1.00  1.00
+ATOM     10  HA  ALA     1      -0.001  -0.896   0.782  1.00  1.00
+ATOM     11  CB  ALA     1       0.235  -0.295  -1.249  1.00  1.00
+ATOM     15  CRP ALA     1       1.299   0.757   0.745  1.00  1.00
+ATOM     16  OR  ALA     1       2.276   0.138   1.135  1.00  1.00
+ATOM     17  NR  ALA     1       1.277   2.102   0.736  1.00  1.00
+ATOM     18  HR  ALA     1       0.447   2.567   0.458  1.00  1.00
+ATOM     19  CR  ALA     1       2.391   2.896   1.191  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.089   1.850   1.546  1.00  1.00
+ATOM      5  CLP ALA     1      -1.667   1.457   1.629  1.00  1.00
+ATOM      6  OL  ALA     1      -0.974   1.868   2.533  1.00  1.00
+ATOM      7  NL  ALA     1      -1.204   0.683   0.642  1.00  1.00
+ATOM      8  HL  ALA     1      -1.844   0.360  -0.021  1.00  1.00
+ATOM      9  CA  ALA     1       0.126   0.105   0.564  1.00  1.00
+ATOM     10  HA  ALA     1       0.239  -0.555   1.391  1.00  1.00
+ATOM     11  CB  ALA     1       0.215  -0.722  -0.739  1.00  1.00
+ATOM     15  CRP ALA     1       1.311   1.068   0.623  1.00  1.00
+ATOM     16  OR  ALA     1       2.369   0.726   1.149  1.00  1.00
+ATOM     17  NR  ALA     1       1.156   2.292   0.077  1.00  1.00
+ATOM     18  HR  ALA     1       0.273   2.549  -0.285  1.00  1.00
+ATOM     19  CR  ALA     1       2.201   3.277   0.107  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.102   1.775   1.619  1.00  1.00
+ATOM      5  CLP ALA     1      -1.661   1.466   1.659  1.00  1.00
+ATOM      6  OL  ALA     1      -0.945   1.961   2.476  1.00  1.00
+ATOM      7  NL  ALA     1      -1.205   0.663   0.688  1.00  1.00
+ATOM      8  HL  ALA     1      -1.854   0.269   0.091  1.00  1.00
+ATOM      9  CA  ALA     1       0.147   0.134   0.561  1.00  1.00
+ATOM     10  HA  ALA     1       0.300  -0.545   1.355  1.00  1.00
+ATOM     11  CB  ALA     1       0.237  -0.632  -0.776  1.00  1.00
+ATOM     15  CRP ALA     1       1.306   1.133   0.628  1.00  1.00
+ATOM     16  OR  ALA     1       2.361   0.819   1.176  1.00  1.00
+ATOM     17  NR  ALA     1       1.129   2.345   0.068  1.00  1.00
+ATOM     18  HR  ALA     1       0.252   2.577  -0.315  1.00  1.00
+ATOM     19  CR  ALA     1       2.150   3.364   0.108  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.137   1.689   1.564  1.00  1.00
+ATOM      5  CLP ALA     1      -1.674   1.466   1.595  1.00  1.00
+ATOM      6  OL  ALA     1      -0.991   2.041   2.377  1.00  1.00
+ATOM      7  NL  ALA     1      -1.178   0.640   0.664  1.00  1.00
+ATOM      8  HL  ALA     1      -1.829   0.190   0.106  1.00  1.00
+ATOM      9  CA  ALA     1       0.192   0.170   0.547  1.00  1.00
+ATOM     10  HA  ALA     1       0.347  -0.550   1.313  1.00  1.00
+ATOM     11  CB  ALA     1       0.333  -0.536  -0.821  1.00  1.00
+ATOM     15  CRP ALA     1       1.325   1.194   0.686  1.00  1.00
+ATOM     16  OR  ALA     1       2.348   0.906   1.293  1.00  1.00
+ATOM     17  NR  ALA     1       1.165   2.398   0.103  1.00  1.00
+ATOM     18  HR  ALA     1       0.311   2.617  -0.339  1.00  1.00
+ATOM     19  CR  ALA     1       2.173   3.424   0.206  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.342   1.726   1.297  1.00  1.00
+ATOM      5  CLP ALA     1      -1.882   1.644   1.449  1.00  1.00
+ATOM      6  OL  ALA     1      -1.296   2.423   2.124  1.00  1.00
+ATOM      7  NL  ALA     1      -1.259   0.684   0.740  1.00  1.00
+ATOM      8  HL  ALA     1      -1.839   0.091   0.256  1.00  1.00
+ATOM      9  CA  ALA     1       0.138   0.295   0.784  1.00  1.00
+ATOM     10  HA  ALA     1       0.267  -0.321   1.638  1.00  1.00
+ATOM     11  CB  ALA     1       0.437  -0.541  -0.481  1.00  1.00
+ATOM     15  CRP ALA     1       1.207   1.385   0.899  1.00  1.00
+ATOM     16  OR  ALA     1       2.160   1.248   1.674  1.00  1.00
+ATOM     17  NR  ALA     1       1.092   2.478   0.129  1.00  1.00
+ATOM     18  HR  ALA     1       0.291   2.586  -0.440  1.00  1.00
+ATOM     19  CR  ALA     1       2.044   3.567   0.190  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.361   1.726   1.315  1.00  1.00
+ATOM      5  CLP ALA     1      -1.890   1.687   1.423  1.00  1.00
+ATOM      6  OL  ALA     1      -1.302   2.522   2.029  1.00  1.00
+ATOM      7  NL  ALA     1      -1.285   0.691   0.757  1.00  1.00
+ATOM      8  HL  ALA     1      -1.865   0.049   0.326  1.00  1.00
+ATOM      9  CA  ALA     1       0.123   0.321   0.749  1.00  1.00
+ATOM     10  HA  ALA     1       0.270  -0.331   1.585  1.00  1.00
+ATOM     11  CB  ALA     1       0.408  -0.470  -0.534  1.00  1.00
+ATOM     15  CRP ALA     1       1.192   1.410   0.900  1.00  1.00
+ATOM     16  OR  ALA     1       2.114   1.273   1.701  1.00  1.00
+ATOM     17  NR  ALA     1       1.111   2.493   0.112  1.00  1.00
+ATOM     18  HR  ALA     1       0.326   2.609  -0.490  1.00  1.00
+ATOM     19  CR  ALA     1       2.068   3.578   0.188  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.419   1.747   1.251  1.00  1.00
+ATOM      5  CLP ALA     1      -1.947   1.630   1.371  1.00  1.00
+ATOM      6  OL  ALA     1      -1.331   2.379   2.060  1.00  1.00
+ATOM      7  NL  ALA     1      -1.380   0.668   0.616  1.00  1.00
+ATOM      8  HL  ALA     1      -1.992   0.115   0.104  1.00  1.00
+ATOM      9  CA  ALA     1       0.007   0.227   0.571  1.00  1.00
+ATOM     10  HA  ALA     1       0.086  -0.578   1.262  1.00  1.00
+ATOM     11  CB  ALA     1       0.288  -0.306  -0.835  1.00  1.00
+ATOM     15  CRP ALA     1       1.132   1.190   0.974  1.00  1.00
+ATOM     16  OR  ALA     1       1.974   0.858   1.808  1.00  1.00
+ATOM     17  NR  ALA     1       1.199   2.390   0.352  1.00  1.00
+ATOM     18  HR  ALA     1       0.482   2.643  -0.277  1.00  1.00
+ATOM     19  CR  ALA     1       2.218   3.363   0.657  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.430   1.748   1.261  1.00  1.00
+ATOM      5  CLP ALA     1      -1.958   1.650   1.340  1.00  1.00
+ATOM      6  OL  ALA     1      -1.333   2.471   1.961  1.00  1.00
+ATOM      7  NL  ALA     1      -1.392   0.653   0.642  1.00  1.00
+ATOM      8  HL  ALA     1      -2.018   0.061   0.177  1.00  1.00
+ATOM      9  CA  ALA     1      -0.005   0.219   0.569  1.00  1.00
+ATOM     10  HA  ALA     1       0.083  -0.615   1.230  1.00  1.00
+ATOM     11  CB  ALA     1       0.266  -0.275  -0.863  1.00  1.00
+ATOM     15  CRP ALA     1       1.126   1.166   0.993  1.00  1.00
+ATOM     16  OR  ALA     1       1.918   0.834   1.868  1.00  1.00
+ATOM     17  NR  ALA     1       1.248   2.346   0.359  1.00  1.00
+ATOM     18  HR  ALA     1       0.548   2.609  -0.299  1.00  1.00
+ATOM     19  CR  ALA     1       2.271   3.308   0.675  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.438   1.702   1.306  1.00  1.00
+ATOM      5  CLP ALA     1      -1.962   1.659   1.317  1.00  1.00
+ATOM      6  OL  ALA     1      -1.332   2.532   1.870  1.00  1.00
+ATOM      7  NL  ALA     1      -1.406   0.632   0.671  1.00  1.00
+ATOM      8  HL  ALA     1      -2.029   0.002   0.252  1.00  1.00
+ATOM      9  CA  ALA     1      -0.007   0.228   0.554  1.00  1.00
+ATOM     10  HA  ALA     1       0.103  -0.631   1.184  1.00  1.00
+ATOM     11  CB  ALA     1       0.255  -0.224  -0.899  1.00  1.00
+ATOM     15  CRP ALA     1       1.124   1.169   1.002  1.00  1.00
+ATOM     16  OR  ALA     1       1.889   0.829   1.901  1.00  1.00
+ATOM     17  NR  ALA     1       1.265   2.342   0.365  1.00  1.00
+ATOM     18  HR  ALA     1       0.590   2.614  -0.306  1.00  1.00
+ATOM     19  CR  ALA     1       2.313   3.280   0.698  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.441   1.677   1.342  1.00  1.00
+ATOM      5  CLP ALA     1      -1.971   1.666   1.304  1.00  1.00
+ATOM      6  OL  ALA     1      -1.348   2.594   1.774  1.00  1.00
+ATOM      7  NL  ALA     1      -1.408   0.602   0.696  1.00  1.00
+ATOM      8  HL  ALA     1      -2.050  -0.062   0.329  1.00  1.00
+ATOM      9  CA  ALA     1      -0.014   0.235   0.538  1.00  1.00
+ATOM     10  HA  ALA     1       0.114  -0.660   1.127  1.00  1.00
+ATOM     11  CB  ALA     1       0.223  -0.161  -0.935  1.00  1.00
+ATOM     15  CRP ALA     1       1.115   1.153   1.020  1.00  1.00
+ATOM     16  OR  ALA     1       1.857   0.813   1.931  1.00  1.00
+ATOM     17  NR  ALA     1       1.290   2.335   0.385  1.00  1.00
+ATOM     18  HR  ALA     1       0.632   2.617  -0.298  1.00  1.00
+ATOM     19  CR  ALA     1       2.337   3.252   0.749  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.443   1.670   1.352  1.00  1.00
+ATOM      5  CLP ALA     1      -1.973   1.670   1.295  1.00  1.00
+ATOM      6  OL  ALA     1      -1.351   2.609   1.744  1.00  1.00
+ATOM      7  NL  ALA     1      -1.409   0.597   0.704  1.00  1.00
+ATOM      8  HL  ALA     1      -2.050  -0.076   0.355  1.00  1.00
+ATOM      9  CA  ALA     1      -0.014   0.237   0.533  1.00  1.00
+ATOM     10  HA  ALA     1       0.119  -0.663   1.113  1.00  1.00
+ATOM     11  CB  ALA     1       0.217  -0.147  -0.945  1.00  1.00
+ATOM     15  CRP ALA     1       1.115   1.152   1.023  1.00  1.00
+ATOM     16  OR  ALA     1       1.849   0.808   1.938  1.00  1.00
+ATOM     17  NR  ALA     1       1.296   2.334   0.388  1.00  1.00
+ATOM     18  HR  ALA     1       0.638   2.620  -0.293  1.00  1.00
+ATOM     19  CR  ALA     1       2.342   3.249   0.754  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.451   1.630   1.422  1.00  1.00
+ATOM      5  CLP ALA     1      -1.983   1.689   1.248  1.00  1.00
+ATOM      6  OL  ALA     1      -1.374   2.689   1.550  1.00  1.00
+ATOM      7  NL  ALA     1      -1.421   0.569   0.756  1.00  1.00
+ATOM      8  HL  ALA     1      -2.045  -0.151   0.513  1.00  1.00
+ATOM      9  CA  ALA     1      -0.017   0.248   0.499  1.00  1.00
+ATOM     10  HA  ALA     1       0.149  -0.681   1.023  1.00  1.00
+ATOM     11  CB  ALA     1       0.171  -0.057  -0.999  1.00  1.00
+ATOM     15  CRP ALA     1       1.111   1.147   1.033  1.00  1.00
+ATOM     16  OR  ALA     1       1.807   0.781   1.969  1.00  1.00
+ATOM     17  NR  ALA     1       1.327   2.329   0.410  1.00  1.00
+ATOM     18  HR  ALA     1       0.679   2.635  -0.277  1.00  1.00
+ATOM     19  CR  ALA     1       2.372   3.237   0.799  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.331   1.449   1.617  1.00  1.00
+ATOM      5  CLP ALA     1      -1.868   1.399   1.408  1.00  1.00
+ATOM      6  OL  ALA     1      -1.169   2.255   1.904  1.00  1.00
+ATOM      7  NL  ALA     1      -1.424   0.371   0.676  1.00  1.00
+ATOM      8  HL  ALA     1      -2.118  -0.203   0.289  1.00  1.00
+ATOM      9  CA  ALA     1      -0.062   0.001   0.310  1.00  1.00
+ATOM     10  HA  ALA     1      -0.008  -1.054   0.497  1.00  1.00
+ATOM     11  CB  ALA     1       0.131   0.162  -1.216  1.00  1.00
+ATOM     15  CRP ALA     1       1.142   0.546   1.099  1.00  1.00
+ATOM     16  OR  ALA     1       1.741  -0.171   1.894  1.00  1.00
+ATOM     17  NR  ALA     1       1.537   1.815   0.864  1.00  1.00
+ATOM     18  HR  ALA     1       0.963   2.391   0.297  1.00  1.00
+ATOM     19  CR  ALA     1       2.669   2.426   1.513  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.321   1.436   1.650  1.00  1.00
+ATOM      5  CLP ALA     1      -1.870   1.422   1.372  1.00  1.00
+ATOM      6  OL  ALA     1      -1.182   2.323   1.789  1.00  1.00
+ATOM      7  NL  ALA     1      -1.422   0.347   0.697  1.00  1.00
+ATOM      8  HL  ALA     1      -2.106  -0.263   0.374  1.00  1.00
+ATOM      9  CA  ALA     1      -0.057   0.008   0.290  1.00  1.00
+ATOM     10  HA  ALA     1       0.002  -1.051   0.446  1.00  1.00
+ATOM     11  CB  ALA     1       0.113   0.213  -1.212  1.00  1.00
+ATOM     15  CRP ALA     1       1.139   0.538   1.102  1.00  1.00
+ATOM     16  OR  ALA     1       1.724  -0.196   1.881  1.00  1.00
+ATOM     17  NR  ALA     1       1.539   1.803   0.879  1.00  1.00
+ATOM     18  HR  ALA     1       0.972   2.397   0.326  1.00  1.00
+ATOM     19  CR  ALA     1       2.672   2.407   1.539  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.318   1.434   1.657  1.00  1.00
+ATOM      5  CLP ALA     1      -1.871   1.426   1.363  1.00  1.00
+ATOM      6  OL  ALA     1      -1.186   2.341   1.756  1.00  1.00
+ATOM      7  NL  ALA     1      -1.422   0.343   0.704  1.00  1.00
+ATOM      8  HL  ALA     1      -2.101  -0.279   0.398  1.00  1.00
+ATOM      9  CA  ALA     1      -0.058   0.010   0.290  1.00  1.00
+ATOM     10  HA  ALA     1       0.005  -1.051   0.433  1.00  1.00
+ATOM     11  CB  ALA     1       0.109   0.227  -1.215  1.00  1.00
+ATOM     15  CRP ALA     1       1.138   0.536   1.100  1.00  1.00
+ATOM     16  OR  ALA     1       1.723  -0.202   1.878  1.00  1.00
+ATOM     17  NR  ALA     1       1.539   1.802   0.887  1.00  1.00
+ATOM     18  HR  ALA     1       0.970   2.398   0.335  1.00  1.00
+ATOM     19  CR  ALA     1       2.675   2.402   1.547  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.297   1.417   1.700  1.00  1.00
+ATOM      5  CLP ALA     1      -1.874   1.437   1.310  1.00  1.00
+ATOM      6  OL  ALA     1      -1.214   2.432   1.560  1.00  1.00
+ATOM      7  NL  ALA     1      -1.412   0.320   0.746  1.00  1.00
+ATOM      8  HL  ALA     1      -2.060  -0.372   0.544  1.00  1.00
+ATOM      9  CA  ALA     1      -0.065   0.025   0.282  1.00  1.00
+ATOM     10  HA  ALA     1       0.023  -1.051   0.357  1.00  1.00
+ATOM     11  CB  ALA     1       0.071   0.308  -1.213  1.00  1.00
+ATOM     15  CRP ALA     1       1.141   0.510   1.103  1.00  1.00
+ATOM     16  OR  ALA     1       1.724  -0.245   1.863  1.00  1.00
+ATOM     17  NR  ALA     1       1.541   1.794   0.938  1.00  1.00
+ATOM     18  HR  ALA     1       0.957   2.397   0.401  1.00  1.00
+ATOM     19  CR  ALA     1       2.683   2.371   1.604  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.283   1.421   1.730  1.00  1.00
+ATOM      5  CLP ALA     1      -1.874   1.449   1.277  1.00  1.00
+ATOM      6  OL  ALA     1      -1.222   2.476   1.436  1.00  1.00
+ATOM      7  NL  ALA     1      -1.405   0.299   0.773  1.00  1.00
+ATOM      8  HL  ALA     1      -2.034  -0.422   0.640  1.00  1.00
+ATOM      9  CA  ALA     1      -0.063   0.028   0.272  1.00  1.00
+ATOM     10  HA  ALA     1       0.015  -1.050   0.307  1.00  1.00
+ATOM     11  CB  ALA     1       0.057   0.364  -1.214  1.00  1.00
+ATOM     15  CRP ALA     1       1.134   0.492   1.093  1.00  1.00
+ATOM     16  OR  ALA     1       1.729  -0.288   1.825  1.00  1.00
+ATOM     17  NR  ALA     1       1.539   1.779   0.976  1.00  1.00
+ATOM     18  HR  ALA     1       0.945   2.388   0.456  1.00  1.00
+ATOM     19  CR  ALA     1       2.682   2.335   1.653  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.265   1.435   1.760  1.00  1.00
+ATOM      5  CLP ALA     1      -1.868   1.457   1.257  1.00  1.00
+ATOM      6  OL  ALA     1      -1.229   2.500   1.343  1.00  1.00
+ATOM      7  NL  ALA     1      -1.398   0.292   0.802  1.00  1.00
+ATOM      8  HL  ALA     1      -2.014  -0.454   0.728  1.00  1.00
+ATOM      9  CA  ALA     1      -0.067   0.024   0.264  1.00  1.00
+ATOM     10  HA  ALA     1       0.011  -1.049   0.257  1.00  1.00
+ATOM     11  CB  ALA     1       0.028   0.426  -1.206  1.00  1.00
+ATOM     15  CRP ALA     1       1.144   0.464   1.092  1.00  1.00
+ATOM     16  OR  ALA     1       1.748  -0.346   1.781  1.00  1.00
+ATOM     17  NR  ALA     1       1.532   1.754   1.029  1.00  1.00
+ATOM     18  HR  ALA     1       0.931   2.385   0.536  1.00  1.00
+ATOM     19  CR  ALA     1       2.676   2.280   1.721  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.236   1.453   1.772  1.00  1.00
+ATOM      5  CLP ALA     1      -1.865   1.473   1.217  1.00  1.00
+ATOM      6  OL  ALA     1      -1.244   2.522   1.222  1.00  1.00
+ATOM      7  NL  ALA     1      -1.388   0.292   0.824  1.00  1.00
+ATOM      8  HL  ALA     1      -1.982  -0.485   0.827  1.00  1.00
+ATOM      9  CA  ALA     1      -0.066   0.031   0.248  1.00  1.00
+ATOM     10  HA  ALA     1       0.018  -1.048   0.230  1.00  1.00
+ATOM     11  CB  ALA     1       0.011   0.464  -1.213  1.00  1.00
+ATOM     15  CRP ALA     1       1.144   0.452   1.088  1.00  1.00
+ATOM     16  OR  ALA     1       1.767  -0.373   1.737  1.00  1.00
+ATOM     17  NR  ALA     1       1.517   1.749   1.061  1.00  1.00
+ATOM     18  HR  ALA     1       0.906   2.387   0.586  1.00  1.00
+ATOM     19  CR  ALA     1       2.660   2.262   1.754  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.225   1.461   1.784  1.00  1.00
+ATOM      5  CLP ALA     1      -1.878   1.466   1.191  1.00  1.00
+ATOM      6  OL  ALA     1      -1.276   2.527   1.106  1.00  1.00
+ATOM      7  NL  ALA     1      -1.375   0.274   0.839  1.00  1.00
+ATOM      8  HL  ALA     1      -1.947  -0.517   0.921  1.00  1.00
+ATOM      9  CA  ALA     1      -0.077   0.024   0.236  1.00  1.00
+ATOM     10  HA  ALA     1       0.009  -1.048   0.194  1.00  1.00
+ATOM     11  CB  ALA     1      -0.004   0.503  -1.214  1.00  1.00
+ATOM     15  CRP ALA     1       1.144   0.436   1.066  1.00  1.00
+ATOM     16  OR  ALA     1       1.800  -0.403   1.678  1.00  1.00
+ATOM     17  NR  ALA     1       1.483   1.736   1.091  1.00  1.00
+ATOM     18  HR  ALA     1       0.861   2.388   0.647  1.00  1.00
+ATOM     19  CR  ALA     1       2.642   2.246   1.792  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.212   1.465   1.797  1.00  1.00
+ATOM      5  CLP ALA     1      -1.874   1.470   1.168  1.00  1.00
+ATOM      6  OL  ALA     1      -1.286   2.526   1.008  1.00  1.00
+ATOM      7  NL  ALA     1      -1.363   0.265   0.860  1.00  1.00
+ATOM      8  HL  ALA     1      -1.914  -0.534   1.016  1.00  1.00
+ATOM      9  CA  ALA     1      -0.074   0.012   0.232  1.00  1.00
+ATOM     10  HA  ALA     1       0.001  -1.058   0.173  1.00  1.00
+ATOM     11  CB  ALA     1      -0.020   0.528  -1.210  1.00  1.00
+ATOM     15  CRP ALA     1       1.147   0.408   1.060  1.00  1.00
+ATOM     16  OR  ALA     1       1.827  -0.445   1.625  1.00  1.00
+ATOM     17  NR  ALA     1       1.461   1.721   1.140  1.00  1.00
+ATOM     18  HR  ALA     1       0.821   2.361   0.731  1.00  1.00
+ATOM     19  CR  ALA     1       2.614   2.214   1.845  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.185   1.487   1.790  1.00  1.00
+ATOM      5  CLP ALA     1      -1.865   1.480   1.139  1.00  1.00
+ATOM      6  OL  ALA     1      -1.293   2.532   0.896  1.00  1.00
+ATOM      7  NL  ALA     1      -1.349   0.268   0.862  1.00  1.00
+ATOM      8  HL  ALA     1      -1.881  -0.527   1.095  1.00  1.00
+ATOM      9  CA  ALA     1      -0.065   0.013   0.226  1.00  1.00
+ATOM     10  HA  ALA     1      -0.006  -1.063   0.151  1.00  1.00
+ATOM     11  CB  ALA     1      -0.019   0.539  -1.224  1.00  1.00
+ATOM     15  CRP ALA     1       1.170   0.398   1.031  1.00  1.00
+ATOM     16  OR  ALA     1       1.871  -0.463   1.540  1.00  1.00
+ATOM     17  NR  ALA     1       1.447   1.706   1.159  1.00  1.00
+ATOM     18  HR  ALA     1       0.788   2.362   0.800  1.00  1.00
+ATOM     19  CR  ALA     1       2.602   2.205   1.868  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.257   1.605   1.105  1.00  1.00
+ATOM      5  CLP ALA     1      -1.941   1.459   0.447  1.00  1.00
+ATOM      6  OL  ALA     1      -1.481   2.369  -0.223  1.00  1.00
+ATOM      7  NL  ALA     1      -1.303   0.291   0.647  1.00  1.00
+ATOM      8  HL  ALA     1      -1.743  -0.379   1.229  1.00  1.00
+ATOM      9  CA  ALA     1      -0.011  -0.077   0.099  1.00  1.00
+ATOM     10  HA  ALA     1       0.155  -1.099   0.417  1.00  1.00
+ATOM     11  CB  ALA     1       0.001  -0.097  -1.439  1.00  1.00
+ATOM     15  CRP ALA     1       1.191   0.673   0.683  1.00  1.00
+ATOM     16  OR  ALA     1       2.015   0.103   1.375  1.00  1.00
+ATOM     17  NR  ALA     1       1.303   1.983   0.393  1.00  1.00
+ATOM     18  HR  ALA     1       0.553   2.411  -0.109  1.00  1.00
+ATOM     19  CR  ALA     1       2.395   2.811   0.843  1.00  1.00
+END
+FIXED
+</pre></div>  </div></div> <span class="plumedtooltip">FIXED<span class="right">the positions in the list of input frames of the two path nodes whose positions remain fixed during the path optimization<i></i></span></span>=1,42 <span class="plumedtooltip">UPDATE<span class="right">the frequency with which the path should be updated<i></i></span></span>=1000 <span class="plumedtooltip">WFILE<span class="right">file on which to write out the path<i></i></span></span>=out-path.pdb <span class="plumedtooltip">WSTRIDE<span class="right"> frequency with which to write out the path<i></i></span></span>=20000
+</span><span id="ADAPTIVE_PATH.md_working_2.datdefp1b_long" style="display:none;"><b name="ADAPTIVE_PATH.md_working_2.datp1b" onclick='showPath("ADAPTIVE_PATH.md_working_2.dat","ADAPTIVE_PATH.md_working_2.datp1b","ADAPTIVE_PATH.md_working_2.datp1b","black")'>p1b</b>: <span class="plumedtooltip" style="color:green">ADAPTIVE_PATH<span class="right">Compute path collective variables that adapt to the lowest free energy path connecting states A and B. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("ADAPTIVE_PATH.md_working_2.datp1b");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("ADAPTIVE_PATH.md_working_2.datdefp1b");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/ADAPTIVE_PATH">More details</a><i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a pdb file containing the set of reference configurations<i></i></span></span>=<div class="plumedtooltip">regtest/trajectories/path_msd/all.pdb<div class="right"> Click <a onclick='openModal("ADAPTIVE_PATH.md_working_2.datregtest/trajectories/path_msd/all.pdb2")'>here</a> to see an extract from this file.<i></i></div></div><div id="ADAPTIVE_PATH.md_working_2.datregtest/trajectories/path_msd/all.pdb2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("ADAPTIVE_PATH.md_working_2.datregtest/trajectories/path_msd/all.pdb2")'>&times;</span>  <h2>FILE: regtest/trajectories/path_msd/all.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1  CL  ALA     1      -3.171   0.295   2.045  1.00  1.00
+ATOM      5  CLP ALA     1      -1.819  -0.143   1.679  1.00  1.00
+ATOM      6  OL  ALA     1      -1.177  -0.889   2.401  1.00  1.00
+ATOM      7  NL  ALA     1      -1.313   0.341   0.529  1.00  1.00
+ATOM      8  HL  ALA     1      -1.845   0.961  -0.011  1.00  1.00
+ATOM      9  CA  ALA     1      -0.003  -0.019   0.021  1.00  1.00
+ATOM     10  HA  ALA     1       0.205  -1.051   0.259  1.00  1.00
+ATOM     11  CB  ALA     1       0.009   0.135  -1.509  1.00  1.00
+ATOM     15  CRP ALA     1       1.121   0.799   0.663  1.00  1.00
+ATOM     16  OR  ALA     1       1.723   1.669   0.043  1.00  1.00
+ATOM     17  NR  ALA     1       1.423   0.519   1.941  1.00  1.00
+ATOM     18  HR  ALA     1       0.873  -0.161   2.413  1.00  1.00
+ATOM     19  CR  ALA     1       2.477   1.187   2.675  1.00  1.00
+END
+FIXED
+ATOM      1  CL  ALA     1      -3.175   0.365   2.024  1.00  1.00
+ATOM      5  CLP ALA     1      -1.814  -0.106   1.685  1.00  1.00
+ATOM      6  OL  ALA     1      -1.201  -0.849   2.425  1.00  1.00
+ATOM      7  NL  ALA     1      -1.296   0.337   0.534  1.00  1.00
+ATOM      8  HL  ALA     1      -1.807   0.951  -0.044  1.00  1.00
+ATOM      9  CA  ALA     1       0.009  -0.067   0.033  1.00  1.00
+ATOM     10  HA  ALA     1       0.175  -1.105   0.283  1.00  1.00
+ATOM     11  CB  ALA     1       0.027   0.046  -1.501  1.00  1.00
+ATOM     15  CRP ALA     1       1.149   0.725   0.654  1.00  1.00
+ATOM     16  OR  ALA     1       1.835   1.491  -0.011  1.00  1.00
+ATOM     17  NR  ALA     1       1.380   0.537   1.968  1.00  1.00
+ATOM     18  HR  ALA     1       0.764  -0.060   2.461  1.00  1.00
+ATOM     19  CR  ALA     1       2.431   1.195   2.683  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -2.990   0.383   2.277  1.00  1.00
+ATOM      5  CLP ALA     1      -1.664  -0.085   1.831  1.00  1.00
+ATOM      6  OL  ALA     1      -0.987  -0.835   2.533  1.00  1.00
+ATOM      7  NL  ALA     1      -1.227   0.364   0.646  1.00  1.00
+ATOM      8  HL  ALA     1      -1.798   0.982   0.124  1.00  1.00
+ATOM      9  CA  ALA     1       0.026  -0.028   0.044  1.00  1.00
+ATOM     10  HA  ALA     1       0.224  -1.060   0.284  1.00  1.00
+ATOM     11  CB  ALA     1      -0.076   0.107  -1.483  1.00  1.00
+ATOM     15  CRP ALA     1       1.217   0.776   0.577  1.00  1.00
+ATOM     16  OR  ALA     1       1.900   1.463  -0.158  1.00  1.00
+ATOM     17  NR  ALA     1       1.494   0.666   1.888  1.00  1.00
+ATOM     18  HR  ALA     1       0.882   0.122   2.437  1.00  1.00
+ATOM     19  CR  ALA     1       2.580   1.341   2.529  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.006   0.350   2.252  1.00  1.00
+ATOM      5  CLP ALA     1      -1.680  -0.112   1.826  1.00  1.00
+ATOM      6  OL  ALA     1      -1.025  -0.896   2.508  1.00  1.00
+ATOM      7  NL  ALA     1      -1.220   0.368   0.654  1.00  1.00
+ATOM      8  HL  ALA     1      -1.771   1.013   0.137  1.00  1.00
+ATOM      9  CA  ALA     1       0.040  -0.029   0.062  1.00  1.00
+ATOM     10  HA  ALA     1       0.210  -1.076   0.277  1.00  1.00
+ATOM     11  CB  ALA     1      -0.066   0.148  -1.465  1.00  1.00
+ATOM     15  CRP ALA     1       1.241   0.738   0.605  1.00  1.00
+ATOM     16  OR  ALA     1       1.986   1.347  -0.125  1.00  1.00
+ATOM     17  NR  ALA     1       1.446   0.694   1.940  1.00  1.00
+ATOM     18  HR  ALA     1       0.796   0.210   2.481  1.00  1.00
+ATOM     19  CR  ALA     1       2.544   1.350   2.582  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.002   0.343   2.271  1.00  1.00
+ATOM      5  CLP ALA     1      -1.672  -0.125   1.828  1.00  1.00
+ATOM      6  OL  ALA     1      -1.028  -0.942   2.486  1.00  1.00
+ATOM      7  NL  ALA     1      -1.213   0.373   0.670  1.00  1.00
+ATOM      8  HL  ALA     1      -1.752   1.033   0.169  1.00  1.00
+ATOM      9  CA  ALA     1       0.041  -0.032   0.055  1.00  1.00
+ATOM     10  HA  ALA     1       0.201  -1.079   0.245  1.00  1.00
+ATOM     11  CB  ALA     1      -0.079   0.194  -1.466  1.00  1.00
+ATOM     15  CRP ALA     1       1.257   0.720   0.601  1.00  1.00
+ATOM     16  OR  ALA     1       2.057   1.240  -0.140  1.00  1.00
+ATOM     17  NR  ALA     1       1.422   0.730   1.942  1.00  1.00
+ATOM     18  HR  ALA     1       0.740   0.303   2.500  1.00  1.00
+ATOM     19  CR  ALA     1       2.528   1.373   2.598  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.144   1.457   1.417  1.00  1.00
+ATOM      5  CLP ALA     1      -1.943   0.587   1.450  1.00  1.00
+ATOM      6  OL  ALA     1      -1.588   0.028   2.480  1.00  1.00
+ATOM      7  NL  ALA     1      -1.281   0.449   0.306  1.00  1.00
+ATOM      8  HL  ALA     1      -1.578   0.914  -0.520  1.00  1.00
+ATOM      9  CA  ALA     1      -0.132  -0.428   0.139  1.00  1.00
+ATOM     10  HA  ALA     1      -0.264  -1.291   0.758  1.00  1.00
+ATOM     11  CB  ALA     1      -0.066  -0.855  -1.329  1.00  1.00
+ATOM     15  CRP ALA     1       1.193   0.220   0.554  1.00  1.00
+ATOM     16  OR  ALA     1       2.195   0.098  -0.140  1.00  1.00
+ATOM     17  NR  ALA     1       1.224   0.872   1.737  1.00  1.00
+ATOM     18  HR  ALA     1       0.399   0.943   2.273  1.00  1.00
+ATOM     19  CR  ALA     1       2.413   1.511   2.254  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.140   1.441   1.453  1.00  1.00
+ATOM      5  CLP ALA     1      -1.944   0.576   1.465  1.00  1.00
+ATOM      6  OL  ALA     1      -1.587  -0.018   2.487  1.00  1.00
+ATOM      7  NL  ALA     1      -1.274   0.465   0.322  1.00  1.00
+ATOM      8  HL  ALA     1      -1.571   0.957  -0.486  1.00  1.00
+ATOM      9  CA  ALA     1      -0.124  -0.418   0.135  1.00  1.00
+ATOM     10  HA  ALA     1      -0.274  -1.304   0.729  1.00  1.00
+ATOM     11  CB  ALA     1      -0.063  -0.813  -1.347  1.00  1.00
+ATOM     15  CRP ALA     1       1.201   0.199   0.572  1.00  1.00
+ATOM     16  OR  ALA     1       2.227   0.007  -0.072  1.00  1.00
+ATOM     17  NR  ALA     1       1.215   0.910   1.709  1.00  1.00
+ATOM     18  HR  ALA     1       0.369   1.020   2.200  1.00  1.00
+ATOM     19  CR  ALA     1       2.393   1.536   2.237  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.140   1.420   1.442  1.00  1.00
+ATOM      5  CLP ALA     1      -1.948   0.546   1.448  1.00  1.00
+ATOM      6  OL  ALA     1      -1.618  -0.065   2.460  1.00  1.00
+ATOM      7  NL  ALA     1      -1.255   0.469   0.311  1.00  1.00
+ATOM      8  HL  ALA     1      -1.538   0.979  -0.490  1.00  1.00
+ATOM      9  CA  ALA     1      -0.107  -0.412   0.124  1.00  1.00
+ATOM     10  HA  ALA     1      -0.257  -1.312   0.685  1.00  1.00
+ATOM     11  CB  ALA     1      -0.028  -0.770  -1.375  1.00  1.00
+ATOM     15  CRP ALA     1       1.217   0.186   0.600  1.00  1.00
+ATOM     16  OR  ALA     1       2.269  -0.069   0.026  1.00  1.00
+ATOM     17  NR  ALA     1       1.193   0.966   1.687  1.00  1.00
+ATOM     18  HR  ALA     1       0.333   1.114   2.120  1.00  1.00
+ATOM     19  CR  ALA     1       2.377   1.589   2.240  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.110   1.698   0.880  1.00  1.00
+ATOM      5  CLP ALA     1      -2.021   0.734   1.142  1.00  1.00
+ATOM      6  OL  ALA     1      -1.859   0.257   2.258  1.00  1.00
+ATOM      7  NL  ALA     1      -1.229   0.414   0.114  1.00  1.00
+ATOM      8  HL  ALA     1      -1.371   0.826  -0.771  1.00  1.00
+ATOM      9  CA  ALA     1      -0.173  -0.593   0.188  1.00  1.00
+ATOM     10  HA  ALA     1      -0.481  -1.374   0.851  1.00  1.00
+ATOM     11  CB  ALA     1       0.011  -1.180  -1.220  1.00  1.00
+ATOM     15  CRP ALA     1       1.163  -0.060   0.716  1.00  1.00
+ATOM     16  OR  ALA     1       2.227  -0.564   0.393  1.00  1.00
+ATOM     17  NR  ALA     1       1.127   0.960   1.594  1.00  1.00
+ATOM     18  HR  ALA     1       0.234   1.295   1.847  1.00  1.00
+ATOM     19  CR  ALA     1       2.303   1.549   2.172  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.139   1.652   0.924  1.00  1.00
+ATOM      5  CLP ALA     1      -2.039   0.698   1.169  1.00  1.00
+ATOM      6  OL  ALA     1      -1.868   0.201   2.278  1.00  1.00
+ATOM      7  NL  ALA     1      -1.239   0.411   0.139  1.00  1.00
+ATOM      8  HL  ALA     1      -1.385   0.842  -0.737  1.00  1.00
+ATOM      9  CA  ALA     1      -0.173  -0.574   0.193  1.00  1.00
+ATOM     10  HA  ALA     1      -0.477  -1.381   0.833  1.00  1.00
+ATOM     11  CB  ALA     1       0.029  -1.142  -1.231  1.00  1.00
+ATOM     15  CRP ALA     1       1.162  -0.048   0.731  1.00  1.00
+ATOM     16  OR  ALA     1       2.220  -0.597   0.472  1.00  1.00
+ATOM     17  NR  ALA     1       1.122   1.024   1.537  1.00  1.00
+ATOM     18  HR  ALA     1       0.233   1.395   1.752  1.00  1.00
+ATOM     19  CR  ALA     1       2.300   1.629   2.102  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.706   1.088   0.468  1.00  1.00
+ATOM      5  CLP ALA     1      -2.458   0.598   1.082  1.00  1.00
+ATOM      6  OL  ALA     1      -2.390   0.404   2.277  1.00  1.00
+ATOM      7  NL  ALA     1      -1.427   0.382   0.258  1.00  1.00
+ATOM      8  HL  ALA     1      -1.513   0.559  -0.713  1.00  1.00
+ATOM      9  CA  ALA     1      -0.157  -0.192   0.685  1.00  1.00
+ATOM     10  HA  ALA     1      -0.343  -0.912   1.470  1.00  1.00
+ATOM     11  CB  ALA     1       0.462  -0.936  -0.512  1.00  1.00
+ATOM     15  CRP ALA     1       0.840   0.814   1.241  1.00  1.00
+ATOM     16  OR  ALA     1       2.034   0.549   1.354  1.00  1.00
+ATOM     17  NR  ALA     1       0.368   2.017   1.650  1.00  1.00
+ATOM     18  HR  ALA     1      -0.613   2.169   1.589  1.00  1.00
+ATOM     19  CR  ALA     1       1.215   3.044   2.195  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.699   1.173   0.487  1.00  1.00
+ATOM      5  CLP ALA     1      -2.464   0.631   1.079  1.00  1.00
+ATOM      6  OL  ALA     1      -2.402   0.386   2.275  1.00  1.00
+ATOM      7  NL  ALA     1      -1.434   0.437   0.260  1.00  1.00
+ATOM      8  HL  ALA     1      -1.516   0.652  -0.701  1.00  1.00
+ATOM      9  CA  ALA     1      -0.174  -0.174   0.667  1.00  1.00
+ATOM     10  HA  ALA     1      -0.377  -0.924   1.411  1.00  1.00
+ATOM     11  CB  ALA     1       0.451  -0.859  -0.570  1.00  1.00
+ATOM     15  CRP ALA     1       0.839   0.801   1.280  1.00  1.00
+ATOM     16  OR  ALA     1       1.999   0.474   1.468  1.00  1.00
+ATOM     17  NR  ALA     1       0.404   2.024   1.627  1.00  1.00
+ATOM     18  HR  ALA     1      -0.565   2.225   1.505  1.00  1.00
+ATOM     19  CR  ALA     1       1.262   3.025   2.214  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.653   0.990   1.121  1.00  1.00
+ATOM      5  CLP ALA     1      -2.321   0.364   1.249  1.00  1.00
+ATOM      6  OL  ALA     1      -2.006  -0.222   2.265  1.00  1.00
+ATOM      7  NL  ALA     1      -1.498   0.501   0.205  1.00  1.00
+ATOM      8  HL  ALA     1      -1.794   0.978  -0.603  1.00  1.00
+ATOM      9  CA  ALA     1      -0.190  -0.127   0.128  1.00  1.00
+ATOM     10  HA  ALA     1      -0.216  -1.086   0.627  1.00  1.00
+ATOM     11  CB  ALA     1       0.159  -0.359  -1.359  1.00  1.00
+ATOM     15  CRP ALA     1       0.933   0.668   0.793  1.00  1.00
+ATOM     16  OR  ALA     1       2.107   0.313   0.705  1.00  1.00
+ATOM     17  NR  ALA     1       0.604   1.770   1.498  1.00  1.00
+ATOM     18  HR  ALA     1      -0.359   1.986   1.593  1.00  1.00
+ATOM     19  CR  ALA     1       1.573   2.595   2.158  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.641   0.954   1.179  1.00  1.00
+ATOM      5  CLP ALA     1      -2.294   0.335   1.290  1.00  1.00
+ATOM      6  OL  ALA     1      -1.964  -0.273   2.288  1.00  1.00
+ATOM      7  NL  ALA     1      -1.485   0.499   0.235  1.00  1.00
+ATOM      8  HL  ALA     1      -1.803   0.995  -0.564  1.00  1.00
+ATOM      9  CA  ALA     1      -0.175  -0.118   0.130  1.00  1.00
+ATOM     10  HA  ALA     1      -0.203  -1.077   0.601  1.00  1.00
+ATOM     11  CB  ALA     1       0.162  -0.300  -1.355  1.00  1.00
+ATOM     15  CRP ALA     1       0.952   0.671   0.815  1.00  1.00
+ATOM     16  OR  ALA     1       2.104   0.260   0.791  1.00  1.00
+ATOM     17  NR  ALA     1       0.633   1.808   1.450  1.00  1.00
+ATOM     18  HR  ALA     1      -0.328   2.065   1.503  1.00  1.00
+ATOM     19  CR  ALA     1       1.608   2.627   2.129  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.635   0.925   1.244  1.00  1.00
+ATOM      5  CLP ALA     1      -2.297   0.305   1.309  1.00  1.00
+ATOM      6  OL  ALA     1      -1.941  -0.334   2.290  1.00  1.00
+ATOM      7  NL  ALA     1      -1.500   0.490   0.251  1.00  1.00
+ATOM      8  HL  ALA     1      -1.827   1.009  -0.537  1.00  1.00
+ATOM      9  CA  ALA     1      -0.178  -0.110   0.119  1.00  1.00
+ATOM     10  HA  ALA     1      -0.205  -1.094   0.536  1.00  1.00
+ATOM     11  CB  ALA     1       0.147  -0.217  -1.379  1.00  1.00
+ATOM     15  CRP ALA     1       0.943   0.643   0.832  1.00  1.00
+ATOM     16  OR  ALA     1       2.074   0.198   0.871  1.00  1.00
+ATOM     17  NR  ALA     1       0.637   1.821   1.423  1.00  1.00
+ATOM     18  HR  ALA     1      -0.311   2.123   1.418  1.00  1.00
+ATOM     19  CR  ALA     1       1.602   2.629   2.109  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.632   0.856   1.331  1.00  1.00
+ATOM      5  CLP ALA     1      -2.282   0.250   1.355  1.00  1.00
+ATOM      6  OL  ALA     1      -1.906  -0.403   2.301  1.00  1.00
+ATOM      7  NL  ALA     1      -1.515   0.478   0.275  1.00  1.00
+ATOM      8  HL  ALA     1      -1.860   0.990  -0.485  1.00  1.00
+ATOM      9  CA  ALA     1      -0.192  -0.105   0.098  1.00  1.00
+ATOM     10  HA  ALA     1      -0.204  -1.121   0.473  1.00  1.00
+ATOM     11  CB  ALA     1       0.129  -0.136  -1.408  1.00  1.00
+ATOM     15  CRP ALA     1       0.931   0.615   0.844  1.00  1.00
+ATOM     16  OR  ALA     1       2.043   0.122   0.934  1.00  1.00
+ATOM     17  NR  ALA     1       0.651   1.819   1.388  1.00  1.00
+ATOM     18  HR  ALA     1      -0.283   2.155   1.349  1.00  1.00
+ATOM     19  CR  ALA     1       1.624   2.595   2.115  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.628   0.823   1.358  1.00  1.00
+ATOM      5  CLP ALA     1      -2.277   0.241   1.370  1.00  1.00
+ATOM      6  OL  ALA     1      -1.871  -0.396   2.325  1.00  1.00
+ATOM      7  NL  ALA     1      -1.525   0.469   0.284  1.00  1.00
+ATOM      8  HL  ALA     1      -1.898   0.970  -0.482  1.00  1.00
+ATOM      9  CA  ALA     1      -0.195  -0.094   0.086  1.00  1.00
+ATOM     10  HA  ALA     1      -0.203  -1.122   0.423  1.00  1.00
+ATOM     11  CB  ALA     1       0.146  -0.058  -1.413  1.00  1.00
+ATOM     15  CRP ALA     1       0.919   0.599   0.874  1.00  1.00
+ATOM     16  OR  ALA     1       1.997   0.065   1.039  1.00  1.00
+ATOM     17  NR  ALA     1       0.655   1.830   1.373  1.00  1.00
+ATOM     18  HR  ALA     1      -0.248   2.200   1.261  1.00  1.00
+ATOM     19  CR  ALA     1       1.625   2.581   2.124  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.539   0.055   1.657  1.00  1.00
+ATOM      5  CLP ALA     1      -2.117  -0.208   1.378  1.00  1.00
+ATOM      6  OL  ALA     1      -1.453  -0.902   2.125  1.00  1.00
+ATOM      7  NL  ALA     1      -1.602   0.351   0.289  1.00  1.00
+ATOM      8  HL  ALA     1      -2.185   0.875  -0.310  1.00  1.00
+ATOM      9  CA  ALA     1      -0.243   0.129  -0.186  1.00  1.00
+ATOM     10  HA  ALA     1      -0.041  -0.924  -0.159  1.00  1.00
+ATOM     11  CB  ALA     1      -0.153   0.625  -1.651  1.00  1.00
+ATOM     15  CRP ALA     1       0.852   0.806   0.637  1.00  1.00
+ATOM     16  OR  ALA     1       2.007   0.400   0.594  1.00  1.00
+ATOM     17  NR  ALA     1       0.508   1.855   1.401  1.00  1.00
+ATOM     18  HR  ALA     1      -0.445   2.112   1.454  1.00  1.00
+ATOM     19  CR  ALA     1       1.460   2.569   2.226  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.578   0.084   1.603  1.00  1.00
+ATOM      5  CLP ALA     1      -2.140  -0.156   1.375  1.00  1.00
+ATOM      6  OL  ALA     1      -1.473  -0.732   2.197  1.00  1.00
+ATOM      7  NL  ALA     1      -1.623   0.335   0.237  1.00  1.00
+ATOM      8  HL  ALA     1      -2.220   0.753  -0.416  1.00  1.00
+ATOM      9  CA  ALA     1      -0.253   0.120  -0.195  1.00  1.00
+ATOM     10  HA  ALA     1      -0.048  -0.931  -0.153  1.00  1.00
+ATOM     11  CB  ALA     1      -0.128   0.612  -1.663  1.00  1.00
+ATOM     15  CRP ALA     1       0.823   0.801   0.637  1.00  1.00
+ATOM     16  OR  ALA     1       1.969   0.367   0.665  1.00  1.00
+ATOM     17  NR  ALA     1       0.477   1.912   1.333  1.00  1.00
+ATOM     18  HR  ALA     1      -0.468   2.199   1.317  1.00  1.00
+ATOM     19  CR  ALA     1       1.410   2.627   2.163  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.113   1.661   1.504  1.00  1.00
+ATOM      5  CLP ALA     1      -1.769   1.059   1.566  1.00  1.00
+ATOM      6  OL  ALA     1      -1.201   0.940   2.629  1.00  1.00
+ATOM      7  NL  ALA     1      -1.219   0.714   0.392  1.00  1.00
+ATOM      8  HL  ALA     1      -1.742   0.797  -0.435  1.00  1.00
+ATOM      9  CA  ALA     1       0.058   0.023   0.242  1.00  1.00
+ATOM     10  HA  ALA     1      -0.001  -0.896   0.782  1.00  1.00
+ATOM     11  CB  ALA     1       0.235  -0.295  -1.249  1.00  1.00
+ATOM     15  CRP ALA     1       1.299   0.757   0.745  1.00  1.00
+ATOM     16  OR  ALA     1       2.276   0.138   1.135  1.00  1.00
+ATOM     17  NR  ALA     1       1.277   2.102   0.736  1.00  1.00
+ATOM     18  HR  ALA     1       0.447   2.567   0.458  1.00  1.00
+ATOM     19  CR  ALA     1       2.391   2.896   1.191  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.089   1.850   1.546  1.00  1.00
+ATOM      5  CLP ALA     1      -1.667   1.457   1.629  1.00  1.00
+ATOM      6  OL  ALA     1      -0.974   1.868   2.533  1.00  1.00
+ATOM      7  NL  ALA     1      -1.204   0.683   0.642  1.00  1.00
+ATOM      8  HL  ALA     1      -1.844   0.360  -0.021  1.00  1.00
+ATOM      9  CA  ALA     1       0.126   0.105   0.564  1.00  1.00
+ATOM     10  HA  ALA     1       0.239  -0.555   1.391  1.00  1.00
+ATOM     11  CB  ALA     1       0.215  -0.722  -0.739  1.00  1.00
+ATOM     15  CRP ALA     1       1.311   1.068   0.623  1.00  1.00
+ATOM     16  OR  ALA     1       2.369   0.726   1.149  1.00  1.00
+ATOM     17  NR  ALA     1       1.156   2.292   0.077  1.00  1.00
+ATOM     18  HR  ALA     1       0.273   2.549  -0.285  1.00  1.00
+ATOM     19  CR  ALA     1       2.201   3.277   0.107  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.102   1.775   1.619  1.00  1.00
+ATOM      5  CLP ALA     1      -1.661   1.466   1.659  1.00  1.00
+ATOM      6  OL  ALA     1      -0.945   1.961   2.476  1.00  1.00
+ATOM      7  NL  ALA     1      -1.205   0.663   0.688  1.00  1.00
+ATOM      8  HL  ALA     1      -1.854   0.269   0.091  1.00  1.00
+ATOM      9  CA  ALA     1       0.147   0.134   0.561  1.00  1.00
+ATOM     10  HA  ALA     1       0.300  -0.545   1.355  1.00  1.00
+ATOM     11  CB  ALA     1       0.237  -0.632  -0.776  1.00  1.00
+ATOM     15  CRP ALA     1       1.306   1.133   0.628  1.00  1.00
+ATOM     16  OR  ALA     1       2.361   0.819   1.176  1.00  1.00
+ATOM     17  NR  ALA     1       1.129   2.345   0.068  1.00  1.00
+ATOM     18  HR  ALA     1       0.252   2.577  -0.315  1.00  1.00
+ATOM     19  CR  ALA     1       2.150   3.364   0.108  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.137   1.689   1.564  1.00  1.00
+ATOM      5  CLP ALA     1      -1.674   1.466   1.595  1.00  1.00
+ATOM      6  OL  ALA     1      -0.991   2.041   2.377  1.00  1.00
+ATOM      7  NL  ALA     1      -1.178   0.640   0.664  1.00  1.00
+ATOM      8  HL  ALA     1      -1.829   0.190   0.106  1.00  1.00
+ATOM      9  CA  ALA     1       0.192   0.170   0.547  1.00  1.00
+ATOM     10  HA  ALA     1       0.347  -0.550   1.313  1.00  1.00
+ATOM     11  CB  ALA     1       0.333  -0.536  -0.821  1.00  1.00
+ATOM     15  CRP ALA     1       1.325   1.194   0.686  1.00  1.00
+ATOM     16  OR  ALA     1       2.348   0.906   1.293  1.00  1.00
+ATOM     17  NR  ALA     1       1.165   2.398   0.103  1.00  1.00
+ATOM     18  HR  ALA     1       0.311   2.617  -0.339  1.00  1.00
+ATOM     19  CR  ALA     1       2.173   3.424   0.206  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.342   1.726   1.297  1.00  1.00
+ATOM      5  CLP ALA     1      -1.882   1.644   1.449  1.00  1.00
+ATOM      6  OL  ALA     1      -1.296   2.423   2.124  1.00  1.00
+ATOM      7  NL  ALA     1      -1.259   0.684   0.740  1.00  1.00
+ATOM      8  HL  ALA     1      -1.839   0.091   0.256  1.00  1.00
+ATOM      9  CA  ALA     1       0.138   0.295   0.784  1.00  1.00
+ATOM     10  HA  ALA     1       0.267  -0.321   1.638  1.00  1.00
+ATOM     11  CB  ALA     1       0.437  -0.541  -0.481  1.00  1.00
+ATOM     15  CRP ALA     1       1.207   1.385   0.899  1.00  1.00
+ATOM     16  OR  ALA     1       2.160   1.248   1.674  1.00  1.00
+ATOM     17  NR  ALA     1       1.092   2.478   0.129  1.00  1.00
+ATOM     18  HR  ALA     1       0.291   2.586  -0.440  1.00  1.00
+ATOM     19  CR  ALA     1       2.044   3.567   0.190  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.361   1.726   1.315  1.00  1.00
+ATOM      5  CLP ALA     1      -1.890   1.687   1.423  1.00  1.00
+ATOM      6  OL  ALA     1      -1.302   2.522   2.029  1.00  1.00
+ATOM      7  NL  ALA     1      -1.285   0.691   0.757  1.00  1.00
+ATOM      8  HL  ALA     1      -1.865   0.049   0.326  1.00  1.00
+ATOM      9  CA  ALA     1       0.123   0.321   0.749  1.00  1.00
+ATOM     10  HA  ALA     1       0.270  -0.331   1.585  1.00  1.00
+ATOM     11  CB  ALA     1       0.408  -0.470  -0.534  1.00  1.00
+ATOM     15  CRP ALA     1       1.192   1.410   0.900  1.00  1.00
+ATOM     16  OR  ALA     1       2.114   1.273   1.701  1.00  1.00
+ATOM     17  NR  ALA     1       1.111   2.493   0.112  1.00  1.00
+ATOM     18  HR  ALA     1       0.326   2.609  -0.490  1.00  1.00
+ATOM     19  CR  ALA     1       2.068   3.578   0.188  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.419   1.747   1.251  1.00  1.00
+ATOM      5  CLP ALA     1      -1.947   1.630   1.371  1.00  1.00
+ATOM      6  OL  ALA     1      -1.331   2.379   2.060  1.00  1.00
+ATOM      7  NL  ALA     1      -1.380   0.668   0.616  1.00  1.00
+ATOM      8  HL  ALA     1      -1.992   0.115   0.104  1.00  1.00
+ATOM      9  CA  ALA     1       0.007   0.227   0.571  1.00  1.00
+ATOM     10  HA  ALA     1       0.086  -0.578   1.262  1.00  1.00
+ATOM     11  CB  ALA     1       0.288  -0.306  -0.835  1.00  1.00
+ATOM     15  CRP ALA     1       1.132   1.190   0.974  1.00  1.00
+ATOM     16  OR  ALA     1       1.974   0.858   1.808  1.00  1.00
+ATOM     17  NR  ALA     1       1.199   2.390   0.352  1.00  1.00
+ATOM     18  HR  ALA     1       0.482   2.643  -0.277  1.00  1.00
+ATOM     19  CR  ALA     1       2.218   3.363   0.657  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.430   1.748   1.261  1.00  1.00
+ATOM      5  CLP ALA     1      -1.958   1.650   1.340  1.00  1.00
+ATOM      6  OL  ALA     1      -1.333   2.471   1.961  1.00  1.00
+ATOM      7  NL  ALA     1      -1.392   0.653   0.642  1.00  1.00
+ATOM      8  HL  ALA     1      -2.018   0.061   0.177  1.00  1.00
+ATOM      9  CA  ALA     1      -0.005   0.219   0.569  1.00  1.00
+ATOM     10  HA  ALA     1       0.083  -0.615   1.230  1.00  1.00
+ATOM     11  CB  ALA     1       0.266  -0.275  -0.863  1.00  1.00
+ATOM     15  CRP ALA     1       1.126   1.166   0.993  1.00  1.00
+ATOM     16  OR  ALA     1       1.918   0.834   1.868  1.00  1.00
+ATOM     17  NR  ALA     1       1.248   2.346   0.359  1.00  1.00
+ATOM     18  HR  ALA     1       0.548   2.609  -0.299  1.00  1.00
+ATOM     19  CR  ALA     1       2.271   3.308   0.675  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.438   1.702   1.306  1.00  1.00
+ATOM      5  CLP ALA     1      -1.962   1.659   1.317  1.00  1.00
+ATOM      6  OL  ALA     1      -1.332   2.532   1.870  1.00  1.00
+ATOM      7  NL  ALA     1      -1.406   0.632   0.671  1.00  1.00
+ATOM      8  HL  ALA     1      -2.029   0.002   0.252  1.00  1.00
+ATOM      9  CA  ALA     1      -0.007   0.228   0.554  1.00  1.00
+ATOM     10  HA  ALA     1       0.103  -0.631   1.184  1.00  1.00
+ATOM     11  CB  ALA     1       0.255  -0.224  -0.899  1.00  1.00
+ATOM     15  CRP ALA     1       1.124   1.169   1.002  1.00  1.00
+ATOM     16  OR  ALA     1       1.889   0.829   1.901  1.00  1.00
+ATOM     17  NR  ALA     1       1.265   2.342   0.365  1.00  1.00
+ATOM     18  HR  ALA     1       0.590   2.614  -0.306  1.00  1.00
+ATOM     19  CR  ALA     1       2.313   3.280   0.698  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.441   1.677   1.342  1.00  1.00
+ATOM      5  CLP ALA     1      -1.971   1.666   1.304  1.00  1.00
+ATOM      6  OL  ALA     1      -1.348   2.594   1.774  1.00  1.00
+ATOM      7  NL  ALA     1      -1.408   0.602   0.696  1.00  1.00
+ATOM      8  HL  ALA     1      -2.050  -0.062   0.329  1.00  1.00
+ATOM      9  CA  ALA     1      -0.014   0.235   0.538  1.00  1.00
+ATOM     10  HA  ALA     1       0.114  -0.660   1.127  1.00  1.00
+ATOM     11  CB  ALA     1       0.223  -0.161  -0.935  1.00  1.00
+ATOM     15  CRP ALA     1       1.115   1.153   1.020  1.00  1.00
+ATOM     16  OR  ALA     1       1.857   0.813   1.931  1.00  1.00
+ATOM     17  NR  ALA     1       1.290   2.335   0.385  1.00  1.00
+ATOM     18  HR  ALA     1       0.632   2.617  -0.298  1.00  1.00
+ATOM     19  CR  ALA     1       2.337   3.252   0.749  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.443   1.670   1.352  1.00  1.00
+ATOM      5  CLP ALA     1      -1.973   1.670   1.295  1.00  1.00
+ATOM      6  OL  ALA     1      -1.351   2.609   1.744  1.00  1.00
+ATOM      7  NL  ALA     1      -1.409   0.597   0.704  1.00  1.00
+ATOM      8  HL  ALA     1      -2.050  -0.076   0.355  1.00  1.00
+ATOM      9  CA  ALA     1      -0.014   0.237   0.533  1.00  1.00
+ATOM     10  HA  ALA     1       0.119  -0.663   1.113  1.00  1.00
+ATOM     11  CB  ALA     1       0.217  -0.147  -0.945  1.00  1.00
+ATOM     15  CRP ALA     1       1.115   1.152   1.023  1.00  1.00
+ATOM     16  OR  ALA     1       1.849   0.808   1.938  1.00  1.00
+ATOM     17  NR  ALA     1       1.296   2.334   0.388  1.00  1.00
+ATOM     18  HR  ALA     1       0.638   2.620  -0.293  1.00  1.00
+ATOM     19  CR  ALA     1       2.342   3.249   0.754  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.451   1.630   1.422  1.00  1.00
+ATOM      5  CLP ALA     1      -1.983   1.689   1.248  1.00  1.00
+ATOM      6  OL  ALA     1      -1.374   2.689   1.550  1.00  1.00
+ATOM      7  NL  ALA     1      -1.421   0.569   0.756  1.00  1.00
+ATOM      8  HL  ALA     1      -2.045  -0.151   0.513  1.00  1.00
+ATOM      9  CA  ALA     1      -0.017   0.248   0.499  1.00  1.00
+ATOM     10  HA  ALA     1       0.149  -0.681   1.023  1.00  1.00
+ATOM     11  CB  ALA     1       0.171  -0.057  -0.999  1.00  1.00
+ATOM     15  CRP ALA     1       1.111   1.147   1.033  1.00  1.00
+ATOM     16  OR  ALA     1       1.807   0.781   1.969  1.00  1.00
+ATOM     17  NR  ALA     1       1.327   2.329   0.410  1.00  1.00
+ATOM     18  HR  ALA     1       0.679   2.635  -0.277  1.00  1.00
+ATOM     19  CR  ALA     1       2.372   3.237   0.799  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.331   1.449   1.617  1.00  1.00
+ATOM      5  CLP ALA     1      -1.868   1.399   1.408  1.00  1.00
+ATOM      6  OL  ALA     1      -1.169   2.255   1.904  1.00  1.00
+ATOM      7  NL  ALA     1      -1.424   0.371   0.676  1.00  1.00
+ATOM      8  HL  ALA     1      -2.118  -0.203   0.289  1.00  1.00
+ATOM      9  CA  ALA     1      -0.062   0.001   0.310  1.00  1.00
+ATOM     10  HA  ALA     1      -0.008  -1.054   0.497  1.00  1.00
+ATOM     11  CB  ALA     1       0.131   0.162  -1.216  1.00  1.00
+ATOM     15  CRP ALA     1       1.142   0.546   1.099  1.00  1.00
+ATOM     16  OR  ALA     1       1.741  -0.171   1.894  1.00  1.00
+ATOM     17  NR  ALA     1       1.537   1.815   0.864  1.00  1.00
+ATOM     18  HR  ALA     1       0.963   2.391   0.297  1.00  1.00
+ATOM     19  CR  ALA     1       2.669   2.426   1.513  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.321   1.436   1.650  1.00  1.00
+ATOM      5  CLP ALA     1      -1.870   1.422   1.372  1.00  1.00
+ATOM      6  OL  ALA     1      -1.182   2.323   1.789  1.00  1.00
+ATOM      7  NL  ALA     1      -1.422   0.347   0.697  1.00  1.00
+ATOM      8  HL  ALA     1      -2.106  -0.263   0.374  1.00  1.00
+ATOM      9  CA  ALA     1      -0.057   0.008   0.290  1.00  1.00
+ATOM     10  HA  ALA     1       0.002  -1.051   0.446  1.00  1.00
+ATOM     11  CB  ALA     1       0.113   0.213  -1.212  1.00  1.00
+ATOM     15  CRP ALA     1       1.139   0.538   1.102  1.00  1.00
+ATOM     16  OR  ALA     1       1.724  -0.196   1.881  1.00  1.00
+ATOM     17  NR  ALA     1       1.539   1.803   0.879  1.00  1.00
+ATOM     18  HR  ALA     1       0.972   2.397   0.326  1.00  1.00
+ATOM     19  CR  ALA     1       2.672   2.407   1.539  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.318   1.434   1.657  1.00  1.00
+ATOM      5  CLP ALA     1      -1.871   1.426   1.363  1.00  1.00
+ATOM      6  OL  ALA     1      -1.186   2.341   1.756  1.00  1.00
+ATOM      7  NL  ALA     1      -1.422   0.343   0.704  1.00  1.00
+ATOM      8  HL  ALA     1      -2.101  -0.279   0.398  1.00  1.00
+ATOM      9  CA  ALA     1      -0.058   0.010   0.290  1.00  1.00
+ATOM     10  HA  ALA     1       0.005  -1.051   0.433  1.00  1.00
+ATOM     11  CB  ALA     1       0.109   0.227  -1.215  1.00  1.00
+ATOM     15  CRP ALA     1       1.138   0.536   1.100  1.00  1.00
+ATOM     16  OR  ALA     1       1.723  -0.202   1.878  1.00  1.00
+ATOM     17  NR  ALA     1       1.539   1.802   0.887  1.00  1.00
+ATOM     18  HR  ALA     1       0.970   2.398   0.335  1.00  1.00
+ATOM     19  CR  ALA     1       2.675   2.402   1.547  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.297   1.417   1.700  1.00  1.00
+ATOM      5  CLP ALA     1      -1.874   1.437   1.310  1.00  1.00
+ATOM      6  OL  ALA     1      -1.214   2.432   1.560  1.00  1.00
+ATOM      7  NL  ALA     1      -1.412   0.320   0.746  1.00  1.00
+ATOM      8  HL  ALA     1      -2.060  -0.372   0.544  1.00  1.00
+ATOM      9  CA  ALA     1      -0.065   0.025   0.282  1.00  1.00
+ATOM     10  HA  ALA     1       0.023  -1.051   0.357  1.00  1.00
+ATOM     11  CB  ALA     1       0.071   0.308  -1.213  1.00  1.00
+ATOM     15  CRP ALA     1       1.141   0.510   1.103  1.00  1.00
+ATOM     16  OR  ALA     1       1.724  -0.245   1.863  1.00  1.00
+ATOM     17  NR  ALA     1       1.541   1.794   0.938  1.00  1.00
+ATOM     18  HR  ALA     1       0.957   2.397   0.401  1.00  1.00
+ATOM     19  CR  ALA     1       2.683   2.371   1.604  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.283   1.421   1.730  1.00  1.00
+ATOM      5  CLP ALA     1      -1.874   1.449   1.277  1.00  1.00
+ATOM      6  OL  ALA     1      -1.222   2.476   1.436  1.00  1.00
+ATOM      7  NL  ALA     1      -1.405   0.299   0.773  1.00  1.00
+ATOM      8  HL  ALA     1      -2.034  -0.422   0.640  1.00  1.00
+ATOM      9  CA  ALA     1      -0.063   0.028   0.272  1.00  1.00
+ATOM     10  HA  ALA     1       0.015  -1.050   0.307  1.00  1.00
+ATOM     11  CB  ALA     1       0.057   0.364  -1.214  1.00  1.00
+ATOM     15  CRP ALA     1       1.134   0.492   1.093  1.00  1.00
+ATOM     16  OR  ALA     1       1.729  -0.288   1.825  1.00  1.00
+ATOM     17  NR  ALA     1       1.539   1.779   0.976  1.00  1.00
+ATOM     18  HR  ALA     1       0.945   2.388   0.456  1.00  1.00
+ATOM     19  CR  ALA     1       2.682   2.335   1.653  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.265   1.435   1.760  1.00  1.00
+ATOM      5  CLP ALA     1      -1.868   1.457   1.257  1.00  1.00
+ATOM      6  OL  ALA     1      -1.229   2.500   1.343  1.00  1.00
+ATOM      7  NL  ALA     1      -1.398   0.292   0.802  1.00  1.00
+ATOM      8  HL  ALA     1      -2.014  -0.454   0.728  1.00  1.00
+ATOM      9  CA  ALA     1      -0.067   0.024   0.264  1.00  1.00
+ATOM     10  HA  ALA     1       0.011  -1.049   0.257  1.00  1.00
+ATOM     11  CB  ALA     1       0.028   0.426  -1.206  1.00  1.00
+ATOM     15  CRP ALA     1       1.144   0.464   1.092  1.00  1.00
+ATOM     16  OR  ALA     1       1.748  -0.346   1.781  1.00  1.00
+ATOM     17  NR  ALA     1       1.532   1.754   1.029  1.00  1.00
+ATOM     18  HR  ALA     1       0.931   2.385   0.536  1.00  1.00
+ATOM     19  CR  ALA     1       2.676   2.280   1.721  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.236   1.453   1.772  1.00  1.00
+ATOM      5  CLP ALA     1      -1.865   1.473   1.217  1.00  1.00
+ATOM      6  OL  ALA     1      -1.244   2.522   1.222  1.00  1.00
+ATOM      7  NL  ALA     1      -1.388   0.292   0.824  1.00  1.00
+ATOM      8  HL  ALA     1      -1.982  -0.485   0.827  1.00  1.00
+ATOM      9  CA  ALA     1      -0.066   0.031   0.248  1.00  1.00
+ATOM     10  HA  ALA     1       0.018  -1.048   0.230  1.00  1.00
+ATOM     11  CB  ALA     1       0.011   0.464  -1.213  1.00  1.00
+ATOM     15  CRP ALA     1       1.144   0.452   1.088  1.00  1.00
+ATOM     16  OR  ALA     1       1.767  -0.373   1.737  1.00  1.00
+ATOM     17  NR  ALA     1       1.517   1.749   1.061  1.00  1.00
+ATOM     18  HR  ALA     1       0.906   2.387   0.586  1.00  1.00
+ATOM     19  CR  ALA     1       2.660   2.262   1.754  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.225   1.461   1.784  1.00  1.00
+ATOM      5  CLP ALA     1      -1.878   1.466   1.191  1.00  1.00
+ATOM      6  OL  ALA     1      -1.276   2.527   1.106  1.00  1.00
+ATOM      7  NL  ALA     1      -1.375   0.274   0.839  1.00  1.00
+ATOM      8  HL  ALA     1      -1.947  -0.517   0.921  1.00  1.00
+ATOM      9  CA  ALA     1      -0.077   0.024   0.236  1.00  1.00
+ATOM     10  HA  ALA     1       0.009  -1.048   0.194  1.00  1.00
+ATOM     11  CB  ALA     1      -0.004   0.503  -1.214  1.00  1.00
+ATOM     15  CRP ALA     1       1.144   0.436   1.066  1.00  1.00
+ATOM     16  OR  ALA     1       1.800  -0.403   1.678  1.00  1.00
+ATOM     17  NR  ALA     1       1.483   1.736   1.091  1.00  1.00
+ATOM     18  HR  ALA     1       0.861   2.388   0.647  1.00  1.00
+ATOM     19  CR  ALA     1       2.642   2.246   1.792  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.212   1.465   1.797  1.00  1.00
+ATOM      5  CLP ALA     1      -1.874   1.470   1.168  1.00  1.00
+ATOM      6  OL  ALA     1      -1.286   2.526   1.008  1.00  1.00
+ATOM      7  NL  ALA     1      -1.363   0.265   0.860  1.00  1.00
+ATOM      8  HL  ALA     1      -1.914  -0.534   1.016  1.00  1.00
+ATOM      9  CA  ALA     1      -0.074   0.012   0.232  1.00  1.00
+ATOM     10  HA  ALA     1       0.001  -1.058   0.173  1.00  1.00
+ATOM     11  CB  ALA     1      -0.020   0.528  -1.210  1.00  1.00
+ATOM     15  CRP ALA     1       1.147   0.408   1.060  1.00  1.00
+ATOM     16  OR  ALA     1       1.827  -0.445   1.625  1.00  1.00
+ATOM     17  NR  ALA     1       1.461   1.721   1.140  1.00  1.00
+ATOM     18  HR  ALA     1       0.821   2.361   0.731  1.00  1.00
+ATOM     19  CR  ALA     1       2.614   2.214   1.845  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.185   1.487   1.790  1.00  1.00
+ATOM      5  CLP ALA     1      -1.865   1.480   1.139  1.00  1.00
+ATOM      6  OL  ALA     1      -1.293   2.532   0.896  1.00  1.00
+ATOM      7  NL  ALA     1      -1.349   0.268   0.862  1.00  1.00
+ATOM      8  HL  ALA     1      -1.881  -0.527   1.095  1.00  1.00
+ATOM      9  CA  ALA     1      -0.065   0.013   0.226  1.00  1.00
+ATOM     10  HA  ALA     1      -0.006  -1.063   0.151  1.00  1.00
+ATOM     11  CB  ALA     1      -0.019   0.539  -1.224  1.00  1.00
+ATOM     15  CRP ALA     1       1.170   0.398   1.031  1.00  1.00
+ATOM     16  OR  ALA     1       1.871  -0.463   1.540  1.00  1.00
+ATOM     17  NR  ALA     1       1.447   1.706   1.159  1.00  1.00
+ATOM     18  HR  ALA     1       0.788   2.362   0.800  1.00  1.00
+ATOM     19  CR  ALA     1       2.602   2.205   1.868  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.257   1.605   1.105  1.00  1.00
+ATOM      5  CLP ALA     1      -1.941   1.459   0.447  1.00  1.00
+ATOM      6  OL  ALA     1      -1.481   2.369  -0.223  1.00  1.00
+ATOM      7  NL  ALA     1      -1.303   0.291   0.647  1.00  1.00
+ATOM      8  HL  ALA     1      -1.743  -0.379   1.229  1.00  1.00
+ATOM      9  CA  ALA     1      -0.011  -0.077   0.099  1.00  1.00
+ATOM     10  HA  ALA     1       0.155  -1.099   0.417  1.00  1.00
+ATOM     11  CB  ALA     1       0.001  -0.097  -1.439  1.00  1.00
+ATOM     15  CRP ALA     1       1.191   0.673   0.683  1.00  1.00
+ATOM     16  OR  ALA     1       2.015   0.103   1.375  1.00  1.00
+ATOM     17  NR  ALA     1       1.303   1.983   0.393  1.00  1.00
+ATOM     18  HR  ALA     1       0.553   2.411  -0.109  1.00  1.00
+ATOM     19  CR  ALA     1       2.395   2.811   0.843  1.00  1.00
+END
+FIXED
+</pre></div>  </div></div> <span class="plumedtooltip">FIXED<span class="right">the positions in the list of input frames of the two path nodes whose positions remain fixed during the path optimization<i></i></span></span>=1,42 <span class="plumedtooltip">UPDATE<span class="right">the frequency with which the path should be updated<i></i></span></span>=1000 <span class="plumedtooltip">WFILE<span class="right">file on which to write out the path<i></i></span></span>=out-path.pdb <span class="plumedtooltip">WSTRIDE<span class="right"> frequency with which to write out the path<i></i></span></span>=20000  <span class="plumedtooltip">TYPE<span class="right"> the manner in which distances are calculated<i></i></span></span>=OPTIMAL-FAST <span class="plumedtooltip">HALFLIFE<span class="right"> the number of MD steps after which a previously measured path distance weighs only 50 percent in the average<i></i></span></span>=-1 <span class="plumedtooltip">FMT<span class="right"> the format to use for output files<i></i></span></span>=%f
+</span></span><span id="ADAPTIVE_PATH.md_working_2.datp1b_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("ADAPTIVE_PATH.md_working_2.datp1b")'># p1b: ADAPTIVE_PATH REFERENCE=regtest/trajectories/path_msd/all.pdb FIXED=1,42 UPDATE=1000 WFILE=out-path.pdb WSTRIDE=20000</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="ADAPTIVE_PATH.md_working_2.datp1b_data" onclick='showPath("ADAPTIVE_PATH.md_working_2.dat","ADAPTIVE_PATH.md_working_2.datp1b_data","ADAPTIVE_PATH.md_working_2.datp1b_data","brown")'>p1b_data</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_2.datp1b_data">The RMSD action with label <b>p1b_data</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p1b_data.dist</td><td width="5%"><font color="blue">vector</font></td><td>the RMSD distance the atoms have moved</td></tr><tr><td width="5%">p1b_data.disp</td><td width="5%"><font color="red">matrix</font></td><td>the vector of displacements for the atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">RMSD<span class="right">Calculate the RMSD with respect to a reference structure. <a href="https://www.plumed.org/doc-master/user-doc/html/RMSD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">DISPLACEMENT<span class="right"> Calculate the vector of displacements instead of the length of this vector<i></i></span></span> <span class="plumedtooltip">SQUARED<span class="right">  This should be setted if you want MSD instead of RMSD <i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure and the atoms involved in the CV<i></i></span></span>=<div class="plumedtooltip">regtest/trajectories/path_msd/all.pdb<div class="right"> Click <a onclick='openModal("ADAPTIVE_PATH.md_working_2.datregtest/trajectories/path_msd/all.pdb3")'>here</a> to see an extract from this file.<i></i></div></div><div id="ADAPTIVE_PATH.md_working_2.datregtest/trajectories/path_msd/all.pdb3" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("ADAPTIVE_PATH.md_working_2.datregtest/trajectories/path_msd/all.pdb3")'>&times;</span>  <h2>FILE: regtest/trajectories/path_msd/all.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1  CL  ALA     1      -3.171   0.295   2.045  1.00  1.00
+ATOM      5  CLP ALA     1      -1.819  -0.143   1.679  1.00  1.00
+ATOM      6  OL  ALA     1      -1.177  -0.889   2.401  1.00  1.00
+ATOM      7  NL  ALA     1      -1.313   0.341   0.529  1.00  1.00
+ATOM      8  HL  ALA     1      -1.845   0.961  -0.011  1.00  1.00
+ATOM      9  CA  ALA     1      -0.003  -0.019   0.021  1.00  1.00
+ATOM     10  HA  ALA     1       0.205  -1.051   0.259  1.00  1.00
+ATOM     11  CB  ALA     1       0.009   0.135  -1.509  1.00  1.00
+ATOM     15  CRP ALA     1       1.121   0.799   0.663  1.00  1.00
+ATOM     16  OR  ALA     1       1.723   1.669   0.043  1.00  1.00
+ATOM     17  NR  ALA     1       1.423   0.519   1.941  1.00  1.00
+ATOM     18  HR  ALA     1       0.873  -0.161   2.413  1.00  1.00
+ATOM     19  CR  ALA     1       2.477   1.187   2.675  1.00  1.00
+END
+FIXED
+ATOM      1  CL  ALA     1      -3.175   0.365   2.024  1.00  1.00
+ATOM      5  CLP ALA     1      -1.814  -0.106   1.685  1.00  1.00
+ATOM      6  OL  ALA     1      -1.201  -0.849   2.425  1.00  1.00
+ATOM      7  NL  ALA     1      -1.296   0.337   0.534  1.00  1.00
+ATOM      8  HL  ALA     1      -1.807   0.951  -0.044  1.00  1.00
+ATOM      9  CA  ALA     1       0.009  -0.067   0.033  1.00  1.00
+ATOM     10  HA  ALA     1       0.175  -1.105   0.283  1.00  1.00
+ATOM     11  CB  ALA     1       0.027   0.046  -1.501  1.00  1.00
+ATOM     15  CRP ALA     1       1.149   0.725   0.654  1.00  1.00
+ATOM     16  OR  ALA     1       1.835   1.491  -0.011  1.00  1.00
+ATOM     17  NR  ALA     1       1.380   0.537   1.968  1.00  1.00
+ATOM     18  HR  ALA     1       0.764  -0.060   2.461  1.00  1.00
+ATOM     19  CR  ALA     1       2.431   1.195   2.683  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -2.990   0.383   2.277  1.00  1.00
+ATOM      5  CLP ALA     1      -1.664  -0.085   1.831  1.00  1.00
+ATOM      6  OL  ALA     1      -0.987  -0.835   2.533  1.00  1.00
+ATOM      7  NL  ALA     1      -1.227   0.364   0.646  1.00  1.00
+ATOM      8  HL  ALA     1      -1.798   0.982   0.124  1.00  1.00
+ATOM      9  CA  ALA     1       0.026  -0.028   0.044  1.00  1.00
+ATOM     10  HA  ALA     1       0.224  -1.060   0.284  1.00  1.00
+ATOM     11  CB  ALA     1      -0.076   0.107  -1.483  1.00  1.00
+ATOM     15  CRP ALA     1       1.217   0.776   0.577  1.00  1.00
+ATOM     16  OR  ALA     1       1.900   1.463  -0.158  1.00  1.00
+ATOM     17  NR  ALA     1       1.494   0.666   1.888  1.00  1.00
+ATOM     18  HR  ALA     1       0.882   0.122   2.437  1.00  1.00
+ATOM     19  CR  ALA     1       2.580   1.341   2.529  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.006   0.350   2.252  1.00  1.00
+ATOM      5  CLP ALA     1      -1.680  -0.112   1.826  1.00  1.00
+ATOM      6  OL  ALA     1      -1.025  -0.896   2.508  1.00  1.00
+ATOM      7  NL  ALA     1      -1.220   0.368   0.654  1.00  1.00
+ATOM      8  HL  ALA     1      -1.771   1.013   0.137  1.00  1.00
+ATOM      9  CA  ALA     1       0.040  -0.029   0.062  1.00  1.00
+ATOM     10  HA  ALA     1       0.210  -1.076   0.277  1.00  1.00
+ATOM     11  CB  ALA     1      -0.066   0.148  -1.465  1.00  1.00
+ATOM     15  CRP ALA     1       1.241   0.738   0.605  1.00  1.00
+ATOM     16  OR  ALA     1       1.986   1.347  -0.125  1.00  1.00
+ATOM     17  NR  ALA     1       1.446   0.694   1.940  1.00  1.00
+ATOM     18  HR  ALA     1       0.796   0.210   2.481  1.00  1.00
+ATOM     19  CR  ALA     1       2.544   1.350   2.582  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.002   0.343   2.271  1.00  1.00
+ATOM      5  CLP ALA     1      -1.672  -0.125   1.828  1.00  1.00
+ATOM      6  OL  ALA     1      -1.028  -0.942   2.486  1.00  1.00
+ATOM      7  NL  ALA     1      -1.213   0.373   0.670  1.00  1.00
+ATOM      8  HL  ALA     1      -1.752   1.033   0.169  1.00  1.00
+ATOM      9  CA  ALA     1       0.041  -0.032   0.055  1.00  1.00
+ATOM     10  HA  ALA     1       0.201  -1.079   0.245  1.00  1.00
+ATOM     11  CB  ALA     1      -0.079   0.194  -1.466  1.00  1.00
+ATOM     15  CRP ALA     1       1.257   0.720   0.601  1.00  1.00
+ATOM     16  OR  ALA     1       2.057   1.240  -0.140  1.00  1.00
+ATOM     17  NR  ALA     1       1.422   0.730   1.942  1.00  1.00
+ATOM     18  HR  ALA     1       0.740   0.303   2.500  1.00  1.00
+ATOM     19  CR  ALA     1       2.528   1.373   2.598  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.144   1.457   1.417  1.00  1.00
+ATOM      5  CLP ALA     1      -1.943   0.587   1.450  1.00  1.00
+ATOM      6  OL  ALA     1      -1.588   0.028   2.480  1.00  1.00
+ATOM      7  NL  ALA     1      -1.281   0.449   0.306  1.00  1.00
+ATOM      8  HL  ALA     1      -1.578   0.914  -0.520  1.00  1.00
+ATOM      9  CA  ALA     1      -0.132  -0.428   0.139  1.00  1.00
+ATOM     10  HA  ALA     1      -0.264  -1.291   0.758  1.00  1.00
+ATOM     11  CB  ALA     1      -0.066  -0.855  -1.329  1.00  1.00
+ATOM     15  CRP ALA     1       1.193   0.220   0.554  1.00  1.00
+ATOM     16  OR  ALA     1       2.195   0.098  -0.140  1.00  1.00
+ATOM     17  NR  ALA     1       1.224   0.872   1.737  1.00  1.00
+ATOM     18  HR  ALA     1       0.399   0.943   2.273  1.00  1.00
+ATOM     19  CR  ALA     1       2.413   1.511   2.254  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.140   1.441   1.453  1.00  1.00
+ATOM      5  CLP ALA     1      -1.944   0.576   1.465  1.00  1.00
+ATOM      6  OL  ALA     1      -1.587  -0.018   2.487  1.00  1.00
+ATOM      7  NL  ALA     1      -1.274   0.465   0.322  1.00  1.00
+ATOM      8  HL  ALA     1      -1.571   0.957  -0.486  1.00  1.00
+ATOM      9  CA  ALA     1      -0.124  -0.418   0.135  1.00  1.00
+ATOM     10  HA  ALA     1      -0.274  -1.304   0.729  1.00  1.00
+ATOM     11  CB  ALA     1      -0.063  -0.813  -1.347  1.00  1.00
+ATOM     15  CRP ALA     1       1.201   0.199   0.572  1.00  1.00
+ATOM     16  OR  ALA     1       2.227   0.007  -0.072  1.00  1.00
+ATOM     17  NR  ALA     1       1.215   0.910   1.709  1.00  1.00
+ATOM     18  HR  ALA     1       0.369   1.020   2.200  1.00  1.00
+ATOM     19  CR  ALA     1       2.393   1.536   2.237  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.140   1.420   1.442  1.00  1.00
+ATOM      5  CLP ALA     1      -1.948   0.546   1.448  1.00  1.00
+ATOM      6  OL  ALA     1      -1.618  -0.065   2.460  1.00  1.00
+ATOM      7  NL  ALA     1      -1.255   0.469   0.311  1.00  1.00
+ATOM      8  HL  ALA     1      -1.538   0.979  -0.490  1.00  1.00
+ATOM      9  CA  ALA     1      -0.107  -0.412   0.124  1.00  1.00
+ATOM     10  HA  ALA     1      -0.257  -1.312   0.685  1.00  1.00
+ATOM     11  CB  ALA     1      -0.028  -0.770  -1.375  1.00  1.00
+ATOM     15  CRP ALA     1       1.217   0.186   0.600  1.00  1.00
+ATOM     16  OR  ALA     1       2.269  -0.069   0.026  1.00  1.00
+ATOM     17  NR  ALA     1       1.193   0.966   1.687  1.00  1.00
+ATOM     18  HR  ALA     1       0.333   1.114   2.120  1.00  1.00
+ATOM     19  CR  ALA     1       2.377   1.589   2.240  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.110   1.698   0.880  1.00  1.00
+ATOM      5  CLP ALA     1      -2.021   0.734   1.142  1.00  1.00
+ATOM      6  OL  ALA     1      -1.859   0.257   2.258  1.00  1.00
+ATOM      7  NL  ALA     1      -1.229   0.414   0.114  1.00  1.00
+ATOM      8  HL  ALA     1      -1.371   0.826  -0.771  1.00  1.00
+ATOM      9  CA  ALA     1      -0.173  -0.593   0.188  1.00  1.00
+ATOM     10  HA  ALA     1      -0.481  -1.374   0.851  1.00  1.00
+ATOM     11  CB  ALA     1       0.011  -1.180  -1.220  1.00  1.00
+ATOM     15  CRP ALA     1       1.163  -0.060   0.716  1.00  1.00
+ATOM     16  OR  ALA     1       2.227  -0.564   0.393  1.00  1.00
+ATOM     17  NR  ALA     1       1.127   0.960   1.594  1.00  1.00
+ATOM     18  HR  ALA     1       0.234   1.295   1.847  1.00  1.00
+ATOM     19  CR  ALA     1       2.303   1.549   2.172  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.139   1.652   0.924  1.00  1.00
+ATOM      5  CLP ALA     1      -2.039   0.698   1.169  1.00  1.00
+ATOM      6  OL  ALA     1      -1.868   0.201   2.278  1.00  1.00
+ATOM      7  NL  ALA     1      -1.239   0.411   0.139  1.00  1.00
+ATOM      8  HL  ALA     1      -1.385   0.842  -0.737  1.00  1.00
+ATOM      9  CA  ALA     1      -0.173  -0.574   0.193  1.00  1.00
+ATOM     10  HA  ALA     1      -0.477  -1.381   0.833  1.00  1.00
+ATOM     11  CB  ALA     1       0.029  -1.142  -1.231  1.00  1.00
+ATOM     15  CRP ALA     1       1.162  -0.048   0.731  1.00  1.00
+ATOM     16  OR  ALA     1       2.220  -0.597   0.472  1.00  1.00
+ATOM     17  NR  ALA     1       1.122   1.024   1.537  1.00  1.00
+ATOM     18  HR  ALA     1       0.233   1.395   1.752  1.00  1.00
+ATOM     19  CR  ALA     1       2.300   1.629   2.102  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.706   1.088   0.468  1.00  1.00
+ATOM      5  CLP ALA     1      -2.458   0.598   1.082  1.00  1.00
+ATOM      6  OL  ALA     1      -2.390   0.404   2.277  1.00  1.00
+ATOM      7  NL  ALA     1      -1.427   0.382   0.258  1.00  1.00
+ATOM      8  HL  ALA     1      -1.513   0.559  -0.713  1.00  1.00
+ATOM      9  CA  ALA     1      -0.157  -0.192   0.685  1.00  1.00
+ATOM     10  HA  ALA     1      -0.343  -0.912   1.470  1.00  1.00
+ATOM     11  CB  ALA     1       0.462  -0.936  -0.512  1.00  1.00
+ATOM     15  CRP ALA     1       0.840   0.814   1.241  1.00  1.00
+ATOM     16  OR  ALA     1       2.034   0.549   1.354  1.00  1.00
+ATOM     17  NR  ALA     1       0.368   2.017   1.650  1.00  1.00
+ATOM     18  HR  ALA     1      -0.613   2.169   1.589  1.00  1.00
+ATOM     19  CR  ALA     1       1.215   3.044   2.195  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.699   1.173   0.487  1.00  1.00
+ATOM      5  CLP ALA     1      -2.464   0.631   1.079  1.00  1.00
+ATOM      6  OL  ALA     1      -2.402   0.386   2.275  1.00  1.00
+ATOM      7  NL  ALA     1      -1.434   0.437   0.260  1.00  1.00
+ATOM      8  HL  ALA     1      -1.516   0.652  -0.701  1.00  1.00
+ATOM      9  CA  ALA     1      -0.174  -0.174   0.667  1.00  1.00
+ATOM     10  HA  ALA     1      -0.377  -0.924   1.411  1.00  1.00
+ATOM     11  CB  ALA     1       0.451  -0.859  -0.570  1.00  1.00
+ATOM     15  CRP ALA     1       0.839   0.801   1.280  1.00  1.00
+ATOM     16  OR  ALA     1       1.999   0.474   1.468  1.00  1.00
+ATOM     17  NR  ALA     1       0.404   2.024   1.627  1.00  1.00
+ATOM     18  HR  ALA     1      -0.565   2.225   1.505  1.00  1.00
+ATOM     19  CR  ALA     1       1.262   3.025   2.214  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.653   0.990   1.121  1.00  1.00
+ATOM      5  CLP ALA     1      -2.321   0.364   1.249  1.00  1.00
+ATOM      6  OL  ALA     1      -2.006  -0.222   2.265  1.00  1.00
+ATOM      7  NL  ALA     1      -1.498   0.501   0.205  1.00  1.00
+ATOM      8  HL  ALA     1      -1.794   0.978  -0.603  1.00  1.00
+ATOM      9  CA  ALA     1      -0.190  -0.127   0.128  1.00  1.00
+ATOM     10  HA  ALA     1      -0.216  -1.086   0.627  1.00  1.00
+ATOM     11  CB  ALA     1       0.159  -0.359  -1.359  1.00  1.00
+ATOM     15  CRP ALA     1       0.933   0.668   0.793  1.00  1.00
+ATOM     16  OR  ALA     1       2.107   0.313   0.705  1.00  1.00
+ATOM     17  NR  ALA     1       0.604   1.770   1.498  1.00  1.00
+ATOM     18  HR  ALA     1      -0.359   1.986   1.593  1.00  1.00
+ATOM     19  CR  ALA     1       1.573   2.595   2.158  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.641   0.954   1.179  1.00  1.00
+ATOM      5  CLP ALA     1      -2.294   0.335   1.290  1.00  1.00
+ATOM      6  OL  ALA     1      -1.964  -0.273   2.288  1.00  1.00
+ATOM      7  NL  ALA     1      -1.485   0.499   0.235  1.00  1.00
+ATOM      8  HL  ALA     1      -1.803   0.995  -0.564  1.00  1.00
+ATOM      9  CA  ALA     1      -0.175  -0.118   0.130  1.00  1.00
+ATOM     10  HA  ALA     1      -0.203  -1.077   0.601  1.00  1.00
+ATOM     11  CB  ALA     1       0.162  -0.300  -1.355  1.00  1.00
+ATOM     15  CRP ALA     1       0.952   0.671   0.815  1.00  1.00
+ATOM     16  OR  ALA     1       2.104   0.260   0.791  1.00  1.00
+ATOM     17  NR  ALA     1       0.633   1.808   1.450  1.00  1.00
+ATOM     18  HR  ALA     1      -0.328   2.065   1.503  1.00  1.00
+ATOM     19  CR  ALA     1       1.608   2.627   2.129  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.635   0.925   1.244  1.00  1.00
+ATOM      5  CLP ALA     1      -2.297   0.305   1.309  1.00  1.00
+ATOM      6  OL  ALA     1      -1.941  -0.334   2.290  1.00  1.00
+ATOM      7  NL  ALA     1      -1.500   0.490   0.251  1.00  1.00
+ATOM      8  HL  ALA     1      -1.827   1.009  -0.537  1.00  1.00
+ATOM      9  CA  ALA     1      -0.178  -0.110   0.119  1.00  1.00
+ATOM     10  HA  ALA     1      -0.205  -1.094   0.536  1.00  1.00
+ATOM     11  CB  ALA     1       0.147  -0.217  -1.379  1.00  1.00
+ATOM     15  CRP ALA     1       0.943   0.643   0.832  1.00  1.00
+ATOM     16  OR  ALA     1       2.074   0.198   0.871  1.00  1.00
+ATOM     17  NR  ALA     1       0.637   1.821   1.423  1.00  1.00
+ATOM     18  HR  ALA     1      -0.311   2.123   1.418  1.00  1.00
+ATOM     19  CR  ALA     1       1.602   2.629   2.109  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.632   0.856   1.331  1.00  1.00
+ATOM      5  CLP ALA     1      -2.282   0.250   1.355  1.00  1.00
+ATOM      6  OL  ALA     1      -1.906  -0.403   2.301  1.00  1.00
+ATOM      7  NL  ALA     1      -1.515   0.478   0.275  1.00  1.00
+ATOM      8  HL  ALA     1      -1.860   0.990  -0.485  1.00  1.00
+ATOM      9  CA  ALA     1      -0.192  -0.105   0.098  1.00  1.00
+ATOM     10  HA  ALA     1      -0.204  -1.121   0.473  1.00  1.00
+ATOM     11  CB  ALA     1       0.129  -0.136  -1.408  1.00  1.00
+ATOM     15  CRP ALA     1       0.931   0.615   0.844  1.00  1.00
+ATOM     16  OR  ALA     1       2.043   0.122   0.934  1.00  1.00
+ATOM     17  NR  ALA     1       0.651   1.819   1.388  1.00  1.00
+ATOM     18  HR  ALA     1      -0.283   2.155   1.349  1.00  1.00
+ATOM     19  CR  ALA     1       1.624   2.595   2.115  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.628   0.823   1.358  1.00  1.00
+ATOM      5  CLP ALA     1      -2.277   0.241   1.370  1.00  1.00
+ATOM      6  OL  ALA     1      -1.871  -0.396   2.325  1.00  1.00
+ATOM      7  NL  ALA     1      -1.525   0.469   0.284  1.00  1.00
+ATOM      8  HL  ALA     1      -1.898   0.970  -0.482  1.00  1.00
+ATOM      9  CA  ALA     1      -0.195  -0.094   0.086  1.00  1.00
+ATOM     10  HA  ALA     1      -0.203  -1.122   0.423  1.00  1.00
+ATOM     11  CB  ALA     1       0.146  -0.058  -1.413  1.00  1.00
+ATOM     15  CRP ALA     1       0.919   0.599   0.874  1.00  1.00
+ATOM     16  OR  ALA     1       1.997   0.065   1.039  1.00  1.00
+ATOM     17  NR  ALA     1       0.655   1.830   1.373  1.00  1.00
+ATOM     18  HR  ALA     1      -0.248   2.200   1.261  1.00  1.00
+ATOM     19  CR  ALA     1       1.625   2.581   2.124  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.539   0.055   1.657  1.00  1.00
+ATOM      5  CLP ALA     1      -2.117  -0.208   1.378  1.00  1.00
+ATOM      6  OL  ALA     1      -1.453  -0.902   2.125  1.00  1.00
+ATOM      7  NL  ALA     1      -1.602   0.351   0.289  1.00  1.00
+ATOM      8  HL  ALA     1      -2.185   0.875  -0.310  1.00  1.00
+ATOM      9  CA  ALA     1      -0.243   0.129  -0.186  1.00  1.00
+ATOM     10  HA  ALA     1      -0.041  -0.924  -0.159  1.00  1.00
+ATOM     11  CB  ALA     1      -0.153   0.625  -1.651  1.00  1.00
+ATOM     15  CRP ALA     1       0.852   0.806   0.637  1.00  1.00
+ATOM     16  OR  ALA     1       2.007   0.400   0.594  1.00  1.00
+ATOM     17  NR  ALA     1       0.508   1.855   1.401  1.00  1.00
+ATOM     18  HR  ALA     1      -0.445   2.112   1.454  1.00  1.00
+ATOM     19  CR  ALA     1       1.460   2.569   2.226  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.578   0.084   1.603  1.00  1.00
+ATOM      5  CLP ALA     1      -2.140  -0.156   1.375  1.00  1.00
+ATOM      6  OL  ALA     1      -1.473  -0.732   2.197  1.00  1.00
+ATOM      7  NL  ALA     1      -1.623   0.335   0.237  1.00  1.00
+ATOM      8  HL  ALA     1      -2.220   0.753  -0.416  1.00  1.00
+ATOM      9  CA  ALA     1      -0.253   0.120  -0.195  1.00  1.00
+ATOM     10  HA  ALA     1      -0.048  -0.931  -0.153  1.00  1.00
+ATOM     11  CB  ALA     1      -0.128   0.612  -1.663  1.00  1.00
+ATOM     15  CRP ALA     1       0.823   0.801   0.637  1.00  1.00
+ATOM     16  OR  ALA     1       1.969   0.367   0.665  1.00  1.00
+ATOM     17  NR  ALA     1       0.477   1.912   1.333  1.00  1.00
+ATOM     18  HR  ALA     1      -0.468   2.199   1.317  1.00  1.00
+ATOM     19  CR  ALA     1       1.410   2.627   2.163  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.113   1.661   1.504  1.00  1.00
+ATOM      5  CLP ALA     1      -1.769   1.059   1.566  1.00  1.00
+ATOM      6  OL  ALA     1      -1.201   0.940   2.629  1.00  1.00
+ATOM      7  NL  ALA     1      -1.219   0.714   0.392  1.00  1.00
+ATOM      8  HL  ALA     1      -1.742   0.797  -0.435  1.00  1.00
+ATOM      9  CA  ALA     1       0.058   0.023   0.242  1.00  1.00
+ATOM     10  HA  ALA     1      -0.001  -0.896   0.782  1.00  1.00
+ATOM     11  CB  ALA     1       0.235  -0.295  -1.249  1.00  1.00
+ATOM     15  CRP ALA     1       1.299   0.757   0.745  1.00  1.00
+ATOM     16  OR  ALA     1       2.276   0.138   1.135  1.00  1.00
+ATOM     17  NR  ALA     1       1.277   2.102   0.736  1.00  1.00
+ATOM     18  HR  ALA     1       0.447   2.567   0.458  1.00  1.00
+ATOM     19  CR  ALA     1       2.391   2.896   1.191  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.089   1.850   1.546  1.00  1.00
+ATOM      5  CLP ALA     1      -1.667   1.457   1.629  1.00  1.00
+ATOM      6  OL  ALA     1      -0.974   1.868   2.533  1.00  1.00
+ATOM      7  NL  ALA     1      -1.204   0.683   0.642  1.00  1.00
+ATOM      8  HL  ALA     1      -1.844   0.360  -0.021  1.00  1.00
+ATOM      9  CA  ALA     1       0.126   0.105   0.564  1.00  1.00
+ATOM     10  HA  ALA     1       0.239  -0.555   1.391  1.00  1.00
+ATOM     11  CB  ALA     1       0.215  -0.722  -0.739  1.00  1.00
+ATOM     15  CRP ALA     1       1.311   1.068   0.623  1.00  1.00
+ATOM     16  OR  ALA     1       2.369   0.726   1.149  1.00  1.00
+ATOM     17  NR  ALA     1       1.156   2.292   0.077  1.00  1.00
+ATOM     18  HR  ALA     1       0.273   2.549  -0.285  1.00  1.00
+ATOM     19  CR  ALA     1       2.201   3.277   0.107  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.102   1.775   1.619  1.00  1.00
+ATOM      5  CLP ALA     1      -1.661   1.466   1.659  1.00  1.00
+ATOM      6  OL  ALA     1      -0.945   1.961   2.476  1.00  1.00
+ATOM      7  NL  ALA     1      -1.205   0.663   0.688  1.00  1.00
+ATOM      8  HL  ALA     1      -1.854   0.269   0.091  1.00  1.00
+ATOM      9  CA  ALA     1       0.147   0.134   0.561  1.00  1.00
+ATOM     10  HA  ALA     1       0.300  -0.545   1.355  1.00  1.00
+ATOM     11  CB  ALA     1       0.237  -0.632  -0.776  1.00  1.00
+ATOM     15  CRP ALA     1       1.306   1.133   0.628  1.00  1.00
+ATOM     16  OR  ALA     1       2.361   0.819   1.176  1.00  1.00
+ATOM     17  NR  ALA     1       1.129   2.345   0.068  1.00  1.00
+ATOM     18  HR  ALA     1       0.252   2.577  -0.315  1.00  1.00
+ATOM     19  CR  ALA     1       2.150   3.364   0.108  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.137   1.689   1.564  1.00  1.00
+ATOM      5  CLP ALA     1      -1.674   1.466   1.595  1.00  1.00
+ATOM      6  OL  ALA     1      -0.991   2.041   2.377  1.00  1.00
+ATOM      7  NL  ALA     1      -1.178   0.640   0.664  1.00  1.00
+ATOM      8  HL  ALA     1      -1.829   0.190   0.106  1.00  1.00
+ATOM      9  CA  ALA     1       0.192   0.170   0.547  1.00  1.00
+ATOM     10  HA  ALA     1       0.347  -0.550   1.313  1.00  1.00
+ATOM     11  CB  ALA     1       0.333  -0.536  -0.821  1.00  1.00
+ATOM     15  CRP ALA     1       1.325   1.194   0.686  1.00  1.00
+ATOM     16  OR  ALA     1       2.348   0.906   1.293  1.00  1.00
+ATOM     17  NR  ALA     1       1.165   2.398   0.103  1.00  1.00
+ATOM     18  HR  ALA     1       0.311   2.617  -0.339  1.00  1.00
+ATOM     19  CR  ALA     1       2.173   3.424   0.206  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.342   1.726   1.297  1.00  1.00
+ATOM      5  CLP ALA     1      -1.882   1.644   1.449  1.00  1.00
+ATOM      6  OL  ALA     1      -1.296   2.423   2.124  1.00  1.00
+ATOM      7  NL  ALA     1      -1.259   0.684   0.740  1.00  1.00
+ATOM      8  HL  ALA     1      -1.839   0.091   0.256  1.00  1.00
+ATOM      9  CA  ALA     1       0.138   0.295   0.784  1.00  1.00
+ATOM     10  HA  ALA     1       0.267  -0.321   1.638  1.00  1.00
+ATOM     11  CB  ALA     1       0.437  -0.541  -0.481  1.00  1.00
+ATOM     15  CRP ALA     1       1.207   1.385   0.899  1.00  1.00
+ATOM     16  OR  ALA     1       2.160   1.248   1.674  1.00  1.00
+ATOM     17  NR  ALA     1       1.092   2.478   0.129  1.00  1.00
+ATOM     18  HR  ALA     1       0.291   2.586  -0.440  1.00  1.00
+ATOM     19  CR  ALA     1       2.044   3.567   0.190  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.361   1.726   1.315  1.00  1.00
+ATOM      5  CLP ALA     1      -1.890   1.687   1.423  1.00  1.00
+ATOM      6  OL  ALA     1      -1.302   2.522   2.029  1.00  1.00
+ATOM      7  NL  ALA     1      -1.285   0.691   0.757  1.00  1.00
+ATOM      8  HL  ALA     1      -1.865   0.049   0.326  1.00  1.00
+ATOM      9  CA  ALA     1       0.123   0.321   0.749  1.00  1.00
+ATOM     10  HA  ALA     1       0.270  -0.331   1.585  1.00  1.00
+ATOM     11  CB  ALA     1       0.408  -0.470  -0.534  1.00  1.00
+ATOM     15  CRP ALA     1       1.192   1.410   0.900  1.00  1.00
+ATOM     16  OR  ALA     1       2.114   1.273   1.701  1.00  1.00
+ATOM     17  NR  ALA     1       1.111   2.493   0.112  1.00  1.00
+ATOM     18  HR  ALA     1       0.326   2.609  -0.490  1.00  1.00
+ATOM     19  CR  ALA     1       2.068   3.578   0.188  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.419   1.747   1.251  1.00  1.00
+ATOM      5  CLP ALA     1      -1.947   1.630   1.371  1.00  1.00
+ATOM      6  OL  ALA     1      -1.331   2.379   2.060  1.00  1.00
+ATOM      7  NL  ALA     1      -1.380   0.668   0.616  1.00  1.00
+ATOM      8  HL  ALA     1      -1.992   0.115   0.104  1.00  1.00
+ATOM      9  CA  ALA     1       0.007   0.227   0.571  1.00  1.00
+ATOM     10  HA  ALA     1       0.086  -0.578   1.262  1.00  1.00
+ATOM     11  CB  ALA     1       0.288  -0.306  -0.835  1.00  1.00
+ATOM     15  CRP ALA     1       1.132   1.190   0.974  1.00  1.00
+ATOM     16  OR  ALA     1       1.974   0.858   1.808  1.00  1.00
+ATOM     17  NR  ALA     1       1.199   2.390   0.352  1.00  1.00
+ATOM     18  HR  ALA     1       0.482   2.643  -0.277  1.00  1.00
+ATOM     19  CR  ALA     1       2.218   3.363   0.657  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.430   1.748   1.261  1.00  1.00
+ATOM      5  CLP ALA     1      -1.958   1.650   1.340  1.00  1.00
+ATOM      6  OL  ALA     1      -1.333   2.471   1.961  1.00  1.00
+ATOM      7  NL  ALA     1      -1.392   0.653   0.642  1.00  1.00
+ATOM      8  HL  ALA     1      -2.018   0.061   0.177  1.00  1.00
+ATOM      9  CA  ALA     1      -0.005   0.219   0.569  1.00  1.00
+ATOM     10  HA  ALA     1       0.083  -0.615   1.230  1.00  1.00
+ATOM     11  CB  ALA     1       0.266  -0.275  -0.863  1.00  1.00
+ATOM     15  CRP ALA     1       1.126   1.166   0.993  1.00  1.00
+ATOM     16  OR  ALA     1       1.918   0.834   1.868  1.00  1.00
+ATOM     17  NR  ALA     1       1.248   2.346   0.359  1.00  1.00
+ATOM     18  HR  ALA     1       0.548   2.609  -0.299  1.00  1.00
+ATOM     19  CR  ALA     1       2.271   3.308   0.675  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.438   1.702   1.306  1.00  1.00
+ATOM      5  CLP ALA     1      -1.962   1.659   1.317  1.00  1.00
+ATOM      6  OL  ALA     1      -1.332   2.532   1.870  1.00  1.00
+ATOM      7  NL  ALA     1      -1.406   0.632   0.671  1.00  1.00
+ATOM      8  HL  ALA     1      -2.029   0.002   0.252  1.00  1.00
+ATOM      9  CA  ALA     1      -0.007   0.228   0.554  1.00  1.00
+ATOM     10  HA  ALA     1       0.103  -0.631   1.184  1.00  1.00
+ATOM     11  CB  ALA     1       0.255  -0.224  -0.899  1.00  1.00
+ATOM     15  CRP ALA     1       1.124   1.169   1.002  1.00  1.00
+ATOM     16  OR  ALA     1       1.889   0.829   1.901  1.00  1.00
+ATOM     17  NR  ALA     1       1.265   2.342   0.365  1.00  1.00
+ATOM     18  HR  ALA     1       0.590   2.614  -0.306  1.00  1.00
+ATOM     19  CR  ALA     1       2.313   3.280   0.698  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.441   1.677   1.342  1.00  1.00
+ATOM      5  CLP ALA     1      -1.971   1.666   1.304  1.00  1.00
+ATOM      6  OL  ALA     1      -1.348   2.594   1.774  1.00  1.00
+ATOM      7  NL  ALA     1      -1.408   0.602   0.696  1.00  1.00
+ATOM      8  HL  ALA     1      -2.050  -0.062   0.329  1.00  1.00
+ATOM      9  CA  ALA     1      -0.014   0.235   0.538  1.00  1.00
+ATOM     10  HA  ALA     1       0.114  -0.660   1.127  1.00  1.00
+ATOM     11  CB  ALA     1       0.223  -0.161  -0.935  1.00  1.00
+ATOM     15  CRP ALA     1       1.115   1.153   1.020  1.00  1.00
+ATOM     16  OR  ALA     1       1.857   0.813   1.931  1.00  1.00
+ATOM     17  NR  ALA     1       1.290   2.335   0.385  1.00  1.00
+ATOM     18  HR  ALA     1       0.632   2.617  -0.298  1.00  1.00
+ATOM     19  CR  ALA     1       2.337   3.252   0.749  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.443   1.670   1.352  1.00  1.00
+ATOM      5  CLP ALA     1      -1.973   1.670   1.295  1.00  1.00
+ATOM      6  OL  ALA     1      -1.351   2.609   1.744  1.00  1.00
+ATOM      7  NL  ALA     1      -1.409   0.597   0.704  1.00  1.00
+ATOM      8  HL  ALA     1      -2.050  -0.076   0.355  1.00  1.00
+ATOM      9  CA  ALA     1      -0.014   0.237   0.533  1.00  1.00
+ATOM     10  HA  ALA     1       0.119  -0.663   1.113  1.00  1.00
+ATOM     11  CB  ALA     1       0.217  -0.147  -0.945  1.00  1.00
+ATOM     15  CRP ALA     1       1.115   1.152   1.023  1.00  1.00
+ATOM     16  OR  ALA     1       1.849   0.808   1.938  1.00  1.00
+ATOM     17  NR  ALA     1       1.296   2.334   0.388  1.00  1.00
+ATOM     18  HR  ALA     1       0.638   2.620  -0.293  1.00  1.00
+ATOM     19  CR  ALA     1       2.342   3.249   0.754  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.451   1.630   1.422  1.00  1.00
+ATOM      5  CLP ALA     1      -1.983   1.689   1.248  1.00  1.00
+ATOM      6  OL  ALA     1      -1.374   2.689   1.550  1.00  1.00
+ATOM      7  NL  ALA     1      -1.421   0.569   0.756  1.00  1.00
+ATOM      8  HL  ALA     1      -2.045  -0.151   0.513  1.00  1.00
+ATOM      9  CA  ALA     1      -0.017   0.248   0.499  1.00  1.00
+ATOM     10  HA  ALA     1       0.149  -0.681   1.023  1.00  1.00
+ATOM     11  CB  ALA     1       0.171  -0.057  -0.999  1.00  1.00
+ATOM     15  CRP ALA     1       1.111   1.147   1.033  1.00  1.00
+ATOM     16  OR  ALA     1       1.807   0.781   1.969  1.00  1.00
+ATOM     17  NR  ALA     1       1.327   2.329   0.410  1.00  1.00
+ATOM     18  HR  ALA     1       0.679   2.635  -0.277  1.00  1.00
+ATOM     19  CR  ALA     1       2.372   3.237   0.799  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.331   1.449   1.617  1.00  1.00
+ATOM      5  CLP ALA     1      -1.868   1.399   1.408  1.00  1.00
+ATOM      6  OL  ALA     1      -1.169   2.255   1.904  1.00  1.00
+ATOM      7  NL  ALA     1      -1.424   0.371   0.676  1.00  1.00
+ATOM      8  HL  ALA     1      -2.118  -0.203   0.289  1.00  1.00
+ATOM      9  CA  ALA     1      -0.062   0.001   0.310  1.00  1.00
+ATOM     10  HA  ALA     1      -0.008  -1.054   0.497  1.00  1.00
+ATOM     11  CB  ALA     1       0.131   0.162  -1.216  1.00  1.00
+ATOM     15  CRP ALA     1       1.142   0.546   1.099  1.00  1.00
+ATOM     16  OR  ALA     1       1.741  -0.171   1.894  1.00  1.00
+ATOM     17  NR  ALA     1       1.537   1.815   0.864  1.00  1.00
+ATOM     18  HR  ALA     1       0.963   2.391   0.297  1.00  1.00
+ATOM     19  CR  ALA     1       2.669   2.426   1.513  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.321   1.436   1.650  1.00  1.00
+ATOM      5  CLP ALA     1      -1.870   1.422   1.372  1.00  1.00
+ATOM      6  OL  ALA     1      -1.182   2.323   1.789  1.00  1.00
+ATOM      7  NL  ALA     1      -1.422   0.347   0.697  1.00  1.00
+ATOM      8  HL  ALA     1      -2.106  -0.263   0.374  1.00  1.00
+ATOM      9  CA  ALA     1      -0.057   0.008   0.290  1.00  1.00
+ATOM     10  HA  ALA     1       0.002  -1.051   0.446  1.00  1.00
+ATOM     11  CB  ALA     1       0.113   0.213  -1.212  1.00  1.00
+ATOM     15  CRP ALA     1       1.139   0.538   1.102  1.00  1.00
+ATOM     16  OR  ALA     1       1.724  -0.196   1.881  1.00  1.00
+ATOM     17  NR  ALA     1       1.539   1.803   0.879  1.00  1.00
+ATOM     18  HR  ALA     1       0.972   2.397   0.326  1.00  1.00
+ATOM     19  CR  ALA     1       2.672   2.407   1.539  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.318   1.434   1.657  1.00  1.00
+ATOM      5  CLP ALA     1      -1.871   1.426   1.363  1.00  1.00
+ATOM      6  OL  ALA     1      -1.186   2.341   1.756  1.00  1.00
+ATOM      7  NL  ALA     1      -1.422   0.343   0.704  1.00  1.00
+ATOM      8  HL  ALA     1      -2.101  -0.279   0.398  1.00  1.00
+ATOM      9  CA  ALA     1      -0.058   0.010   0.290  1.00  1.00
+ATOM     10  HA  ALA     1       0.005  -1.051   0.433  1.00  1.00
+ATOM     11  CB  ALA     1       0.109   0.227  -1.215  1.00  1.00
+ATOM     15  CRP ALA     1       1.138   0.536   1.100  1.00  1.00
+ATOM     16  OR  ALA     1       1.723  -0.202   1.878  1.00  1.00
+ATOM     17  NR  ALA     1       1.539   1.802   0.887  1.00  1.00
+ATOM     18  HR  ALA     1       0.970   2.398   0.335  1.00  1.00
+ATOM     19  CR  ALA     1       2.675   2.402   1.547  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.297   1.417   1.700  1.00  1.00
+ATOM      5  CLP ALA     1      -1.874   1.437   1.310  1.00  1.00
+ATOM      6  OL  ALA     1      -1.214   2.432   1.560  1.00  1.00
+ATOM      7  NL  ALA     1      -1.412   0.320   0.746  1.00  1.00
+ATOM      8  HL  ALA     1      -2.060  -0.372   0.544  1.00  1.00
+ATOM      9  CA  ALA     1      -0.065   0.025   0.282  1.00  1.00
+ATOM     10  HA  ALA     1       0.023  -1.051   0.357  1.00  1.00
+ATOM     11  CB  ALA     1       0.071   0.308  -1.213  1.00  1.00
+ATOM     15  CRP ALA     1       1.141   0.510   1.103  1.00  1.00
+ATOM     16  OR  ALA     1       1.724  -0.245   1.863  1.00  1.00
+ATOM     17  NR  ALA     1       1.541   1.794   0.938  1.00  1.00
+ATOM     18  HR  ALA     1       0.957   2.397   0.401  1.00  1.00
+ATOM     19  CR  ALA     1       2.683   2.371   1.604  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.283   1.421   1.730  1.00  1.00
+ATOM      5  CLP ALA     1      -1.874   1.449   1.277  1.00  1.00
+ATOM      6  OL  ALA     1      -1.222   2.476   1.436  1.00  1.00
+ATOM      7  NL  ALA     1      -1.405   0.299   0.773  1.00  1.00
+ATOM      8  HL  ALA     1      -2.034  -0.422   0.640  1.00  1.00
+ATOM      9  CA  ALA     1      -0.063   0.028   0.272  1.00  1.00
+ATOM     10  HA  ALA     1       0.015  -1.050   0.307  1.00  1.00
+ATOM     11  CB  ALA     1       0.057   0.364  -1.214  1.00  1.00
+ATOM     15  CRP ALA     1       1.134   0.492   1.093  1.00  1.00
+ATOM     16  OR  ALA     1       1.729  -0.288   1.825  1.00  1.00
+ATOM     17  NR  ALA     1       1.539   1.779   0.976  1.00  1.00
+ATOM     18  HR  ALA     1       0.945   2.388   0.456  1.00  1.00
+ATOM     19  CR  ALA     1       2.682   2.335   1.653  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.265   1.435   1.760  1.00  1.00
+ATOM      5  CLP ALA     1      -1.868   1.457   1.257  1.00  1.00
+ATOM      6  OL  ALA     1      -1.229   2.500   1.343  1.00  1.00
+ATOM      7  NL  ALA     1      -1.398   0.292   0.802  1.00  1.00
+ATOM      8  HL  ALA     1      -2.014  -0.454   0.728  1.00  1.00
+ATOM      9  CA  ALA     1      -0.067   0.024   0.264  1.00  1.00
+ATOM     10  HA  ALA     1       0.011  -1.049   0.257  1.00  1.00
+ATOM     11  CB  ALA     1       0.028   0.426  -1.206  1.00  1.00
+ATOM     15  CRP ALA     1       1.144   0.464   1.092  1.00  1.00
+ATOM     16  OR  ALA     1       1.748  -0.346   1.781  1.00  1.00
+ATOM     17  NR  ALA     1       1.532   1.754   1.029  1.00  1.00
+ATOM     18  HR  ALA     1       0.931   2.385   0.536  1.00  1.00
+ATOM     19  CR  ALA     1       2.676   2.280   1.721  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.236   1.453   1.772  1.00  1.00
+ATOM      5  CLP ALA     1      -1.865   1.473   1.217  1.00  1.00
+ATOM      6  OL  ALA     1      -1.244   2.522   1.222  1.00  1.00
+ATOM      7  NL  ALA     1      -1.388   0.292   0.824  1.00  1.00
+ATOM      8  HL  ALA     1      -1.982  -0.485   0.827  1.00  1.00
+ATOM      9  CA  ALA     1      -0.066   0.031   0.248  1.00  1.00
+ATOM     10  HA  ALA     1       0.018  -1.048   0.230  1.00  1.00
+ATOM     11  CB  ALA     1       0.011   0.464  -1.213  1.00  1.00
+ATOM     15  CRP ALA     1       1.144   0.452   1.088  1.00  1.00
+ATOM     16  OR  ALA     1       1.767  -0.373   1.737  1.00  1.00
+ATOM     17  NR  ALA     1       1.517   1.749   1.061  1.00  1.00
+ATOM     18  HR  ALA     1       0.906   2.387   0.586  1.00  1.00
+ATOM     19  CR  ALA     1       2.660   2.262   1.754  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.225   1.461   1.784  1.00  1.00
+ATOM      5  CLP ALA     1      -1.878   1.466   1.191  1.00  1.00
+ATOM      6  OL  ALA     1      -1.276   2.527   1.106  1.00  1.00
+ATOM      7  NL  ALA     1      -1.375   0.274   0.839  1.00  1.00
+ATOM      8  HL  ALA     1      -1.947  -0.517   0.921  1.00  1.00
+ATOM      9  CA  ALA     1      -0.077   0.024   0.236  1.00  1.00
+ATOM     10  HA  ALA     1       0.009  -1.048   0.194  1.00  1.00
+ATOM     11  CB  ALA     1      -0.004   0.503  -1.214  1.00  1.00
+ATOM     15  CRP ALA     1       1.144   0.436   1.066  1.00  1.00
+ATOM     16  OR  ALA     1       1.800  -0.403   1.678  1.00  1.00
+ATOM     17  NR  ALA     1       1.483   1.736   1.091  1.00  1.00
+ATOM     18  HR  ALA     1       0.861   2.388   0.647  1.00  1.00
+ATOM     19  CR  ALA     1       2.642   2.246   1.792  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.212   1.465   1.797  1.00  1.00
+ATOM      5  CLP ALA     1      -1.874   1.470   1.168  1.00  1.00
+ATOM      6  OL  ALA     1      -1.286   2.526   1.008  1.00  1.00
+ATOM      7  NL  ALA     1      -1.363   0.265   0.860  1.00  1.00
+ATOM      8  HL  ALA     1      -1.914  -0.534   1.016  1.00  1.00
+ATOM      9  CA  ALA     1      -0.074   0.012   0.232  1.00  1.00
+ATOM     10  HA  ALA     1       0.001  -1.058   0.173  1.00  1.00
+ATOM     11  CB  ALA     1      -0.020   0.528  -1.210  1.00  1.00
+ATOM     15  CRP ALA     1       1.147   0.408   1.060  1.00  1.00
+ATOM     16  OR  ALA     1       1.827  -0.445   1.625  1.00  1.00
+ATOM     17  NR  ALA     1       1.461   1.721   1.140  1.00  1.00
+ATOM     18  HR  ALA     1       0.821   2.361   0.731  1.00  1.00
+ATOM     19  CR  ALA     1       2.614   2.214   1.845  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.185   1.487   1.790  1.00  1.00
+ATOM      5  CLP ALA     1      -1.865   1.480   1.139  1.00  1.00
+ATOM      6  OL  ALA     1      -1.293   2.532   0.896  1.00  1.00
+ATOM      7  NL  ALA     1      -1.349   0.268   0.862  1.00  1.00
+ATOM      8  HL  ALA     1      -1.881  -0.527   1.095  1.00  1.00
+ATOM      9  CA  ALA     1      -0.065   0.013   0.226  1.00  1.00
+ATOM     10  HA  ALA     1      -0.006  -1.063   0.151  1.00  1.00
+ATOM     11  CB  ALA     1      -0.019   0.539  -1.224  1.00  1.00
+ATOM     15  CRP ALA     1       1.170   0.398   1.031  1.00  1.00
+ATOM     16  OR  ALA     1       1.871  -0.463   1.540  1.00  1.00
+ATOM     17  NR  ALA     1       1.447   1.706   1.159  1.00  1.00
+ATOM     18  HR  ALA     1       0.788   2.362   0.800  1.00  1.00
+ATOM     19  CR  ALA     1       2.602   2.205   1.868  1.00  1.00
+END
+ATOM      1  CL  ALA     1      -3.257   1.605   1.105  1.00  1.00
+ATOM      5  CLP ALA     1      -1.941   1.459   0.447  1.00  1.00
+ATOM      6  OL  ALA     1      -1.481   2.369  -0.223  1.00  1.00
+ATOM      7  NL  ALA     1      -1.303   0.291   0.647  1.00  1.00
+ATOM      8  HL  ALA     1      -1.743  -0.379   1.229  1.00  1.00
+ATOM      9  CA  ALA     1      -0.011  -0.077   0.099  1.00  1.00
+ATOM     10  HA  ALA     1       0.155  -1.099   0.417  1.00  1.00
+ATOM     11  CB  ALA     1       0.001  -0.097  -1.439  1.00  1.00
+ATOM     15  CRP ALA     1       1.191   0.673   0.683  1.00  1.00
+ATOM     16  OR  ALA     1       2.015   0.103   1.375  1.00  1.00
+ATOM     17  NR  ALA     1       1.303   1.983   0.393  1.00  1.00
+ATOM     18  HR  ALA     1       0.553   2.411  -0.109  1.00  1.00
+ATOM     19  CR  ALA     1       2.395   2.811   0.843  1.00  1.00
+END
+FIXED
+</pre></div>  </div></div> <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL-FAST
+<b name="ADAPTIVE_PATH.md_working_2.datp1b_ind" onclick='showPath("ADAPTIVE_PATH.md_working_2.dat","ADAPTIVE_PATH.md_working_2.datp1b_ind","ADAPTIVE_PATH.md_working_2.datp1b_ind","blue")'>p1b_ind</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_2.datp1b_ind">The CONSTANT action with label <b>p1b_ind</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p1b_ind</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42
+<b name="ADAPTIVE_PATH.md_working_2.datp1b" onclick='showPath("ADAPTIVE_PATH.md_working_2.dat","ADAPTIVE_PATH.md_working_2.datp1b","ADAPTIVE_PATH.md_working_2.datp1b","black")'>p1b</b>: <span class="plumedtooltip" style="color:green">GEOMETRIC_PATH<span class="right">Distance along and from a path calculated using geometric formulas <a href="https://www.plumed.org/doc-master/user-doc/html/GEOMETRIC_PATH" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the matrix that contains the vectors of displacements from each frame in the path<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_2.datp1b_data">p1b_data.disp</b>  <span class="plumedtooltip">PROPERTY<span class="right">the label of a value that contains the coordinates we are projecting these points onto<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_2.datp1b_ind">p1b_ind</b> <span class="plumedtooltip">REFERENCE<span class="right">labels for actions that contain reference coordinates for each point on the path<i></i></span></span>=p1b_data_ref <span class="plumedtooltip">METRIC<span class="right">the method to use for computing the displacement vectors between the reference frames<i></i></span></span>={RMSD DISPLACEMENT TYPE=OPTIMAL-FAST ALIGN=1,1,1,1,1,1,1,1,1,1,1,1,1 DISPLACE=1,1,1,1,1,1,1,1,1,1,1,1,1} <span class="plumedtooltip">METRIC_COMPONENT<span class="right">if the final action in your metric contains multiple components this keyword is used to specify the component that should be used<i></i></span></span>=disp
+<b name="ADAPTIVE_PATH.md_working_2.datp1b_disp" onclick='showPath("ADAPTIVE_PATH.md_working_2.dat","ADAPTIVE_PATH.md_working_2.datp1b_disp","ADAPTIVE_PATH.md_working_2.datp1b_disp","red")'>p1b_disp</b><span style="display:none;" id="ADAPTIVE_PATH.md_working_2.datp1b_disp">The AVERAGE_PATH_DISPLACEMENT action with label <b>p1b_disp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p1b_disp</td><td width="5%"><font color="red">matrix</font></td><td>matrix containing the average displacement between the trajectory and each of the landmarks that makes up the path</td></tr></table></span>: <span class="plumedtooltip" style="color:green">AVERAGE_PATH_DISPLACEMENT<span class="right">Accumulate the distances between the reference frames in the paths and the configurations visited <a href="https://www.plumed.org/doc-master/user-doc/html/AVERAGE_PATH_DISPLACEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the matrix that contains the vectors of displacements from each frame in the path<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_2.datp1b_data">p1b_data.disp</b> <span class="plumedtooltip">HALFLIFE<span class="right"> the number of MD steps after which a previously measured path distance weighs only 50 percent in the average<i></i></span></span>=-1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=1000 <span class="plumedtooltip">METRIC<span class="right">the method to use for computing the displacement vectors between the reference frames<i></i></span></span>={RMSD DISPLACEMENT TYPE=OPTIMAL-FAST ALIGN=1,1,1,1,1,1,1,1,1,1,1,1,1 DISPLACE=1,1,1,1,1,1,1,1,1,1,1,1,1} <span class="plumedtooltip">METRIC_COMPONENT<span class="right">if the final action in your metric contains multiple components this keyword is used to specify the component that should be used<i></i></span></span>=disp <span class="plumedtooltip">REFERENCE<span class="right">labels for actions that contain reference coordinates for each point on the path<i></i></span></span>=p1b_data_ref
+<span class="plumedtooltip" style="color:green">REPARAMETERIZE_PATH<span class="right">Take an input path with frames that are not equally spaced and make the frames equally spaced <a href="https://www.plumed.org/doc-master/user-doc/html/REPARAMETERIZE_PATH" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">DISPLACE_FRAMES<span class="right">label of an action that tells us how to displace the frames<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_2.datp1b_disp">p1b_disp</b> <span class="plumedtooltip">FIXED<span class="right"> the frames in the path to fix<i></i></span></span>=1,42 <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which to reparameterize the path<i></i></span></span>=1000 <span class="plumedtooltip">METRIC<span class="right">the method to use for computing the displacement vectors between the reference frames<i></i></span></span>={RMSD DISPLACEMENT TYPE=OPTIMAL-FAST ALIGN=1,1,1,1,1,1,1,1,1,1,1,1,1 DISPLACE=1,1,1,1,1,1,1,1,1,1,1,1,1} <span class="plumedtooltip">METRIC_COMPONENT<span class="right">if the final action in your metric contains multiple components this keyword is used to specify the component that should be used<i></i></span></span>=disp <span class="plumedtooltip">REFERENCE<span class="right">labels for actions that contain reference coordinates for each point on the path<i></i></span></span>=p1b_data_ref
+<span style="display:none;" id="ADAPTIVE_PATH.md_working_2.dat">The REPARAMETERIZE_PATH action with label <b></b> calculates something</span><span class="plumedtooltip" style="color:green">DUMPPDB<span class="right">Output PDB file. <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPPDB" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">DESCRIPTION<span class="right">the title to use for your PDB output<i></i></span></span>=PATH <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the atoms should be output<i></i></span></span>=20000 <span class="plumedtooltip">FMT<span class="right">the format that should be used to output real numbers in the title<i></i></span></span>=%f <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=out-path.pdb <span class="plumedtooltip">ATOMS<span class="right">value containing positions of atoms that should be output<i></i></span></span>=p1b_data_ref <span class="plumedtooltip">ATOM_INDICES<span class="right">the indices of the atoms in your PDB output<i></i></span></span>=1,5,6,7,8,9,10,11,15,16,17,18,19 <span class="plumedtooltip">RESIDUE_INDICES<span class="right">the indices of the residues in your PDB output<i></i></span></span>=1,1,1,1,1,1,1,1,1,1,1,1,1 <span class="plumedtooltip">OCCUPANCY<span class="right"> vector of values to output in the occupancy column of the pdb file<i></i></span></span>=1,1,1,1,1,1,1,1,1,1,1,1,1 <span class="plumedtooltip">BETA<span class="right"> vector of values to output in the beta column of the pdb file<i></i></span></span>=1,1,1,1,1,1,1,1,1,1,1,1,1
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="ADAPTIVE_PATH.md_working_2.datp1b">p1b.*</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar_b <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=1
+</pre></div>
+
+<p>As we have not used the PROPERTY keyword in the input the <script type="math/tex">i</script> values in the equation for <script type="math/tex">s</script> above are set equal to 1, 2, 3...
+Furthermore, when an input like the one above is used the vectors <script type="math/tex">\mathbf{v}_1</script>, <script type="math/tex">\mathbf{v}_2</script> and <script type="math/tex">\mathbf{v}_3</script> from the expression above are computed using an <a href="../RMSD/">RMSD</a>
+action with the DISPLACEMENT flag enabled.  The instaneous structure is thus aligned with the reference structures so as to remove motions due to translation of the center
+of mass and rotation of the reference frame. These vector of atomic displacements that do not include the translation and rotation are also used in the
+<a href="../AVERAGE_PATH_DISPLACEMENT/">AVERAGE_PATH_DISPLACEMENT</a> action that is used to update the path.</p>
+<p>As we have not used the PROPERTY keyword in the input the <script type="math/tex">i</script> values in the equation for <script type="math/tex">s</script> above are set equal to 1, 2, 3...</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">scalar</td>
+<td style="text-align: left;">the list of arguments you would like to use in your definition of the path</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the list of arguments you would like to use in your definition of the path</td>
+</tr>
+<tr>
+<td style="text-align: left;">REFERENCE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">a pdb file containing the set of reference configurations</td>
+</tr>
+<tr>
+<td style="text-align: left;">TYPE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">OPTIMAL-FAST</td>
+<td style="text-align: left;">the manner in which distances are calculated</td>
+</tr>
+<tr>
+<td style="text-align: left;">FIXED</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the positions in the list of input frames of the two path nodes whose positions remain fixed during the path optimization</td>
+</tr>
+<tr>
+<td style="text-align: left;">HALFLIFE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">-1</td>
+<td style="text-align: left;">the number of MD steps after which a previously measured path distance weighs only 50 percent in the average</td>
+</tr>
+<tr>
+<td style="text-align: left;">UPDATE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the frequency with which the path should be updated</td>
+</tr>
+<tr>
+<td style="text-align: left;">FMT</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">%f</td>
+<td style="text-align: left;">the format to use for output files</td>
+</tr>
+<tr>
+<td style="text-align: left;">WSTRIDE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0,</td>
+<td style="text-align: left;">frequency with which to write out the path</td>
+</tr>
+<tr>
+<td style="text-align: left;">PROPERTY</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">read in path coordinates by finding option with this label in remark of pdb frames</td>
+</tr>
+<tr>
+<td style="text-align: left;">WFILE</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">file on which to write out the path</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1063/1.2432340">D. Branduardi, F. L. Gervasio, M. Parrinello, From A to B in free energy space. The Journal of Chemical Physics 126 (2007)</a></li>
+<li><a href="http://dx.doi.org/10.1103/PhysRevLett.109.020601">G. Díaz Leines, B. Ensing, Path Finding on High-Dimensional Free Energy Landscapes. Physical Review Letters 109 (2012)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

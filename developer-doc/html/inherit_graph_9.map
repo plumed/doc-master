@@ -1,0 +1,29 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,455,119,481"/>
+<area shape="rect" id="Node000001" href="$struct_p_l_m_d_1_1gch_1_1detail_1_1allocator__interface_1_1is__memcpyable__iterator_3_01std_1_1m05d8ffe01a0bd9684da7a2a9034efd2a.html" title=" " alt="" coords="473,242,695,326"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="61,441,66,385,82,314,95,278,113,243,136,212,165,186,199,165,231,153,261,148,290,149,352,163,426,185,482,209,531,240,529,244,480,214,424,191,351,168,290,154,261,154,232,158,201,170,168,190,140,215,118,246,100,280,87,316,72,386,66,442"/>
+<area shape="rect" id="Node000003" href="$struct_p_l_m_d_1_1gch_1_1detail_1_1allocator__interface_1_1is__uninitialized__memcpyable__iterator.html" title=" " alt="" coords="183,5,409,75"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="60,442,64,373,78,281,91,231,110,181,134,134,165,92,186,73,190,77,169,95,138,137,114,183,96,232,84,282,69,374,66,442"/>
+<area shape="rect" id="Node000004" href="$struct_p_l_m_d_1_1gch_1_1detail_1_1allocator__interface_1_1is__uninitialized__memcpyable__iterat13fe4c014f867af42deddb213084b47a.html" title=" " alt="" coords="476,34,692,118"/>
+<area shape="poly" id="edge5_Node000000_Node000004" title=" " alt="" coords="61,441,65,381,80,301,93,259,111,218,135,180,165,147,187,133,218,121,297,102,388,88,475,80,476,85,389,94,298,107,220,126,190,138,168,151,139,183,116,220,98,260,85,302,70,381,66,442"/>
+<area shape="rect" id="Node000005" href="$struct_p_l_m_d_1_1gch_1_1detail_1_1allocator__interface_1_1is__contiguous__iterator.html" title=" " alt="" coords="193,200,399,269"/>
+<area shape="poly" id="edge6_Node000000_Node000005" title=" " alt="" coords="69,441,82,405,102,362,130,318,165,279,191,262,194,266,168,283,134,321,107,365,87,407,74,443"/>
+<area shape="rect" id="Node000006" href="$struct_p_l_m_d_1_1gch_1_1detail_1_1allocator__interface_1_1is__convertible__pointer.html" title=" " alt="" coords="191,293,401,363"/>
+<area shape="poly" id="edge7_Node000000_Node000006" title=" " alt="" coords="82,443,119,407,165,372,190,359,192,364,168,377,122,411,86,447"/>
+<area shape="rect" id="Node000002" href="$struct_p_l_m_d_1_1gch_1_1detail_1_1allocator__interface_1_1is__memcpyable__iterator.html" title=" " alt="" coords="185,387,407,456"/>
+<area shape="poly" id="edge8_Node000000_Node000002" title=" " alt="" coords="131,452,185,441,186,446,132,457"/>
+<area shape="rect" id="Node000007" href="$struct_p_l_m_d_1_1gch_1_1detail_1_1allocator__interface_1_1is__uninitialized__memcpyable__iterator.html" title=" " alt="" coords="167,480,425,549"/>
+<area shape="poly" id="edge10_Node000000_Node000007" title=" " alt="" coords="133,479,167,486,166,491,132,484"/>
+<area shape="rect" id="Node000008" href="$struct_p_l_m_d_1_1gch_1_1detail_1_1allocator__interface_1_1must__use__alloc__construct.html" title=" " alt="" coords="205,574,387,658"/>
+<area shape="poly" id="edge11_Node000000_Node000008" title=" " alt="" coords="86,489,123,524,168,559,207,580,204,585,165,564,119,528,82,493"/>
+<area shape="rect" id="Node000009" href="$struct_p_l_m_d_1_1gch_1_1detail_1_1allocator__interface_1_1must__use__alloc__destroy.html" title=" " alt="" coords="205,683,387,752"/>
+<area shape="poly" id="edge12_Node000000_Node000009" title=" " alt="" coords="72,493,85,532,105,579,132,627,168,669,207,692,204,697,165,673,128,630,100,581,80,534,67,495"/>
+<area shape="rect" id="Node000010" href="$struct_p_l_m_d_1_1gch_1_1detail_1_1small__vector__base_1_1allocations__are__movable.html" title=" " alt="" coords="185,776,407,845"/>
+<area shape="poly" id="edge13_Node000000_Node000010" title=" " alt="" coords="68,494,75,550,92,621,105,659,122,696,143,731,169,762,187,777,183,781,165,766,139,734,117,699,100,661,87,623,70,551,63,495"/>
+<area shape="rect" id="Node000011" href="$struct_p_l_m_d_1_1gch_1_1detail_1_1small__vector__base_1_1allocations__are__swappable.html" title=" " alt="" coords="185,869,407,939"/>
+<area shape="poly" id="edge14_Node000000_Node000011" title=" " alt="" coords="65,494,67,565,80,661,93,713,112,764,136,813,169,856,187,871,183,875,165,859,132,815,107,766,88,715,75,662,62,565,60,494"/>
+<area shape="rect" id="Node000012" href="$struct_p_l_m_d_1_1gch_1_1detail_1_1small__vector__base_1_1relocate__with__move.html" title=" " alt="" coords="185,963,407,1032"/>
+<area shape="poly" id="edge15_Node000000_Node000012" title=" " alt="" coords="68,494,79,594,99,730,113,799,129,862,148,914,169,949,187,965,183,969,165,952,143,916,124,863,108,800,94,731,74,595,63,495"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="423,53,476,60,476,65,423,59"/>
+<area shape="poly" id="edge9_Node000002_Node000001" title=" " alt="" coords="409,379,424,372,514,324,517,328,427,377,412,384"/>
+</map>

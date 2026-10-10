@@ -1,0 +1,776 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: WHAM - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-wham" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: WHAM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-wham"><a href="../actions/">Action</a>: WHAM</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_wham/"><strong>wham</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate the weights for configurations using the weighted histogram analysis method.</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the vector of WHAM weights to use for reweighting the elements in a time series</td>
+<td style="text-align: center;">vector</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate the weights for configurations using the weighted histogram analysis method.</p>
+<p>The example input below shows how this command is used.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_WHAM.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../WHAM.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS NREPLICAS=4</span>
+<b name="WHAM.md_working_1.datphi" onclick='showPath("WHAM.md_working_1.dat","WHAM.md_working_1.datphi","WHAM.md_working_1.datphi","black")'>phi</b><span style="display:none;" id="WHAM.md_working_1.datphi">The TORSION action with label <b>phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">phi</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=5,7,9,15
+<b name="WHAM.md_working_1.datpsi" onclick='showPath("WHAM.md_working_1.dat","WHAM.md_working_1.datpsi","WHAM.md_working_1.datpsi","black")'>psi</b><span style="display:none;" id="WHAM.md_working_1.datpsi">The TORSION action with label <b>psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">psi</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=7,9,15,17
+<span id="WHAM.md_working_1.datdefrp_short"><b name="WHAM.md_working_1.datrp" onclick='showPath("WHAM.md_working_1.dat","WHAM.md_working_1.datrp","WHAM.md_working_1.datrp","black")'>rp</b><span style="display:none;" id="WHAM.md_working_1.datrp">The RESTRAINT action with label <b>rp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rp.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">rp.force2</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the squared force due to this bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("WHAM.md_working_1.datdefrp");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=<b name="WHAM.md_working_1.datphi">phi</b> <span class="plumedtooltip">KAPPA<span class="right"> specifies that the restraint is harmonic and what the values of the force constants on each of the variables are<i></i></span></span>=50.0 <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=<span class="plumedtooltip">@replicas:<span class="right">This keyword specifies that different replicas have different values for this quantity.  See <a href="https://www.plumed.org/doc-master/user-doc/html/parsing.html">here for more details.</a><i></i></span></span>{-3.00,-1.45,0.10,1.65}
+</span><span id="WHAM.md_working_1.datdefrp_long" style="display:none;"><b name="WHAM.md_working_1.datrp" onclick='showPath("WHAM.md_working_1.dat","WHAM.md_working_1.datrp","WHAM.md_working_1.datrp","black")'>rp</b>: <span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("WHAM.md_working_1.datdefrp");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=<b name="WHAM.md_working_1.datphi">phi</b> <span class="plumedtooltip">KAPPA<span class="right"> specifies that the restraint is harmonic and what the values of the force constants on each of the variables are<i></i></span></span>=50.0 <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=<span class="plumedtooltip">@replicas:<span class="right">This keyword specifies that different replicas have different values for this quantity.  See <a href="https://www.plumed.org/doc-master/user-doc/html/parsing.html">here for more details.</a><i></i></span></span>{-3.00,-1.45,0.10,1.65}  <span class="plumedtooltip">SLOPE<span class="right"> specifies that the restraint is linear and what the values of the force constants on each of the variables are<i></i></span></span>=0.0
+</span><span style="color:blue" class="comment"># Get the bias on each of the replicas</span>
+<b name="WHAM.md_working_1.datrep" onclick='showPath("WHAM.md_working_1.dat","WHAM.md_working_1.datrep","WHAM.md_working_1.datrep","black")'>rep</b><span style="display:none;" id="WHAM.md_working_1.datrep">The GATHER_REPLICAS action with label <b>rep</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rep.rep-1</td><td width="5%"><font color="black">scalar</font></td><td>the input arguments for each of the replicas  This is the 1th of these quantities</td></tr><tr><td width="5%">rep.rep-2</td><td width="5%"><font color="black">scalar</font></td><td>the input arguments for each of the replicas  This is the 2th of these quantities</td></tr><tr><td width="5%">rep.rep-3</td><td width="5%"><font color="black">scalar</font></td><td>the input arguments for each of the replicas  This is the 3th of these quantities</td></tr><tr><td width="5%">rep.rep-4</td><td width="5%"><font color="black">scalar</font></td><td>the input arguments for each of the replicas  This is the 4th of these quantities</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GATHER_REPLICAS<span class="right">Create a vector that contains the copies of the input quantities from all replicas <a href="https://www.plumed.org/doc-master/user-doc/html/GATHER_REPLICAS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the argument from the various replicas that you would like to gather<i></i></span></span>=<b name="WHAM.md_working_1.datrp">rp.bias</b>
+<span style="color:blue" class="comment"># Merge the biases on each of the replicas into a single vector</span>
+<b name="WHAM.md_working_1.datall" onclick='showPath("WHAM.md_working_1.dat","WHAM.md_working_1.datall","WHAM.md_working_1.datall","blue")'>all</b><span style="display:none;" id="WHAM.md_working_1.datall">The CONCATENATE action with label <b>all</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">all</td><td width="5%"><font color="blue">vector</font></td><td>the concatenated vector/matrix that was constructed from the input values</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONCATENATE<span class="right">Join vectors or matrices together <a href="https://www.plumed.org/doc-master/user-doc/html/CONCATENATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values that should be concatenated together to form the output vector<i></i></span></span>=<b name="WHAM.md_working_1.datrep">rep.*</b>
+<span style="color:blue" class="comment"># Collect all the bias values</span>
+<span id="WHAM.md_working_1.datdefcol_short"><b name="WHAM.md_working_1.datcol" onclick='showPath("WHAM.md_working_1.dat","WHAM.md_working_1.datcol","WHAM.md_working_1.datcol","blue")'>col</b><span style="display:none;" id="WHAM.md_working_1.datcol">The COLLECT action with label <b>col</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">col</td><td width="5%"><font color="blue">vector</font></td><td>the time series for the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COLLECT<span class="right">Collect data from the trajectory for later analysis This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("WHAM.md_working_1.datdefcol");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/COLLECT">More details</a><i></i></span></span> <span class="plumedtooltip">TYPE<span class="right"> required if you are collecting an object with rank>0<i></i></span></span>=vector <span class="plumedtooltip">ARG<span class="right">the label of the value whose time series is being stored for later analysis<i></i></span></span>=<b name="WHAM.md_working_1.datall">all</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1
+</span><span id="WHAM.md_working_1.datdefcol_long" style="display:none;"><b name="WHAM.md_working_1.datcol" onclick='showPath("WHAM.md_working_1.dat","WHAM.md_working_1.datcol","WHAM.md_working_1.datcol","blue")'>col</b>: <span class="plumedtooltip" style="color:green">COLLECT<span class="right">Collect data from the trajectory for later analysis This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("WHAM.md_working_1.datdefcol");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/COLLECT">More details</a><i></i></span></span> <span class="plumedtooltip">TYPE<span class="right"> required if you are collecting an object with rank>0<i></i></span></span>=vector <span class="plumedtooltip">ARG<span class="right">the label of the value whose time series is being stored for later analysis<i></i></span></span>=<b name="WHAM.md_working_1.datall">all</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1  <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=0
+</span><span id="WHAM.md_working_1.datdefwham_short"><b name="WHAM.md_working_1.datwham" onclick='showPath("WHAM.md_working_1.dat","WHAM.md_working_1.datwham","WHAM.md_working_1.datwham","blue")'>wham</b><span style="display:none;" id="WHAM.md_working_1.datwham">The WHAM action with label <b>wham</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">wham</td><td width="5%"><font color="blue">vector</font></td><td>the vector of WHAM weights to use for reweighting the elements in a time series</td></tr></table></span>: <span class="plumedtooltip" style="color:green">WHAM<span class="right">Calculate the weights for configurations using the weighted histogram analysis method. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("WHAM.md_working_1.datdefwham");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/WHAM">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the stored values for the bias<i></i></span></span>=<b name="WHAM.md_working_1.datcol">col</b> <span class="plumedtooltip">TEMP<span class="right">the system temperature<i></i></span></span>=300
+</span><span id="WHAM.md_working_1.datdefwham_long" style="display:none;"><b name="WHAM.md_working_1.datwham" onclick='showPath("WHAM.md_working_1.dat","WHAM.md_working_1.datwham","WHAM.md_working_1.datwham","blue")'>wham</b>: <span class="plumedtooltip" style="color:green">WHAM<span class="right">Calculate the weights for configurations using the weighted histogram analysis method. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("WHAM.md_working_1.datdefwham");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/WHAM">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the stored values for the bias<i></i></span></span>=<b name="WHAM.md_working_1.datcol">col</b> <span class="plumedtooltip">TEMP<span class="right">the system temperature<i></i></span></span>=300  <span class="plumedtooltip">MAXITER<span class="right"> maximum number of iterations for WHAM algorithm<i></i></span></span>=1000 <span class="plumedtooltip">WHAMTOL<span class="right"> threshold for convergence of WHAM algorithm<i></i></span></span>=1e-10
+</span><span class="plumedtooltip" style="color:green">DUMPVECTOR<span class="right">Print a vector to a file <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPVECTOR" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of vectors/matrices that should be output in the file<i></i></span></span>=<b name="WHAM.md_working_1.datwham">wham</b> <span class="plumedtooltip">FILE<span class="right"> the file on which to write the vetors<i></i></span></span>=wham_data
+</pre></div>
+
+<p>As illustrated in the example above this command is used when you have run <script type="math/tex">N</script> trajectories each of which was computed by integrating a different biased Hamiltonian. The input above calculates
+the probability of observing the set of configurations during the <script type="math/tex">N</script> trajectories that we ran using the product of multinomial distributions using the formula shown below:</p>
+<p>
+<script type="math/tex; mode=display">
+P( \underline{T} ) \propto \prod_{j=1}^M \prod_{k=1}^N (c_k w_{kj} p_j)^{t_{kj}}
+</script>
+</p>
+<p>In this expression the second product runs over the biases that were used when calculating the <script type="math/tex">N</script> trajectories.  The first product then runs over the
+<script type="math/tex">M</script> bins in our histogram.  The <script type="math/tex">p_j</script> variable that is inside this product is the quantity we wish to extract; namely, the unbiased probability of
+having a set of CV values that lie within the range for the <script type="math/tex">j</script>th bin.</p>
+<p>The quantity that we can easily extract from our simulations, <script type="math/tex">t_{kj}</script>, however, measures the number of frames from trajectory <script type="math/tex">k</script> that are inside the <script type="math/tex">j</script>th bin.
+To interpret this quantity we must consider the bias that acts on each of the replicas so the <script type="math/tex">w_{kj}</script> term is introduced.  This quantity is calculated as:</p>
+<p>
+<script type="math/tex; mode=display">
+w_{kj} = e^{+\beta V_k(x_j)}
+</script>
+</p>
+<p>and is essentially the factor that we have to multiply the unbiased probability of being in the bin by in order to get the probability that we would be inside this same bin in
+the <script type="math/tex">k</script>th of our biased simulations. Obviously, these <script type="math/tex">w_{kj}</script> values depend on the value that the CVs take and also on the particular trajectory that we are investigating
+all of which, remember, have different simulation biases.  Finally, <script type="math/tex">c_k</script> is a free parameter that ensures that, for each <script type="math/tex">k</script>, the biased probability is normalized.</p>
+<p>We can use the equation for the probability that was given above to find a set of values for <script type="math/tex">p_j</script> that maximizes the likelihood of observing the trajectory.
+This constrained optimization must be performed using a set of Lagrange multipliers, <script type="math/tex">\lambda_k</script>, that ensure that each of the biased probability distributions
+are normalized, that is <script type="math/tex">\sum_j c_kw_{kj}p_j=1</script>.  Furthermore, as the problem is made easier if the quantity in the equation above is replaced by its logarithm
+we actually chose to minimize</p>
+<p>
+<script type="math/tex; mode=display">
+L = \sum_{j=1}^M \sum_{k=1}^N t_{kj} \ln c_k  w_{kj} p_j + \sum_k\lambda_k \left( \sum_{j=1}^N c_k w_{kj} p_j - 1 \right)
+</script>
+</p>
+<p>After some manipulations the following (WHAM) equations emerge:</p>
+<p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+p_j & \propto \frac{\sum_{k=1}^N t_{kj}}{\sum_k c_k w_{kj}} \\
+c_k & =\frac{1}{\sum_{j=1}^M w_{kj} p_j}
+\end{aligned}
+</script>
+</p>
+<p>which can be solved by computing the <script type="math/tex">p_j</script> values using the first of the two equations above with an initial guess for the <script type="math/tex">c_k</script> values and by then refining
+these <script type="math/tex">p_j</script> values using the <script type="math/tex">c_k</script> values that are obtained by inserting the <script type="math/tex">p_j</script> values obtained into the second of the two equations above.</p>
+<p>Notice that only <script type="math/tex">\sum_k t_{kj}</script>, which is the total number of configurations from all the replicas that enter the <script type="math/tex">j</script>th bin, enters the WHAM equations above.
+There is thus no need to record which replica generated each of the frames.  One can thus simply gather the trajectories from all the replicas together at the outset.
+This observation is important as it is the basis of the binless formulation of WHAM that is implemented within PLUMED.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">scalar/vector/matrix</td>
+<td style="text-align: left;">the stored values for the bias</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the stored values for the bias</td>
+</tr>
+<tr>
+<td style="text-align: left;">MAXITER</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">1000</td>
+<td style="text-align: left;">maximum number of iterations for WHAM algorithm</td>
+</tr>
+<tr>
+<td style="text-align: left;">WHAMTOL</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">1e-10</td>
+<td style="text-align: left;">threshold for convergence of WHAM algorithm</td>
+</tr>
+<tr>
+<td style="text-align: left;">TEMP</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the system temperature</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

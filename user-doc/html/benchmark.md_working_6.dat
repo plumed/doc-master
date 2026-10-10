@@ -1,0 +1,1 @@
+plumed-runtime benchmark --plumed plumed1.dat:plumed2.dat

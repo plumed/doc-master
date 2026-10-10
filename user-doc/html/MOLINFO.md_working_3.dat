@@ -1,0 +1,5 @@
+#SETTINGS MOLFILE=regtest/basic/rt32/helix.pdb
+MOLINFO MOLTYPE=protein STRUCTURE=regtest/basic/rt32/helix.pdb
+t1: TORSION ATOMS=@phi-3
+t2: TORSION ATOMS=@psi-4
+PRINT ARG=t1,t2 FILE=colvar STRIDE=10

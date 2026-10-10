@@ -1,0 +1,7 @@
+#SETTINGS INPUTFILES=regtest/pamm/rt-hbpamm/b3lyp.pamm
+acceptors: HBPAMM_SA ...
+  ACCEPTORS=1-9:3 DONORS=1-192:3
+  CLUSTERS=regtest/pamm/rt-hbpamm/b3lyp.pamm
+  HYDROGENS=2-192:3,3-192:3
+...
+DUMPATOMS ARG=acceptors ATOMS=1-9:3 FILE=acceptors.xyz

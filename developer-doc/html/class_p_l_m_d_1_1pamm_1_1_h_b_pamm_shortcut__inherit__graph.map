@@ -1,0 +1,7 @@
+<map id="PLMD::pamm::HBPammShortcut" name="PLMD::pamm::HBPammShortcut">
+<area shape="rect" id="Node000001" title="Provides the keyword HBPAMM_SD" alt="" coords="5,152,236,177"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_shortcut.html" title="Action used to create a command that expands to multiple PLMD::Action commands when read in during in..." alt="" coords="39,79,202,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,118,123,152,118,152,118,118"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="67,5,175,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="123,44,123,79,118,79,118,44"/>
+</map>

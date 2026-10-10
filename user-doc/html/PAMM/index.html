@@ -1,0 +1,1004 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: PAMM - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-pamm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: PAMM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-pamm"><a href="../shortcuts/">Shortcut</a>: PAMM</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_pamm/"><strong>pamm</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Probabilistic analysis of molecular motifs.</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Probabilistic analysis of molecular motifs.</p>
+<p>Probabilistic analysis of molecular motifs (PAMM) was introduced in the papers in the bibliography.
+The essence of this approach involves calculating some large set of collective variables
+for a set of atoms in a short trajectory and fitting this data using a Gaussian Mixture Model.
+The idea is that modes in these distributions can be used to identify features such as hydrogen bonds or
+secondary structure types.</p>
+<p>The assumption within this implementation is that the fitting of the Gaussian mixture model has been
+done elsewhere by a separate code.  You thus provide an input file to this action which contains the
+means, covariance matrices and weights for a set of Gaussian kernels, <script type="math/tex">\{\phi\}</script>.  The values and
+derivatives for the following set of quantities is then computed:</p>
+<p>
+<script type="math/tex; mode=display">
+s_k = \frac{ \phi_k}{ \sum_i \phi_i }
+</script>
+</p>
+<p>Each of the <script type="math/tex">\phi_k</script> is a Gaussian function that acts on a set in quantities calculated that might be calculated
+using a <a href="../TORSION/">TORSION</a>, <a href="../DISTANCE/">DISTANCE</a> or <a href="../ANGLE/">ANGLE</a> action for example.
+These quantities are then inserted into the set of <script type="math/tex">n</script> kernels that are in the the input file.   This will be done for multiple sets of values
+for the input quantities and a final quantity will be calculated by summing the above <script type="math/tex">s_k</script> values or
+some transformation of the above.  This sounds less complicated than it is and is best understood by
+looking through the example given below, which can be expanded to show the full set of operations that PLUMED is performing.</p>
+<p>\warning Mixing input variables that are periodic with variables that are not periodic has not been tested</p>
+<h2 id="examples">Examples</h2>
+<p>In this example I will explain in detail what the following input is computing:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_PAMM.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../PAMM.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS MOLFILE=regtest/pamm/rt-pamm-periodic/M1d.pdb INPUTFILES=regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp</span>
+<span class="plumedtooltip" style="color:green">MOLINFO<span class="right">This command is used to provide information on the molecules that are present in your system. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">MOLTYPE<span class="right"> what kind of molecule is contained in the pdb file - usually not needed since protein/RNA/DNA are compatible<i></i></span></span>=protein <span class="plumedtooltip">STRUCTURE<span class="right">a file in pdb format containing a reference structure<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-pamm-periodic/M1d.pdb<div class="right"> Click <a onclick='openModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/M1d.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/M1d.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/M1d.pdb1")'>&times;</span>  <h2>FILE: regtest/pamm/rt-pamm-periodic/M1d.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      1  CH3 ACE     1      -0.595   0.734   0.353  1.00  0.00           C  
+ATOM      2  C   ACE     1       0.767   0.829  -0.308  1.00  0.00           C  
+ATOM      3  O   ACE     1       0.968  -0.029  -1.182  1.00  0.00           O  
+ATOM      4 1HH3 ACE     1      -0.561   0.034   1.174  1.00  0.00           H  
+ATOM      5 2HH3 ACE     1      -0.893   1.700   0.729  1.00  0.00           H  
+...
+ATOM    380  H   NME    23      14.888 -21.273  -9.959  1.00  0.00           H  
+ATOM    381 HH31 NME    23      17.241 -22.202 -11.437  1.00  0.00           H  
+ATOM    382 HH32 NME    23      15.946 -23.378 -11.638  1.00  0.00           H  
+ATOM    383 HH33 NME    23      15.734 -21.723 -12.191  1.00  0.00           H  
+END
+</pre></div>  </div></div>
+<span style="display:none;" id="PAMM.md_working_1.dat">The MOLINFO action with label <b></b> calculates something</span><b name="PAMM.md_working_1.datpsi" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datpsi","PAMM.md_working_1.datpsi","blue")'>psi</b><span style="display:none;" id="PAMM.md_working_1.datpsi">The TORSION action with label <b>psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">psi</td><td width="5%"><font color="blue">vector</font></td><td>the TORSION for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=<span class="plumedtooltip">@psi-2<span class="right">the four atoms that are required to calculate the psi dihedral for residue 2. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span> <span class="plumedtooltip">ATOMS2<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=<span class="plumedtooltip">@psi-3<span class="right">the four atoms that are required to calculate the psi dihedral for residue 3. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span> <span class="plumedtooltip">ATOMS3<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=<span class="plumedtooltip">@psi-4<span class="right">the four atoms that are required to calculate the psi dihedral for residue 4. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>
+<b name="PAMM.md_working_1.datphi" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datphi","PAMM.md_working_1.datphi","blue")'>phi</b><span style="display:none;" id="PAMM.md_working_1.datphi">The TORSION action with label <b>phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">phi</td><td width="5%"><font color="blue">vector</font></td><td>the TORSION for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=<span class="plumedtooltip">@phi-2<span class="right">the four atoms that are required to calculate the phi dihedral for residue 2. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span> <span class="plumedtooltip">ATOMS2<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=<span class="plumedtooltip">@phi-3<span class="right">the four atoms that are required to calculate the phi dihedral for residue 3. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span> <span class="plumedtooltip">ATOMS3<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=<span class="plumedtooltip">@phi-4<span class="right">the four atoms that are required to calculate the phi dihedral for residue 4. <a href="https://www.plumed.org/doc-master/user-doc/html/MOLINFO">Click here</a> for more information. <i></i></span></span>
+<span id="PAMM.md_working_1.datp_short"><span id="PAMM.md_working_1.datdefp_short"><b name="PAMM.md_working_1.datp" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp","PAMM.md_working_1.datp","brown")'>p</b>: <span class="plumedtooltip" style="color:green">PAMM<span class="right">Probabilistic analysis of molecular motifs. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PAMM.md_working_1.datp");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("PAMM.md_working_1.datdefp");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PAMM">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">ARG<span class="right">the vectors from which the pamm coordinates are calculated<i></i></span></span>=<b name="PAMM.md_working_1.datphi">phi</b>,<b name="PAMM.md_working_1.datpsi">psi</b> <span class="plumedtooltip">MEAN<span class="right"> calculate the mean of all the quantities<i></i></span></span>
+  <span class="plumedtooltip">CLUSTERS<span class="right">the name of the file that contains the definitions of all the clusters<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp<div class="right"> Click <a onclick='openModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp2")'>here</a> to see an extract from this file.<i></i></div></div><div id="PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp2")'>&times;</span>  <h2>FILE: regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height phi psi sigma_phi_phi sigma_phi_psi sigma_psi_phi sigma_psi_psi 
+#! SET kerneltype von-misses
+      2.97197455E-0001     -1.91983118E+0000      2.25029540E+0000      2.45960237E-0001     -1.30615381E-0001     -1.30615381E-0001      2.40239117E-0001  
+      2.29131448E-0002      1.39809354E+0000      9.54585380E-0002      9.61755708E-0002     -3.55657919E-0002     -3.55657919E-0002      1.06147253E-0001  
+      5.06676398E-0001     -1.09648066E+0000     -7.17867907E-0001      1.40523052E-0001     -1.05385552E-0001     -1.05385552E-0001      1.63290557E-0001  
+</pre></div>  </div></div>
+...
+</span><span id="PAMM.md_working_1.datdefp_long" style="display:none;"><span style="display:none;" id="PAMM.md_working_1.datp">The PAMM action with label <b>p</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p.mean</td><td>the mean of the colvars</td></tr></table></span><b name="PAMM.md_working_1.datp" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp","PAMM.md_working_1.datp","brown")'>p</b>: <span class="plumedtooltip" style="color:green">PAMM<span class="right">Probabilistic analysis of molecular motifs. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("PAMM.md_working_1.datp");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("PAMM.md_working_1.datdefp");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/PAMM">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">ARG<span class="right">the vectors from which the pamm coordinates are calculated<i></i></span></span>=<b name="PAMM.md_working_1.datphi">phi</b>,<b name="PAMM.md_working_1.datpsi">psi</b> <span class="plumedtooltip">MEAN<span class="right"> calculate the mean of all the quantities<i></i></span></span>
+  <span class="plumedtooltip">CLUSTERS<span class="right">the name of the file that contains the definitions of all the clusters<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp<div class="right"> Click <a onclick='openModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp3")'>here</a> to see an extract from this file.<i></i></div></div><div id="PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp3" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp3")'>&times;</span>  <h2>FILE: regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height phi psi sigma_phi_phi sigma_phi_psi sigma_psi_phi sigma_psi_psi 
+#! SET kerneltype von-misses
+      2.97197455E-0001     -1.91983118E+0000      2.25029540E+0000      2.45960237E-0001     -1.30615381E-0001     -1.30615381E-0001      2.40239117E-0001  
+      2.29131448E-0002      1.39809354E+0000      9.54585380E-0002      9.61755708E-0002     -3.55657919E-0002     -3.55657919E-0002      1.06147253E-0001  
+      5.06676398E-0001     -1.09648066E+0000     -7.17867907E-0001      1.40523052E-0001     -1.05385552E-0001     -1.05385552E-0001      1.63290557E-0001  
+</pre></div>  </div></div>
+ <span class="plumedtooltip">REGULARISE<span class="right"> don't allow the denominator to be smaller then this value<i></i></span></span>=0.001 <span class="plumedtooltip">KERNELS<span class="right"> which kernels are we computing the PAMM values for<i></i></span></span>=all
+...
+</span></span><span id="PAMM.md_working_1.datp_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("PAMM.md_working_1.datp")'># p: PAMM ...</span>
+<span style="color:blue" class="comment">#   ARG=phi,psi MEAN</span>
+<span style="color:blue" class="comment">#   CLUSTERS=regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp</span>
+<span style="color:blue" class="comment"># ...</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="PAMM.md_working_1.datp_kernel-1" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp_kernel-1","PAMM.md_working_1.datp_kernel-1","blue")'>p_kernel-1</b><span style="display:none;" id="PAMM.md_working_1.datp_kernel-1">The CUSTOM action with label <b>p_kernel-1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p_kernel-1</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KERNEL<span class="right">Transform a set of input coordinates using a kernel function <a href="https://www.plumed.org/doc-master/user-doc/html/KERNEL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NORMALIZED<span class="right"> would you like the kernel function to be normalized<i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the arguments that should be used as input to this method<i></i></span></span>=<b name="PAMM.md_working_1.datphi">phi</b>,<b name="PAMM.md_working_1.datpsi">psi</b> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple sets of kernel parameters in the input file which set of kernel parameters would you like to read in here<i></i></span></span>=1 <span class="plumedtooltip">REFERENCE<span class="right">the file from which to read the kernel parameters<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp<div class="right"> Click <a onclick='openModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp4")'>here</a> to see an extract from this file.<i></i></div></div><div id="PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp4" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp4")'>&times;</span>  <h2>FILE: regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height phi psi sigma_phi_phi sigma_phi_psi sigma_psi_phi sigma_psi_psi 
+#! SET kerneltype von-misses
+      2.97197455E-0001     -1.91983118E+0000      2.25029540E+0000      2.45960237E-0001     -1.30615381E-0001     -1.30615381E-0001      2.40239117E-0001  
+      2.29131448E-0002      1.39809354E+0000      9.54585380E-0002      9.61755708E-0002     -3.55657919E-0002     -3.55657919E-0002      1.06147253E-0001  
+      5.06676398E-0001     -1.09648066E+0000     -7.17867907E-0001      1.40523052E-0001     -1.05385552E-0001     -1.05385552E-0001      1.63290557E-0001  
+</pre></div>  </div></div> <span class="plumedtooltip">WEIGHT<span class="right"> the weight to multiply this kernel function by<i></i></span></span>=0.297197 <span class="plumedtooltip">TYPE<span class="right"> the type of kernel to use<i></i></span></span>=von-misses
+<b name="PAMM.md_working_1.datp_kernel-2" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp_kernel-2","PAMM.md_working_1.datp_kernel-2","blue")'>p_kernel-2</b><span style="display:none;" id="PAMM.md_working_1.datp_kernel-2">The CUSTOM action with label <b>p_kernel-2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p_kernel-2</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KERNEL<span class="right">Transform a set of input coordinates using a kernel function <a href="https://www.plumed.org/doc-master/user-doc/html/KERNEL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NORMALIZED<span class="right"> would you like the kernel function to be normalized<i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the arguments that should be used as input to this method<i></i></span></span>=<b name="PAMM.md_working_1.datphi">phi</b>,<b name="PAMM.md_working_1.datpsi">psi</b> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple sets of kernel parameters in the input file which set of kernel parameters would you like to read in here<i></i></span></span>=2 <span class="plumedtooltip">REFERENCE<span class="right">the file from which to read the kernel parameters<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp<div class="right"> Click <a onclick='openModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp5")'>here</a> to see an extract from this file.<i></i></div></div><div id="PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp5" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp5")'>&times;</span>  <h2>FILE: regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height phi psi sigma_phi_phi sigma_phi_psi sigma_psi_phi sigma_psi_psi 
+#! SET kerneltype von-misses
+      2.97197455E-0001     -1.91983118E+0000      2.25029540E+0000      2.45960237E-0001     -1.30615381E-0001     -1.30615381E-0001      2.40239117E-0001  
+      2.29131448E-0002      1.39809354E+0000      9.54585380E-0002      9.61755708E-0002     -3.55657919E-0002     -3.55657919E-0002      1.06147253E-0001  
+      5.06676398E-0001     -1.09648066E+0000     -7.17867907E-0001      1.40523052E-0001     -1.05385552E-0001     -1.05385552E-0001      1.63290557E-0001  
+</pre></div>  </div></div> <span class="plumedtooltip">WEIGHT<span class="right"> the weight to multiply this kernel function by<i></i></span></span>=0.0229131 <span class="plumedtooltip">TYPE<span class="right"> the type of kernel to use<i></i></span></span>=von-misses
+<b name="PAMM.md_working_1.datp_kernel-3" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp_kernel-3","PAMM.md_working_1.datp_kernel-3","blue")'>p_kernel-3</b><span style="display:none;" id="PAMM.md_working_1.datp_kernel-3">The CUSTOM action with label <b>p_kernel-3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p_kernel-3</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KERNEL<span class="right">Transform a set of input coordinates using a kernel function <a href="https://www.plumed.org/doc-master/user-doc/html/KERNEL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NORMALIZED<span class="right"> would you like the kernel function to be normalized<i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the arguments that should be used as input to this method<i></i></span></span>=<b name="PAMM.md_working_1.datphi">phi</b>,<b name="PAMM.md_working_1.datpsi">psi</b> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple sets of kernel parameters in the input file which set of kernel parameters would you like to read in here<i></i></span></span>=3 <span class="plumedtooltip">REFERENCE<span class="right">the file from which to read the kernel parameters<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp<div class="right"> Click <a onclick='openModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp6")'>here</a> to see an extract from this file.<i></i></div></div><div id="PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp6" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp6")'>&times;</span>  <h2>FILE: regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height phi psi sigma_phi_phi sigma_phi_psi sigma_psi_phi sigma_psi_psi 
+#! SET kerneltype von-misses
+      2.97197455E-0001     -1.91983118E+0000      2.25029540E+0000      2.45960237E-0001     -1.30615381E-0001     -1.30615381E-0001      2.40239117E-0001  
+      2.29131448E-0002      1.39809354E+0000      9.54585380E-0002      9.61755708E-0002     -3.55657919E-0002     -3.55657919E-0002      1.06147253E-0001  
+      5.06676398E-0001     -1.09648066E+0000     -7.17867907E-0001      1.40523052E-0001     -1.05385552E-0001     -1.05385552E-0001      1.63290557E-0001  
+</pre></div>  </div></div> <span class="plumedtooltip">WEIGHT<span class="right"> the weight to multiply this kernel function by<i></i></span></span>=0.506676 <span class="plumedtooltip">TYPE<span class="right"> the type of kernel to use<i></i></span></span>=von-misses
+<b name="PAMM.md_working_1.datp_kernel-4" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp_kernel-4","PAMM.md_working_1.datp_kernel-4","blue")'>p_kernel-4</b><span style="display:none;" id="PAMM.md_working_1.datp_kernel-4">The CUSTOM action with label <b>p_kernel-4</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p_kernel-4</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KERNEL<span class="right">Transform a set of input coordinates using a kernel function <a href="https://www.plumed.org/doc-master/user-doc/html/KERNEL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NORMALIZED<span class="right"> would you like the kernel function to be normalized<i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the arguments that should be used as input to this method<i></i></span></span>=<b name="PAMM.md_working_1.datphi">phi</b>,<b name="PAMM.md_working_1.datpsi">psi</b> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple sets of kernel parameters in the input file which set of kernel parameters would you like to read in here<i></i></span></span>=4 <span class="plumedtooltip">REFERENCE<span class="right">the file from which to read the kernel parameters<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp<div class="right"> Click <a onclick='openModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp7")'>here</a> to see an extract from this file.<i></i></div></div><div id="PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp7" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp7")'>&times;</span>  <h2>FILE: regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height phi psi sigma_phi_phi sigma_phi_psi sigma_psi_phi sigma_psi_psi 
+#! SET kerneltype von-misses
+      2.97197455E-0001     -1.91983118E+0000      2.25029540E+0000      2.45960237E-0001     -1.30615381E-0001     -1.30615381E-0001      2.40239117E-0001  
+      2.29131448E-0002      1.39809354E+0000      9.54585380E-0002      9.61755708E-0002     -3.55657919E-0002     -3.55657919E-0002      1.06147253E-0001  
+      5.06676398E-0001     -1.09648066E+0000     -7.17867907E-0001      1.40523052E-0001     -1.05385552E-0001     -1.05385552E-0001      1.63290557E-0001  
+</pre></div>  </div></div> <span class="plumedtooltip">WEIGHT<span class="right"> the weight to multiply this kernel function by<i></i></span></span>=0.00838236 <span class="plumedtooltip">TYPE<span class="right"> the type of kernel to use<i></i></span></span>=von-misses
+<b name="PAMM.md_working_1.datp_kernel-5" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp_kernel-5","PAMM.md_working_1.datp_kernel-5","blue")'>p_kernel-5</b><span style="display:none;" id="PAMM.md_working_1.datp_kernel-5">The CUSTOM action with label <b>p_kernel-5</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p_kernel-5</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KERNEL<span class="right">Transform a set of input coordinates using a kernel function <a href="https://www.plumed.org/doc-master/user-doc/html/KERNEL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NORMALIZED<span class="right"> would you like the kernel function to be normalized<i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the arguments that should be used as input to this method<i></i></span></span>=<b name="PAMM.md_working_1.datphi">phi</b>,<b name="PAMM.md_working_1.datpsi">psi</b> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple sets of kernel parameters in the input file which set of kernel parameters would you like to read in here<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">the file from which to read the kernel parameters<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp<div class="right"> Click <a onclick='openModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp8")'>here</a> to see an extract from this file.<i></i></div></div><div id="PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp8" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp8")'>&times;</span>  <h2>FILE: regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height phi psi sigma_phi_phi sigma_phi_psi sigma_psi_phi sigma_psi_psi 
+#! SET kerneltype von-misses
+      2.97197455E-0001     -1.91983118E+0000      2.25029540E+0000      2.45960237E-0001     -1.30615381E-0001     -1.30615381E-0001      2.40239117E-0001  
+      2.29131448E-0002      1.39809354E+0000      9.54585380E-0002      9.61755708E-0002     -3.55657919E-0002     -3.55657919E-0002      1.06147253E-0001  
+      5.06676398E-0001     -1.09648066E+0000     -7.17867907E-0001      1.40523052E-0001     -1.05385552E-0001     -1.05385552E-0001      1.63290557E-0001  
+</pre></div>  </div></div> <span class="plumedtooltip">WEIGHT<span class="right"> the weight to multiply this kernel function by<i></i></span></span>=0.134976 <span class="plumedtooltip">TYPE<span class="right"> the type of kernel to use<i></i></span></span>=von-misses
+<b name="PAMM.md_working_1.datp_kernel-6" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp_kernel-6","PAMM.md_working_1.datp_kernel-6","blue")'>p_kernel-6</b><span style="display:none;" id="PAMM.md_working_1.datp_kernel-6">The CUSTOM action with label <b>p_kernel-6</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p_kernel-6</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KERNEL<span class="right">Transform a set of input coordinates using a kernel function <a href="https://www.plumed.org/doc-master/user-doc/html/KERNEL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NORMALIZED<span class="right"> would you like the kernel function to be normalized<i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the arguments that should be used as input to this method<i></i></span></span>=<b name="PAMM.md_working_1.datphi">phi</b>,<b name="PAMM.md_working_1.datpsi">psi</b> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple sets of kernel parameters in the input file which set of kernel parameters would you like to read in here<i></i></span></span>=6 <span class="plumedtooltip">REFERENCE<span class="right">the file from which to read the kernel parameters<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp<div class="right"> Click <a onclick='openModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp9")'>here</a> to see an extract from this file.<i></i></div></div><div id="PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp9" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp9")'>&times;</span>  <h2>FILE: regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height phi psi sigma_phi_phi sigma_phi_psi sigma_psi_phi sigma_psi_psi 
+#! SET kerneltype von-misses
+      2.97197455E-0001     -1.91983118E+0000      2.25029540E+0000      2.45960237E-0001     -1.30615381E-0001     -1.30615381E-0001      2.40239117E-0001  
+      2.29131448E-0002      1.39809354E+0000      9.54585380E-0002      9.61755708E-0002     -3.55657919E-0002     -3.55657919E-0002      1.06147253E-0001  
+      5.06676398E-0001     -1.09648066E+0000     -7.17867907E-0001      1.40523052E-0001     -1.05385552E-0001     -1.05385552E-0001      1.63290557E-0001  
+</pre></div>  </div></div> <span class="plumedtooltip">WEIGHT<span class="right"> the weight to multiply this kernel function by<i></i></span></span>=0.0262405 <span class="plumedtooltip">TYPE<span class="right"> the type of kernel to use<i></i></span></span>=von-misses
+<b name="PAMM.md_working_1.datp_kernel-7" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp_kernel-7","PAMM.md_working_1.datp_kernel-7","blue")'>p_kernel-7</b><span style="display:none;" id="PAMM.md_working_1.datp_kernel-7">The CUSTOM action with label <b>p_kernel-7</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p_kernel-7</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KERNEL<span class="right">Transform a set of input coordinates using a kernel function <a href="https://www.plumed.org/doc-master/user-doc/html/KERNEL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NORMALIZED<span class="right"> would you like the kernel function to be normalized<i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the arguments that should be used as input to this method<i></i></span></span>=<b name="PAMM.md_working_1.datphi">phi</b>,<b name="PAMM.md_working_1.datpsi">psi</b> <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple sets of kernel parameters in the input file which set of kernel parameters would you like to read in here<i></i></span></span>=7 <span class="plumedtooltip">REFERENCE<span class="right">the file from which to read the kernel parameters<i></i></span></span>=<div class="plumedtooltip">regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp<div class="right"> Click <a onclick='openModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp10")'>here</a> to see an extract from this file.<i></i></div></div><div id="PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp10" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("PAMM.md_working_1.datregtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp10")'>&times;</span>  <h2>FILE: regtest/pamm/rt-pamm-periodic/2D-testc-0.75.pammp</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS height phi psi sigma_phi_phi sigma_phi_psi sigma_psi_phi sigma_psi_psi 
+#! SET kerneltype von-misses
+      2.97197455E-0001     -1.91983118E+0000      2.25029540E+0000      2.45960237E-0001     -1.30615381E-0001     -1.30615381E-0001      2.40239117E-0001  
+      2.29131448E-0002      1.39809354E+0000      9.54585380E-0002      9.61755708E-0002     -3.55657919E-0002     -3.55657919E-0002      1.06147253E-0001  
+      5.06676398E-0001     -1.09648066E+0000     -7.17867907E-0001      1.40523052E-0001     -1.05385552E-0001     -1.05385552E-0001      1.63290557E-0001  
+</pre></div>  </div></div> <span class="plumedtooltip">WEIGHT<span class="right"> the weight to multiply this kernel function by<i></i></span></span>=0.00361413 <span class="plumedtooltip">TYPE<span class="right"> the type of kernel to use<i></i></span></span>=von-misses
+<b name="PAMM.md_working_1.datp_ksum" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp_ksum","PAMM.md_working_1.datp_ksum","blue")'>p_ksum</b><span style="display:none;" id="PAMM.md_working_1.datp_ksum">The COMBINE action with label <b>p_ksum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p_ksum</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a linear combination to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PAMM.md_working_1.datp_kernel-1">p_kernel-1</b>,<b name="PAMM.md_working_1.datp_kernel-2">p_kernel-2</b>,<b name="PAMM.md_working_1.datp_kernel-3">p_kernel-3</b>,<b name="PAMM.md_working_1.datp_kernel-4">p_kernel-4</b>,<b name="PAMM.md_working_1.datp_kernel-5">p_kernel-5</b>,<b name="PAMM.md_working_1.datp_kernel-6">p_kernel-6</b>,<b name="PAMM.md_working_1.datp_kernel-7">p_kernel-7</b> <span class="plumedtooltip">PARAMETERS<span class="right"> the parameters of the arguments in your function<i></i></span></span>=-0.001,0,0,0,0,0,0
+<b name="PAMM.md_working_1.datp-1" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-1","PAMM.md_working_1.datp-1","blue")'>p-1</b><span style="display:none;" id="PAMM.md_working_1.datp-1">The CUSTOM action with label <b>p-1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-1</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PAMM.md_working_1.datp_kernel-1">p_kernel-1</b>,<b name="PAMM.md_working_1.datp_ksum">p_ksum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-1_mean" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-1_mean","PAMM.md_working_1.datp-1_mean","black")'>p-1_mean</b><span style="display:none;" id="PAMM.md_working_1.datp-1_mean">The MEAN action with label <b>p-1_mean</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-1_mean</td><td width="5%"><font color="black">scalar</font></td><td>the MEAN of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MEAN<span class="right">Calculate the arithmetic mean of the elements in a vector <a href="https://www.plumed.org/doc-master/user-doc/html/MEAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PAMM.md_working_1.datp-1">p-1</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-2" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-2","PAMM.md_working_1.datp-2","blue")'>p-2</b><span style="display:none;" id="PAMM.md_working_1.datp-2">The CUSTOM action with label <b>p-2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-2</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PAMM.md_working_1.datp_kernel-2">p_kernel-2</b>,<b name="PAMM.md_working_1.datp_ksum">p_ksum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-2_mean" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-2_mean","PAMM.md_working_1.datp-2_mean","black")'>p-2_mean</b><span style="display:none;" id="PAMM.md_working_1.datp-2_mean">The MEAN action with label <b>p-2_mean</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-2_mean</td><td width="5%"><font color="black">scalar</font></td><td>the MEAN of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MEAN<span class="right">Calculate the arithmetic mean of the elements in a vector <a href="https://www.plumed.org/doc-master/user-doc/html/MEAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PAMM.md_working_1.datp-2">p-2</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-3" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-3","PAMM.md_working_1.datp-3","blue")'>p-3</b><span style="display:none;" id="PAMM.md_working_1.datp-3">The CUSTOM action with label <b>p-3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-3</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PAMM.md_working_1.datp_kernel-3">p_kernel-3</b>,<b name="PAMM.md_working_1.datp_ksum">p_ksum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-3_mean" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-3_mean","PAMM.md_working_1.datp-3_mean","black")'>p-3_mean</b><span style="display:none;" id="PAMM.md_working_1.datp-3_mean">The MEAN action with label <b>p-3_mean</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-3_mean</td><td width="5%"><font color="black">scalar</font></td><td>the MEAN of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MEAN<span class="right">Calculate the arithmetic mean of the elements in a vector <a href="https://www.plumed.org/doc-master/user-doc/html/MEAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PAMM.md_working_1.datp-3">p-3</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-4" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-4","PAMM.md_working_1.datp-4","blue")'>p-4</b><span style="display:none;" id="PAMM.md_working_1.datp-4">The CUSTOM action with label <b>p-4</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-4</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PAMM.md_working_1.datp_kernel-4">p_kernel-4</b>,<b name="PAMM.md_working_1.datp_ksum">p_ksum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-4_mean" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-4_mean","PAMM.md_working_1.datp-4_mean","black")'>p-4_mean</b><span style="display:none;" id="PAMM.md_working_1.datp-4_mean">The MEAN action with label <b>p-4_mean</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-4_mean</td><td width="5%"><font color="black">scalar</font></td><td>the MEAN of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MEAN<span class="right">Calculate the arithmetic mean of the elements in a vector <a href="https://www.plumed.org/doc-master/user-doc/html/MEAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PAMM.md_working_1.datp-4">p-4</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-5" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-5","PAMM.md_working_1.datp-5","blue")'>p-5</b><span style="display:none;" id="PAMM.md_working_1.datp-5">The CUSTOM action with label <b>p-5</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-5</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PAMM.md_working_1.datp_kernel-5">p_kernel-5</b>,<b name="PAMM.md_working_1.datp_ksum">p_ksum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-5_mean" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-5_mean","PAMM.md_working_1.datp-5_mean","black")'>p-5_mean</b><span style="display:none;" id="PAMM.md_working_1.datp-5_mean">The MEAN action with label <b>p-5_mean</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-5_mean</td><td width="5%"><font color="black">scalar</font></td><td>the MEAN of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MEAN<span class="right">Calculate the arithmetic mean of the elements in a vector <a href="https://www.plumed.org/doc-master/user-doc/html/MEAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PAMM.md_working_1.datp-5">p-5</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-6" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-6","PAMM.md_working_1.datp-6","blue")'>p-6</b><span style="display:none;" id="PAMM.md_working_1.datp-6">The CUSTOM action with label <b>p-6</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-6</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PAMM.md_working_1.datp_kernel-6">p_kernel-6</b>,<b name="PAMM.md_working_1.datp_ksum">p_ksum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-6_mean" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-6_mean","PAMM.md_working_1.datp-6_mean","black")'>p-6_mean</b><span style="display:none;" id="PAMM.md_working_1.datp-6_mean">The MEAN action with label <b>p-6_mean</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-6_mean</td><td width="5%"><font color="black">scalar</font></td><td>the MEAN of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MEAN<span class="right">Calculate the arithmetic mean of the elements in a vector <a href="https://www.plumed.org/doc-master/user-doc/html/MEAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PAMM.md_working_1.datp-6">p-6</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-7" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-7","PAMM.md_working_1.datp-7","blue")'>p-7</b><span style="display:none;" id="PAMM.md_working_1.datp-7">The CUSTOM action with label <b>p-7</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-7</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="PAMM.md_working_1.datp_kernel-7">p_kernel-7</b>,<b name="PAMM.md_working_1.datp_ksum">p_ksum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="PAMM.md_working_1.datp-7_mean" onclick='showPath("PAMM.md_working_1.dat","PAMM.md_working_1.datp-7_mean","PAMM.md_working_1.datp-7_mean","black")'>p-7_mean</b><span style="display:none;" id="PAMM.md_working_1.datp-7_mean">The MEAN action with label <b>p-7_mean</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">p-7_mean</td><td width="5%"><font color="black">scalar</font></td><td>the MEAN of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MEAN<span class="right">Calculate the arithmetic mean of the elements in a vector <a href="https://www.plumed.org/doc-master/user-doc/html/MEAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="PAMM.md_working_1.datp-7">p-7</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="PAMM.md_working_1.datp-1_mean">p-1_mean</b>,<b name="PAMM.md_working_1.datp-2_mean">p-2_mean</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>The best place to start our explanation is to look at the contents of the <code>2D-testc-0.75.pammp</code> file, which you can do
+by clicking on the links in the annotated input above.  This files contains the parameters of two two-dimensional Gaussian functions.
+Each of these Gaussian kernels has a weight, <script type="math/tex">w_k</script>, a vector that specifies the position of its center, <script type="math/tex">\mathbf{c}_k</script>, and a covariance matrix, <script type="math/tex">\Sigma_k</script>.
+The <script type="math/tex">\phi_k</script> functions that we use to calculate our PAMM components are thus:</p>
+<p>
+<script type="math/tex; mode=display">
+\phi_k = \frac{w_k}{N_k} \exp\left( -(\mathbf{s} - \mathbf{c}_k)^T \Sigma^{-1}_k (\mathbf{s} - \mathbf{c}_k) \right)
+</script>
+</p>
+<p>In the above <script type="math/tex">N_k</script> is a normalization factor that is calculated based on <script type="math/tex">\Sigma</script>.  The vector <script type="math/tex">\mathbf{s}</script> is a vector of quantities
+that are calculated by the input <a href="../TORSION/">TORSION</a> actions.  This vector must be two dimensional and in this case each component is the value of a
+torsion angle.  If we look at the two TORSION actions in the above we are calculating the <script type="math/tex">\phi</script> and <script type="math/tex">\psi</script> backbone torsional
+angles in a protein (Note the use of <a href="../MOLINFO/">MOLINFO</a> to make specification of atoms straightforward).  We thus calculate the values of our
+2 <script type="math/tex"> \{ \phi \} </script>  kernels 3 times.  The first time we use the <script type="math/tex">\phi</script> and <script type="math/tex">\psi</script> angles in the second residue of the protein,
+the second time it is the <script type="math/tex">\phi</script> and <script type="math/tex">\psi</script> angles of the third residue of the protein and the third time it is the <script type="math/tex">\phi</script> and <script type="math/tex">\psi</script> angles
+of the fourth residue in the protein.  The final two quantities that are output by the print command, p.mean-1 and p.mean-2, are the averages
+over these three residues for the quantities:</p>
+<p>
+<script type="math/tex; mode=display">
+s_1 = \frac{ \phi_1}{ \phi_1 + \phi_2 }
+</script>
+</p>
+<p>and</p>
+<p>
+<script type="math/tex; mode=display">
+s_2 = \frac{ \phi_2}{ \phi_1 + \phi_2 }
+</script>
+</p>
+<p>There is a great deal of flexibility in this input.  We can work with, and examine, any number of components, we can use any set of collective variables
+and compute these PAMM variables and we can transform the PAMM variables themselves in a large number of different ways when computing these sums.  Furthermore,
+by expanding the shortcuts in the example above we can obtain insight into how the PAMM method operates.</p>
+<h2 id="output-components">Output components</h2>
+<p>This action can calculate the <a href="../specifying_arguments/">values</a> in the following table when the associated keyword is included in the input for the action. These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">lessthan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">LESS_THAN</td>
+<td style="text-align: left;">the number of colvars that have a value less than a threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;">morethan</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MORE_THAN</td>
+<td style="text-align: left;">the number of colvars that have a value more than a threshold</td>
+</tr>
+<tr>
+<td style="text-align: left;">altmin</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">ALT_MIN</td>
+<td style="text-align: left;">the minimum value of the cv</td>
+</tr>
+<tr>
+<td style="text-align: left;">min</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MIN</td>
+<td style="text-align: left;">the minimum colvar</td>
+</tr>
+<tr>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MAX</td>
+<td style="text-align: left;">the maximum colvar</td>
+</tr>
+<tr>
+<td style="text-align: left;">between</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">BETWEEN</td>
+<td style="text-align: left;">the number of colvars that have a value that lies in a particular interval</td>
+</tr>
+<tr>
+<td style="text-align: left;">highest</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">HIGHEST</td>
+<td style="text-align: left;">the largest of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">lowest</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">LOWEST</td>
+<td style="text-align: left;">the smallest of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">sum</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">SUM</td>
+<td style="text-align: left;">the sum of the colvars</td>
+</tr>
+<tr>
+<td style="text-align: left;">mean</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: center;">MEAN</td>
+<td style="text-align: left;">the mean of the colvars</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the vectors from which the pamm coordinates are calculated</td>
+</tr>
+<tr>
+<td style="text-align: left;">CLUSTERS</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the name of the file that contains the definitions of all the clusters</td>
+</tr>
+<tr>
+<td style="text-align: left;">REGULARISE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">0.001</td>
+<td style="text-align: left;">don't allow the denominator to be smaller then this value</td>
+</tr>
+<tr>
+<td style="text-align: left;">KERNELS</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">all</td>
+<td style="text-align: left;">which kernels are we computing the PAMM values for</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">deprecated keywords</p>
+<p>The keywords in the following table can still be used with this action but have been deprecated</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">LESS_THAN</td>
+<td style="text-align: left;">calculate the number of variables that are less than a certain target value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MORE_THAN</td>
+<td style="text-align: left;">calculate the number of variables that are more than a certain target value</td>
+</tr>
+<tr>
+<td style="text-align: left;">ALT_MIN</td>
+<td style="text-align: left;">calculate the minimum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MIN</td>
+<td style="text-align: left;">calculate the minimum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">MAX</td>
+<td style="text-align: left;">calculate the maximum value</td>
+</tr>
+<tr>
+<td style="text-align: left;">BETWEEN</td>
+<td style="text-align: left;">calculate the number of values that are within a certain range</td>
+</tr>
+<tr>
+<td style="text-align: left;">HIGHEST</td>
+<td style="text-align: left;">this flag allows you to recover the highest of these variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">HISTOGRAM</td>
+<td style="text-align: left;">calculate a discretized histogram of the distribution of values</td>
+</tr>
+<tr>
+<td style="text-align: left;">LOWEST</td>
+<td style="text-align: left;">this flag allows you to recover the lowest of these variables</td>
+</tr>
+<tr>
+<td style="text-align: left;">SUM</td>
+<td style="text-align: left;">calculate the sum of all the quantities</td>
+</tr>
+<tr>
+<td style="text-align: left;">MEAN</td>
+<td style="text-align: left;">calculate the mean of all the quantities</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1063/1.4900655">P. Gasparotto, M. Ceriotti, Recognizing molecular patterns by machine learning: An agnostic structural definition of the hydrogen bond. The Journal of Chemical Physics 141 (2014)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jctc.7b00993">P. Gasparotto, R. H. Meißner, M. Ceriotti, Recognizing Local and Global Structural Motifs at
+the Atomic Scale. Journal of Chemical Theory and Computation 14, 486–498 (2018)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

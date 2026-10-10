@@ -1,0 +1,3 @@
+# this is plumed.1.dat
+INCLUDE FILE=extras/common.dat
+RESTRAINT ARG=t AT=1.2 KAPPA=10

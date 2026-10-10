@@ -1,0 +1,3 @@
+tt: TETRAHEDRAL SPECIES=1-64 D_0=3.0 R_0=1.5 NN=6 MM=12
+tt_mean: MEAN ARG=tt PERIODIC=NO
+PRINT ARG=tt_mean FILE=colvar

@@ -1,0 +1,9 @@
+s: CONTACT_MATRIX GROUP=1-10 SWITCH={RATIONAL R_0=1.0}
+sc: CONTACT_MATRIX GROUP=1-10 SWITCH={RATIONAL R_0=1.0} COMPONENTS
+c: SPHERICAL_HARMONIC L=1 ARG=sc.x,sc.y,sc.z,s
+PRINT ARG=c.rm-n1 FILE=real_part_m-1
+PRINT ARG=c.im-n1 FILE=imaginary_part_m-1
+PRINT ARG=c.rm-0 FILE=real_part_m0
+PRINT ARG=c.im-0 FILE=imaginary_part_m0
+PRINT ARG=c.rm-p1 FILE=real_part_m+1
+PRINT ARG=c.im-p1 FILE=imaginary_part_m+1

@@ -1,0 +1,20 @@
+# Calcuate the instantaneous values of the three distances
+d1: DISTANCE ATOMS=1,2
+d2: DISTANCE ATOMS=3,4
+d3: DISTANCE ATOMS=5,6
+
+# Collect the calulated distances for later analysis
+ff: COLLECT_FRAMES STRIDE=1 ARG=d1,d2,d3
+ff_weights: CUSTOM ARG=ff_logweights FUNC=exp(x) PERIODIC=NO
+
+# Generate an initial projection of the high dimensional points using MDS
+mds: CLASSICAL_MDS ARG=ff NLOW_DIM=2
+
+# Generate a matrix of w_ij values
+weights: OUTER_PRODUCT ARG=ff_weights,ff_weights
+
+# And produce the projections
+proj: ARRANGE_POINTS ARG=mds-1,mds-2 TARGET1=mds_mat WEIGHTS1=weights
+
+# And print the projections to a file
+DUMPVECTOR ARG=proj.* FILE=colvar

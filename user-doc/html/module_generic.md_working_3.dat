@@ -1,0 +1,1 @@
+plumed driver --debug-forces forces.num --ixyz trajectory.xyz

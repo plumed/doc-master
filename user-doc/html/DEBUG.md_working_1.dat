@@ -1,0 +1,4 @@
+# print detailed (action-by-action) timers at the end of simulation
+a: DEBUG DETAILED_TIMERS
+# dump every two steps which are the atoms required from the MD code
+b: DEBUG logRequestedAtoms STRIDE=2

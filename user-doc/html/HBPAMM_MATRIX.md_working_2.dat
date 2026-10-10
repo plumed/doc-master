@@ -1,0 +1,8 @@
+#SETTINGS INPUTFILES=regtest/pamm/rt-hbpamm/b3lyp.pamm
+m: HBPAMM_MATRIX ...
+  GROUP=1-192:3 GROUPC=2-192:3,3-192:3
+  CLUSTERS=regtest/pamm/rt-hbpamm/b3lyp.pamm
+...
+ones: ONES SIZE=64
+rsums: MATRIX_VECTOR_PRODUCT ARG=m,ones
+DUMPATOMS ATOMS=1-192:3 ARG=rsums FILE=donors.xyz

@@ -1,0 +1,12 @@
+BF_CUSTOM ...
+ TRANSFORM=(t-(min+max)/2)/((max-min)/2)
+ FUNC1=x
+ FUNC2=(1/2)*(3*x^2-1)
+ FUNC3=(1/2)*(5*x^3-3*x)
+ FUNC4=(1/8)*(35*x^4-30*x^2+3)
+ FUNC5=(1/8)*(63*x^5-70*x^3+15*x)
+ FUNC6=(1/16)*(231*x^6-315*x^4+105*x^2-5)
+ MINIMUM=-4.0
+ MAXIMUM=4.0
+ LABEL=bf1
+... BF_CUSTOM

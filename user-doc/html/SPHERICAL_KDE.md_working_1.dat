@@ -1,0 +1,9 @@
+# Calculate all the bond vectors
+d1: CONTACT_MATRIX GROUP=1-100 SWITCH={RATIONAL R_0=0.1} COMPONENTS
+# Normalise the bond vectors
+mag: CUSTOM ARG=d1.x,d1.y,d1.z FUNC=sqrt(x*x+y*y+z*z) PERIODIC=NO
+d1x: CUSTOM ARG=d1.x,mag FUNC=x/y PERIODIC=NO
+d1y: CUSTOM ARG=d1.y,mag FUNC=x/y PERIODIC=NO
+d1z: CUSTOM ARG=d1.z,mag FUNC=x/y PERIODIC=NO
+# And construct the KDE
+kde: SPHERICAL_KDE ARG=d1x,d1y,d1z HEIGHTS=d1.w CONCENTRATION=100 GRID_BIN=144

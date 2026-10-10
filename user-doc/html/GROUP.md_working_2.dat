@@ -1,0 +1,5 @@
+INCLUDE FILE=extras/groups.dat
+# compute the coordination among the two groups
+c: COORDINATION GROUPA=groupa GROUPB=groupb R_0=0.3
+# print the coordination on file 'colvar'
+PRINT ARG=c FILE=colvar
