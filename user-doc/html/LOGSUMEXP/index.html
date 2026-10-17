@@ -1,0 +1,724 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: LOGSUMEXP - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-logsumexp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: LOGSUMEXP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-logsumexp"><a href="../shortcuts/">Shortcut</a>: LOGSUMEXP</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_landmarks/"><strong>landmarks</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">This action takes the exponential of a vector of logarithms and divides each element of the vector by the sum of the exponentials.</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the logarithms of the input weights logweights that are computed with the log-sum weights formula</td>
+<td style="text-align: center;">vector</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>This action takes the exponential of a vector of logarithms and divides each element of the vector by the sum of the exponentials.</p>
+<p>If you has performed a simulation with a time-independent bias, <script type="math/tex">V(x)</script>, you can recover the unbiased distribution from the trajectory
+by constructing a histogram in which the <script type="math/tex">i</script>th frame of the trajectory is given weight of:</p>
+<p>
+<script type="math/tex; mode=display">
+w_i = \frac{e^{\beta V(x_i)}}{\sum_j e^{\beta V(x_j)}}
+</script>
+</p>
+<p>where <script type="math/tex">x_i</script> is used to indicate the coordinates for frame <script type="math/tex">i</script> and <script type="math/tex">\beta</script> is the inverse temperature in units of energy.  If the bias
+is large then it is easy for <script type="math/tex">e^{\beta V(x_i)}</script> to overflow.  This action thus allows you to use the following trick is to compute the <script type="math/tex">w_i</script>
+values in the above expression:</p>
+<p>
+<script type="math/tex; mode=display">
+w_i = e^{\beta(V(x_i) - c} \qquad \textrm{where} \qquad c = \beta V_\textrm{max} + \log\left[ \sum_j e^{\beta V(x_j) - \beta V_\textrm{max}} \right]
+</script>
+</p>
+<p>In this expression <script type="math/tex">V_\textrm{max}</script> is the maximum value the bias took during the simulation.</p>
+<p>The following example shows how you can write a PLUMED input that exploits this trick.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LOGSUMEXP.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LOGSUMEXP.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment"># Calculate some CVs for later analysis</span>
+<b name="LOGSUMEXP.md_working_1.datt1" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datt1","LOGSUMEXP.md_working_1.datt1","black")'>t1</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datt1">The TORSION action with label <b>t1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t1</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,2,3,4
+<b name="LOGSUMEXP.md_working_1.datt2" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datt2","LOGSUMEXP.md_working_1.datt2","black")'>t2</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datt2">The TORSION action with label <b>t2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t2</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=5,6,7,8
+<b name="LOGSUMEXP.md_working_1.datt3" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datt3","LOGSUMEXP.md_working_1.datt3","black")'>t3</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datt3">The TORSION action with label <b>t3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">t3</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=9,10,11,12
+
+<span style="color:blue" class="comment"># This computes the bias potential</span>
+<span id="LOGSUMEXP.md_working_1.datdefr_short"><b name="LOGSUMEXP.md_working_1.datr" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datr","LOGSUMEXP.md_working_1.datr","black")'>r</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datr">The RESTRAINT action with label <b>r</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">r.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">r.force2</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the squared force due to this bias potential</td></tr></table></span>: <span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("LOGSUMEXP.md_working_1.datdefr");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datt1">t1</b> <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=pi/2 <span class="plumedtooltip">KAPPA<span class="right"> specifies that the restraint is harmonic and what the values of the force constants on each of the variables are<i></i></span></span>=10
+</span><span id="LOGSUMEXP.md_working_1.datdefr_long" style="display:none;"><b name="LOGSUMEXP.md_working_1.datr" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datr","LOGSUMEXP.md_working_1.datr","black")'>r</b>: <span class="plumedtooltip" style="color:green">RESTRAINT<span class="right">Adds harmonic and/or linear restraints on one or more variables. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("LOGSUMEXP.md_working_1.datdefr");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/RESTRAINT">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values the harmonic restraint acts upon<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datt1">t1</b> <span class="plumedtooltip">AT<span class="right">the position of the restraint<i></i></span></span>=pi/2 <span class="plumedtooltip">KAPPA<span class="right"> specifies that the restraint is harmonic and what the values of the force constants on each of the variables are<i></i></span></span>=10  <span class="plumedtooltip">SLOPE<span class="right"> specifies that the restraint is linear and what the values of the force constants on each of the variables are<i></i></span></span>=0.0
+</span><span style="color:blue" class="comment"># This calculates the instantaneous reweighting weight</span>
+<span style="color:blue" class="comment"># given the bias potential that is acting upon the system</span>
+<span id="LOGSUMEXP.md_working_1.datdefbw_short"><b name="LOGSUMEXP.md_working_1.datbw" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datbw","LOGSUMEXP.md_working_1.datbw","black")'>bw</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datbw">The REWEIGHT_BIAS action with label <b>bw</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">bw</td><td width="5%"><font color="black">scalar</font></td><td>the weight to use for this frame to negate the effect the bias</td></tr></table></span>: <span class="plumedtooltip" style="color:green">REWEIGHT_BIAS<span class="right">Calculate weights for ensemble averages that negate the effect the bias has on the region of phase space explored This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("LOGSUMEXP.md_working_1.datdefbw");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/REWEIGHT_BIAS">More details</a><i></i></span></span> <span class="plumedtooltip">TEMP<span class="right">the system temperature<i></i></span></span>=300
+</span><span id="LOGSUMEXP.md_working_1.datdefbw_long" style="display:none;"><b name="LOGSUMEXP.md_working_1.datbw" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datbw","LOGSUMEXP.md_working_1.datbw","black")'>bw</b>: <span class="plumedtooltip" style="color:green">REWEIGHT_BIAS<span class="right">Calculate weights for ensemble averages that negate the effect the bias has on the region of phase space explored This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("LOGSUMEXP.md_working_1.datdefbw");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/REWEIGHT_BIAS">More details</a><i></i></span></span> <span class="plumedtooltip">TEMP<span class="right">the system temperature<i></i></span></span>=300  <span class="plumedtooltip">ARG<span class="right"> the biases that must be taken into account when reweighting<i></i></span></span>=*.bias
+</span><br/><span style="color:blue" class="comment"># This collects our data for later analysis and the reweighting weights</span>
+<span id="LOGSUMEXP.md_working_1.datcc_short"><span id="LOGSUMEXP.md_working_1.datdefcc_short"><b name="LOGSUMEXP.md_working_1.datcc" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datcc","LOGSUMEXP.md_working_1.datcc_shortcut","brown")'>cc</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datcc_shortcut">The COLLECT_FRAMES action with label <b>cc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_data</td><td width="5%"><font color="red">matrix</font></td><td>the data that is being collected by this action</td></tr><tr><td width="5%">cc_logweights</td><td width="5%"><font color="blue">vector</font></td><td>the logarithms of the weights of the data points</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COLLECT_FRAMES<span class="right">Collect atomic positions or argument values from the trajectory for later analysis This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("LOGSUMEXP.md_working_1.datcc");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("LOGSUMEXP.md_working_1.datdefcc");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/COLLECT_FRAMES">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values whose time series you would like to collect for later analysis<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datt1">t1</b>,<b name="LOGSUMEXP.md_working_1.datt2">t2</b>,<b name="LOGSUMEXP.md_working_1.datt3">t3</b> <span class="plumedtooltip">LOGWEIGHTS<span class="right">list of actions that calculates log weights that should be used to weight configurations when calculating averages<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datbw">bw</b>
+</span><span id="LOGSUMEXP.md_working_1.datdefcc_long" style="display:none;"><span style="display:none;" id="LOGSUMEXP.md_working_1.datcc">The COLLECT_FRAMES action with label <b>cc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc.data</td><td>the data that is being collected by this action</td></tr><tr><td width="5%">cc.logweights</td><td>the logarithms of the weights of the data points</td></tr></table></span><b name="LOGSUMEXP.md_working_1.datcc" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datcc","LOGSUMEXP.md_working_1.datcc_shortcut","brown")'>cc</b>: <span class="plumedtooltip" style="color:green">COLLECT_FRAMES<span class="right">Collect atomic positions or argument values from the trajectory for later analysis This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("LOGSUMEXP.md_working_1.datcc");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("LOGSUMEXP.md_working_1.datdefcc");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/COLLECT_FRAMES">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values whose time series you would like to collect for later analysis<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datt1">t1</b>,<b name="LOGSUMEXP.md_working_1.datt2">t2</b>,<b name="LOGSUMEXP.md_working_1.datt3">t3</b> <span class="plumedtooltip">LOGWEIGHTS<span class="right">list of actions that calculates log weights that should be used to weight configurations when calculating averages<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datbw">bw</b>  <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which data should be stored for analysis<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which data should all be deleted and restarted<i></i></span></span>=0
+</span></span><span id="LOGSUMEXP.md_working_1.datcc_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("LOGSUMEXP.md_working_1.datcc")'># cc: COLLECT_FRAMES ARG=t1,t2,t3 LOGWEIGHTS=bw</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="LOGSUMEXP.md_working_1.datcc_t1" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datcc_t1","LOGSUMEXP.md_working_1.datcc_t1","blue")'>cc_t1</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datcc_t1">The COLLECT action with label <b>cc_t1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_t1</td><td width="5%"><font color="blue">vector</font></td><td>the time series for the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COLLECT<span class="right">Collect data from the trajectory for later analysis <a href="https://www.plumed.org/doc-master/user-doc/html/COLLECT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the value whose time series is being stored for later analysis<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datt1">t1</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=0
+<b name="LOGSUMEXP.md_working_1.datcc_t2" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datcc_t2","LOGSUMEXP.md_working_1.datcc_t2","blue")'>cc_t2</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datcc_t2">The COLLECT action with label <b>cc_t2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_t2</td><td width="5%"><font color="blue">vector</font></td><td>the time series for the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COLLECT<span class="right">Collect data from the trajectory for later analysis <a href="https://www.plumed.org/doc-master/user-doc/html/COLLECT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the value whose time series is being stored for later analysis<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datt2">t2</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=0
+<b name="LOGSUMEXP.md_working_1.datcc_t3" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datcc_t3","LOGSUMEXP.md_working_1.datcc_t3","blue")'>cc_t3</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datcc_t3">The COLLECT action with label <b>cc_t3</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_t3</td><td width="5%"><font color="blue">vector</font></td><td>the time series for the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COLLECT<span class="right">Collect data from the trajectory for later analysis <a href="https://www.plumed.org/doc-master/user-doc/html/COLLECT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the value whose time series is being stored for later analysis<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datt3">t3</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=0
+<b name="LOGSUMEXP.md_working_1.datcc_data" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datcc_data","LOGSUMEXP.md_working_1.datcc_data","red")'>cc_data</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datcc_data">The VSTACK action with label <b>cc_data</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_data</td><td width="5%"><font color="red">matrix</font></td><td>a matrix that contains the input vectors in its columns</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VSTACK<span class="right">Create a matrix by stacking vectors together <a href="https://www.plumed.org/doc-master/user-doc/html/VSTACK" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values that you would like to stack together to construct the output matrix<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datcc_t1">cc_t1</b>,<b name="LOGSUMEXP.md_working_1.datcc_t2">cc_t2</b>,<b name="LOGSUMEXP.md_working_1.datcc_t3">cc_t3</b>
+<b name="LOGSUMEXP.md_working_1.datcc_logweights" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datcc_logweights","LOGSUMEXP.md_working_1.datcc_logweights","blue")'>cc_logweights</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datcc_logweights">The COLLECT action with label <b>cc_logweights</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_logweights</td><td width="5%"><font color="blue">vector</font></td><td>the time series for the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COLLECT<span class="right">Collect data from the trajectory for later analysis <a href="https://www.plumed.org/doc-master/user-doc/html/COLLECT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the value whose time series is being stored for later analysis<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datbw">bw</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=0
+<b name="LOGSUMEXP.md_working_1.datcc_one" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datcc_one","LOGSUMEXP.md_working_1.datcc_one","black")'>cc_one</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datcc_one">The CONSTANT action with label <b>cc_one</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_one</td><td width="5%"><font color="black">scalar</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUE<span class="right">the single number that you would like to store<i></i></span></span>=1
+<b name="LOGSUMEXP.md_working_1.datcc_ones" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datcc_ones","LOGSUMEXP.md_working_1.datcc_ones","blue")'>cc_ones</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datcc_ones">The COLLECT action with label <b>cc_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">cc_ones</td><td width="5%"><font color="blue">vector</font></td><td>the time series for the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COLLECT<span class="right">Collect data from the trajectory for later analysis <a href="https://www.plumed.org/doc-master/user-doc/html/COLLECT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the value whose time series is being stored for later analysis<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datcc_one">cc_one</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=0
+<span style="color:blue"># --- End of included input --- </span></span><br/><span style="color:blue" class="comment"># And this determines the final vector of weights that should be used for histograms and so on.</span>
+<span id="LOGSUMEXP.md_working_1.datweights_short"><b name="LOGSUMEXP.md_working_1.datweights" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datweights","LOGSUMEXP.md_working_1.datweights_shortcut","blue")'>weights</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datweights_shortcut">The LOGSUMEXP action with label <b>weights</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">weights</td><td width="5%"><font color="blue">vector</font></td><td>the logarithms of the input weights logweights that are computed with the log-sum weights formula</td></tr></table></span>: <span class="plumedtooltip" style="color:green">LOGSUMEXP<span class="right">This action takes the exponential of a vector of logarithms and divides each element of the vector by the sum of the exponentials. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("LOGSUMEXP.md_working_1.datweights");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/LOGSUMEXP">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector of logweights that you would like to normalise using the logsumexp trick<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datcc_logweights">cc_logweights</b>
+</span><span id="LOGSUMEXP.md_working_1.datweights_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("LOGSUMEXP.md_working_1.datweights")'># weights: LOGSUMEXP ARG=cc_logweights</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="LOGSUMEXP.md_working_1.datweights_maxlogweight" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datweights_maxlogweight","LOGSUMEXP.md_working_1.datweights_maxlogweight","black")'>weights_maxlogweight</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datweights_maxlogweight">The HIGHEST action with label <b>weights_maxlogweight</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">weights_maxlogweight</td><td width="5%"><font color="black">scalar</font></td><td>the lowest of the input values</td></tr></table></span>: <span class="plumedtooltip" style="color:green">HIGHEST<span class="right">This function can be used to find the highest colvar by magnitude in a set. <a href="https://www.plumed.org/doc-master/user-doc/html/HIGHEST" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datcc_logweights">cc_logweights</b>
+<b name="LOGSUMEXP.md_working_1.datweights_shiftw" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datweights_shiftw","LOGSUMEXP.md_working_1.datweights_shiftw","blue")'>weights_shiftw</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datweights_shiftw">The CUSTOM action with label <b>weights_shiftw</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">weights_shiftw</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datcc_logweights">cc_logweights</b>,<b name="LOGSUMEXP.md_working_1.datweights_maxlogweight">weights_maxlogweight</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=exp(x-y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="LOGSUMEXP.md_working_1.datweights_sumw" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datweights_sumw","LOGSUMEXP.md_working_1.datweights_sumw","black")'>weights_sumw</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datweights_sumw">The SUM action with label <b>weights_sumw</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">weights_sumw</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datweights_shiftw">weights_shiftw</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="LOGSUMEXP.md_working_1.datweights_logsum" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datweights_logsum","LOGSUMEXP.md_working_1.datweights_logsum","black")'>weights_logsum</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datweights_logsum">The CUSTOM action with label <b>weights_logsum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">weights_logsum</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datweights_sumw">weights_sumw</b>,<b name="LOGSUMEXP.md_working_1.datweights_maxlogweight">weights_maxlogweight</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=y+log(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="LOGSUMEXP.md_working_1.datweights" onclick='showPath("LOGSUMEXP.md_working_1.dat","LOGSUMEXP.md_working_1.datweights","LOGSUMEXP.md_working_1.datweights","blue")'>weights</b><span style="display:none;" id="LOGSUMEXP.md_working_1.datweights">The CUSTOM action with label <b>weights</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">weights</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datcc_logweights">cc_logweights</b>,<b name="LOGSUMEXP.md_working_1.datweights_logsum">weights_logsum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=exp(x-y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><br/><span style="color:blue" class="comment"># This outputs the time series of reweighting weights to a file</span>
+<span class="plumedtooltip" style="color:green">DUMPVECTOR<span class="right">Print a vector to a file <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPVECTOR" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of vectors/matrices that should be output in the file<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datweights">weights</b> <span class="plumedtooltip">FILE<span class="right"> the file on which to write the vetors<i></i></span></span>=<b name="LOGSUMEXP.md_working_1.datweights">weights</b>
+</pre></div>
+
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the vector of logweights that you would like to normalise using the logsumexp trick</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<map id="PLMD::lepton::Exception" name="PLMD::lepton::Exception">
+<area shape="rect" id="Node000001" title="This class is used for all exceptions thrown by lepton." alt="" coords="168,80,348,105"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_exception_debug.html" title="Class representing a debug error (can only be thrown when using debug options)" alt="" coords="417,5,591,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="302,72,395,39,439,28,440,33,397,45,304,77"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_exception_error.html" title="Class representing a generic error." alt="" coords="423,55,585,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="362,79,422,73,423,78,362,85"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_exception_register_error.html" title="Class representing an error in a register." alt="" coords="396,104,612,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="362,100,396,103,396,109,362,105"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_exception_type_error.html" title="Class representing a type error in the PLMD::Plumed interface." alt="" coords="408,153,600,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="305,108,397,139,440,151,439,156,395,145,303,113"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,120,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,90,168,90,168,95,134,95"/>
+</map>

@@ -1,0 +1,12 @@
+d1: DISTANCES ATOMS1=1,2 ATOMS2=3,4 ATOMS3=5,6 ATOMS4=7,8 ATOMS5=9,10 LESS_THAN={RATIONAL R_0=0.1}
+
+# You can output d1.lessthan like this
+PRINT ARG=d1.lessthan FILE=colvar1
+
+# or you can output it like this
+PRINT ARG=d1_lessthan FILE=colvar2
+
+# You cannot output d1_lt like this as the lt component is not defined in the manual
+# PRINT ARG=d1.lt FILE=colvar3
+# But you can output it like this
+PRINT ARG=d1_lt FILE=colvar4

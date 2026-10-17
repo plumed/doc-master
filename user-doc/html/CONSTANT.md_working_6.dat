@@ -1,0 +1,3 @@
+#SETTINGS INPUTFILES=regtest/landmarks/rt-read-dissims/mymatrix.dat
+c: CONSTANT FILE=regtest/landmarks/rt-read-dissims/mymatrix.dat NOLOG
+PRINT ARG=c FILE=constant_matrix

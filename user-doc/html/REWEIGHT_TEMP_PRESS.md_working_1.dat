@@ -1,0 +1,17 @@
+#SETTINGS INPUTFILES=regtest/landmarks/rt-reweight-temp-press/COLVAR-READ
+
+energy: READ FILE=regtest/landmarks/rt-reweight-temp-press/COLVAR-READ VALUES=energy  IGNORE_TIME
+distance: READ FILE=regtest/landmarks/rt-reweight-temp-press/COLVAR-READ VALUES=distance  IGNORE_TIME
+mybias: READ FILE=regtest/landmarks/rt-reweight-temp-press/COLVAR-READ VALUES=mybias.bias  IGNORE_TIME
+
+# Shift energy (to avoid numerical issues)
+renergy: COMBINE ARG=energy PARAMETERS=-13250 PERIODIC=NO
+
+# Weights
+bias_weights: REWEIGHT_BIAS TEMP=500 ARG=mybias.bias
+temp_press_weights: REWEIGHT_TEMP_PRESS TEMP=500 REWEIGHT_TEMP=300 ENERGY=renergy
+
+# Ensemble average of the distance at 300 K
+avg_dist: AVERAGE ARG=distance LOGWEIGHTS=bias_weights,temp_press_weights
+
+PRINT ARG=avg_dist FILE=COLVAR_REWEIGHT STRIDE=1

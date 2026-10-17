@@ -1,0 +1,8 @@
+w: CONSTANT VALUES=1,2,2,3,4
+# This computes the largest principal moment
+l: GYRATION ATOMS=1-5 TYPE=GTPC_1 WEIGHTS=w
+# This computes the middle principal moment
+m: GYRATION ATOMS=1-5 TYPE=GTPC_2 WEIGHTS=w
+# This computes the smallest principal moment
+s: GYRATION ATOMS=1-5 TYPE=GTPC_3 WEIGHTS=w
+PRINT ARG=l,m,s FILE=colvar

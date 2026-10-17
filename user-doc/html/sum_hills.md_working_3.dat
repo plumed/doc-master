@@ -1,0 +1,1 @@
+plumed sum_hills  --hills PATHTOMYHILLSFILE   --idw t1 --kt 0.6

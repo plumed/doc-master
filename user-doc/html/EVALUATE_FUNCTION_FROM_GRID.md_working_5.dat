@@ -1,0 +1,11 @@
+#SETTINGS INPUTFILES=regtest/gridtools/rt-weights-integral/kde.grid
+
+ff: REFERENCE_GRID FILE=regtest/gridtools/rt-weights-integral/kde.grid VALUE=h
+d: DISTANCE ATOMS1=1,2 ATOMS2=4,5 ATOMS3=7,8
+m: LESS_THAN ARG=d SWITCH={CUSTOM R_0=1 FUNC=step(0.1-x)}
+aa: ANGLE ATOMS1=1,2,3 ATOMS2=4,5,6 ATOMS3=7,8,9
+tt: TORSION ATOMS1=1,2,3,4 ATOMS2=5,6,7,8 ATOMS3=9,10,11,12
+val: EVALUATE_FUNCTION_FROM_GRID GRID=ff MASK=m
+prod: CUSTOM ARG=m,val FUNC=x*y PERIODIC=NO
+sum: SUM ARG=prod PERIODIC=NO
+PRINT ARG=sum FILE=colvar

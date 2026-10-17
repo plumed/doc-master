@@ -1,0 +1,2 @@
+p: POSITION ATOM=1
+PRINT ARG=p.x,p.y,p.z FILE=colvar

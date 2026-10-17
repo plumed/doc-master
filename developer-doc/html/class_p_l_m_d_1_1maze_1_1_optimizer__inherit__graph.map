@@ -1,0 +1,22 @@
+<map id="PLMD::maze::Optimizer" name="PLMD::maze::Optimizer">
+<area shape="rect" id="Node000001" title="Base class for implementing optimizers for ligand unbinding." alt="" coords="541,120,716,145"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1maze_1_1_memetic.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__m_e_m_e_t_i_c__s_a_m_p_l_i_n_g...." alt="" coords="782,5,950,31"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="655,109,703,74,763,41,799,28,801,33,765,46,706,79,658,113"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1maze_1_1_random___acceleration___m_d.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__r_a_n_d_o_m__a_c_c_e_l_e_r_a_t_i_o_n__m..." alt="" coords="783,55,949,95"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="694,114,783,93,784,98,696,119"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1maze_1_1_random___walk.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__r_a_n_d_o_m__w_a_l_k...." alt="" coords="764,120,968,145"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="730,130,764,130,764,135,730,135"/>
+<area shape="rect" id="Node000009" href="$class_p_l_m_d_1_1maze_1_1_simulated___annealing.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__s_i_m_u_l_a_t_e_d__a_n_n_e_a_l_i_n_g...." alt="" coords="777,170,955,210"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="696,146,783,167,782,173,695,151"/>
+<area shape="rect" id="Node000010" href="$class_p_l_m_d_1_1maze_1_1_steered___m_d.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/_&quot;_m_a_z_e__s_t_e_e_r_e_d__m_d.html&quot;&gt; &quot;MAZE_STEERED..." alt="" coords="771,235,961,260"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="658,152,706,187,765,220,801,232,799,237,763,224,703,191,655,156"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="384,120,493,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="507,130,541,130,541,135,507,135"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="163,95,334,120"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="348,118,384,123,383,128,347,123"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,120,113,145"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="127,121,163,116,163,121,127,126"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="161,144,336,169"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="128,139,161,143,161,148,127,144"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="349,141,383,137,384,142,350,147"/>
+</map>

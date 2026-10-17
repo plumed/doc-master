@@ -1,0 +1,4 @@
+TD_CUSTOM ...
+ FUNCTION=(s1+20)^2*exp(-(s1+20)^2/(2*10.0^2))
+ LABEL=td
+... TD_CUSTOM

@@ -1,0 +1,16 @@
+# Calculate the atoms that are in the pore
+cav: TETRAHEDRALPORE ATOMS=20-500 BOX=1,4,5,11 SIGMA=0.1
+# Calculate the coordination numbers of all the atoms
+d1: COORDINATIONNUMBER SPECIES=20-500 SWITCH={RATIONAL R_0=0.1}
+# Do atoms have a coordination number that is greater than 4
+fd1: MORE_THAN ARG=d1 SWITCH={RATIONAL R_0=4}
+# Calculate the mean coordination number in the pore
+nnn: CUSTOM ARG=cav,d1 FUNC=x*y PERIODIC=NO
+numer: SUM ARG=nnn PERIODIC=NO
+denom: SUM ARG=cav PERIODIC=NO
+mean: CUSTOM ARG=numer,denom FUNC=x/y PERIODIC=NO
+# Calculate the number of atoms that are in the pore and that have a coordination number that is greater than 4
+sss: CUSTOM ARG=fd1,cav FUNC=x*y PERIODIC=NO
+mt: SUM ARG=sss PERIODIC=NO
+# And print these two quantities to a file
+PRINT ARG=mean,mt FILE=colvar

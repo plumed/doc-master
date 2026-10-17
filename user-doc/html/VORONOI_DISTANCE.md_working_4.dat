@@ -1,0 +1,10 @@
+UNITS LENGTH=A
+WaterO: GROUP ATOMS=1-3
+ReactiveN: GROUP ATOMS=4
+TransferableH: GROUP ATOMS=5-11
+Centers: GROUP ATOMS=WaterO,ReactiveN
+
+solvation: VORONOI_COORDINATION CENTERS=Centers ASSIGNED=TransferableH KAPPA=5 REFERENCE=2,2,2,1 POWER=1 COEFFICIENTS=1,1,1,2
+solution_ion_distance: VORONOI_DISTANCE CENTERS=Centers ASSIGNED=TransferableH KAPPA=5 REFERENCE=2,2,2,1 GROUP1=WaterO
+site_ion_distance: VORONOI_DISTANCE CENTERS=Centers ASSIGNED=TransferableH KAPPA=5 REFERENCE=2,2,2,1 GROUP1=WaterO GROUP2=ReactiveN
+PRINT ARG=solvation,solution_ion_distance,site_ion_distance FILE=COLVAR

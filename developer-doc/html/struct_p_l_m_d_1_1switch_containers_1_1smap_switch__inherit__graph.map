@@ -1,0 +1,7 @@
+<map id="PLMD::switchContainers::smapSwitch" name="PLMD::switchContainers::smapSwitch">
+<area shape="rect" id="Node000001" title=" " alt="" coords="23,197,201,237"/>
+<area shape="rect" id="Node000002" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title=" " alt="" coords="5,108,219,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,162,115,197,109,197,109,162"/>
+<area shape="rect" id="Node000003" href="$struct_p_l_m_d_1_1switch_containers_1_1base_switch.html" title="container for the actual switching function used by PLMD::SwitchingFunction" alt="" coords="14,5,210,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,59,115,108,109,108,109,59"/>
+</map>

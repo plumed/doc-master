@@ -1,0 +1,5 @@
+# simulate multiple temperatures, as in parallel tempering
+ene: ENERGY
+ecv: ECV_MULTITHERMAL ARG=ene TEMP_MAX=1000
+opes: OPES_EXPANDED ARG=ecv.* PACE=500
+PRINT FILE=COLVAR STRIDE=500 ARG=ene,opes.bias

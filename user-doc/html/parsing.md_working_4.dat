@@ -1,0 +1,12 @@
+#SETTINGS NREPLICAS=3
+# Compute a distance
+d: DISTANCE ATOMS=1,2
+
+# Apply a restraint.
+RESTRAINT ARG=d AT=@replicas:1.0,1.1,1.2 KAPPA=1.0
+# On replica 0, this means:
+#   RESTRAINT ARG=d AT=1.0 KAPPA=1.0
+# On replica 1, this means:
+#   RESTRAINT ARG=d AT=1.1 KAPPA=1.0
+# On replica 2, this means:
+#   RESTRAINT ARG=d AT=1.2 KAPPA=1.0

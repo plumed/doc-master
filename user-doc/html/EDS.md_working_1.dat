@@ -1,0 +1,8 @@
+# set-up metadynamics
+t: TORSION ATOMS=1,2,3,4
+md: METAD ARG=d SIGMA=0.2 HEIGHT=0.3 PACE=500 TEMP=300
+# compute bias weights
+bias: REWEIGHT_METAD TEMP=300
+# now do EDS on distance while removing effect of metadynamics
+d: DISTANCE ATOMS=4,7
+eds: EDS ARG=d CENTER=3.0 PERIOD=100 TEMP=300 LOGWEIGHTS=bias

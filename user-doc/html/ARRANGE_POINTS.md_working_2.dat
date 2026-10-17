@@ -1,0 +1,15 @@
+# Collect the positions of the atoms for later analysis
+ff: COLLECT_FRAMES STRIDE=1 ATOMS=1-10
+
+# Generate an initial projection of the high dimensional points using MDS
+mds: CLASSICAL_MDS ARG=ff NLOW_DIM=2
+ff_weights: CUSTOM ARG=ff_logweights FUNC=exp(x) PERIODIC=NO
+
+# Generate a matrix of w_ij values
+weights: OUTER_PRODUCT ARG=ff_weights,ff_weights
+
+# And produce the projections
+proj: ARRANGE_POINTS ARG=mds-1,mds-2 TARGET1=mds_mat WEIGHTS1=weights
+
+# And print the projections to a file
+DUMPVECTOR ARG=proj.* FILE=colvar

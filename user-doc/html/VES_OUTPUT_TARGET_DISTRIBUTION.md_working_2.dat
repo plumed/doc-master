@@ -1,0 +1,1 @@
+plumed driver --plumed plumed.dat --igro configuration.gro
