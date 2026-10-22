@@ -1,0 +1,1132 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: VES_LINEAR_EXPANSION - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-ves_linear_expansion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: VES_LINEAR_EXPANSION
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basis-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basis Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Distributions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimizer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grid
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputting-free-energy-surfaces-and-other-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outputting Free Energy Surfaces and Other Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Static Bias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bias-cutoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bias Cutoff
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-ves_linear_expansion"><a href="../actions/">Action</a>: VES_LINEAR_EXPANSION</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_ves/"><strong>ves</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Linear basis set expansion bias.</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=VES_LINEAR_EXPANSION"><img alt="used in 1 tutorials" src="https://img.shields.io/badge/tutorials-1-green.svg" /></a><a href="https://www.plumed-nest.org/browse.html?action=VES_LINEAR_EXPANSION"><img alt="used in 9 eggs" src="https://img.shields.io/badge/nest-9-green.svg" /></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Linear basis set expansion bias.</p>
+<p>This VES bias action takes the bias potential to be a linear expansion
+in some basis set that is written as a product of one-dimensional basis functions.
+For example, for one CV the bias would be written as
+<script type="math/tex; mode=display">
+V(s_{1};\boldsymbol{\alpha}) = \sum_{i_{1}} \alpha_{i_{1}} \, f_{i_{1}}(s_{1}),
+</script>
+while for two CVs it is written as
+<script type="math/tex; mode=display">
+V(s_{1},s_{2};\boldsymbol{\alpha}) = \sum_{i_{1},i_{2}} \alpha_{i_{1},i_{2}} \, f_{i_{1}}(s_{1}) \, f_{i_{2}}(s_{2})
+</script>
+where <script type="math/tex">\boldsymbol{\alpha}</script> is the set of expansion coefficients that
+are optimized within VES. With an appropriate choice of the basis functions
+it is possible to represent any generic free energy surface.
+The relationship between the bias and the free energy surface is given by
+<script type="math/tex; mode=display">
+V(\mathbf{s}) = - F(\mathbf{s}) - \frac{1}{\beta} \log p(\mathbf{s}).
+</script>
+where <script type="math/tex">p(\mathbf{s})</script> is the target distribution that is employed in the VES simulation.</p>
+<h2 id="basis-functions">Basis Functions</h2>
+<p>Various one-dimensional basis functions are available in the VES code,
+see the complete list go to <a href="../module_ves/">the module page</a> and select VES_BIAS from the tags dropdown.
+At the current moment we recommend to use Legendre polynomials (<a href="../BF_LEGENDRE/">BF_LEGENDRE</a>)
+for non-periodic CVs and Fourier basis functions (<a href="../BF_FOURIER/">BF_FOURIER</a>)
+for periodic CV (e.g. dihedral angles).</p>
+<p>To use basis functions within VES_LINEAR_EXPANSION you first need to
+define them in the input file before the VES_LINEAR_EXPANSION action and
+then give their labels using the BASIS_FUNCTIONS keyword.</p>
+<h2 id="target-distributions">Target Distributions</h2>
+<p>Various target distributions <script type="math/tex">p(\mathbf{s})</script> are available in the VES code,
+see the complete list go to <a href="../module_ves/">the module page</a> and select VES_TARGETDIST from the tags dropdown.</p>
+<p>To use a target distribution within VES_LINEAR_EXPANSION you first need to
+define it in the input file before the VES_LINEAR_EXPANSION action and
+then give its label using the TARGET_DISTRIBUTION keyword.
+The default behavior if no TARGET_DISTRIBUTION is given is to
+employ a uniform target distribution.</p>
+<p>Some target distribution, like the well-tempered one (<a href="../TD_WELLTEMPERED/">TD_WELLTEMPERED</a>),
+are dynamic and need to be iteratively updated during the optimization.</p>
+<h2 id="optimizer">Optimizer</h2>
+<p>In order to optimize the coefficients you will need to use VES_LINEAR_EXPANSION
+in combination with an optimizer, see the list of optimizers available in the
+VES code go to <a href="../module_ves/">the module page</a> and select VES_OPTIMIZER from the tags dropdown. At the current moment we recommend to
+use the averaged stochastic gradient decent optimizer (<a href="../OPT_AVERAGED_SGD/">OPT_AVERAGED_SGD</a>).</p>
+<p>The optimizer should be defined after the VES_LINEAR_EXPANSION action.</p>
+<h2 id="grid">Grid</h2>
+<p>Internally the code uses grids to calculate the basis set averages
+over the target distribution that is needed for the gradient. The same grid is
+also used for the output files (see next section).
+The size of the grid is determined by the GRID_BINS keyword. By default it has
+100 grid points in each dimension, and generally this value should be sufficient.</p>
+<h2 id="outputting-free-energy-surfaces-and-other-files">Outputting Free Energy Surfaces and Other Files</h2>
+<p>It is possible to output on-the-fly during the simulation the free energy surface
+estimated from the bias potential. How often this is done is specified within
+the ves_optimizer (see the section before last for more details) by using the FES_OUTPUT keyword. The filename
+is specified by the FES_FILE keyword, but by default is it fes.LABEL.data,
+with an added suffix indicating
+the iteration number (iter-#).</p>
+<p>For multi-dimensional case is it possible to also output projections of the
+free energy surfaces. The arguments for which to do these projections is
+specified using the numbered PROJ_ARG keywords. For these files a suffix
+indicating the projection (proj-#) will be added to the filenames.
+You will also need to specify the frequency of the output by using the
+FES_PROJ_OUTPUT keyword within the optimizer.</p>
+<p>It is also possible to output the bias potential itself, for this the relevant
+keyword is BIAS_OUTPUT within the optimizer. The filename
+is specified by the BIAS_FILE keyword, but by default is it bias.LABEL.data,
+with an added suffix indicating the iteration number (iter-#).</p>
+<p>Furthermore is it possible to output the target distribution, and its projections
+(i.e. marginal distributions). The filenames of these files are specified with
+the TARGETDIST_FILE, but by default is it targetdist.LABEL.data. The
+logarithm of the target distribution will also be outputted to file that has the
+added suffix log. For static target distribution these files will be outputted in
+the beginning of the
+simulation while for dynamic ones you will need to specify the frequency
+of the output by using the TARGETDIST_OUTPUT and TARGETDIST_PROJ_OUTPUT
+keywords within the optimizer.</p>
+<p>It is also possible to output free energy surfaces and bias in post processing
+by using the <a href="../VES_OUTPUT_FES/">VES_OUTPUT_FES</a> action. However, be aware that this action
+does does not support dynamic target distribution (e.g. well-tempered).</p>
+<h2 id="static-bias">Static Bias</h2>
+<p>It is also possible to use VES_LINEAR_EXPANSION as a static bias that uses
+previously obtained coefficients. In this case the coefficients should be
+read in from the coefficient file given in the COEFFS keyword.</p>
+<h2 id="bias-cutoff">Bias Cutoff</h2>
+<p>It is possible to impose a cutoff on the bias potential using the procedure
+introduced in the paper cited below such that the free energy surface
+is only flooded up to a certain value. The bias that results from this procedure
+can then be used as a static bias for obtaining kinetic rates.
+The value of the cutoff is given by the BIAS_CUTOFF keyword.
+To impose the cutoff the code uses a Fermi switching function <script type="math/tex">1/(1+e^{\lambda x})</script>
+where the parameter <script type="math/tex">\lambda</script> controls how sharply the switchingfunction goes to zero.
+The default value is <script type="math/tex">\lambda=10</script> but this can be changed by using the
+BIAS_CUTOFF_FERMI_LAMBDA keyword.</p>
+<h2 id="examples">Examples</h2>
+<p>In the following example we run a VES_LINEAR_EXPANSION for one CV using
+a Legendre basis functions (<a href="../BF_LEGENDRE/">BF_LEGENDRE</a>) and a uniform target
+distribution as no target distribution is specified. The coefficients
+are optimized using averaged stochastic gradient descent optimizer
+(<a href="../OPT_AVERAGED_SGD/">OPT_AVERAGED_SGD</a>). Within the optimizer we specify that the
+FES should be outputted to file every 500 coefficients iterations (the
+FES_OUTPUT keyword).
+Parameters that are very specific to the problem at hand, like the
+order of the basis functions, the interval on which the
+basis functions are defined, and the step size used
+in the optimizer, are left unfilled.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_VES_LINEAR_EXPANSION.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../VES_LINEAR_EXPANSION.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-failed-red.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="VES_LINEAR_EXPANSION.md_working_1.datbf1" onclick='showPath("VES_LINEAR_EXPANSION.md_working_1.dat","VES_LINEAR_EXPANSION.md_working_1.datbf1","VES_LINEAR_EXPANSION.md_working_1.datbf1","brown")'>bf1</b>: <span class="plumedtooltip" style="color:green">BF_LEGENDRE<span class="right">Legendre polynomials basis functions. <a href="https://www.plumed.org/doc-master/user-doc/html/BF_LEGENDRE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ORDER<span class="right">The order of the basis function expansion<i></i></span></span>=_FILL_ <span class="plumedtooltip">MINIMUM<span class="right">The minimum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_ <span class="plumedtooltip">MAXIMUM<span class="right">The maximum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_
+
+<span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_1.datbf1">The BF_LEGENDRE action with label <b>bf1</b> calculates something</span><span class="plumedtooltip" style="color:green">VES_LINEAR_EXPANSION<span class="right">Linear basis set expansion bias. <a href="https://www.plumed.org/doc-master/user-doc/html/VES_LINEAR_EXPANSION" style="color:green">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=d1
+ <span class="plumedtooltip">BASIS_FUNCTIONS<span class="right">the label of the one dimensional basis functions that should be used<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_1.datbf1">bf1</b>
+ <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is needed if the MD code does not pass the temperature to PLUMED<i></i></span></span>=_FILL_
+ <span class="plumedtooltip">GRID_BINS<span class="right">the number of bins used for the grid<i></i></span></span>=200
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_1.datb1" onclick='showPath("VES_LINEAR_EXPANSION.md_working_1.dat","VES_LINEAR_EXPANSION.md_working_1.datb1","VES_LINEAR_EXPANSION.md_working_1.datb1","brown")'>b1</b>
+... VES_LINEAR_EXPANSION
+<br/><span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_1.datb1">The VES_LINEAR_EXPANSION action with label <b>b1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">b1.bias</td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">b1.force2</td><td>the instantaneous value of the squared force due to this bias potential</td></tr></table></span><span class="plumedtooltip" style="color:green">OPT_AVERAGED_SGD<span class="right">Averaged stochastic gradient decent with fixed step size. <a href="https://www.plumed.org/doc-master/user-doc/html/OPT_AVERAGED_SGD" style="color:green">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">BIAS<span class="right">the label of the VES bias to be optimized<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_1.datb1">b1</b>
+ <span class="plumedtooltip">STRIDE<span class="right">the frequency of updating the coefficients given in the number of MD steps<i></i></span></span>=1000
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_1.dato1" onclick='showPath("VES_LINEAR_EXPANSION.md_working_1.dat","VES_LINEAR_EXPANSION.md_working_1.dato1","VES_LINEAR_EXPANSION.md_working_1.dato1","brown")'>o1</b>
+ <span class="plumedtooltip">STEPSIZE<span class="right">the step size used for the optimization<i></i></span></span>=_FILL_
+ <span class="plumedtooltip">FES_OUTPUT<span class="right">how often the FES(s) should be written out to file<i></i></span></span>=500
+ <span class="plumedtooltip">COEFFS_OUTPUT<span class="right"> how often the coefficients should be written to file<i></i></span></span>=10
+... OPT_AVERAGED_SGD
+<span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_1.dato1">The OPT_AVERAGED_SGD action with label <b>o1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">o1.value</td><td>a scalar</td></tr></table></span></pre></div>
+
+<p>In the following example we employ VES_LINEAR_EXPANSION for two CVs,
+The first CV is periodic and therefore we employ a Fourier basis functions
+(<a href="../BF_LEGENDRE/">BF_LEGENDRE</a>) while the second CV is non-periodic so we employ a
+Legendre polynomials as in the previous example. For the target distribution
+we employ a well-tempered target distribution (<a href="../TD_WELLTEMPERED/">TD_WELLTEMPERED</a>), which is
+dynamic and needs to be iteratively updated with a stride that is given
+using the TARGETDIST_STRIDE within the optimizer.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_VES_LINEAR_EXPANSION.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../VES_LINEAR_EXPANSION.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-failed-red.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="VES_LINEAR_EXPANSION.md_working_2.datbf1" onclick='showPath("VES_LINEAR_EXPANSION.md_working_2.dat","VES_LINEAR_EXPANSION.md_working_2.datbf1","VES_LINEAR_EXPANSION.md_working_2.datbf1","brown")'>bf1</b>: <span class="plumedtooltip" style="color:green">BF_FOURIER<span class="right">Fourier basis functions. <a href="https://www.plumed.org/doc-master/user-doc/html/BF_FOURIER" style="color:green">More details</a><i></i></span></span>  <span class="plumedtooltip">ORDER<span class="right">The order of the basis function expansion<i></i></span></span>=_FILL_ <span class="plumedtooltip">MINIMUM<span class="right">The minimum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_ <span class="plumedtooltip">MAXIMUM<span class="right">The maximum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_
+<span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_2.datbf1">The BF_FOURIER action with label <b>bf1</b> calculates something</span><b name="VES_LINEAR_EXPANSION.md_working_2.datbf2" onclick='showPath("VES_LINEAR_EXPANSION.md_working_2.dat","VES_LINEAR_EXPANSION.md_working_2.datbf2","VES_LINEAR_EXPANSION.md_working_2.datbf2","brown")'>bf2</b>: <span class="plumedtooltip" style="color:green">BF_LEGENDRE<span class="right">Legendre polynomials basis functions. <a href="https://www.plumed.org/doc-master/user-doc/html/BF_LEGENDRE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ORDER<span class="right">The order of the basis function expansion<i></i></span></span>=_FILL_ <span class="plumedtooltip">MINIMUM<span class="right">The minimum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_ <span class="plumedtooltip">MAXIMUM<span class="right">The maximum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_
+
+<span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_2.datbf2">The BF_LEGENDRE action with label <b>bf2</b> calculates something</span><b name="VES_LINEAR_EXPANSION.md_working_2.dattd_wt" onclick='showPath("VES_LINEAR_EXPANSION.md_working_2.dat","VES_LINEAR_EXPANSION.md_working_2.dattd_wt","VES_LINEAR_EXPANSION.md_working_2.dattd_wt","brown")'>td_wt</b>: <span class="plumedtooltip" style="color:green">TD_WELLTEMPERED<span class="right">Well-tempered target distribution (dynamic). <a href="https://www.plumed.org/doc-master/user-doc/html/TD_WELLTEMPERED" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">BIASFACTOR<span class="right">The bias factor used for the well-tempered distribution<i></i></span></span>=10.0
+
+<span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_2.dattd_wt">The TD_WELLTEMPERED action with label <b>td_wt</b> calculates something</span><span class="plumedtooltip" style="color:green">VES_LINEAR_EXPANSION<span class="right">Linear basis set expansion bias. <a href="https://www.plumed.org/doc-master/user-doc/html/VES_LINEAR_EXPANSION" style="color:green">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=cv1,cv2
+ <span class="plumedtooltip">BASIS_FUNCTIONS<span class="right">the label of the one dimensional basis functions that should be used<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_2.datbf1">bf1</b>,<b name="VES_LINEAR_EXPANSION.md_working_2.datbf2">bf2</b>
+ <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is needed if the MD code does not pass the temperature to PLUMED<i></i></span></span>=_FILL_
+ <span class="plumedtooltip">GRID_BINS<span class="right">the number of bins used for the grid<i></i></span></span>=100
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_2.datb1" onclick='showPath("VES_LINEAR_EXPANSION.md_working_2.dat","VES_LINEAR_EXPANSION.md_working_2.datb1","VES_LINEAR_EXPANSION.md_working_2.datb1","brown")'>b1</b>
+ <span class="plumedtooltip">TARGET_DISTRIBUTION<span class="right">the label of the target distribution to be used<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_2.dattd_wt">td_wt</b>
+... VES_LINEAR_EXPANSION
+<br/><span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_2.datb1">The VES_LINEAR_EXPANSION action with label <b>b1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">b1.bias</td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">b1.force2</td><td>the instantaneous value of the squared force due to this bias potential</td></tr></table></span><span class="plumedtooltip" style="color:green">OPT_AVERAGED_SGD<span class="right">Averaged stochastic gradient decent with fixed step size. <a href="https://www.plumed.org/doc-master/user-doc/html/OPT_AVERAGED_SGD" style="color:green">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">BIAS<span class="right">the label of the VES bias to be optimized<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_2.datb1">b1</b>
+ <span class="plumedtooltip">STRIDE<span class="right">the frequency of updating the coefficients given in the number of MD steps<i></i></span></span>=1000
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_2.dato1" onclick='showPath("VES_LINEAR_EXPANSION.md_working_2.dat","VES_LINEAR_EXPANSION.md_working_2.dato1","VES_LINEAR_EXPANSION.md_working_2.dato1","brown")'>o1</b>
+ <span class="plumedtooltip">STEPSIZE<span class="right">the step size used for the optimization<i></i></span></span>=_FILL_
+ <span class="plumedtooltip">FES_OUTPUT<span class="right">how often the FES(s) should be written out to file<i></i></span></span>=500
+ <span class="plumedtooltip">COEFFS_OUTPUT<span class="right"> how often the coefficients should be written to file<i></i></span></span>=10
+ <span class="plumedtooltip">TARGETDIST_STRIDE<span class="right">stride for updating a target distribution that is iteratively updated during the optimization<i></i></span></span>=500
+... OPT_AVERAGED_SGD
+<span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_2.dato1">The OPT_AVERAGED_SGD action with label <b>o1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">o1.value</td><td>a scalar</td></tr></table></span></pre></div>
+
+<p>In the following example we employ a bias cutoff such that the bias
+only fills the free energy landscape up a certain level. In this case
+the target distribution is also dynamic and needs to iteratively updated.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_VES_LINEAR_EXPANSION.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../VES_LINEAR_EXPANSION.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-failed-red.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="VES_LINEAR_EXPANSION.md_working_3.datbf1" onclick='showPath("VES_LINEAR_EXPANSION.md_working_3.dat","VES_LINEAR_EXPANSION.md_working_3.datbf1","VES_LINEAR_EXPANSION.md_working_3.datbf1","brown")'>bf1</b>: <span class="plumedtooltip" style="color:green">BF_LEGENDRE<span class="right">Legendre polynomials basis functions. <a href="https://www.plumed.org/doc-master/user-doc/html/BF_LEGENDRE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ORDER<span class="right">The order of the basis function expansion<i></i></span></span>=_FILL_ <span class="plumedtooltip">MINIMUM<span class="right">The minimum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_ <span class="plumedtooltip">MAXIMUM<span class="right">The maximum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_
+<span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_3.datbf1">The BF_LEGENDRE action with label <b>bf1</b> calculates something</span><b name="VES_LINEAR_EXPANSION.md_working_3.datbf2" onclick='showPath("VES_LINEAR_EXPANSION.md_working_3.dat","VES_LINEAR_EXPANSION.md_working_3.datbf2","VES_LINEAR_EXPANSION.md_working_3.datbf2","brown")'>bf2</b>: <span class="plumedtooltip" style="color:green">BF_LEGENDRE<span class="right">Legendre polynomials basis functions. <a href="https://www.plumed.org/doc-master/user-doc/html/BF_LEGENDRE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ORDER<span class="right">The order of the basis function expansion<i></i></span></span>=_FILL_ <span class="plumedtooltip">MINIMUM<span class="right">The minimum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_ <span class="plumedtooltip">MAXIMUM<span class="right">The maximum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_
+
+<span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_3.datbf2">The BF_LEGENDRE action with label <b>bf2</b> calculates something</span><span class="plumedtooltip" style="color:green">VES_LINEAR_EXPANSION<span class="right">Linear basis set expansion bias. <a href="https://www.plumed.org/doc-master/user-doc/html/VES_LINEAR_EXPANSION" style="color:green">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=cv1,cv2
+ <span class="plumedtooltip">BASIS_FUNCTIONS<span class="right">the label of the one dimensional basis functions that should be used<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_3.datbf1">bf1</b>,<b name="VES_LINEAR_EXPANSION.md_working_3.datbf2">bf2</b>
+ <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is needed if the MD code does not pass the temperature to PLUMED<i></i></span></span>=_FILL_
+ <span class="plumedtooltip">GRID_BINS<span class="right">the number of bins used for the grid<i></i></span></span>=100
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_3.datb1" onclick='showPath("VES_LINEAR_EXPANSION.md_working_3.dat","VES_LINEAR_EXPANSION.md_working_3.datb1","VES_LINEAR_EXPANSION.md_working_3.datb1","brown")'>b1</b>
+ <span class="plumedtooltip">BIAS_CUTOFF<span class="right">cutoff the bias such that it only fills the free energy surface up to certain level F_cutoff, here you should give the value of the F_cutoff<i></i></span></span>=20.0
+... VES_LINEAR_EXPANSION
+<br/><span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_3.datb1">The VES_LINEAR_EXPANSION action with label <b>b1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">b1.bias</td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">b1.force2</td><td>the instantaneous value of the squared force due to this bias potential</td></tr></table></span><span class="plumedtooltip" style="color:green">OPT_AVERAGED_SGD<span class="right">Averaged stochastic gradient decent with fixed step size. <a href="https://www.plumed.org/doc-master/user-doc/html/OPT_AVERAGED_SGD" style="color:green">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">BIAS<span class="right">the label of the VES bias to be optimized<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_3.datb1">b1</b>
+ <span class="plumedtooltip">STRIDE<span class="right">the frequency of updating the coefficients given in the number of MD steps<i></i></span></span>=1000
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_3.dato1" onclick='showPath("VES_LINEAR_EXPANSION.md_working_3.dat","VES_LINEAR_EXPANSION.md_working_3.dato1","VES_LINEAR_EXPANSION.md_working_3.dato1","brown")'>o1</b>
+ <span class="plumedtooltip">STEPSIZE<span class="right">the step size used for the optimization<i></i></span></span>=_FILL_
+ <span class="plumedtooltip">FES_OUTPUT<span class="right">how often the FES(s) should be written out to file<i></i></span></span>=500
+ <span class="plumedtooltip">COEFFS_OUTPUT<span class="right"> how often the coefficients should be written to file<i></i></span></span>=10
+ <span class="plumedtooltip">TARGETDIST_STRIDE<span class="right">stride for updating a target distribution that is iteratively updated during the optimization<i></i></span></span>=500
+... OPT_AVERAGED_SGD
+<span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_3.dato1">The OPT_AVERAGED_SGD action with label <b>o1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">o1.value</td><td>a scalar</td></tr></table></span></pre></div>
+
+<p>The optimized bias potential can then be used as a static bias for obtaining
+kinetics. For this you need read in the final coefficients from file
+(e.g. coeffs_final.data in this case) by using the
+COEFFS keyword (also, no optimizer should be defined in the input)</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_VES_LINEAR_EXPANSION.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../VES_LINEAR_EXPANSION.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-failed-red.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="VES_LINEAR_EXPANSION.md_working_4.datbf1" onclick='showPath("VES_LINEAR_EXPANSION.md_working_4.dat","VES_LINEAR_EXPANSION.md_working_4.datbf1","VES_LINEAR_EXPANSION.md_working_4.datbf1","brown")'>bf1</b>: <span class="plumedtooltip" style="color:green">BF_LEGENDRE<span class="right">Legendre polynomials basis functions. <a href="https://www.plumed.org/doc-master/user-doc/html/BF_LEGENDRE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ORDER<span class="right">The order of the basis function expansion<i></i></span></span>=_FILL_ <span class="plumedtooltip">MINIMUM<span class="right">The minimum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_ <span class="plumedtooltip">MAXIMUM<span class="right">The maximum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_
+<span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_4.datbf1">The BF_LEGENDRE action with label <b>bf1</b> calculates something</span><b name="VES_LINEAR_EXPANSION.md_working_4.datbf2" onclick='showPath("VES_LINEAR_EXPANSION.md_working_4.dat","VES_LINEAR_EXPANSION.md_working_4.datbf2","VES_LINEAR_EXPANSION.md_working_4.datbf2","brown")'>bf2</b>: <span class="plumedtooltip" style="color:green">BF_LEGENDRE<span class="right">Legendre polynomials basis functions. <a href="https://www.plumed.org/doc-master/user-doc/html/BF_LEGENDRE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ORDER<span class="right">The order of the basis function expansion<i></i></span></span>=_FILL_ <span class="plumedtooltip">MINIMUM<span class="right">The minimum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_ <span class="plumedtooltip">MAXIMUM<span class="right">The maximum of the interval on which the basis functions are defined<i></i></span></span>=_FILL_
+
+<span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_4.datbf2">The BF_LEGENDRE action with label <b>bf2</b> calculates something</span><span class="plumedtooltip" style="color:green">VES_LINEAR_EXPANSION<span class="right">Linear basis set expansion bias. <a href="https://www.plumed.org/doc-master/user-doc/html/VES_LINEAR_EXPANSION" style="color:green">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=cv1,cv2
+ <span class="plumedtooltip">BASIS_FUNCTIONS<span class="right">the label of the one dimensional basis functions that should be used<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_4.datbf1">bf1</b>,<b name="VES_LINEAR_EXPANSION.md_working_4.datbf2">bf2</b>
+ <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is needed if the MD code does not pass the temperature to PLUMED<i></i></span></span>=_FILL_
+ <span class="plumedtooltip">GRID_BINS<span class="right">the number of bins used for the grid<i></i></span></span>=100
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="VES_LINEAR_EXPANSION.md_working_4.datb1" onclick='showPath("VES_LINEAR_EXPANSION.md_working_4.dat","VES_LINEAR_EXPANSION.md_working_4.datb1","VES_LINEAR_EXPANSION.md_working_4.datb1","brown")'>b1</b>
+ <span class="plumedtooltip">BIAS_CUTOFF<span class="right">cutoff the bias such that it only fills the free energy surface up to certain level F_cutoff, here you should give the value of the F_cutoff<i></i></span></span>=20.0
+ <span class="plumedtooltip">COEFFS<span class="right">read in the coefficients from files<i></i></span></span>=coeffs_final.data
+... VES_LINEAR_EXPANSION
+<span style="display:none;" id="VES_LINEAR_EXPANSION.md_working_4.datb1">The VES_LINEAR_EXPANSION action with label <b>b1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">b1.bias</td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">b1.force2</td><td>the instantaneous value of the squared force due to this bias potential</td></tr></table></span></pre></div>
+
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_arguments/">arguments</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">scalar</td>
+<td style="text-align: left;">the labels of the scalars on which the bias will act</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-components">Output components</h2>
+<p>This action calculates the <a href="../specifying_arguments/">values</a> in the following table.  These <a href="../specifying_arguments/">values</a> can be referenced elsewhere in the input by using this Action's label followed by a dot and the name of the <a href="../specifying_arguments/">value</a> required from the list below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">bias</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">the instantaneous value of the bias potential</td>
+</tr>
+<tr>
+<td style="text-align: left;">force2</td>
+<td style="text-align: left;">scalar</td>
+<td style="text-align: left;">the instantaneous value of the squared force due to this bias potential</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the labels of the scalars on which the bias will act</td>
+</tr>
+<tr>
+<td style="text-align: left;">BASIS_FUNCTIONS</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">the label of the one dimensional basis functions that should be used</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">GRID_FMT<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">%14.9f</td>
+<td style="text-align: left;">the format to use when outputting the numbers in the grids</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NUMERICAL_DERIVATIVES<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the derivatives for these quantities numerically</td>
+</tr>
+<tr>
+<td style="text-align: left;">TEMP</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the system temperature - this is needed if the MD code does not pass the temperature to PLUMED</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">BIAS_FILE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">filename of the file on which the bias should be written out</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">FES_FILE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">filename of the file on which the FES should be written out</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">TARGETDIST_FILE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">filename of the file on which the target distribution should be written out</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">OPTIMIZATION_THRESHOLD<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Threshold value to turn off optimization of localized basis functions</td>
+</tr>
+<tr>
+<td style="text-align: left;">COEFFS</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">read in the coefficients from files</td>
+</tr>
+<tr>
+<td style="text-align: left;">TARGET_DISTRIBUTION</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the label of the target distribution to be used</td>
+</tr>
+<tr>
+<td style="text-align: left;">BIAS_CUTOFF</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">cutoff the bias such that it only fills the free energy surface up to certain level F_cutoff, here you should give the value of the F_cutoff</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">BIAS_CUTOFF_FERMI_LAMBDA<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the lambda value used in the Fermi switching function for the bias cutoff (BIAS_CUTOFF), the default value is 10</td>
+</tr>
+<tr>
+<td style="text-align: left;">GRID_BINS</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">the number of bins used for the grid</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">PROJ_ARG<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">arguments for doing projections of the FES or the target distribution</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1103/PhysRevLett.115.070601">J. McCarty, O. Valsson, P. Tiwary, M. Parrinello, Variationally Optimized Free-Energy Flooding for Rate Calculation. Physical Review Letters 115 (2015)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

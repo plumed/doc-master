@@ -1,0 +1,5 @@
+<map id="PLMD::wiggleTrajectory" name="PLMD::wiggleTrajectory">
+<area shape="rect" id="Node000001" title="A decorator for displacing the atoms from the generated underline distribution." alt="" coords="7,79,182,104"/>
+<area shape="rect" id="Node000002" href="$struct_p_l_m_d_1_1_atom_distribution.html" title="tested in regtest/tools/rt&#45;make&#45;AtomicDistribution Acts as a template for any distribution" alt="" coords="5,5,184,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,44,97,79,92,79,92,44"/>
+</map>

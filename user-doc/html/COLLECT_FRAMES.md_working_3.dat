@@ -1,0 +1,10 @@
+t1: TORSION ATOMS=1,2,3,4
+t2: TORSION ATOMS=5,6,7,8
+t3: TORSION ATOMS=9,10,11,12
+
+r: RESTRAINT ARG=t1 AT=pi/2 KAPPA=10
+bw: REWEIGHT_BIAS TEMP=300
+
+# This collects the three torsion angles
+cc: COLLECT_FRAMES ARG=t1,t2,t3 LOGWEIGHTS=bw
+DUMPVECTOR ARG=cc.* FILE=timeseries

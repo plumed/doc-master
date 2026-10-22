@@ -1,0 +1,8 @@
+#SETTINGS MOLFILE=regtest/basic/rt32/helix.pdb
+MOLINFO MOLTYPE=protein STRUCTURE=regtest/basic/rt32/helix.pdb
+ab: ALPHABETA ...
+ATOMS1=@phi-3 REFERENCE=3.14 COEFFICIENT1=2
+ATOMS2=@psi-3                COEFFICIENT2=0.5
+ATOMS3=@phi-4                COEFFICIENT3=1
+...
+PRINT ARG=ab FILE=colvar STRIDE=10

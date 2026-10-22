@@ -1,0 +1,15 @@
+<map id="PLMD::gch::small_vector&lt; T, InlineCapacity, Allocator &gt;" name="PLMD::gch::small_vector&lt; T, InlineCapacity, Allocator &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="723,85,949,125"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1gch_1_1small__vector.html" title=" " alt="" coords="1211,5,1402,60"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="962,83,1211,45,1212,50,963,88"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1gch_1_1small__vector.html" title=" " alt="" coords="1215,85,1398,125"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="963,102,1215,102,1215,107,963,107"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1gch_1_1small__vector.html" title=" " alt="" coords="1195,149,1419,204"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="922,125,974,137,1087,154,1195,165,1194,171,1087,159,973,142,921,131"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1gch_1_1detail_1_1small__vector__base.html" title=" " alt="" coords="452,77,673,132"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="687,102,723,102,723,107,687,107"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1gch_1_1detail_1_1allocator__interface.html" title=" " alt="" coords="259,77,403,132"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="416,102,452,102,452,107,416,107"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1gch_1_1detail_1_1allocator__inliner.html" title=" " alt="" coords="5,77,209,132"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="223,102,258,102,258,107,223,107"/>
+</map>

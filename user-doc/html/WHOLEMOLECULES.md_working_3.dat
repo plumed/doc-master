@@ -1,0 +1,3 @@
+#SETTINGS MOLFILE=regtest/basic/rt32/helix.pdb
+MOLINFO STRUCTURE=regtest/basic/rt32/helix.pdb
+WHOLEMOLECULES RESIDUES=all MOLTYPE=protein

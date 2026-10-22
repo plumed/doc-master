@@ -1,0 +1,992 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: LOAD - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-load" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: LOAD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-load"><a href="../actions/">Action</a>: LOAD</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_setup/"><strong>setup</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Loads a library, possibly defining new actions.</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=LOAD"><img alt="used in 1 tutorials" src="https://img.shields.io/badge/tutorials-1-green.svg" /></a><a href="https://www.plumed-nest.org/browse.html?action=LOAD"><img alt="used in 38 eggs" src="https://img.shields.io/badge/nest-38-green.svg" /></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Loads a library, possibly defining new actions.</p>
+<p>The LOAD action is only available on systems that allow dynamic loading.
+This action allows you load new funcionality into PLUMED at runtime.
+This new functionality can be in a .so file or a .cpp file. If the
+new functionality is in a cpp file then the code is compiled and the
+the resulting object is loaded.</p>
+<p>Using the LOAD action is useful for making quick tests while developing your own
+actions. Of course, once your implementation is ready you should
+add it to the PLUMED source tree and recompile PLUMED.</p>
+<p>One way to use the LOAD action is to directly load a cpp file as illustrated in the input below.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LOAD.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LOAD.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-failed-red.svg" alt="tested on2.11" /></a></div>
+<div class="headerBadge"><img src="https://img.shields.io/badge/with-LOAD-yellow.svg" alt="tested on master" /></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/basic/rt15/Distance2.cpp</span>
+<span style="color:blue" class="comment"># load the new definition</span>
+<span style="color:blue" class="comment"># this is a cpp file so it will be compiled</span>
+<span class="plumedtooltip" style="color:green">LOAD<span class="right">Loads a library, possibly defining new actions. <a href="https://www.plumed.org/doc-master/user-doc/html/LOAD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">FILE<span class="right">file to be loaded<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt15/Distance2.cpp<div class="right"> Click <a onclick='openModal("LOAD.md_working_1.datregtest/basic/rt15/Distance2.cpp1")'>here</a> to see an extract from this file.<i></i></div></div><div id="LOAD.md_working_1.datregtest/basic/rt15/Distance2.cpp1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("LOAD.md_working_1.datregtest/basic/rt15/Distance2.cpp1")'>&times;</span>  <h2>FILE: regtest/basic/rt15/Distance2.cpp</h2></div><div class="plumedmodal-body">    <pre><div class="highlight"><pre><span></span><span class="cm">/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+<span class="cm">   Copyright (c) 2013 The plumed team</span>
+<span class="cm">   (see the PEOPLE file at the root of the distribution for a list of names)</span>
+
+<span class="cm">   See http://www.plumed-code.org for more information.</span>
+
+<span class="cm">   This file is part of plumed, version 2.0.</span>
+
+<span class="cm">   plumed is free software: you can redistribute it and/or modify</span>
+<span class="cm">   it under the terms of the GNU Lesser General Public License as published by</span>
+<span class="cm">   the Free Software Foundation, either version 3 of the License, or</span>
+<span class="cm">   (at your option) any later version.</span>
+
+<span class="cm">   plumed is distributed in the hope that it will be useful,</span>
+<span class="cm">   but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="cm">   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="cm">   GNU Lesser General Public License for more details.</span>
+
+<span class="cm">   You should have received a copy of the GNU Lesser General Public License</span>
+<span class="cm">   along with plumed.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="cm">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"colvar/Colvar.h"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"core/ActionRegister.h"</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">PLMD</span><span class="p">{</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Distance</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">colvar</span><span class="o">::</span><span class="n">Colvar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">components</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">pbc</span><span class="p">;</span>
+
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">registerKeywords</span><span class="p">(</span><span class="w"> </span><span class="n">Keywords</span><span class="o">&amp;</span><span class="w"> </span><span class="n">keys</span><span class="w"> </span><span class="p">);</span>
+<span class="w">  </span><span class="n">Distance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ActionOptions</span><span class="o">&amp;</span><span class="p">);</span>
+<span class="c1">// active methods:</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">calculate</span><span class="p">();</span>
+<span class="p">};</span>
+
+<span class="n">PLUMED_REGISTER_ACTION</span><span class="p">(</span><span class="n">Distance</span><span class="p">,</span><span class="s">"DISTANCE2"</span><span class="p">)</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">Distance</span><span class="o">::</span><span class="n">registerKeywords</span><span class="p">(</span><span class="w"> </span><span class="n">Keywords</span><span class="o">&amp;</span><span class="w"> </span><span class="n">keys</span><span class="w"> </span><span class="p">){</span>
+<span class="w">  </span><span class="n">Colvar</span><span class="o">::</span><span class="n">registerKeywords</span><span class="p">(</span><span class="w"> </span><span class="n">keys</span><span class="w"> </span><span class="p">);</span>
+<span class="w">  </span><span class="n">keys</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">"atoms"</span><span class="p">,</span><span class="s">"ATOMS"</span><span class="p">,</span><span class="s">"the pair of atom that we are calculating the distance between"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">keys</span><span class="p">.</span><span class="n">addFlag</span><span class="p">(</span><span class="s">"COMPONENTS"</span><span class="p">,</span><span class="nb">false</span><span class="p">,</span><span class="s">"calculate the x, y and z components of the distance separately and store them as label.x, label.y and label.z"</span><span class="p">);</span><span class="w">  </span>
+<span class="w">  </span><span class="n">keys</span><span class="p">.</span><span class="n">setValueDescription</span><span class="p">(</span><span class="s">"scalar"</span><span class="p">,</span><span class="s">"the distance between the input atoms"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">Distance</span><span class="o">::</span><span class="n">Distance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ActionOptions</span><span class="o">&amp;</span><span class="n">ao</span><span class="p">)</span><span class="o">:</span>
+<span class="n">PLUMED_COLVAR_INIT</span><span class="p">(</span><span class="n">ao</span><span class="p">),</span>
+<span class="n">components</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span>
+<span class="n">pbc</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">AtomNumber</span><span class="o">&gt;</span><span class="w"> </span><span class="n">atoms</span><span class="p">;</span>
+<span class="w">  </span><span class="n">parseAtomList</span><span class="p">(</span><span class="s">"ATOMS"</span><span class="p">,</span><span class="n">atoms</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">atoms</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">!=</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">error</span><span class="p">(</span><span class="s">"Number of specified atoms should be 2"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">parseFlag</span><span class="p">(</span><span class="s">"COMPONENTS"</span><span class="p">,</span><span class="n">components</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">nopbc</span><span class="o">=!</span><span class="n">pbc</span><span class="p">;</span>
+<span class="w">  </span><span class="n">parseFlag</span><span class="p">(</span><span class="s">"NOPBC"</span><span class="p">,</span><span class="n">nopbc</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pbc</span><span class="o">=!</span><span class="n">nopbc</span><span class="p">;</span>
+<span class="w">  </span><span class="n">checkRead</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">log</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"  between atoms %d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">atoms</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">serial</span><span class="p">(),</span><span class="n">atoms</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">serial</span><span class="p">());</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">pbc</span><span class="p">)</span><span class="w"> </span><span class="n">log</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"  using periodic boundary conditions</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="w">  </span><span class="k">else</span><span class="w">    </span><span class="n">log</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"  without periodic boundary conditions</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">components</span><span class="p">){</span>
+
+<span class="w">    </span><span class="n">addValueWithDerivatives</span><span class="p">();</span><span class="w"> </span><span class="n">setNotPeriodic</span><span class="p">();</span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="p">{</span>
+<span class="w">    </span><span class="n">addComponentWithDerivatives</span><span class="p">(</span><span class="s">"x"</span><span class="p">);</span><span class="w"> </span><span class="n">componentIsNotPeriodic</span><span class="p">(</span><span class="s">"x"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">addComponentWithDerivatives</span><span class="p">(</span><span class="s">"y"</span><span class="p">);</span><span class="w"> </span><span class="n">componentIsNotPeriodic</span><span class="p">(</span><span class="s">"y"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">addComponentWithDerivatives</span><span class="p">(</span><span class="s">"z"</span><span class="p">);</span><span class="w"> </span><span class="n">componentIsNotPeriodic</span><span class="p">(</span><span class="s">"z"</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">requestAtoms</span><span class="p">(</span><span class="n">atoms</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="c1">// calculator</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">Distance</span><span class="o">::</span><span class="n">calculate</span><span class="p">(){</span>
+
+<span class="w">  </span><span class="n">Vector</span><span class="w"> </span><span class="n">distance</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">pbc</span><span class="p">){</span>
+<span class="w">    </span><span class="n">distance</span><span class="o">=</span><span class="n">pbcDistance</span><span class="p">(</span><span class="n">getPosition</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">getPosition</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">distance</span><span class="o">=</span><span class="n">delta</span><span class="p">(</span><span class="n">getPosition</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">getPosition</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="o">=</span><span class="n">distance</span><span class="p">.</span><span class="n">modulo</span><span class="p">();</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">invvalue</span><span class="o">=</span><span class="mf">1.0</span><span class="o">/</span><span class="n">value</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">components</span><span class="p">){</span>
+
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="n">invvalue</span><span class="o">*</span><span class="n">distance</span><span class="p">);</span>
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">invvalue</span><span class="o">*</span><span class="n">distance</span><span class="p">);</span>
+<span class="w">    </span><span class="n">setBoxDerivatives</span><span class="w">  </span><span class="p">(</span><span class="o">-</span><span class="n">invvalue</span><span class="o">*</span><span class="n">Tensor</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span><span class="n">distance</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setValue</span><span class="w">           </span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+
+<span class="w">  </span><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+
+<span class="w">    </span><span class="n">Value</span><span class="o">*</span><span class="w"> </span><span class="n">valuex</span><span class="o">=</span><span class="n">getPntrToComponent</span><span class="p">(</span><span class="s">"x"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Value</span><span class="o">*</span><span class="w"> </span><span class="n">valuey</span><span class="o">=</span><span class="n">getPntrToComponent</span><span class="p">(</span><span class="s">"y"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Value</span><span class="o">*</span><span class="w"> </span><span class="n">valuez</span><span class="o">=</span><span class="n">getPntrToComponent</span><span class="p">(</span><span class="s">"z"</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="w"> </span><span class="p">(</span><span class="n">valuex</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">-1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="w"> </span><span class="p">(</span><span class="n">valuex</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setBoxDerivatives</span><span class="w">   </span><span class="p">(</span><span class="n">valuex</span><span class="p">,</span><span class="n">Tensor</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">-1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)));</span>
+<span class="w">    </span><span class="n">valuex</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="n">distance</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="w"> </span><span class="p">(</span><span class="n">valuey</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">-1</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="w"> </span><span class="p">(</span><span class="n">valuey</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setBoxDerivatives</span><span class="w">   </span><span class="p">(</span><span class="n">valuey</span><span class="p">,</span><span class="n">Tensor</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">-1</span><span class="p">,</span><span class="mi">0</span><span class="p">)));</span>
+<span class="w">    </span><span class="n">valuey</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="n">distance</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="w"> </span><span class="p">(</span><span class="n">valuez</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">-1</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="w"> </span><span class="p">(</span><span class="n">valuez</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setBoxDerivatives</span><span class="w">   </span><span class="p">(</span><span class="n">valuez</span><span class="p">,</span><span class="n">Tensor</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">-1</span><span class="p">)));</span>
+<span class="w">    </span><span class="n">valuez</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="n">distance</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</pre></div>  </div></div>
+<span style="color:blue" class="comment"># compute standard distance</span>
+<span style="display:none;" id="LOAD.md_working_1.dat">The LOAD action with label <b></b> calculates something</span><b name="LOAD.md_working_1.datd" onclick='showPath("LOAD.md_working_1.dat","LOAD.md_working_1.datd","LOAD.md_working_1.datd","brown")'>d</b>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,10
+<span style="color:blue" class="comment"># compute modified distance</span>
+<span style="display:none;" id="LOAD.md_working_1.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d.value</td><td>the DISTANCE between this pair of atoms</td></tr></table></span><b name="LOAD.md_working_1.datd2" onclick='showPath("LOAD.md_working_1.dat","LOAD.md_working_1.datd2","LOAD.md_working_1.datd2","brown")'>d2</b>: <span class="plumedtooltip" style="color:green">DISTANCE2<span class="right">This action is not part of PLUMED and was included by using a LOAD command <a href="https://www.plumed.org/doc-master/user-doc/html/LOAD" style="color:green">More details</a><i></i></span></span> ATOMS=1,10
+<span style="color:blue" class="comment"># print them on a file</span>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="LOAD.md_working_1.datd">d</b>,d2 <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=compare-them
+</pre></div>
+
+<p>When PLUMED reads the input above it first compiles the code in <code>Distance2.cpp</code>. The resulting object file
+is then loaded into PLUMED. If you look at the cpp file that is input in the command above you can see that
+a new action called <code>DISTANCE2</code> is defined within it.  We can thus use this new action in the input above.</p>
+<p>Instead of compiling the code at runtime you can construct a shared object from the Distance2.cpp file and LOAD the shared library instead of
+the cpp file.  To construct the shared object you would use the following command:</p>
+<div class="highlight"><pre><span></span><code>&gt; plumed mklib Distance2.cpp
+</code></pre></div>
+<p>When you run this command a new file called <code>Distance2.so</code> (or <code>Distance2.dylib</code> on a mac) is created.
+You can then load this shared object in PLUMED by using the following LOAD command</p>
+<div class="highlight"><pre><span></span><code>LOAD FILE=Distance2.so
+</code></pre></div>
+<p>The new functionality within the Distance2.cpp file can then be used in the remainder of the input in the same way it was
+used in the previous example.
+(Notice that the only reason for not using the usual PLUMED syntax highlightling in the example above is that we have no
+file called Distance2.so.)</p>
+<p>From PLUMED 2.10 onwards the LOAD action can be placed at any point of the input
+file. The loaded functionality will then only affect commands that are placed after the LOAD action.
+These features are illustrated in the input below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_LOAD.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../LOAD.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-failed-red.svg" alt="tested on2.11" /></a></div>
+<div class="headerBadge"><img src="https://img.shields.io/badge/with-LOAD-yellow.svg" alt="tested on master" /></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/basic/rt15/Distance3.cpp</span>
+<span style="color:blue" class="comment"># compute standard distance</span>
+<b name="LOAD.md_working_2.datd" onclick='showPath("LOAD.md_working_2.dat","LOAD.md_working_2.datd","LOAD.md_working_2.datd","brown")'>d</b>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,10
+<span style="color:blue" class="comment"># load the new definition</span>
+<span style="display:none;" id="LOAD.md_working_2.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d.value</td><td>the DISTANCE between this pair of atoms</td></tr></table></span><span class="plumedtooltip" style="color:green">LOAD<span class="right">Loads a library, possibly defining new actions. <a href="https://www.plumed.org/doc-master/user-doc/html/LOAD" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">FILE<span class="right">file to be loaded<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt15/Distance3.cpp<div class="right"> Click <a onclick='openModal("LOAD.md_working_2.datregtest/basic/rt15/Distance3.cpp1")'>here</a> to see an extract from this file.<i></i></div></div><div id="LOAD.md_working_2.datregtest/basic/rt15/Distance3.cpp1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("LOAD.md_working_2.datregtest/basic/rt15/Distance3.cpp1")'>&times;</span>  <h2>FILE: regtest/basic/rt15/Distance3.cpp</h2></div><div class="plumedmodal-body">    <pre><div class="highlight"><pre><span></span><span class="cm">/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+<span class="cm">   Copyright (c) 2013 The plumed team</span>
+<span class="cm">   (see the PEOPLE file at the root of the distribution for a list of names)</span>
+
+<span class="cm">   See http://www.plumed-code.org for more information.</span>
+
+<span class="cm">   This file is part of plumed, version 2.0.</span>
+
+<span class="cm">   plumed is free software: you can redistribute it and/or modify</span>
+<span class="cm">   it under the terms of the GNU Lesser General Public License as published by</span>
+<span class="cm">   the Free Software Foundation, either version 3 of the License, or</span>
+<span class="cm">   (at your option) any later version.</span>
+
+<span class="cm">   plumed is distributed in the hope that it will be useful,</span>
+<span class="cm">   but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="cm">   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="cm">   GNU Lesser General Public License for more details.</span>
+
+<span class="cm">   You should have received a copy of the GNU Lesser General Public License</span>
+<span class="cm">   along with plumed.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="cm">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"colvar/Colvar.h"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"core/ActionRegister.h"</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">PLMD</span><span class="p">{</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Distance</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">colvar</span><span class="o">::</span><span class="n">Colvar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">components</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">pbc</span><span class="p">;</span>
+
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">registerKeywords</span><span class="p">(</span><span class="w"> </span><span class="n">Keywords</span><span class="o">&amp;</span><span class="w"> </span><span class="n">keys</span><span class="w"> </span><span class="p">);</span>
+<span class="w">  </span><span class="n">Distance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ActionOptions</span><span class="o">&amp;</span><span class="p">);</span>
+<span class="c1">// active methods:</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">calculate</span><span class="p">();</span>
+<span class="p">};</span>
+
+<span class="n">PLUMED_REGISTER_ACTION</span><span class="p">(</span><span class="n">Distance</span><span class="p">,</span><span class="s">"DISTANCE"</span><span class="p">)</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">Distance</span><span class="o">::</span><span class="n">registerKeywords</span><span class="p">(</span><span class="w"> </span><span class="n">Keywords</span><span class="o">&amp;</span><span class="w"> </span><span class="n">keys</span><span class="w"> </span><span class="p">){</span>
+<span class="w">  </span><span class="n">Colvar</span><span class="o">::</span><span class="n">registerKeywords</span><span class="p">(</span><span class="w"> </span><span class="n">keys</span><span class="w"> </span><span class="p">);</span>
+<span class="w">  </span><span class="n">keys</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">"atoms"</span><span class="p">,</span><span class="s">"ATOMS"</span><span class="p">,</span><span class="s">"the pair of atom that we are calculating the distance between"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">keys</span><span class="p">.</span><span class="n">addFlag</span><span class="p">(</span><span class="s">"COMPONENTS"</span><span class="p">,</span><span class="nb">false</span><span class="p">,</span><span class="s">"calculate the x, y and z components of the distance separately and store them as label.x, label.y and label.z"</span><span class="p">);</span><span class="w">  </span>
+<span class="w">  </span><span class="n">keys</span><span class="p">.</span><span class="n">setValueDescription</span><span class="p">(</span><span class="s">"scalar"</span><span class="p">,</span><span class="s">"the distance between the input atoms"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">Distance</span><span class="o">::</span><span class="n">Distance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ActionOptions</span><span class="o">&amp;</span><span class="n">ao</span><span class="p">)</span><span class="o">:</span>
+<span class="n">PLUMED_COLVAR_INIT</span><span class="p">(</span><span class="n">ao</span><span class="p">),</span>
+<span class="n">components</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span>
+<span class="n">pbc</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">AtomNumber</span><span class="o">&gt;</span><span class="w"> </span><span class="n">atoms</span><span class="p">;</span>
+<span class="w">  </span><span class="n">parseAtomList</span><span class="p">(</span><span class="s">"ATOMS"</span><span class="p">,</span><span class="n">atoms</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">atoms</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">!=</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">error</span><span class="p">(</span><span class="s">"Number of specified atoms should be 2"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">parseFlag</span><span class="p">(</span><span class="s">"COMPONENTS"</span><span class="p">,</span><span class="n">components</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">nopbc</span><span class="o">=!</span><span class="n">pbc</span><span class="p">;</span>
+<span class="w">  </span><span class="n">parseFlag</span><span class="p">(</span><span class="s">"NOPBC"</span><span class="p">,</span><span class="n">nopbc</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pbc</span><span class="o">=!</span><span class="n">nopbc</span><span class="p">;</span>
+<span class="w">  </span><span class="n">checkRead</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">log</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"  between atoms %d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">atoms</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">serial</span><span class="p">(),</span><span class="n">atoms</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">serial</span><span class="p">());</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">pbc</span><span class="p">)</span><span class="w"> </span><span class="n">log</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"  using periodic boundary conditions</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="w">  </span><span class="k">else</span><span class="w">    </span><span class="n">log</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"  without periodic boundary conditions</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">components</span><span class="p">){</span>
+
+<span class="w">    </span><span class="n">addValueWithDerivatives</span><span class="p">();</span><span class="w"> </span><span class="n">setNotPeriodic</span><span class="p">();</span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="p">{</span>
+<span class="w">    </span><span class="n">addComponentWithDerivatives</span><span class="p">(</span><span class="s">"x"</span><span class="p">);</span><span class="w"> </span><span class="n">componentIsNotPeriodic</span><span class="p">(</span><span class="s">"x"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">addComponentWithDerivatives</span><span class="p">(</span><span class="s">"y"</span><span class="p">);</span><span class="w"> </span><span class="n">componentIsNotPeriodic</span><span class="p">(</span><span class="s">"y"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">addComponentWithDerivatives</span><span class="p">(</span><span class="s">"z"</span><span class="p">);</span><span class="w"> </span><span class="n">componentIsNotPeriodic</span><span class="p">(</span><span class="s">"z"</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">requestAtoms</span><span class="p">(</span><span class="n">atoms</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="c1">// calculator</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">Distance</span><span class="o">::</span><span class="n">calculate</span><span class="p">(){</span>
+
+<span class="w">  </span><span class="n">Vector</span><span class="w"> </span><span class="n">distance</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">pbc</span><span class="p">){</span>
+<span class="w">    </span><span class="n">distance</span><span class="o">=</span><span class="n">pbcDistance</span><span class="p">(</span><span class="n">getPosition</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">getPosition</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">distance</span><span class="o">=</span><span class="n">delta</span><span class="p">(</span><span class="n">getPosition</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">getPosition</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="o">=</span><span class="n">distance</span><span class="p">.</span><span class="n">modulo</span><span class="p">()</span><span class="o">+</span><span class="mi">10</span><span class="p">;</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">invvalue</span><span class="o">=</span><span class="mf">1.0</span><span class="o">/</span><span class="n">value</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">components</span><span class="p">){</span>
+
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="n">invvalue</span><span class="o">*</span><span class="n">distance</span><span class="p">);</span>
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">invvalue</span><span class="o">*</span><span class="n">distance</span><span class="p">);</span>
+<span class="w">    </span><span class="n">setBoxDerivatives</span><span class="w">  </span><span class="p">(</span><span class="o">-</span><span class="n">invvalue</span><span class="o">*</span><span class="n">Tensor</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span><span class="n">distance</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setValue</span><span class="w">           </span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+
+<span class="w">  </span><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+
+<span class="w">    </span><span class="n">Value</span><span class="o">*</span><span class="w"> </span><span class="n">valuex</span><span class="o">=</span><span class="n">getPntrToComponent</span><span class="p">(</span><span class="s">"x"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Value</span><span class="o">*</span><span class="w"> </span><span class="n">valuey</span><span class="o">=</span><span class="n">getPntrToComponent</span><span class="p">(</span><span class="s">"y"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Value</span><span class="o">*</span><span class="w"> </span><span class="n">valuez</span><span class="o">=</span><span class="n">getPntrToComponent</span><span class="p">(</span><span class="s">"z"</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="w"> </span><span class="p">(</span><span class="n">valuex</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">-1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="w"> </span><span class="p">(</span><span class="n">valuex</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setBoxDerivatives</span><span class="w">   </span><span class="p">(</span><span class="n">valuex</span><span class="p">,</span><span class="n">Tensor</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">-1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)));</span>
+<span class="w">    </span><span class="n">valuex</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="n">distance</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="w"> </span><span class="p">(</span><span class="n">valuey</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">-1</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="w"> </span><span class="p">(</span><span class="n">valuey</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setBoxDerivatives</span><span class="w">   </span><span class="p">(</span><span class="n">valuey</span><span class="p">,</span><span class="n">Tensor</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">-1</span><span class="p">,</span><span class="mi">0</span><span class="p">)));</span>
+<span class="w">    </span><span class="n">valuey</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="n">distance</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="w"> </span><span class="p">(</span><span class="n">valuez</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">-1</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setAtomsDerivatives</span><span class="w"> </span><span class="p">(</span><span class="n">valuez</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">    </span><span class="n">setBoxDerivatives</span><span class="w">   </span><span class="p">(</span><span class="n">valuez</span><span class="p">,</span><span class="n">Tensor</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span><span class="n">Vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">-1</span><span class="p">)));</span>
+<span class="w">    </span><span class="n">valuez</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="n">distance</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</pre></div>  </div></div>
+<span style="color:blue" class="comment"># compute modified distance</span>
+<span style="display:none;" id="LOAD.md_working_2.dat">The LOAD action with label <b></b> calculates something</span><b name="LOAD.md_working_2.datd2" onclick='showPath("LOAD.md_working_2.dat","LOAD.md_working_2.datd2","LOAD.md_working_2.datd2","brown")'>d2</b>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,10
+<span style="color:blue" class="comment"># print them on a file</span>
+<span style="display:none;" id="LOAD.md_working_2.datd2">The DISTANCE action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2.value</td><td>the DISTANCE between this pair of atoms</td></tr></table></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="LOAD.md_working_2.datd">d</b>,<b name="LOAD.md_working_2.datd2">d2</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=compare-them
+</pre></div>
+
+<p>Notice that <code>Distance3.cpp</code> replaces DISTANCE2 in the command that was used in <code>Distance2.cpp</code>; namely:</p>
+<div class="highlight"><pre><span></span><code><span class="n">PLUMED_REGISTER_ACTION</span><span class="p">(</span><span class="n">Distance</span><span class="p">,</span><span class="s">"DISTANCE2"</span><span class="p">)</span>
+</code></pre></div>
+<p>with DISTANCE. Consequently, when we load the <code>Distance3.cpp</code> file here we redefine the DISTANCE command.
+The functions that compute <code>d</code> and <code>d2</code> in the above input are thus different.</p>
+<p>A final point to note is that, starting with PLUMED 2.10, the LOAD action can be used in contexts where
+multiple Plumed objects exist. A possible example is multithreading: loading an action
+from a Plumed object used in one thread will not affect other threads.
+Another example is if multiple Plumed objects are created in the C/C++ or Python interface.
+If a LOAD command is used in one of these objects, the loaded action will not affect
+the other objects.</p>
+<div class="admonition note">
+<p>The example inputs on this page appear as not working because you cannot use the dynamic loading on GitHub Actions. On a machine where this functionality is available these inputs should work.</p>
+</div>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">FILE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">file to be loaded</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,15 @@
+# This stores the positions of all the first 10 atoms in the system for later analysis
+cc: COLLECT_FRAMES ATOMS=1,2,3,4,5,6,7,8,9,10 ALIGN=OPTIMAL
+
+# We now compute the dissimilarities between these frames
+cc_dataT: TRANSPOSE ARG=cc_data
+dd: DISSIMILARITIES ARG=cc_data,cc_dataT
+
+# Create a mask that will be used to create our landmark data
+mask: FARTHEST_POINT_SAMPLING ARG=dd NZEROS=100
+
+# These are the landmark points
+landmarks: SELECT_WITH_MASK ARG=cc_data ROW_MASK=mask
+
+# Output the landmarks to a file
+DUMPPDB ATOMS=landmarks ATOM_INDICES=1,2,3,4,5,6,7,8,9,10 FILE=traj.pdb

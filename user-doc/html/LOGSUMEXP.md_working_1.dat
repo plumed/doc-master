@@ -1,0 +1,19 @@
+# Calculate some CVs for later analysis
+t1: TORSION ATOMS=1,2,3,4
+t2: TORSION ATOMS=5,6,7,8
+t3: TORSION ATOMS=9,10,11,12
+
+# This computes the bias potential
+r: RESTRAINT ARG=t1 AT=pi/2 KAPPA=10
+# This calculates the instantaneous reweighting weight
+# given the bias potential that is acting upon the system
+bw: REWEIGHT_BIAS TEMP=300
+
+# This collects our data for later analysis and the reweighting weights
+cc: COLLECT_FRAMES ARG=t1,t2,t3 LOGWEIGHTS=bw
+
+# And this determines the final vector of weights that should be used for histograms and so on.
+weights: LOGSUMEXP ARG=cc_logweights
+
+# This outputs the time series of reweighting weights to a file
+DUMPVECTOR ARG=weights FILE=weights

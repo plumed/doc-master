@@ -1,0 +1,5 @@
+<map id="PLMD::lepton::PlaceholderFunction" name="PLMD::lepton::PlaceholderFunction">
+<area shape="rect" id="Node000001" title="This class is an implementation of CustomFunction that does no computation." alt="" coords="20,79,212,119"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1lepton_1_1_custom_function.html" title="This class is the interface for defining your own function that may be included in expressions." alt="" coords="5,5,227,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,44,119,79,113,79,113,44"/>
+</map>

@@ -1,0 +1,1 @@
+plumed sum_hills --hills PATHTOMYHILLSFILE  --fmt %8.3f

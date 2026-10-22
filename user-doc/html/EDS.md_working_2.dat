@@ -1,0 +1,7 @@
+dist: DISTANCE ATOMS=1,2
+# this is the squared of the distance
+dist2: COMBINE ARG=dist POWERS=2 PERIODIC=NO
+
+# bias mean and variance
+eds: EDS ARG=dist,dist2 CENTER=2.0,1.0 PERIOD=100 TEMP=1.0
+PRINT ARG=dist,dist2,eds.dist_coupling,eds.dist2_coupling,eds.bias,eds.force2 FILE=colvars.dat STRIDE=100

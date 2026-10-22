@@ -1,0 +1,1014 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shortcut: MAHALANOBIS_DISTANCE - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-mahalanobis_distance" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: MAHALANOBIS_DISTANCE
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dealing-with-periodic-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dealing with periodic variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculating-multiple-distances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculating multiple distances
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-mahalanobis_distance"><a href="../shortcuts/">Shortcut</a>: MAHALANOBIS_DISTANCE</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_refdist/"><strong>refdist</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate the Mahalanobis distance between two points in CV space</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the Mahalanobis distances between the input vectors</td>
+<td style="text-align: center;">scalar/vector</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate the Mahalanobis distance between two points in CV space</p>
+<p>If we have two <script type="math/tex">n</script>-dimensional vectors <script type="math/tex">u</script> and <script type="math/tex">v</script> we can calculate the
+<a href="https://en.wikipedia.org/wiki/Mahalanobis_distance">Mahalanobis distance</a> between the two points as</p>
+<p>
+<script type="math/tex; mode=display">
+d = \sqrt{ \sum_{i=1}^n \sum_{j=1}^n m_{ij} (u_i - v_i)(u_j - v_j) }
+</script>
+</p>
+<p>which can be expressed in matrix form as:</p>
+<p>
+<script type="math/tex; mode=display">
+d^2 = (u-v)^T M (u-v)
+</script>
+</p>
+<p>The inputs below shows an example where this is used to calculate the Mahalanobis distance
+between the instaneous values of some torsional angles and some reference values
+for these distances.  The inverse covriance values are provided in the constant value with label <code>m</code>.
+In this first example the input values are vectors:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MAHALANOBIS_DISTANCE.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MAHALANOBIS_DISTANCE.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="MAHALANOBIS_DISTANCE.md_working_1.datm" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_1.dat","MAHALANOBIS_DISTANCE.md_working_1.datm","MAHALANOBIS_DISTANCE.md_working_1.datm","red")'>m</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_1.datm">The CONSTANT action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.45960237E-0001,-1.30615381E-0001,-1.30615381E-0001,2.40239117E-0001 <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=2 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=2
+<span id="MAHALANOBIS_DISTANCE.md_working_1.datdefc_short"><b name="MAHALANOBIS_DISTANCE.md_working_1.datc" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_1.dat","MAHALANOBIS_DISTANCE.md_working_1.datc","MAHALANOBIS_DISTANCE.md_working_1.datc","blue")'>c</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_1.datc">The CONSTANT action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_1.datdefc");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,2
+</span><span id="MAHALANOBIS_DISTANCE.md_working_1.datdefc_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_1.datc" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_1.dat","MAHALANOBIS_DISTANCE.md_working_1.datc","MAHALANOBIS_DISTANCE.md_working_1.datc","blue")'>c</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_1.datdefc");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,2  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><b name="MAHALANOBIS_DISTANCE.md_working_1.datd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_1.dat","MAHALANOBIS_DISTANCE.md_working_1.datd","MAHALANOBIS_DISTANCE.md_working_1.datd","blue")'>d</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_1.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4
+<span id="MAHALANOBIS_DISTANCE.md_working_1.datdd_short"><b name="MAHALANOBIS_DISTANCE.md_working_1.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_1.dat","MAHALANOBIS_DISTANCE.md_working_1.datdd","MAHALANOBIS_DISTANCE.md_working_1.datdd_shortcut","black")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_1.datdd_shortcut">The MAHALANOBIS_DISTANCE action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="black">scalar</font></td><td>the Mahalanobis distances between the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MAHALANOBIS_DISTANCE<span class="right">Calculate the Mahalanobis distance between two points in CV space This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_1.datdd");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/MAHALANOBIS_DISTANCE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_1.datc">c</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_1.datd">d</b> <span class="plumedtooltip">METRIC<span class="right">The inverse covariance matrix that should be used when calculating the distance<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_1.datm">m</b>
+</span><span id="MAHALANOBIS_DISTANCE.md_working_1.datdd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_1.datdd")'># dd: MAHALANOBIS_DISTANCE ARG1=c ARG2=d METRIC=m</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="MAHALANOBIS_DISTANCE.md_working_1.datdd_diff" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_1.dat","MAHALANOBIS_DISTANCE.md_working_1.datdd_diff","MAHALANOBIS_DISTANCE.md_working_1.datdd_diff","red")'>dd_diff</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_1.datdd_diff">The TRANSPOSE action with label <b>dd_diff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diff</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISPLACEMENT<span class="right">Calculate the displacement vector between the pair of input vectors <a href="https://www.plumed.org/doc-master/user-doc/html/DISPLACEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_1.datc">c</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_1.datd">d</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_1.datdd_diffT" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_1.dat","MAHALANOBIS_DISTANCE.md_working_1.datdd_diffT","MAHALANOBIS_DISTANCE.md_working_1.datdd_diffT","blue")'>dd_diffT</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_1.datdd_diffT">The TRANSPOSE action with label <b>dd_diffT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diffT</td><td width="5%"><font color="blue">vector</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_1.datdd_diff">dd_diff</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_1.datdd_matvec" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_1.dat","MAHALANOBIS_DISTANCE.md_working_1.datdd_matvec","MAHALANOBIS_DISTANCE.md_working_1.datdd_matvec","blue")'>dd_matvec</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_1.datdd_matvec">The MATRIX_VECTOR_PRODUCT action with label <b>dd_matvec</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_matvec</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_1.datm">m</b>,<b name="MAHALANOBIS_DISTANCE.md_working_1.datdd_diffT">dd_diffT</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_1.datdd_2" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_1.dat","MAHALANOBIS_DISTANCE.md_working_1.datdd_2","MAHALANOBIS_DISTANCE.md_working_1.datdd_2","black")'>dd_2</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_1.datdd_2">The MATRIX_PRODUCT_DIAGONAL action with label <b>dd_2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_2</td><td width="5%"><font color="black">scalar</font></td><td>a vector containing the diagonal elements of the matrix that obtaned by multiplying the two input matrices together</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT_DIAGONAL<span class="right">Calculate the product of two matrices and return a vector that contains the diagonal elements of the ouptut vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT_DIAGONAL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the two vectors/matrices whose product are to be taken<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_1.datdd_diff">dd_diff</b>,<b name="MAHALANOBIS_DISTANCE.md_working_1.datdd_matvec">dd_matvec</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_1.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_1.dat","MAHALANOBIS_DISTANCE.md_working_1.datdd","MAHALANOBIS_DISTANCE.md_working_1.datdd","black")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_1.datdd">The CUSTOM action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_1.datdd_2">dd_2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_1.datdd">dd</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>while this second example does the same thing but uses scalars in input.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MAHALANOBIS_DISTANCE.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MAHALANOBIS_DISTANCE.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="MAHALANOBIS_DISTANCE.md_working_2.datm" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datm","MAHALANOBIS_DISTANCE.md_working_2.datm","red")'>m</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_2.datm">The CONSTANT action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.45960237E-0001,-1.30615381E-0001,-1.30615381E-0001,2.40239117E-0001 <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=2 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=2
+<span id="MAHALANOBIS_DISTANCE.md_working_2.datdefc1_short"><b name="MAHALANOBIS_DISTANCE.md_working_2.datc1" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datc1","MAHALANOBIS_DISTANCE.md_working_2.datc1","black")'>c1</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_2.datc1">The CONSTANT action with label <b>c1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c1</td><td width="5%"><font color="black">scalar</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_2.datdefc1");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUE<span class="right">the single number that you would like to store<i></i></span></span>=1
+</span><span id="MAHALANOBIS_DISTANCE.md_working_2.datdefc1_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_2.datc1" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datc1","MAHALANOBIS_DISTANCE.md_working_2.datc1","black")'>c1</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_2.datdefc1");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUE<span class="right">the single number that you would like to store<i></i></span></span>=1  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><b name="MAHALANOBIS_DISTANCE.md_working_2.datd1" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datd1","MAHALANOBIS_DISTANCE.md_working_2.datd1","black")'>d1</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_2.datd1">The DISTANCE action with label <b>d1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d1</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2
+<span id="MAHALANOBIS_DISTANCE.md_working_2.datdefc2_short"><b name="MAHALANOBIS_DISTANCE.md_working_2.datc2" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datc2","MAHALANOBIS_DISTANCE.md_working_2.datc2","black")'>c2</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_2.datc2">The CONSTANT action with label <b>c2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c2</td><td width="5%"><font color="black">scalar</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_2.datdefc2");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUE<span class="right">the single number that you would like to store<i></i></span></span>=2
+</span><span id="MAHALANOBIS_DISTANCE.md_working_2.datdefc2_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_2.datc2" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datc2","MAHALANOBIS_DISTANCE.md_working_2.datc2","black")'>c2</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_2.datdefc2");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUE<span class="right">the single number that you would like to store<i></i></span></span>=2  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><b name="MAHALANOBIS_DISTANCE.md_working_2.datd2" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datd2","MAHALANOBIS_DISTANCE.md_working_2.datd2","black")'>d2</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_2.datd2">The DISTANCE action with label <b>d2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d2</td><td width="5%"><font color="black">scalar</font></td><td>the DISTANCE between this pair of atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4
+<span id="MAHALANOBIS_DISTANCE.md_working_2.datdd_short"><b name="MAHALANOBIS_DISTANCE.md_working_2.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datdd","MAHALANOBIS_DISTANCE.md_working_2.datdd_shortcut","black")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_2.datdd_shortcut">The MAHALANOBIS_DISTANCE action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="black">scalar</font></td><td>the Mahalanobis distances between the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MAHALANOBIS_DISTANCE<span class="right">Calculate the Mahalanobis distance between two points in CV space This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_2.datdd");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/MAHALANOBIS_DISTANCE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_2.datc1">c1</b>,<b name="MAHALANOBIS_DISTANCE.md_working_2.datc2">c2</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_2.datd1">d1</b>,<b name="MAHALANOBIS_DISTANCE.md_working_2.datd2">d2</b> <span class="plumedtooltip">METRIC<span class="right">The inverse covariance matrix that should be used when calculating the distance<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_2.datm">m</b>
+</span><span id="MAHALANOBIS_DISTANCE.md_working_2.datdd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_2.datdd")'># dd: MAHALANOBIS_DISTANCE ARG1=c1,c2 ARG2=d1,d2 METRIC=m</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="MAHALANOBIS_DISTANCE.md_working_2.datdd_diff" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datdd_diff","MAHALANOBIS_DISTANCE.md_working_2.datdd_diff","red")'>dd_diff</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_2.datdd_diff">The VSTACK action with label <b>dd_diff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diff</td><td width="5%"><font color="red">matrix</font></td><td>a matrix that contains the input vectors in its columns</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISPLACEMENT<span class="right">Calculate the displacement vector between the pair of input vectors <a href="https://www.plumed.org/doc-master/user-doc/html/DISPLACEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_2.datc1">c1</b>,<b name="MAHALANOBIS_DISTANCE.md_working_2.datc2">c2</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_2.datd1">d1</b>,<b name="MAHALANOBIS_DISTANCE.md_working_2.datd2">d2</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_2.datdd_diffT" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datdd_diffT","MAHALANOBIS_DISTANCE.md_working_2.datdd_diffT","blue")'>dd_diffT</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_2.datdd_diffT">The TRANSPOSE action with label <b>dd_diffT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diffT</td><td width="5%"><font color="blue">vector</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_2.datdd_diff">dd_diff</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_2.datdd_matvec" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datdd_matvec","MAHALANOBIS_DISTANCE.md_working_2.datdd_matvec","blue")'>dd_matvec</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_2.datdd_matvec">The MATRIX_VECTOR_PRODUCT action with label <b>dd_matvec</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_matvec</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_2.datm">m</b>,<b name="MAHALANOBIS_DISTANCE.md_working_2.datdd_diffT">dd_diffT</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_2.datdd_2" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datdd_2","MAHALANOBIS_DISTANCE.md_working_2.datdd_2","black")'>dd_2</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_2.datdd_2">The MATRIX_PRODUCT_DIAGONAL action with label <b>dd_2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_2</td><td width="5%"><font color="black">scalar</font></td><td>a vector containing the diagonal elements of the matrix that obtaned by multiplying the two input matrices together</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT_DIAGONAL<span class="right">Calculate the product of two matrices and return a vector that contains the diagonal elements of the ouptut vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT_DIAGONAL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the two vectors/matrices whose product are to be taken<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_2.datdd_diff">dd_diff</b>,<b name="MAHALANOBIS_DISTANCE.md_working_2.datdd_matvec">dd_matvec</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_2.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_2.dat","MAHALANOBIS_DISTANCE.md_working_2.datdd","MAHALANOBIS_DISTANCE.md_working_2.datdd","black")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_2.datdd">The CUSTOM action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_2.datdd_2">dd_2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_2.datdd">dd</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>Lastly, note that if you want to calculate the square of the distance rather than the distance you can use
+the <code>SQUARED</code> flag as shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MAHALANOBIS_DISTANCE.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MAHALANOBIS_DISTANCE.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="MAHALANOBIS_DISTANCE.md_working_3.datm" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_3.dat","MAHALANOBIS_DISTANCE.md_working_3.datm","MAHALANOBIS_DISTANCE.md_working_3.datm","red")'>m</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_3.datm">The CONSTANT action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.45960237E-0001,-1.30615381E-0001,-1.30615381E-0001,2.40239117E-0001 <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=2 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=2
+<span id="MAHALANOBIS_DISTANCE.md_working_3.datdefc_short"><b name="MAHALANOBIS_DISTANCE.md_working_3.datc" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_3.dat","MAHALANOBIS_DISTANCE.md_working_3.datc","MAHALANOBIS_DISTANCE.md_working_3.datc","blue")'>c</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_3.datc">The CONSTANT action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_3.datdefc");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,2
+</span><span id="MAHALANOBIS_DISTANCE.md_working_3.datdefc_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_3.datc" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_3.dat","MAHALANOBIS_DISTANCE.md_working_3.datc","MAHALANOBIS_DISTANCE.md_working_3.datc","blue")'>c</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_3.datdefc");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,2  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><b name="MAHALANOBIS_DISTANCE.md_working_3.datd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_3.dat","MAHALANOBIS_DISTANCE.md_working_3.datd","MAHALANOBIS_DISTANCE.md_working_3.datd","blue")'>d</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_3.datd">The DISTANCE action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the DISTANCE for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISTANCE<span class="right">Calculate the distance/s between pairs of atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=1,2 <span class="plumedtooltip">ATOMS2<span class="right">the pair of atom that we are calculating the distance between<i></i></span></span>=3,4
+<span id="MAHALANOBIS_DISTANCE.md_working_3.datdd_short"><b name="MAHALANOBIS_DISTANCE.md_working_3.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_3.dat","MAHALANOBIS_DISTANCE.md_working_3.datdd","MAHALANOBIS_DISTANCE.md_working_3.datdd_shortcut","black")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_3.datdd_shortcut">The MAHALANOBIS_DISTANCE action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="black">scalar</font></td><td>the Mahalanobis distances between the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MAHALANOBIS_DISTANCE<span class="right">Calculate the Mahalanobis distance between two points in CV space This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_3.datdd");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/MAHALANOBIS_DISTANCE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_3.datc">c</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_3.datd">d</b> <span class="plumedtooltip">METRIC<span class="right">The inverse covariance matrix that should be used when calculating the distance<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_3.datm">m</b> <span class="plumedtooltip">SQUARED<span class="right"> The squared distance should be calculated<i></i></span></span>
+</span><span id="MAHALANOBIS_DISTANCE.md_working_3.datdd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_3.datdd")'># dd: MAHALANOBIS_DISTANCE ARG1=c ARG2=d METRIC=m SQUARED</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="MAHALANOBIS_DISTANCE.md_working_3.datdd_diff" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_3.dat","MAHALANOBIS_DISTANCE.md_working_3.datdd_diff","MAHALANOBIS_DISTANCE.md_working_3.datdd_diff","red")'>dd_diff</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_3.datdd_diff">The TRANSPOSE action with label <b>dd_diff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diff</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISPLACEMENT<span class="right">Calculate the displacement vector between the pair of input vectors <a href="https://www.plumed.org/doc-master/user-doc/html/DISPLACEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_3.datc">c</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_3.datd">d</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_3.datdd_diffT" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_3.dat","MAHALANOBIS_DISTANCE.md_working_3.datdd_diffT","MAHALANOBIS_DISTANCE.md_working_3.datdd_diffT","blue")'>dd_diffT</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_3.datdd_diffT">The TRANSPOSE action with label <b>dd_diffT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diffT</td><td width="5%"><font color="blue">vector</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_3.datdd_diff">dd_diff</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_3.datdd_matvec" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_3.dat","MAHALANOBIS_DISTANCE.md_working_3.datdd_matvec","MAHALANOBIS_DISTANCE.md_working_3.datdd_matvec","blue")'>dd_matvec</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_3.datdd_matvec">The MATRIX_VECTOR_PRODUCT action with label <b>dd_matvec</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_matvec</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_3.datm">m</b>,<b name="MAHALANOBIS_DISTANCE.md_working_3.datdd_diffT">dd_diffT</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_3.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_3.dat","MAHALANOBIS_DISTANCE.md_working_3.datdd","MAHALANOBIS_DISTANCE.md_working_3.datdd","black")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_3.datdd">The MATRIX_PRODUCT_DIAGONAL action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="black">scalar</font></td><td>a vector containing the diagonal elements of the matrix that obtaned by multiplying the two input matrices together</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT_DIAGONAL<span class="right">Calculate the product of two matrices and return a vector that contains the diagonal elements of the ouptut vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT_DIAGONAL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the two vectors/matrices whose product are to be taken<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_3.datdd_diff">dd_diff</b>,<b name="MAHALANOBIS_DISTANCE.md_working_3.datdd_matvec">dd_matvec</b>
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_3.datdd">dd</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>Calculating the square of the distance is slightly cheapter than computing the distance as you avoid taking the square root.</p>
+<h2 id="dealing-with-periodic-variables">Dealing with periodic variables</h2>
+<p>When you are calculating a distance from a reference point you need to be careful when the input variables
+are periodic. If you are calculating the distance using the <a href="../EUCLIDEAN_DISTANCE/">EUCLIDEAN_DISTANCE</a> and
+<a href="../NORMALIZED_EUCLIDEAN_DISTANCE/">NORMALIZED_EUCLIDEAN_DISTANCE</a> commands this is not a problem. The problems are
+specific to the Mahalanobis distance command and have been resolved in the papers that are cited below by defining
+the following alternatative to the Mahalanobis distance:</p>
+<p>
+<script type="math/tex; mode=display">
+d^2 = 2\sum_{i=1}^n m_{ii} \left[ 1 - \cos\left( \frac{2\pi(u_i-v_i)}{P_i} \right) \right] + \sum_{i\ne j} m_{ij} \sin\left( \frac{2\pi(u_i-v_i)}{P_i} \right) \sin\left( \frac{2\pi(u_j-v_j)}{P_j} \right)
+</script>
+</p>
+<p>In this expression, <script type="math/tex">P_i</script> indicates the periodicity of the domain for variable <script type="math/tex">i</script>. If you would like to compute this
+distance with PLUMED you use the <code>VON_MISSES</code> shown below:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MAHALANOBIS_DISTANCE.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MAHALANOBIS_DISTANCE.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datm" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datm","MAHALANOBIS_DISTANCE.md_working_4.datm","red")'>m</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datm">The CONSTANT action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.45960237E-0001,-1.30615381E-0001,-1.30615381E-0001,2.40239117E-0001 <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=2 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=2
+<span id="MAHALANOBIS_DISTANCE.md_working_4.datdefc_short"><b name="MAHALANOBIS_DISTANCE.md_working_4.datc" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datc","MAHALANOBIS_DISTANCE.md_working_4.datc","blue")'>c</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datc">The CONSTANT action with label <b>c</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">c</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_4.datdefc");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,2
+</span><span id="MAHALANOBIS_DISTANCE.md_working_4.datdefc_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_4.datc" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datc","MAHALANOBIS_DISTANCE.md_working_4.datc","blue")'>c</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_4.datdefc");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,2  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><b name="MAHALANOBIS_DISTANCE.md_working_4.datd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datd","MAHALANOBIS_DISTANCE.md_working_4.datd","blue")'>d</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datd">The TORSION action with label <b>d</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">d</td><td width="5%"><font color="blue">vector</font></td><td>the TORSION for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,2,3,4 <span class="plumedtooltip">ATOMS2<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=5,6,7,8
+<span id="MAHALANOBIS_DISTANCE.md_working_4.datdd_short"><b name="MAHALANOBIS_DISTANCE.md_working_4.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd","MAHALANOBIS_DISTANCE.md_working_4.datdd_shortcut","black")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_shortcut">The MAHALANOBIS_DISTANCE action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="black">scalar</font></td><td>the Mahalanobis distances between the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MAHALANOBIS_DISTANCE<span class="right">Calculate the Mahalanobis distance between two points in CV space This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_4.datdd");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/MAHALANOBIS_DISTANCE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datc">c</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datd">d</b> <span class="plumedtooltip">METRIC<span class="right">The inverse covariance matrix that should be used when calculating the distance<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datm">m</b> <span class="plumedtooltip">VON_MISSES<span class="right"> Compute the mahalanobis distance in a way that is more sympathetic to the periodic boundary conditions<i></i></span></span>
+</span><span id="MAHALANOBIS_DISTANCE.md_working_4.datdd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_4.datdd")'># dd: MAHALANOBIS_DISTANCE ARG1=c ARG2=d METRIC=m VON_MISSES</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_diff" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_diff","MAHALANOBIS_DISTANCE.md_working_4.datdd_diff","red")'>dd_diff</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_diff">The TRANSPOSE action with label <b>dd_diff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diff</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISPLACEMENT<span class="right">Calculate the displacement vector between the pair of input vectors <a href="https://www.plumed.org/doc-master/user-doc/html/DISPLACEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datc">c</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datd">d</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_diffT" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_diffT","MAHALANOBIS_DISTANCE.md_working_4.datdd_diffT","blue")'>dd_diffT</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_diffT">The TRANSPOSE action with label <b>dd_diffT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diffT</td><td width="5%"><font color="blue">vector</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_diff">dd_diff</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_diagmet" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_diagmet","MAHALANOBIS_DISTANCE.md_working_4.datdd_diagmet","blue")'>dd_diagmet</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_diagmet">The CONSTANT action with label <b>dd_diagmet</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diagmet</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=0.24596,0.240239
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_offdiagmet" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_offdiagmet","MAHALANOBIS_DISTANCE.md_working_4.datdd_offdiagmet","red")'>dd_offdiagmet</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_offdiagmet">The CONSTANT action with label <b>dd_offdiagmet</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_offdiagmet</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=2 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=2 <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=0,-0.130615,-0.130615,0
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_scaled" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_scaled","MAHALANOBIS_DISTANCE.md_working_4.datdd_scaled","blue")'>dd_scaled</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_scaled">The CUSTOM action with label <b>dd_scaled</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_scaled</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_diffT">dd_diffT</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=2*pi*x/(pi--pi) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_sinediffT" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_sinediffT","MAHALANOBIS_DISTANCE.md_working_4.datdd_sinediffT","blue")'>dd_sinediffT</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_sinediffT">The CUSTOM action with label <b>dd_sinediffT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_sinediffT</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_scaled">dd_scaled</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sin(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_sinediff" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_sinediff","MAHALANOBIS_DISTANCE.md_working_4.datdd_sinediff","red")'>dd_sinediff</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_sinediff">The TRANSPOSE action with label <b>dd_sinediff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_sinediff</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_sinediffT">dd_sinediffT</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_matvec" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_matvec","MAHALANOBIS_DISTANCE.md_working_4.datdd_matvec","blue")'>dd_matvec</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_matvec">The MATRIX_VECTOR_PRODUCT action with label <b>dd_matvec</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_matvec</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datm">m</b>,<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_sinediffT">dd_sinediffT</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_offdiag" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_offdiag","MAHALANOBIS_DISTANCE.md_working_4.datdd_offdiag","black")'>dd_offdiag</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_offdiag">The MATRIX_PRODUCT_DIAGONAL action with label <b>dd_offdiag</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_offdiag</td><td width="5%"><font color="black">scalar</font></td><td>a vector containing the diagonal elements of the matrix that obtaned by multiplying the two input matrices together</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT_DIAGONAL<span class="right">Calculate the product of two matrices and return a vector that contains the diagonal elements of the ouptut vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT_DIAGONAL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the two vectors/matrices whose product are to be taken<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_sinediff">dd_sinediff</b>,<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_matvec">dd_matvec</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_prod" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_prod","MAHALANOBIS_DISTANCE.md_working_4.datdd_prod","blue")'>dd_prod</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_prod">The CUSTOM action with label <b>dd_prod</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_prod</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_scaled">dd_scaled</b>,<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_diagmet">dd_diagmet</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=2*(1-cos(x))*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_matones" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_matones","MAHALANOBIS_DISTANCE.md_working_4.datdd_matones","red")'>dd_matones</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_matones">The CONSTANT action with label <b>dd_matones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_matones</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=1 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=2 <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,1
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_diag" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_diag","MAHALANOBIS_DISTANCE.md_working_4.datdd_diag","black")'>dd_diag</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_diag">The MATRIX_PRODUCT_DIAGONAL action with label <b>dd_diag</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diag</td><td width="5%"><font color="black">scalar</font></td><td>a vector containing the diagonal elements of the matrix that obtaned by multiplying the two input matrices together</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT_DIAGONAL<span class="right">Calculate the product of two matrices and return a vector that contains the diagonal elements of the ouptut vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT_DIAGONAL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the two vectors/matrices whose product are to be taken<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_matones">dd_matones</b>,<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_prod">dd_prod</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_2" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd_2","MAHALANOBIS_DISTANCE.md_working_4.datdd_2","black")'>dd_2</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd_2">The COMBINE action with label <b>dd_2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_2</td><td width="5%"><font color="black">scalar</font></td><td>a linear combination</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_offdiag">dd_offdiag</b>,<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_diag">dd_diag</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_4.dat","MAHALANOBIS_DISTANCE.md_working_4.datdd","MAHALANOBIS_DISTANCE.md_working_4.datdd","black")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_4.datdd">The CUSTOM action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd_2">dd_2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_4.datdd">dd</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<h2 id="calculating-multiple-distances">Calculating multiple distances</h2>
+<p>Suppose that we now have <script type="math/tex">m</script> reference configurations we can define the following <script type="math/tex">m</script> distances
+from these reference configurations:</p>
+<p>
+<script type="math/tex; mode=display">
+d_j^2 = (u-v_j)^T M (u-v_j)
+</script>
+</p>
+<p>Lets suppose that we put the <script type="math/tex">m</script>, <script type="math/tex">n</script>-dimensional <script type="math/tex">(u-v_j)</script> vectors in this expression into a
+<script type="math/tex">n\times m</script> matrix, <script type="math/tex">A</script>, by using the <a href="../DISPLACEMENT/">DISPLACEMENT</a> command.  It is then
+straightforward to show that the <script type="math/tex">d_j^2</script> values in the above expression are the diagonal
+elements of the matrix product <script type="math/tex">A^T M A</script>.</p>
+<p>We can use this idea to calculate multiple MAHALANOBIS_DISTANCE values in the following inputs.
+This first example calculates the three distances between the instaneoues values of two torsions
+and three reference configurations.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MAHALANOBIS_DISTANCE.md_working_5.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MAHALANOBIS_DISTANCE.md_working_5.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="MAHALANOBIS_DISTANCE.md_working_5.datm" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datm","MAHALANOBIS_DISTANCE.md_working_5.datm","red")'>m</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_5.datm">The CONSTANT action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.45960237E-0001,-1.30615381E-0001,-1.30615381E-0001,2.40239117E-0001 <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=2 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=2
+<span id="MAHALANOBIS_DISTANCE.md_working_5.datdefref_psi_short"><b name="MAHALANOBIS_DISTANCE.md_working_5.datref_psi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datref_psi","MAHALANOBIS_DISTANCE.md_working_5.datref_psi","blue")'>ref_psi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_5.datref_psi">The CONSTANT action with label <b>ref_psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref_psi</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_5.datdefref_psi");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.25,1.3,-1.5
+</span><span id="MAHALANOBIS_DISTANCE.md_working_5.datdefref_psi_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_5.datref_psi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datref_psi","MAHALANOBIS_DISTANCE.md_working_5.datref_psi","blue")'>ref_psi</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_5.datdefref_psi");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.25,1.3,-1.5  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><span id="MAHALANOBIS_DISTANCE.md_working_5.datdefref_phi_short"><b name="MAHALANOBIS_DISTANCE.md_working_5.datref_phi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datref_phi","MAHALANOBIS_DISTANCE.md_working_5.datref_phi","blue")'>ref_phi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_5.datref_phi">The CONSTANT action with label <b>ref_phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref_phi</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_5.datdefref_phi");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-1.91,-0.6,2.4
+</span><span id="MAHALANOBIS_DISTANCE.md_working_5.datdefref_phi_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_5.datref_phi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datref_phi","MAHALANOBIS_DISTANCE.md_working_5.datref_phi","blue")'>ref_phi</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_5.datdefref_phi");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-1.91,-0.6,2.4  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><br/><b name="MAHALANOBIS_DISTANCE.md_working_5.datpsi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datpsi","MAHALANOBIS_DISTANCE.md_working_5.datpsi","black")'>psi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_5.datpsi">The TORSION action with label <b>psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">psi</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,2,3,4
+<b name="MAHALANOBIS_DISTANCE.md_working_5.datphi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datphi","MAHALANOBIS_DISTANCE.md_working_5.datphi","black")'>phi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_5.datphi">The TORSION action with label <b>phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">phi</td><td width="5%"><font color="black">scalar</font></td><td>the TORSION involving these atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=13,14,15,16
+
+<span id="MAHALANOBIS_DISTANCE.md_working_5.datdd_short"><b name="MAHALANOBIS_DISTANCE.md_working_5.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datdd","MAHALANOBIS_DISTANCE.md_working_5.datdd_shortcut","blue")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_5.datdd_shortcut">The MAHALANOBIS_DISTANCE action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="blue">vector</font></td><td>the Mahalanobis distances between the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MAHALANOBIS_DISTANCE<span class="right">Calculate the Mahalanobis distance between two points in CV space This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_5.datdd");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/MAHALANOBIS_DISTANCE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_5.datpsi">psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_5.datphi">phi</b> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_5.datref_psi">ref_psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_5.datref_phi">ref_phi</b> <span class="plumedtooltip">METRIC<span class="right">The inverse covariance matrix that should be used when calculating the distance<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_5.datm">m</b>
+</span><span id="MAHALANOBIS_DISTANCE.md_working_5.datdd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_5.datdd")'># dd: MAHALANOBIS_DISTANCE ARG2=psi,phi ARG1=ref_psi,ref_phi METRIC=m</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="MAHALANOBIS_DISTANCE.md_working_5.datdd_diff" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datdd_diff","MAHALANOBIS_DISTANCE.md_working_5.datdd_diff","red")'>dd_diff</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_5.datdd_diff">The VSTACK action with label <b>dd_diff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diff</td><td width="5%"><font color="red">matrix</font></td><td>a matrix that contains the input vectors in its columns</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISPLACEMENT<span class="right">Calculate the displacement vector between the pair of input vectors <a href="https://www.plumed.org/doc-master/user-doc/html/DISPLACEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_5.datref_psi">ref_psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_5.datref_phi">ref_phi</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_5.datpsi">psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_5.datphi">phi</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_5.datdd_diffT" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datdd_diffT","MAHALANOBIS_DISTANCE.md_working_5.datdd_diffT","red")'>dd_diffT</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_5.datdd_diffT">The TRANSPOSE action with label <b>dd_diffT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diffT</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_5.datdd_diff">dd_diff</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_5.datdd_matvec" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datdd_matvec","MAHALANOBIS_DISTANCE.md_working_5.datdd_matvec","red")'>dd_matvec</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_5.datdd_matvec">The MATRIX_PRODUCT action with label <b>dd_matvec</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_matvec</td><td width="5%"><font color="red">matrix</font></td><td>the product of the two input matrices</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT<span class="right">Calculate the product of two matrices <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the two matrices from which the product is calculated<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_5.datm">m</b>,<b name="MAHALANOBIS_DISTANCE.md_working_5.datdd_diffT">dd_diffT</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_5.datdd_2" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datdd_2","MAHALANOBIS_DISTANCE.md_working_5.datdd_2","blue")'>dd_2</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_5.datdd_2">The MATRIX_PRODUCT_DIAGONAL action with label <b>dd_2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_2</td><td width="5%"><font color="blue">vector</font></td><td>a vector containing the diagonal elements of the matrix that obtaned by multiplying the two input matrices together</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT_DIAGONAL<span class="right">Calculate the product of two matrices and return a vector that contains the diagonal elements of the ouptut vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT_DIAGONAL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the two vectors/matrices whose product are to be taken<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_5.datdd_diff">dd_diff</b>,<b name="MAHALANOBIS_DISTANCE.md_working_5.datdd_matvec">dd_matvec</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_5.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_5.dat","MAHALANOBIS_DISTANCE.md_working_5.datdd","MAHALANOBIS_DISTANCE.md_working_5.datdd","blue")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_5.datdd">The CUSTOM action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_5.datdd_2">dd_2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_5.datdd">dd</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>This section example calculates the three distances between a single reference value for the two
+torsions and three instances of this pair of torsions.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MAHALANOBIS_DISTANCE.md_working_6.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MAHALANOBIS_DISTANCE.md_working_6.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="MAHALANOBIS_DISTANCE.md_working_6.datm" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datm","MAHALANOBIS_DISTANCE.md_working_6.datm","red")'>m</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_6.datm">The CONSTANT action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.45960237E-0001,-1.30615381E-0001,-1.30615381E-0001,2.40239117E-0001 <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=2 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=2
+<span id="MAHALANOBIS_DISTANCE.md_working_6.datdefref_psi_short"><b name="MAHALANOBIS_DISTANCE.md_working_6.datref_psi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datref_psi","MAHALANOBIS_DISTANCE.md_working_6.datref_psi","black")'>ref_psi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_6.datref_psi">The CONSTANT action with label <b>ref_psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref_psi</td><td width="5%"><font color="black">scalar</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_6.datdefref_psi");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.25
+</span><span id="MAHALANOBIS_DISTANCE.md_working_6.datdefref_psi_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_6.datref_psi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datref_psi","MAHALANOBIS_DISTANCE.md_working_6.datref_psi","black")'>ref_psi</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_6.datdefref_psi");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.25  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><span id="MAHALANOBIS_DISTANCE.md_working_6.datdefref_phi_short"><b name="MAHALANOBIS_DISTANCE.md_working_6.datref_phi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datref_phi","MAHALANOBIS_DISTANCE.md_working_6.datref_phi","black")'>ref_phi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_6.datref_phi">The CONSTANT action with label <b>ref_phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref_phi</td><td width="5%"><font color="black">scalar</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_6.datdefref_phi");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-1.91
+</span><span id="MAHALANOBIS_DISTANCE.md_working_6.datdefref_phi_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_6.datref_phi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datref_phi","MAHALANOBIS_DISTANCE.md_working_6.datref_phi","black")'>ref_phi</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_6.datdefref_phi");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-1.91  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><br/><b name="MAHALANOBIS_DISTANCE.md_working_6.datpsi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datpsi","MAHALANOBIS_DISTANCE.md_working_6.datpsi","blue")'>psi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_6.datpsi">The TORSION action with label <b>psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">psi</td><td width="5%"><font color="blue">vector</font></td><td>the TORSION for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,2,3,4 <span class="plumedtooltip">ATOMS2<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=5,6,7,8 <span class="plumedtooltip">ATOMS3<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=9,10,11,12
+<b name="MAHALANOBIS_DISTANCE.md_working_6.datphi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datphi","MAHALANOBIS_DISTANCE.md_working_6.datphi","blue")'>phi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_6.datphi">The TORSION action with label <b>phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">phi</td><td width="5%"><font color="blue">vector</font></td><td>the TORSION for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=13,14,15,16 <span class="plumedtooltip">ATOMS2<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=17,18,19,20 <span class="plumedtooltip">ATOMS3<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=21,22,23,24
+
+<span id="MAHALANOBIS_DISTANCE.md_working_6.datdd_short"><b name="MAHALANOBIS_DISTANCE.md_working_6.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datdd","MAHALANOBIS_DISTANCE.md_working_6.datdd_shortcut","blue")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_6.datdd_shortcut">The MAHALANOBIS_DISTANCE action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="blue">vector</font></td><td>the Mahalanobis distances between the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MAHALANOBIS_DISTANCE<span class="right">Calculate the Mahalanobis distance between two points in CV space This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_6.datdd");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/MAHALANOBIS_DISTANCE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_6.datpsi">psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_6.datphi">phi</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_6.datref_psi">ref_psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_6.datref_phi">ref_phi</b> <span class="plumedtooltip">METRIC<span class="right">The inverse covariance matrix that should be used when calculating the distance<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_6.datm">m</b>
+</span><span id="MAHALANOBIS_DISTANCE.md_working_6.datdd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_6.datdd")'># dd: MAHALANOBIS_DISTANCE ARG1=psi,phi ARG2=ref_psi,ref_phi METRIC=m</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="MAHALANOBIS_DISTANCE.md_working_6.datdd_diff" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datdd_diff","MAHALANOBIS_DISTANCE.md_working_6.datdd_diff","red")'>dd_diff</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_6.datdd_diff">The VSTACK action with label <b>dd_diff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diff</td><td width="5%"><font color="red">matrix</font></td><td>a matrix that contains the input vectors in its columns</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISPLACEMENT<span class="right">Calculate the displacement vector between the pair of input vectors <a href="https://www.plumed.org/doc-master/user-doc/html/DISPLACEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_6.datpsi">psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_6.datphi">phi</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_6.datref_psi">ref_psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_6.datref_phi">ref_phi</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_6.datdd_diffT" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datdd_diffT","MAHALANOBIS_DISTANCE.md_working_6.datdd_diffT","red")'>dd_diffT</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_6.datdd_diffT">The TRANSPOSE action with label <b>dd_diffT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diffT</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_6.datdd_diff">dd_diff</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_6.datdd_matvec" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datdd_matvec","MAHALANOBIS_DISTANCE.md_working_6.datdd_matvec","red")'>dd_matvec</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_6.datdd_matvec">The MATRIX_PRODUCT action with label <b>dd_matvec</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_matvec</td><td width="5%"><font color="red">matrix</font></td><td>the product of the two input matrices</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT<span class="right">Calculate the product of two matrices <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the two matrices from which the product is calculated<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_6.datm">m</b>,<b name="MAHALANOBIS_DISTANCE.md_working_6.datdd_diffT">dd_diffT</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_6.datdd_2" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datdd_2","MAHALANOBIS_DISTANCE.md_working_6.datdd_2","blue")'>dd_2</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_6.datdd_2">The MATRIX_PRODUCT_DIAGONAL action with label <b>dd_2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_2</td><td width="5%"><font color="blue">vector</font></td><td>a vector containing the diagonal elements of the matrix that obtaned by multiplying the two input matrices together</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT_DIAGONAL<span class="right">Calculate the product of two matrices and return a vector that contains the diagonal elements of the ouptut vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT_DIAGONAL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the two vectors/matrices whose product are to be taken<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_6.datdd_diff">dd_diff</b>,<b name="MAHALANOBIS_DISTANCE.md_working_6.datdd_matvec">dd_matvec</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_6.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_6.dat","MAHALANOBIS_DISTANCE.md_working_6.datdd","MAHALANOBIS_DISTANCE.md_working_6.datdd","blue")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_6.datdd">The CUSTOM action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_6.datdd_2">dd_2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_6.datdd">dd</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>This final example then computes three distances between three pairs of torsional angles and threee
+reference values for these three values.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MAHALANOBIS_DISTANCE.md_working_7.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MAHALANOBIS_DISTANCE.md_working_7.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="MAHALANOBIS_DISTANCE.md_working_7.datm" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datm","MAHALANOBIS_DISTANCE.md_working_7.datm","red")'>m</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_7.datm">The CONSTANT action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.45960237E-0001,-1.30615381E-0001,-1.30615381E-0001,2.40239117E-0001 <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=2 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=2
+<span id="MAHALANOBIS_DISTANCE.md_working_7.datdefref_psi_short"><b name="MAHALANOBIS_DISTANCE.md_working_7.datref_psi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datref_psi","MAHALANOBIS_DISTANCE.md_working_7.datref_psi","blue")'>ref_psi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_7.datref_psi">The CONSTANT action with label <b>ref_psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref_psi</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_7.datdefref_psi");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.25,1.3,-1.5
+</span><span id="MAHALANOBIS_DISTANCE.md_working_7.datdefref_psi_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_7.datref_psi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datref_psi","MAHALANOBIS_DISTANCE.md_working_7.datref_psi","blue")'>ref_psi</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_7.datdefref_psi");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.25,1.3,-1.5  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><span id="MAHALANOBIS_DISTANCE.md_working_7.datdefref_phi_short"><b name="MAHALANOBIS_DISTANCE.md_working_7.datref_phi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datref_phi","MAHALANOBIS_DISTANCE.md_working_7.datref_phi","blue")'>ref_phi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_7.datref_phi">The CONSTANT action with label <b>ref_phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref_phi</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_7.datdefref_phi");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-1.91,-0.6,2.4
+</span><span id="MAHALANOBIS_DISTANCE.md_working_7.datdefref_phi_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_7.datref_phi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datref_phi","MAHALANOBIS_DISTANCE.md_working_7.datref_phi","blue")'>ref_phi</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_7.datdefref_phi");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-1.91,-0.6,2.4  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><br/><b name="MAHALANOBIS_DISTANCE.md_working_7.datpsi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datpsi","MAHALANOBIS_DISTANCE.md_working_7.datpsi","blue")'>psi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_7.datpsi">The TORSION action with label <b>psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">psi</td><td width="5%"><font color="blue">vector</font></td><td>the TORSION for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,2,3,4 <span class="plumedtooltip">ATOMS2<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=5,6,7,8 <span class="plumedtooltip">ATOMS3<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=9,10,11,12
+<b name="MAHALANOBIS_DISTANCE.md_working_7.datphi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datphi","MAHALANOBIS_DISTANCE.md_working_7.datphi","blue")'>phi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_7.datphi">The TORSION action with label <b>phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">phi</td><td width="5%"><font color="blue">vector</font></td><td>the TORSION for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=13,14,15,16 <span class="plumedtooltip">ATOMS2<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=17,18,19,20 <span class="plumedtooltip">ATOMS3<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=21,22,23,24
+
+<span id="MAHALANOBIS_DISTANCE.md_working_7.datdd_short"><b name="MAHALANOBIS_DISTANCE.md_working_7.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datdd","MAHALANOBIS_DISTANCE.md_working_7.datdd_shortcut","blue")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_7.datdd_shortcut">The MAHALANOBIS_DISTANCE action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="blue">vector</font></td><td>the Mahalanobis distances between the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MAHALANOBIS_DISTANCE<span class="right">Calculate the Mahalanobis distance between two points in CV space This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_7.datdd");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/MAHALANOBIS_DISTANCE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_7.datpsi">psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_7.datphi">phi</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_7.datref_psi">ref_psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_7.datref_phi">ref_phi</b> <span class="plumedtooltip">METRIC<span class="right">The inverse covariance matrix that should be used when calculating the distance<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_7.datm">m</b>
+</span><span id="MAHALANOBIS_DISTANCE.md_working_7.datdd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_7.datdd")'># dd: MAHALANOBIS_DISTANCE ARG1=psi,phi ARG2=ref_psi,ref_phi METRIC=m</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="MAHALANOBIS_DISTANCE.md_working_7.datdd_diff" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datdd_diff","MAHALANOBIS_DISTANCE.md_working_7.datdd_diff","red")'>dd_diff</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_7.datdd_diff">The VSTACK action with label <b>dd_diff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diff</td><td width="5%"><font color="red">matrix</font></td><td>a matrix that contains the input vectors in its columns</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISPLACEMENT<span class="right">Calculate the displacement vector between the pair of input vectors <a href="https://www.plumed.org/doc-master/user-doc/html/DISPLACEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_7.datpsi">psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_7.datphi">phi</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_7.datref_psi">ref_psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_7.datref_phi">ref_phi</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_7.datdd_diffT" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datdd_diffT","MAHALANOBIS_DISTANCE.md_working_7.datdd_diffT","red")'>dd_diffT</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_7.datdd_diffT">The TRANSPOSE action with label <b>dd_diffT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diffT</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_7.datdd_diff">dd_diff</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_7.datdd_matvec" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datdd_matvec","MAHALANOBIS_DISTANCE.md_working_7.datdd_matvec","red")'>dd_matvec</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_7.datdd_matvec">The MATRIX_PRODUCT action with label <b>dd_matvec</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_matvec</td><td width="5%"><font color="red">matrix</font></td><td>the product of the two input matrices</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT<span class="right">Calculate the product of two matrices <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the two matrices from which the product is calculated<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_7.datm">m</b>,<b name="MAHALANOBIS_DISTANCE.md_working_7.datdd_diffT">dd_diffT</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_7.datdd_2" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datdd_2","MAHALANOBIS_DISTANCE.md_working_7.datdd_2","blue")'>dd_2</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_7.datdd_2">The MATRIX_PRODUCT_DIAGONAL action with label <b>dd_2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_2</td><td width="5%"><font color="blue">vector</font></td><td>a vector containing the diagonal elements of the matrix that obtaned by multiplying the two input matrices together</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT_DIAGONAL<span class="right">Calculate the product of two matrices and return a vector that contains the diagonal elements of the ouptut vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT_DIAGONAL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the two vectors/matrices whose product are to be taken<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_7.datdd_diff">dd_diff</b>,<b name="MAHALANOBIS_DISTANCE.md_working_7.datdd_matvec">dd_matvec</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_7.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_7.dat","MAHALANOBIS_DISTANCE.md_working_7.datdd","MAHALANOBIS_DISTANCE.md_working_7.datdd","blue")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_7.datdd">The CUSTOM action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_7.datdd_2">dd_2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_7.datdd">dd</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>Notice, finally, that you can also calculate multiple distances if you use the <code>VON_MISSES</code> option:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MAHALANOBIS_DISTANCE.md_working_8.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MAHALANOBIS_DISTANCE.md_working_8.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datm" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datm","MAHALANOBIS_DISTANCE.md_working_8.datm","red")'>m</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datm">The CONSTANT action with label <b>m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">m</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.45960237E-0001,-1.30615381E-0001,-1.30615381E-0001,2.40239117E-0001 <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=2 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=2
+<span id="MAHALANOBIS_DISTANCE.md_working_8.datdefref_psi_short"><b name="MAHALANOBIS_DISTANCE.md_working_8.datref_psi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datref_psi","MAHALANOBIS_DISTANCE.md_working_8.datref_psi","blue")'>ref_psi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datref_psi">The CONSTANT action with label <b>ref_psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref_psi</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_8.datdefref_psi");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.25,1.3,-1.5
+</span><span id="MAHALANOBIS_DISTANCE.md_working_8.datdefref_psi_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_8.datref_psi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datref_psi","MAHALANOBIS_DISTANCE.md_working_8.datref_psi","blue")'>ref_psi</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_8.datdefref_psi");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=2.25,1.3,-1.5  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><span id="MAHALANOBIS_DISTANCE.md_working_8.datdefref_phi_short"><b name="MAHALANOBIS_DISTANCE.md_working_8.datref_phi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datref_phi","MAHALANOBIS_DISTANCE.md_working_8.datref_phi","blue")'>ref_phi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datref_phi">The CONSTANT action with label <b>ref_phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ref_phi</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_8.datdefref_phi");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-1.91,-0.6,2.4
+</span><span id="MAHALANOBIS_DISTANCE.md_working_8.datdefref_phi_long" style="display:none;"><b name="MAHALANOBIS_DISTANCE.md_working_8.datref_phi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datref_phi","MAHALANOBIS_DISTANCE.md_working_8.datref_phi","blue")'>ref_phi</b>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_8.datdefref_phi");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-1.91,-0.6,2.4  <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=0 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=0
+</span><br/><b name="MAHALANOBIS_DISTANCE.md_working_8.datpsi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datpsi","MAHALANOBIS_DISTANCE.md_working_8.datpsi","blue")'>psi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datpsi">The TORSION action with label <b>psi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">psi</td><td width="5%"><font color="blue">vector</font></td><td>the TORSION for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=1,2,3,4 <span class="plumedtooltip">ATOMS2<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=5,6,7,8 <span class="plumedtooltip">ATOMS3<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=9,10,11,12
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datphi" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datphi","MAHALANOBIS_DISTANCE.md_working_8.datphi","blue")'>phi</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datphi">The TORSION action with label <b>phi</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">phi</td><td width="5%"><font color="blue">vector</font></td><td>the TORSION for each set of specified atoms</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TORSION<span class="right">Calculate one or multiple torsional angles. <a href="https://www.plumed.org/doc-master/user-doc/html/TORSION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS1<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=13,14,15,16 <span class="plumedtooltip">ATOMS2<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=17,18,19,20 <span class="plumedtooltip">ATOMS3<span class="right">the four atoms involved in the torsional angle<i></i></span></span>=21,22,23,24
+
+<span id="MAHALANOBIS_DISTANCE.md_working_8.datdd_short"><b name="MAHALANOBIS_DISTANCE.md_working_8.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd","MAHALANOBIS_DISTANCE.md_working_8.datdd_shortcut","blue")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_shortcut">The MAHALANOBIS_DISTANCE action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="blue">vector</font></td><td>the Mahalanobis distances between the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MAHALANOBIS_DISTANCE<span class="right">Calculate the Mahalanobis distance between two points in CV space This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_8.datdd");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/MAHALANOBIS_DISTANCE">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datpsi">psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_8.datphi">phi</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datref_psi">ref_psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_8.datref_phi">ref_phi</b> <span class="plumedtooltip">METRIC<span class="right">The inverse covariance matrix that should be used when calculating the distance<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datm">m</b> <span class="plumedtooltip">VON_MISSES<span class="right"> Compute the mahalanobis distance in a way that is more sympathetic to the periodic boundary conditions<i></i></span></span>
+</span><span id="MAHALANOBIS_DISTANCE.md_working_8.datdd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("MAHALANOBIS_DISTANCE.md_working_8.datdd")'># dd: MAHALANOBIS_DISTANCE ARG1=psi,phi ARG2=ref_psi,ref_phi METRIC=m VON_MISSES</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_diff" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_diff","MAHALANOBIS_DISTANCE.md_working_8.datdd_diff","red")'>dd_diff</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_diff">The VSTACK action with label <b>dd_diff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diff</td><td width="5%"><font color="red">matrix</font></td><td>a matrix that contains the input vectors in its columns</td></tr></table></span>: <span class="plumedtooltip" style="color:green">DISPLACEMENT<span class="right">Calculate the displacement vector between the pair of input vectors <a href="https://www.plumed.org/doc-master/user-doc/html/DISPLACEMENT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG1<span class="right">The point that we are calculating the distance from<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datpsi">psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_8.datphi">phi</b> <span class="plumedtooltip">ARG2<span class="right">The point that we are calculating the distance to<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datref_psi">ref_psi</b>,<b name="MAHALANOBIS_DISTANCE.md_working_8.datref_phi">ref_phi</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_diffT" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_diffT","MAHALANOBIS_DISTANCE.md_working_8.datdd_diffT","red")'>dd_diffT</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_diffT">The TRANSPOSE action with label <b>dd_diffT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diffT</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_diff">dd_diff</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_diagmet" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_diagmet","MAHALANOBIS_DISTANCE.md_working_8.datdd_diagmet","blue")'>dd_diagmet</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_diagmet">The CONSTANT action with label <b>dd_diagmet</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diagmet</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=0.24596,0.240239
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_offdiagmet" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_offdiagmet","MAHALANOBIS_DISTANCE.md_working_8.datdd_offdiagmet","red")'>dd_offdiagmet</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_offdiagmet">The CONSTANT action with label <b>dd_offdiagmet</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_offdiagmet</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=2 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=2 <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=0,-0.130615,-0.130615,0
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_scaled" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_scaled","MAHALANOBIS_DISTANCE.md_working_8.datdd_scaled","red")'>dd_scaled</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_scaled">The CUSTOM action with label <b>dd_scaled</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_scaled</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_diffT">dd_diffT</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=2*pi*x/(pi--pi) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_sinediffT" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_sinediffT","MAHALANOBIS_DISTANCE.md_working_8.datdd_sinediffT","red")'>dd_sinediffT</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_sinediffT">The CUSTOM action with label <b>dd_sinediffT</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_sinediffT</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_scaled">dd_scaled</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sin(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_sinediff" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_sinediff","MAHALANOBIS_DISTANCE.md_working_8.datdd_sinediff","red")'>dd_sinediff</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_sinediff">The TRANSPOSE action with label <b>dd_sinediff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_sinediff</td><td width="5%"><font color="red">matrix</font></td><td>the transpose of the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">TRANSPOSE<span class="right">Calculate the transpose of a matrix <a href="https://www.plumed.org/doc-master/user-doc/html/TRANSPOSE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the vector or matrix that should be transposed<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_sinediffT">dd_sinediffT</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_matvec" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_matvec","MAHALANOBIS_DISTANCE.md_working_8.datdd_matvec","red")'>dd_matvec</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_matvec">The MATRIX_PRODUCT action with label <b>dd_matvec</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_matvec</td><td width="5%"><font color="red">matrix</font></td><td>the product of the two input matrices</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT<span class="right">Calculate the product of two matrices <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the two matrices from which the product is calculated<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_offdiagmet">dd_offdiagmet</b>,<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_sinediffT">dd_sinediffT</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_offdiag" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_offdiag","MAHALANOBIS_DISTANCE.md_working_8.datdd_offdiag","blue")'>dd_offdiag</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_offdiag">The MATRIX_PRODUCT_DIAGONAL action with label <b>dd_offdiag</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_offdiag</td><td width="5%"><font color="blue">vector</font></td><td>a vector containing the diagonal elements of the matrix that obtaned by multiplying the two input matrices together</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT_DIAGONAL<span class="right">Calculate the product of two matrices and return a vector that contains the diagonal elements of the ouptut vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT_DIAGONAL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the two vectors/matrices whose product are to be taken<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_sinediff">dd_sinediff</b>,<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_matvec">dd_matvec</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_ones" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_ones","MAHALANOBIS_DISTANCE.md_working_8.datdd_ones","blue")'>dd_ones</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_ones">The CONSTANT action with label <b>dd_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span>  <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,1,1
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_m" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_m","MAHALANOBIS_DISTANCE.md_working_8.datdd_m","red")'>dd_m</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_m">The OUTER_PRODUCT action with label <b>dd_m</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_m</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the outer product of the two input vectors that was obtained using the function that was input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">OUTER_PRODUCT<span class="right">Calculate the outer product matrix of two vectors <a href="https://www.plumed.org/doc-master/user-doc/html/OUTER_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the two vectors from which the outer product is being computed<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_diagmet">dd_diagmet</b>,<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_ones">dd_ones</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_prod" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_prod","MAHALANOBIS_DISTANCE.md_working_8.datdd_prod","red")'>dd_prod</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_prod">The CUSTOM action with label <b>dd_prod</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_prod</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_scaled">dd_scaled</b>,<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_m">dd_m</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=2*(1-cos(x))*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_matones" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_matones","MAHALANOBIS_DISTANCE.md_working_8.datdd_matones","red")'>dd_matones</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_matones">The CONSTANT action with label <b>dd_matones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_matones</td><td width="5%"><font color="red">matrix</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NROWS<span class="right"> the number of rows in your input matrix<i></i></span></span>=3 <span class="plumedtooltip">NCOLS<span class="right"> the number of columns in your matrix<i></i></span></span>=2 <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=1,1,1,1,1,1
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_diag" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_diag","MAHALANOBIS_DISTANCE.md_working_8.datdd_diag","blue")'>dd_diag</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_diag">The MATRIX_PRODUCT_DIAGONAL action with label <b>dd_diag</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_diag</td><td width="5%"><font color="blue">vector</font></td><td>a vector containing the diagonal elements of the matrix that obtaned by multiplying the two input matrices together</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_PRODUCT_DIAGONAL<span class="right">Calculate the product of two matrices and return a vector that contains the diagonal elements of the ouptut vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_PRODUCT_DIAGONAL" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the two vectors/matrices whose product are to be taken<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_matones">dd_matones</b>,<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_prod">dd_prod</b>
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_2" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd_2","MAHALANOBIS_DISTANCE.md_working_8.datdd_2","blue")'>dd_2</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd_2">The COMBINE action with label <b>dd_2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd_2</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a linear combination to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_offdiag">dd_offdiag</b>,<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_diag">dd_diag</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd" onclick='showPath("MAHALANOBIS_DISTANCE.md_working_8.dat","MAHALANOBIS_DISTANCE.md_working_8.datdd","MAHALANOBIS_DISTANCE.md_working_8.datdd","blue")'>dd</b><span style="display:none;" id="MAHALANOBIS_DISTANCE.md_working_8.datdd">The CUSTOM action with label <b>dd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">dd</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd_2">dd_2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="MAHALANOBIS_DISTANCE.md_working_8.datdd">dd</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">scalars must be specified in ARG2</p>
+<p>If you use a mixture of vectors are scalars when specifying the input to to this action the
+vectors should be passed using the ARG1 keyword and the scalars must be passed in the ARG2 keyword
+as is done in the example inputs above.</p>
+</div>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ARG1</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">The point that we are calculating the distance from</td>
+</tr>
+<tr>
+<td style="text-align: left;">ARG2</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">The point that we are calculating the distance to</td>
+</tr>
+<tr>
+<td style="text-align: left;">METRIC</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">The inverse covariance matrix that should be used when calculating the distance</td>
+</tr>
+<tr>
+<td style="text-align: left;">SQUARED</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">The squared distance should be calculated</td>
+</tr>
+<tr>
+<td style="text-align: left;">VON_MISSES</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Compute the mahalanobis distance in a way that is more sympathetic to the periodic boundary conditions</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1073/pnas.1011511107">G. A. Tribello, M. Ceriotti, M. Parrinello, A self-learning algorithm for biased molecular dynamics. Proceedings of the National Academy of Sciences 107, 17509–17514 (2010)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jctc.7b00993">P. Gasparotto, R. H. Meißner, M. Ceriotti, Recognizing Local and Global Structural Motifs at
+the Atomic Scale. Journal of Chemical Theory and Computation 14, 486–498 (2018)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

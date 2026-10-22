@@ -1,0 +1,1071 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: VORONOI_DISTANCE - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-voronoi_distance" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: VORONOI_DISTANCE
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-and-group-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition and group semantics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#derivatives-periodicity-and-bias-suitability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Derivatives, periodicity, and bias suitability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-group1-and-group2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing GROUP1 and GROUP2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-1-water-self-ion-separation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example 1: water self-ion separation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-2-one-reactive-o-and-one-reactive-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example 2: one reactive O and one reactive N
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-3-solvated-glycine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example 3: solvated glycine
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-4-nitrogen-reduction-proton-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example 4: nitrogen-reduction proton transfer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-voronoi_distance"><a href="../actions/">Action</a>: VORONOI_DISTANCE</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_colvar/"><strong>colvar</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate a distance-weighted product of smooth coordination defects.</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><img alt="used in 0 eggs" src="https://img.shields.io/badge/nest-0-red.svg" /></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the distance-weighted product of selected smooth occupancy defects</td>
+<td style="text-align: center;">scalar</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate a distance-weighted product of smooth coordination defects.</p>
+<p>This Action combines the continuously changing identities defined by
+<a href="../VORONOI_COORDINATION/">VORONOI_COORDINATION</a> with physical center-center
+distances.  It is useful when the progress of a reactive event depends not
+only on whether defects exist, but also on how far apart the corresponding
+sites are.</p>
+<h2 id="definition-and-group-semantics">Definition and group semantics</h2>
+<p>Let \f<script type="math/tex">q_i\f</script> be the smooth coordination defect of center \f<script type="math/tex">i\f</script>.  When both
+GROUP1 and GROUP2 are supplied, the Action returns</p>
+<p>\f[
+ D(G_1,G_2)=-\sum_{i\in G_1}\sum_{k\in G_2}d_{ik}q_iq_k .
+\f]</p>
+<p>GROUP1 and GROUP2 are explicit, nonempty, disjoint subsets of CENTERS.  When
+GROUP2 is omitted, unique pairs within GROUP1 are used:</p>
+<p>\f[
+ D(G_1)=-\sum_{\substack{i,k\in G_1\i&lt;k}}d_{ik}q_iq_k .
+\f]</p>
+<p>The center-center distance \f<script type="math/tex">d_{ik}\f</script> uses the minimum image unless NOPBC
+is specified.  CENTERS, ASSIGNED, KAPPA, REFERENCE, NOPBC, and NLIST have the
+same meaning as on the VORONOI_COORDINATION page.  NLIST truncates only the
+CENTER-ASSIGNED candidates used to construct the defects; it never removes
+GROUP1/GROUP2 center-center reduction pairs.</p>
+<p>The product \f<script type="math/tex">q_iq_k\f</script> emphasizes pairs of centers carrying correlated or
+complementary defects without assigning a permanent ion identity.  For one
+positive and one negative defect, the overall minus sign makes the leading
+term positive and approximately equal to their separation when the defects
+approach +1 and -1.  Multiple defects generate a sum over all requested
+pairs; the output should not then be interpreted automatically as one unique
+ion-ion distance.</p>
+<h2 id="derivatives-periodicity-and-bias-suitability">Derivatives, periodicity, and bias suitability</h2>
+<p>Both contributions to the derivative are included: the direct derivative of
+\f<script type="math/tex">d_{ik}\f</script> and the chain-rule derivative of every \f<script type="math/tex">q_i\f</script> through the
+soft assignment.  Analytical box derivatives are also provided using the
+same minimum-image vectors.  The Action stops if a requested center-center
+distance is zero or non-finite because its radial derivative is then
+undefined.</p>
+<p>The exact full-pair assignment is smooth away from coincident atoms and the
+usual minimum-image branch surfaces.  NLIST uses the approximate truncated
+normalization described on the VORONOI_COORDINATION page and may add
+membership discontinuities.  Validate the exact Action with numerical
+derivatives before biasing it, and converge values and forces separately if
+NLIST is required.</p>
+<p>VORONOI_DISTANCE is not normalized by the amount of defect.  It naturally
+approaches zero in a neutral configuration, but its magnitude also changes as
+defects form or disappear.  This coupling is often desired in a reaction
+coordinate; if a pure conditional distance is intended, its low-defect limit
+must be defined explicitly rather than obtained by dividing by a nearly zero
+weight.</p>
+<h2 id="choosing-group1-and-group2">Choosing GROUP1 and GROUP2</h2>
+<ul>
+<li>Use GROUP1 without GROUP2 for separation among possible sites in one pool,
+  such as water O atoms that can host a hydronium or hydroxide defect.</li>
+<li>Use both groups for cross separation between two chemical pools, such as
+  water O atoms and one reactive N or O site.</li>
+<li>Combine multiple VORONOI_DISTANCE Actions with
+  <a href="../COMBINE/">COMBINE</a> when a published CV contains several physically
+  distinct pair sets.  Keeping the pair sets explicit avoids hidden
+  chemistry and atom-order rules.</li>
+</ul>
+<h2 id="worked-example-1-water-self-ion-separation">Worked example 1: water self-ion separation</h2>
+<p>For one hydronium-hydroxide pair distributed over water oxygen atoms, unique
+pairs within WaterO describe the solution ion-ion separation.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_VORONOI_DISTANCE.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../VORONOI_DISTANCE.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">UNITS<span class="right">This command sets the internal units for the code. <a href="https://www.plumed.org/doc-master/user-doc/html/UNITS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">LENGTH<span class="right">the units of lengths<i></i></span></span>=A
+<span style="display:none;" id="VORONOI_DISTANCE.md_working_1.dat">The UNITS action with label <b></b> calculates something</span><b name="VORONOI_DISTANCE.md_working_1.datWaterO" onclick='showPath("VORONOI_DISTANCE.md_working_1.dat","VORONOI_DISTANCE.md_working_1.datWaterO","VORONOI_DISTANCE.md_working_1.datWaterO","violet")'>WaterO</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_1.datWaterO">The GROUP action with label <b>WaterO</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">WaterO</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-4
+<b name="VORONOI_DISTANCE.md_working_1.datWaterH" onclick='showPath("VORONOI_DISTANCE.md_working_1.dat","VORONOI_DISTANCE.md_working_1.datWaterH","VORONOI_DISTANCE.md_working_1.datWaterH","violet")'>WaterH</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_1.datWaterH">The GROUP action with label <b>WaterH</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">WaterH</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=5-12
+
+<span id="VORONOI_DISTANCE.md_working_1.datdefionization_short"><b name="VORONOI_DISTANCE.md_working_1.dationization" onclick='showPath("VORONOI_DISTANCE.md_working_1.dat","VORONOI_DISTANCE.md_working_1.dationization","VORONOI_DISTANCE.md_working_1.dationization","black")'>ionization</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_1.dationization">The VORONOI_COORDINATION action with label <b>ionization</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ionization</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_DISTANCE.md_working_1.datdefionization");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_1.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_1.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2
+</span><span id="VORONOI_DISTANCE.md_working_1.datdefionization_long" style="display:none;"><b name="VORONOI_DISTANCE.md_working_1.dationization" onclick='showPath("VORONOI_DISTANCE.md_working_1.dat","VORONOI_DISTANCE.md_working_1.dationization","VORONOI_DISTANCE.md_working_1.dationization","black")'>ionization</b>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_DISTANCE.md_working_1.datdefionization");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_1.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_1.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2  <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=ALL
+</span><b name="VORONOI_DISTANCE.md_working_1.datsolution_distance" onclick='showPath("VORONOI_DISTANCE.md_working_1.dat","VORONOI_DISTANCE.md_working_1.datsolution_distance","VORONOI_DISTANCE.md_working_1.datsolution_distance","black")'>solution_distance</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_1.datsolution_distance">The VORONOI_DISTANCE action with label <b>solution_distance</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">solution_distance</td><td width="5%"><font color="black">scalar</font></td><td>the distance-weighted product of selected smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_DISTANCE<span class="right">Calculate a distance-weighted product of smooth coordination defects. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_1.datWaterO">WaterO</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_1.datWaterH">WaterH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2 <span class="plumedtooltip">GROUP1<span class="right">First explicit subset of CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_1.datWaterO">WaterO</b>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_1.dationization">ionization</b>,<b name="VORONOI_DISTANCE.md_working_1.datsolution_distance">solution_distance</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre>
+</div>
+<p>Check the CV on neutral water, a separated ion pair, and intermediate proton
+transfer frames.  A near-zero value in neutral water is expected and does not
+mean the distance calculation failed.</p>
+<h2 id="worked-example-2-one-reactive-o-and-one-reactive-n">Worked example 2: one reactive O and one reactive N</h2>
+<p>The following example shows that reactive sites are selected by atom number,
+not by being the last atoms in CENTERS.  The reference values are illustrative
+and must be replaced by the chemically intended occupancies.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_VORONOI_DISTANCE.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../VORONOI_DISTANCE.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">UNITS<span class="right">This command sets the internal units for the code. <a href="https://www.plumed.org/doc-master/user-doc/html/UNITS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">LENGTH<span class="right">the units of lengths<i></i></span></span>=A
+<span style="display:none;" id="VORONOI_DISTANCE.md_working_2.dat">The UNITS action with label <b></b> calculates something</span><b name="VORONOI_DISTANCE.md_working_2.datWaterO" onclick='showPath("VORONOI_DISTANCE.md_working_2.dat","VORONOI_DISTANCE.md_working_2.datWaterO","VORONOI_DISTANCE.md_working_2.datWaterO","violet")'>WaterO</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_2.datWaterO">The GROUP action with label <b>WaterO</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">WaterO</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-3
+<b name="VORONOI_DISTANCE.md_working_2.datReactiveO" onclick='showPath("VORONOI_DISTANCE.md_working_2.dat","VORONOI_DISTANCE.md_working_2.datReactiveO","VORONOI_DISTANCE.md_working_2.datReactiveO","violet")'>ReactiveO</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_2.datReactiveO">The GROUP action with label <b>ReactiveO</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ReactiveO</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=4
+<b name="VORONOI_DISTANCE.md_working_2.datReactiveN" onclick='showPath("VORONOI_DISTANCE.md_working_2.dat","VORONOI_DISTANCE.md_working_2.datReactiveN","VORONOI_DISTANCE.md_working_2.datReactiveN","violet")'>ReactiveN</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_2.datReactiveN">The GROUP action with label <b>ReactiveN</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ReactiveN</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=5
+<b name="VORONOI_DISTANCE.md_working_2.datTransferableH" onclick='showPath("VORONOI_DISTANCE.md_working_2.dat","VORONOI_DISTANCE.md_working_2.datTransferableH","VORONOI_DISTANCE.md_working_2.datTransferableH","violet")'>TransferableH</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_2.datTransferableH">The GROUP action with label <b>TransferableH</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">TransferableH</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=6-13
+<b name="VORONOI_DISTANCE.md_working_2.datCenters" onclick='showPath("VORONOI_DISTANCE.md_working_2.dat","VORONOI_DISTANCE.md_working_2.datCenters","VORONOI_DISTANCE.md_working_2.datCenters","violet")'>Centers</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_2.datCenters">The GROUP action with label <b>Centers</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">Centers</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datReactiveN">ReactiveN</b>,<b name="VORONOI_DISTANCE.md_working_2.datWaterO">WaterO</b>,<b name="VORONOI_DISTANCE.md_working_2.datReactiveO">ReactiveO</b>
+
+<span id="VORONOI_DISTANCE.md_working_2.datdefactivity_short"><b name="VORONOI_DISTANCE.md_working_2.datactivity" onclick='showPath("VORONOI_DISTANCE.md_working_2.dat","VORONOI_DISTANCE.md_working_2.datactivity","VORONOI_DISTANCE.md_working_2.datactivity","black")'>activity</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_2.datactivity">The VORONOI_COORDINATION action with label <b>activity</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">activity</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_DISTANCE.md_working_2.datdefactivity");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datCenters">Centers</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datTransferableH">TransferableH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=1,2,2,2,1 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2
+</span><span id="VORONOI_DISTANCE.md_working_2.datdefactivity_long" style="display:none;"><b name="VORONOI_DISTANCE.md_working_2.datactivity" onclick='showPath("VORONOI_DISTANCE.md_working_2.dat","VORONOI_DISTANCE.md_working_2.datactivity","VORONOI_DISTANCE.md_working_2.datactivity","black")'>activity</b>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_DISTANCE.md_working_2.datdefactivity");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datCenters">Centers</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datTransferableH">TransferableH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=1,2,2,2,1 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=2  <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=ALL
+</span><b name="VORONOI_DISTANCE.md_working_2.datwater_to_O" onclick='showPath("VORONOI_DISTANCE.md_working_2.dat","VORONOI_DISTANCE.md_working_2.datwater_to_O","VORONOI_DISTANCE.md_working_2.datwater_to_O","black")'>water_to_O</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_2.datwater_to_O">The VORONOI_DISTANCE action with label <b>water_to_O</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">water_to_O</td><td width="5%"><font color="black">scalar</font></td><td>the distance-weighted product of selected smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_DISTANCE<span class="right">Calculate a distance-weighted product of smooth coordination defects. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datCenters">Centers</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datTransferableH">TransferableH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=1,2,2,2,1 <span class="plumedtooltip">GROUP1<span class="right">First explicit subset of CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datWaterO">WaterO</b> <span class="plumedtooltip">GROUP2<span class="right">Optional disjoint second subset of CENTERS; if omitted, unique pairs within GROUP1 are used<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datReactiveO">ReactiveO</b>
+<b name="VORONOI_DISTANCE.md_working_2.datwater_to_N" onclick='showPath("VORONOI_DISTANCE.md_working_2.dat","VORONOI_DISTANCE.md_working_2.datwater_to_N","VORONOI_DISTANCE.md_working_2.datwater_to_N","black")'>water_to_N</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_2.datwater_to_N">The VORONOI_DISTANCE action with label <b>water_to_N</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">water_to_N</td><td width="5%"><font color="black">scalar</font></td><td>the distance-weighted product of selected smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_DISTANCE<span class="right">Calculate a distance-weighted product of smooth coordination defects. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datCenters">Centers</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datTransferableH">TransferableH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=1,2,2,2,1 <span class="plumedtooltip">GROUP1<span class="right">First explicit subset of CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datWaterO">WaterO</b> <span class="plumedtooltip">GROUP2<span class="right">Optional disjoint second subset of CENTERS; if omitted, unique pairs within GROUP1 are used<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datReactiveN">ReactiveN</b>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_2.datactivity">activity</b>,<b name="VORONOI_DISTANCE.md_working_2.datwater_to_O">water_to_O</b>,<b name="VORONOI_DISTANCE.md_working_2.datwater_to_N">water_to_N</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<p>If only one site is present, remove the other site from CENTERS and remove its
+matching REFERENCE entry.  No C++ change is required.</p>
+<h2 id="worked-example-3-solvated-glycine">Worked example 3: solvated glycine</h2>
+<p>The glycine distance used in \cite Zhang2024Glycine contains a water-glycine
+cross term and an internal N-O term.  Writing them separately removes the
+legacy <code>NRX</code> and last-three-atoms convention.  The numbered fixture below
+contains zwitterionic [Z] glycine, one complete water near its ammonium group,
+and one complete water near its carboxylate group.  Glycine C atoms and C-H
+atoms remain in the coordinate file to make the topology readable, but the
+non-transferable C-H atoms are excluded from ASSIGNED.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_VORONOI_DISTANCE.md_working_3.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../VORONOI_DISTANCE.md_working_3.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">UNITS<span class="right">This command sets the internal units for the code. <a href="https://www.plumed.org/doc-master/user-doc/html/UNITS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">LENGTH<span class="right">the units of lengths<i></i></span></span>=A
+<span style="display:none;" id="VORONOI_DISTANCE.md_working_3.dat">The UNITS action with label <b></b> calculates something</span><b name="VORONOI_DISTANCE.md_working_3.datWaterO" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datWaterO","VORONOI_DISTANCE.md_working_3.datWaterO","violet")'>WaterO</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_3.datWaterO">The GROUP action with label <b>WaterO</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">WaterO</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1,4
+<b name="VORONOI_DISTANCE.md_working_3.datWaterH" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datWaterH","VORONOI_DISTANCE.md_working_3.datWaterH","violet")'>WaterH</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_3.datWaterH">The GROUP action with label <b>WaterH</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">WaterH</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=2,3,5,6
+<b name="VORONOI_DISTANCE.md_working_3.datGlyN" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datGlyN","VORONOI_DISTANCE.md_working_3.datGlyN","violet")'>GlyN</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_3.datGlyN">The GROUP action with label <b>GlyN</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">GlyN</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=7
+<b name="VORONOI_DISTANCE.md_working_3.datGlyH" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datGlyH","VORONOI_DISTANCE.md_working_3.datGlyH","violet")'>GlyH</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_3.datGlyH">The GROUP action with label <b>GlyH</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">GlyH</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=8,9,10
+<b name="VORONOI_DISTANCE.md_working_3.datGlyO1" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datGlyO1","VORONOI_DISTANCE.md_working_3.datGlyO1","violet")'>GlyO1</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_3.datGlyO1">The GROUP action with label <b>GlyO1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">GlyO1</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=15
+<b name="VORONOI_DISTANCE.md_working_3.datGlyO2" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datGlyO2","VORONOI_DISTANCE.md_working_3.datGlyO2","violet")'>GlyO2</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_3.datGlyO2">The GROUP action with label <b>GlyO2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">GlyO2</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=16
+<b name="VORONOI_DISTANCE.md_working_3.datAllH" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datAllH","VORONOI_DISTANCE.md_working_3.datAllH","violet")'>AllH</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_3.datAllH">The GROUP action with label <b>AllH</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">AllH</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datWaterH">WaterH</b>,<b name="VORONOI_DISTANCE.md_working_3.datGlyH">GlyH</b>
+<b name="VORONOI_DISTANCE.md_working_3.datCenters" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datCenters","VORONOI_DISTANCE.md_working_3.datCenters","violet")'>Centers</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_3.datCenters">The GROUP action with label <b>Centers</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">Centers</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datWaterO">WaterO</b>,<b name="VORONOI_DISTANCE.md_working_3.datGlyN">GlyN</b>,<b name="VORONOI_DISTANCE.md_working_3.datGlyO1">GlyO1</b>,<b name="VORONOI_DISTANCE.md_working_3.datGlyO2">GlyO2</b>
+
+<span id="VORONOI_DISTANCE.md_working_3.datdefsp_short"><b name="VORONOI_DISTANCE.md_working_3.datsp" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datsp","VORONOI_DISTANCE.md_working_3.datsp","black")'>sp</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_3.datsp">The VORONOI_COORDINATION action with label <b>sp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">sp</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_DISTANCE.md_working_3.datdefsp");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datCenters">Centers</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datAllH">AllH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2,2,2,0.5,0.5 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=1 <span class="plumedtooltip">COEFFICIENTS<span class="right">One coefficient, or one value per atom in SELECT<i></i></span></span>=1,1,2,2,2
+</span><span id="VORONOI_DISTANCE.md_working_3.datdefsp_long" style="display:none;"><b name="VORONOI_DISTANCE.md_working_3.datsp" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datsp","VORONOI_DISTANCE.md_working_3.datsp","black")'>sp</b>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_DISTANCE.md_working_3.datdefsp");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datCenters">Centers</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datAllH">AllH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2,2,2,0.5,0.5 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=1 <span class="plumedtooltip">COEFFICIENTS<span class="right">One coefficient, or one value per atom in SELECT<i></i></span></span>=1,1,2,2,2  <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=ALL
+</span><b name="VORONOI_DISTANCE.md_working_3.datsd_water" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datsd_water","VORONOI_DISTANCE.md_working_3.datsd_water","black")'>sd_water</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_3.datsd_water">The VORONOI_DISTANCE action with label <b>sd_water</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">sd_water</td><td width="5%"><font color="black">scalar</font></td><td>the distance-weighted product of selected smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_DISTANCE<span class="right">Calculate a distance-weighted product of smooth coordination defects. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datCenters">Centers</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datAllH">AllH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2,2,2,0.5,0.5 <span class="plumedtooltip">GROUP1<span class="right">First explicit subset of CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datWaterO">WaterO</b> <span class="plumedtooltip">GROUP2<span class="right">Optional disjoint second subset of CENTERS; if omitted, unique pairs within GROUP1 are used<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datGlyN">GlyN</b>,<b name="VORONOI_DISTANCE.md_working_3.datGlyO1">GlyO1</b>,<b name="VORONOI_DISTANCE.md_working_3.datGlyO2">GlyO2</b>
+<b name="VORONOI_DISTANCE.md_working_3.datsd_internal" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datsd_internal","VORONOI_DISTANCE.md_working_3.datsd_internal","black")'>sd_internal</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_3.datsd_internal">The VORONOI_DISTANCE action with label <b>sd_internal</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">sd_internal</td><td width="5%"><font color="black">scalar</font></td><td>the distance-weighted product of selected smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_DISTANCE<span class="right">Calculate a distance-weighted product of smooth coordination defects. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datCenters">Centers</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datAllH">AllH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2,2,2,0.5,0.5 <span class="plumedtooltip">GROUP1<span class="right">First explicit subset of CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datGlyN">GlyN</b> <span class="plumedtooltip">GROUP2<span class="right">Optional disjoint second subset of CENTERS; if omitted, unique pairs within GROUP1 are used<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datGlyO1">GlyO1</b>,<b name="VORONOI_DISTANCE.md_working_3.datGlyO2">GlyO2</b>
+<b name="VORONOI_DISTANCE.md_working_3.datsd" onclick='showPath("VORONOI_DISTANCE.md_working_3.dat","VORONOI_DISTANCE.md_working_3.datsd","VORONOI_DISTANCE.md_working_3.datsd","black")'>sd</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_3.datsd">The COMBINE action with label <b>sd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">sd</td><td width="5%"><font color="black">scalar</font></td><td>a linear combination</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datsd_water">sd_water</b>,<b name="VORONOI_DISTANCE.md_working_3.datsd_internal">sd_internal</b> <span class="plumedtooltip">COEFFICIENTS<span class="right"> the coefficients of the arguments in your function<i></i></span></span>=1,1 <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_3.datsp">sp</b>,<b name="VORONOI_DISTANCE.md_working_3.datsd_water">sd_water</b>,<b name="VORONOI_DISTANCE.md_working_3.datsd_internal">sd_internal</b>,<b name="VORONOI_DISTANCE.md_working_3.datsd">sd</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<p>CENTERS expands to atoms <code>(1,4,7,15,16)</code>, so the five REFERENCE entries map to
+two water O atoms, glycine N, and two symmetry-related glycine O atoms.  The
+vector <code>(2,2,2,0.5,0.5)</code> declares the neutral [N] chemical origin even though
+the fixture is [Z].  An ideal [Z] frame therefore has defects near
+<code>(0,0,+1,-0.5,-0.5)</code>, and the seven references sum to the seven atoms in AllH.
+The complete full-pair fixture gives <code>sp=0.0073</code>, <code>sd_water=0.0354</code>
+\f<script type="math/tex">\mathrm{\AA}\f</script>, <code>sd_internal=2.9789</code> \f<script type="math/tex">\mathrm{\AA}\f</script>, and
+<code>sd=3.0143</code> \f<script type="math/tex">\mathrm{\AA}\f</script>.</p>
+<p>An alternative reference partition can accidentally give the same linear
+<code>sp</code> scalar when coefficients and total references cancel.  That does not
+make it equivalent for VORONOI_DISTANCE, POWER=2, or sign filtering.  Use one
+physically declared reference vector consistently across the coupled Actions.
+The coordinate files, runnable inputs, commands, and expected outputs are in
+<code>user-doc/tutorials/others/reactive-voronoi</code>.
+The complete application is available in the
+<a href="https://github.com/Zhang-pchao/GlycineTautomerism/tree/main/Enhanced_Sampling">GlycineTautomerism repository</a>.</p>
+<h2 id="worked-example-4-nitrogen-reduction-proton-transfer">Worked example 4: nitrogen-reduction proton transfer</h2>
+<p>The published Ru single-atom nitrogen-reduction input in
+\cite Zhang2026NRR uses water oxygen atoms and one reactive nitrogen as the
+active Voronoi centers.  Catalyst and other adsorbate groups may appear in the
+full simulation input, but they are not automatically active in these Actions.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_VORONOI_DISTANCE.md_working_4.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../VORONOI_DISTANCE.md_working_4.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span class="plumedtooltip" style="color:green">UNITS<span class="right">This command sets the internal units for the code. <a href="https://www.plumed.org/doc-master/user-doc/html/UNITS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">LENGTH<span class="right">the units of lengths<i></i></span></span>=A
+<span style="display:none;" id="VORONOI_DISTANCE.md_working_4.dat">The UNITS action with label <b></b> calculates something</span><b name="VORONOI_DISTANCE.md_working_4.datWaterO" onclick='showPath("VORONOI_DISTANCE.md_working_4.dat","VORONOI_DISTANCE.md_working_4.datWaterO","VORONOI_DISTANCE.md_working_4.datWaterO","violet")'>WaterO</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_4.datWaterO">The GROUP action with label <b>WaterO</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">WaterO</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-3
+<b name="VORONOI_DISTANCE.md_working_4.datReactiveN" onclick='showPath("VORONOI_DISTANCE.md_working_4.dat","VORONOI_DISTANCE.md_working_4.datReactiveN","VORONOI_DISTANCE.md_working_4.datReactiveN","violet")'>ReactiveN</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_4.datReactiveN">The GROUP action with label <b>ReactiveN</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ReactiveN</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=4
+<b name="VORONOI_DISTANCE.md_working_4.datTransferableH" onclick='showPath("VORONOI_DISTANCE.md_working_4.dat","VORONOI_DISTANCE.md_working_4.datTransferableH","VORONOI_DISTANCE.md_working_4.datTransferableH","violet")'>TransferableH</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_4.datTransferableH">The GROUP action with label <b>TransferableH</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">TransferableH</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=5-11
+<b name="VORONOI_DISTANCE.md_working_4.datCenters" onclick='showPath("VORONOI_DISTANCE.md_working_4.dat","VORONOI_DISTANCE.md_working_4.datCenters","VORONOI_DISTANCE.md_working_4.datCenters","violet")'>Centers</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_4.datCenters">The GROUP action with label <b>Centers</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">Centers</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datWaterO">WaterO</b>,<b name="VORONOI_DISTANCE.md_working_4.datReactiveN">ReactiveN</b>
+
+<span id="VORONOI_DISTANCE.md_working_4.datdefsolvation_short"><b name="VORONOI_DISTANCE.md_working_4.datsolvation" onclick='showPath("VORONOI_DISTANCE.md_working_4.dat","VORONOI_DISTANCE.md_working_4.datsolvation","VORONOI_DISTANCE.md_working_4.datsolvation","black")'>solvation</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_4.datsolvation">The VORONOI_COORDINATION action with label <b>solvation</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">solvation</td><td width="5%"><font color="black">scalar</font></td><td>the selected reduction of the smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_DISTANCE.md_working_4.datdefsolvation");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datCenters">Centers</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datTransferableH">TransferableH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2,2,2,1 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=1 <span class="plumedtooltip">COEFFICIENTS<span class="right">One coefficient, or one value per atom in SELECT<i></i></span></span>=1,1,1,2
+</span><span id="VORONOI_DISTANCE.md_working_4.datdefsolvation_long" style="display:none;"><b name="VORONOI_DISTANCE.md_working_4.datsolvation" onclick='showPath("VORONOI_DISTANCE.md_working_4.dat","VORONOI_DISTANCE.md_working_4.datsolvation","VORONOI_DISTANCE.md_working_4.datsolvation","black")'>solvation</b>: <span class="plumedtooltip" style="color:green">VORONOI_COORDINATION<span class="right">Calculate a scalar reduction of smooth Voronoi coordination defects. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("VORONOI_DISTANCE.md_working_4.datdefsolvation");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_COORDINATION">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datCenters">Centers</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datTransferableH">TransferableH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2,2,2,1 <span class="plumedtooltip">POWER<span class="right"> Power of the selected occupancy defects; supported values are 1 and 2<i></i></span></span>=1 <span class="plumedtooltip">COEFFICIENTS<span class="right">One coefficient, or one value per atom in SELECT<i></i></span></span>=1,1,1,2  <span class="plumedtooltip">SIGN<span class="right"> Use ALL, POSITIVE, or NEGATIVE defects<i></i></span></span>=ALL
+</span><b name="VORONOI_DISTANCE.md_working_4.datsolution_ion_distance" onclick='showPath("VORONOI_DISTANCE.md_working_4.dat","VORONOI_DISTANCE.md_working_4.datsolution_ion_distance","VORONOI_DISTANCE.md_working_4.datsolution_ion_distance","black")'>solution_ion_distance</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_4.datsolution_ion_distance">The VORONOI_DISTANCE action with label <b>solution_ion_distance</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">solution_ion_distance</td><td width="5%"><font color="black">scalar</font></td><td>the distance-weighted product of selected smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_DISTANCE<span class="right">Calculate a distance-weighted product of smooth coordination defects. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datCenters">Centers</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datTransferableH">TransferableH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2,2,2,1 <span class="plumedtooltip">GROUP1<span class="right">First explicit subset of CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datWaterO">WaterO</b>
+<b name="VORONOI_DISTANCE.md_working_4.datsite_ion_distance" onclick='showPath("VORONOI_DISTANCE.md_working_4.dat","VORONOI_DISTANCE.md_working_4.datsite_ion_distance","VORONOI_DISTANCE.md_working_4.datsite_ion_distance","black")'>site_ion_distance</b><span style="display:none;" id="VORONOI_DISTANCE.md_working_4.datsite_ion_distance">The VORONOI_DISTANCE action with label <b>site_ion_distance</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">site_ion_distance</td><td width="5%"><font color="black">scalar</font></td><td>the distance-weighted product of selected smooth occupancy defects</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VORONOI_DISTANCE<span class="right">Calculate a distance-weighted product of smooth coordination defects. <a href="https://www.plumed.org/doc-master/user-doc/html/VORONOI_DISTANCE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">CENTERS<span class="right">Atoms that receive the smooth assignment<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datCenters">Centers</b> <span class="plumedtooltip">ASSIGNED<span class="right">Atoms that are distributed over CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datTransferableH">TransferableH</b> <span class="plumedtooltip">KAPPA<span class="right">Positive soft-assignment sharpness in inverse PLUMED length units<i></i></span></span>=5 <span class="plumedtooltip">REFERENCE<span class="right">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order<i></i></span></span>=2,2,2,1 <span class="plumedtooltip">GROUP1<span class="right">First explicit subset of CENTERS<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datWaterO">WaterO</b> <span class="plumedtooltip">GROUP2<span class="right">Optional disjoint second subset of CENTERS; if omitted, unique pairs within GROUP1 are used<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datReactiveN">ReactiveN</b>
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="VORONOI_DISTANCE.md_working_4.datsolvation">solvation</b>,<b name="VORONOI_DISTANCE.md_working_4.datsolution_ion_distance">solution_ion_distance</b>,<b name="VORONOI_DISTANCE.md_working_4.datsite_ion_distance">site_ion_distance</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=COLVAR
+</pre></div>
+
+<p>The corresponding files are available in the
+<a href="https://github.com/Zhang-pchao/research/tree/main/OPES-DPMD-NRR">OPES-DPMD-NRR repository</a>.
+If the full input uses OPES, enable the optional module as described on the
+<a href="../VORONOI_COORDINATION/">VORONOI_COORDINATION</a> page.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li><code>GROUP1 must contain at least two atoms when GROUP2 is omitted</code>: a
+  within-group distance requires at least one unique pair.  For a single
+  reactive site, use a nonempty disjoint GROUP2.</li>
+<li><code>GROUP1 and GROUP2 must be disjoint</code>: a self-pair has no valid radial
+  derivative and is intentionally rejected.</li>
+<li>A distance is unexpectedly negative: same-sign defect pairs contribute
+  negatively because of the leading minus sign.  Inspect the individual
+  defects and pair-set definition before changing the sign convention.</li>
+<li>A value grows with the number of defects: the Action is a pair sum, not a
+  normalized nearest-pair distance.  Reduce the groups or define a different
+  mathematical observable if that behavior is not intended.</li>
+<li>A periodic trajectory jumps: inspect minimum-image branch crossings and
+  whether an unwrapped or externally referenced coordinate is actually needed.</li>
+</ul>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_atoms/">atoms</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CENTERS</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">Atoms that receive the smooth assignment</td>
+</tr>
+<tr>
+<td style="text-align: left;">ASSIGNED</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">Atoms that are distributed over CENTERS</td>
+</tr>
+<tr>
+<td style="text-align: left;">GROUP1</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">First explicit subset of CENTERS</td>
+</tr>
+<tr>
+<td style="text-align: left;">GROUP2</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">Optional disjoint second subset of CENTERS; if omitted, unique pairs within GROUP1 are used</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CENTERS</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Atoms that receive the smooth assignment</td>
+</tr>
+<tr>
+<td style="text-align: left;">ASSIGNED</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Atoms that are distributed over CENTERS</td>
+</tr>
+<tr>
+<td style="text-align: left;">GROUP1</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">First explicit subset of CENTERS</td>
+</tr>
+<tr>
+<td style="text-align: left;">GROUP2</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Optional disjoint second subset of CENTERS; if omitted, unique pairs within GROUP1 are used</td>
+</tr>
+<tr>
+<td style="text-align: left;">KAPPA</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Positive soft-assignment sharpness in inverse PLUMED length units</td>
+</tr>
+<tr>
+<td style="text-align: left;">REFERENCE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">One intended occupancy broadcast to all CENTERS, or one value per CENTER in CENTERS order</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NUMERICAL_DERIVATIVES<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the derivatives for these quantities numerically</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NOPBC<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">ignore the periodic boundary conditions when calculating distances</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">SERIAL<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Perform the calculation redundantly on each rank for debugging</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NLIST<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">Use an approximate neighbor-list truncation of the assignment candidates</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NL_CUTOFF<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Candidate cutoff in PLUMED length units; every ASSIGNED atom must retain at least one CENTER</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NL_STRIDE<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Number of steps between neighbor-list updates</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NL_SKIN<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">Nonnegative Verlet buffer in PLUMED length units; requires NL_STRIDE greater than one</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

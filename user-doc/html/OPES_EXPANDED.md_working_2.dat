@@ -1,0 +1,9 @@
+# simulate multiple temperatures while biasing a CV
+ene: ENERGY
+dst: DISTANCE ATOMS=1,2
+
+ecv1: ECV_MULTITHERMAL ARG=ene TEMP_SET_ALL=200,300,500,1000
+ecv2: ECV_UMBRELLAS_LINE ARG=dst CV_MIN=1.2 CV_MAX=4.3 SIGMA=0.5
+opes: OPES_EXPANDED ARG=ecv1.*,ecv2.* PACE=500 OBSERVATION_STEPS=1
+
+PRINT FILE=COLVAR STRIDE=500 ARG=ene,dst,opes.bias

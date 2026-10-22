@@ -1,0 +1,8 @@
+w: CONSTANT VALUES=1,2,2,3,4
+# This computes the largest principal radius of gyration
+l: GYRATION ATOMS=1-5 TYPE=RGYR_1 WEIGHTS=w
+# This computes the middle principal radius of gyration
+m: GYRATION ATOMS=1-5 TYPE=RGYR_2 WEIGHTS=w
+# This computes the smallest principal radius of gyration
+s: GYRATION ATOMS=1-5 TYPE=RGYR_3 WEIGHTS=w
+PRINT ARG=l,m,s FILE=colvar

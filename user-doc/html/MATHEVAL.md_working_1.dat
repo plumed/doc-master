@@ -1,0 +1,6 @@
+dAB: DISTANCE ATOMS=10,12
+dAC: DISTANCE ATOMS=10,15
+diff: MATHEVAL ARG=dAB,dAC FUNC=y-x PERIODIC=NO
+# notice: the previous line could be replaced with the following
+# diff: COMBINE ARG=dAB,dAC COEFFICIENTS=-1,1
+METAD ARG=diff SIGMA=0.1 HEIGHT=0.5 BIASFACTOR=10 PACE=100

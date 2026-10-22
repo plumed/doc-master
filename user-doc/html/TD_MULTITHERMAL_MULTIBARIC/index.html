@@ -1,0 +1,961 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Action: TD_MULTITHERMAL_MULTIBARIC - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-td_multithermal_multibaric" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: TD_MULTITHERMAL_MULTIBARIC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-td_multithermal_multibaric"><a href="../actions/">Action</a>: TD_MULTITHERMAL_MULTIBARIC</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_ves/"><strong>ves</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Multithermal-multibaric target distribution (dynamic).</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><a href="https://www.plumed-nest.org/browse.html?action=TD_MULTITHERMAL_MULTIBARIC"><img alt="used in 1 eggs" src="https://img.shields.io/badge/nest-1-green.svg" /></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Multithermal-multibaric target distribution (dynamic).</p>
+<p>Use the target distribution to sample the multithermal-multibaric ensemble (see first paper cited below).
+In this way, in a single molecular dynamics simulation one can obtain information
+about the simulated system in a range of temperatures and pressures.
+This range is determined through the keywords MIN_TEMP, MAX_TEMP, MIN_PRESSURE, and MAX_PRESSURE.
+One should also specified the target pressure of the barostat with the keyword PRESSURE.</p>
+<p>The collective variables (CVs) used to construct the bias potential must be:
+  1. the potential energy and the volume or,
+  2. the potential energy, the volume, and an order parameter.</p>
+<p>Other choices of CVs or a different order of the above mentioned CVs are nonsensical.
+The third CV, the order parameter, must be used when the region of the phase diagram under study is crossed by a first order phase transition (for details see the first paper cited below).</p>
+<p>The algorithm will explore the free energy at each temperature and pressure up to a predefined free
+ energy threshold <script type="math/tex">\epsilon</script> specified through the keyword THRESHOLD (in kT units).
+If only the energy and the volume are being biased, i.e. no phase transition is considered, then THRESHOLD can be set to around 5.
+If also an order parameter is used then the THRESHOLD should be greater than the barrier for the transformation in kT.
+For small systems undergoing a freezing transition THRESHOLD is typically between 20 and 50.</p>
+<p>It is also important to specify the number of intermediate temperatures and pressures to consider.
+This is done through the keywords STEPS_TEMP and STEPS_PRESSURE.
+If the number of intermediate temperature and pressures is too small, then holes might appear in the target distribution.
+If it is too large, the performance will deteriorate with no additional advantage.</p>
+<p>We now describe the algorithm more rigorously.
+The target distribution is given by</p>
+<p>
+<script type="math/tex; mode=display">
+p(E,\mathcal{V},s)=
+  \begin{cases}
+    1/\Omega_{E,\mathcal{V},s} & \text{if there is at least one } \beta',P' \text{ such} \\
+             & \text{that } \beta' F_{\beta',P'}(E,\mathcal{V},s)<\epsilon \text{ with}  \\
+             & \beta_1>\beta'>\beta_2 \text{ and } P_1<P'<P_2 \\
+    0 & \text{otherwise}
+  \end{cases}
+</script>
+</p>
+<p>with <script type="math/tex">F_{\beta',P'}(E,\mathcal{V},s)</script> the free energy as a function of energy <script type="math/tex">E</script> and volume <script type="math/tex">\mathcal{V}</script> (and optionally the order parameter <script type="math/tex">s</script>) at temperature <script type="math/tex">\beta'</script> and pressure <script type="math/tex">P'</script>, <script type="math/tex">\Omega_{E,\mathcal{V},s}</script> is a normalization constant, and <script type="math/tex">\epsilon</script> is the THRESHOLD.
+In practice the condition <script type="math/tex">\beta' F_{\beta',P'}(E,\mathcal{V},s)<\epsilon</script>  is checked in equally spaced points in each dimension <script type="math/tex">\beta'</script> and <script type="math/tex">P'</script>.
+The number of points is determined with the keywords STEPS_TEMP and STEPS_PRESSURE.
+In practice the target distribution is never set to zero but rather to a small value controlled by the keyword EPSILON.
+The small value is e^-EPSILON.</p>
+<p>Much like in the Wang-Landau algorithm that is introduced in the second to last paper cited below or in the multicanonical ensemble that is discussed in the last paper cited below, a flat histogram is targeted.
+The idea behind this choice of target distribution is that all regions of potential energy and volume (and optionally order parameter) that are relevant at all temperatures <script type="math/tex">\beta_1<\beta'<\beta_2</script> and pressure <script type="math/tex">P_1<P'<P_2</script> are included in the distribution.</p>
+<p>The free energy at temperature <script type="math/tex">\beta'</script> and pressure <script type="math/tex">P'</script> is calculated from the free energy at <script type="math/tex">\beta</script> and <script type="math/tex">P</script> using:</p>
+<p>
+<script type="math/tex; mode=display">
+\beta' F_{\beta',P'}(E,\mathcal{V},s) = \beta F_{\beta,P}(E,\mathcal{V},s) + (\beta' - \beta) E + (\beta' P' - \beta P ) \mathcal{V} + C
+</script>
+</p>
+<p>with <script type="math/tex">C</script> such that <script type="math/tex">F_{\beta',P'}(E_m,\mathcal{V}_m,s_m)=0</script> with <script type="math/tex">E_{m},\mathcal{V}_m,s_m</script> the position of the free energy minimum.
+<script type="math/tex"> \beta F_{\beta,P}(E,\mathcal{V},s) </script> is not know from the start and is instead found during the simulation.
+Therefore <script type="math/tex"> p(E,\mathcal{V},s) </script> is determined iteratively as done in the well tempered target distribution in the second paper cited below.</p>
+<p>The output of these simulations can be reweighted in order to obtain information at all temperatures and pressures in the targeted region of Temperature-Pressure plane.
+The reweighting can be performed using the action <a href="../REWEIGHT_TEMP_PRESS/">REWEIGHT_TEMP_PRESS</a>.</p>
+<p>The multicanonical ensemble (fixed volume) can be targeted using <a href="../TD_MULTICANONICAL/">TD_MULTICANONICAL</a>.</p>
+<h2 id="examples">Examples</h2>
+<p>The following input can be used to run a simulation in the multithermal-multibaric ensemble.
+The region of the temperature-pressure plane that will be explored is 260-350 K and 1 bar- 300 MPa.
+The energy and the volume are used as collective variables.
+Legendre polynomials are used to construct the two dimensional bias potential.
+The averaged stochastic gradient descent algorithm is chosen to optimize the VES functional.
+The target distribution is updated every 100 optimization steps (200 ps here) using the last estimation of the free energy.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_TD_MULTITHERMAL_MULTIBARIC.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../TD_MULTITHERMAL_MULTIBARIC.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment"># Use energy and volume as CVs</span>
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datenergy" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_1.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_1.datenergy","TD_MULTITHERMAL_MULTIBARIC.md_working_1.datenergy","black")'>energy</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datenergy">The ENERGY action with label <b>energy</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">energy</td><td width="5%"><font color="black">scalar</font></td><td>the internal energy</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ENERGY<span class="right">Calculate the total potential energy of the simulation box. <a href="https://www.plumed.org/doc-master/user-doc/html/ENERGY" style="color:green">More details</a><i></i></span></span>
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datvol" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_1.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_1.datvol","TD_MULTITHERMAL_MULTIBARIC.md_working_1.datvol","black")'>vol</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datvol">The VOLUME action with label <b>vol</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">vol</td><td width="5%"><font color="black">scalar</font></td><td>the volume of simulation box</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VOLUME<span class="right">Calculate the volume the simulation box. <a href="https://www.plumed.org/doc-master/user-doc/html/VOLUME" style="color:green">More details</a><i></i></span></span>
+<br/><span style="color:blue" class="comment"># Basis functions</span>
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datbf1" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_1.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_1.datbf1","TD_MULTITHERMAL_MULTIBARIC.md_working_1.datbf1","brown")'>bf1</b>: <span class="plumedtooltip" style="color:green">BF_LEGENDRE<span class="right">Legendre polynomials basis functions. <a href="https://www.plumed.org/doc-master/user-doc/html/BF_LEGENDRE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ORDER<span class="right">The order of the basis function expansion<i></i></span></span>=10 <span class="plumedtooltip">MINIMUM<span class="right">The minimum of the interval on which the basis functions are defined<i></i></span></span>=-14750 <span class="plumedtooltip">MAXIMUM<span class="right">The maximum of the interval on which the basis functions are defined<i></i></span></span>=-12250
+<span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datbf1">The BF_LEGENDRE action with label <b>bf1</b> calculates something</span><b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datbf2" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_1.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_1.datbf2","TD_MULTITHERMAL_MULTIBARIC.md_working_1.datbf2","brown")'>bf2</b>: <span class="plumedtooltip" style="color:green">BF_LEGENDRE<span class="right">Legendre polynomials basis functions. <a href="https://www.plumed.org/doc-master/user-doc/html/BF_LEGENDRE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ORDER<span class="right">The order of the basis function expansion<i></i></span></span>=10 <span class="plumedtooltip">MINIMUM<span class="right">The minimum of the interval on which the basis functions are defined<i></i></span></span>=6.5 <span class="plumedtooltip">MAXIMUM<span class="right">The maximum of the interval on which the basis functions are defined<i></i></span></span>=8.25
+
+<span style="color:blue" class="comment"># Target distribution - 1 bar = 0.06022140857 and 300 MPa = 180.66422571</span>
+<span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datbf2">The BF_LEGENDRE action with label <b>bf2</b> calculates something</span><span class="plumedtooltip" style="color:green">TD_MULTITHERMAL_MULTIBARIC<span class="right">Multithermal-multibaric target distribution (dynamic). <a href="https://www.plumed.org/doc-master/user-doc/html/TD_MULTITHERMAL_MULTIBARIC" style="color:green">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">MIN_TEMP<span class="right">Minimum energy<i></i></span></span>=260
+ <span class="plumedtooltip">MAX_TEMP<span class="right">Maximum energy<i></i></span></span>=350
+ <span class="plumedtooltip">MAX_PRESSURE<span class="right">Maximum pressure<i></i></span></span>=180.66422571
+ <span class="plumedtooltip">MIN_PRESSURE<span class="right">Minimum pressure<i></i></span></span>=0.06022140857
+ <span class="plumedtooltip">PRESSURE<span class="right">Target pressure of the barostat used in the MD engine<i></i></span></span>=0.06022140857
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.dattd_multi" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_1.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_1.dattd_multi","TD_MULTITHERMAL_MULTIBARIC.md_working_1.dattd_multi","brown")'>td_multi</b>
+... TD_MULTITHERMAL_MULTIBARIC
+<br/><span style="color:blue" class="comment"># Bias expansion</span>
+<span id="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datdefb1_short"><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_1.dattd_multi">The TD_MULTITHERMAL_MULTIBARIC action with label <b>td_multi</b> calculates something</span><span class="plumedtooltip" style="color:green">VES_LINEAR_EXPANSION<span class="right">Linear basis set expansion bias. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_1.datdefb1");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VES_LINEAR_EXPANSION">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datenergy">energy</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datvol">vol</b>
+ <span class="plumedtooltip">BASIS_FUNCTIONS<span class="right">the label of the one dimensional basis functions that should be used<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datbf1">bf1</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datbf2">bf2</b>
+ <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is needed if the MD code does not pass the temperature to PLUMED<i></i></span></span>=300.0
+ <span class="plumedtooltip">GRID_BINS<span class="right">the number of bins used for the grid<i></i></span></span>=200,200
+ <span class="plumedtooltip">TARGET_DISTRIBUTION<span class="right">the label of the target distribution to be used<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.dattd_multi">td_multi</b>
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datb1" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_1.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_1.datb1","TD_MULTITHERMAL_MULTIBARIC.md_working_1.datb1","black")'>b1</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datb1">The VES_LINEAR_EXPANSION action with label <b>b1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">b1.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">b1.force2</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the squared force due to this bias potential.</td></tr></table></span>
+... VES_LINEAR_EXPANSION
+</span><span id="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datdefb1_long" style="display:none;"><span class="plumedtooltip" style="color:green">VES_LINEAR_EXPANSION<span class="right">Linear basis set expansion bias. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_1.datdefb1");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VES_LINEAR_EXPANSION">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datenergy">energy</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datvol">vol</b>
+ <span class="plumedtooltip">BASIS_FUNCTIONS<span class="right">the label of the one dimensional basis functions that should be used<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datbf1">bf1</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datbf2">bf2</b>
+ <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is needed if the MD code does not pass the temperature to PLUMED<i></i></span></span>=300.0
+ <span class="plumedtooltip">GRID_BINS<span class="right">the number of bins used for the grid<i></i></span></span>=200,200
+ <span class="plumedtooltip">TARGET_DISTRIBUTION<span class="right">the label of the target distribution to be used<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.dattd_multi">td_multi</b>
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datb1" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_1.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_1.datb1","TD_MULTITHERMAL_MULTIBARIC.md_working_1.datb1","black")'>b1</b>
+ <span class="plumedtooltip">GRID_FMT<span class="right"> the format to use when outputting the numbers in the grids<i></i></span></span>=%14.9f
+... VES_LINEAR_EXPANSION
+</span><br/><span style="color:blue" class="comment"># Optimization algorithm</span>
+<span id="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datdefo1_short"><span class="plumedtooltip" style="color:green">OPT_AVERAGED_SGD<span class="right">Averaged stochastic gradient decent with fixed step size. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_1.datdefo1");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/OPT_AVERAGED_SGD">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">BIAS<span class="right">the label of the VES bias to be optimized<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datb1">b1</b>
+  <span class="plumedtooltip">STRIDE<span class="right">the frequency of updating the coefficients given in the number of MD steps<i></i></span></span>=500
+  <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.dato1" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_1.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_1.dato1","TD_MULTITHERMAL_MULTIBARIC.md_working_1.dato1","brown")'>o1</b>
+  <span class="plumedtooltip">STEPSIZE<span class="right">the step size used for the optimization<i></i></span></span>=1.0
+  <span class="plumedtooltip">FES_OUTPUT<span class="right">how often the FES(s) should be written out to file<i></i></span></span>=500
+  <span class="plumedtooltip">BIAS_OUTPUT<span class="right">how often the bias(es) should be written out to file<i></i></span></span>=500
+  <span class="plumedtooltip">TARGETDIST_OUTPUT<span class="right">how often the dynamic target distribution(s) should be written out to file<i></i></span></span>=500
+  <span class="plumedtooltip">COEFFS_OUTPUT<span class="right"> how often the coefficients should be written to file<i></i></span></span>=100
+  <span class="plumedtooltip">TARGETDIST_STRIDE<span class="right">stride for updating a target distribution that is iteratively updated during the optimization<i></i></span></span>=100
+... OPT_AVERAGED_SGD
+</span><span id="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datdefo1_long" style="display:none;"><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_1.dato1">The OPT_AVERAGED_SGD action with label <b>o1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">o1.value</td><td>a scalar</td></tr></table></span><span class="plumedtooltip" style="color:green">OPT_AVERAGED_SGD<span class="right">Averaged stochastic gradient decent with fixed step size. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_1.datdefo1");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/OPT_AVERAGED_SGD">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">BIAS<span class="right">the label of the VES bias to be optimized<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.datb1">b1</b>
+  <span class="plumedtooltip">STRIDE<span class="right">the frequency of updating the coefficients given in the number of MD steps<i></i></span></span>=500
+  <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_1.dato1" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_1.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_1.dato1","TD_MULTITHERMAL_MULTIBARIC.md_working_1.dato1","brown")'>o1</b>
+  <span class="plumedtooltip">STEPSIZE<span class="right">the step size used for the optimization<i></i></span></span>=1.0
+  <span class="plumedtooltip">FES_OUTPUT<span class="right">how often the FES(s) should be written out to file<i></i></span></span>=500
+  <span class="plumedtooltip">BIAS_OUTPUT<span class="right">how often the bias(es) should be written out to file<i></i></span></span>=500
+  <span class="plumedtooltip">TARGETDIST_OUTPUT<span class="right">how often the dynamic target distribution(s) should be written out to file<i></i></span></span>=500
+  <span class="plumedtooltip">COEFFS_OUTPUT<span class="right"> how often the coefficients should be written to file<i></i></span></span>=100
+  <span class="plumedtooltip">TARGETDIST_STRIDE<span class="right">stride for updating a target distribution that is iteratively updated during the optimization<i></i></span></span>=100
+ <span class="plumedtooltip">COEFFS_FILE<span class="right"> the name of output file for the coefficients<i></i></span></span>=coeffs.data
+... OPT_AVERAGED_SGD
+</span></pre>
+</div>
+<p>The multithermal-multibaric target distribution can also be used to explore regions of the phase diagram crossed by first order phase transitions.
+Consider a system of 250 atoms that crystallizes in the FCC crystal structure.
+The region of the temperature-pressure plane that will be explored is 350-450 K and 1bar-1GPa.
+We assume that inside this region we can find the liquid-FCC coexistence line that we would like to obtain.
+In this case in addition to the energy and volume, an order parameter must also be biased.
+The energy, volume, and an order parameter are used as collective variables to construct the bias potential.
+We choose as order parameter the <a href="../FCCUBIC/">FCCUBIC</a>.
+Legendre polynomials are used to construct the three dimensional bias potential.
+The averaged stochastic gradient descent algorithm is chosen to optimize the VES functional.
+The target distribution is updated every 100 optimization steps (200 ps here) using the last estimation of the free energy.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment"># Use energy, volume and FCCUBIC as CVs</span>
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datenergy" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datenergy","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datenergy","black")'>energy</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datenergy">The ENERGY action with label <b>energy</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">energy</td><td width="5%"><font color="black">scalar</font></td><td>the internal energy</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ENERGY<span class="right">Calculate the total potential energy of the simulation box. <a href="https://www.plumed.org/doc-master/user-doc/html/ENERGY" style="color:green">More details</a><i></i></span></span>
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datvol" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datvol","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datvol","black")'>vol</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datvol">The VOLUME action with label <b>vol</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">vol</td><td width="5%"><font color="black">scalar</font></td><td>the volume of simulation box</td></tr></table></span>: <span class="plumedtooltip" style="color:green">VOLUME<span class="right">Calculate the volume the simulation box. <a href="https://www.plumed.org/doc-master/user-doc/html/VOLUME" style="color:green">More details</a><i></i></span></span>
+<span id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_short"><span id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datdeffcc_short"><b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_shortcut","blue")'>fcc</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_shortcut">The FCCUBIC action with label <b>fcc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fcc</td><td width="5%"><font color="blue">vector</font></td><td>the symmetry function for each of the specified atoms</td></tr><tr><td width="5%">fcc_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the number of colvars that have a value more than a threshold</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FCCUBIC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_2.datdeffcc");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIES<span class="right">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments<i></i></span></span>=1-256 <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={CUBIC D_0=0.4 D_MAX=0.5} <span class="plumedtooltip">MORE_THAN<span class="right">calculate the number of variables that are more than a certain target value. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN">MORE_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.45 NN=12 MM=24}
+</span><span id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datdeffcc_long" style="display:none;"><b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_shortcut","blue")'>fcc</b>: <span class="plumedtooltip" style="color:green">FCCUBIC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_2.datdeffcc");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC">More details</a><i></i></span></span> <span class="plumedtooltip">SPECIES<span class="right">the list of atoms for which the symmetry function is being calculated and the atoms that can be in the environments<i></i></span></span>=1-256 <span class="plumedtooltip">SWITCH<span class="right">the switching function that it used in the construction of the contact matrix. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={CUBIC D_0=0.4 D_MAX=0.5} <span class="plumedtooltip">MORE_THAN<span class="right">calculate the number of variables that are more than a certain target value. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN">MORE_THAN</a>.<i></i></span></span>={RATIONAL R_0=0.45 NN=12 MM=24}  <span class="plumedtooltip">PHI<span class="right"> The Euler rotational angle phi<i></i></span></span>=0.0 <span class="plumedtooltip">THETA<span class="right"> The Euler rotational angle theta<i></i></span></span>=0.0 <span class="plumedtooltip">PSI<span class="right"> The Euler rotational angle psi<i></i></span></span>=0.0 <span class="plumedtooltip">ALPHA<span class="right"> The alpha parameter of the angular function that is used for FCCUBIC<i></i></span></span>=3.0
+</span></span><span id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc")'># fcc: FCCUBIC SPECIES=1-256 SWITCH={CUBIC D_0=0.4 D_MAX=0.5} MORE_THAN={RATIONAL R_0=0.45 NN=12 MM=24}</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_grp" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_grp","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_grp","violet")'>fcc_grp</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_grp">The GROUP action with label <b>fcc_grp</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fcc_grp</td><td width="5%"><font color="violet">atoms</font></td><td>indices of atoms specified in GROUP</td></tr></table></span>: <span class="plumedtooltip" style="color:green">GROUP<span class="right">Define a group of atoms so that a particular list of atoms can be referenced with a single label in definitions of CVs or virtual atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/GROUP" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the numerical indexes for the set of atoms in the group<i></i></span></span>=1-256
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mat" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mat","red")'>fcc_mat</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mat">The CONTACT_MATRIX action with label <b>fcc_mat</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fcc_mat.w</td><td width="5%"><font color="red">matrix</font></td><td>a matrix containing the weights for the bonds between each pair of atoms</td></tr><tr><td width="5%">fcc_mat.x</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the x axis</td></tr><tr><td width="5%">fcc_mat.y</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the y axis</td></tr><tr><td width="5%">fcc_mat.z</td><td width="5%"><font color="red">matrix</font></td><td>the projection of the bond on the z axis</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONTACT_MATRIX<span class="right">Adjacency matrix in which two atoms are adjacent if they are within a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/CONTACT_MATRIX" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">GROUP<span class="right">specifies the list of atoms that should be assumed indistinguishable<i></i></span></span>=1-256 <span class="plumedtooltip">SWITCH<span class="right">the input for the switching function that acts upon the distance between each pair of atoms. Options for this keyword are explained in the documentation for <a href="https://www.plumed.org/doc-master/user-doc/html/LESS_THAN">LESS_THAN</a>.<i></i></span></span>={CUBIC D_0=0.4 D_MAX=0.5} <span class="plumedtooltip">COMPONENTS<span class="right"> also calculate the components of the vector connecting the atoms in the contact matrix<i></i></span></span>
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_vfunc" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_vfunc","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_vfunc","red")'>fcc_vfunc</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_vfunc">The FCCUBIC_FUNC action with label <b>fcc_vfunc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fcc_vfunc</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of a function that measures the similarity with an fcc environment to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">FCCUBIC_FUNC<span class="right">Measure how similar the environment around atoms is to that found in a FCC structure. <a href="https://www.plumed.org/doc-master/user-doc/html/FCCUBIC_FUNC" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mat">fcc_mat.x</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mat">fcc_mat.y</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mat">fcc_mat.z</b> <span class="plumedtooltip">ALPHA<span class="right"> The alpha parameter of the angular function<i></i></span></span>=3.0
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_wvfunc" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_wvfunc","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_wvfunc","red")'>fcc_wvfunc</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_wvfunc">The CUSTOM action with label <b>fcc_wvfunc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fcc_wvfunc</td><td width="5%"><font color="red">matrix</font></td><td>the matrix obtained by doing an element-wise application of an arbitrary function to the input matrix</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_vfunc">fcc_vfunc</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mat">fcc_mat.w</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_ones" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_ones","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_ones","blue")'>fcc_ones</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_ones">The CONSTANT action with label <b>fcc_ones</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fcc_ones</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ONES<span class="right">Create a constant vector with all elements equal to one <a href="https://www.plumed.org/doc-master/user-doc/html/ONES" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SIZE<span class="right">the number of ones that you would like to create<i></i></span></span>=256
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc","blue")'>fcc</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc">The MATRIX_VECTOR_PRODUCT action with label <b>fcc</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fcc</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_wvfunc">fcc_wvfunc</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_ones">fcc_ones</b>
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_denom" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_denom","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_denom","blue")'>fcc_denom</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_denom">The MATRIX_VECTOR_PRODUCT action with label <b>fcc_denom</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fcc_denom</td><td width="5%"><font color="blue">vector</font></td><td>the vector that is obtained by taking the product between the matrix and the vector that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MATRIX_VECTOR_PRODUCT<span class="right">Calculate the product of the matrix and the vector <a href="https://www.plumed.org/doc-master/user-doc/html/MATRIX_VECTOR_PRODUCT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the matrix and the vector/scalar that are being multiplied<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mat">fcc_mat.w</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_ones">fcc_ones</b>
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_n" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_n","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_n","blue")'>fcc_n</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_n">The CUSTOM action with label <b>fcc_n</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fcc_n</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of an arbitrary function to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc">fcc</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_denom">fcc_denom</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mt" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mt","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mt","blue")'>fcc_mt</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mt">The MORE_THAN action with label <b>fcc_mt</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fcc_mt</td><td width="5%"><font color="blue">vector</font></td><td>the vector obtained by doing an element-wise application of a function that is one if the if the input is more than a threshold to the input vectors</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MORE_THAN<span class="right">Use a switching function to determine how many of the input variables are more than a certain cutoff. <a href="https://www.plumed.org/doc-master/user-doc/html/MORE_THAN" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_n">fcc_n</b> <span class="plumedtooltip">SWITCH<span class="right">This keyword is used if you want to employ an alternative to the continuous swiching function defined above<i></i></span></span>={RATIONAL R_0=0.45 NN=12 MM=24}
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_morethan" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_morethan","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_morethan","black")'>fcc_morethan</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_morethan">The SUM action with label <b>fcc_morethan</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">fcc_morethan</td><td width="5%"><font color="black">scalar</font></td><td>the SUM of the elements in the input value</td></tr></table></span>: <span class="plumedtooltip" style="color:green">SUM<span class="right">Calculate the sum of the arguments <a href="https://www.plumed.org/doc-master/user-doc/html/SUM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the vector/matrix/grid whose elements shuld be added together<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc_mt">fcc_mt</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><br/><span style="color:blue" class="comment"># Basis functions</span>
+<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf1" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf1","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf1","brown")'>bf1</b>: <span class="plumedtooltip" style="color:green">BF_LEGENDRE<span class="right">Legendre polynomials basis functions. <a href="https://www.plumed.org/doc-master/user-doc/html/BF_LEGENDRE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ORDER<span class="right">The order of the basis function expansion<i></i></span></span>=8 <span class="plumedtooltip">MINIMUM<span class="right">The minimum of the interval on which the basis functions are defined<i></i></span></span>=-26500 <span class="plumedtooltip">MAXIMUM<span class="right">The maximum of the interval on which the basis functions are defined<i></i></span></span>=-23500
+<span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf1">The BF_LEGENDRE action with label <b>bf1</b> calculates something</span><b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf2" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf2","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf2","brown")'>bf2</b>: <span class="plumedtooltip" style="color:green">BF_LEGENDRE<span class="right">Legendre polynomials basis functions. <a href="https://www.plumed.org/doc-master/user-doc/html/BF_LEGENDRE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ORDER<span class="right">The order of the basis function expansion<i></i></span></span>=8 <span class="plumedtooltip">MINIMUM<span class="right">The minimum of the interval on which the basis functions are defined<i></i></span></span>=8.0 <span class="plumedtooltip">MAXIMUM<span class="right">The maximum of the interval on which the basis functions are defined<i></i></span></span>=11.5
+<span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf2">The BF_LEGENDRE action with label <b>bf2</b> calculates something</span><b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf3" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf3","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf3","brown")'>bf3</b>: <span class="plumedtooltip" style="color:green">BF_LEGENDRE<span class="right">Legendre polynomials basis functions. <a href="https://www.plumed.org/doc-master/user-doc/html/BF_LEGENDRE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ORDER<span class="right">The order of the basis function expansion<i></i></span></span>=8 <span class="plumedtooltip">MINIMUM<span class="right">The minimum of the interval on which the basis functions are defined<i></i></span></span>=0.0 <span class="plumedtooltip">MAXIMUM<span class="right">The maximum of the interval on which the basis functions are defined<i></i></span></span>=256.0
+
+<span style="color:blue" class="comment"># Target distribution</span>
+<span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf3">The BF_LEGENDRE action with label <b>bf3</b> calculates something</span><span class="plumedtooltip" style="color:green">TD_MULTITHERMAL_MULTIBARIC<span class="right">Multithermal-multibaric target distribution (dynamic). <a href="https://www.plumed.org/doc-master/user-doc/html/TD_MULTITHERMAL_MULTIBARIC" style="color:green">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.dattd_multitp" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.dattd_multitp","TD_MULTITHERMAL_MULTIBARIC.md_working_2.dattd_multitp","brown")'>td_multitp</b>
+ <span class="plumedtooltip">MIN_TEMP<span class="right">Minimum energy<i></i></span></span>=350.0
+ <span class="plumedtooltip">MAX_TEMP<span class="right">Maximum energy<i></i></span></span>=450.0
+ <span class="plumedtooltip">MIN_PRESSURE<span class="right">Minimum pressure<i></i></span></span>=0.06022140857
+ <span class="plumedtooltip">MAX_PRESSURE<span class="right">Maximum pressure<i></i></span></span>=602.2140857
+ <span class="plumedtooltip">PRESSURE<span class="right">Target pressure of the barostat used in the MD engine<i></i></span></span>=301.10704285
+ <span class="plumedtooltip">SIGMA<span class="right">The standard deviation parameters of the Gaussian kernels used for smoothing the target distribution<i></i></span></span>=250.0,0.1,10.0
+ <span class="plumedtooltip">THRESHOLD<span class="right"> Maximum exploration free energy in kT<i></i></span></span>=15
+ <span class="plumedtooltip">STEPS_TEMP<span class="right"> Number of temperature steps<i></i></span></span>=20
+ <span class="plumedtooltip">STEPS_PRESSURE<span class="right"> Number of pressure steps<i></i></span></span>=20
+... TD_MULTITHERMAL_MULTIBARIC
+<br/><span style="color:blue" class="comment"># Expansion</span>
+<span id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datdefb1_short"><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.dattd_multitp">The TD_MULTITHERMAL_MULTIBARIC action with label <b>td_multitp</b> calculates something</span><span class="plumedtooltip" style="color:green">VES_LINEAR_EXPANSION<span class="right">Linear basis set expansion bias. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_2.datdefb1");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VES_LINEAR_EXPANSION">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datenergy">energy</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datvol">vol</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc">fcc.morethan</b>
+ <span class="plumedtooltip">BASIS_FUNCTIONS<span class="right">the label of the one dimensional basis functions that should be used<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf1">bf1</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf2">bf2</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf3">bf3</b>
+ <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is needed if the MD code does not pass the temperature to PLUMED<i></i></span></span>=400.0
+ <span class="plumedtooltip">GRID_BINS<span class="right">the number of bins used for the grid<i></i></span></span>=40,40,40
+ <span class="plumedtooltip">TARGET_DISTRIBUTION<span class="right">the label of the target distribution to be used<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.dattd_multitp">td_multitp</b>
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datb1" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datb1","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datb1","black")'>b1</b><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datb1">The VES_LINEAR_EXPANSION action with label <b>b1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">b1.bias</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">b1.force2</td><td width="5%"><font color="black">scalar</font></td><td>the instantaneous value of the squared force due to this bias potential.</td></tr></table></span>
+... VES_LINEAR_EXPANSION
+</span><span id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datdefb1_long" style="display:none;"><span class="plumedtooltip" style="color:green">VES_LINEAR_EXPANSION<span class="right">Linear basis set expansion bias. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_2.datdefb1");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/VES_LINEAR_EXPANSION">More details</a><i></i></span></span> ...
+ <span class="plumedtooltip">ARG<span class="right">the labels of the scalars on which the bias will act<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datenergy">energy</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datvol">vol</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datfcc">fcc.morethan</b>
+ <span class="plumedtooltip">BASIS_FUNCTIONS<span class="right">the label of the one dimensional basis functions that should be used<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf1">bf1</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf2">bf2</b>,<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datbf3">bf3</b>
+ <span class="plumedtooltip">TEMP<span class="right">the system temperature - this is needed if the MD code does not pass the temperature to PLUMED<i></i></span></span>=400.0
+ <span class="plumedtooltip">GRID_BINS<span class="right">the number of bins used for the grid<i></i></span></span>=40,40,40
+ <span class="plumedtooltip">TARGET_DISTRIBUTION<span class="right">the label of the target distribution to be used<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.dattd_multitp">td_multitp</b>
+ <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datb1" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datb1","TD_MULTITHERMAL_MULTIBARIC.md_working_2.datb1","black")'>b1</b>
+ <span class="plumedtooltip">GRID_FMT<span class="right"> the format to use when outputting the numbers in the grids<i></i></span></span>=%14.9f
+... VES_LINEAR_EXPANSION
+</span><br/><span style="color:blue" class="comment"># Optimization algorithm</span>
+<span id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datdefo1_short"><span class="plumedtooltip" style="color:green">OPT_AVERAGED_SGD<span class="right">Averaged stochastic gradient decent with fixed step size. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_2.datdefo1");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/OPT_AVERAGED_SGD">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">BIAS<span class="right">the label of the VES bias to be optimized<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datb1">b1</b>
+  <span class="plumedtooltip">STRIDE<span class="right">the frequency of updating the coefficients given in the number of MD steps<i></i></span></span>=500
+  <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.dato1" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.dato1","TD_MULTITHERMAL_MULTIBARIC.md_working_2.dato1","brown")'>o1</b>
+  <span class="plumedtooltip">STEPSIZE<span class="right">the step size used for the optimization<i></i></span></span>=1.0
+  <span class="plumedtooltip">FES_OUTPUT<span class="right">how often the FES(s) should be written out to file<i></i></span></span>=500
+  <span class="plumedtooltip">BIAS_OUTPUT<span class="right">how often the bias(es) should be written out to file<i></i></span></span>=500
+  <span class="plumedtooltip">TARGETDIST_OUTPUT<span class="right">how often the dynamic target distribution(s) should be written out to file<i></i></span></span>=500
+  <span class="plumedtooltip">COEFFS_OUTPUT<span class="right"> how often the coefficients should be written to file<i></i></span></span>=100
+  <span class="plumedtooltip">TARGETDIST_STRIDE<span class="right">stride for updating a target distribution that is iteratively updated during the optimization<i></i></span></span>=500
+... OPT_AVERAGED_SGD
+</span><span id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datdefo1_long" style="display:none;"><span style="display:none;" id="TD_MULTITHERMAL_MULTIBARIC.md_working_2.dato1">The OPT_AVERAGED_SGD action with label <b>o1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">o1.value</td><td>a scalar</td></tr></table></span><span class="plumedtooltip" style="color:green">OPT_AVERAGED_SGD<span class="right">Averaged stochastic gradient decent with fixed step size. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("TD_MULTITHERMAL_MULTIBARIC.md_working_2.datdefo1");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/OPT_AVERAGED_SGD">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">BIAS<span class="right">the label of the VES bias to be optimized<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.datb1">b1</b>
+  <span class="plumedtooltip">STRIDE<span class="right">the frequency of updating the coefficients given in the number of MD steps<i></i></span></span>=500
+  <span class="plumedtooltip">LABEL<span class="right">a label for the action so that its output can be referenced in the input to other actions<i></i></span></span>=<b name="TD_MULTITHERMAL_MULTIBARIC.md_working_2.dato1" onclick='showPath("TD_MULTITHERMAL_MULTIBARIC.md_working_2.dat","TD_MULTITHERMAL_MULTIBARIC.md_working_2.dato1","TD_MULTITHERMAL_MULTIBARIC.md_working_2.dato1","brown")'>o1</b>
+  <span class="plumedtooltip">STEPSIZE<span class="right">the step size used for the optimization<i></i></span></span>=1.0
+  <span class="plumedtooltip">FES_OUTPUT<span class="right">how often the FES(s) should be written out to file<i></i></span></span>=500
+  <span class="plumedtooltip">BIAS_OUTPUT<span class="right">how often the bias(es) should be written out to file<i></i></span></span>=500
+  <span class="plumedtooltip">TARGETDIST_OUTPUT<span class="right">how often the dynamic target distribution(s) should be written out to file<i></i></span></span>=500
+  <span class="plumedtooltip">COEFFS_OUTPUT<span class="right"> how often the coefficients should be written to file<i></i></span></span>=100
+  <span class="plumedtooltip">TARGETDIST_STRIDE<span class="right">stride for updating a target distribution that is iteratively updated during the optimization<i></i></span></span>=500
+ <span class="plumedtooltip">COEFFS_FILE<span class="right"> the name of output file for the coefficients<i></i></span></span>=coeffs.data
+... OPT_AVERAGED_SGD
+</span></pre></div>
+
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">THRESHOLD</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Maximum exploration free energy in kT</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">EPSILON<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">The zeros of the target distribution are changed to e^-EPSILON</td>
+</tr>
+<tr>
+<td style="text-align: left;">MIN_TEMP</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Minimum energy</td>
+</tr>
+<tr>
+<td style="text-align: left;">MAX_TEMP</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Maximum energy</td>
+</tr>
+<tr>
+<td style="text-align: left;">MIN_PRESSURE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Minimum pressure</td>
+</tr>
+<tr>
+<td style="text-align: left;">MAX_PRESSURE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Maximum pressure</td>
+</tr>
+<tr>
+<td style="text-align: left;">PRESSURE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">Target pressure of the barostat used in the MD engine</td>
+</tr>
+<tr>
+<td style="text-align: left;">STEPS_TEMP</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">Number of temperature steps</td>
+</tr>
+<tr>
+<td style="text-align: left;">STEPS_PRESSURE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">Number of pressure steps</td>
+</tr>
+<tr>
+<td style="text-align: left;">SIGMA</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">The standard deviation parameters of the Gaussian kernels used for smoothing the target distribution</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1016/j.cplett.2004.04.073">H. Okumura, Y. Okamoto, Molecular dynamics simulations in the multibaric–multithermal ensemble. Chemical Physics Letters 391, 248–253 (2004)</a></li>
+<li><a href="http://dx.doi.org/10.1103/PhysRevLett.122.050601">P. M. Piaggi, M. Parrinello, Multithermal-Multibaric Molecular Simulations from a Variational Principle. Physical Review Letters 122 (2019)</a></li>
+<li><a href="http://dx.doi.org/10.1021/acs.jctc.5b00076">O. Valsson, M. Parrinello, Well-Tempered Variational Approach to Enhanced Sampling. Journal of Chemical Theory and Computation 11, 1996–2002 (2015)</a></li>
+<li><a href="http://dx.doi.org/10.1103/PhysRevLett.86.2050">F. Wang, D. P. Landau, Efficient, Multiple-Range Random Walk Algorithm to Calculate the Density of States. Physical Review Letters 86, 2050–2053 (2001)</a></li>
+<li><a href="http://dx.doi.org/10.1103/PhysRevLett.68.9">B. A. Berg, T. Neuhaus, Multicanonical ensemble: A new approach to simulate first-order phase transitions. Physical Review Letters 68, 9–12 (1992)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>
