@@ -1,0 +1,13 @@
+<map id="PLMD::generic::Accumulate" name="PLMD::generic::Accumulate">
+<area shape="rect" id="Node000001" title="Provides the keyword ACCUMULATE" alt="" coords="209,152,409,177"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="5,79,180,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,106,275,149,273,154,140,111"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="255,5,363,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="262,37,128,81,127,76,260,32"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="204,79,413,104"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="311,44,311,79,306,79,306,44"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_action_pilot.html" title="This is used to create PLMD::Action objects that are run with some set frequency." alt="" coords="437,79,575,104"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="354,33,475,76,473,81,352,38"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="311,118,311,152,306,152,306,118"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="462,111,342,154,340,149,461,106"/>
+</map>

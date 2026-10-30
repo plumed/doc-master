@@ -1,0 +1,15 @@
+t: TORSION ATOMS=1,2,3,4
+# When atoms are moved, t could jump suddenly from -pi to +pi
+
+c: MATHEVAL ARG=t FUNC=x*x*x PERIODIC=-31.0062766802998,31.0062766802998
+# When atoms are moved, c could jump suddenly from -pi**3 to +pi**3
+
+# equivalently, we could have used:
+# c: COMBINE ARG=t POWERS=3 PERIODIC=-31.0062766802998,31.0062766802998
+
+# compute x/y/z components of the distance between atoms 1 and 10
+d: DISTANCE ATOMS=1,10 COMPONENTS
+
+# make a new variable equal to d.z but with the correct periodicity
+dz: COMBINE ARG=d.z PERIODIC=-10,10
+# here we assumed the system is in a orthorhombic box with z side = 20

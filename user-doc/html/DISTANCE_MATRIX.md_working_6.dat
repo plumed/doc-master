@@ -1,0 +1,14 @@
+d5: DISTANCE_MATRIX GROUPA=1-10 GROUPB=1-250 LINKCELL_CUTOFF=1.0
+# Apply a switching function to determine the elements in the matrix d5
+# where the distance is less than the cutoff
+cut: CUSTOM ARG=d5 FUNC=step(1-x) PERIODIC=NO
+# Taking the element-wise product in the next command gives us a matrix
+# where every element that is greater than the cutoff is zero.
+d5cut: CUSTOM ARG=d5,cut FUNC=x*y PERIODIC=NO
+# We can now calculate the average distances by multiplying these matrices by
+# a vector of ones and thus summing the rows.
+ones: ONES SIZE=250
+totdist: MATRIX_VECTOR_PRODUCT ARG=d5cut,ones
+ndist: MATRIX_VECTOR_PRODUCT ARG=cut,ones
+average: CUSTOM ARG=totdist,ndist FUNC=x/y PERIODIC=NO
+DUMPATOMS ATOMS=1-10 ARG=average FILE=avdist.xyz

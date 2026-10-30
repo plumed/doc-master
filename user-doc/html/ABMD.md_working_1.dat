@@ -1,0 +1,4 @@
+DISTANCE ATOMS=3,5 LABEL=d1
+DISTANCE ATOMS=2,4 LABEL=d2
+ABMD ARG=d1,d2 TO=1.0,1.5 KAPPA=5.0,5.0 LABEL=abmd
+PRINT ARG=abmd.bias,abmd.d1_min,abmd.d2_min

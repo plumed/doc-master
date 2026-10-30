@@ -1,0 +1,15 @@
+<map id="PLMD::Register" name="PLMD::Register">
+<area shape="rect" id="Node000001" title="Base class, with type independent information." alt="" coords="5,55,127,81"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="560,5,760,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,49,175,33,277,20,380,14,560,16,560,21,380,19,278,25,177,39,117,54"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="560,81,760,121"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="115,82,176,97,278,108,380,112,559,107,560,112,380,117,277,113,176,103,114,88"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_register_base.html" title="General register." alt="" coords="176,48,329,88"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="140,65,176,65,176,71,140,71"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_register.html" title="Register holding all the allowed keywords." alt="" coords="809,13,972,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="774,23,809,23,809,28,774,28"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_c_l_tool_register.html" title="Same as ActionRegister, but for CLTools." alt="" coords="809,89,972,114"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="774,99,809,99,809,104,774,104"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="343,56,536,36,559,33,560,39,536,41,343,62"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="343,80,354,81,460,90,560,96,560,101,460,96,353,87,343,85"/>
+</map>

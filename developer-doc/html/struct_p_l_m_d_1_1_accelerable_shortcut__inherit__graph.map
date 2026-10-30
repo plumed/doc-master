@@ -1,0 +1,11 @@
+<map id="PLMD::AccelerableShortcut&lt; CV &gt;" name="PLMD::AccelerableShortcut&lt; CV &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="116,155,313,195"/>
+<area shape="rect" id="Node000004" href="$struct_p_l_m_d_1_1_accelerable_shortcut.html" title=" " alt="" coords="5,257,203,297"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,206,127,259,123,255,182,202"/>
+<area shape="rect" id="Node000005" href="$struct_p_l_m_d_1_1_accelerable_shortcut.html" title=" " alt="" coords="227,257,424,297"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="247,202,306,255,303,259,244,206"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_shortcut.html" title="Action used to create a command that expands to multiple PLMD::Action commands when read in during in..." alt="" coords="133,80,296,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,119,217,155,212,155,212,119"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="161,5,269,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="217,45,217,80,212,80,212,45"/>
+</map>

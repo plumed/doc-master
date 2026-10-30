@@ -1,0 +1,5 @@
+acv: TETRA_ANGULAR SPECIES=1-64 NOPBC
+acv_sum: SUM ARG=acv PERIODIC=NO
+acv_mean: MEAN ARG=acv PERIODIC=NO
+DUMPATOMS ATOMS=1-64 ARG=acv FILE=mcolv.xyz
+PRINT ARG=acv_sum,acv_mean FILE=colvar

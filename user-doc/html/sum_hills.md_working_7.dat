@@ -1,0 +1,1 @@
+plumed sum_hills --stride 300 --hills PATHTOMYHILLSFILE

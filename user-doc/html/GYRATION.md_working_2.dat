@@ -1,0 +1,7 @@
+g: GYRATION ATOMS=1-5 TYPE=RADIUS MASS_WEIGHTED
+# This input is equivalent
+g2: GYRATION ATOMS=1-5 TYPE=RADIUS WEIGHTS=@Masses
+# As is this one
+g3: GYRATION ATOMS=1-5 TYPE=RADIUS MASS
+# The following print statement thus outputs the same number three times
+PRINT ARG=g,g2,g3 FILE=colvar

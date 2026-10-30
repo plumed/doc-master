@@ -1,0 +1,4 @@
+c: CONSTANT VALUE=0.5
+d: DISTANCE ATOMS1=1,2 ATOMS2=3,4
+sort: SORT ARG=d,c
+PRINT ARG=sort.1,sort.2 FILE=colvar

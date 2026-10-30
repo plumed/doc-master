@@ -1,0 +1,15 @@
+<map id="PLMD::ActionForInterface" name="PLMD::ActionForInterface">
+<area shape="rect" id="Node000001" title=" " alt="" coords="171,152,357,177"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action_to_put_data.html" title="Provides the keyword PUT" alt="" coords="67,225,242,251"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="236,187,174,227,171,223,234,183"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1_domain_decomposition.html" title=" " alt="" coords="267,225,483,251"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="295,183,358,223,355,227,292,187"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="177,79,351,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,118,267,152,261,152,261,118"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="210,5,318,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="267,44,267,79,261,79,261,44"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_pbc_action.html" title="Provides the keyword PBC" alt="" coords="5,299,136,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="132,262,86,300,83,296,129,258"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1colvar_1_1_energy.html" title="Provides the keyword ENERGY" alt="" coords="160,299,320,324"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="180,257,228,296,224,300,177,261"/>
+</map>

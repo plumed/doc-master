@@ -1,0 +1,2 @@
+#SETTINGS INPUTFILES=regtest/basic/rt-readmasscharge2/mcinpt
+mq: READMASSCHARGE FILE=regtest/basic/rt-readmasscharge2/mcinpt

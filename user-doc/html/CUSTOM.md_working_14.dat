@@ -1,0 +1,16 @@
+# Calculate the vectors connecting four atoms
+d: DISTANCE COMPONENTS ATOMS1=1,2 ATOMS2=3,4 ATOMS3=5,6 ATOMS4=7,8
+# Calculate the norm of these four vectors
+norm: CUSTOM ARG=d.x,d.y,d.z FUNC=sqrt(x*x+y*y+z*z) PERIODIC=NO
+# Now calculate the directors of the vectors
+norm_x: CUSTOM ARG=d.x,norm FUNC=x/y PERIODIC=NO
+norm_y: CUSTOM ARG=d.y,norm FUNC=x/y PERIODIC=NO
+norm_z: CUSTOM ARG=d.z,norm FUNC=x/y PERIODIC=NO
+# And combine all these directors in a matrix
+stack: VSTACK ARG=norm_x,norm_y,norm_z
+# Now calculate the matrix of dot products between directors (these are the cosines of the angles)
+stackT: TRANSPOSE ARG=stack
+cosa: MATRIX_PRODUCT ARG=stack,stackT
+# And finally get the 4x4 matrix of angles and print it to a file
+angles: CUSTOM ARG=cosa FUNC=acos(x) PERIODIC=NO
+PRINT ARG=angles FILE=colvar

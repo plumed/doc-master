@@ -1,0 +1,14 @@
+# Fixed virtual atom which serves as the probe volume's center (pos. in nm)
+center: FIXEDATOM AT=2.5,2.5,2.5
+# Vector in which element i is one if atom i is in sphere of interest and zero otherwise
+sphere: INSPHERE ATOMS=1-400 CENTER=center RADIUS={GAUSSIAN D_0=0.5 R_0=0.01 D_MAX=0.52}
+# Compute the coordination numbers
+adj: CONTACT_MATRIX GROUP=1-400 SWITCH={RATIONAL R_0=0.3 D_MAX=1.0} MASK=sphere
+ones: ONES SIZE=400
+coord: MATRIX_VECTOR_PRODUCT ARG=adj,ones
+# Determine if coordination numbers are less than 4 or not
+lt: BETWEEN ARG=coord MASK=sphere SWITCH={GAUSSIAN LOWER=4.0 UPPER=6 SMEAR=0.5}
+# And calculate how many atoms in the region of interst have a coordination number that is less than four
+ltsphere: CUSTOM ARG=lt,sphere FUNC=x*y PERIODIC=NO
+cv: SUM ARG=ltsphere PERIODIC=NO
+PRINT ARG=cv FILE=colvar

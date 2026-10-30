@@ -1,0 +1,3 @@
+# This should be a sample input.
+t: TEMPLATE ATOMS=1,2
+PRINT ARG=t STRIDE=100 FILE=COLVAR
