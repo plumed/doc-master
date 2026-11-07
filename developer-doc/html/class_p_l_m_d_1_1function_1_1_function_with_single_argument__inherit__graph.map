@@ -1,0 +1,16 @@
+<map id="PLMD::function::FunctionWithSingleArgument&lt; T &gt;" name="PLMD::function::FunctionWithSingleArgument&lt; T &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="421,69,616,109"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1function_1_1_function_with_single_argument.html" title=" " alt="" coords="830,5,1066,45"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="629,68,640,67,829,39,830,44,640,72,630,74"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1function_1_1_function_with_single_argument.html" title=" " alt="" coords="825,69,1071,109"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="630,87,824,87,824,92,630,92"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1function_1_1_function_with_single_argument.html" title=" " alt="" coords="803,133,1093,173"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="630,105,640,107,803,131,802,136,640,112,629,110"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="180,54,355,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="369,73,421,78,421,83,368,78"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="5,79,113,105"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,81,180,75,180,80,128,86"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="163,103,372,129"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="127,97,163,101,162,107,127,102"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="385,101,421,97,421,102,386,106"/>
+</map>

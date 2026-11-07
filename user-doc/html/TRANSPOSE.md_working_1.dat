@@ -1,0 +1,12 @@
+# Calculate the contact matrix between the two groups
+c1: CONTACT_MATRIX GROUPA=1-10 GROUPB=11-30 SWITCH={RATIONAL R_0=0.1}
+# Calculate the cooordination numbers for the atoms in group A by multiplying by a vector of ones
+onesB: ONES SIZE=20
+coordA: MATRIX_VECTOR_PRODUCT ARG=c1,onesB
+# Transpose the contact matrix
+c1T: TRANSPOSE ARG=c1
+# Calculate the coordination number for the atoms in group B by multiplying the transpose by a vector of ones
+onesA: ONES SIZE=10
+coordB: MATRIX_VECTOR_PRODUCT ARG=c1T,onesA
+# Output the two vectors of coordination numbers to a file
+PRINT ARG=coordA,coordB FILE=colvar

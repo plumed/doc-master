@@ -1,0 +1,10 @@
+# Assume there are three molecules with 20 atoms each.
+# In the first molecule the molecular axis vector points from atom 1 to atom 20,
+# in the second molecule it points from atom 21 to atom 40
+# and in the third from atom 41 to atom 60.
+# The ferronematic order parameter for the three molecules is computed as
+P: FERRONEMATIC_ORDER MOLECULE_STARTS=1,21,41 MOLECULE_ENDS=20,40,60
+PRINT FILE=colvar ARG=P
+
+# Add a bias to the ferronematic order parameter P.
+BIASVALUE ARG=P

@@ -1,0 +1,1161 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>V2.11 - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#version-211-under-development" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              V2.11
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-211-under-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 2.11 (under development)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 2.11 (under development)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changes-relevant-for-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changes relevant for users:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changes-relevant-for-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changes relevant for developers:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>V2.11</h1>
+
+<h2 id="version-211-under-development">Version 2.11 (under development)</h2>
+<p>This page contains changes that will end up in 2.11</p>
+<h3 id="changes-relevant-for-users">Changes relevant for users:</h3>
+<ul>
+<li>New <code>LINEAR</code> flag for <a href="../ABMD/">ABMD</a>: the ratchet is applied to the distance from the target, V=K/2(d-d_m)^2, instead of the squared distance, V=K/2(d^2-d_m^2)^2. In this way the stiffness does not depend on the distance from the target and K has the units of an energy divided by the square of the CV. With <code>LINEAR</code>, <code>MIN</code>, <code>NOISE</code> and the <code>_min</code> components are distances. The checkpoint of <a href="../ABMD/">ABMD</a> records the flag and a restart with a different setting is an error.</li>
+<li>New <a href="../CHECKPOINT/">CHECKPOINT</a> directive for an exact restart: PLUMED writes its own checkpoint file (one per replica, atomic write, previous one kept as <code>_prev</code>)
+    when the MD engine writes its checkpoint (<code>doCheckPoint</code> signal, as in the GROMACS patches) or every <code>STRIDE</code> steps. The checkpoint stores the state of the actions at the start
+    of the checkpointing step and the sizes of all the output files: at restart the files are truncated to those sizes (the lines written after the checkpoint by the interrupted run are
+    removed, see <a href="https://github.com/plumed/plumed2/issues/37">#37</a>) and the checkpointing step is computed again, which reproduces the uninterrupted run bitwise. The field header is not
+    printed again at restart. Actions store their state with <code>writeCheckpoint</code>/<code>readCheckpoint</code>; those that have a state but do not store it yet are listed in a warning
+    (<a href="../MOVINGRESTRAINT/">MOVINGRESTRAINT</a> is the first ported action). <code>plumed checkpoint --dump</code> prints a checkpoint file;
+    <a href="../driver/">driver</a> has <code>--checkpoint-stride</code> (sends the signal like an MD engine) and <code>--restart-from-checkpoint</code> (presents the checkpointing step again, like GROMACS <code>-cpi</code>).
+    <a href="../METAD/">METAD</a> and <a href="../PBMETAD/">PBMETAD</a> store their full state (grid or hills, hill schedule, adaptive-hill statistics, work, acceleration, c(t),
+    hills read from the other walkers): with CHECKPOINT the hills files are trimmed and not read at restart, and the first-hill rule is not needed.
+    <a href="../OPES_METAD/">OPES_METAD</a> and <a href="../OPES_METAD_EXPLORE/">OPES_METAD_EXPLORE</a> store their full state (kernels, normalization, weights, adaptive sigma, neighbor list):
+    with CHECKPOINT the KERNELS file is trimmed and neither it nor STATE_RFILE is read at restart.
+    <a href="../METAINFERENCE/">METAINFERENCE</a> and the ISDB collective variables with <code>DOSCORE</code> store the Monte Carlo state (sigma, scale, offset, ftilde, the three random number generators,
+    acceptance counters, weights, sigma-mean histories), <a href="../EDS/">EDS</a> its couplings, running statistics and random generator, <a href="../DRR/">DRR</a> the fictitious particles, the ABF and CZAR grids and the thermostat
+    (the umbrella integration estimator is not stored): with CHECKPOINT the status, restart and <code>.drrstate</code> files are not read at restart.
+    <a href="../ABMD/">ABMD</a> stores the running minimum and the white-noise generators, <a href="../EXTENDED_LAGRANGIAN/">EXTENDED_LAGRANGIAN</a> the fictitious positions and velocities and the Langevin generator, and <a href="../ACCUMULATE/">ACCUMULATE</a> and <a href="../COLLECT/">COLLECT</a> the accumulated or collected data (grids, vectors and matrices, with their shape), so that averages, histograms and time series continue exactly.
+    <a href="../COMMITTOR/">COMMITTOR</a> stores the basin, <a href="../MAXENT/">MAXENT</a> the Lagrangian multipliers, their averages and works (the LAGMULT file is not read), <a href="../READ/">READ</a> the position in the file, <a href="../RANDOM_EXCHANGES/">RANDOM_EXCHANGES</a> the state of the generator of the exchanges, and <a href="../EFFECTIVE_ENERGY_DRIFT/">EFFECTIVE_ENERGY_DRIFT</a> the drift and the data of the previous step (with more processes the data of all of them is gathered in the checkpoint and redistributed at restart, also to a different number of processes; the restart is then exact up to the rounding of the sum over the processes).
+    <a href="../LOGMFD/">LOGMFD</a> stores the fictitious variables, velocities, forces, thermostat variables and works (and cuts its plain <code>logmfd.out</code> and <code>replica.out</code> files at the checkpoint size), <a href="../FISST/">FISST</a> the weights, partition estimates and averaged forces, <a href="../RESCALE/">RESCALE</a> the bias, Monte Carlo state and selector, <a href="../EMMI/">EMMI</a> sigma, the Monte Carlo state, the regression scale and the average weights, and <a href="../EMMIVOX/">EMMIVOX</a> scale, offset and Bfactors with their Monte Carlo state. The neighbor lists of <a href="../EMMI/">EMMI</a> and <a href="../EMMIVOX/">EMMIVOX</a> are rebuilt at the first step. The per-step files of the model overlap/density of <a href="../EMMI/">EMMI</a> and <a href="../EMMIVOX/">EMMIVOX</a> are no longer appended to when they exist (they are renamed as a backup).
+    <a href="../VES_LINEAR_EXPANSION/">VES</a> biases and optimizers, <a href="../ADAPTIVE_PATH/">ADAPTIVE_PATH</a>, the maze actions and <a href="../TTMETAD/">TTMETAD</a> keep an internal state that is not stored yet: they are listed in the warning.</li>
+<li>When using <a href="../MOLINFO/">MOLINFO</a> with the <code>WHOLE</code> flag, PBCs in the following actions will be reconstructed using a minimum spanning tree based on the coordinates stored in the MOLFILE reference pdb.</li>
+<li>When the reference pdb of <a href="../MOLINFO/">MOLINFO</a> with the <code>WHOLE</code> flag has a CRYST1 record with space group P 1, PLUMED now checks along each chain that the reference is whole in that box, and writes a warning to the log naming the atoms that are across the periodic boundary from the atom before them. Before, a split reference made <a href="../WHOLEMOLECULES/">WHOLEMOLECULES</a> split whole molecules without any warning.</li>
+<li>
+<p>Updated the embedded Lepton and AsmJit libraries from OpenMM 8.6.1, preserving PLUMED-specific expression functions and semantics. Just-in-time compilation of <a href="../CUSTOM/">CUSTOM</a> expressions and custom switching functions now supports AArch64, including Apple Silicon, and is enabled by default on supported architectures. It can be disabled with <code>./configure --disable-asmjit</code> or at runtime with <code>PLUMED_USE_ASMJIT=no</code>.</p>
+</li>
+<li>
+<p>When using <a href="../MOLINFO/">MOLINFO</a> with the <code>WHOLE</code> flag, PBCs in the following actions will be reconstructed using a minimum spanning tree based on the coordinates stored in the MOLINFO reference PDB.
+    Fixed the tree construction and parent/child indexing in this reconstruction: previously actions such as <a href="../CENTER/">CENTER</a>, <a href="../RMSD/">RMSD</a>, and <a href="../GYRATION/">GYRATION</a> could silently use split coordinates (see <a href="https://github.com/plumed/plumed2/issues/1496">#1496</a>).</p>
+</li>
+<li>When using the benchmark now it is possible to scale the atom distances in the synthetic atom distribution (the base atomic distance is 1)</li>
+<li><a href="../SAXS/">SAXS</a> now accepts the <code>MARTINI_FF</code> keyword to select the Martini form-factor generation: <code>MARTINI_FF=2</code> (default) keeps the existing Martini 2.2 protein and nucleic-acid form factors, while <code>MARTINI_FF=3</code> selects Martini 3 protein form factors.</li>
+<li><a href="../SAXS/">SAXS</a> includes bug fixes related to the <code>ONEBEAD</code> approach and nucleic acid in some corner case, as well as general improvements in performances and SANS calculation. </li>
+<li><a href="../SAXS/">SAXS</a> includes new ions parameters that can be used both in <code>ATOMISTIC</code> and <code>ONEBEAD</code> modes.</li>
+<li><a href="../SAXS/">SAXS</a> and <a href="../SANS/">SANS</a>: the ArrayFire implementation (<code>GPU</code> flag) has been removed. The Debye sum can now be computed on the GPU with the <code>USEGPU</code> flag, using a backend provided by a plugin (plugins/openaccPTM, OpenACC). With MPI each rank computes a share of the sum on its own GPU. On an A100 the sum is 20-40 times faster than on 32 CPU cores (see the README of the plugin).</li>
+<li>Residue numbers in the pdb files read by <a href="../MOLINFO/">MOLINFO</a> and by the <code>TEMPLATE</code> of <a href="../SAXS/">SAXS</a>, as well as in the <a href="../CS2BACKBONE/">CS2BACKBONE</a> and <a href="../EMMIVOX/">EMMIVOX</a> inputs, can be negative (e.g. tags in protein constructs, see <a href="https://github.com/plumed/plumed2/issues/1089">#1089</a>).
+    Negative residues can be selected with e.g. <code>@phi--3</code>, <code>@phi-A-3</code> or <code>@phi-A_-3</code> and in ranges such as <code>RESIDUES=-10--1</code> or <code>RESIDUES=-5-10</code>.
+    Previously negative residue numbers were silently converted to very large positive numbers.
+    <code>RESIDUES=all</code> (e.g. in <a href="../ALPHARMSD/">ALPHARMSD</a>) and the <code>ONEBEAD</code> mapping of <a href="../SAXS/">SAXS</a> now only use the residues present in the pdb file, so they also work when the numbering has gaps.</li>
+<li>Fixed <code>RESIDUES=all</code> in <a href="../ALPHARMSD/">ALPHARMSD</a>, <a href="../ANTIBETARMSD/">ANTIBETARMSD</a>, <a href="../PARABETARMSD/">PARABETARMSD</a> and <a href="../WHOLEMOLECULES/">WHOLEMOLECULES</a> when the pdb file of <a href="../MOLINFO/">MOLINFO</a> contains chains that use the same residue numbers (e.g. all chains starting from residue 1):
+    the backbone atoms of all the chains were taken from the first chain. With an explicit list of residues (e.g. <code>RESIDUES=2-10</code>), residue numbers present in more than one chain are still taken from the first chain, and a warning is printed.</li>
+<li><a href="../METAINFERENCE/">METAINFERENCE</a> includes stability fixes when restarting while parameter optimisation is running.</li>
+<li>Added environment variable <code>PLUMED_LOG_FILE</code> to control the log file pathname when running with GROMACS (the log file was hardcoded as <code>PLUMED.OUT</code>)</li>
+<li>Changed CUTOFF keyword in <a href="DISTANCE_MATRIX">DISTANCE_MATRIX</a> to LINKCELL_CUTOFF to make the purpose of this keyword clearer.</li>
+<li>The kernels of <a href="../OPES_METAD/">OPES_METAD</a> and <a href="../OPES_METAD_EXPLORE/">OPES_METAD_EXPLORE</a> are now force-shifted at KERNEL_CUTOFF, so that both their value and their derivative go to zero at the cutoff.
+    Previously they were energy-shifted: their value went to zero at the cutoff, but their derivative jumped to zero there (see <a href="https://github.com/plumed/plumed2/pull/1463">#1463</a>).
+    Bias values and kernel heights change only in the far tails of the kernels, and forces change slightly, mostly early in a simulation.
+    The script <code>FES_from_State.py</code> of the OPES tutorial uses the new kernels.</li>
+<li><a href="../OPES_METAD/">OPES_METAD</a> and <a href="../OPES_METAD_EXPLORE/">OPES_METAD_EXPLORE</a> now use their neighbor list by default, since it is exact and never slower; it can be switched off with NLIST_OFF.
+    The NLIST flag is still accepted, and only adds the <code>nlker</code> and <code>nlsteps</code> components as in previous versions.
+    The NLIST_PACE_RESET flag is removed: with WALKERS_MPI, the neighbor list is now always reset after each deposition.</li>
+<li>In <a href="../KDE/">KDE</a>, <a href="../HISTOGRAM/">HISTOGRAM</a>, <a href="../RDF/">RDF</a> and <a href="../PAIRENTROPY/">PAIRENTROPY</a> you can now use the switching function 
+    syntax detailed in <a href="../LESS_THAN/">LESS_THAN</a> to set up the parameters for the kernel to use in kernel density estimation. 
+    <strong>The default kernel that is used in these actions has changed.</strong>  In the new version of the code the kernel is a Gaussian 
+    that has been stretched and scaled to ensure that it is zero for all values greater than the cutoff. In other words, the default
+    behaviour in these methods is now the same as the behavior used for <a href="../sum_hills/">sum_hils</a> and <a href="../METAD/">METAD</a>.</li>
+<li>Positions and forces are shared with the MD code faster. The lists of the atoms needed by the actions are rebuilt only when they change,
+    also when an MD code with domain decomposition passes the same local atoms at every step; the choice between copying all the atoms
+    and copying only those that are needed (<code>PLUMED_FORCE_UNIQUE=auto</code>) is based on all the atoms needed by the active actions instead
+    of on the largest single action; OpenMP threads are only used for large copies.
+    With <code>plumed benchmark</code>, 7000 atoms and three <a href="../COORDINATION/">COORDINATION</a> between one atom and 2207 atoms, "Sharing data" went
+    from 82 to 7 microseconds per step in serial and from 84 to 25 microseconds with domain decomposition on two ranks.</li>
+<li>Actions with a neighbor list (e.g. <a href="../COORDINATION/">COORDINATION</a> with <code>NLIST</code>) request the reduced list of atoms only once after
+    each update of the list, instead of at every step: requesting the same atoms made PLUMED rebuild the lists of atoms at every step.</li>
+<li><a href="../FIT_TO_TEMPLATE/">FIT_TO_TEMPLATE</a> and <a href="../RESET_CELL/">RESET_CELL</a>, which move all the atoms, are 2 to 5 times faster: they loop
+    directly on the arrays of positions and forces. With <code>plumed benchmark</code>, 7000 atoms and <code>TYPE=OPTIMAL</code> with 200 aligned atoms,
+    FIT_TO_TEMPLATE went from 148 to 90 microseconds per step for the positions and from 260 to 48 for the forces. The results are identical.</li>
+<li>The forces on the eigenvectors computed by <a href="../DIAGONALIZE/">DIAGONALIZE</a> (used e.g. when biasing <a href="../SPRINT/">SPRINT</a>) are computed in a time that scales
+    as N^2 instead of N^4 with the size N of the matrix. With a 200x200 contact matrix, applying the forces went from 5 seconds to 0.3 milliseconds per step.</li>
+<li>The iterations of the SMACOF algorithm (used by <a href="../ARRANGE_POINTS/">ARRANGE_POINTS</a> with <code>MINTYPE=smacof</code> and by <a href="../SKETCHMAP/">SKETCHMAP</a> with <code>USE_SMACOF</code>) scale as M^2 instead of M^3 with the number of points M: with 1000 points an iteration went from 3 seconds to 6 milliseconds.</li>
+<li>Symmetric positive definite matrices (e.g. the covariance matrices of multivariate Gaussians) are inverted with a Cholesky factorization instead of being diagonalized,
+    which is 5 to 25 times faster for matrices with up to 10 rows and about 4 times faster for large matrices; matrix products are 2 to 5 times faster.
+    <a href="../METAD/">METAD</a> with <code>ADAPTIVE=DIFF</code> and three CVs depositing a Gaussian at every step is about 20% faster, and reading 20000 multivariate Gaussians when restarting is about 25% faster.</li>
+<li>When no derivatives are needed, <a href="../DIAGONALIZE/">DIAGONALIZE</a> computes only the requested eigenvalues and eigenvectors (from the largest one down to the smallest requested one) instead of all of them.
+    With <code>VECTORS=1</code> this is 3 to 4 times faster: e.g. for a 1000x1000 contact matrix it went from 180 to 70 milliseconds per frame. <a href="../CLASSICAL_MDS/">CLASSICAL_MDS</a> also benefits: with 2000 frames the analysis is about 20% faster.
+    The results are identical.</li>
+<li>PLUMED stops with an error, instead of crashing, when it has to apply forces on the atoms or on a value passed with <a href="../PUT/">PUT</a>
+    and the MD code did not pass the array for these forces. The size of the arrays passed with domain decomposition is now checked
+    also when PLUMED is compiled without debug flags.</li>
+<li><a href="../METAD/">METAD</a> and <a href="../PBMETAD/">PBMETAD</a> have been revised; PBMETAD now uses the grids, kernels and hills files of METAD. Results change in the following cases:<ul>
+<li>Grids are extended automatically when a Gaussian does not fit in them (GRID_MIN and GRID_MAX give the initial range; GRID_SIZE_LIMIT sets the maximum number of points); GRID_SPACING can be given without GRID_MIN and GRID_MAX. A grid read with GRID_RFILE(S) can have any range on the lattice of the grid in input.</li>
+<li>No Gaussian is added at the first step of a simulation; when continuing a simulation, a Gaussian is added at the first step unless the hills file already contains it (also when restarting from a grid, see <a href="https://github.com/plumed/plumed2/issues/267">#267</a>). PBMETAD never added a Gaussian at the first step of a run.</li>
+<li>ADAPTIVE=DIFF: when restarting, the statistics of the fluctuations are initialized from the last hills of the hills file (DIFF_FROM_SCRATCH restores the old behavior); with replica exchange the running average is restarted when an exchange is accepted, instead of stopping with an error (<a href="https://github.com/plumed/plumed2/issues/26">#26</a>); PRECAL_DIFF accumulates the statistics also outside the update window (<a href="https://github.com/plumed/plumed2/issues/1328">#1328</a>).</li>
+<li>An incomplete last line of the hills file (an interrupted run) is removed when restarting (<a href="https://github.com/plumed/plumed2/issues/727">#727</a>).</li>
+<li>PBMETAD uses stretched Gaussians, as METAD and as written in its hills files (biases change by about 0.2%); it requires the temperature (TEMP); partitioned families with ADAPTIVE and families in a different order than the arguments are fixed.</li>
+<li>INTERVAL with a grid: beyond the limits the force is zero also within the grid cell that contains a limit; with NLIST the neighbor list is built at the limit.</li>
+<li>Multiple walkers: the hills files are read by the first MPI process of each walker and broadcast (with several processes per walker the run could hang); restarting from the grid of a walker (WALKERS_N) adds only the hills of the other walkers that are not in the grid (their number is written in a comment after the grid); the hills and grid files are read without the replica suffix, as they are written.</li>
+<li>Grids are filled with OpenMP and are faster also without OpenMP; the c(t) reweighting factor (CALC_RCT) is fixed with GRID_SPARSE; ACCELERATION and FREQUENCY_ADAPTIVE are restarted correctly.</li>
+<li>PBMETAD: BIASFACTOR=1 means, as in METAD, that no bias is applied and the hills files and grids contain the estimate of -F (TAU can be given instead of HEIGHT); new PRECAL_DIFF and STORE_GRIDS keywords, as in METAD.</li>
+<li>Inputs that crashed or gave meaningless results are now errors (e.g. WALKERS_RSTRIDE=0, negative SIGMA, HEIGHT or TAU, ADAPTIVE on a grid without SIGMA_MIN also in PBMETAD and when reading a grid in METAD, a SELECTOR that is not defined in PBMETAD).</li>
+</ul>
+</li>
+<li><a href="../sum_hills/">sum_hills</a> has been revised:<ul>
+<li>variables whose name contains <code>sigma_</code>, <code>time</code>, <code>min_</code> or <code>max_</code> are found correctly (they made it crash, <a href="https://github.com/plumed/plumed2/issues/1226">#1226</a>); <code>--spacing</code> can be used without <code>--min</code> and <code>--max</code>; <code>--negbias</code> is correct also when the run was not well tempered; with MPI the derivatives were zero.</li>
+<li><code>--sort time</code> (or <code>clock</code>) merges the hills files of multiple walkers in order of time, so that the free energies written with <code>--stride</code> follow the simulation (<a href="https://github.com/plumed/plumed2/issues/1351">#1351</a>).</li>
+<li><code>--average</code> computes the time average of the bias, and <code>--basins</code> writes the free-energy differences between basins at each output, to check convergence.</li>
+<li>The hills are summed several times faster (the Gaussians are computed as products over the variables), and with MPI the grids are summed once per output.</li>
+<li>The documentation has been rewritten. It now states that <code>--histo</code> does not reweight the points, and shows how to compute a free energy from a biased simulation with <a href="../driver/">driver</a>, <a href="../REWEIGHT_BIAS/">REWEIGHT_BIAS</a> and <a href="../HISTOGRAM/">HISTOGRAM</a>.</li>
+</ul>
+</li>
+<li>The examples in the documentation of <a href="../HISTOGRAM/">HISTOGRAM</a>, <a href="../REWEIGHT_BIAS/">REWEIGHT_BIAS</a>, <a href="../REWEIGHT_METAD/">REWEIGHT_METAD</a> and <a href="../METAD/">METAD</a> that use <code>LOGWEIGHTS</code> now set <code>NORMALIZATION</code>, without which HISTOGRAM stops with an error.</li>
+<li><a href="../METAINFERENCE/">METAINFERENCE</a> and the ISDB collective variables with <code>DOSCORE</code> (<a href="../NOE/">NOE</a>, <a href="../PRE/">PRE</a>, <a href="../RDC/">RDC</a>, <a href="../JCOUPLING/">JCOUPLING</a>, <a href="../CS2BACKBONE/">CS2BACKBONE</a>, <a href="../SAXS/">SAXS</a>) now share one implementation of Metainference. Results change in the following cases:<ul>
+<li>New SEED keyword to make the Monte Carlo sampling of the uncertainties, scale, offset and ftilde reproducible (by default the seed is still taken from the clock).</li>
+<li>SELECTOR and NSELECT were ignored by the collective variables with <code>DOSCORE</code> (the history of sigma mean and the averaged weights were always those of the first selector value); they now work as in METAINFERENCE.</li>
+<li>With <code>DOSCORE</code> and RESTART, a missing status file was created empty and then read as a restart (averaged weights starting from zero); it is now a new start, as in METAINFERENCE.</li>
+<li>NOISETYPE=GENERIC could not be restarted (ftilde was not read back from the status file).</li>
+<li>OPTSIGMAMEAN with a single replica gave NaN after AVERAGING steps: the standard error of the mean is not defined with one replica, and sigma mean now keeps its initial value.</li>
+<li>Monte Carlo moves larger than the allowed interval (DSIGMA, DSCALE or DOFFSET larger than the range of the flat prior) could leave the interval; with NOISETYPE=GENERIC and OPTSIGMAMEAN, sigma could move above SIGMA_MAX when sigma mean exceeded it (it is now kept equal to sigma mean, with a warning).</li>
+<li>More than one DSIGMA with NOISETYPE=GAUSS or OUTLIERS is an error, as for SIGMA0, SIGMA_MIN and SIGMA_MAX.</li>
+<li>Moves of chunks of sigmas (MC_CHUNKSIZE) and of ftilde are computed from energy differences, and the history of sigma mean (OPTSIGMAMEAN with AVERAGING) no longer grows in cost with AVERAGING. NOE, PRE, RDC and JCOUPLING no longer look up their components by name at every step (with 3000 NOEs and <code>DOSCORE</code> a step went from 24 to 1.7 ms).</li>
+</ul>
+</li>
+<li>
+<p>Bug fixes and performance improvements in the other ISDB actions. Results change in the following cases:</p>
+<ul>
+<li><a href="../CALIBER/">CALIBER</a>: with SCALE different from 1 or with REGRES_ZERO the forces were not the derivatives of the bias (they were divided instead of multiplied by the scale). The data file is checked (it was read with a duplicated last line), its first time is no longer assumed to be zero, and a simulation time outside the data is an error.</li>
+<li><a href="../CS2BACKBONE/">CS2BACKBONE</a>: the non-bonded term excluded the residues adjacent in sequence without looking at the chain, so with chains numbered from 1 the contacts between residues with close numbers in different chains were dropped. ATOMS and TEMPLATE must now contain the same atoms (they were silently assumed to be numbered from 1 in the same order). With MPI less data are communicated.</li>
+<li><a href="../EMMI/">EMMI</a>: with REWEIGHT the forces and the derivative with respect to the bias were wrong when the weights of the replicas were different; atoms with the same tabulated overlap could be dropped from the neighbor list. New SEED keyword. With MPI the derivatives of the overlaps are no longer summed at every step; OpenMP parallelization; the scale regression is done once instead of on every rank and replica.</li>
+<li><a href="../EMMIVOX/">EMMIVOX</a>: new SEED keyword; the neighbor sphere uses a cell list (it was O(voxels x atoms)); results no longer depend on the number of OpenMP threads; the score is summed in double precision.</li>
+<li><a href="../SAXS/">SAXS</a> and <a href="../SANS/">SANS</a>: faster Debye sums (sine and cosine for all the q values by angle addition), with <code>DOSCORE</code> only the contracted derivatives are summed over the MPI ranks, faster SASA for ONEBEAD. Without <code>DOSCORE</code> the derivatives of the intensities (with respect to all the atoms with ONEBEAD) are stored with OpenMP threads, and the forces on the components of the ISDB collective variables are applied with OpenMP threads. With SIGMARES the self term of the intensity is now smeared too. The random deuteration of SANS is drawn by the first rank with PLUMED's own generator.</li>
+<li><a href="../JCOUPLING/">JCOUPLING</a> with <code>DOSCORE</code> now sets the j-# components (they were always zero); <a href="../RDC/">RDC</a> with <code>DOSCORE</code> no longer allocates derivatives for each coupling.</li>
+<li><a href="../RESCALE/">RESCALE</a> uses PLUMED's random number generator and has a SEED keyword; <a href="../SELECT/">SELECT</a> and RESCALE stop if the SELECTOR does not exist; <a href="../SHADOW/">SHADOW</a> checks that exactly one replica uses REFERENCE; <a href="../BAIES/">BAIES</a> checks that the atoms in DATA_FILE are in ATOMS.</li>
+</ul>
+</li>
+<li>
+<p><a href="../JCOUPLING/">JCOUPLING</a> with <code>TYPE=CUSTOM</code> used uninitialised Karplus parameters when A, B or C were not given; A, B and C are now compulsory with <code>TYPE=CUSTOM</code>, and SHIFT is zero by default.</p>
+</li>
+<li>
+<p><a href="../UPPER_WALLS/">UPPER_WALLS</a> and <a href="../LOWER_WALLS/">LOWER_WALLS</a> acting on periodic arguments do not apply periodic boundary conditions to the difference between the argument and AT anymore
+    (<a href="https://github.com/plumed/plumed2/issues/658">#658</a>). Previously each wall acted on half of the periodic domain, so that e.g. an upper and a lower wall at <script type="math/tex">\pm 2</script> on a torsion
+    pushed it out of the interval <script type="math/tex">[-2,2]</script> when its value was beyond <script type="math/tex">\pm(\pi-2)</script>. AT must now be within the periodic domain of the argument.
+    Results are unchanged when the argument stays further than half a period from AT.</p>
+</li>
+<li>
+<p><a href="../MOLINFO/">MOLINFO</a> selectors based on a python interpreter (<code>@mda:</code>, <code>@mdt:</code>, <code>@vmd:</code> and <code>@vmdexec:</code>) now terminate the interpreter, and the processes it starts (e.g. <code>vmd</code>),
+    when PLUMED finishes. Previously only the shell used to launch the interpreter was signaled, so that the temporary file created by the selector script could be left behind
+    and processes that did not exit when their input was closed could be left running.</p>
+</li>
+<li>
+<p>Fixes and speed-ups in the biases (src/bias):</p>
+<ul>
+<li>A bias that does not set the force on an argument at a step now applies no force to it. Before, the force of the last step in which it was set was applied again:
+  <a href="../MOVINGRESTRAINT/">MOVINGRESTRAINT</a> with <code>VERSE=U</code> or <code>VERSE=L</code> pushed the argument while it was on the side where the restraint does not act (with zero bias, and with a wrong work);
+  <a href="../ABMD/">ABMD</a> pushed the argument while it was moving closer to the target than ever before; <a href="../VES_LINEAR_EXPANSION/">VES_LINEAR_EXPANSION</a> pushed the argument when it was outside the range of the basis functions.</li>
+<li><a href="../RESTRAINT/">RESTRAINT</a>: with scalar arguments, <code>SLOPE</code> was ignored when its first value was written as <code>0.0</code> (e.g. <code>SLOPE=0.0,2.0</code>). With vector arguments, <code>KAPPA=0</code> for the first argument and a non-zero value for another one gave an input error,
+  and <code>force2</code> was <script type="math/tex">k^2x^2+m^2</script> instead of <script type="math/tex">(kx+m)^2</script>.</li>
+<li><a href="../UPPER_WALLS/">UPPER_WALLS</a> and <a href="../LOWER_WALLS/">LOWER_WALLS</a> acting on vectors gave <code>nan</code> with a non-integer <code>EXP</code>. They are also faster: with 20000 distances, an upper and a lower wall cost 2.3 instead of 8.5 milliseconds per step.
+  <a href="../RESTRAINT/">RESTRAINT</a> on a non-periodic vector uses one action less per argument (with 20000 distances, <code>KAPPA</code> and <code>SLOPE</code>: 2.6 instead of 4.1 milliseconds per step).</li>
+<li><a href="../MAXENT/">MAXENT</a>: with <code>ERROR_TYPE=LAPLACE</code> the Lagrangian multipliers were never kept within the range allowed by the prior; the average between <code>TSTART</code> and <code>TEND</code> was too large by one term
+  when an update happened exactly at <code>TEND</code>; the <code>_error</code> components were always zero; an unknown <code>TYPE</code> or <code>ERROR_TYPE</code> is now an error (it gave no bias).</li>
+<li>Biases stop with an error when an argument is a vector with more than one element (only its first element was used, e.g. by <a href="../BIASVALUE/">BIASVALUE</a>).</li>
+<li>Input errors instead of crashes or meaningless results: <a href="../MOVINGRESTRAINT/">MOVINGRESTRAINT</a> without <code>STEP0</code>, <code>KAPPA0</code> or <code>AT0</code>, or with a <code>VERSE</code> other than U, L, B;
+  <a href="../EXTENDED_LAGRANGIAN/">EXTENDED_LAGRANGIAN</a> with non-positive <code>KAPPA</code> or <code>TAU</code> or negative <code>FRICTION</code>; <a href="../REWEIGHT_TEMP_PRESS/">REWEIGHT_TEMP_PRESS</a> with <code>REWEIGHT_TEMP=0</code>.</li>
+</ul>
+</li>
+<li>
+<p>Fixes and speed-ups in the tools used by many actions:</p>
+<ul>
+<li>Neighbor lists of <a href="../COORDINATION/">COORDINATION</a> and similar variables with a single group of more than 32768 atoms (<code>GROUPA</code> only, with <code>NLIST</code>) contained wrong pairs and could crash (32-bit overflow).</li>
+<li>With <code>NLISTCELLS</code> and <code>NOPBC</code>, the cells were built on the periodic box and close pairs on the two sides of the planes at half box were missed. <code>NLISTCELLS</code> now also keeps only the pairs within <code>NL_CUTOFF</code>, as <code>NLIST</code> does (the list contained all the pairs of neighboring cells, about 6 times more), and it is parallelized with MPI and OpenMP (with 20000 atoms and a list updated every 5 steps, 4.7 times faster in serial).</li>
+<li>Neighbor lists built with several OpenMP threads have the pairs in the same order as in serial: before, the order depended on the timing of the threads, so that two runs with the same input could give slightly different results.</li>
+<li>Link cells (used by <code>NLISTCELLS</code>, <a href="../CONTACT_MATRIX/">CONTACT_MATRIX</a> and the other adjacency matrices) are built on every process without MPI communication, and their number is limited.</li>
+<li>Shuffling (used by <a href="../METAINFERENCE/">METAINFERENCE</a> with <code>MC_CHUNKSIZE</code> to choose the uncertainties that are moved) only produced cyclic permutations, so that the choice was not uniform (e.g. with two uncertainties, one step and chunks of one, the first uncertainty was never moved).</li>
+<li>Text files (e.g. hills files, grids, colvar files) are read in chunks instead of one character at a time, and numbers are converted with <code>std::from_chars</code> (when available) instead of a string stream: <a href="../sum_hills/">sum_hills</a> on 300000 hills went from 9.8 to 2.5 seconds.</li>
+<li><code>nan</code>, <code>inf</code> and <code>-inf</code>, as written by PLUMED in its output files, are read correctly; negative numbers are not accepted anymore where an unsigned integer is expected (e.g. <code>STRIDE=-1</code> was read as 4294967295).</li>
+<li>Output files are written without two MPI collective operations per line, and with MPI they are opened only by the first process (the other processes open <code>/dev/null</code>): opening and truncating the same file from all the processes is slow on parallel file systems.</li>
+<li>In single precision (e.g. the OpenACC implementation of <a href="../DISTANCE/">DISTANCE</a>), periodic boundary conditions in triclinic boxes were applied with an error up to 4e-6 times the box size; they are now exact.</li>
+<li>Values outside a grid on its lower side give an error on all architectures (on arm64, e.g. Apple Silicon, they gave the value of the first bin).</li>
+<li>A <code>CUSTOM</code> switching function with a constant derivative (e.g. <code>SWITCH={CUSTOM FUNC=1-x R_0=1}</code>) stopped with "getVariableReference: Unknown variable".</li>
+</ul>
+</li>
+<li>
+<p>Fixes and speed-ups in the core of PLUMED:</p>
+<ul>
+<li>Less overhead per action and per step: OpenMP threads are used to clear the derivatives and to sum the forces of an action only when there is enough work.
+  Before, two OpenMP regions were opened for every action at every step, which was expensive when PLUMED runs with several threads
+  (e.g. GROMACS passes its number of OpenMP threads to PLUMED). With <code>plumed benchmark</code>, 400 atoms, 200 <a href="../DISTANCE/">DISTANCE</a> and 200 <a href="../RESTRAINT/">RESTRAINT</a>,
+  a step went from 226 to 85 microseconds with one thread and from 513 to 85 microseconds with two threads.</li>
+<li>Forces on virtual atoms (<a href="../CENTER/">CENTER</a>, <a href="../COM/">COM</a>, ...) are applied 3 times faster: they were computed twice.</li>
+<li>Reading an input with many actions is much faster (the time grew quadratically with the number of actions): 8000 <a href="../DISTANCE/">DISTANCE</a> lines are read in 0.4 seconds instead of 17.5.</li>
+<li>Forces on the elements of a sparse matrix that is not square (e.g. <a href="../CONTACT_MATRIX/">CONTACT_MATRIX</a> with GROUPA, GROUPB and a cutoff) passed through <a href="../FLATTEN/">FLATTEN</a>
+  were added to the wrong elements, and a linear function of a flattened sparse matrix (e.g. its <a href="../SUM/">SUM</a>) stopped with an error.</li>
+<li><code>UPDATE_IF ARG=... END</code> without a matching opening <a href="../UPDATE_IF/">UPDATE_IF</a> is now an input error (it led to undefined behavior).</li>
+<li>With replica exchange through the GREX interface (e.g. Hamiltonian replica exchange with GROMACS), PLUMED stops with an error if the two replicas exchange states of different size, instead of reading a truncated state.</li>
+<li>The labels of the detailed timers (<code>DEBUG DETAILED_TIMERS</code>) were shifted after the actions that are computed during the update step.</li>
+<li>The type of the arguments (scalar, vector, matrix, function on a grid) is checked against the types accepted by the action: the check always passed, so that e.g. a vector given to <a href="../RESTRAINT/">RESTRAINT_SCALAR</a> or <a href="../MOVINGRESTRAINT/">MOVINGRESTRAINT</a> was silently biased through its first element only. The error message lists the accepted types.</li>
+<li>The set up of shortcuts that create an action with many numbered keywords is not quadratic anymore, e.g. <a href="../DISTANCES/">DISTANCES</a> with <code>GROUPA</code> and <code>GROUPB</code> with 300k pairs of atoms takes 1.4 s instead of 94 s (<code>ActionShortcut::addToSavedInputLines</code>).</li>
+</ul>
+</li>
+<li>Fixes in the command line tools:<ul>
+<li><a href="../driver/">driver</a>: the single precision version (<code>driver-float</code>, or <code>--debug-float yes</code>) stopped at the first frame;
+  a trajectory file that cannot be opened made driver and <a href="../benchmark/">benchmark</a> crash; reading xtc, trr and molfile
+  trajectories from standard input is now an error (it was a crash); clear errors for a wrong <code>--box</code>, an atom index out of range in the <code>--mc</code> file
+  and a <code>--dump-forces</code> file that cannot be opened.</li>
+<li><a href="../simplemd/">simplemd</a>: the forces were wrong when <code>sigma</code> is not 1; with <code>temperature NVE</code> (the default) the initial velocities
+  and the thermostat used uninitialized values (now the atoms start at rest and there is no thermostat); <code>nconfig</code> and <code>nstat</code>
+  without a file name used a random file name (the defaults are now <code>10 trajectory.xyz</code> and <code>1 energies.dat</code>).
+  The neighbor list is built with linked cells when the box is large enough (with 4096 atoms a run is 6 times faster, with identical results),
+  and results with OpenMP no longer depend on the timing of the threads.</li>
+<li><a href="../pesmd/">pesmd</a>: <code>temperature NVE</code> used uninitialized values; the energy of the thermostat in <code>stats.out</code> was wrong with more than three dimensions;
+  the final jobs were not run (e.g. a <a href="../DUMPGRID/">DUMPGRID</a> with <code>STRIDE=0</code> wrote nothing). The <code>friction</code> keyword is the relaxation time of the thermostat (as before; the documentation said friction).</li>
+<li><a href="../plotswitch/">plotswitch</a> never ended with <code>--centerrange</code>; the table is written on the output of the tool and its points pass through R_0.</li>
+<li><a href="../pdbrenumber/">pdbrenumber</a>: with several models, the numbering restarted from 0 after each <code>ENDMDL</code> instead of from the first number.</li>
+<li>Tools reading an input file (e.g. <a href="../simplemd/">simplemd</a>, <a href="../pesmd/">pesmd</a>): a flag missing from the file made them crash, lines longer than 255 characters were split,
+  and an unknown keyword gave exit code 0. Errors in the input of a tool now give a message and exit code 1 instead of an abort.</li>
+<li><a href="../benchmark/">benchmark</a> with <code>--domain-decomposition</code> stopped with an error when run with <code>plumed --no-mpi</code> in a build with MPI.
+  With <code>--shuffled</code> or <code>--domain-decomposition</code> the positions were not moved with the atoms, so that PLUMED saw a different, permuted structure
+  (which also depended on the C++ library, since <code>std::shuffle</code> is implementation defined).</li>
+<li>Smaller fixes in <a href="../gen_example/">gen_example</a>, <a href="../gen_json/">gen_json</a> and <a href="../show_graph/">show_graph</a>.</li>
+</ul>
+</li>
+<li><a href="../COMBINE/">COMBINE</a> has a new CIRCULAR flag to combine periodic arguments as angles: the output is the argument of <script type="math/tex">\sum_i c_i e^{i p_i \theta_i}</script>
+    (with the default coefficients, the circular mean of the arguments), scaled to the domain given with PERIODIC (<a href="https://github.com/plumed/plumed2/issues/164">#164</a>).</li>
+<li>
+<p>Bug fixes in the functions. Results change in the following cases:</p>
+<ul>
+<li>Elements of a vector whose arguments are all zero (e.g. the output of <a href="../LESS_THAN/">LESS_THAN</a> with a D_MAX, or of a <a href="../CONTACT_MATRIX/">CONTACT_MATRIX</a> row sum) were set to zero
+  without evaluating the function, which is wrong when the function is not zero there: e.g. <a href="../CUSTOM/">CUSTOM</a> with <code>FUNC=x+1</code>, <a href="../COMBINE/">COMBINE</a> with PARAMETERS,
+  <a href="../LESS_THAN/">LESS_THAN</a> and <a href="../BETWEEN/">BETWEEN</a> around zero. For example, <a href="../COORDINATIONNUMBER/">COORDINATIONNUMBER</a> with LESS_THAN did not count the atoms with no neighbors
+  within D_MAX.</li>
+<li><a href="../CUSTOM/">CUSTOM</a> set the function to zero when an argument that is zero (with zero derivative) appeared in a product anywhere in the expression,
+  e.g. <code>FUNC=x*cos(y)+1</code> or <code>FUNC=exp(x)*y</code>. Only the arguments that multiply the whole expression are now used for this.</li>
+<li>Forces were lost when <a href="../SORT/">SORT</a>, <a href="../MOMENTS/">MOMENTS</a>, <a href="../HIGHEST/">HIGHEST</a> or <a href="../LOWEST/">LOWEST</a> take a single vector or matrix in input and only components other than
+  the first are biased (e.g. <code>sort.4</code>, <code>m.moment-3</code>), and they were applied to the wrong elements of a sparse matrix.</li>
+<li><a href="../MOMENTS/">MOMENTS</a> of periodic variables were wrong (the circular mean was shifted by half a period); the derivative of the circular mean is now included.</li>
+<li><a href="../PRODUCT/">PRODUCT</a>, and thus <a href="../DETERMINANT/">DETERMINANT</a>, gave nan for negative values (it was computed as the exponential of a sum of logarithms) and did not accept periodic scalars.</li>
+<li><a href="../FUNCPATHMSD/">FUNCPATHMSD</a> and <a href="../FUNCPATHGENERAL/">FUNCPATHGENERAL</a> no longer underflow far from the path (FUNCPATHMSD gave nan); FUNCPATHMSD accepts <a href="../DISTANCE/">DISTANCE</a> arguments again;
+  NEIGH_SIZE requires a positive NEIGH_STRIDE.</li>
+<li>The documentation of <a href="../BESSEL/">BESSEL</a> now states that it computes the exponentially scaled function <script type="math/tex">e^{-|x|}I_0(x)</script>.</li>
+</ul>
+</li>
+<li>
+<p>Fixes and speed-ups in the generic actions:</p>
+<ul>
+<li><a href="../PDB2CONSTANT/">PDB2CONSTANT</a> and <a href="../READMASSCHARGE/">READMASSCHARGE</a> kept only 6 significant digits of the values they read (reference positions and arguments, masses and charges).
+  This affected the actions that read their reference through <a href="../PDB2CONSTANT/">PDB2CONSTANT</a> (<a href="../RMSD/">RMSD</a>, <a href="../PATH/">PATH</a>, <a href="../GPATH/">GPATH</a>, <a href="../ADAPTIVE_PATH/">ADAPTIVE_PATH</a>, <a href="../PCAVARS/">PCAVARS</a>, ...):
+  with a large <code>LAMBDA</code>, <a href="../PATH/">PATH</a> and <a href="../PATHMSD/">PATHMSD</a> on the same reference differed by 1e-4; they now agree.</li>
+<li><a href="../DUMPATOMS/">DUMPATOMS</a> in xtc or trr format: with MPI, all the processes wrote the file; with <a href="../RESTART/">RESTART</a> the frames were appended several times and the file was corrupted.</li>
+<li><a href="../DUMPPROJECTIONS/">DUMPPROJECTIONS</a> ignored <a href="../RESTART/">RESTART</a> and <a href="../FLUSH/">FLUSH</a>, was written by all MPI processes, and multiple replicas wrote the same file.</li>
+<li><a href="../EFFECTIVE_ENERGY_DRIFT/">EFFECTIVE_ENERGY_DRIFT</a> was wrong with MD codes that reorder their atoms in serial runs (e.g. LAMMPS); with domain decomposition (e.g. GROMACS)
+  the positions and forces of all the atoms were gathered on all the processes at every step, now only when the atoms move to another process.</li>
+<li><a href="../FIT_TO_TEMPLATE/">FIT_TO_TEMPLATE</a> with an unknown <code>TYPE</code> did not align anything; it is now an error.
+  With <code>TYPE=OPTIMAL</code> and a reference whose beta column is all zero (the beta column only weights the RMSD that FIT_TO_TEMPLATE returns, not the alignment), this RMSD was <code>nan</code>; it is now zero, and the alignment is unchanged.</li>
+<li><a href="../FISST/">FISST</a> crashed (division by zero) at the first step when <code>OUT_OBSERVABLE</code> was not used; <code>PERIOD=0</code> is now an error.</li>
+<li><a href="../WRAPAROUND/">WRAPAROUND</a> is faster (about 30% with an orthorhombic box), with identical results.</li>
+<li>Errors instead of crashes or undefined behavior for <a href="../COMMITTOR/">COMMITTOR</a> without basins, <a href="../CREATE_MASK/">CREATE_MASK</a> with <code>TYPE=stride NZEROS=0</code>, <a href="../DUMPPDB/">DUMPPDB</a> without <code>ARG</code> and <code>ATOMS</code>;
+  <a href="../DUMPPDB/">DUMPPDB</a> with <code>ATOMS</code> does not replace the names given with <code>ARG_NAMES</code> anymore. <a href="../UNITS/">UNITS</a> prints the Boltzmann constant in the new units.</li>
+</ul>
+</li>
+<li>
+<p>Bug fixes in the secondary structure collective variables (<a href="../ALPHARMSD/">ALPHARMSD</a>, <a href="../ANTIBETARMSD/">ANTIBETARMSD</a>, <a href="../PARABETARMSD/">PARABETARMSD</a>, <a href="../SECONDARY_STRUCTURE_RMSD/">SECONDARY_STRUCTURE_RMSD</a> and <a href="../SECONDARY_STRUCTURE_DRMSD/">SECONDARY_STRUCTURE_DRMSD</a>):</p>
+<ul>
+<li>the two strands of a sheet were made whole together as a single chain, so the value of <a href="../ANTIBETARMSD/">ANTIBETARMSD</a> and <a href="../PARABETARMSD/">PARABETARMSD</a> changed when a strand was wrapped by the periodic boundary conditions (it is again as in 2.9); with <code>NOPBC</code> the periodic boundary conditions are now not used at all, also for the <code>STRANDS_CUTOFF</code> distance;</li>
+<li>the default <code>R_0</code> of the three shortcuts is 0.08 nm in whatever length unit is set with <a href="../UNITS/">UNITS</a> (it was 0.08 in the units of the input, i.e. 10 times smaller than intended with <code>UNITS LENGTH=A</code>, which gave almost no helix, beta etc.);</li>
+<li>segments that do not contain 30 atoms (e.g. three atoms) read and wrote out of bounds and crashed; segments from 2 to 30 atoms are now supported and wrong input (different sizes of the segments, indices outside ATOMS, wrong size of <code>STRUCTURE</code>, missing <code>STRUCTURE</code>, <code>ALIGN_STRANDS</code> without 30 atoms, empty <code>RESIDUES</code>) is an error;</li>
+<li><a href="../SECONDARY_STRUCTURE_DRMSD/">SECONDARY_STRUCTURE_DRMSD</a> read out of bounds when scaling the derivatives, returned nan forces when a segment had distance zero from its reference, and did not give an error when all the distances in the reference were shorter than <code>BONDLENGTH</code>; the examples in its documentation had no <code>BONDLENGTH</code> and did not use Angstrom as the <code>STRUCTURE</code> unit;</li>
+<li><a href="../ANTIBETARMSD/">ANTIBETARMSD</a> and <a href="../PARABETARMSD/">PARABETARMSD</a> with <code>STYLE=inter</code> crashed when a chain contained a single residue; they are now an error only when no pair of strands can be built.</li>
+</ul>
+</li>
+<li>
+<p>Fixes in the collective variables:</p>
+<ul>
+<li><a href="../DIHEDRAL_CORRELATION/">DIHEDRAL_CORRELATION</a> with <code>ATOMS</code> (a single variable) crashed: the atoms were never requested.</li>
+<li><a href="../CHARGE/">CHARGE</a> returned the masses of the atoms instead of their charges, and an error is given when the MD code does not provide the charges.</li>
+<li><a href="../RMSD/">RMSD</a> with <code>DISPLACEMENT</code> and <code>TYPE=OPTIMAL</code> (or <code>TYPE=OPTIMAL-FAST</code>) on a reference with more than one frame: the forces on the distances (<code>.dist</code>) were zero.</li>
+<li><a href="../PATHMSD/">PATHMSD</a> with <code>NEIGH_STRIDE=0</code> crashed with a floating point exception, and <code>LAMBDA=0</code> gave <code>nan</code>; they are now errors, as is using only one of <code>NEIGH_SIZE</code> and <code>NEIGH_STRIDE</code>.</li>
+<li><a href="../CONTACTMAP/">CONTACTMAP</a> with a single contact and <code>CMDIST</code> failed saying that <code>REFERENCE</code> was missing even if it was given; <code>REFERENCE</code> is now applied to all the contacts. No contacts is an error.</li>
+<li><a href="../GHBFIX/">GHBFIX</a>: the pairs of types in the <code>PARAMS</code> file that are not in the <code>TYPES</code> table were assigned to the first type, so that they could overwrite the parameters of that type depending on their order in the file.
+  They are now skipped (their number is written in the log). The parameters (<code>D_0</code>, <code>D_MAX</code>, <code>C</code>), the types and the atom indexes are checked, and unknown keywords are not silently ignored.</li>
+<li><a href="../EEFSOLV/">EEFSOLV</a> with <code>TEMP_CORRECTION</code> had no effect because of a wrong condition. The heat capacity term was also in the wrong units (cal/mol/K used as kcal/mol/K) and had the wrong sign with respect to Lazaridis and Karplus:
+  the correction is now zero at 298.15 K and, as expected, makes the solvation free energy less favourable at higher temperature. <strong>Results with <code>TEMP_CORRECTION</code> change</strong> (they were identical to those without the flag).</li>
+<li><a href="../ERMSD/">ERMSD</a> ignored <code>NOPBC</code> (the molecule was always made whole) and did not check the residue indexes in <code>PAIRS</code>.</li>
+<li><a href="../PCARMSD/">PCARMSD</a> reads out of bounds if the eigenvectors and the average structure have a different number of atoms; it is now an error. <a href="../DRMSD/">DRMSD</a> is an error, instead of undefined behavior, if no pair is within the cutoffs.</li>
+<li><a href="../DIMER/">DIMER</a> checks that <code>DSIGMA</code> is consistent with the number of replicas before using it; <a href="../GYRATION/">GYRATION</a> without atoms is an error; the <a href="../RMSD/">RMSD</a> shortcut closes the reference file after counting its frames.</li>
+<li>Variables that use <code>MultiColvarTemplate</code> with single precision no longer require charges when they do not use them.</li>
+<li><a href="../GHBFIX/">GHBFIX</a> is about 7% faster (the cutoff is tested before looking up the types of the atoms), with identical results; <a href="../COORDINATION/">COORDINATION</a> and the variables that share its implementation do not allocate the per-thread buffers of the derivatives when running on a single thread.</li>
+</ul>
+</li>
+<li>
+<p>Fixes in the virtual atoms (src/vatom):</p>
+<ul>
+<li><a href="../CENTER/">CENTER</a> and <a href="../COM/">COM</a> with <code>PHASES</code> (also <code>SAFE_PHASES</code>, when it uses the fast implementation) applied wrong forces to the atoms in non-orthorhombic cells, because the derivatives were transposed.
+  Cubic and orthorhombic cells were not affected. The reference forces of the regtest <code>rt71c</code>, which has two triclinic frames, were wrong and have been updated; a new regtest (<code>rt-center-triclinic</code>) checks the forces, validated against numerical derivatives, and the masses and charges of the centers.</li>
+<li><a href="../CENTER/">CENTER</a> and <a href="../COM/">COM</a> read the masses and charges once when they are constant (as they are when they come from the MD engine) instead of recomputing them, and the mass-based weights, at every step. The mass and charge of a <a href="../CENTER/">CENTER</a> with <code>WEIGHTS</code> are now also updated if they change.
+  A missing mass is reported with a single warning instead of one line per atom, and the center now stops with an error with <code>SET_MASS&lt;=0</code>, with weights that sum to zero, with a total mass equal to zero, or with <code>PHASES</code> when the weighted sines and cosines cancel out exactly (all of these gave <code>nan</code> or were silently ignored).</li>
+<li><a href="../GHOST/">GHOST</a> stops with an error, instead of giving <code>nan</code>, when the first two atoms coincide or the three atoms are collinear.</li>
+<li><a href="../FIXEDATOM/">FIXEDATOM</a> with <code>SCALED_COMPONENTS</code> prints a warning when the cell is not set (the atom was silently put in the origin).</li>
+<li><a href="../ARGS2VATOM/">ARGS2VATOM</a>: the checks on the arguments now reject vectors and empty lists (they were skipped because of a wrong logical operator).</li>
+</ul>
+</li>
+<li>
+<p>Fixes in the multicolvar shortcuts (src/multicolvar):</p>
+<ul>
+<li><a href="../COORD_ANGLES/">COORD_ANGLES</a> (and <a href="../ANGLES/">ANGLES</a> with <code>SWITCH</code>) with more than one central atom also included the angles between bonds that start from different atoms. <strong>Results change in that case</strong>:
+  the angles are now calculated separately for each central atom and summed, as in the formula in the documentation. The central atom is no longer one of its own neighbours (the result was <code>nan</code> if it was in <code>GROUP</code>).</li>
+<li>The numbered <code>MORE_THAN1</code>, <code>MORE_THAN2</code>, ... of the shortcuts that use weights (<a href="../COORD_ANGLES/">COORD_ANGLES</a> and <a href="../CLUSTER_PROPERTIES/">CLUSTER_PROPERTIES</a>) used the <code>LESS_THAN</code> actions: they failed or, if <code>LESS_THAN1</code> was also given, returned the number of values below the threshold.</li>
+<li><a href="../INPLANEDISTANCES/">INPLANEDISTANCES</a> crashed with more atoms in <code>VECTOREND</code> than in <code>VECTORSTART</code>, and gave wrong distances with more than one atom in <code>VECTORSTART</code>. Empty <code>VECTORSTART</code>, <code>VECTOREND</code> and <code>GROUP</code> are errors.</li>
+<li><code>MIN</code>, <code>MAX</code>, <code>ALT_MIN</code> and <code>HISTOGRAM</code> of the old multicolvar syntax check their options: <code>MIN={FOO=3}</code> was read as <code>BETA=3</code> and <code>NBINS=0</code> gave no output. <a href="../ANGLES/">ANGLES</a> and <a href="../ALPHABETA/">ALPHABETA</a> say what is missing when atoms or reference values are not given.</li>
+<li><a href="../PLANES/">PLANES</a> no longer lists the keywords of the old multicolvar syntax (<code>MEAN</code>, <code>LESS_THAN</code>, ...) and <a href="../UWALLS/">UWALLS</a> no longer lists <code>CATOMS</code>, <code>GROUP</code> and <code>SWITCH</code>: they were never read and gave an error.</li>
+</ul>
+</li>
+<li>Wrong inputs that crashed PLUMED, found by running the examples of the manual and variants of them (<code>.ci/audit-inputs.py</code>), are now errors:<ul>
+<li><a href="../BRIDGE_MATRIX/">BRIDGE_MATRIX</a> ignored <code>GROUP</code> and stopped saying that no atoms had been specified;</li>
+<li><a href="../MAZE_OPTIMIZER_BIAS/">MAZE_OPTIMIZER_BIAS</a> and the maze optimizers crashed when <code>OPTIMIZER</code> or <code>LOSS</code> named an action that does not exist;</li>
+<li><a href="../HISTOGRAM/">HISTOGRAM</a> and <a href="../KDE/">KDE</a> without <code>BANDWIDTH</code> (and a kernel other than <code>DISCRETE</code>) or without arguments, <a href="../COVARIANCE_MATRIX/">COVARIANCE_MATRIX</a> without <code>ARG</code>,
+  <a href="../OUTER_PRODUCT/">OUTER_PRODUCT</a> and the functions without arguments (e.g. <a href="../CLUSTER_DIAMETER/">CLUSTER_DIAMETER</a> without <code>ARG</code>), <a href="../LOCAL_CRYSTALINITY/">LOCAL_CRYSTALINITY</a> without <code>GVECTOR1</code> and <a href="../XSPRINT/">XSPRINT</a> with <code>NSHELLS=0</code>;</li>
+<li><a href="../SPHERICAL_HARMONIC/">SPHERICAL_HARMONIC</a> and <a href="../CYLINDRICAL_HARMONIC/">CYLINDRICAL_HARMONIC</a> with fewer arguments than vector components;</li>
+<li><a href="../SELECT_COMPONENTS/">SELECT_COMPONENTS</a> with an element out of range (with a matrix, a column out of range silently selected an element of another row);</li>
+<li><a href="../WRAPAROUND/">WRAPAROUND</a> with <code>GROUPBY=0</code> and <a href="../ACCUMULATE/">ACCUMULATE</a> with <code>STRIDE=0</code> and <code>CLEAR</code> (division by zero).</li>
+</ul>
+</li>
+<li><a href="../OPES_METAD/">OPES_METAD</a> with <code>WALKERS_MPI</code> and <code>EXCLUDED_REGION</code>: when only some walkers were in the excluded region, the simulation hung or mixed up the kernels of the walkers.
+    A walker in the excluded region now does not deposit, while the others do.</li>
+<li>Wrong inputs that crashed or gave <code>nan</code> in the OPES module now stop with a message: <a href="../ECV_UMBRELLAS_LINE/">ECV_UMBRELLAS_LINE</a> with <code>SIGMA</code> or <code>SPACING</code> not greater than zero,
+    <a href="../OPES_EXPANDED/">OPES_EXPANDED</a> with <code>PRINT_STRIDE=0</code> or a <code>STATE_RFILE</code> without DeltaF values, temperatures not greater than zero in <a href="../ECV_MULTITHERMAL/">ECV_MULTITHERMAL</a> and <a href="../ECV_MULTITHERMAL_MULTIBARIC/">ECV_MULTITHERMAL_MULTIBARIC</a>,
+    and <a href="../ECV_UMBRELLAS_FILE/">ECV_UMBRELLAS_FILE</a> with no umbrellas or sigmas not greater than zero. <code>TEMP=0</code> is an error in all the actions that read <code>TEMP</code>.</li>
+<li>A missing input file (e.g. with <a href="../INCLUDE/">INCLUDE</a>, <a href="../EXTERNAL/">EXTERNAL</a>, <a href="../PLUMED/">PLUMED</a> or <a href="../PIV/">PIV</a>) is an error instead of a failed assertion,
+    and <a href="../PLUMED/">PLUMED</a> with a <code>CHDIR</code> that does not exist is an error instead of an uncaught exception.</li>
+<li><code>plumed mklib</code>, which is also used by <a href="../LOAD/">LOAD</a> to compile <code>.cpp</code> files, now passes the PLUMED kernel and the libraries in <code>PLUMED_MKLIB_LDFLAGS</code> after the object files.
+    Linkers using <code>--as-needed</code> (the default e.g. on Ubuntu) dropped them, so that the compiled libraries did not depend on the kernel and could not be loaded with <a href="../LOAD/">LOAD</a> from the python interface (undefined symbols).</li>
+<li><code>pip install plumed</code> now installs, on Linux (x86_64 and aarch64) and macOS (arm64 and x86_64), the python interface together with a PLUMED kernel, so that no separate PLUMED installation is needed:<ul>
+<li>The kernel includes the default modules and does not use MPI, OpenMP or external libraries (blas, lapack, fftw, zlib).</li>
+<li>The <code>plumed</code> command is installed too, including <a href="../LOAD/">LOAD</a> and <code>plumed mklib</code> to compile your own actions (a C++ compiler is needed).</li>
+<li>A different kernel can still be used, by setting <code>PLUMED_KERNEL</code> or with <code>plumed.Plumed(kernel=path)</code>. An invalid explicit path is an error, it does not fall back to the bundled kernel.</li>
+<li>Building from the source distribution (<code>pip install --no-binary plumed plumed</code>) compiles the same kernel. Packagers who want only the python interface can set <code>PLUMED_BUILD_KERNEL=0</code>.</li>
+</ul>
+</li>
+<li><code>plumed.InputBuilder</code> reads the list of actions and keywords directly from the selected kernel (new commands <code>getInputBuilderJSONLength</code> and <code>getInputBuilderJSON</code>),
+    so it works without the <code>plumed</code> executable, the vim files or the source tree. Numbered keywords (e.g. <code>KAPPA0</code>, <code>KAPPA1</code>, ...) are now identified exactly.
+    With kernels from previous versions the vim files of their installation are used, as before.</li>
+<li>
+<p>New command <code>plumed gen_vim</code>, which writes the Vim syntax and help files of all the registered actions in a single run.
+    It is used by <code>make</code> and when building the python wheels, instead of calling <code>plumed manual --vim</code> once per action.</p>
+</li>
+<li>
+<p>Keywords of older versions of PLUMED that were replaced by another keyword are read again as their replacement, with a warning in the log:
+    <code>GRID</code> of <a href="../DUMPGRID/">DUMPGRID</a> and <a href="../CONVERT_TO_FES/">CONVERT_TO_FES</a>, <code>MATRIX</code> of <a href="../DFSCLUSTERING/">DFSCLUSTERING</a> and of the other actions that take a matrix,
+    <code>DATA</code> of <a href="../HISTOGRAM/">HISTOGRAM</a>, <code>ATOMS</code> of <a href="../RDF/">RDF</a>, <code>SIGMA</code> of <a href="../PAIRENTROPY/">PAIRENTROPY</a> and <code>CUTOFF</code> of <a href="../DISTANCE_MATRIX/">DISTANCE_MATRIX</a> (now <code>LINKCELL_CUTOFF</code>).
+    Inputs that used <code>GRID</code> or <code>MATRIX</code> stopped with "keyword ARG is compulsory for this action", because <code>ARG</code> was read before the old keyword.</p>
+</li>
+<li>
+<p><a href="../MFILTER_MORE/">MFILTER_MORE</a> on a vector (e.g. the output of <a href="../LOCAL_Q6/">LOCAL_Q6</a>) stopped with the error <code>map::at</code>.</p>
+</li>
+<li>
+<p><a href="../DUMPGRID/">DUMPGRID</a> and <a href="../DUMPCUBE/">DUMPCUBE</a> with the default <code>STRIDE=0</code> (output at the end of the run) of a grid that was never calculated,
+    e.g. the instantaneous <a href="../RDF/">RDF</a> of the default <code>CLEAR=1</code>, gave a segmentation fault at the end of the run. It is now an error that says to use <code>STRIDE</code>.</p>
+</li>
+<li>
+<p><a href="../PATH/">PATH</a> with <code>GPATH NOSPATH NOZPATH</code> no longer requires <code>LAMBDA</code> (only the spath and zpath use it) and accepts <code>TYPE</code> and <code>ARG</code>, as in 2.10.</p>
+</li>
+<li>
+<p>A PDB file with a field that cannot be read (e.g. a misaligned line) and a grid file without the column of the bias (e.g. written by an action with another label)
+    gave an assertion that did not say where the problem was: the errors now show the line of the PDB file, or the file and the columns of the grid.</p>
+</li>
+<li>
+<p><code>ARG=*</code> (e.g. <code>PRINT ARG=*</code>) leaves out the values that the action cannot use: values of a type it does not accept, and vectors of which only some elements are computed
+    (e.g. the pairs of strands of <a href="../PARABETARMSD/">PARABETARMSD</a> with <code>STRANDS_CUTOFF</code>). The input stopped with "not all elements are computed". The number of values left out is written in the log.</p>
+</li>
+<li>
+<p><a href="../EVALUATE_FUNCTION_FROM_GRID/">EVALUATE_FUNCTION_FROM_GRID</a> with vector arguments stopped with "argument is a function on a grid, which is not accepted".</p>
+</li>
+<li><a href="../DISTANCE_FROM_SPHERICAL_CONTOUR/">DISTANCE_FROM_SPHERICAL_CONTOUR</a> counted the atoms close to the line from <code>ORIGIN</code> to <code>ATOM</code> twice, and without <code>ARG</code> this overflowed a buffer (crash or memory corruption).
+    The radius changes slightly (in the regtest, in the third decimal).</li>
+<li>Grids defined with <code>GRID_SPACING</code> and without <code>GRID_BIN</code> (e.g. in <a href="../KDE/">KDE</a>, <a href="../HISTOGRAM/">HISTOGRAM</a>, <a href="../INTERPOLATE_GRID/">INTERPOLATE_GRID</a> and <a href="../REFERENCE_GRID/">REFERENCE_GRID</a>)
+    now follow the convention of <a href="../METAD/">METAD</a>: the grid ends at <code>GRID_MAX</code>, with <code>ceil((GRID_MAX-GRID_MIN)/GRID_SPACING)</code> bins and a spacing not larger than <code>GRID_SPACING</code>.
+    They had one more point, past <code>GRID_MAX</code>, and a point just past the end of a grid was read outside it (e.g. with <code>KERNEL=DISCRETE</code> or <a href="../INTERPOLATE_GRID/">INTERPOLATE_GRID</a>);
+    this is now the error "point is outside grid range", as for points further away.</li>
+<li>
+<p>Wrong grid inputs that crashed, ran out of memory or gave a grid of <code>nan</code> now stop with a message: <code>GRID_BIN=0</code>, <code>GRID_SPACING</code> not greater than zero or <code>GRID_MAX</code> not larger than <code>GRID_MIN</code>
+    (e.g. in <a href="../KDE/">KDE</a>, <a href="../HISTOGRAM/">HISTOGRAM</a>, <a href="../SPHERICAL_KDE/">SPHERICAL_KDE</a> and <a href="../REFERENCE_GRID/">REFERENCE_GRID</a>), a negative <code>BANDWIDTH</code> in <a href="../KDE/">KDE</a> and <a href="../HISTOGRAM/">HISTOGRAM</a>,
+    <a href="../REFERENCE_GRID/">REFERENCE_GRID</a> with neither <code>GRID_BIN</code> nor <code>GRID_SPACING</code>, <a href="../FIND_SPHERICAL_CONTOUR/">FIND_SPHERICAL_CONTOUR</a> with <code>NPOINTS=0</code>,
+    <a href="../DISTANCE_FROM_CONTOUR/">DISTANCE_FROM_CONTOUR</a> without <code>POSITIONS</code>, and <code>DENSITY</code> not greater than zero in <a href="../RDF/">RDF</a> and <a href="../PAIRENTROPY/">PAIRENTROPY</a>.</p>
+</li>
+<li>
+<p><a href="../MATRIX_PRODUCT/">MATRIX_PRODUCT</a> gave wrong forces when its first matrix is sparse (e.g. a <a href="../CONTACT_MATRIX/">CONTACT_MATRIX</a> with <code>D_MAX</code>).
+    With more than one thread, and a sparse second matrix, some forces could also be lost; with <code>AVOID_THREAD_GATHER</code> the forces were wrong for any sparse matrix.</p>
+</li>
+<li><a href="../TORSIONS_MATRIX/">TORSIONS_MATRIX</a> gave wrong forces when the same molecules are in <code>POSITIONS1</code> and <code>POSITIONS2</code> and no <code>MASK</code> is used, with three molecules or more,
+    and with <code>AVOID_THREAD_GATHER</code>.</li>
+<li><a href="../TRANSPOSE/">TRANSPOSE</a> of a matrix of collected data with a single row (e.g. the example of <a href="DISSIMILARITIES.md">DISSIMILARITIES</a> with one frame) crashed.</li>
+<li>Wrong matrix inputs that hung, crashed or stopped at an assertion now stop with a message: a zero cutoff for the link cells (e.g. <code>LINKCELL_CUTOFF=0</code> in <a href="../DISTANCE_MATRIX/">DISTANCE_MATRIX</a>, <code>R_0=0</code>),
+    <a href="../LOCAL_AVERAGE/">LOCAL_AVERAGE</a> and <a href="../LOCAL_CRYSTALINITY/">LOCAL_CRYSTALINITY</a> without <code>SPECIES</code>, <a href="../ENVIRONMENTSIMILARITY/">ENVIRONMENTSIMILARITY</a> with <code>CRYSTAL_STRUCTURE=CUSTOM</code> without <code>REFERENCE</code>,
+    and <a href="../GSYMFUNC_THREEBODY/">GSYMFUNC_THREEBODY</a> without <code>FUNCTION1</code>. A function of matrices with different sparsity patterns (e.g. <a href="../CUSTOM/">CUSTOM</a> of a <a href="../CONTACT_MATRIX/">CONTACT_MATRIX</a> and an <a href="../OUTER_PRODUCT/">OUTER_PRODUCT</a>)
+    stopped at an assertion: the error now says to use <code>MASK</code>, and the examples of <a href="../CLUSTER_WITHSURFACE/">CLUSTER_WITHSURFACE</a>, <a href="../FIND_SPHERICAL_CONTOUR/">FIND_SPHERICAL_CONTOUR</a> and <a href="../HEXACTIC_PARAMETER/">HEXACTIC_PARAMETER</a> now do so.</li>
+<li>Wrong inputs of the mapping, landmarks and dimensionality reduction actions that crashed now stop with a message:
+    <a href="../PATH/">PATH</a>, <a href="../GPATH/">GPATH</a> and <a href="../ADAPTIVE_PATH/">ADAPTIVE_PATH</a> with a <code>REFERENCE</code> pdb that contains neither atoms nor arguments (and no <code>ARG</code>),
+    <a href="../COLLECT/">COLLECT</a> with <code>STRIDE=0</code> and <code>CLEAR</code>, <a href="../RMSD/">RMSD</a> with a single argument, <a href="../LANDMARK_SELECT_FPS/">LANDMARK_SELECT_FPS</a> with zero landmarks or with more landmarks than stored frames,
+    and <a href="../CLASSICAL_MDS/">CLASSICAL_MDS</a> with <code>NLOW_DIM=0</code> or with more dimensions than stored frames.</li>
+<li>The calculations that are done when the run ends on data collected with <a href="../COLLECT_FRAMES/">COLLECT_FRAMES</a> and <code>CLEAR</code> (e.g. <a href="../LANDMARK_SELECT_STRIDE/">LANDMARK_SELECT_STRIDE</a> and
+    <a href="../LANDMARK_SELECT_RANDOM/">LANDMARK_SELECT_RANDOM</a>) stopped at an assertion or corrupted the memory, because the actions that select with a mask did not resize their outputs.
+    <a href="../LANDMARK_SELECT_FPS/">LANDMARK_SELECT_FPS</a> also wrote out of bounds while there were fewer collected frames than landmarks, and <a href="../CREATE_MASK/">CREATE_MASK</a> (used by <a href="../LANDMARK_SELECT_STRIDE/">LANDMARK_SELECT_STRIDE</a>)
+    crashed at the first step when the frames are collected without <code>CLEAR</code>, because there is no frame yet.</li>
+<li><a href="../PCA/">PCA</a> stopped with an error when the <code>FILE</code> keyword, which is optional, was not used. <a href="../HIGHEST/">HIGHEST</a> and <a href="../LOWEST/">LOWEST</a> of an empty vector crashed:
+    this happened at the first step in <a href="../PCA/">PCA</a> of frames collected without <code>CLEAR</code> and with <code>LOGWEIGHTS</code>, e.g. the example that uses <a href="../REWEIGHT_BIAS/">REWEIGHT_BIAS</a>.</li>
+<li>Wrong inputs of the FISST, LOGMFD and maze modules that crashed now stop with a message: <a href="../FISST/">FISST</a> with <code>PERIOD=0</code> (division by zero) or <code>NINTERPOLATE=0</code> (segmentation fault),
+    <a href="../LOGMFD/">LOGMFD</a> with <code>INTERVAL=0</code> (division by zero), and the maze optimizers without <code>LIGAND</code> or <a href="../MAZE_OPTIMIZER_BIAS/">MAZE_OPTIMIZER_BIAS</a> with fewer than three arguments (segmentation faults). <a href="../S2CM/">S2CM</a> with <code>N_I=0</code> (infinite prefactor) also stops with a message.</li>
+<li><a href="../FISST/">FISST</a> and <a href="../ANN/">ANN</a> no longer leak memory each time an action is created.</li>
+<li>
+<p><a href="../DRR/">DRR</a> with <code>OUTPUTFREQ=0</code> (division by zero) or with a grid with zero bins (<code>GRID_BIN=0</code>, or a <code>GRID_SPACING</code> larger than the range; segmentation fault) now stops with a message.</p>
+</li>
+<li>
+<p><a href="../PYTORCH_MODEL/">PYTORCH_MODEL</a> read wrong values when the output of the model is not a contiguous tensor (e.g. <code>y[:,::2]</code> or <code>y.expand(...)</code>),
+    and stopped with "there is no component with name node-0" when all its arguments are constant.</p>
+</li>
+<li>The PyCV plugin (<code>PYCVINTERFACE</code> and <code>PYFUNCTION</code>): a Python exception in the calculate function, and an <code>IMPORT</code> that cannot be imported in PYCVINTERFACE,
+    crashed PLUMED (after the error message, or before it). An index out of range in <code>getPosition</code>, <code>mass</code>, <code>charge</code> and <code>argument</code>, a wrong shape in <code>Pbc.apply</code>
+    and <code>getNeighbourList</code> without <code>GROUPA</code> crashed as well. All of these now stop with an error message that contains the Python one.</li>
+<li>
+<p>VES module fixes:</p>
+<ul>
+<li><a href="../BF_WAVELETS/">BF_WAVELETS</a> crashed (memory corruption) when <code>MIN_GRID_SIZE</code> was not larger than the support of the wavelet (<code>2*ORDER-1</code>), and divided by zero or ran out of memory with <code>FUNCTION_LENGTH</code> zero or negative: the latter now stops with an error message.</li>
+<li>The VES optimizers (e.g. <a href="../OPT_AVERAGED_SGD/">OPT_AVERAGED_SGD</a>) crashed with a floating point exception when <code>COEFFS_OUTPUT</code>, <code>GRADIENT_OUTPUT</code> or <code>HESSIAN_OUTPUT</code> was 0: they now stop with an error message (use <code>COEFFS_OUTPUT=OFF</code> to switch off the output).</li>
+<li>With more than one bias, the <code>avergradrms</code> and <code>avergradmax</code> components of the VES optimizers (<code>MONITOR_AVERAGE_GRADIENT</code>) were all computed from the first set of coefficients.</li>
+<li><a href="../OPT_ADAM/">OPT_ADAM</a> ignored <code>EPSILON</code> (a fixed <script type="math/tex">2.2\cdot 10^{-16}</script> was used instead of the default <script type="math/tex">10^{-8}</script>), counted the iterations of all the biases together in the bias correction of the moments (wrong with more than one bias),
+  and with <code>ADAMW_WEIGHT_DECAY</code> it set to zero the coefficients deactivated with <code>MASK_FILE</code> instead of keeping them fixed.</li>
+<li>A coefficient file read without its header (e.g. a <code>MASK_FILE</code> written for more basis functions) wrote out of the coefficients: an index out of range is now an error.</li>
+<li>Clearer messages for <a href="../TD_VONMISES/">TD_VONMISES</a> with a different number of <code>CENTER</code> and <code>SIGMA</code> keywords and for <a href="../VES_DELTA_F/">VES_DELTA_F</a> without <code>FILE_F0</code>.</li>
+</ul>
+</li>
+<li>
+<p>Corrupted or unusual trajectory files read with the molfile plugins (<code>--mf_xtc</code>, <code>--mf_trr</code>, <code>--mf_dcd</code>, <code>--mf_gro</code>, <code>--mf_crd</code> and <code>--mf_pdb</code> of the driver) no longer crash PLUMED or corrupt the memory:
+    an xtc file where the two copies of the number of atoms of a frame differ, or with compressed data that does not fit in the frame, a trr file with a negative size of the version string,
+    a dcd file with a negative or inconsistent number of atoms or with an index of a free atom outside the range (crash, or a write out of the buffer), and a crd file that is empty or has no line terminator (the driver never ended) are now rejected with a message.
+    The driver says that it cannot read a file when the plugin cannot open it, instead of using a null handle.
+    Reading a gro file with <code>--mf_gro</code> gave wrong results (the header of the first frame was already consumed when the file was opened, and the coordinates were read from fields that were not null terminated),
+    a frame of a gro file with a different number of atoms than the first one was read out of bounds, and pdb atom records shorter than 80 characters were read with uninitialized values.
+    <code>MOLFILE_ERROR</code> is now different from <code>MOLFILE_EOF</code> (they were both -1) and the plugins return <code>MOLFILE_EOF</code> only at the end of the file: the driver used to take any error of a plugin
+    (a corrupted frame, a frame with a different number of atoms) for the end of the trajectory and stopped without an error, or with a failed assertion if it was the first frame. It now stops with an error message.</p>
+</li>
+<li><code>CUDACOORDINATION</code> and <code>CUDACOORDINATIONFLOAT</code>: the error for a skewed box that is too small for <code>D_MAX</code> is now raised on all the MPI processes (it was raised only on the one that owns the GPU, and the others waited for it), and wrong <code>NN</code>, <code>MM</code> (not positive, or equal) and <code>R_0</code> give an error also when <code>D_MAX</code> is not given.</li>
+<li><a href="../COORD_ANGLES/">COORD_ANGLES</a> gave <code>nan</code> when two bonds were parallel or antiparallel (the dot product of the unit vectors was out of <script type="math/tex">[-1,1]</script> by rounding).</li>
+<li>The <a href="../PLUMED/">PLUMED</a> action passed the step to the guest instance as an <code>int</code>: steps above <script type="math/tex">2^{31}</script> were negative in the guest.</li>
+<li><a href="../DRR/">DRR</a> with <code>HISTORYFREQ</code> between 0 and 1 crashed with a floating point exception: it is now an error.</li>
+<li>The documentation of <a href="../ABMD/">ABMD</a>, <a href="../MOVINGRESTRAINT/">MOVINGRESTRAINT</a> and <a href="../EXTENDED_LAGRANGIAN/">EXTENDED_LAGRANGIAN</a> says what is restored by <a href="../RESTART/">RESTART</a> without <a href="../CHECKPOINT/">CHECKPOINT</a>.</li>
+<li>A function of a sparse matrix (e.g. <a href="../CUSTOM/">CUSTOM</a> with <code>FUNC=1-x</code> on a <a href="../CONTACT_MATRIX/">CONTACT_MATRIX</a> with <code>D_MAX</code>) is only evaluated on the elements that the matrix stores:
+    when the function is not zero for zero arguments the elements that are not stored were silently wrong (zero). This is now an error that says to use <code>MASK</code>
+    (the diagonal of a matrix built from a single group, which is never stored, is not taken into account).</li>
+<li><a href="../MAXENT/">MAXENT</a>: a <a href="../RESTART/">RESTART</a> without <a href="../CHECKPOINT/">CHECKPOINT</a> rebuilt the average of the Lagrangian multipliers between <code>TSTART</code> and <code>TEND</code> with the multipliers shifted by one update and not converted for <code>TYPE=INEQUAL</code>;
+    the restart is now exact when the MD code repeats the step it restarts from (it is still not exact in general: use <a href="../CHECKPOINT/">CHECKPOINT</a>). The <code>work</code> components are now in energy units (they lacked the factor <script type="math/tex">k_BT</script>).</li>
+<li><a href="../GHBFIX/">GHBFIX</a>: the documentation says how the pairs of types of the <code>PARAMS</code> file are matched to the atoms of <code>GROUPA</code> and <code>GROUPB</code> (the lines are not symmetrised).</li>
+<li><a href="../WRAPAROUND/">WRAPAROUND</a> with at least 128 atoms in <code>AROUND</code> finds the closest reference atom with a cell search instead of a loop over all of them,
+    with identical results, in orthorhombic and triclinic boxes. With 18000 atoms wrapped around 2000 atoms: 0.4 instead of 5.9 seconds for 30 steps (orthorhombic),
+    0.2 instead of 11.6 seconds for 10 steps (rhombic dodecahedron).</li>
+<li>The actions that analyse the data collected by <a href="../COLLECT_FRAMES/">COLLECT_FRAMES</a> (e.g. <a href="DISSIMILARITIES.md">DISSIMILARITIES</a> and the landmark selections) are not calculated while their input has no values:
+    without <code>CLEAR</code>, an output at the first step (e.g. a <code>STRIDE</code> that includes step 0) crashed DISSIMILARITIES.</li>
+<li>The driver stops with a clear message for <code>--mf_g96</code>: the g96 format is not supported by the driver (it stopped at the first frame).</li>
+</ul>
+<h3 id="changes-relevant-for-developers">Changes relevant for developers:</h3>
+<ul>
+<li><code>CheckpointWriter</code>/<code>CheckpointReader</code> (<code>tools/Checkpoint.h</code>): a minimal binary container (named, typed entries in nested sections, little-endian, CRC32) used by the
+    <a href="../CHECKPOINT/">CHECKPOINT</a> file. Actions with an internal state override <code>Action::hasCheckpointState()</code>, <code>writeCheckpoint(CheckpointWriter&amp;)</code> and <code>readCheckpoint(CheckpointReader&amp;)</code>;
+    <code>PlumedMain::checkpointing</code> (<code>core/Checkpointing.h</code>) writes the file at the start of the step, before <code>prepareDependencies</code>, and restores it at the first step after a restart.
+    <code>OFile</code> registers every file opened for writing so that its size can be recorded and trimmed.
+    <code>GridBase::writeCheckpoint</code>/<code>readCheckpoint</code> store and restore a grid bitwise (range, spacing, values and derivatives, dense or sparse);
+    <code>Bias::writeComponentValues</code>/<code>readComponentValues</code> the values of the components; <code>FlexibleBin</code> its statistics.
+    <code>Random::stateToString</code>/<code>stateFromString</code> store the complete state of a generator, including the cached Gaussian number
+    (<code>toString</code>/<code>fromString</code> keep only the uniform generator and are not exact for <code>Gaussian()</code>).</li>
+<li>
+<p>The manual page of <a href="../LOAD/">LOAD</a> lists the changes that are usually needed to compile code written for older versions of PLUMED
+    (Atoms.h, Communicator.h, <code>componentsAreNotOptional</code>, <code>addOutputComponent</code> with three arguments, the old multicolvar classes).</p>
+</li>
+<li>
+<p><code>Keywords::use</code> on a keyword that already exists does nothing. Actions written for 2.10 call <code>keys.use("ARG")</code> after the <code>registerKeywords</code> of their base class (e.g. Bias, Function, ReweightBase),
+    which reserved <code>ARG</code> in 2.10 and now adds it: <a href="../LOAD/">LOAD</a>ing them stopped with "the ARG keyword is not reserved".</p>
+</li>
+<li>
+<p>The type of each value and component that an action creates is now checked against the type declared with <code>setValueDescription</code> and <code>addOutputComponent</code>.
+    The check (<code>Keywords::componentHasCorrectType</code>) combined the types with <code>|</code>, so it was always true, and it threw <code>std::out_of_range</code> for an undocumented value.
+    An undocumented or wrongly documented output now stops with an error that names the action and the output.
+    Fixed declarations: <code>struct</code> of the secondary structure actions (vector), the value of PAIRENTROPIES (grid), ONES (also matrix), SELECT_COMPONENTS (also scalar), MFILTER_MORE (vector, was missing).</p>
+</li>
+<li>
+<p><code>ActionSet</code> keeps an index of its actions, so that <code>selectWithLabel</code>, <code>getShortcutActionWithLabel</code>, <code>selectLatest&lt;GenericMolInfo*&gt;</code> and <code>ActionAtomistic::getAtomValuesFromPlumedObject</code>
+    do not scan all the actions anymore. The index is extended with the actions appended to the set since the last lookup (actions must only be appended, as <code>PlumedMain</code> does)
+    and is rebuilt if the set is cleared. New methods <code>ActionSet::getAtomValues</code> and <code>ActionSet::getNumberOfActionsForInterface</code>.</p>
+</li>
+<li><code>Tools::getline(FILE*)</code> returns the last line of a file also when it does not end with a newline (it was lost).
+    <code>CLToolMain</code> catches the exceptions thrown while reading the input of a command line tool. The default <code>fileParser::init(FILE*)</code> of
+    <code>TrajectoryParser</code> returns an error for the formats that cannot be read from a stream.</li>
+<li>The bound check in <code>Value::get</code> was never compiled (<code>#ifdef DNDEBUG</code>): it is now active in debug builds.</li>
+<li><code>LeptonCall</code> can be copied safely (copies pointed to the variables of the original expressions).</li>
+<li><code>FunctionOfVector</code> evaluates the function at zero arguments when it is constructed; elements whose arguments are all zero are skipped only if the result is zero (<code>function::functionIsZeroWhenArgumentsAreZero</code>).</li>
+<li><code>LinkCells</code> does not use its communicator anymore (the constructor argument is kept for compatibility). <code>IFile::getline</code> reads lines in chunks. <code>Communicator</code> frees the communicators obtained with <code>Split</code> and handles <code>Set_comm(MPI_COMM_SELF)</code>; its copy constructor does not read an uninitialized communicator.</li>
+<li>Faster build and installation:<ul>
+<li>Each source file is now compiled only once (the second compilation, which was left over after the dependency files started to be generated by the compiler itself, has been removed), and dependency files are written directly in <code>deps/</code>.</li>
+<li>The python interface (both the one in <code>python/</code> and the one built during <code>make install</code>) is not rebuilt anymore at every <code>make</code>/<code>make install</code>, but only when its sources or the configuration change.</li>
+<li><code>make install</code> does not build anymore the python interface in <code>python/</code>, since the installed one is built separately against the installed kernel.</li>
+<li>The files generated by running plumed (<code>vim/syntax</code>, <code>vim/help</code>, <code>json/syntax.json</code>) are regenerated only when the plumed executable changes.</li>
+<li>With <code>make -j</code>, the python interface is now built concurrently with the C++ code, and the libraries in <code>src/lib</code> and in <code>src/lib/install</code> are linked concurrently.</li>
+<li>The python interface is compiled from the committed <code>python/plumed.c</code>, so building it does not require cython and does not modify tracked files anymore. <code>plumed.c</code> is regenerated from <code>plumed.pyx</code> and <code>cplumed.pxd</code> only when they change (or with <code>make -C python cythonize</code>), and must then be committed; its consistency is checked in the CI.</li>
+</ul>
+</li>
+<li><code>Subprocess</code> launches the command in a new process group and sends the signals to the whole group, so that they also reach the processes started by the shell.
+    <code>Subprocess::stop()</code> and <code>Subprocess::cont()</code> (enabled with <code>PLUMED_ENABLE_SIGNALS</code>) now actually stop and resume these processes.
+    When a <code>Subprocess</code> is destroyed, the group receives <code>SIGTERM</code> (and <code>SIGCONT</code>, in case it was stopped) and, if the shell has not exited after one second, <code>SIGKILL</code>.</li>
+<li>The <code>xdrfile</code> and <code>molfile</code> modules are now always compiled: since the trajectory parser was moved to <code>src/tools</code> it requires them, and configuring with <code>--enable-modules=none</code> (or removing one of them) failed at link time.</li>
+<li>The core module does not call blas directly anymore: the only call (a <code>daxpy</code> used to sum the forces in <code>ActionWithValue</code>) has been replaced by a plain loop, which is as fast and avoids calling a threaded blas within an OpenMP region. The configure warnings printed when the internal blas/lapack are used have been reworded, since the internal versions are only slower than an optimized external library with large matrices.</li>
+<li><code>pseudoInvert</code> builds the pseudoinverse with a single product, without the intermediate dense matrices; the result is the same and it is up to 2 times faster for large matrices. <code>diagMatRange</code> computes only a range of the eigenvalues and eigenvectors of a symmetric matrix.</li>
+<li>The inputlines now are parsed using a dictionary instead of an array. This speeds up the parsing of massive input lines.</li>
+<li>Abstracted the AtomDistribution functionality from the benchmark. It can be used in tests or in other</li>
+<li>It is not possible anymore to register lowercase keywords and the developer must always specify the keywords completely as uppercase while parsing in the action constructor. There are no differences for the user, apart the entry in the manual for the DEBUG action: the user can still specify lowercase and mixed case keywords in the input file.</li>
+<li>Some improvements in the management of the plugins:<ul>
+<li>Now the plugins have a common directory structure</li>
+<li>The plugins now are checked with codechek.</li>
+<li>The plugins now will be formatted with the astyle target in the main directory</li>
+<li>The plugins will <strong>NOT</strong> be cleaned with the clean command from the main directory</li>
+</ul>
+</li>
+<li>With <code>--enable-rpath</code>, if the linker writes <code>RPATH</code> by default (older toolchains), <code>configure</code> now adds <code>-Wl,--enable-new-dtags</code> so that <code>RUNPATH</code> is used. With <code>RPATH</code> the executables of the build tree loaded the kernel installed in the target directory (if any) instead of their own one, even after sourcing <code>sourceme.sh</code>: for instance the build failed with <code>unknown command gen_vim</code> when an older version was installed there.</li>
+<li>Removed the optional <code>--enable-boost_graph</code> configure option and the <code>__PLUMED_HAS_BOOST_GRAPH</code> macro. The Boost branch of <a href="../DFSCLUSTERING/">DFSCLUSTERING</a> was disabled by default, no longer compiled against the current code, and not tested in the CI; the built-in depth first search is now always used.</li>
+<li>Added a new python workflow in the CI for checking the python interface and the <code>pycv</code> plugin with multiple python versions</li>
+<li>Part of the python scripts are now checked for errors and for formattation in the CI.<ul>
+<li>The formattation and the checking of the code are made with the ruff python package</li>
+<li>The astyle target in the main Makefile will attempt to format the python scripts if finds ruff</li>
+</ul>
+</li>
+<li>Python packaging:<ul>
+<li><code>python/pyproject.toml</code> and <code>python/build_backend.py</code> (a PEP 517 backend wrapping setuptools) build the wheels with the bundled kernel, using <code>configure</code> and <code>make</code>.
+  The output of the kernel build is shown only if it fails (<code>PLUMED_BUILD_VERBOSE=1</code> shows everything), and with <code>PLUMED_RUNTIME_CACHE</code> the kernel is built once and reused for all the python versions.</li>
+<li>The <code>Python package</code> workflow builds the source distribution and, with cibuildwheel, the wheels for CPython 3.11 to 3.15 (manylinux2014 and macOS), tests the installed wheels with <code>python/test/test_bundled_wheel.py</code>,
+  and publishes them with PyPI Trusted Publishing when a <code>v*</code> tag is pushed (or to TestPyPI when started by hand).</li>
+<li>The consistency of <code>python/plumed.c</code> is checked with <code>python/compare_plumed_c.sh</code>, which ignores the compressed copies of the strings that cython (&gt;=3.1) generates, since they depend on the python version and on the compression libraries used to run cython.</li>
+</ul>
+</li>
+<li>The CI also runs every night on the master branch, and can be started by hand from the Actions tab.</li>
+<li>A regtest can be marked as long with <code>plumed_long=yes</code> in its config: it then runs only when <code>PLUMED_LONG_TESTS=yes</code>, as in the nightly CI run, and not on pull requests.</li>
+<li>New CI jobs build all the modules and run the regtests with AddressSanitizer and UndefinedBehaviorSanitizer, with clang without OpenMP (any warning of <code>-Wall -Wextra</code> in PLUMED code fails the job, see <code>.ci/check-warnings</code>), and with <code>--disable-dlopen</code>.
+    The regtests that need <code>dlopen</code> declare <code>plumed_needs=dlopen</code>.</li>
+<li>CI fails when an example of the manual that worked stops working: the pages with known failures are listed in <code>new-manual/broken-examples.allowed</code>, a list that should only shrink.</li>
+<li><code>.ci/audit-inputs.py</code> runs the examples of the manual and variants of them (a keyword removed, a number set to 0 or -1, a list cut to one element) and reports the inputs that crash PLUMED or stop it with an assertion instead of an error message.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3 @@
+dist: DISTANCE ATOMS=3,5
+ens: ENSEMBLE ARG=dist
+PRINT ARG=dist,ens.dist

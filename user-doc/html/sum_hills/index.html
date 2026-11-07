@@ -1,0 +1,1416 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Command line tool: sum_hills - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#command-line-tool-sum_hills" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Command line tool: sum_hills
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing the grid
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-files-and-multiple-walkers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple files and multiple walkers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-out-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrating out variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#following-the-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Following the convergence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-average-of-the-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time average of the bias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bias-instead-of-free-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bias instead of free energy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#histograms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histograms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntax
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="command-line-tool-sum_hills"><a href="../module_cltools/">Command line tool</a>: sum_hills</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_cltools/"><strong>cltools</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Input</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">sum the hills of metadynamics to compute the free energy</td>
+<td style="text-align: center;">command line args</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details">Details</h2>
+<p>sum_hills is a tool that sums the Gaussians in a hills file and writes the resulting free energy on a grid.</p>
+<p>This tool is most frequently used after a <a href="../METAD/">METAD</a> simulation to sum all the Gaussians in the hills file
+and output the free energy surface:</p>
+<pre class="plumedlisting">
+<b name="cltool1plumed" onclick='showPath("cltool1","cltool1plumed","cltool1plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE
+<span style="display:none;" id="cltool1plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>The default name for the output file is <code>fes.dat</code>. It contains, for each point of the grid, the free energy
+and its derivatives with respect to the variables. The free energy is minus the sum of the Gaussians: with
+well-tempered metadynamics the heights written in the hills file are already scaled by <script type="math/tex">\gamma/(\gamma-1)</script>
+(where <script type="math/tex">\gamma</script> is the bias factor), so that their sum is directly the estimate of minus the free energy.
+As always, the free energy is defined up to an additive constant; use <code>--mintozero</code> to shift its minimum to zero.</p>
+<p>sum_hills automatically detects the variables in the hills file and their periodicity. A column <code>X</code> of the file
+is a variable if the file also contains its width (<code>sigma_X</code>, or <code>sigma_X_X</code> for multivariate Gaussians),
+whatever the name of the variable. If you used flexible hills (multivariate Gaussian kernels), sum_hills
+understands it from the hills file.</p>
+<h2 id="choosing-the-grid">Choosing the grid</h2>
+<p>By default the grid is chosen so as to contain all the Gaussians, with a spacing of about a third of the smallest width.
+You can instead choose the number of bins:</p>
+<pre class="plumedlisting">
+<b name="cltool2plumed" onclick='showPath("cltool2","cltool2plumed","cltool2plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--bin<span class="right">the number of bins of the grid, one for each variable<i></i></span></span> 99,99 <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE
+<span style="display:none;" id="cltool2plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>In the command above the minimum and maximum of the grid are still detected for you. If you want to set them yourself
+you can do so as shown below:</p>
+<pre class="plumedlisting">
+<b name="cltool3plumed" onclick='showPath("cltool3","cltool3plumed","cltool3plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--bin<span class="right">the number of bins of the grid, one for each variable<i></i></span></span> 99,99 <span class="plumedtooltip">--min<span class="right">the lower bounds of the grid, one for each variable; by default they are detected from the hills<i></i></span></span>  <span class="plumedtooltip">--max<span class="right">the upper bounds of the grid, one for each variable; by default they are detected from the hills<i></i></span></span> pi,pi <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE
+<span style="display:none;" id="cltool3plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>You can of course use numbers instead of -pi/pi. <code>--min</code> and <code>--max</code> must be given together. Instead of the number of bins
+you can give the grid spacing with <code>--spacing</code>, with or without <code>--min</code> and <code>--max</code>. If you give both <code>--bin</code> and <code>--spacing</code>,
+the larger number of bins is used for each variable.</p>
+<h2 id="multiple-files-and-multiple-walkers">Multiple files and multiple walkers</h2>
+<p>sum_hills can also accept multiple files:</p>
+<pre class="plumedlisting">
+<b name="cltool4plumed" onclick='showPath("cltool4","cltool4plumed","cltool4plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE1,PATHTOMYHILLSFILE2,PATHTOMYHILLSFILE3
+<span style="display:none;" id="cltool4plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>The files are integrated one after the other. This does not change the final free energy, but when
+you use <code>--stride</code> (see below) with the hills files of multiple walkers the intermediate free energies would
+not follow the simulation. With <code>--sort time</code> the hills of all the files are merged in order of their time
+(hills with the same time are taken in the order of the files), so that each intermediate free energy
+contains the hills deposited by all the walkers up to a given time:</p>
+<pre class="plumedlisting">
+<b name="cltool5plumed" onclick='showPath("cltool5","cltool5plumed","cltool5plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> HILLS.0,HILLS.1,HILLS.2 <span class="plumedtooltip">--sort<span class="right">time or clock: with multiple files (e<i></i></span></span> time <span class="plumedtooltip">--stride<span class="right">write the free energy (or histogram) every this number of hills (or points); by default only at the end<i></i></span></span> 300
+<span style="display:none;" id="cltool5plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>With <code>--sort clock</code> the hills are merged in order of the <code>clock</code> field (the wall-clock time at which they were
+deposited, written with multiple walkers), which is more appropriate when the walkers run at different speeds.
+Each file should be ordered by the chosen field.</p>
+<h2 id="integrating-out-variables">Integrating out variables</h2>
+<p>If you want to integrate out some variables from your free energy surface you can use <code>--idw</code>:</p>
+<pre class="plumedlisting">
+<b name="cltool6plumed" onclick='showPath("cltool6","cltool6plumed","cltool6plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE <span class="plumedtooltip">--idw<span class="right">the variables of the output (default all)<i></i></span></span> t1 <span class="plumedtooltip">--kt<span class="right">the temperature in energy units, needed with --idw, --histo and --basins<i></i></span></span> 0.6
+<span style="display:none;" id="cltool6plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>With <code>--idw</code> you list the variables that you want in the output free energy surface.
+All the other variables in the hills file are integrated out, i.e.
+<script type="math/tex">F(s_1) = -k_BT \log \sum_{s_2} e^{-F(s_1,s_2)/k_BT}</script>, where the sum runs over the points of the grid.
+<code>--kt</code> is the temperature of the system in energy units: be consistent with the units of your hills file,
+since plumed will not check this for you. If you need more variables you can list them separated by commas:</p>
+<pre class="plumedlisting">
+<b name="cltool7plumed" onclick='showPath("cltool7","cltool7plumed","cltool7plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE <span class="plumedtooltip">--idw<span class="right">the variables of the output (default all)<i></i></span></span> t1,t2 <span class="plumedtooltip">--kt<span class="right">the temperature in energy units, needed with --idw, --histo and --basins<i></i></span></span> 0.6
+<span style="display:none;" id="cltool7plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<h2 id="following-the-convergence">Following the convergence</h2>
+<p>With <code>--stride</code> you can write the free energy after each bunch of hills (the stride is a number of hills):</p>
+<pre class="plumedlisting">
+<b name="cltool8plumed" onclick='showPath("cltool8","cltool8plumed","cltool8plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--stride<span class="right">write the free energy (or histogram) every this number of hills (or points); by default only at the end<i></i></span></span> 300 <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE
+<span style="display:none;" id="cltool8plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>The output files are then called <code>fes_0.dat</code>, <code>fes_1.dat</code>, etc. (see below), and the last one contains all the hills.</p>
+<p>With <code>--nohistory</code> each output contains only the hills of its own block of hills, instead of all the hills up to that point:</p>
+<pre class="plumedlisting">
+<b name="cltool9plumed" onclick='showPath("cltool9","cltool9plumed","cltool9plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--stride<span class="right">write the free energy (or histogram) every this number of hills (or points); by default only at the end<i></i></span></span> 300 <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE <span class="plumedtooltip">--nohistory<span class="right"> with --stride, each output contains only the hills (or points) of its own block<i></i></span></span>
+<span style="display:none;" id="cltool9plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>In this way you can monitor the bias deposited in blocks of time as a metadynamics simulation goes on:
+when the bias deposited in a block is constant over the whole domain, the simulation can be considered to be at convergence.</p>
+<p>To check the convergence you can also follow the free-energy difference between basins as the
+simulation goes on. With <code>--basins</code> you can define two or more basins as boxes, each given by the minimum and
+the maximum of each variable of the output, with the basins separated by colons. Along a periodic variable a
+basin can cross the boundary if its minimum is larger than its maximum. For example</p>
+<pre class="plumedlisting">
+<b name="cltool10plumed" onclick='showPath("cltool10","cltool10plumed","cltool10plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE <span class="plumedtooltip">--stride<span class="right">write the free energy (or histogram) every this number of hills (or points); by default only at the end<i></i></span></span> 500 <span class="plumedtooltip">--kt<span class="right">the temperature in energy units, needed with --idw, --histo and --basins<i></i></span></span> 2.5 <span class="plumedtooltip">--basins<span class="right">basins separated by colons, each given by the minimum and maximum of each output variable (e<i></i></span></span> 
+<span style="display:none;" id="cltool10plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>writes, at each output, the time of the last hill read, the number of hills, and the free energy of each basin
+relative to the first one, computed as <script type="math/tex">-k_BT \log \sum_{s\in\mathrm{basin}} e^{-F(s)/k_BT}</script> over the points of
+the grid, in the file <code>basins.dat</code> (the name can be set with <code>--outbasins</code>). With <code>--idw</code> the basins are defined on
+the projected variables. With <code>--histo</code> (see below) the same is done for the free energy from the histogram, in the file <code>histo_basins.dat</code>.
+A plateau of these differences is a necessary (not sufficient) indication of convergence.</p>
+<h2 id="time-average-of-the-bias">Time average of the bias</h2>
+<p>With standard (not well-tempered) metadynamics the bias does not converge but fluctuates around the free energy.
+A better estimate is the time average of the bias after an initial transient, which you can obtain with <code>--average</code>:</p>
+<pre class="plumedlisting">
+<b name="cltool11plumed" onclick='showPath("cltool11","cltool11plumed","cltool11plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE <span class="plumedtooltip">--average<span class="right">time average of the bias from time t0 (t0) or between times t0 and t1 (t0,t1); without t1 the average ends at the last hill read<i></i></span></span> 1000
+<span style="display:none;" id="cltool11plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>computes the average of the bias between time 1000 (in the units of the time column of the hills file) and the time of
+the last hill. This is done by scaling the height of each hill deposited at time <script type="math/tex">t</script> after 1000 by <script type="math/tex">(t_1-t)/(t_1-1000)</script>, where
+<script type="math/tex">t_1</script> is the final time. You can also give the final time explicitly, e.g. <code>--average 1000,5000</code>: hills deposited after
+5000 are ignored. The same average is useful for well-tempered metadynamics, where it reduces the fluctuations of the
+estimate of the free energy. Combined with <code>--stride</code>, each output is the average from the initial time up to the last hill read.
+This is the same average computed by the function <code>hills_time_average</code> of the plumed python module.</p>
+<h2 id="bias-instead-of-free-energy">Bias instead of free energy</h2>
+<p>If you have run well-tempered metadynamics you can also ask sum_hills to output the negative bias, <script type="math/tex">-V(s)=(\gamma-1)/\gamma\, F(s)</script>,
+instead of the free energy by using <code>--negbias</code>:</p>
+<pre class="plumedlisting">
+<b name="cltool12plumed" onclick='showPath("cltool12","cltool12plumed","cltool12plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--negbias<span class="right"> write minus the bias instead of the free energy (they differ only with well-tempered metadynamics)<i></i></span></span> <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE
+<span style="display:none;" id="cltool12plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>Here the default output file name is <code>negativebias.dat</code>. If the simulation was not well tempered the bias is minus the free energy,
+and the output is the same as without <code>--negbias</code>.</p>
+<h2 id="histograms">Histograms</h2>
+<p>From time to time you might need to use a hills or a colvar file as a set of points from which you want to build
+a free energy as <script type="math/tex">-k_BT \log P(s)</script>. You can do this with <code>--histo</code>:</p>
+<pre class="plumedlisting">
+<b name="cltool13plumed" onclick='showPath("cltool13","cltool13plumed","cltool13plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--histo<span class="right">the files (hills or colvar) from which a histogram is computed, separated by commas; the points are not reweighted<i></i></span></span> PATHTOMYCOLVARORHILLSFILE <span class="plumedtooltip">--sigma<span class="right">the widths of the Gaussian kernels of the histogram, one for each variable (needed with --histo)<i></i></span></span> 0.2,0.2 <span class="plumedtooltip">--kt<span class="right">the temperature in energy units, needed with --idw, --histo and --basins<i></i></span></span> 0.6
+<span style="display:none;" id="cltool13plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>The histogram is computed with Gaussian kernels whose widths are given with <code>--sigma</code>, one for each variable,
+so it is a continuous histogram, and <code>--kt</code> is needed to convert it into a free energy. The default output file is <code>histo.dat</code>.
+With a hills file the variables are those of the hills; with a colvar file all the columns but time are variables, so you
+will usually select some of them with <code>--idw</code> (and give one width for each of them).
+Multiple input files can be given, separated by commas.</p>
+<p>All the points have the same weight: the result is the distribution sampled by the simulation, which is the
+free energy only if the simulation was not biased. <strong>sum_hills does not reweight the points.</strong> To compute a free
+energy from a biased simulation (e.g. from the COLVAR file of a metadynamics simulation) use <a href="../driver/">driver</a> with
+<a href="../READ/">READ</a>, <a href="../REWEIGHT_BIAS/">REWEIGHT_BIAS</a> (or <a href="../REWEIGHT_METAD/">REWEIGHT_METAD</a>), <a href="../HISTOGRAM/">HISTOGRAM</a>
+and <a href="../CONVERT_TO_FES/">CONVERT_TO_FES</a>, for example</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_sum_hills.md_working_14.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../sum_hills.md_working_14.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/basic/rt-fametad-2-restart/COLVAR</span>
+<span id="sum_hills.md_working_14.datdefs_short"><b name="sum_hills.md_working_14.dats" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.dats","sum_hills.md_working_14.dats","black")'>s</b><span style="display:none;" id="sum_hills.md_working_14.dats">The READ action with label <b>s</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">s</td><td width="5%"><font color="black">scalar</font></td><td>the value calculated by this action</td></tr></table></span>: <span class="plumedtooltip" style="color:green">READ<span class="right">Read quantities from a colvar file. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("sum_hills.md_working_14.datdefs");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/READ">More details</a><i></i></span></span> <span class="plumedtooltip">FILE<span class="right">the name of the file from which to read these quantities<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt-fametad-2-restart/COLVAR<div class="right"> Click <a onclick='openModal("sum_hills.md_working_14.datregtest/basic/rt-fametad-2-restart/COLVAR1")'>here</a> to see an extract from this file.<i></i></div></div><div id="sum_hills.md_working_14.datregtest/basic/rt-fametad-2-restart/COLVAR1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("sum_hills.md_working_14.datregtest/basic/rt-fametad-2-restart/COLVAR1")'>&times;</span>  <h2>FILE: regtest/basic/rt-fametad-2-restart/COLVAR</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS time sum_abs MetaD.bias MetaD.acc MetaD.pace
+ 0.000000   0.2574   0.0000   1.0000   2.0000
+ 1.000000   0.2809   0.0000   1.0000   2.0000
+ 2.000000   0.2388   0.0000   1.0000   2.0000
+ 3.000000   0.2338   0.3969   1.0575   2.0000
+ 4.000000   0.2546   0.3702   1.0831   2.0000
+ 5.000000   0.1897   0.2946   1.0916   2.0000
+ 6.000000   0.2082   0.5021   1.1135   2.0000
+ 7.000000   0.1820   0.5429   1.1320   2.0000
+ 8.000000   0.4051   0.0000   1.1155   2.0000
+ 9.000000   0.3358   0.1633   1.1102   2.0000
+ 10.000000   0.2709   0.7726   1.1355   2.0000
+ 11.000000   0.2547   1.3326   1.1874   2.0000
+ 12.000000   0.3064   0.5722   1.1932   2.0000
+ 13.000000   0.3505   0.4588   1.1939   2.0000
+ 14.000000   0.2191   1.2120   1.2247   2.0000
+ 15.000000   0.3189   0.7980   1.2349   2.0000
+ 16.000000   0.3001   1.1178   1.2555   2.0000
+ 17.000000   0.2057   1.3845   1.2842   2.0000
+ 18.000000   0.2908   1.6662   1.3212   2.0000
+ 19.000000   0.1905   1.0503   1.3318   2.0000
+ 20.000000   0.2407   2.1056   1.3815   2.0000
+ 21.000000   0.3216   1.4355   1.4004   2.0000
+ 22.000000   0.3492   0.7969   1.3993   2.0000
+ 23.000000   0.3783   0.8101   1.3986   2.0000
+ 24.000000   0.3403   1.3547   1.4121   2.0000
+ 25.000000   0.3680   1.2285   1.4211   2.0000
+ 26.000000   0.2607   2.6856   1.4793   2.0000
+ 27.000000   0.3596   1.3953   1.4893   2.0000
+ 28.000000   0.3223   2.2033   1.5225   2.0000
+ 29.000000   0.3004   3.0010   1.5848   2.0000
+ 30.000000   0.1662   0.6138   1.5747   2.0000
+ 31.000000   0.3594   1.6490   1.5863   2.0000
+ 32.000000   0.2629   3.2208   1.6504   2.0000
+ 33.000000   0.2466   3.4198   1.7198   2.0000
+ 34.000000   0.2907   3.4219   1.7852   2.0000
+ 35.000000   0.2371   3.3701   1.8445   2.0000
+ 36.000000   0.1751   1.2611   1.8393   2.0000
+ 37.000000   0.3790   1.2326   1.8339   2.0000
+ 38.000000   0.4147   0.6107   1.8193   2.0000
+ 39.000000   0.3597   1.9010   1.8276   2.0000
+ 40.000000   0.3389   2.4936   1.8498   2.0000
+ 41.000000   0.2255   3.1723   1.8917   2.0000
+ 42.000000   0.3091   3.6957   1.9514   2.0000
+ 43.000000   0.1744   1.6347   1.9508   2.0000
+ 44.000000   0.2335   3.4659   1.9977   2.0000
+ 45.000000   0.2258   3.5936   2.0472   2.0000
+ 46.000000   0.3997   1.3490   2.0400   2.0000
+ 47.000000   0.3094   4.1588   2.1093   2.0000
+ 48.000000   0.2027   2.7559   2.1282   2.0000
+ 49.000000   0.2673   4.6210   2.2149   2.0000
+ 50.000000   0.2917   4.5000   2.2921   2.0000
+ 51.000000   0.3292   3.8505   2.3390   2.0000
+ 52.000000   0.2374   4.3692   2.4049   2.0000
+ 53.000000   0.3926   1.8912   2.3998   2.0000
+ 54.000000   0.2902   5.0455   2.4953   2.0000
+ 55.000000   0.2307   4.6586   2.5676   2.0000
+ 56.000000   0.3470   3.3190   2.5893   2.0000
+ 57.000000   0.2841   5.6059   2.7099   2.0000
+ 58.000000   0.3604   3.1488   2.7241   2.0000
+ 59.000000   0.3260   4.8386   2.7959   2.0000
+ 60.000000   0.3290   4.7365   2.8606   2.0000
+ 61.000000   0.3924   2.4892   2.8582   2.0000
+ 62.000000   0.2691   5.7386   2.9731   2.0000
+ 63.000000   0.4355   1.1114   2.9506   2.0000
+ 64.000000   0.2436   5.4421   3.0430   4.0000
+ 65.000000   0.3704   3.3833   3.0559   4.0000
+ 66.000000   0.4329   1.1840   3.0340   4.0000
+ 67.000000   0.4174   1.6482   3.0176   4.0000
+ 68.000000   0.3972   2.3195   3.0105   4.0000
+ 69.000000   0.3476   4.6073   3.0588   4.0000
+ 70.000000   0.1935   3.2606   3.0679   4.0000
+ 71.000000   0.1959   3.3924   3.0795   4.0000
+ 72.000000   0.4293   1.5656   3.0628   4.0000
+ 73.000000   0.4146   2.4504   3.0574   4.0000
+ 74.000000   0.2584   6.2365   3.1808   4.0000
+ 75.000000   0.2849   6.4245   3.3135   4.0000
+ 76.000000   0.3689   3.8720   3.3321   4.0000
+ 77.000000   0.2862   6.4592   3.4618   4.0000
+ 78.000000   0.2194   4.6916   3.5016   4.0000
+ 79.000000   0.2151   4.4567   3.5328   4.0000
+ 80.000000   0.4418   1.5936   3.5123   4.0000
+ 81.000000   0.3014   6.2820   3.6222   4.0000
+ 82.000000   0.2446   5.8438   3.7050   4.0000
+ 83.000000   0.3706   4.2705   3.7271   4.0000
+ 84.000000   0.3371   5.3487   3.7843   4.0000
+ 85.000000   0.3199   6.1967   3.8809   4.0000
+ 86.000000   0.4048   3.3475   3.8803   4.0000
+ 87.000000   0.2338   5.4211   3.9367   4.0000
+ 88.000000   0.2619   6.3770   4.0384   4.0000
+ 89.000000   0.2000   3.7247   4.0431   4.0000
+ 90.000000   0.2803   6.9334   4.1772   4.0000
+ 91.000000   0.2696   6.8660   4.3036   4.0000
+ 92.000000   0.3714   4.5065   4.3231   4.0000
+ 93.000000   0.2618   6.7439   4.4372   4.0000
+ 94.000000   0.3401   5.9435   4.5052   4.0000
+ 95.000000   0.2654   6.8156   4.6196   4.0000
+ 96.000000   0.3103   6.6849   4.7234   4.0000
+ 97.000000   0.4418   2.0749   4.6984   4.0000
+ 98.000000   0.2343   5.7883   4.7543   4.0000
+ 99.000000   0.1927   3.3004   4.7443   4.0000
+ 100.000000   0.2520   6.5990   4.8377   4.0000
+</pre></div>  </div></div> <span class="plumedtooltip">VALUES<span class="right">the values to read from the file<i></i></span></span>=sum_abs <span class="plumedtooltip">IGNORE_TIME<span class="right"> ignore the time in the colvar file<i></i></span></span> <span class="plumedtooltip">IGNORE_FORCES<span class="right"> use this flag if the forces added by any bias can be safely ignored<i></i></span></span>
+</span><span id="sum_hills.md_working_14.datdefs_long" style="display:none;"><b name="sum_hills.md_working_14.dats" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.dats","sum_hills.md_working_14.dats","black")'>s</b>: <span class="plumedtooltip" style="color:green">READ<span class="right">Read quantities from a colvar file. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("sum_hills.md_working_14.datdefs");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/READ">More details</a><i></i></span></span> <span class="plumedtooltip">FILE<span class="right">the name of the file from which to read these quantities<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt-fametad-2-restart/COLVAR<div class="right"> Click <a onclick='openModal("sum_hills.md_working_14.datregtest/basic/rt-fametad-2-restart/COLVAR2")'>here</a> to see an extract from this file.<i></i></div></div><div id="sum_hills.md_working_14.datregtest/basic/rt-fametad-2-restart/COLVAR2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("sum_hills.md_working_14.datregtest/basic/rt-fametad-2-restart/COLVAR2")'>&times;</span>  <h2>FILE: regtest/basic/rt-fametad-2-restart/COLVAR</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS time sum_abs MetaD.bias MetaD.acc MetaD.pace
+ 0.000000   0.2574   0.0000   1.0000   2.0000
+ 1.000000   0.2809   0.0000   1.0000   2.0000
+ 2.000000   0.2388   0.0000   1.0000   2.0000
+ 3.000000   0.2338   0.3969   1.0575   2.0000
+ 4.000000   0.2546   0.3702   1.0831   2.0000
+ 5.000000   0.1897   0.2946   1.0916   2.0000
+ 6.000000   0.2082   0.5021   1.1135   2.0000
+ 7.000000   0.1820   0.5429   1.1320   2.0000
+ 8.000000   0.4051   0.0000   1.1155   2.0000
+ 9.000000   0.3358   0.1633   1.1102   2.0000
+ 10.000000   0.2709   0.7726   1.1355   2.0000
+ 11.000000   0.2547   1.3326   1.1874   2.0000
+ 12.000000   0.3064   0.5722   1.1932   2.0000
+ 13.000000   0.3505   0.4588   1.1939   2.0000
+ 14.000000   0.2191   1.2120   1.2247   2.0000
+ 15.000000   0.3189   0.7980   1.2349   2.0000
+ 16.000000   0.3001   1.1178   1.2555   2.0000
+ 17.000000   0.2057   1.3845   1.2842   2.0000
+ 18.000000   0.2908   1.6662   1.3212   2.0000
+ 19.000000   0.1905   1.0503   1.3318   2.0000
+ 20.000000   0.2407   2.1056   1.3815   2.0000
+ 21.000000   0.3216   1.4355   1.4004   2.0000
+ 22.000000   0.3492   0.7969   1.3993   2.0000
+ 23.000000   0.3783   0.8101   1.3986   2.0000
+ 24.000000   0.3403   1.3547   1.4121   2.0000
+ 25.000000   0.3680   1.2285   1.4211   2.0000
+ 26.000000   0.2607   2.6856   1.4793   2.0000
+ 27.000000   0.3596   1.3953   1.4893   2.0000
+ 28.000000   0.3223   2.2033   1.5225   2.0000
+ 29.000000   0.3004   3.0010   1.5848   2.0000
+ 30.000000   0.1662   0.6138   1.5747   2.0000
+ 31.000000   0.3594   1.6490   1.5863   2.0000
+ 32.000000   0.2629   3.2208   1.6504   2.0000
+ 33.000000   0.2466   3.4198   1.7198   2.0000
+ 34.000000   0.2907   3.4219   1.7852   2.0000
+ 35.000000   0.2371   3.3701   1.8445   2.0000
+ 36.000000   0.1751   1.2611   1.8393   2.0000
+ 37.000000   0.3790   1.2326   1.8339   2.0000
+ 38.000000   0.4147   0.6107   1.8193   2.0000
+ 39.000000   0.3597   1.9010   1.8276   2.0000
+ 40.000000   0.3389   2.4936   1.8498   2.0000
+ 41.000000   0.2255   3.1723   1.8917   2.0000
+ 42.000000   0.3091   3.6957   1.9514   2.0000
+ 43.000000   0.1744   1.6347   1.9508   2.0000
+ 44.000000   0.2335   3.4659   1.9977   2.0000
+ 45.000000   0.2258   3.5936   2.0472   2.0000
+ 46.000000   0.3997   1.3490   2.0400   2.0000
+ 47.000000   0.3094   4.1588   2.1093   2.0000
+ 48.000000   0.2027   2.7559   2.1282   2.0000
+ 49.000000   0.2673   4.6210   2.2149   2.0000
+ 50.000000   0.2917   4.5000   2.2921   2.0000
+ 51.000000   0.3292   3.8505   2.3390   2.0000
+ 52.000000   0.2374   4.3692   2.4049   2.0000
+ 53.000000   0.3926   1.8912   2.3998   2.0000
+ 54.000000   0.2902   5.0455   2.4953   2.0000
+ 55.000000   0.2307   4.6586   2.5676   2.0000
+ 56.000000   0.3470   3.3190   2.5893   2.0000
+ 57.000000   0.2841   5.6059   2.7099   2.0000
+ 58.000000   0.3604   3.1488   2.7241   2.0000
+ 59.000000   0.3260   4.8386   2.7959   2.0000
+ 60.000000   0.3290   4.7365   2.8606   2.0000
+ 61.000000   0.3924   2.4892   2.8582   2.0000
+ 62.000000   0.2691   5.7386   2.9731   2.0000
+ 63.000000   0.4355   1.1114   2.9506   2.0000
+ 64.000000   0.2436   5.4421   3.0430   4.0000
+ 65.000000   0.3704   3.3833   3.0559   4.0000
+ 66.000000   0.4329   1.1840   3.0340   4.0000
+ 67.000000   0.4174   1.6482   3.0176   4.0000
+ 68.000000   0.3972   2.3195   3.0105   4.0000
+ 69.000000   0.3476   4.6073   3.0588   4.0000
+ 70.000000   0.1935   3.2606   3.0679   4.0000
+ 71.000000   0.1959   3.3924   3.0795   4.0000
+ 72.000000   0.4293   1.5656   3.0628   4.0000
+ 73.000000   0.4146   2.4504   3.0574   4.0000
+ 74.000000   0.2584   6.2365   3.1808   4.0000
+ 75.000000   0.2849   6.4245   3.3135   4.0000
+ 76.000000   0.3689   3.8720   3.3321   4.0000
+ 77.000000   0.2862   6.4592   3.4618   4.0000
+ 78.000000   0.2194   4.6916   3.5016   4.0000
+ 79.000000   0.2151   4.4567   3.5328   4.0000
+ 80.000000   0.4418   1.5936   3.5123   4.0000
+ 81.000000   0.3014   6.2820   3.6222   4.0000
+ 82.000000   0.2446   5.8438   3.7050   4.0000
+ 83.000000   0.3706   4.2705   3.7271   4.0000
+ 84.000000   0.3371   5.3487   3.7843   4.0000
+ 85.000000   0.3199   6.1967   3.8809   4.0000
+ 86.000000   0.4048   3.3475   3.8803   4.0000
+ 87.000000   0.2338   5.4211   3.9367   4.0000
+ 88.000000   0.2619   6.3770   4.0384   4.0000
+ 89.000000   0.2000   3.7247   4.0431   4.0000
+ 90.000000   0.2803   6.9334   4.1772   4.0000
+ 91.000000   0.2696   6.8660   4.3036   4.0000
+ 92.000000   0.3714   4.5065   4.3231   4.0000
+ 93.000000   0.2618   6.7439   4.4372   4.0000
+ 94.000000   0.3401   5.9435   4.5052   4.0000
+ 95.000000   0.2654   6.8156   4.6196   4.0000
+ 96.000000   0.3103   6.6849   4.7234   4.0000
+ 97.000000   0.4418   2.0749   4.6984   4.0000
+ 98.000000   0.2343   5.7883   4.7543   4.0000
+ 99.000000   0.1927   3.3004   4.7443   4.0000
+ 100.000000   0.2520   6.5990   4.8377   4.0000
+</pre></div>  </div></div> <span class="plumedtooltip">VALUES<span class="right">the values to read from the file<i></i></span></span>=sum_abs <span class="plumedtooltip">IGNORE_TIME<span class="right"> ignore the time in the colvar file<i></i></span></span> <span class="plumedtooltip">IGNORE_FORCES<span class="right"> use this flag if the forces added by any bias can be safely ignored<i></i></span></span>  <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the file should be read<i></i></span></span>=1 <span class="plumedtooltip">EVERY<span class="right"> only read every nth line of the colvar file<i></i></span></span>=1
+</span><span id="sum_hills.md_working_14.datdefmetad_short"><b name="sum_hills.md_working_14.datmetad" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.datmetad","sum_hills.md_working_14.datmetad","black")'>metad</b><span style="display:none;" id="sum_hills.md_working_14.datmetad">The READ action with label <b>metad</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">metad.bias</td><td width="5%"><font color="black">scalar</font></td><td>values from the column labelled MetaD.bias in the file named regtest/basic/rt-fametad-2-restart/COLVAR</td></tr></table></span>: <span class="plumedtooltip" style="color:green">READ<span class="right">Read quantities from a colvar file. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("sum_hills.md_working_14.datdefmetad");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/READ">More details</a><i></i></span></span> <span class="plumedtooltip">FILE<span class="right">the name of the file from which to read these quantities<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt-fametad-2-restart/COLVAR<div class="right"> Click <a onclick='openModal("sum_hills.md_working_14.datregtest/basic/rt-fametad-2-restart/COLVAR3")'>here</a> to see an extract from this file.<i></i></div></div><div id="sum_hills.md_working_14.datregtest/basic/rt-fametad-2-restart/COLVAR3" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("sum_hills.md_working_14.datregtest/basic/rt-fametad-2-restart/COLVAR3")'>&times;</span>  <h2>FILE: regtest/basic/rt-fametad-2-restart/COLVAR</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS time sum_abs MetaD.bias MetaD.acc MetaD.pace
+ 0.000000   0.2574   0.0000   1.0000   2.0000
+ 1.000000   0.2809   0.0000   1.0000   2.0000
+ 2.000000   0.2388   0.0000   1.0000   2.0000
+ 3.000000   0.2338   0.3969   1.0575   2.0000
+ 4.000000   0.2546   0.3702   1.0831   2.0000
+ 5.000000   0.1897   0.2946   1.0916   2.0000
+ 6.000000   0.2082   0.5021   1.1135   2.0000
+ 7.000000   0.1820   0.5429   1.1320   2.0000
+ 8.000000   0.4051   0.0000   1.1155   2.0000
+ 9.000000   0.3358   0.1633   1.1102   2.0000
+ 10.000000   0.2709   0.7726   1.1355   2.0000
+ 11.000000   0.2547   1.3326   1.1874   2.0000
+ 12.000000   0.3064   0.5722   1.1932   2.0000
+ 13.000000   0.3505   0.4588   1.1939   2.0000
+ 14.000000   0.2191   1.2120   1.2247   2.0000
+ 15.000000   0.3189   0.7980   1.2349   2.0000
+ 16.000000   0.3001   1.1178   1.2555   2.0000
+ 17.000000   0.2057   1.3845   1.2842   2.0000
+ 18.000000   0.2908   1.6662   1.3212   2.0000
+ 19.000000   0.1905   1.0503   1.3318   2.0000
+ 20.000000   0.2407   2.1056   1.3815   2.0000
+ 21.000000   0.3216   1.4355   1.4004   2.0000
+ 22.000000   0.3492   0.7969   1.3993   2.0000
+ 23.000000   0.3783   0.8101   1.3986   2.0000
+ 24.000000   0.3403   1.3547   1.4121   2.0000
+ 25.000000   0.3680   1.2285   1.4211   2.0000
+ 26.000000   0.2607   2.6856   1.4793   2.0000
+ 27.000000   0.3596   1.3953   1.4893   2.0000
+ 28.000000   0.3223   2.2033   1.5225   2.0000
+ 29.000000   0.3004   3.0010   1.5848   2.0000
+ 30.000000   0.1662   0.6138   1.5747   2.0000
+ 31.000000   0.3594   1.6490   1.5863   2.0000
+ 32.000000   0.2629   3.2208   1.6504   2.0000
+ 33.000000   0.2466   3.4198   1.7198   2.0000
+ 34.000000   0.2907   3.4219   1.7852   2.0000
+ 35.000000   0.2371   3.3701   1.8445   2.0000
+ 36.000000   0.1751   1.2611   1.8393   2.0000
+ 37.000000   0.3790   1.2326   1.8339   2.0000
+ 38.000000   0.4147   0.6107   1.8193   2.0000
+ 39.000000   0.3597   1.9010   1.8276   2.0000
+ 40.000000   0.3389   2.4936   1.8498   2.0000
+ 41.000000   0.2255   3.1723   1.8917   2.0000
+ 42.000000   0.3091   3.6957   1.9514   2.0000
+ 43.000000   0.1744   1.6347   1.9508   2.0000
+ 44.000000   0.2335   3.4659   1.9977   2.0000
+ 45.000000   0.2258   3.5936   2.0472   2.0000
+ 46.000000   0.3997   1.3490   2.0400   2.0000
+ 47.000000   0.3094   4.1588   2.1093   2.0000
+ 48.000000   0.2027   2.7559   2.1282   2.0000
+ 49.000000   0.2673   4.6210   2.2149   2.0000
+ 50.000000   0.2917   4.5000   2.2921   2.0000
+ 51.000000   0.3292   3.8505   2.3390   2.0000
+ 52.000000   0.2374   4.3692   2.4049   2.0000
+ 53.000000   0.3926   1.8912   2.3998   2.0000
+ 54.000000   0.2902   5.0455   2.4953   2.0000
+ 55.000000   0.2307   4.6586   2.5676   2.0000
+ 56.000000   0.3470   3.3190   2.5893   2.0000
+ 57.000000   0.2841   5.6059   2.7099   2.0000
+ 58.000000   0.3604   3.1488   2.7241   2.0000
+ 59.000000   0.3260   4.8386   2.7959   2.0000
+ 60.000000   0.3290   4.7365   2.8606   2.0000
+ 61.000000   0.3924   2.4892   2.8582   2.0000
+ 62.000000   0.2691   5.7386   2.9731   2.0000
+ 63.000000   0.4355   1.1114   2.9506   2.0000
+ 64.000000   0.2436   5.4421   3.0430   4.0000
+ 65.000000   0.3704   3.3833   3.0559   4.0000
+ 66.000000   0.4329   1.1840   3.0340   4.0000
+ 67.000000   0.4174   1.6482   3.0176   4.0000
+ 68.000000   0.3972   2.3195   3.0105   4.0000
+ 69.000000   0.3476   4.6073   3.0588   4.0000
+ 70.000000   0.1935   3.2606   3.0679   4.0000
+ 71.000000   0.1959   3.3924   3.0795   4.0000
+ 72.000000   0.4293   1.5656   3.0628   4.0000
+ 73.000000   0.4146   2.4504   3.0574   4.0000
+ 74.000000   0.2584   6.2365   3.1808   4.0000
+ 75.000000   0.2849   6.4245   3.3135   4.0000
+ 76.000000   0.3689   3.8720   3.3321   4.0000
+ 77.000000   0.2862   6.4592   3.4618   4.0000
+ 78.000000   0.2194   4.6916   3.5016   4.0000
+ 79.000000   0.2151   4.4567   3.5328   4.0000
+ 80.000000   0.4418   1.5936   3.5123   4.0000
+ 81.000000   0.3014   6.2820   3.6222   4.0000
+ 82.000000   0.2446   5.8438   3.7050   4.0000
+ 83.000000   0.3706   4.2705   3.7271   4.0000
+ 84.000000   0.3371   5.3487   3.7843   4.0000
+ 85.000000   0.3199   6.1967   3.8809   4.0000
+ 86.000000   0.4048   3.3475   3.8803   4.0000
+ 87.000000   0.2338   5.4211   3.9367   4.0000
+ 88.000000   0.2619   6.3770   4.0384   4.0000
+ 89.000000   0.2000   3.7247   4.0431   4.0000
+ 90.000000   0.2803   6.9334   4.1772   4.0000
+ 91.000000   0.2696   6.8660   4.3036   4.0000
+ 92.000000   0.3714   4.5065   4.3231   4.0000
+ 93.000000   0.2618   6.7439   4.4372   4.0000
+ 94.000000   0.3401   5.9435   4.5052   4.0000
+ 95.000000   0.2654   6.8156   4.6196   4.0000
+ 96.000000   0.3103   6.6849   4.7234   4.0000
+ 97.000000   0.4418   2.0749   4.6984   4.0000
+ 98.000000   0.2343   5.7883   4.7543   4.0000
+ 99.000000   0.1927   3.3004   4.7443   4.0000
+ 100.000000   0.2520   6.5990   4.8377   4.0000
+</pre></div>  </div></div> <span class="plumedtooltip">VALUES<span class="right">the values to read from the file<i></i></span></span>=MetaD.bias <span class="plumedtooltip">IGNORE_TIME<span class="right"> ignore the time in the colvar file<i></i></span></span> <span class="plumedtooltip">IGNORE_FORCES<span class="right"> use this flag if the forces added by any bias can be safely ignored<i></i></span></span>
+</span><span id="sum_hills.md_working_14.datdefmetad_long" style="display:none;"><b name="sum_hills.md_working_14.datmetad" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.datmetad","sum_hills.md_working_14.datmetad","black")'>metad</b>: <span class="plumedtooltip" style="color:green">READ<span class="right">Read quantities from a colvar file. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("sum_hills.md_working_14.datdefmetad");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/READ">More details</a><i></i></span></span> <span class="plumedtooltip">FILE<span class="right">the name of the file from which to read these quantities<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt-fametad-2-restart/COLVAR<div class="right"> Click <a onclick='openModal("sum_hills.md_working_14.datregtest/basic/rt-fametad-2-restart/COLVAR4")'>here</a> to see an extract from this file.<i></i></div></div><div id="sum_hills.md_working_14.datregtest/basic/rt-fametad-2-restart/COLVAR4" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("sum_hills.md_working_14.datregtest/basic/rt-fametad-2-restart/COLVAR4")'>&times;</span>  <h2>FILE: regtest/basic/rt-fametad-2-restart/COLVAR</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS time sum_abs MetaD.bias MetaD.acc MetaD.pace
+ 0.000000   0.2574   0.0000   1.0000   2.0000
+ 1.000000   0.2809   0.0000   1.0000   2.0000
+ 2.000000   0.2388   0.0000   1.0000   2.0000
+ 3.000000   0.2338   0.3969   1.0575   2.0000
+ 4.000000   0.2546   0.3702   1.0831   2.0000
+ 5.000000   0.1897   0.2946   1.0916   2.0000
+ 6.000000   0.2082   0.5021   1.1135   2.0000
+ 7.000000   0.1820   0.5429   1.1320   2.0000
+ 8.000000   0.4051   0.0000   1.1155   2.0000
+ 9.000000   0.3358   0.1633   1.1102   2.0000
+ 10.000000   0.2709   0.7726   1.1355   2.0000
+ 11.000000   0.2547   1.3326   1.1874   2.0000
+ 12.000000   0.3064   0.5722   1.1932   2.0000
+ 13.000000   0.3505   0.4588   1.1939   2.0000
+ 14.000000   0.2191   1.2120   1.2247   2.0000
+ 15.000000   0.3189   0.7980   1.2349   2.0000
+ 16.000000   0.3001   1.1178   1.2555   2.0000
+ 17.000000   0.2057   1.3845   1.2842   2.0000
+ 18.000000   0.2908   1.6662   1.3212   2.0000
+ 19.000000   0.1905   1.0503   1.3318   2.0000
+ 20.000000   0.2407   2.1056   1.3815   2.0000
+ 21.000000   0.3216   1.4355   1.4004   2.0000
+ 22.000000   0.3492   0.7969   1.3993   2.0000
+ 23.000000   0.3783   0.8101   1.3986   2.0000
+ 24.000000   0.3403   1.3547   1.4121   2.0000
+ 25.000000   0.3680   1.2285   1.4211   2.0000
+ 26.000000   0.2607   2.6856   1.4793   2.0000
+ 27.000000   0.3596   1.3953   1.4893   2.0000
+ 28.000000   0.3223   2.2033   1.5225   2.0000
+ 29.000000   0.3004   3.0010   1.5848   2.0000
+ 30.000000   0.1662   0.6138   1.5747   2.0000
+ 31.000000   0.3594   1.6490   1.5863   2.0000
+ 32.000000   0.2629   3.2208   1.6504   2.0000
+ 33.000000   0.2466   3.4198   1.7198   2.0000
+ 34.000000   0.2907   3.4219   1.7852   2.0000
+ 35.000000   0.2371   3.3701   1.8445   2.0000
+ 36.000000   0.1751   1.2611   1.8393   2.0000
+ 37.000000   0.3790   1.2326   1.8339   2.0000
+ 38.000000   0.4147   0.6107   1.8193   2.0000
+ 39.000000   0.3597   1.9010   1.8276   2.0000
+ 40.000000   0.3389   2.4936   1.8498   2.0000
+ 41.000000   0.2255   3.1723   1.8917   2.0000
+ 42.000000   0.3091   3.6957   1.9514   2.0000
+ 43.000000   0.1744   1.6347   1.9508   2.0000
+ 44.000000   0.2335   3.4659   1.9977   2.0000
+ 45.000000   0.2258   3.5936   2.0472   2.0000
+ 46.000000   0.3997   1.3490   2.0400   2.0000
+ 47.000000   0.3094   4.1588   2.1093   2.0000
+ 48.000000   0.2027   2.7559   2.1282   2.0000
+ 49.000000   0.2673   4.6210   2.2149   2.0000
+ 50.000000   0.2917   4.5000   2.2921   2.0000
+ 51.000000   0.3292   3.8505   2.3390   2.0000
+ 52.000000   0.2374   4.3692   2.4049   2.0000
+ 53.000000   0.3926   1.8912   2.3998   2.0000
+ 54.000000   0.2902   5.0455   2.4953   2.0000
+ 55.000000   0.2307   4.6586   2.5676   2.0000
+ 56.000000   0.3470   3.3190   2.5893   2.0000
+ 57.000000   0.2841   5.6059   2.7099   2.0000
+ 58.000000   0.3604   3.1488   2.7241   2.0000
+ 59.000000   0.3260   4.8386   2.7959   2.0000
+ 60.000000   0.3290   4.7365   2.8606   2.0000
+ 61.000000   0.3924   2.4892   2.8582   2.0000
+ 62.000000   0.2691   5.7386   2.9731   2.0000
+ 63.000000   0.4355   1.1114   2.9506   2.0000
+ 64.000000   0.2436   5.4421   3.0430   4.0000
+ 65.000000   0.3704   3.3833   3.0559   4.0000
+ 66.000000   0.4329   1.1840   3.0340   4.0000
+ 67.000000   0.4174   1.6482   3.0176   4.0000
+ 68.000000   0.3972   2.3195   3.0105   4.0000
+ 69.000000   0.3476   4.6073   3.0588   4.0000
+ 70.000000   0.1935   3.2606   3.0679   4.0000
+ 71.000000   0.1959   3.3924   3.0795   4.0000
+ 72.000000   0.4293   1.5656   3.0628   4.0000
+ 73.000000   0.4146   2.4504   3.0574   4.0000
+ 74.000000   0.2584   6.2365   3.1808   4.0000
+ 75.000000   0.2849   6.4245   3.3135   4.0000
+ 76.000000   0.3689   3.8720   3.3321   4.0000
+ 77.000000   0.2862   6.4592   3.4618   4.0000
+ 78.000000   0.2194   4.6916   3.5016   4.0000
+ 79.000000   0.2151   4.4567   3.5328   4.0000
+ 80.000000   0.4418   1.5936   3.5123   4.0000
+ 81.000000   0.3014   6.2820   3.6222   4.0000
+ 82.000000   0.2446   5.8438   3.7050   4.0000
+ 83.000000   0.3706   4.2705   3.7271   4.0000
+ 84.000000   0.3371   5.3487   3.7843   4.0000
+ 85.000000   0.3199   6.1967   3.8809   4.0000
+ 86.000000   0.4048   3.3475   3.8803   4.0000
+ 87.000000   0.2338   5.4211   3.9367   4.0000
+ 88.000000   0.2619   6.3770   4.0384   4.0000
+ 89.000000   0.2000   3.7247   4.0431   4.0000
+ 90.000000   0.2803   6.9334   4.1772   4.0000
+ 91.000000   0.2696   6.8660   4.3036   4.0000
+ 92.000000   0.3714   4.5065   4.3231   4.0000
+ 93.000000   0.2618   6.7439   4.4372   4.0000
+ 94.000000   0.3401   5.9435   4.5052   4.0000
+ 95.000000   0.2654   6.8156   4.6196   4.0000
+ 96.000000   0.3103   6.6849   4.7234   4.0000
+ 97.000000   0.4418   2.0749   4.6984   4.0000
+ 98.000000   0.2343   5.7883   4.7543   4.0000
+ 99.000000   0.1927   3.3004   4.7443   4.0000
+ 100.000000   0.2520   6.5990   4.8377   4.0000
+</pre></div>  </div></div> <span class="plumedtooltip">VALUES<span class="right">the values to read from the file<i></i></span></span>=MetaD.bias <span class="plumedtooltip">IGNORE_TIME<span class="right"> ignore the time in the colvar file<i></i></span></span> <span class="plumedtooltip">IGNORE_FORCES<span class="right"> use this flag if the forces added by any bias can be safely ignored<i></i></span></span>  <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the file should be read<i></i></span></span>=1 <span class="plumedtooltip">EVERY<span class="right"> only read every nth line of the colvar file<i></i></span></span>=1
+</span><b name="sum_hills.md_working_14.datw" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.datw","sum_hills.md_working_14.datw","black")'>w</b><span style="display:none;" id="sum_hills.md_working_14.datw">The REWEIGHT_BIAS action with label <b>w</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">w</td><td width="5%"><font color="black">scalar</font></td><td>the weight to use for this frame to negate the effect the bias</td></tr></table></span>: <span class="plumedtooltip" style="color:green">REWEIGHT_BIAS<span class="right">Calculate weights for ensemble averages that negate the effect the bias has on the region of phase space explored <a href="https://www.plumed.org/doc-master/user-doc/html/REWEIGHT_BIAS" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">TEMP<span class="right">the system temperature<i></i></span></span>=300 <span class="plumedtooltip">ARG<span class="right"> the biases that must be taken into account when reweighting<i></i></span></span>=<b name="sum_hills.md_working_14.datmetad">metad.bias</b>
+<span id="sum_hills.md_working_14.dathh_short"><span id="sum_hills.md_working_14.datdefhh_short"><b name="sum_hills.md_working_14.dathh" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.dathh","sum_hills.md_working_14.dathh_shortcut","green")'>hh</b><span style="display:none;" id="sum_hills.md_working_14.dathh_shortcut">The HISTOGRAM action with label <b>hh</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh</td><td width="5%"><font color="green">grid</font></td><td>the estimate of the histogram as a function of the argument that was obtained</td></tr></table></span>: <span class="plumedtooltip" style="color:green">HISTOGRAM<span class="right">Accumulate the average probability density along a few CVs from a trajectory. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("sum_hills.md_working_14.dathh");'>a shortcut</a> and it has <a class="toggler" href='javascript:;' onclick='toggleDisplay("sum_hills.md_working_14.datdefhh");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/HISTOGRAM">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the quantities that are being used to construct the histogram<i></i></span></span>=<b name="sum_hills.md_working_14.dats">s</b> <span class="plumedtooltip">GRID_MIN<span class="right"> the lower bounds for the grid<i></i></span></span>=0 <span class="plumedtooltip">GRID_MAX<span class="right"> the upper bounds for the grid<i></i></span></span>=1 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=100 <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=0.02 <span class="plumedtooltip">LOGWEIGHTS<span class="right">the logarithm of the quantity to use as the weights when calculating averages<i></i></span></span>=<b name="sum_hills.md_working_14.datw">w</b> <span class="plumedtooltip">NORMALIZATION<span class="right"> This controls how the data is normalized it can be set equal to true, false or ndata<i></i></span></span>=true
+</span><span id="sum_hills.md_working_14.datdefhh_long" style="display:none;"><b name="sum_hills.md_working_14.dathh" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.dathh","sum_hills.md_working_14.dathh_shortcut","green")'>hh</b>: <span class="plumedtooltip" style="color:green">HISTOGRAM<span class="right">Accumulate the average probability density along a few CVs from a trajectory. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("sum_hills.md_working_14.dathh");'>a shortcut</a> and uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("sum_hills.md_working_14.datdefhh");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/HISTOGRAM">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the quantities that are being used to construct the histogram<i></i></span></span>=<b name="sum_hills.md_working_14.dats">s</b> <span class="plumedtooltip">GRID_MIN<span class="right"> the lower bounds for the grid<i></i></span></span>=0 <span class="plumedtooltip">GRID_MAX<span class="right"> the upper bounds for the grid<i></i></span></span>=1 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=100 <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=0.02 <span class="plumedtooltip">LOGWEIGHTS<span class="right">the logarithm of the quantity to use as the weights when calculating averages<i></i></span></span>=<b name="sum_hills.md_working_14.datw">w</b> <span class="plumedtooltip">NORMALIZATION<span class="right"> This controls how the data is normalized it can be set equal to true, false or ndata<i></i></span></span>=true  <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which to store data for averaging<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear the data that is being averaged<i></i></span></span>=0
+</span></span><span id="sum_hills.md_working_14.dathh_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("sum_hills.md_working_14.dathh")'># hh: HISTOGRAM ARG=s GRID_MIN=0 GRID_MAX=1 GRID_BIN=100 BANDWIDTH=0.02 LOGWEIGHTS=w NORMALIZATION=true</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="sum_hills.md_working_14.dathh_wsum" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.dathh_wsum","sum_hills.md_working_14.dathh_wsum","black")'>hh_wsum</b><span style="display:none;" id="sum_hills.md_working_14.dathh_wsum">The COMBINE action with label <b>hh_wsum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh_wsum</td><td width="5%"><font color="black">scalar</font></td><td>a linear combination</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="sum_hills.md_working_14.datw">w</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="sum_hills.md_working_14.dathh_weight" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.dathh_weight","sum_hills.md_working_14.dathh_weight","black")'>hh_weight</b><span style="display:none;" id="sum_hills.md_working_14.dathh_weight">The CUSTOM action with label <b>hh_weight</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh_weight</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="sum_hills.md_working_14.dathh_wsum">hh_wsum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=exp(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="sum_hills.md_working_14.dathh_kde" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.dathh_kde","sum_hills.md_working_14.dathh_kde","green")'>hh_kde</b><span style="display:none;" id="sum_hills.md_working_14.dathh_kde">The KDE action with label <b>hh_kde</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh_kde</td><td width="5%"><font color="green">grid</font></td><td>a function on a grid that was obtained by doing a Kernel Density Estimation using the input arguments</td></tr></table></span>: <span class="plumedtooltip" style="color:green">KDE<span class="right">Create a histogram from the input scalar/vector/matrix using KDE <a href="https://www.plumed.org/doc-master/user-doc/html/KDE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the value that should be used to construct the histogram<i></i></span></span>=<b name="sum_hills.md_working_14.dats">s</b>  <span class="plumedtooltip">BANDWIDTH<span class="right">the bandwidths for kernel density esimtation<i></i></span></span>=0.02 <span class="plumedtooltip">GRID_BIN<span class="right">the number of bins for the grid<i></i></span></span>=100 <span class="plumedtooltip">GRID_MAX<span class="right"> the upper bounds for the grid<i></i></span></span>=1 <span class="plumedtooltip">GRID_MIN<span class="right"> the lower bounds for the grid<i></i></span></span>=0
+<b name="sum_hills.md_working_14.dathh_kdep" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.dathh_kdep","sum_hills.md_working_14.dathh_kdep","green")'>hh_kdep</b><span style="display:none;" id="sum_hills.md_working_14.dathh_kdep">The CUSTOM action with label <b>hh_kdep</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh_kdep</td><td width="5%"><font color="green">grid</font></td><td>the grid obtained by doing an element-wise application of an arbitrary function to the input grid</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="sum_hills.md_working_14.dathh_kde">hh_kde</b>,<b name="sum_hills.md_working_14.dathh_weight">hh_weight</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x*y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="sum_hills.md_working_14.dathh_u" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.dathh_u","sum_hills.md_working_14.dathh_u","green")'>hh_u</b><span style="display:none;" id="sum_hills.md_working_14.dathh_u">The ACCUMULATE action with label <b>hh_u</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh_u</td><td width="5%"><font color="green">grid</font></td><td>a sum calculated from the time series of the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ACCUMULATE<span class="right">Sum the elements of this value over the course of the trajectory <a href="https://www.plumed.org/doc-master/user-doc/html/ACCUMULATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the argument that is being added to on each timestep<i></i></span></span>=<b name="sum_hills.md_working_14.dathh_kdep">hh_kdep</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=0 
+<b name="sum_hills.md_working_14.dathh_nsum" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.dathh_nsum","sum_hills.md_working_14.dathh_nsum","black")'>hh_nsum</b><span style="display:none;" id="sum_hills.md_working_14.dathh_nsum">The ACCUMULATE action with label <b>hh_nsum</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh_nsum</td><td width="5%"><font color="black">scalar</font></td><td>a sum calculated from the time series of the input quantity</td></tr></table></span>: <span class="plumedtooltip" style="color:green">ACCUMULATE<span class="right">Sum the elements of this value over the course of the trajectory <a href="https://www.plumed.org/doc-master/user-doc/html/ACCUMULATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label of the argument that is being added to on each timestep<i></i></span></span>=<b name="sum_hills.md_working_14.dathh_weight">hh_weight</b> <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the data should be collected and added to the quantity being averaged<i></i></span></span>=1 <span class="plumedtooltip">CLEAR<span class="right"> the frequency with which to clear all the accumulated data<i></i></span></span>=0 
+<b name="sum_hills.md_working_14.dathh" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.dathh","sum_hills.md_working_14.dathh","green")'>hh</b><span style="display:none;" id="sum_hills.md_working_14.dathh">The CUSTOM action with label <b>hh</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">hh</td><td width="5%"><font color="green">grid</font></td><td>the grid obtained by doing an element-wise application of an arbitrary function to the input grid</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="sum_hills.md_working_14.dathh_u">hh_u</b>,<b name="sum_hills.md_working_14.dathh_nsum">hh_nsum</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=x/y <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span id="sum_hills.md_working_14.datff_short"><b name="sum_hills.md_working_14.datff" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.datff","sum_hills.md_working_14.datff_shortcut","green")'>ff</b><span style="display:none;" id="sum_hills.md_working_14.datff_shortcut">The CONVERT_TO_FES action with label <b>ff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ff</td><td width="5%"><font color="green">grid</font></td><td>the free energy surface</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONVERT_TO_FES<span class="right">Convert a histogram to a free energy surface. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("sum_hills.md_working_14.datff");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/CONVERT_TO_FES">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the histogram that you would like to convert into a free energy surface<i></i></span></span>=<b name="sum_hills.md_working_14.dathh">hh</b> <span class="plumedtooltip">TEMP<span class="right">the temperature at which you are operating<i></i></span></span>=300
+</span><span id="sum_hills.md_working_14.datff_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("sum_hills.md_working_14.datff")'># ff: CONVERT_TO_FES ARG=hh TEMP=300</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="sum_hills.md_working_14.datff" onclick='showPath("sum_hills.md_working_14.dat","sum_hills.md_working_14.datff","sum_hills.md_working_14.datff","green")'>ff</b><span style="display:none;" id="sum_hills.md_working_14.datff">The CUSTOM action with label <b>ff</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">ff</td><td width="5%"><font color="green">grid</font></td><td>the grid obtained by doing an element-wise application of an arbitrary function to the input grid</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="sum_hills.md_working_14.dathh">hh</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=-2.49434*log(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">DUMPGRID<span class="right">Output the function on the grid to a file with the PLUMED grid format. <a href="https://www.plumed.org/doc-master/user-doc/html/DUMPGRID" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the label for the grid that you would like to output<i></i></span></span>=<b name="sum_hills.md_working_14.datff">ff</b> <span class="plumedtooltip">FILE<span class="right"> the file on which to write the grid<i></i></span></span>=fes.dat
+</pre></div>
+
+<p>run with <code>plumed driver --plumed plumed.dat --noatoms</code>. With well-tempered metadynamics the bias changes with time:
+use the <code>rbias</code> component of <a href="../METAD/">METAD</a> (with <code>CALC_RCT</code>) instead of the bias, or <a href="../REWEIGHT_METAD/">REWEIGHT_METAD</a>.
+Block averages, which give the statistical error of the free energy, are discussed in the documentation of <a href="../HISTOGRAM/">HISTOGRAM</a>
+and in the tutorial linked there.</p>
+<p>You can compute the free energy from the hills and the histogram at the same time, e.g. from the same file:</p>
+<pre class="plumedlisting">
+<b name="cltool15plumed" onclick='showPath("cltool15","cltool15plumed","cltool15plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE <span class="plumedtooltip">--histo<span class="right">the files (hills or colvar) from which a histogram is computed, separated by commas; the points are not reweighted<i></i></span></span> PATHTOMYHILLSFILE <span class="plumedtooltip">--sigma<span class="right">the widths of the Gaussian kernels of the histogram, one for each variable (needed with --histo)<i></i></span></span> 0.2,0.2 <span class="plumedtooltip">--kt<span class="right">the temperature in energy units, needed with --idw, --histo and --basins<i></i></span></span> 0.6
+<span style="display:none;" id="cltool15plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p><code>--nohistory</code> and <code>--stride</code> can also be used with <code>--histo</code>, to compute the histogram in blocks of points:</p>
+<pre class="plumedlisting">
+<b name="cltool16plumed" onclick='showPath("cltool16","cltool16plumed","cltool16plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--histo<span class="right">the files (hills or colvar) from which a histogram is computed, separated by commas; the points are not reweighted<i></i></span></span> PATHTOMYCOLVARORHILLSFILE <span class="plumedtooltip">--sigma<span class="right">the widths of the Gaussian kernels of the histogram, one for each variable (needed with --histo)<i></i></span></span> 0.2,0.2 <span class="plumedtooltip">--kt<span class="right">the temperature in energy units, needed with --idw, --histo and --basins<i></i></span></span> 0.6 <span class="plumedtooltip">--stride<span class="right">write the free energy (or histogram) every this number of hills (or points); by default only at the end<i></i></span></span> 1000 <span class="plumedtooltip">--nohistory<span class="right"> with --stride, each output contains only the hills (or points) of its own block<i></i></span></span>
+<span style="display:none;" id="cltool16plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<h2 id="output">Output</h2>
+<p>The output format can be controlled by using the <code>--fmt</code> option as shown below</p>
+<pre class="plumedlisting">
+<b name="cltool17plumed" onclick='showPath("cltool17","cltool17plumed","cltool17plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE <span class="plumedtooltip">--fmt<span class="right">the format of the numbers in the output, e<i></i></span></span> %8.3f
+<span style="display:none;" id="cltool17plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>where here we chose a float with length of 8 and 3 digits.</p>
+<p>The output file can be named in an arbitrary way by using the <code>--outfile</code> option as shown below:</p>
+<pre class="plumedlisting">
+<b name="cltool18plumed" onclick='showPath("cltool18","cltool18plumed","cltool18plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE <span class="plumedtooltip">--outfile<span class="right">the output file for the free energy (fes<i></i></span></span> myfes.dat
+<span style="display:none;" id="cltool18plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>This command produces a file <code>myfes.dat</code> which contains the free energy surface.</p>
+<p>If you use <code>--stride</code>, the name specified with <code>--outfile</code> is the prefix of the files, so this command:</p>
+<pre class="plumedlisting">
+<b name="cltool19plumed" onclick='showPath("cltool19","cltool19plumed","cltool19plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--hills<span class="right">the hills files to sum, separated by commas<i></i></span></span> PATHTOMYHILLSFILE <span class="plumedtooltip">--outfile<span class="right">the output file for the free energy (fes<i></i></span></span> myfes_ <span class="plumedtooltip">--stride<span class="right">write the free energy (or histogram) every this number of hills (or points); by default only at the end<i></i></span></span> 100
+<span style="display:none;" id="cltool19plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>produces output files called <code>myfes_0.dat</code>, <code>myfes_1.dat</code>, <code>myfes_2.dat</code> etc.</p>
+<p>The same is true for the output of the histogram, which is named with <code>--outhisto</code>. So this example</p>
+<pre class="plumedlisting">
+<b name="cltool20plumed" onclick='showPath("cltool20","cltool20plumed","cltool20plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--histo<span class="right">the files (hills or colvar) from which a histogram is computed, separated by commas; the points are not reweighted<i></i></span></span> HILLS <span class="plumedtooltip">--kt<span class="right">the temperature in energy units, needed with --idw, --histo and --basins<i></i></span></span> 2.5 <span class="plumedtooltip">--sigma<span class="right">the widths of the Gaussian kernels of the histogram, one for each variable (needed with --histo)<i></i></span></span> 0.01 <span class="plumedtooltip">--outhisto<span class="right">the output file for the histogram (histo<i></i></span></span> myhisto.dat
+<span style="display:none;" id="cltool20plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>produces a file <code>myhisto.dat</code>, while this input</p>
+<pre class="plumedlisting">
+<b name="cltool21plumed" onclick='showPath("cltool21","cltool21plumed","cltool21plumed","brown")'>plumed</b> <span class="plumedtooltip" style="color:green">sum_hills<span class="right">sum the hills of metadynamics to compute the free energy <a href="https://www.plumed.org/doc-master/user-doc/html/sum_hills" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">--histo<span class="right">the files (hills or colvar) from which a histogram is computed, separated by commas; the points are not reweighted<i></i></span></span> HILLS <span class="plumedtooltip">--kt<span class="right">the temperature in energy units, needed with --idw, --histo and --basins<i></i></span></span> 2.5 <span class="plumedtooltip">--sigma<span class="right">the widths of the Gaussian kernels of the histogram, one for each variable (needed with --histo)<i></i></span></span> 0.01 <span class="plumedtooltip">--outhisto<span class="right">the output file for the histogram (histo<i></i></span></span> myhisto_ <span class="plumedtooltip">--stride<span class="right">write the free energy (or histogram) every this number of hills (or points); by default only at the end<i></i></span></span> 100
+<span style="display:none;" id="cltool21plumed">The sum_hills action with label <b>plumed</b> calculates something</span></pre>
+<p>produces output files called <code>myhisto_0.dat</code>, <code>myhisto_1.dat</code>, <code>myhisto_2.dat</code> etc.</p>
+<h2 id="syntax">Syntax</h2>
+<p>The following table describes the command line options that are available for this tool</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">--help/-h</td>
+<td style="text-align: left;">print this help</td>
+</tr>
+<tr>
+<td style="text-align: left;">--help-debug</td>
+<td style="text-align: left;">print special options that can be used to create regtests</td>
+</tr>
+<tr>
+<td style="text-align: left;">--hills</td>
+<td style="text-align: left;">the hills files to sum, separated by commas</td>
+</tr>
+<tr>
+<td style="text-align: left;">--histo</td>
+<td style="text-align: left;">the files (hills or colvar) from which a histogram is computed, separated by commas; the points are not reweighted</td>
+</tr>
+<tr>
+<td style="text-align: left;">--stride</td>
+<td style="text-align: left;">write the free energy (or histogram) every this number of hills (or points); by default only at the end</td>
+</tr>
+<tr>
+<td style="text-align: left;">--min</td>
+<td style="text-align: left;">the lower bounds of the grid, one for each variable; by default they are detected from the hills</td>
+</tr>
+<tr>
+<td style="text-align: left;">--max</td>
+<td style="text-align: left;">the upper bounds of the grid, one for each variable; by default they are detected from the hills</td>
+</tr>
+<tr>
+<td style="text-align: left;">--bin</td>
+<td style="text-align: left;">the number of bins of the grid, one for each variable</td>
+</tr>
+<tr>
+<td style="text-align: left;">--spacing</td>
+<td style="text-align: left;">the grid spacing, one for each variable, alternative to the number of bins</td>
+</tr>
+<tr>
+<td style="text-align: left;">--idw</td>
+<td style="text-align: left;">the variables of the output (default all)</td>
+</tr>
+<tr>
+<td style="text-align: left;">--outfile</td>
+<td style="text-align: left;">the output file for the free energy (fes</td>
+</tr>
+<tr>
+<td style="text-align: left;">--outhisto</td>
+<td style="text-align: left;">the output file for the histogram (histo</td>
+</tr>
+<tr>
+<td style="text-align: left;">--kt</td>
+<td style="text-align: left;">the temperature in energy units, needed with --idw, --histo and --basins</td>
+</tr>
+<tr>
+<td style="text-align: left;">--sigma</td>
+<td style="text-align: left;">the widths of the Gaussian kernels of the histogram, one for each variable (needed with --histo)</td>
+</tr>
+<tr>
+<td style="text-align: left;">--negbias</td>
+<td style="text-align: left;">write minus the bias instead of the free energy (they differ only with well-tempered metadynamics)</td>
+</tr>
+<tr>
+<td style="text-align: left;">--nohistory</td>
+<td style="text-align: left;">with --stride, each output contains only the hills (or points) of its own block</td>
+</tr>
+<tr>
+<td style="text-align: left;">--mintozero</td>
+<td style="text-align: left;">shift the free energy (or histogram) so that its minimum is zero</td>
+</tr>
+<tr>
+<td style="text-align: left;">--fmt</td>
+<td style="text-align: left;">the format of the numbers in the output, e</td>
+</tr>
+<tr>
+<td style="text-align: left;">--sort</td>
+<td style="text-align: left;">time or clock: with multiple files (e</td>
+</tr>
+<tr>
+<td style="text-align: left;">--average</td>
+<td style="text-align: left;">time average of the bias from time t0 (t0) or between times t0 and t1 (t0,t1); without t1 the average ends at the last hill read</td>
+</tr>
+<tr>
+<td style="text-align: left;">--basins</td>
+<td style="text-align: left;">basins separated by colons, each given by the minimum and maximum of each output variable (e</td>
+</tr>
+<tr>
+<td style="text-align: left;">--outbasins</td>
+<td style="text-align: left;">the output file for the free energies of the basins (basins</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

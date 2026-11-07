@@ -1,0 +1,3 @@
+# no explicit UNITS action here
+d: DISTANCE ATOMS=1,2
+PRINT ARG=d FILE=colvar

@@ -1,0 +1,8 @@
+w: CONSTANT VALUES=1,2,2,3,4
+# This computes the Asphericiry
+l: GYRATION ATOMS=1-5 TYPE=ASPHERICITY WEIGHTS=w
+# This computes the Acylindricity
+m: GYRATION ATOMS=1-5 TYPE=ACYLINDRICITY WEIGHTS=w
+# This computes the Relative Shape Anisotropy
+s: GYRATION ATOMS=1-5 TYPE=KAPPA2 WEIGHTS=w
+PRINT ARG=l,m,s FILE=colvar

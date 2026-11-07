@@ -1,0 +1,8 @@
+#SETTINGS INPUTFILES=regtest/basic/rt-ghbfix/typesTable_examples.dat,regtest/basic/rt-ghbfix/scalingParameters_examples.dat
+gh: GHBFIX ...
+   PAIR GROUPA=1,2,3 GROUP=4,5,6 D_0=0.2 D_MAX=0.3 C=0.8
+   TYPES=regtest/basic/rt-ghbfix/typesTable_examples.dat
+   PARAMS=regtest/basic/rt-ghbfix/scalingParameters_examples.dat
+   ENERGY_UNITS=kcal/mol
+...
+PRINT FILE=output ARG=gh

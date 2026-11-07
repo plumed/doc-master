@@ -1,0 +1,20 @@
+# simulate multiple temperatures and pressures while biasing a two-CVs linear path
+ene: ENERGY
+vol: VOLUME
+ecv_mtp: ECV_MULTITHERMAL_MULTIBARIC ...
+  ARG=ene,vol
+  TEMP=300
+  TEMP_MIN=200
+  TEMP_MAX=800
+  PRESSURE=0.06022140857*1000 #1 kbar
+  PRESSURE_MIN=0
+  PRESSURE_MAX=0.06022140857*2000 #2 kbar
+...
+
+cv1: DISTANCE ATOMS=1,2
+cv2: DISTANCE ATOMS=3,4
+ecv_umb: ECV_UMBRELLAS_LINE ARG=cv1,cv2 TEMP=300 CV_MIN=0.1,0.1 CV_MAX=1.5,1.5 SIGMA=0.2 BARRIER=70
+
+opes: OPES_EXPANDED ARG=(ecv_.*) PACE=500 WALKERS_MPI PRINT_STRIDE=1000
+
+PRINT FILE=COLVAR STRIDE=500 ARG=ene,vol,cv1,cv2,opes.bias

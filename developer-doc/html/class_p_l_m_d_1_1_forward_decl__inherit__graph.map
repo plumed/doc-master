@@ -1,0 +1,31 @@
+<map id="PLMD::ForwardDecl&lt; T &gt;" name="PLMD::ForwardDecl&lt; T &gt;">
+<area shape="rect" id="Node000001" title="Utility class for forward declaration of references." alt="" coords="212,429,399,454"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="681,21,839,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="303,415,306,344,321,249,335,199,356,150,384,106,421,69,450,49,482,35,516,26,550,20,619,17,681,23,680,28,619,23,551,25,517,31,484,40,453,54,424,73,389,109,361,153,340,200,326,250,311,344,308,415"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="669,85,851,125"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="305,414,313,356,331,280,346,241,366,203,390,168,421,139,449,121,479,108,544,91,609,86,668,88,668,94,609,91,544,96,481,113,451,126,424,143,394,172,370,206,351,243,336,282,318,357,311,415"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="681,149,839,189"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="309,415,322,370,343,315,376,259,397,235,421,214,451,196,484,182,552,164,620,158,681,158,681,164,620,163,553,170,485,187,454,200,424,218,400,239,380,263,348,317,327,372,314,416"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="681,213,839,253"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="316,415,356,351,386,317,421,290,485,260,554,242,621,232,680,229,681,234,621,238,555,247,487,265,424,294,390,321,361,354,321,418"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="643,278,877,333"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="335,419,375,395,422,374,534,340,642,318,643,323,535,345,424,378,378,400,338,423"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="681,357,839,397"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="391,424,422,419,680,384,681,389,423,424,392,429"/>
+<area shape="rect" id="Node000009" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="681,421,839,461"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="412,439,680,439,680,444,412,444"/>
+<area shape="rect" id="Node000010" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="681,485,839,525"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="392,454,423,459,681,493,680,499,422,464,391,459"/>
+<area shape="rect" id="Node000011" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="681,549,839,589"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="338,460,378,483,424,504,490,525,558,540,681,559,680,565,557,546,488,530,422,509,375,488,335,464"/>
+<area shape="rect" id="Node000012" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="671,613,849,653"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="323,464,364,519,392,547,424,570,485,597,549,614,613,625,671,630,670,635,612,630,548,620,483,602,421,574,389,551,360,522,319,467"/>
+<area shape="rect" id="Node000013" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="681,677,839,717"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="316,467,329,507,351,556,383,605,402,626,424,644,454,662,486,676,553,693,620,701,681,701,681,707,620,706,552,699,484,681,451,667,421,649,398,630,378,608,347,559,324,509,311,468"/>
+<area shape="rect" id="Node000014" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="659,741,861,781"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="312,467,320,522,339,592,354,628,373,663,396,694,424,721,450,737,478,750,539,767,601,773,658,772,658,778,600,778,538,772,477,755,448,742,421,725,392,698,368,666,349,630,334,594,315,523,306,468"/>
+<area shape="rect" id="Node000015" href="$class_p_l_m_d_1_1_forward_decl.html" title=" " alt="" coords="679,805,841,845"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="309,467,313,535,328,625,343,673,363,718,390,759,424,794,452,812,483,826,516,835,550,841,617,844,678,839,679,844,617,849,549,846,515,841,482,831,450,817,421,798,386,763,358,721,338,674,323,627,307,536,304,468"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,429,163,454"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,439,212,439,212,444,177,444"/>
+</map>

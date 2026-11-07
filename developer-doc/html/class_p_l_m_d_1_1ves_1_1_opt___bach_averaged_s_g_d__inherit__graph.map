@@ -1,0 +1,12 @@
+<map id="PLMD::ves::Opt_BachAveragedSGD" name="PLMD::ves::Opt_BachAveragedSGD">
+<area shape="rect" id="Node000001" title="Provides the keyword OPT_AVERAGED_SGD" alt="" coords="39,225,288,251"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1ves_1_1_optimizer.html" title=" " alt="" coords="82,152,245,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,191,166,225,161,225,161,191"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_pilot.html" title="This is used to create PLMD::Action objects that are run with some set frequency." alt="" coords="5,79,143,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,110,150,150,147,154,97,115"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="109,5,217,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="140,41,90,81,87,76,137,37"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="167,79,341,104"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="190,37,241,76,238,81,187,41"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="230,115,180,154,177,150,227,110"/>
+</map>

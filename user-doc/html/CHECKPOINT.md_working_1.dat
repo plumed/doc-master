@@ -1,0 +1,3 @@
+CHECKPOINT FILE=plumed.cpt
+d: DISTANCE ATOMS=1,2
+PRINT ARG=d FILE=colvar

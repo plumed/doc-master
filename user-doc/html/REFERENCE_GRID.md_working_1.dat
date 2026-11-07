@@ -1,0 +1,3 @@
+#SETTINGS INPUTFILES=regtest/gridtools/rt-test-fib-read/kde.grid
+ffg: REFERENCE_GRID FILE=regtest/gridtools/rt-test-fib-read/kde.grid VALUE=h
+DUMPGRID ARG=ffg FILE=output.grid

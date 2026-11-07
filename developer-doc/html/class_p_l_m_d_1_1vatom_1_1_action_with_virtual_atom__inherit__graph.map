@@ -1,0 +1,16 @@
+<map id="PLMD::vatom::ActionWithVirtualAtom" name="PLMD::vatom::ActionWithVirtualAtom">
+<area shape="rect" id="Node000001" title="Inherit from here if you are calculating the position of a virtual atom (eg a center of mass)" alt="" coords="149,152,416,177"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1vatom_1_1_center.html" title="Provides the keyword CENTER_FAST" alt="" coords="5,225,165,251"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="239,184,119,228,117,223,237,179"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1vatom_1_1_fixed_atom.html" title="Provides the keyword FIXEDATOM" alt="" coords="189,225,376,251"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="285,191,285,225,280,225,280,191"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1vatom_1_1_ghost.html" title="Provides the keyword GHOST" alt="" coords="400,225,555,251"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="327,179,446,223,445,228,326,184"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="99,79,269,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,110,268,150,265,154,209,114"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="229,5,337,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="258,41,202,81,199,76,254,36"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="294,79,469,104"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="311,36,367,76,364,81,308,41"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="356,114,300,154,297,150,353,110"/>
+</map>

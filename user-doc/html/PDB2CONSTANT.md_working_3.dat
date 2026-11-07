@@ -1,0 +1,2 @@
+#SETTINGS INPUTFILES=regtest/mapping/rt-pathtools-3/all.pdb
+ref: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pathtools-3/all.pdb NUMBER=4

@@ -1,0 +1,3 @@
+# plumed.dat
+p: PLUMED FILE=plumed2.dat
+PRINT ARG=p.bias FILE=COLVAR

@@ -1,0 +1,5 @@
+#SETTINGS INPUTFILES=regtest/mapping/rt-pathtools-4/epath.pdb
+t1: TORSION ATOMS=1,2,3,4
+t2: TORSION ATOMS=5,6,7,8
+t1_ref: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pathtools-4/epath.pdb ARG=t1
+t2_ref: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pathtools-4/epath.pdb ARG=t2

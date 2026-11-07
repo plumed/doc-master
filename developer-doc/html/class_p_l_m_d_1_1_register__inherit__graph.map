@@ -1,0 +1,20 @@
+<map id="PLMD::Register" name="PLMD::Register">
+<area shape="rect" id="Node000001" title="Base class, with type independent information." alt="" coords="5,119,127,145"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="616,5,816,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,109,131,85,175,63,231,44,290,30,408,13,521,9,616,13,616,18,521,15,409,19,291,35,233,49,177,68,134,89,97,113"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="616,84,816,124"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="141,143,228,156,337,166,455,167,515,163,573,155,625,140,672,122,674,127,627,146,574,160,515,168,455,172,337,171,228,161,140,149"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="597,176,835,216"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="107,148,141,161,177,171,287,188,399,197,505,200,597,199,597,204,505,205,399,202,286,193,175,176,139,166,105,153"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1_register_base.html" title="General register." alt="" coords="176,77,329,117"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="140,116,175,109,176,114,141,121"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_register.html" title="Register holding all the allowed keywords." alt="" coords="920,13,1083,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="830,23,920,23,920,28,830,28"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_c_l_tool_register.html" title="Same as ActionRegister, but for CLTools." alt="" coords="920,91,1083,117"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="830,101,920,101,920,107,830,107"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1isdb_1_1_s_a_x_s_debye_backend_register.html" title="Register of the backends of SAXS/SANS." alt="" coords="884,176,1119,216"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="848,193,884,193,884,199,848,199"/>
+<area shape="poly" id="edge8_Node000008_Node000002" title=" " alt="" coords="342,79,353,77,615,37,616,42,354,83,343,84"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="343,96,616,100,616,105,343,101"/>
+<area shape="poly" id="edge10_Node000008_Node000006" title=" " alt="" coords="343,118,354,120,609,173,608,179,353,125,342,123"/>
+</map>

@@ -1,0 +1,4 @@
+# import group named 'Protein' from file index.ndx
+pro: GROUP NDX_FILE=extras/index.ndx NDX_GROUP=Protein
+# dump all the atoms of the protein on a trajectory file
+DUMPATOMS ATOMS=pro FILE=traj.gro

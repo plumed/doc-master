@@ -1,0 +1,2 @@
+#SETTINGS INPUTFILES=regtest/basic/rt19/test0.pdb
+ref: PDB2CONSTANT REFERENCE=regtest/basic/rt19/test0.pdb

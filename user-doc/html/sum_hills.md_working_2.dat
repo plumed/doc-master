@@ -1,0 +1,1 @@
+plumed sum_hills --bin 99,99 --hills PATHTOMYHILLSFILE

@@ -1,0 +1,2 @@
+m: MASS ATOMS=1
+PRINT ARG=m FILE=colvar

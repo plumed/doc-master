@@ -1,0 +1,11 @@
+<map id="PLMD::WithCmd" name="PLMD::WithCmd">
+<area shape="rect" id="Node000001" title="Base for classes with cmd() method." alt="" coords="236,5,363,31"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_c_l_tool_main.html" title="Class providing cmd() access to command line tools." alt="" coords="5,79,145,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,37,112,81,111,76,250,32"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_g_r_e_x.html" title=" " alt="" coords="169,79,272,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="278,42,235,80,232,76,275,38"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_plumed_handle.html" title="Tiny local class to load a PLUMED kernel." alt="" coords="297,79,459,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="324,38,367,76,363,80,320,42"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_plumed_main.html" title="Main plumed object." alt="" coords="484,79,632,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="355,32,517,76,515,81,353,37"/>
+</map>
