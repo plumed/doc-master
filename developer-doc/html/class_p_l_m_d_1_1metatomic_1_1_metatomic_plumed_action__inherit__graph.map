@@ -1,0 +1,12 @@
+<map id="PLMD::metatomic::MetatomicPlumedAction" name="PLMD::metatomic::MetatomicPlumedAction">
+<area shape="rect" id="Node000001" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/&quot;METATOMIC/index.html&quot;&gt; &quot;METATOMIC" alt="" coords="81,225,297,265"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="5,152,176,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,184,167,223,164,227,114,188"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="135,79,243,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="164,114,108,154,105,150,161,110"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="201,152,375,177"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="218,110,273,150,270,154,214,114"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="104,5,275,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="192,44,192,79,187,79,187,44"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="264,188,215,227,211,223,261,184"/>
+</map>

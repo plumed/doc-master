@@ -1,0 +1,1 @@
+plumed driver --ixyz traj.xyz --debug-forces forces.num

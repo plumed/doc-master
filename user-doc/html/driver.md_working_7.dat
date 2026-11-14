@@ -1,0 +1,2 @@
+plumed driver --plumed plumed.dat --itraj traj.nc
+plumed driver --plumed plumed.dat --itraj dump.lammpstrj.gz --traj-format "LAMMPS / GZ"

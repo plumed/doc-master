@@ -1,0 +1,14 @@
+#SETTINGS INPUTFILES=regtest/envsim/rt-env-sim-atom-names-match/env1.pdb,regtest/envsim/rt-env-sim-atom-names-match/env2.pdb,regtest/envsim/rt-env-sim-atom-names-match/env3.pdb,regtest/envsim/rt-env-sim-atom-names-match/env4.pdb
+es: ENVIRONMENTSIMILARITY ...
+ SPECIES=1-288:3
+ SIGMA=0.05
+ CRYSTAL_STRUCTURE=CUSTOM
+ REFERENCE_1=regtest/envsim/rt-env-sim-atom-names-match/env1.pdb
+ REFERENCE_2=regtest/envsim/rt-env-sim-atom-names-match/env2.pdb
+ REFERENCE_3=regtest/envsim/rt-env-sim-atom-names-match/env3.pdb
+ REFERENCE_4=regtest/envsim/rt-env-sim-atom-names-match/env4.pdb
+ MEAN
+ MORE_THAN={RATIONAL R_0=0.5 NN=12 MM=24}
+...
+
+PRINT ARG=es.mean,es.morethan FILE=COLVAR

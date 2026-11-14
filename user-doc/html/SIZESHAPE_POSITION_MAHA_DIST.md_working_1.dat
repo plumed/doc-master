@@ -1,0 +1,11 @@
+#SETTINGS INPUTFILES=regtest/sizeshape/rt-mahadist/global_avg.txt
+#SETTINGS INPUTFILES=regtest/sizeshape/rt-mahadist/global_precision.txt
+
+UNITS LENGTH=A TIME=ps ENERGY=kcal/mol
+GROUP ATOMS=18,20,22,31,33,35,44,46,48,57,59,61,70,72,74,83,85,87,96,98,100,109,111 LABEL=ga_list
+d: SIZESHAPE_POSITION_MAHA_DIST ...
+   REFERENCE=regtest/sizeshape/rt-mahadist/global_avg.txt
+   PRECISION=regtest/sizeshape/rt-mahadist/global_precision.txt
+   GROUP=ga_list
+...
+PRINT ARG=d STRIDE=1 FILE=output FMT=%8.8f

@@ -1,0 +1,3 @@
+INCLUDE FILE=extras/pippo.dat
+d: DISTANCE ATOMS=c1,c2
+PRINT ARG=d

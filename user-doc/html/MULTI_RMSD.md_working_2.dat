@@ -1,0 +1,5 @@
+#SETTINGS INPUTFILES=regtest/basic/rt-multirmsd/test0a.pdb,regtest/basic/rt-multirmsd/test0b.pdb
+rmsda: RMSD TYPE=OPTIMAL NOPBC REFERENCE=regtest/basic/rt-multirmsd/test0a.pdb SQUARED
+rmsdb: RMSD TYPE=OPTIMAL NOPBC REFERENCE=regtest/basic/rt-multirmsd/test0b.pdb SQUARED
+rmsd: CUSTOM ARG=rmsda,rmsdb FUNC=sqrt(x+y) PERIODIC=NO
+PRINT ARG=rmsd FILE=colvar

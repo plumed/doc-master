@@ -1,0 +1,17 @@
+<map id="PLMD::mapping::GeometricPath" name="PLMD::mapping::GeometricPath">
+<area shape="rect" id="Node000001" title="Provides the keyword GEOMETRIC_PATH" alt="" coords="174,299,402,324"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_with_vector.html" title=" " alt="" coords="199,225,377,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="291,264,291,299,285,299,285,264"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="5,152,176,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="136,179,257,223,255,228,134,184"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="234,79,342,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="244,111,124,154,122,149,243,106"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="201,152,375,177"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="291,118,291,152,285,152,285,118"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="399,152,609,177"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="337,106,470,149,468,154,335,111"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="203,5,373,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="291,44,291,79,285,79,285,44"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="291,191,291,225,285,225,285,191"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="457,184,324,228,322,223,455,179"/>
+</map>

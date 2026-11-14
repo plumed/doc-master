@@ -1,0 +1,10 @@
+#SETTINGS INPUTFILES=regtest/pamm/rt-hbpamm/b3lyp.pamm
+m: HBPAMM_MATRIX ...
+  GROUP=1-192:3 GROUPC=2-192:3,3-192:3
+  CLUSTERS=regtest/pamm/rt-hbpamm/b3lyp.pamm
+...
+mT: TRANSPOSE ARG=m
+hbmat: CUSTOM ARG=m,mT FUNC=x+y PERIODIC=NO
+ones: ONES SIZE=64
+rsums: MATRIX_VECTOR_PRODUCT ARG=hbmat,ones
+DUMPATOMS ATOMS=1-192:3 ARG=rsums FILE=hbonds.xyz

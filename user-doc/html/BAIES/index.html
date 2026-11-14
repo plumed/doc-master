@@ -1,0 +1,967 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Action: BAIES - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-baies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action: BAIES
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="action-baies"><a href="../actions/">Action</a>: BAIES</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_isdb/"><strong>isdb</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Bayesian refinement of AF models.</td>
+<td style="text-align: center;"><a href="https://www.plumed-tutorials.org/browse.html?action=BAIES"><img alt="used in 1 tutorials" src="https://img.shields.io/badge/tutorials-1-green.svg" /></a><a href="https://www.plumed-nest.org/browse.html?action=BAIES"><img alt="used in 2 eggs" src="https://img.shields.io/badge/nest-2-green.svg" /></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Bayesian refinement of AF models.</p>
+<p>This action implements the Bayesian approach to refine AlphaFold (AF) models (bAIes) that is introduced in the papers cited below.
+It can be used to generate conformational ensembles of intrinsically disordered proteins (IDPs), as discussed in the first paper, or to refine AF models prior to small-molecule virtual screening, as discussed in the second paper.</p>
+<p>The distances <script type="math/tex">d_{ij}</script> between the pairs of atoms listed in DATA_FILE are restrained to the distributions predicted by AF.
+For each pair, the AF distogram is fitted with either a Gaussian distribution, in which case the energy is</p>
+<p>
+<script type="math/tex; mode=display">
+E = \frac{k_B T}{2} \sum_{ij} \left( \frac{d_{ij} - \mu_{ij}}{\sigma_{ij}} \right)^2,
+</script>
+</p>
+<p>or a log-normal distribution, in which case <script type="math/tex">d_{ij}</script> is replaced by <script type="math/tex">\log d_{ij}</script> in the expression above.
+When PRIOR=JEFFREYS or PRIOR=CAUCHY is used, the uncertainty of each restraint is treated as an unknown parameter that is marginalized
+using a Jeffreys or a Cauchy prior, with <script type="math/tex">\sigma_{ij}</script> acting as its lower bound. This results in an energy that grows more slowly than the harmonic one for large deviations
+and is thus more tolerant of errors in the AF predictions. PRIOR=NONE gives the energy above.
+SIGMA_MIN sets a lower bound for all the <script type="math/tex">\sigma_{ij}</script> read from DATA_FILE. The energy is stored in the <code>ene</code> component.</p>
+<p>DATA_FILE contains one line per restrained pair, with the serial numbers of the two atoms (which must be included in ATOMS), <script type="math/tex">\mu_{ij}</script> and <script type="math/tex">\sigma_{ij}</script> (in PLUMED length units, or of the logarithm of the distance for the log-normal model).
+The noise model is set with the <code>model</code> field in the header, which can be <code>gaussian</code> or <code>lognormal</code>, as in the following example:</p>
+<div class="highlight"><pre><span></span><code>#! FIELDS Id atom_i atom_j mu sigma
+#! SET model gaussian
+0 1 16 0.23321 0.07263
+1 1 23 0.56752 0.06087
+2 1 29 0.81512 0.10485
+</code></pre></div>
+<h2 id="examples">Examples</h2>
+<p>The following input restrains the distances between the atoms listed in DATA_FILE and applies the resulting energy as a bias.</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_BAIES.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../BAIES.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/isdb/rt-baies/gauss.dat</span>
+<b name="BAIES.md_working_1.datbaies" onclick='showPath("BAIES.md_working_1.dat","BAIES.md_working_1.datbaies","BAIES.md_working_1.datbaies","black")'>baies</b><span style="display:none;" id="BAIES.md_working_1.datbaies">The BAIES action with label <b>baies</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">baies.ene</td><td width="5%"><font color="black">scalar</font></td><td>Bayesian bAIes energy</td></tr></table></span>: <span class="plumedtooltip" style="color:green">BAIES<span class="right">Bayesian refinement of AF models. <a href="https://www.plumed.org/doc-master/user-doc/html/BAIES" style="color:green">More details</a><i></i></span></span> ...
+  <span class="plumedtooltip">ATOMS<span class="right">atoms used in the calculation of bAIes energy<i></i></span></span>=1,5,7,16,18,20,23,25,27,29,33,35,37,39,43,45,47,49,67,69,71,73,77,79,81,83,87,89,91,93,98,102,104
+  <span class="plumedtooltip">DATA_FILE<span class="right">file with the list of atom pairs and the parameters of the fit of the AF distograms<i></i></span></span>=<div class="plumedtooltip">regtest/isdb/rt-baies/gauss.dat<div class="right"> Click <a onclick='openModal("BAIES.md_working_1.datregtest/isdb/rt-baies/gauss.dat1")'>here</a> to see an extract from this file.<i></i></div></div><div id="BAIES.md_working_1.datregtest/isdb/rt-baies/gauss.dat1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("BAIES.md_working_1.datregtest/isdb/rt-baies/gauss.dat1")'>&times;</span>  <h2>FILE: regtest/isdb/rt-baies/gauss.dat</h2></div><div class="plumedmodal-body">    <pre>#! FIELDS Id atom_i atom_j mu sigma
+#! SET model gaussian
+0 1 16 0.23321 0.07263
+1 1 23 0.56752 0.06087
+2 1 29 0.81512 0.10485
+3 1 37 0.99108 0.12612
+4 1 45 1.18448 0.11505
+5 1 67 1.41143 0.06361
+6 1 73 1.82375 0.17403
+7 1 81 1.96596 0.08349
+8 1 89 2.54969 0.19216
+9 1 98 2.76323 0.10950
+10 1 104 3.37064 0.05699
+11 5 20 0.42044 0.09344
+12 5 27 0.64717 0.06767
+13 5 35 0.90908 0.17242
+14 5 43 1.09391 0.13724
+15 5 49 1.51913 0.10586
+16 5 71 1.84104 0.05942
+17 5 79 1.78188 0.08089
+18 5 87 2.42319 0.11414
+19 5 93 2.40703 0.13783
+20 5 102 2.85882 0.09497
+21 7 20 0.52715 0.15485
+22 7 27 0.78077 0.13616
+23 7 35 1.09053 0.18127
+24 7 43 1.41922 0.09319
+25 7 49 1.80268 0.06771
+26 7 71 1.88152 0.16357
+27 7 79 1.94198 0.12334
+28 7 87 2.08007 0.15023
+29 7 93 2.87520 0.13595
+30 7 102 3.35671 0.09706
+31 16 23 0.38991 0.13916
+32 16 29 0.65544 0.11843
+33 16 37 1.06280 0.19170
+34 16 45 1.19392 0.14962
+35 16 67 1.25837 0.15522
+36 16 73 1.77330 0.19896
+37 16 81 2.25142 0.09269
+38 16 89 2.21286 0.15030
+39 16 98 2.17376 0.11925
+40 16 104 2.50803 0.06756
+41 18 27 0.42163 0.16523
+42 18 35 0.64378 0.08714
+43 18 43 0.93826 0.18071
+44 18 49 1.06906 0.11738
+45 18 71 1.59730 0.18251
+46 18 79 1.98618 0.17960
+47 18 87 1.92136 0.11229
+48 18 93 2.21030 0.18263
+49 18 102 3.02539 0.07264
+50 20 27 0.34172 0.08479
+51 20 35 0.55790 0.12274
+52 20 43 0.87426 0.08941
+53 20 49 0.94709 0.11284
+54 20 71 1.39199 0.13495
+55 20 79 1.91872 0.15357
+56 20 87 1.94330 0.14264
+57 20 93 2.29610 0.05810
+58 20 102 2.84356 0.16700
+59 23 29 0.32382 0.16968
+60 23 37 0.58922 0.10985
+61 23 45 0.74291 0.14514
+62 23 67 0.94647 0.06010
+63 23 73 1.22812 0.07435
+64 23 81 1.60825 0.05789
+65 23 89 1.63951 0.07269
+66 23 98 1.91431 0.10454
+67 23 104 2.07611 0.18115
+68 25 35 0.37769 0.07228
+69 25 43 0.56505 0.10211
+70 25 49 0.83801 0.06843
+71 25 71 1.33689 0.19897
+72 25 79 1.43498 0.12258
+73 25 87 1.48460 0.06533
+74 25 93 1.85235 0.08971
+75 25 102 2.52590 0.07422
+76 27 35 0.20702 0.19265
+77 27 43 0.48971 0.07199
+78 27 49 0.75104 0.05406
+79 27 71 1.10201 0.19678
+80 27 79 1.47437 0.15443
+81 27 87 1.46222 0.10500
+82 27 93 1.64624 0.16579
+83 27 102 2.19632 0.16686
+84 29 37 0.40846 0.08346
+85 29 45 0.69440 0.19774
+86 29 67 0.96602 0.17091
+87 29 73 1.26061 0.16098
+88 29 81 1.33658 0.12765
+89 29 89 1.62279 0.05435
+90 29 98 1.66546 0.09191
+91 29 104 2.01711 0.15388
+92 33 43 0.41881 0.11708
+93 33 49 0.72421 0.19821
+94 33 71 1.09608 0.10470
+95 33 79 1.10324 0.08403
+96 33 87 1.31768 0.08066
+97 33 93 1.76224 0.18505
+98 33 102 2.26386 0.12192
+99 35 43 0.25710 0.16995
+100 35 49 0.45142 0.14909
+101 35 71 0.95602 0.16735
+102 35 79 1.17036 0.12170
+103 35 87 1.20563 0.16837
+104 35 93 1.50825 0.17012
+105 35 102 2.20977 0.10938
+106 37 45 0.23409 0.19202
+107 37 67 0.51845 0.07550
+108 37 73 0.65852 0.07267
+109 37 81 1.22541 0.17098
+110 37 89 1.18780 0.17398
+111 37 98 1.80151 0.14859
+112 37 104 1.74591 0.13230
+113 39 49 0.46466 0.05214
+114 39 71 0.84277 0.14745
+115 39 79 0.98602 0.19004
+116 39 87 1.19526 0.18076
+117 39 93 1.59172 0.08166
+118 39 102 1.69023 0.09394
+119 43 49 0.26858 0.13797
+120 43 71 0.56467 0.11285
+121 43 79 0.75054 0.18650
+122 43 87 1.04176 0.11872
+123 43 93 1.37985 0.18564
+124 43 102 1.64987 0.18766
+125 45 67 0.24654 0.12977
+126 45 73 0.51975 0.05281
+127 45 81 0.83634 0.07747
+128 45 89 0.92646 0.16988
+129 45 98 1.20311 0.12102
+130 45 104 1.69472 0.13347
+131 47 71 0.35886 0.12775
+132 47 79 0.61713 0.16764
+133 47 87 0.75137 0.13404
+134 47 93 1.02954 0.09154
+135 47 102 1.56819 0.12616
+136 49 71 0.43783 0.16400
+137 49 79 0.71400 0.11649
+138 49 87 0.90286 0.12583
+139 49 93 1.15533 0.15391
+140 49 102 1.43568 0.12999
+141 67 73 0.28911 0.19123
+142 67 81 0.64483 0.18148
+143 67 89 0.95511 0.08894
+144 67 98 1.10842 0.19149
+145 67 104 1.48236 0.07057
+146 69 79 0.32461 0.11632
+147 69 87 0.53293 0.08610
+148 69 93 0.76283 0.15042
+149 69 102 1.31472 0.18455
+150 71 79 0.21705 0.15742
+151 71 87 0.50919 0.07145
+152 71 93 0.82747 0.19513
+153 71 102 1.00163 0.19288
+154 73 81 0.41666 0.12309
+155 73 89 0.72829 0.17487
+156 73 98 0.78418 0.11473
+157 73 104 1.15557 0.10087
+158 77 87 0.33492 0.09778
+159 77 93 0.68377 0.05292
+160 77 102 0.98058 0.11607
+161 79 87 0.21014 0.09972
+162 79 93 0.53541 0.12684
+163 79 102 0.74032 0.19776
+164 81 89 0.26248 0.19575
+165 81 98 0.42802 0.08983
+166 81 104 0.63900 0.16685
+167 83 93 0.48692 0.06943
+168 83 102 0.72147 0.18671
+169 87 93 0.31976 0.08879
+170 87 102 0.54523 0.18788
+171 89 98 0.25102 0.15506
+172 89 104 0.45215 0.05863
+173 91 102 0.40030 0.11380
+174 93 102 0.37543 0.19075
+175 98 104 0.30327 0.17024
+</pre></div>  </div></div>
+  <span class="plumedtooltip">PRIOR<span class="right">type of prior to use (NONE, JEFFREYS, CAUCHY)<i></i></span></span>=JEFFREYS
+  <span class="plumedtooltip">TEMP<span class="right">temperature of the system, by default the one passed by the MD engine<i></i></span></span>=300
+...
+<span class="plumedtooltip" style="color:green">BIASVALUE<span class="right">Takes the value of one variable and use it as a bias <a href="https://www.plumed.org/doc-master/user-doc/html/BIASVALUE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the scalar arguments whose values will be used as a bias on the system (a vector must have a single element)<i></i></span></span>=<b name="BAIES.md_working_1.datbaies">baies.ene</b>
+<span style="display:none;" id="BAIES.md_working_1.dat">The BIASVALUE action with label <b></b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">.bias</td><td>the instantaneous value of the bias potential</td></tr><tr><td width="5%">._bias</td><td>one or multiple instances of this quantity can be referenced elsewhere in the input file</td></tr></table></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="BAIES.md_working_1.datbaies">baies.ene</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar <span class="plumedtooltip">STRIDE<span class="right"> the frequency with which the quantities of interest should be output<i></i></span></span>=100
+</pre></div>
+
+<p>A complete tutorial for IDPs can be found <a href="https://github.com/COSBlab/bAIes-IDP">here</a>.</p>
+<h2 id="input">Input</h2>
+<p>The <a href="../specifying_atoms/">atoms</a> that serve as the input for this action are specified using one or more of the keywords in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ATOMS</td>
+<td style="text-align: center;">atoms</td>
+<td style="text-align: left;">atoms used in the calculation of bAIes energy</td>
+</tr>
+</tbody>
+</table>
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ATOMS</td>
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">atoms used in the calculation of bAIes energy</td>
+</tr>
+<tr>
+<td style="text-align: left;">DATA_FILE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">file with the list of atom pairs and the parameters of the fit of the AF distograms</td>
+</tr>
+<tr>
+<td style="text-align: left;">PRIOR</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">type of prior to use (NONE, JEFFREYS, CAUCHY)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NUMERICAL_DERIVATIVES<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">calculate the derivatives for these quantities numerically</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">NOPBC<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">ignore the periodic boundary conditions when calculating distances</td>
+</tr>
+<tr>
+<td style="text-align: left;">TEMP</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">temperature of the system, by default the one passed by the MD engine</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="plumedtooltip missingExample">SIGMA_MIN<span class="right">This keyword do not have examples</span></span></td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">not used</td>
+<td style="text-align: left;">lower bound for all the sigma values read from DATA_FILE</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>More information about how this action can be used is available in the following articles:</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1038/s41467-026-69172-y">V. Schnapka, T. I. Morozova, S. Sen, M. Bonomi, Atomic resolution ensembles of intrinsically disordered proteins with Alphafold. Nature Communications 17 (2026)</a></li>
+<li><a href="http://dx.doi.org/10.1101/2025.06.25.661454">S. Sen, S. E. Hoff, T. I. Morozova, V. Schnapka, M. Bonomi, Advancing in silico drug design with Bayesian refinement of AlphaFold models. doi: 10.1101/2025.06.25.661454 (2025)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

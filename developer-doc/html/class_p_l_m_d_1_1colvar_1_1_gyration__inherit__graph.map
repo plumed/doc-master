@@ -1,0 +1,16 @@
+<map id="PLMD::colvar::Gyration&lt; T &gt;" name="PLMD::colvar::Gyration&lt; T &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="83,304,293,329"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1colvar_1_1_gyration.html" title=" " alt="" coords="103,392,273,432"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="191,343,191,392,185,392,185,343"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="133,229,243,255"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,269,191,304,185,304,185,269"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="5,155,176,180"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,186,174,227,170,231,116,191"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="134,80,242,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="163,116,108,156,105,152,160,112"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="201,155,375,180"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="217,111,273,152,270,156,214,116"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="103,5,273,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="191,45,191,80,185,80,185,45"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="262,190,206,231,203,227,259,186"/>
+</map>

@@ -1,0 +1,7 @@
+#SETTING INPUTFILES=regtest/dimred/rt-mds-rmsd/embed.pdb.reference
+
+smap: SKETCHMAP_PROJECTION ...
+   REFERENCE=regtest/dimred/rt-mds-rmsd/embed.pdb.reference
+   PROPERTY=mds-1,mds-2 CGTOL=1E-3
+   WEIGHT=weights HIGH_DIM_FUNCTION={SMAP R_0=4 A=3 B=2} LOW_DIM_FUNCTION={SMAP R_0=4 A=1 B=2}
+...

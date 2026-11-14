@@ -1,0 +1,23 @@
+<map id="PLMD::secondarystructure::SecondaryStructureBase&lt; T, myPTM &gt;" name="PLMD::secondarystructure::SecondaryStructureBase&lt; T, myPTM &gt;">
+<area shape="rect" id="Node000001" title="Base action for calculating things like AlphRMSD, AntibetaRMSD, etc." alt="" coords="869,83,1061,137"/>
+<area shape="poly" id="edge9_Node000001_Node000001" title=" " alt="" coords="953,68,957,60,966,56,977,65,979,82,974,83,972,67,965,61,961,63,958,70"/>
+<area shape="poly" id="edge10_Node000001_Node000001" title=" " alt="" coords="941,69,945,44,953,35,965,32,980,37,988,49,990,65,987,83,982,82,985,65,983,51,977,41,965,37,956,40,949,46,946,70"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1secondarystructure_1_1_secondary_structure_base.html" title=" " alt="" coords="1366,39,1558,93"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="1075,94,1085,93,1365,70,1366,75,1086,98,1075,99"/>
+<area shape="rect" id="Node000009" href="$class_p_l_m_d_1_1secondarystructure_1_1_secondary_structure_base.html" title=" " alt="" coords="1339,118,1585,187"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="1075,121,1086,122,1339,142,1338,148,1085,127,1075,126"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_with_vector.html" title=" " alt="" coords="641,97,820,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="834,107,869,107,869,113,834,113"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="402,48,573,73"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="565,73,668,95,667,100,563,79"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="225,97,333,123"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="345,92,357,89,432,71,433,76,358,94,346,97"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="400,97,575,123"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="347,107,400,107,400,113,347,113"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="383,147,592,172"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="345,123,383,133,431,144,430,149,382,138,344,129"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,97,176,123"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="190,107,225,107,225,113,190,113"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="589,107,641,107,641,113,589,113"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="563,141,667,120,668,125,565,147"/>
+</map>

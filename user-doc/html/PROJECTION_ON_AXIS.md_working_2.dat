@@ -1,0 +1,6 @@
+a1: GROUP ATOMS=3754            # Anchor point 1
+a2: COM ATOMS=3019,4329,4744    # Anchor point 2
+lig1: COM ATOMS=5147-5190       # Ligand
+pp: PROJECTION_ON_AXIS AXIS_ATOMS=a1,a2 ATOM=lig1
+PRINT ARG=pp.proj FILE=COLVAR1
+PRINT ARG=pp.ext FILE=COLVAR2

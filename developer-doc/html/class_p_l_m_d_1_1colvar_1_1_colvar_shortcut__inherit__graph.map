@@ -1,0 +1,25 @@
+<map id="PLMD::colvar::ColvarShortcut&lt; T &gt;" name="PLMD::colvar::ColvarShortcut&lt; T &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="595,237,844,262"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1colvar_1_1_colvar_shortcut.html" title=" " alt="" coords="1064,5,1275,45"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="733,223,786,154,824,117,867,86,914,63,965,47,1016,36,1063,29,1064,34,1017,41,966,52,916,68,869,90,827,121,790,158,738,227"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1colvar_1_1_colvar_shortcut.html" title=" " alt="" coords="1064,69,1275,109"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="745,226,800,188,867,152,916,134,967,120,1063,100,1064,105,968,125,918,140,869,157,802,193,748,230"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1colvar_1_1_colvar_shortcut.html" title=" " alt="" coords="1064,133,1275,173"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="775,230,867,205,1063,167,1064,172,869,211,776,235"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1colvar_1_1_colvar_shortcut.html" title=" " alt="" coords="1064,197,1275,237"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="857,237,1064,222,1064,227,858,242"/>
+<area shape="rect" id="Node000009" href="$class_p_l_m_d_1_1colvar_1_1_colvar_shortcut.html" title=" " alt="" coords="1064,261,1275,301"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="858,256,1064,271,1064,277,857,262"/>
+<area shape="rect" id="Node000010" href="$class_p_l_m_d_1_1colvar_1_1_colvar_shortcut.html" title=" " alt="" coords="1064,325,1275,365"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="776,263,869,288,1064,326,1063,331,867,293,775,269"/>
+<area shape="rect" id="Node000011" href="$class_p_l_m_d_1_1colvar_1_1_colvar_shortcut.html" title=" " alt="" coords="1064,389,1275,429"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="748,268,802,306,869,342,918,359,968,373,1064,393,1063,399,967,379,916,364,867,346,800,310,745,273"/>
+<area shape="rect" id="Node000012" href="$class_p_l_m_d_1_1colvar_1_1_colvar_shortcut.html" title=" " alt="" coords="1064,453,1275,493"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="738,272,790,341,827,378,869,408,916,430,966,447,1017,458,1064,465,1063,470,1016,463,965,452,914,435,867,413,824,382,786,345,733,275"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_shortcut.html" title="Action used to create a command that expands to multiple PLMD::Action commands when read in during in..." alt="" coords="383,237,545,262"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="559,247,595,247,595,252,559,252"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="225,237,333,262"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="347,247,382,247,382,252,347,252"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,237,176,262"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="190,247,225,247,225,252,190,252"/>
+</map>

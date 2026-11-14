@@ -1,0 +1,12 @@
+BF_CUSTOM ...
+ FUNC1=cos(x)
+ FUNC2=sin(x)
+ FUNC3=cos(2*x)
+ FUNC4=sin(2*x)
+ FUNC5=cos(3*x)
+ FUNC6=sin(3*x)
+ MINIMUM=-pi
+ MAXIMUM=+pi
+ LABEL=bf1
+ PERIODIC
+... BF_CUSTOM

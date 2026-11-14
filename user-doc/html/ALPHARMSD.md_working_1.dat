@@ -1,0 +1,4 @@
+#SETTINGS MOLFILE=regtest/basic/rt32/helix.pdb
+MOLINFO STRUCTURE=regtest/basic/rt32/helix.pdb
+alpha: ALPHARMSD RESIDUES=all R_0=0.1
+PRINT ARG=alpha FILE=colvar

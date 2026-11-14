@@ -1,0 +1,3 @@
+# this is printing the electrostatic interaction between two groups of atoms
+dh: DHENERGY GROUPA=1-10 GROUPB=11-20 EPSILON=80.0 I=0.1 TEMP=300.0
+PRINT ARG=dh

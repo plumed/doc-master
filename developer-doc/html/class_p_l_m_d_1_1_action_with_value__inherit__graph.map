@@ -1,0 +1,102 @@
+<map id="PLMD::ActionWithValue" name="PLMD::ActionWithValue">
+<area shape="rect" id="Node000001" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="383,1152,557,1177"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1function_1_1_function_with_single_argument.html" title=" " alt="" coords="1078,21,1314,61"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="470,1138,482,918,508,583,527,414,549,265,575,154,589,117,605,95,662,58,725,31,791,14,859,5,926,3,990,5,1101,18,1100,23,989,10,926,8,859,11,792,20,726,36,664,62,609,99,594,119,580,155,554,266,532,415,514,584,488,918,475,1138"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1function_1_1_function_with_single_argument.html" title=" " alt="" coords="1073,183,1319,223"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="468,1138,470,963,476,837,486,700,502,565,526,442,542,388,560,342,581,304,605,276,659,265,779,249,1072,214,1073,220,780,255,660,271,608,280,585,307,565,344,547,390,532,443,507,566,491,701,481,837,476,963,474,1138"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1function_1_1_function_with_single_argument.html" title=" " alt="" coords="1051,102,1341,142"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="470,1138,484,944,512,655,531,510,552,383,577,289,590,258,605,240,661,208,711,191,759,185,806,186,906,193,962,190,1026,178,1050,169,1133,140,1135,145,1052,174,1027,183,963,195,906,198,806,192,760,191,712,196,663,213,608,244,595,261,582,291,558,384,536,511,517,656,490,944,476,1138"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1_action_for_interface.html" title=" " alt="" coords="642,291,829,316"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="470,1138,479,1019,498,833,530,613,552,500,579,389,586,354,592,340,605,325,622,314,640,307,642,312,624,319,608,329,596,343,591,356,584,391,557,501,535,614,503,834,484,1019,475,1138"/>
+<area shape="rect" id="Node000012" href="$class_p_l_m_d_1_1_action_with_vector.html" title=" " alt="" coords="646,340,825,365"/>
+<area shape="poly" id="edge9_Node000001_Node000012" title=" " alt="" coords="469,1138,475,982,482,870,494,750,511,631,535,522,549,475,565,434,584,400,605,375,624,362,645,354,647,359,626,366,608,379,588,403,570,436,554,477,540,524,517,632,500,751,488,871,480,982,474,1139"/>
+<area shape="rect" id="Node000108" href="$class_p_l_m_d_1_1_action_with_virtual_atom.html" title="Inherit from here if you are calculating the position of a virtual atom (eg a center of mass)" alt="" coords="627,389,843,415"/>
+<area shape="poly" id="edge12_Node000001_Node000108" title=" " alt="" coords="471,1138,481,1033,502,872,534,681,555,583,579,488,586,453,592,438,605,424,625,411,628,416,608,428,596,441,591,454,584,489,560,584,539,682,507,873,487,1034,476,1139"/>
+<area shape="rect" id="Node000112" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="681,439,790,464"/>
+<area shape="poly" id="edge13_Node000001_Node000112" title=" " alt="" coords="470,1138,479,999,501,798,519,695,542,601,570,524,587,495,605,473,622,462,641,454,680,446,681,452,642,459,624,466,608,477,591,498,575,527,547,602,524,696,507,798,484,999,475,1138"/>
+<area shape="rect" id="Node000174" href="$class_p_l_m_d_1_1bias_1_1_bias.html" title="This is the abstract base class to use for implementing new simulation biases, within it there is inf..." alt="" coords="670,488,801,513"/>
+<area shape="poly" id="edge14_Node000001_Node000174" title=" " alt="" coords="472,1138,506,909,537,748,579,585,586,551,592,537,605,523,636,506,669,498,670,503,638,511,608,527,596,540,591,553,584,587,542,749,511,910,477,1139"/>
+<area shape="rect" id="Node000203" href="$class_p_l_m_d_1_1bias_1_1_reweight_base.html" title=" " alt="" coords="638,537,833,563"/>
+<area shape="poly" id="edge15_Node000001_Node000203" title=" " alt="" coords="471,1138,482,1016,507,844,524,756,546,677,573,614,588,590,605,572,636,555,639,560,608,576,593,593,578,616,551,679,530,758,512,845,487,1016,476,1138"/>
+<area shape="rect" id="Node000207" href="$class_p_l_m_d_1_1clusters_1_1_cluster_distribution.html" title="Provides the keyword CLUSTER_DISTRIBUTION_CALC" alt="" coords="611,587,859,612"/>
+<area shape="poly" id="edge16_Node000001_Node000207" title=" " alt="" coords="471,1138,485,1025,511,868,529,789,550,717,576,659,590,638,605,621,623,610,626,614,608,625,594,641,580,662,555,719,534,790,516,869,490,1025,477,1138"/>
+<area shape="rect" id="Node000208" href="$class_p_l_m_d_1_1clusters_1_1_cluster_weights.html" title="Provides the keyword CLUSTER_WEIGHTS" alt="" coords="623,636,847,661"/>
+<area shape="poly" id="edge17_Node000001_Node000208" title=" " alt="" coords="472,1138,488,1035,516,894,534,823,555,759,578,707,605,672,624,659,627,664,608,676,583,710,560,761,539,825,521,895,493,1036,477,1139"/>
+<area shape="rect" id="Node000209" href="$class_p_l_m_d_1_1colvar_1_1_select_mass_charge.html" title="Provides the keyword MASS" alt="" coords="641,686,830,726"/>
+<area shape="poly" id="edge18_Node000001_Node000209" title=" " alt="" coords="468,1138,473,1059,480,1007,491,950,508,892,532,835,564,782,605,736,639,716,642,720,608,740,568,785,537,837,513,894,496,952,485,1008,478,1060,474,1139"/>
+<area shape="rect" id="Node000210" href="$class_p_l_m_d_1_1contour_1_1_distance_from_contour_base.html" title=" " alt="" coords="628,750,843,790"/>
+<area shape="poly" id="edge19_Node000001_Node000210" title=" " alt="" coords="470,1138,478,1069,499,977,516,928,539,881,568,837,605,800,626,786,629,791,608,804,573,841,544,883,521,930,504,978,483,1070,475,1138"/>
+<area shape="rect" id="Node000213" href="$class_p_l_m_d_1_1dimred_1_1_arrange_points.html" title="Provides the keyword ARRANGE_POINTS" alt="" coords="629,815,841,840"/>
+<area shape="poly" id="edge20_Node000001_Node000213" title=" " alt="" coords="472,1138,483,1078,506,999,523,957,545,917,572,881,605,849,628,836,630,841,608,853,576,884,550,920,528,960,511,1000,488,1079,477,1139"/>
+<area shape="rect" id="Node000214" href="$class_p_l_m_d_1_1function_1_1_function.html" title="This is the abstract base class to use for implementing new CV function, within it there is informati..." alt="" coords="644,864,827,889"/>
+<area shape="poly" id="edge21_Node000001_Node000214" title=" " alt="" coords="474,1138,489,1087,514,1022,552,956,577,926,605,900,642,882,645,887,608,904,580,929,556,959,519,1024,494,1088,479,1139"/>
+<area shape="rect" id="Node000240" href="$class_p_l_m_d_1_1function_1_1_function_with_single_argument.html" title=" " alt="" coords="638,109,833,149"/>
+<area shape="poly" id="edge22_Node000001_Node000240" title=" " alt="" coords="470,1138,482,937,504,634,519,480,537,344,557,240,568,204,579,182,605,158,637,143,639,148,608,163,583,185,573,206,562,241,542,345,525,481,510,635,487,938,475,1139"/>
+<area shape="rect" id="Node000241" href="$class_p_l_m_d_1_1function_1_1_sort_with_single_argument.html" title="Provides the keyword SORT_ONEARG" alt="" coords="643,914,827,954"/>
+<area shape="poly" id="edge26_Node000001_Node000241" title=" " alt="" coords="479,1138,498,1099,525,1052,561,1004,605,964,642,946,644,951,608,968,565,1008,529,1055,502,1101,484,1140"/>
+<area shape="rect" id="Node000242" href="$class_p_l_m_d_1_1function_1_1_sum.html" title="Provides the keyword SUM" alt="" coords="657,979,814,1004"/>
+<area shape="poly" id="edge27_Node000001_Node000242" title=" " alt="" coords="484,1139,532,1075,566,1041,605,1013,630,1002,656,995,657,1000,632,1007,608,1018,570,1045,536,1078,488,1142"/>
+<area shape="rect" id="Node000243" href="$class_p_l_m_d_1_1generic_1_1_accumulate.html" title="Provides the keyword ACCUMULATE" alt="" coords="635,1028,835,1053"/>
+<area shape="poly" id="edge28_Node000001_Node000243" title=" " alt="" coords="493,1140,542,1100,573,1079,606,1062,639,1051,641,1056,608,1067,576,1084,545,1104,496,1145"/>
+<area shape="rect" id="Node000244" href="$class_p_l_m_d_1_1generic_1_1_collect.html" title="Provides the keyword COLLECT" alt="" coords="651,1077,819,1103"/>
+<area shape="poly" id="edge29_Node000001_Node000244" title=" " alt="" coords="513,1144,606,1111,654,1100,656,1105,607,1117,514,1149"/>
+<area shape="rect" id="Node000245" href="$class_p_l_m_d_1_1generic_1_1_constant.html" title="Provides the keyword CONSTANT" alt="" coords="645,1127,826,1152"/>
+<area shape="poly" id="edge30_Node000001_Node000245" title=" " alt="" coords="570,1152,644,1145,645,1151,571,1158"/>
+<area shape="rect" id="Node000246" href="$class_p_l_m_d_1_1generic_1_1_create_mask.html" title="Provides the keyword CREATE_MASK" alt="" coords="635,1176,836,1201"/>
+<area shape="poly" id="edge31_Node000001_Node000246" title=" " alt="" coords="571,1171,635,1177,634,1182,571,1176"/>
+<area shape="rect" id="Node000247" href="$class_p_l_m_d_1_1generic_1_1_fit_to_template.html" title="Provides the keyword FIT_TO_TEMPLATE" alt="" coords="629,1225,842,1251"/>
+<area shape="poly" id="edge32_Node000001_Node000247" title=" " alt="" coords="515,1180,607,1211,656,1223,655,1228,606,1217,514,1185"/>
+<area shape="rect" id="Node000248" href="$class_p_l_m_d_1_1generic_1_1_gather_replicas.html" title="Provides the keyword GATHER_REPLICAS" alt="" coords="624,1275,847,1300"/>
+<area shape="poly" id="edge33_Node000001_Node000248" title=" " alt="" coords="496,1185,546,1224,576,1244,608,1261,641,1272,640,1277,606,1266,573,1249,542,1229,493,1189"/>
+<area shape="rect" id="Node000249" href="$class_p_l_m_d_1_1generic_1_1_plumed.html" title="Provides the keyword PLUMED" alt="" coords="649,1324,821,1349"/>
+<area shape="poly" id="edge34_Node000001_Node000249" title=" " alt="" coords="488,1187,536,1250,570,1283,608,1310,650,1326,648,1331,605,1315,566,1287,532,1254,484,1191"/>
+<area shape="rect" id="Node000250" href="$class_p_l_m_d_1_1generic_1_1_read.html" title="Provides the keyword READ" alt="" coords="657,1373,813,1399"/>
+<area shape="poly" id="edge35_Node000001_Node000250" title=" " alt="" coords="484,1189,501,1228,528,1275,564,1321,608,1360,632,1371,658,1379,656,1384,630,1376,605,1364,560,1325,524,1278,497,1230,479,1191"/>
+<area shape="rect" id="Node000251" href="$class_p_l_m_d_1_1generic_1_1_time.html" title="Provides the keyword TIME" alt="" coords="657,1423,813,1448"/>
+<area shape="poly" id="edge36_Node000001_Node000251" title=" " alt="" coords="480,1190,495,1238,521,1298,558,1359,581,1386,608,1409,632,1422,658,1429,656,1434,630,1427,605,1414,578,1390,554,1362,516,1300,490,1240,475,1191"/>
+<area shape="rect" id="Node000252" href="$class_p_l_m_d_1_1gridtools_1_1_find_grid_optimum.html" title="Provides the keyword FIND_GRID_MAXIMUM" alt="" coords="642,1473,829,1513"/>
+<area shape="poly" id="edge37_Node000001_Node000252" title=" " alt="" coords="478,1190,491,1247,515,1320,532,1358,553,1395,579,1429,608,1459,643,1478,640,1482,605,1463,575,1432,549,1398,528,1360,510,1321,486,1248,473,1192"/>
+<area shape="rect" id="Node000253" href="$class_p_l_m_d_1_1gridtools_1_1_get_grid_volume_element.html" title="Provides the keyword GET_VOLUME_ELEMENT" alt="" coords="644,1537,827,1577"/>
+<area shape="poly" id="edge38_Node000001_Node000253" title=" " alt="" coords="476,1191,485,1258,506,1348,524,1396,546,1442,574,1485,608,1523,625,1535,645,1543,643,1548,623,1539,605,1527,570,1489,541,1445,519,1398,501,1349,480,1259,471,1191"/>
+<area shape="rect" id="Node000254" href="$class_p_l_m_d_1_1isdb_1_1_e_m_m_i.html" title="Provides the keyword EMMI" alt="" coords="666,1601,805,1627"/>
+<area shape="poly" id="edge39_Node000001_Node000254" title=" " alt="" coords="474,1191,478,1270,485,1321,497,1377,514,1435,537,1491,568,1542,608,1587,635,1603,667,1611,665,1616,633,1608,605,1591,564,1545,532,1493,509,1436,492,1378,480,1322,473,1270,469,1191"/>
+<area shape="rect" id="Node000255" href="$class_p_l_m_d_1_1isdb_1_1_metainference_base.html" title="This is the abstract base class to use for implementing new ISDB Metainference actions,..." alt="" coords="621,1651,849,1676"/>
+<area shape="poly" id="edge40_Node000001_Node000255" title=" " alt="" coords="478,1191,494,1291,522,1426,540,1494,561,1556,584,1605,608,1637,625,1648,622,1653,605,1641,579,1608,556,1558,535,1496,517,1428,489,1292,472,1192"/>
+<area shape="rect" id="Node000262" href="$class_p_l_m_d_1_1mapping_1_1_path_displacements.html" title="Provides the keyword AVERAGE_PATH_DISPLACEMENT" alt="" coords="607,1700,864,1725"/>
+<area shape="poly" id="edge41_Node000001_Node000262" title=" " alt="" coords="477,1191,491,1300,518,1450,536,1526,557,1595,582,1651,595,1671,608,1687,625,1698,622,1702,605,1691,590,1675,577,1653,552,1597,531,1528,513,1451,486,1301,472,1191"/>
+<area shape="rect" id="Node000263" href="$class_p_l_m_d_1_1matrixtools_1_1_matrix_operation_base.html" title=" " alt="" coords="655,1750,815,1790"/>
+<area shape="poly" id="edge42_Node000001_Node000263" title=" " alt="" coords="476,1191,490,1309,516,1474,534,1558,555,1634,580,1696,594,1719,608,1736,631,1751,656,1761,654,1766,628,1756,605,1740,590,1722,575,1698,550,1636,528,1559,510,1475,484,1310,471,1192"/>
+<area shape="rect" id="Node000270" href="$class_p_l_m_d_1_1metatomic_1_1_metatomic_plumed_action.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/&quot;METATOMIC/index.html&quot;&gt; &quot;METATOMIC" alt="" coords="627,1814,843,1854"/>
+<area shape="poly" id="edge43_Node000001_Node000270" title=" " alt="" coords="476,1191,487,1320,512,1504,530,1599,552,1684,578,1754,593,1780,609,1800,629,1815,626,1819,605,1804,588,1783,573,1756,547,1686,525,1600,507,1505,482,1321,470,1192"/>
+<area shape="rect" id="Node000271" href="$class_p_l_m_d_1_1opes_1_1_expansion_c_vs.html" title=" " alt="" coords="636,1879,835,1904"/>
+<area shape="poly" id="edge44_Node000001_Node000271" title=" " alt="" coords="475,1191,484,1332,506,1536,524,1641,546,1736,574,1814,591,1843,608,1864,637,1881,635,1886,605,1868,586,1846,570,1816,541,1738,518,1642,501,1537,479,1333,470,1191"/>
+<area shape="rect" id="Node000278" href="$class_p_l_m_d_1_1valtools_1_1_concatenate.html" title="Provides the keyword CONCATENATE" alt="" coords="631,1928,840,1953"/>
+<area shape="poly" id="edge45_Node000001_Node000278" title=" " alt="" coords="477,1191,512,1455,543,1645,584,1838,590,1881,595,1898,608,1915,631,1929,629,1934,605,1919,590,1900,584,1882,579,1838,538,1646,507,1456,472,1192"/>
+<area shape="rect" id="Node000279" href="$class_p_l_m_d_1_1valtools_1_1_flatten.html" title="Provides the keyword FLATTEN" alt="" coords="649,1977,822,2003"/>
+<area shape="poly" id="edge46_Node000001_Node000279" title=" " alt="" coords="474,1191,481,1350,488,1462,500,1584,517,1705,541,1815,571,1905,589,1939,609,1964,627,1977,649,1986,648,1991,625,1982,605,1968,584,1942,566,1907,535,1816,512,1706,495,1585,483,1463,475,1350,469,1191"/>
+<area shape="rect" id="Node000280" href="$class_p_l_m_d_1_1valtools_1_1_select_with_mask.html" title="Provides the keyword SELECT_WITH_MASK" alt="" coords="619,2027,851,2052"/>
+<area shape="poly" id="edge47_Node000001_Node000280" title=" " alt="" coords="476,1191,487,1309,508,1493,540,1713,584,1938,589,1980,595,1997,608,2013,625,2024,622,2029,605,2017,590,1999,584,1982,579,1938,535,1714,503,1494,482,1310,471,1192"/>
+<area shape="rect" id="Node000281" href="$class_p_l_m_d_1_1valtools_1_1_v_stack.html" title="Provides the keyword VSTACK" alt="" coords="649,2076,821,2101"/>
+<area shape="poly" id="edge48_Node000001_Node000281" title=" " alt="" coords="474,1191,477,1368,483,1494,493,1632,510,1769,534,1894,549,1948,566,1996,586,2034,608,2063,628,2076,650,2084,648,2089,625,2081,605,2067,582,2037,561,1998,544,1950,529,1895,505,1770,488,1632,477,1495,472,1368,469,1192"/>
+<area shape="rect" id="Node000282" href="$class_p_l_m_d_1_1vatom_1_1_args_to_vatom.html" title="Provides the keyword ARGS2VATOM" alt="" coords="634,2125,837,2151"/>
+<area shape="poly" id="edge49_Node000001_Node000282" title=" " alt="" coords="475,1191,484,1322,504,1531,536,1782,558,1911,584,2038,590,2080,595,2096,608,2112,635,2128,633,2132,605,2116,590,2098,584,2081,579,2038,553,1912,531,1782,499,1532,479,1323,470,1191"/>
+<area shape="rect" id="Node000283" href="$class_p_l_m_d_1_1ves_1_1_optimizer.html" title=" " alt="" coords="654,2175,817,2200"/>
+<area shape="poly" id="edge50_Node000001_Node000283" title=" " alt="" coords="476,1191,512,1534,544,1788,584,2048,586,2083,586,2111,591,2136,609,2161,630,2176,655,2184,653,2189,627,2181,605,2165,586,2138,581,2112,581,2083,579,2049,539,1788,507,1535,471,1192"/>
+<area shape="rect" id="Node000288" href="$class_p_l_m_d_1_1wham_1_1_wham.html" title="Provides the keyword WHAM" alt="" coords="657,2224,814,2249"/>
+<area shape="poly" id="edge51_Node000001_Node000288" title=" " alt="" coords="476,1191,490,1405,518,1731,537,1897,558,2042,583,2153,595,2189,609,2211,631,2226,657,2234,655,2239,628,2231,605,2215,591,2192,577,2154,553,2043,532,1897,513,1732,485,1406,470,1191"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="225,1152,333,1177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="347,1162,382,1162,382,1167,347,1167"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,1152,176,1177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="190,1162,225,1162,225,1167,190,1167"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1_action_to_put_data.html" title="Provides the keyword PUT" alt="" coords="1109,257,1283,283"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="842,293,1108,274,1109,279,843,298"/>
+<area shape="rect" id="Node000011" href="$class_p_l_m_d_1_1_domain_decomposition.html" title=" " alt="" coords="1088,307,1304,332"/>
+<area shape="poly" id="edge8_Node000007_Node000011" title=" " alt="" coords="842,304,1088,313,1088,318,842,310"/>
+<area shape="rect" id="Node000013" href="$class_p_l_m_d_1_1adjmat_1_1_neighbors.html" title=" " alt="" coords="1103,357,1289,397"/>
+<area shape="poly" id="edge10_Node000012_Node000013" title=" " alt="" coords="839,355,1102,369,1102,375,838,361"/>
+<area shape="rect" id="Node000014" href="$class_p_l_m_d_1_1adjmat_1_1_neighbors.html" title=" " alt="" coords="1103,421,1289,461"/>
+<area shape="poly" id="edge11_Node000012_Node000014" title=" " alt="" coords="818,365,865,374,1103,420,1102,425,863,379,817,371"/>
+<area shape="poly" id="edge23_Node000240_Node000004" title=" " alt="" coords="846,105,1090,58,1091,63,847,110"/>
+<area shape="poly" id="edge24_Node000240_Node000005" title=" " alt="" coords="846,144,1073,181,1072,186,846,149"/>
+<area shape="poly" id="edge25_Node000240_Node000006" title=" " alt="" coords="846,124,1050,121,1051,127,846,130"/>
+</map>

@@ -1,0 +1,40 @@
+<map id="PLMD::function::FunctionOfScalar&lt; T &gt;" name="PLMD::function::FunctionOfScalar&lt; T &gt;">
+<area shape="rect" id="Node000001" title="This is the abstract base class to use for implementing new CV function, within it there is informati..." alt="" coords="873,400,1056,440"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1309,16,1492,56"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="963,386,968,318,984,231,999,186,1019,142,1045,102,1078,69,1104,51,1132,38,1192,22,1253,17,1309,19,1309,24,1253,22,1193,27,1134,43,1107,56,1082,73,1049,106,1023,145,1004,188,989,232,973,318,968,386"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1309,80,1492,120"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="967,386,976,331,996,265,1010,230,1029,197,1051,167,1078,142,1104,125,1132,111,1192,94,1253,87,1309,87,1309,92,1253,93,1193,100,1134,116,1107,129,1082,146,1055,171,1033,200,1015,233,1001,266,982,332,972,387"/>
+<area shape="rect" id="Node000009" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1309,144,1492,184"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="973,386,987,346,1009,300,1039,255,1078,218,1133,188,1193,170,1254,161,1309,157,1309,163,1254,166,1195,175,1135,193,1082,222,1043,259,1014,303,992,348,978,388"/>
+<area shape="rect" id="Node000010" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1309,208,1492,248"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="984,387,1023,337,1049,312,1079,291,1135,265,1195,247,1254,235,1309,229,1309,234,1255,241,1196,252,1137,270,1081,296,1053,316,1027,340,988,390"/>
+<area shape="rect" id="Node000011" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1309,272,1492,312"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="1007,390,1042,371,1079,355,1138,336,1198,321,1309,300,1310,306,1199,326,1139,341,1081,360,1044,376,1010,395"/>
+<area shape="rect" id="Node000012" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1309,336,1492,376"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="1069,399,1080,397,1309,365,1309,370,1080,403,1070,404"/>
+<area shape="rect" id="Node000013" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1309,400,1492,440"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="1070,417,1309,417,1309,423,1070,423"/>
+<area shape="rect" id="Node000014" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1309,464,1492,504"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="1070,436,1080,437,1309,470,1309,475,1080,443,1069,441"/>
+<area shape="rect" id="Node000015" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1309,528,1492,568"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="1010,445,1044,464,1081,480,1139,499,1199,514,1310,534,1309,540,1198,519,1138,504,1079,485,1042,469,1007,450"/>
+<area shape="rect" id="Node000016" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1295,592,1506,632"/>
+<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="988,450,1027,500,1053,524,1081,544,1133,569,1188,586,1243,598,1295,605,1295,610,1243,603,1187,591,1131,573,1079,549,1049,528,1023,503,984,453"/>
+<area shape="rect" id="Node000017" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1309,656,1492,696"/>
+<area shape="poly" id="edge17_Node000001_Node000017" title=" " alt="" coords="978,452,992,492,1014,537,1043,581,1082,618,1135,647,1195,665,1254,674,1309,677,1309,683,1254,679,1193,670,1133,652,1078,622,1039,585,1009,540,987,494,973,454"/>
+<area shape="rect" id="Node000018" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1277,720,1524,760"/>
+<area shape="poly" id="edge18_Node000001_Node000018" title=" " alt="" coords="972,453,982,508,1001,574,1015,607,1033,640,1055,669,1082,694,1126,720,1176,737,1227,745,1277,748,1277,753,1227,751,1174,742,1124,725,1078,698,1051,673,1029,643,1010,610,996,575,976,509,967,454"/>
+<area shape="rect" id="Node000019" href="$class_p_l_m_d_1_1function_1_1_function_of_scalar.html" title=" " alt="" coords="1309,784,1492,824"/>
+<area shape="poly" id="edge19_Node000001_Node000019" title=" " alt="" coords="968,454,973,522,989,608,1004,652,1023,695,1049,734,1082,767,1107,784,1134,797,1193,813,1253,818,1309,816,1309,821,1253,823,1192,818,1132,802,1104,789,1078,771,1045,738,1019,698,999,654,984,609,968,522,963,454"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1function_1_1_function.html" title="This is the abstract base class to use for implementing new CV function, within it there is informati..." alt="" coords="641,407,824,433"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="838,417,873,417,873,423,838,423"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="400,382,575,407"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="588,402,642,408,641,413,588,408"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="225,407,333,433"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="347,409,400,403,400,408,348,414"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="383,431,592,457"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="347,425,383,429,382,435,347,430"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,407,176,433"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="190,417,225,417,225,423,190,423"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="605,430,641,426,641,432,606,435"/>
+</map>

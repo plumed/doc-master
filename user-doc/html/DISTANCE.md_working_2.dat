@@ -1,0 +1,2 @@
+d: DISTANCE ATOMS=1,2 COMPONENTS
+PRINT ARG=d.x,d.y,d.z FILE=colvar

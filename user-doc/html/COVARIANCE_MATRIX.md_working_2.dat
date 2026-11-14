@@ -1,0 +1,7 @@
+# Calculate the geometric center for 100 atoms
+com: CENTER ATOMS=1-100
+# Calculate the vector connecting each of the 100 atoms to the geometric center
+d: DISTANCES ATOMS=1-100 ORIGIN=com COMPONENTS
+# Now compute the covariance matrix
+ones: ONES SIZE=100
+covar: COVARIANCE_MATRIX ARG=d.x,d.y,d.z WEIGHTS=ones UNORMALIZED

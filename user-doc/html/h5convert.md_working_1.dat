@@ -1,0 +1,2 @@
+plumed h5convert --input COLVAR.h5 --output COLVAR
+plumed h5convert --input HILLS --output HILLS.h5

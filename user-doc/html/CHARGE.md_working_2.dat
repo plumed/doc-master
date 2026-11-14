@@ -1,0 +1,2 @@
+q: CHARGE ATOMS=1-10
+PRINT ARG=q FILE=colvar

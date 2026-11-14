@@ -1,0 +1,789 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="robots" content="noindex">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Shortcut: MULTI_RMSD - PLUMED manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/plumedtohtml.css">
+    
+      <link rel="stylesheet" href="../assets/mermaid.css">
+    
+      <link rel="stylesheet" href="../assets/dropdown.css">
+    
+      <link rel="stylesheet" href="../assets/plumedManual.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shortcut-multi_rmsd" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PLUMED manual" class="md-header__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PLUMED manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shortcut: MULTI_RMSD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PLUMED manual" class="md-nav__button md-logo" aria-label="PLUMED manual" data-md-component="logo">
+      
+  <img src="../assets/pigeon.png" alt="logo">
+
+    </a>
+    PLUMED manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/plumed/plumed2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/20/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actionlist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org/lessons/21/001/data/NAVIGATION.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-tutorials.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.plumed-nest.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-doc/html/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Details and examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-list-of-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of keywords
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="shortcut-multi_rmsd"><a href="../shortcuts/">Shortcut</a>: MULTI_RMSD</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="../modules/"><strong>Module</strong></a></th>
+<th style="text-align: center;"><a href="../module_colvar/"><strong>colvar</strong></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Description</strong></td>
+<td style="text-align: center;"><strong>Usage</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculate RMSD distances for different domains and combine them.</td>
+<td style="text-align: center;"><img alt="used in 0 tutorials" src="https://img.shields.io/badge/tutorials-0-red.svg" /><a href="https://www.plumed-nest.org/browse.html?action=MULTI_RMSD"><img alt="used in 2 eggs" src="https://img.shields.io/badge/nest-2-green.svg" /></a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>output value</strong></td>
+<td style="text-align: center;"><strong>type</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">the sum of the multiple RMSD distances</td>
+<td style="text-align: center;">scalar</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Deprecated</p>
+<p>This action has been deprecated and is no longer supported. Use <a href="../RMSD/">RMSD</a> instead.</p>
+</div>
+<h2 id="details-and-examples">Details and examples</h2>
+<p>Calculate RMSD distances for different domains and combine them.</p>
+<p>This action is largely deprecated.  In previous versions of PLUMED a more complex version of this method was implemented.
+You can see an example in <a href="https://www.plumed-nest.org/eggs/20/026/">example from the plumed nest</a>.</p>
+<p>We felt that the input syntax for the method was not very transparant.  We have thus provided this minimal action
+that creates the input for calculating the MultiDomain RMSD for simple cases.  This action is a shortcut.  If you look at the inputs in the
+egg that is linked above you can see how we
+use the various actions that are in PLUMED to calculate the final quantity.  If you would like to implement some
+complicated CVs that are linear combinations of multiple RMSD calculations looking at how this shortcut works will help you start.</p>
+<p>The REFERENCE file is divided into domains by TER lines. For each domain <script type="math/tex">k</script>, the mean squared displacement <script type="math/tex">\textrm{MSD}_k</script> between the instantaneous positions and the
+reference ones is computed after a separate alignment (using the occupancy and beta columns as alignment and displacement weights, as in <a href="../RMSD/">RMSD</a>).
+The final value is</p>
+<p>
+<script type="math/tex; mode=display">
+s = \sqrt{ \sum_k \textrm{MSD}_k }
+</script>
+</p>
+<p>or <script type="math/tex">\sum_k \textrm{MSD}_k</script> if the SQUARED flag is used.</p>
+<p>The following input computes the multi-domain RMSD from the domains in the file <code>fulltest.pdb</code>, using an optimal alignment for each domain:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MULTI_RMSD.md_working_1.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MULTI_RMSD.md_working_1.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/basic/rt-multirmsd/fulltest.pdb</span>
+<span id="MULTI_RMSD.md_working_1.datrmsd_short"><b name="MULTI_RMSD.md_working_1.datrmsd" onclick='showPath("MULTI_RMSD.md_working_1.dat","MULTI_RMSD.md_working_1.datrmsd","MULTI_RMSD.md_working_1.datrmsd_shortcut","black")'>rmsd</b><span style="display:none;" id="MULTI_RMSD.md_working_1.datrmsd_shortcut">The MULTI_RMSD action with label <b>rmsd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd</td><td width="5%"><font color="black">scalar</font></td><td>the sum of the multiple RMSD distances</td></tr></table></span>: <span class="plumedtooltip" style="color:green">MULTI_RMSD<span class="right">Calculate RMSD distances for different domains and combine them. This action is <a class="toggler" href='javascript:;' onclick='toggleDisplay("MULTI_RMSD.md_working_1.datrmsd");'>a shortcut</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/MULTI_RMSD">More details</a><i></i></span></span> <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=MULTI-OPTIMAL <span class="plumedtooltip">NOPBC<span class="right"> don't use periodic boundary conditions<i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure and the atoms involved in the CV<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt-multirmsd/fulltest.pdb<div class="right"> Click <a onclick='openModal("MULTI_RMSD.md_working_1.datregtest/basic/rt-multirmsd/fulltest.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="MULTI_RMSD.md_working_1.datregtest/basic/rt-multirmsd/fulltest.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("MULTI_RMSD.md_working_1.datregtest/basic/rt-multirmsd/fulltest.pdb1")'>&times;</span>  <h2>FILE: regtest/basic/rt-multirmsd/fulltest.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      2  O   ALA     2      -0.926  -2.447  -0.497  1.00  1.00      DIA  O
+ATOM      4  HNT ALA     2       0.533  -0.396   1.184  1.00  1.00      DIA  H
+ATOM      6  HT1 ALA     2      -0.216  -2.590   1.371  1.00  1.00      DIA  H
+ATOM      7  HT2 ALA     2      -0.309  -1.255   2.315  1.00  1.00      DIA  H
+ATOM      8  HT3 ALA     2      -1.480  -1.560   1.212  1.00  1.00      DIA  H
+ATOM      9  CAY ALA     2      -0.096   2.144  -0.669  1.00  1.00      DIA  C
+ATOM     10  HY1 ALA     2       0.871   2.385  -0.588  1.00  1.00      DIA  H
+TER
+ATOM     12  HY3 ALA     2      -0.520   2.679  -1.400  1.00  1.00      DIA  H
+ATOM     14  OY  ALA     2      -1.139   0.931  -0.973  1.00  1.00      DIA  O
+ATOM     16  HN  ALA     2       1.713   1.021  -0.873  1.00  1.00      DIA  H
+ATOM     18  HA  ALA     2       0.099  -0.774  -2.218  1.00  1.00      DIA  H
+ATOM     19  CB  ALA     2       2.063  -1.223  -1.276  1.00  1.00      DIA  C
+ATOM     20  HB1 ALA     2       2.670  -0.716  -2.057  1.00  1.00      DIA  H
+ATOM     21  HB2 ALA     2       2.556  -1.051  -0.295  1.00  1.00      DIA  H
+ATOM     22  HB3 ALA     2       2.070  -2.314  -1.490  1.00  1.00      DIA  H
+</pre></div>  </div></div>
+</span><span id="MULTI_RMSD.md_working_1.datrmsd_long" style="display:none;"><span style="color:blue" class="comment"># PLUMED interprets the command:
+</span><span class="toggler" style="color:red" onclick='toggleDisplay("MULTI_RMSD.md_working_1.datrmsd")'># rmsd: MULTI_RMSD TYPE=MULTI-OPTIMAL NOPBC REFERENCE=regtest/basic/rt-multirmsd/fulltest.pdb</span>
+<span style="color:blue" class="comment"># as follows (Click the red comment above to revert to the short version of the input):</span>
+<b name="MULTI_RMSD.md_working_1.datrmsd_ref1" onclick='showPath("MULTI_RMSD.md_working_1.dat","MULTI_RMSD.md_working_1.datrmsd_ref1","MULTI_RMSD.md_working_1.datrmsd_ref1","blue")'>rmsd_ref1</b><span style="display:none;" id="MULTI_RMSD.md_working_1.datrmsd_ref1">The CONSTANT action with label <b>rmsd_ref1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd_ref1</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-0.0694143,0.0764857,0.00158571,-0.00771429,-0.124814,0.0135857,0.110286,-0.191571,0.0135286,-0.205871,-0.0723714,-0.102871,0.267529,0.291629,-0.111529,0.0565714,0.0752714,0.169671,0.0593714,-0.128729,-0.120629
+<b name="MULTI_RMSD.md_working_1.datrmsd_cpos1" onclick='showPath("MULTI_RMSD.md_working_1.dat","MULTI_RMSD.md_working_1.datrmsd_cpos1","MULTI_RMSD.md_working_1.datrmsd_cpos1","blue")'>rmsd_cpos1</b><span style="display:none;" id="MULTI_RMSD.md_working_1.datrmsd_cpos1">The POSITION action with label <b>rmsd_cpos1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd_cpos1.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the atom position</td></tr><tr><td width="5%">rmsd_cpos1.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the atom position</td></tr><tr><td width="5%">rmsd_cpos1.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the atom position</td></tr></table></span>: <span class="plumedtooltip" style="color:green">POSITION<span class="right">Calculate the components of the position of an atom or atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/POSITION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the atom numbers that you would like to use the positions of<i></i></span></span>=2,4,6,7,8,9,10
+<b name="MULTI_RMSD.md_working_1.datrmsd_pos1" onclick='showPath("MULTI_RMSD.md_working_1.dat","MULTI_RMSD.md_working_1.datrmsd_pos1","MULTI_RMSD.md_working_1.datrmsd_pos1","blue")'>rmsd_pos1</b><span style="display:none;" id="MULTI_RMSD.md_working_1.datrmsd_pos1">The CONCATENATE action with label <b>rmsd_pos1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd_pos1</td><td width="5%"><font color="blue">vector</font></td><td>the concatenated vector/matrix that was constructed from the input values</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONCATENATE<span class="right">Join vectors or matrices together <a href="https://www.plumed.org/doc-master/user-doc/html/CONCATENATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values that should be concatenated together to form the output vector<i></i></span></span>=<b name="MULTI_RMSD.md_working_1.datrmsd_cpos1">rmsd_cpos1.x</b>,<b name="MULTI_RMSD.md_working_1.datrmsd_cpos1">rmsd_cpos1.y</b>,<b name="MULTI_RMSD.md_working_1.datrmsd_cpos1">rmsd_cpos1.z</b>
+<b name="MULTI_RMSD.md_working_1.datrmsd_rmsd1" onclick='showPath("MULTI_RMSD.md_working_1.dat","MULTI_RMSD.md_working_1.datrmsd_rmsd1","MULTI_RMSD.md_working_1.datrmsd_rmsd1","black")'>rmsd_rmsd1</b><span style="display:none;" id="MULTI_RMSD.md_working_1.datrmsd_rmsd1">The RMSD action with label <b>rmsd_rmsd1</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd_rmsd1</td><td width="5%"><font color="black">scalar</font></td><td>a vector containing the RMSD between the instantaneous structure and each of the reference structures that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">RMSD_VECTOR<span class="right"> <a href="https://www.plumed.org/doc-master/user-doc/html/RMSD_VECTOR" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SQUARED<span class="right">  This should be set if you want mean squared displacement instead of RMSD <i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of two actions that you are calculating the RMSD between<i></i></span></span>=<b name="MULTI_RMSD.md_working_1.datrmsd_pos1">rmsd_pos1</b>,<b name="MULTI_RMSD.md_working_1.datrmsd_ref1">rmsd_ref1</b> <span class="plumedtooltip">ALIGN<span class="right"> the weights to use when aligning to the reference structure<i></i></span></span>=1,1,1,1,1,1,1 <span class="plumedtooltip">DISPLACE<span class="right"> the weights to use when calculating the displacement from the reference structure<i></i></span></span>=1,1,1,1,1,1,1 <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL
+<b name="MULTI_RMSD.md_working_1.datrmsd_ref2" onclick='showPath("MULTI_RMSD.md_working_1.dat","MULTI_RMSD.md_working_1.datrmsd_ref2","MULTI_RMSD.md_working_1.datrmsd_ref2","blue")'>rmsd_ref2</b><span style="display:none;" id="MULTI_RMSD.md_working_1.datrmsd_ref2">The CONSTANT action with label <b>rmsd_ref2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd_ref2</td><td width="5%"><font color="blue">vector</font></td><td>the constant value that was read from the plumed input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONSTANT<span class="right">Create a constant value that can be passed to actions <a href="https://www.plumed.org/doc-master/user-doc/html/CONSTANT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">VALUES<span class="right">the numbers that are in your constant value<i></i></span></span>=-0.1709,-0.2328,0.0524,-0.109,0.0874,0.1481,0.1367,0.0881,0.285988,0.111188,0.120188,-0.0593125,-0.104213,-0.0535125,-0.0870125,-0.213313,-0.007725,0.034975,0.044975,-0.089525,0.004675,-0.073425,0.102775,-0.016725
+<b name="MULTI_RMSD.md_working_1.datrmsd_cpos2" onclick='showPath("MULTI_RMSD.md_working_1.dat","MULTI_RMSD.md_working_1.datrmsd_cpos2","MULTI_RMSD.md_working_1.datrmsd_cpos2","blue")'>rmsd_cpos2</b><span style="display:none;" id="MULTI_RMSD.md_working_1.datrmsd_cpos2">The POSITION action with label <b>rmsd_cpos2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd_cpos2.x</td><td width="5%"><font color="blue">vector</font></td><td>the x-component of the atom position</td></tr><tr><td width="5%">rmsd_cpos2.y</td><td width="5%"><font color="blue">vector</font></td><td>the y-component of the atom position</td></tr><tr><td width="5%">rmsd_cpos2.z</td><td width="5%"><font color="blue">vector</font></td><td>the z-component of the atom position</td></tr></table></span>: <span class="plumedtooltip" style="color:green">POSITION<span class="right">Calculate the components of the position of an atom or atoms. <a href="https://www.plumed.org/doc-master/user-doc/html/POSITION" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span> <span class="plumedtooltip">ATOMS<span class="right">the atom numbers that you would like to use the positions of<i></i></span></span>=12,14,16,18,19,20,21,22
+<b name="MULTI_RMSD.md_working_1.datrmsd_pos2" onclick='showPath("MULTI_RMSD.md_working_1.dat","MULTI_RMSD.md_working_1.datrmsd_pos2","MULTI_RMSD.md_working_1.datrmsd_pos2","blue")'>rmsd_pos2</b><span style="display:none;" id="MULTI_RMSD.md_working_1.datrmsd_pos2">The CONCATENATE action with label <b>rmsd_pos2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd_pos2</td><td width="5%"><font color="blue">vector</font></td><td>the concatenated vector/matrix that was constructed from the input values</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CONCATENATE<span class="right">Join vectors or matrices together <a href="https://www.plumed.org/doc-master/user-doc/html/CONCATENATE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values that should be concatenated together to form the output vector<i></i></span></span>=<b name="MULTI_RMSD.md_working_1.datrmsd_cpos2">rmsd_cpos2.x</b>,<b name="MULTI_RMSD.md_working_1.datrmsd_cpos2">rmsd_cpos2.y</b>,<b name="MULTI_RMSD.md_working_1.datrmsd_cpos2">rmsd_cpos2.z</b>
+<b name="MULTI_RMSD.md_working_1.datrmsd_rmsd2" onclick='showPath("MULTI_RMSD.md_working_1.dat","MULTI_RMSD.md_working_1.datrmsd_rmsd2","MULTI_RMSD.md_working_1.datrmsd_rmsd2","black")'>rmsd_rmsd2</b><span style="display:none;" id="MULTI_RMSD.md_working_1.datrmsd_rmsd2">The RMSD action with label <b>rmsd_rmsd2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd_rmsd2</td><td width="5%"><font color="black">scalar</font></td><td>a vector containing the RMSD between the instantaneous structure and each of the reference structures that were input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">RMSD_VECTOR<span class="right"> <a href="https://www.plumed.org/doc-master/user-doc/html/RMSD_VECTOR" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">SQUARED<span class="right">  This should be set if you want mean squared displacement instead of RMSD <i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of two actions that you are calculating the RMSD between<i></i></span></span>=<b name="MULTI_RMSD.md_working_1.datrmsd_pos2">rmsd_pos2</b>,<b name="MULTI_RMSD.md_working_1.datrmsd_ref2">rmsd_ref2</b> <span class="plumedtooltip">ALIGN<span class="right"> the weights to use when aligning to the reference structure<i></i></span></span>=1,1,1,1,1,1,1,1 <span class="plumedtooltip">DISPLACE<span class="right"> the weights to use when calculating the displacement from the reference structure<i></i></span></span>=1,1,1,1,1,1,1,1 <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL
+<b name="MULTI_RMSD.md_working_1.datrmsd_2" onclick='showPath("MULTI_RMSD.md_working_1.dat","MULTI_RMSD.md_working_1.datrmsd_2","MULTI_RMSD.md_working_1.datrmsd_2","black")'>rmsd_2</b><span style="display:none;" id="MULTI_RMSD.md_working_1.datrmsd_2">The COMBINE action with label <b>rmsd_2</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd_2</td><td width="5%"><font color="black">scalar</font></td><td>a linear combination</td></tr></table></span>: <span class="plumedtooltip" style="color:green">COMBINE<span class="right">Calculate a polynomial combination of a set of other variables. <a href="https://www.plumed.org/doc-master/user-doc/html/COMBINE" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MULTI_RMSD.md_working_1.datrmsd_rmsd1">rmsd_rmsd1</b>,<b name="MULTI_RMSD.md_working_1.datrmsd_rmsd2">rmsd_rmsd2</b> <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<b name="MULTI_RMSD.md_working_1.datrmsd" onclick='showPath("MULTI_RMSD.md_working_1.dat","MULTI_RMSD.md_working_1.datrmsd","MULTI_RMSD.md_working_1.datrmsd","black")'>rmsd</b><span style="display:none;" id="MULTI_RMSD.md_working_1.datrmsd">The CUSTOM action with label <b>rmsd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MULTI_RMSD.md_working_1.datrmsd_2">rmsd_2</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span style="color:blue"># --- End of included input --- </span></span><span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="MULTI_RMSD.md_working_1.datrmsd">rmsd</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<p>The same result can be obtained with the following input, where each domain is stored in a separate file:</p>
+<div class="plumedInputContainer">
+<div class="plumedpreheader">
+<div class="headerInfo" id="value_details_MULTI_RMSD.md_working_2.dat"> Click on the labels of the actions for more information on what each action computes </div>
+<div class="containerBadge">
+<div class="headerBadge"><a href="../MULTI_RMSD.md_working_2.dat.plumed.stderr"><img src="https://img.shields.io/badge/2.11-passing-green.svg" alt="tested on2.11" /></a></div>
+</div>
+</div>
+<pre class="plumedlisting">
+<span style="color:blue" class="comment">#SETTINGS INPUTFILES=regtest/basic/rt-multirmsd/test0a.pdb,regtest/basic/rt-multirmsd/test0b.pdb</span>
+<span id="MULTI_RMSD.md_working_2.datdefrmsda_short"><b name="MULTI_RMSD.md_working_2.datrmsda" onclick='showPath("MULTI_RMSD.md_working_2.dat","MULTI_RMSD.md_working_2.datrmsda","MULTI_RMSD.md_working_2.datrmsda","black")'>rmsda</b><span style="display:none;" id="MULTI_RMSD.md_working_2.datrmsda">The RMSD action with label <b>rmsda</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsda</td><td width="5%"><font color="black">scalar</font></td><td>the RMSD between the instantaneous structure and the reference structure that was input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">RMSD<span class="right">Calculate the RMSD with respect to a reference structure. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MULTI_RMSD.md_working_2.datdefrmsda");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/RMSD">More details</a><i></i></span></span> <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure and the atoms involved in the CV<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt-multirmsd/test0a.pdb<div class="right"> Click <a onclick='openModal("MULTI_RMSD.md_working_2.datregtest/basic/rt-multirmsd/test0a.pdb1")'>here</a> to see an extract from this file.<i></i></div></div><div id="MULTI_RMSD.md_working_2.datregtest/basic/rt-multirmsd/test0a.pdb1" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("MULTI_RMSD.md_working_2.datregtest/basic/rt-multirmsd/test0a.pdb1")'>&times;</span>  <h2>FILE: regtest/basic/rt-multirmsd/test0a.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      2  O   ALA     2      -0.926  -2.447  -0.497  1.00  1.00      DIA  O
+ATOM      4  HNT ALA     2       0.533  -0.396   1.184  1.00  1.00      DIA  H
+ATOM      6  HT1 ALA     2      -0.216  -2.590   1.371  1.00  1.00      DIA  H
+ATOM      7  HT2 ALA     2      -0.309  -1.255   2.315  1.00  1.00      DIA  H
+ATOM      8  HT3 ALA     2      -1.480  -1.560   1.212  1.00  1.00      DIA  H
+ATOM      9  CAY ALA     2      -0.096   2.144  -0.669  1.00  1.00      DIA  C
+ATOM     10  HY1 ALA     2       0.871   2.385  -0.588  1.00  1.00      DIA  H
+</pre></div>  </div></div> <span class="plumedtooltip">SQUARED<span class="right">  This should be set if you want MSD instead of RMSD <i></i></span></span>
+</span><span id="MULTI_RMSD.md_working_2.datdefrmsda_long" style="display:none;"><b name="MULTI_RMSD.md_working_2.datrmsda" onclick='showPath("MULTI_RMSD.md_working_2.dat","MULTI_RMSD.md_working_2.datrmsda","MULTI_RMSD.md_working_2.datrmsda","black")'>rmsda</b>: <span class="plumedtooltip" style="color:green">RMSD<span class="right">Calculate the RMSD with respect to a reference structure. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MULTI_RMSD.md_working_2.datdefrmsda");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/RMSD">More details</a><i></i></span></span> <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure and the atoms involved in the CV<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt-multirmsd/test0a.pdb<div class="right"> Click <a onclick='openModal("MULTI_RMSD.md_working_2.datregtest/basic/rt-multirmsd/test0a.pdb2")'>here</a> to see an extract from this file.<i></i></div></div><div id="MULTI_RMSD.md_working_2.datregtest/basic/rt-multirmsd/test0a.pdb2" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("MULTI_RMSD.md_working_2.datregtest/basic/rt-multirmsd/test0a.pdb2")'>&times;</span>  <h2>FILE: regtest/basic/rt-multirmsd/test0a.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM      2  O   ALA     2      -0.926  -2.447  -0.497  1.00  1.00      DIA  O
+ATOM      4  HNT ALA     2       0.533  -0.396   1.184  1.00  1.00      DIA  H
+ATOM      6  HT1 ALA     2      -0.216  -2.590   1.371  1.00  1.00      DIA  H
+ATOM      7  HT2 ALA     2      -0.309  -1.255   2.315  1.00  1.00      DIA  H
+ATOM      8  HT3 ALA     2      -1.480  -1.560   1.212  1.00  1.00      DIA  H
+ATOM      9  CAY ALA     2      -0.096   2.144  -0.669  1.00  1.00      DIA  C
+ATOM     10  HY1 ALA     2       0.871   2.385  -0.588  1.00  1.00      DIA  H
+</pre></div>  </div></div> <span class="plumedtooltip">SQUARED<span class="right">  This should be set if you want MSD instead of RMSD <i></i></span></span>  <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=0
+</span><span id="MULTI_RMSD.md_working_2.datdefrmsdb_short"><b name="MULTI_RMSD.md_working_2.datrmsdb" onclick='showPath("MULTI_RMSD.md_working_2.dat","MULTI_RMSD.md_working_2.datrmsdb","MULTI_RMSD.md_working_2.datrmsdb","black")'>rmsdb</b><span style="display:none;" id="MULTI_RMSD.md_working_2.datrmsdb">The RMSD action with label <b>rmsdb</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsdb</td><td width="5%"><font color="black">scalar</font></td><td>the RMSD between the instantaneous structure and the reference structure that was input</td></tr></table></span>: <span class="plumedtooltip" style="color:green">RMSD<span class="right">Calculate the RMSD with respect to a reference structure. This action has <a class="toggler" href='javascript:;' onclick='toggleDisplay("MULTI_RMSD.md_working_2.datdefrmsdb");'>hidden defaults</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/RMSD">More details</a><i></i></span></span> <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure and the atoms involved in the CV<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt-multirmsd/test0b.pdb<div class="right"> Click <a onclick='openModal("MULTI_RMSD.md_working_2.datregtest/basic/rt-multirmsd/test0b.pdb3")'>here</a> to see an extract from this file.<i></i></div></div><div id="MULTI_RMSD.md_working_2.datregtest/basic/rt-multirmsd/test0b.pdb3" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("MULTI_RMSD.md_working_2.datregtest/basic/rt-multirmsd/test0b.pdb3")'>&times;</span>  <h2>FILE: regtest/basic/rt-multirmsd/test0b.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM     12  HY3 ALA     2      -0.520   2.679  -1.400  1.00  1.00      DIA  H
+ATOM     14  OY  ALA     2      -1.139   0.931  -0.973  1.00  1.00      DIA  O
+ATOM     16  HN  ALA     2       1.713   1.021  -0.873  1.00  1.00      DIA  H
+ATOM     18  HA  ALA     2       0.099  -0.774  -2.218  1.00  1.00      DIA  H
+ATOM     19  CB  ALA     2       2.063  -1.223  -1.276  1.00  1.00      DIA  C
+ATOM     20  HB1 ALA     2       2.670  -0.716  -2.057  1.00  1.00      DIA  H
+ATOM     21  HB2 ALA     2       2.556  -1.051  -0.295  1.00  1.00      DIA  H
+ATOM     22  HB3 ALA     2       2.070  -2.314  -1.490  1.00  1.00      DIA  H
+</pre></div>  </div></div> <span class="plumedtooltip">SQUARED<span class="right">  This should be set if you want MSD instead of RMSD <i></i></span></span>
+</span><span id="MULTI_RMSD.md_working_2.datdefrmsdb_long" style="display:none;"><b name="MULTI_RMSD.md_working_2.datrmsdb" onclick='showPath("MULTI_RMSD.md_working_2.dat","MULTI_RMSD.md_working_2.datrmsdb","MULTI_RMSD.md_working_2.datrmsdb","black")'>rmsdb</b>: <span class="plumedtooltip" style="color:green">RMSD<span class="right">Calculate the RMSD with respect to a reference structure. This action uses the <a class="toggler" href='javascript:;' onclick='toggleDisplay("MULTI_RMSD.md_working_2.datdefrmsdb");'>defaults shown here</a>. <a href="https://www.plumed.org/doc-master/user-doc/html/RMSD">More details</a><i></i></span></span> <span class="plumedtooltip">TYPE<span class="right"> the manner in which RMSD alignment is performed<i></i></span></span>=OPTIMAL <span class="plumedtooltip">NOPBC<span class="right"> ignore the periodic boundary conditions when calculating distances<i></i></span></span> <span class="plumedtooltip">REFERENCE<span class="right">a file in pdb format containing the reference structure and the atoms involved in the CV<i></i></span></span>=<div class="plumedtooltip">regtest/basic/rt-multirmsd/test0b.pdb<div class="right"> Click <a onclick='openModal("MULTI_RMSD.md_working_2.datregtest/basic/rt-multirmsd/test0b.pdb4")'>here</a> to see an extract from this file.<i></i></div></div><div id="MULTI_RMSD.md_working_2.datregtest/basic/rt-multirmsd/test0b.pdb4" class="plumedmodal">  <div class="plumedmodal-content"><div class="plumedmodal-header">  <span class="close" onclick='closeModal("MULTI_RMSD.md_working_2.datregtest/basic/rt-multirmsd/test0b.pdb4")'>&times;</span>  <h2>FILE: regtest/basic/rt-multirmsd/test0b.pdb</h2></div><div class="plumedmodal-body">    <pre>ATOM     12  HY3 ALA     2      -0.520   2.679  -1.400  1.00  1.00      DIA  H
+ATOM     14  OY  ALA     2      -1.139   0.931  -0.973  1.00  1.00      DIA  O
+ATOM     16  HN  ALA     2       1.713   1.021  -0.873  1.00  1.00      DIA  H
+ATOM     18  HA  ALA     2       0.099  -0.774  -2.218  1.00  1.00      DIA  H
+ATOM     19  CB  ALA     2       2.063  -1.223  -1.276  1.00  1.00      DIA  C
+ATOM     20  HB1 ALA     2       2.670  -0.716  -2.057  1.00  1.00      DIA  H
+ATOM     21  HB2 ALA     2       2.556  -1.051  -0.295  1.00  1.00      DIA  H
+ATOM     22  HB3 ALA     2       2.070  -2.314  -1.490  1.00  1.00      DIA  H
+</pre></div>  </div></div> <span class="plumedtooltip">SQUARED<span class="right">  This should be set if you want MSD instead of RMSD <i></i></span></span>  <span class="plumedtooltip">NUMBER<span class="right"> if there are multiple structures in the pdb file you can specify that you want the RMSD from a specific structure by specifying its place in the file here<i></i></span></span>=0
+</span><b name="MULTI_RMSD.md_working_2.datrmsd" onclick='showPath("MULTI_RMSD.md_working_2.dat","MULTI_RMSD.md_working_2.datrmsd","MULTI_RMSD.md_working_2.datrmsd","black")'>rmsd</b><span style="display:none;" id="MULTI_RMSD.md_working_2.datrmsd">The CUSTOM action with label <b>rmsd</b> calculates the following quantities:<table  align="center" frame="void" width="95%" cellpadding="5%"><tr><td width="5%"><b> Quantity </b>  </td><td width="5%"><b> Type </b>  </td><td><b> Description </b> </td></tr><tr><td width="5%">rmsd</td><td width="5%"><font color="black">scalar</font></td><td>an arbitrary function</td></tr></table></span>: <span class="plumedtooltip" style="color:green">CUSTOM<span class="right">Calculate a combination of variables using a custom expression. <a href="https://www.plumed.org/doc-master/user-doc/html/CUSTOM" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the values input to this function<i></i></span></span>=<b name="MULTI_RMSD.md_working_2.datrmsda">rmsda</b>,<b name="MULTI_RMSD.md_working_2.datrmsdb">rmsdb</b> <span class="plumedtooltip">FUNC<span class="right">the function you wish to evaluate<i></i></span></span>=sqrt(x+y) <span class="plumedtooltip">PERIODIC<span class="right">if the output of your function is periodic then you should specify the periodicity of the function<i></i></span></span>=NO
+<span class="plumedtooltip" style="color:green">PRINT<span class="right">Print quantities to a file. <a href="https://www.plumed.org/doc-master/user-doc/html/PRINT" style="color:green">More details</a><i></i></span></span> <span class="plumedtooltip">ARG<span class="right">the labels of the values that you would like to print to the file<i></i></span></span>=<b name="MULTI_RMSD.md_working_2.datrmsd">rmsd</b> <span class="plumedtooltip">FILE<span class="right">the name of the file on which to output these quantities<i></i></span></span>=colvar
+</pre></div>
+
+<h2 id="full-list-of-keywords">Full list of keywords</h2>
+<p>The following table describes the <a href="../parsing/">keywords and options</a> that can be used with this action </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyword</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">REFERENCE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: left;">a file in pdb format containing the reference structure and the atoms involved in the CV</td>
+</tr>
+<tr>
+<td style="text-align: left;">TYPE</td>
+<td style="text-align: center;">compulsory</td>
+<td style="text-align: center;">SIMPLE</td>
+<td style="text-align: left;">the manner in which RMSD alignment is performed</td>
+</tr>
+<tr>
+<td style="text-align: left;">SQUARED</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">This should be set if you want the mean squared displacement instead of the root mean squared displacement</td>
+</tr>
+<tr>
+<td style="text-align: left;">NOPBC</td>
+<td style="text-align: center;">optional</td>
+<td style="text-align: center;">false</td>
+<td style="text-align: left;">don't use periodic boundary conditions</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../assets/plumedtohtml.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      
+        <script src="../assets/tablecode.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-2.3.1/b-3.2.3/b-html5-3.2.3/datatables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/mermaid.js"></script>
+      
+    
+  </body>
+</html>

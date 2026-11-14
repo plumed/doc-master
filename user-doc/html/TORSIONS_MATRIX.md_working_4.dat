@@ -1,0 +1,21 @@
+# Notice that in a realistic version of this calculation you would likely
+# by calculating the orientations of many more molecules using this command
+d: DISTANCE COMPONENTS ATOMS1=1,5 ATOMS2=11,15 ATOMS3=21,25 ATOMS4=31,35
+s: VSTACK ARG=d.x,d.y,d.z
+sT: TRANSPOSE ARG=s
+#  Calculate a contact matrix in which element i,j is 1 if molecules
+# i and j are neighbors.
+c: CONTACT_MATRIX GROUP=1,11,21,35 SWITCH={RATIONAL R_0=0.1 D_MAX=0.3}
+# Now calculate all the torsions
+t: TORSIONS_MATRIX ...
+   MASK=c ARG=s,sT
+   POSITIONS1=1,11,21,31 POSITIONS2=1,11,21,31
+...
+# And the product between the contact matrix and the torsions
+tc: CUSTOM ARG=c,t FUNC=x*y PERIODIC=NO
+# Total of all the torsional angles in the first coordination sphere
+tsum: SUM ARG=tc PERIODIC=NO
+# Total number of neighbouring atoms
+bsum: SUM ARG=c PERIODIC=NO
+# And finally the average torsion angle
+avt: CUSTOM ARG=tc,c FUNC=x/y PERIODIC=NO

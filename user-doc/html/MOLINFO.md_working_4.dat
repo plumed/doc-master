@@ -1,0 +1,3 @@
+#SETTINGS MOLFILE=regtest/basic/rt-molinfo-mmcif/ref-gmx.cif
+MOLINFO STRUCTURE=regtest/basic/rt-molinfo-mmcif/ref-gmx.cif ATOM_ID=order
+t1: TORSION ATOMS=@phi-A_3

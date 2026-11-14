@@ -1,0 +1,4 @@
+#SETTINGS MOLFILE=regtest/basic/rt65/AA.pdb
+MOLINFO STRUCTURE=regtest/basic/rt65/AA.pdb MOLTYPE=rna
+puck: PUCKERING ATOMS=@sugar-2
+PRINT ARG=puck.phs FILE=COLVAR

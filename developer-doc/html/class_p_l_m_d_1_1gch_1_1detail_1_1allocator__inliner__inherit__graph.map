@@ -1,0 +1,19 @@
+<map id="PLMD::gch::detail::allocator_inliner&lt; Allocator, AvailableForEBO &gt;" name="PLMD::gch::detail::allocator_inliner&lt; Allocator, AvailableForEBO &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,121,209,176"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1gch_1_1detail_1_1allocator__interface.html" title=" " alt="" coords="421,43,565,97"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,123,420,82,421,87,223,128"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1gch_1_1detail_1_1allocator__inliner_3_01_allocator_00_01false_01_4.html" title=" " alt="" coords="391,121,595,176"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="223,146,390,146,390,151,223,151"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1gch_1_1detail_1_1allocator__inliner_3_01_allocator_00_01true_01_4.html" title=" " alt="" coords="391,200,595,255"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="224,170,391,204,390,209,222,175"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1gch_1_1detail_1_1small__vector__base.html" title=" " alt="" coords="644,43,865,97"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="578,67,644,67,644,73,578,73"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1gch_1_1small__vector.html" title=" " alt="" coords="1363,5,1553,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="878,41,914,35,1033,20,1126,12,1219,11,1339,17,1362,18,1362,24,1339,22,1219,17,1126,18,1034,25,915,41,879,46"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1gch_1_1small__vector.html" title=" " alt="" coords="1367,93,1549,133"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="880,94,915,99,1037,109,1159,114,1366,113,1366,118,1159,119,1037,115,914,105,879,100"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1gch_1_1small__vector.html" title=" " alt="" coords="915,50,1141,90"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="879,67,915,67,915,73,879,73"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="1155,61,1338,46,1362,43,1362,49,1339,51,1155,66"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="1155,80,1367,101,1366,106,1155,85"/>
+</map>

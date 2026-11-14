@@ -1,0 +1,2 @@
+c: CONSTANT VALUE=4.5
+PRINT ARG=c STRIDE=1 FILE=constant_scalar

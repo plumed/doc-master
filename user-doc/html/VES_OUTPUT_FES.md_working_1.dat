@@ -1,0 +1,23 @@
+#SETTINGS INPUTFILES=regtest/ves/rt-output-fes-2d-targetdist/coeffs.input.data INPUTFILELINES=1-14
+phi:   TORSION ATOMS=5,7,9,15
+psi:   TORSION ATOMS=7,9,15,17
+
+bf1: BF_FOURIER ORDER=5 MINIMUM=-pi MAXIMUM=pi
+bf2: BF_FOURIER ORDER=5 MINIMUM=-pi MAXIMUM=pi
+
+VES_LINEAR_EXPANSION ...
+ ARG=phi,psi
+ BASIS_FUNCTIONS=bf1,bf2
+ LABEL=ves1
+ GRID_BINS=100,100
+ PROJ_ARG1=phi
+ PROJ_ARG2=psi
+... VES_LINEAR_EXPANSION
+
+VES_OUTPUT_FES ...
+  BIAS=ves1
+  FES_OUTPUT=500
+  FES_PROJ_OUTPUT=500
+  BIAS_OUTPUT=500
+  COEFFS_INPUT=regtest/ves/rt-output-fes-2d-targetdist/coeffs.input.data
+... VES_OUTPUT_FES

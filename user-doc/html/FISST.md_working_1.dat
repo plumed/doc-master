@@ -1,0 +1,13 @@
+UNITS LENGTH=A TIME=fs ENERGY=kcal/mol
+
+b1: GROUP ATOMS=1
+b2: GROUP ATOMS=12
+
+dend: DISTANCE ATOMS=b1,b2
+
+#The conversion factor is 69.4786 pN = 1 kcal/mol/Angstrom
+
+#0 pN to 100 pN
+f: FISST MIN_FORCE=0 MAX_FORCE=1.44 PERIOD=100 NINTERPOLATE=31 ARG=dend OUT_RESTART=pull.restart.txt OUT_OBSERVABLE=pull.observable.txt OBSERVABLE_FREQ=1000
+
+PRINT ARG=dend,f.dend_fbar,f.bias,f.force2 FILE=pull.colvar.txt STRIDE=1000
