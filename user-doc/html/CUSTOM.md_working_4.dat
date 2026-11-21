@@ -1,0 +1,5 @@
+d: DISTANCE ATOMS=1,2
+# This function is evaluating the area of the circle whose radius is
+# given by the distance between atoms 1 and 2.
+c: CUSTOM ARG=d FUNC=pi*x*x PERIODIC=NO
+PRINT ARG=c FILE=colvar

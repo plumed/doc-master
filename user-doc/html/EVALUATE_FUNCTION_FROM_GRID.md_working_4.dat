@@ -1,0 +1,7 @@
+#SETTINGS INPUTFILES=regtest/gridtools/rt-weights-integral/kde.grid
+
+ff: REFERENCE_GRID FILE=regtest/gridtools/rt-weights-integral/kde.grid VALUE=h
+aa: ANGLE ATOMS1=1,2,3 ATOMS2=4,5,6 ATOMS3=7,8,9
+tt: TORSION ATOMS1=1,2,3,4 ATOMS2=5,6,7,8 ATOMS3=9,10,11,12
+val: EVALUATE_FUNCTION_FROM_GRID GRID=ff
+PRINT ARG=aa,tt,val FILE=colvar

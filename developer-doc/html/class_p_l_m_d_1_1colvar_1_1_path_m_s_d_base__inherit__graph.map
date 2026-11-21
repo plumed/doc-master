@@ -1,0 +1,18 @@
+<map id="PLMD::colvar::PathMSDBase" name="PLMD::colvar::PathMSDBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="95,299,300,324"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1colvar_1_1_path_m_s_d.html" title="Provides the keyword PATHMSD" alt="" coords="5,372,179,397"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="170,334,111,374,108,370,167,330"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1colvar_1_1_property_map.html" title="Provides the keyword PROPERTYMAP" alt="" coords="203,372,402,397"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="227,330,287,370,284,374,224,334"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="143,225,252,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,264,200,299,195,299,195,264"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="13,152,184,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,183,183,223,180,227,124,187"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="143,79,251,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="172,114,116,154,113,150,169,110"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="209,152,383,177"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="226,110,281,150,278,154,222,114"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="112,5,283,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="200,44,200,79,195,79,195,44"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="271,187,215,227,212,223,268,183"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="PLMD::isdb::OnebeadTypes" name="PLMD::isdb::OnebeadTypes">
+<area shape="rect" id="Node000001" title="Identifiers of the ONEBEAD bead types and of the monoatomic ions, with the residue&#45;name helpers that ..." alt="" coords="115,5,312,31"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1isdb_1_1_onebead_mapping.html" title="The ONEBEAD coarse&#45;grained mapping of an all&#45;atom structure." alt="" coords="5,79,221,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,41,131,81,128,76,185,36"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1isdb_1_1_s_a_x_s.html" title="Implementation of SAXS and SANS." alt="" coords="246,79,383,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,36,300,76,297,81,239,41"/>
+</map>

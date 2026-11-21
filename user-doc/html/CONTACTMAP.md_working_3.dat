@@ -1,0 +1,9 @@
+#SETTINGS INPUTFILES=regtest/basic/rt-contactmap-pdb/native.pdb
+cmap: CONTACTMAP ...
+  ATOMS1=1,67 ATOMS2=1,68 ATOMS3=5,61 ATOMS4=15,57
+  SWITCH={RATIONAL R_0=0.6}
+  REFERENCE=regtest/basic/rt-contactmap-pdb/native.pdb
+  CMDIST
+...
+
+PRINT ARG=cmap FILE=colvar

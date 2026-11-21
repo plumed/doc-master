@@ -1,0 +1,18 @@
+#SETTINGS INPUTFILES=regtest/isdb-pytorch/rt-emmivox/structure.pdb,regtest/isdb-pytorch/rt-emmivox/map.dat
+MOLINFO STRUCTURE=regtest/isdb-pytorch/rt-emmivox/structure.pdb
+
+EMMIVOX ...
+  LABEL=emv
+  ATOMS=1-234
+  DATA_FILE=regtest/isdb-pytorch/rt-emmivox/map.dat
+  NORM_DENSITY=6.3034
+  RESOLUTION=0.2
+  SIGMA_MIN=0.2
+  NL_DIST_CUTOFF=0.6 NL_GAUSS_CUTOFF=3.0 NL_STRIDE=50
+  WRITE_STRIDE=1000 STATUS_FILE=emvstatus
+  TEMP=300.0
+  CORRELATION
+...
+
+BIASVALUE ARG=emv.scoreb
+PRINT ARG=emv.* FILE=colvar STRIDE=1000

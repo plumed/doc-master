@@ -1,0 +1,27 @@
+<map id="PLMD::isdb::MetainferenceBase" name="PLMD::isdb::MetainferenceBase">
+<area shape="rect" id="Node000001" title="This is the abstract base class to use for implementing new ISDB Metainference actions,..." alt="" coords="637,129,865,155"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1isdb_1_1_c_s2_backbone.html" title="Provides the keyword CS2BACKBONE" alt="" coords="913,5,1104,31"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="779,119,838,79,912,40,945,28,947,33,914,44,841,83,782,123"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1isdb_1_1_j_coupling.html" title="Provides the keyword &lt;a href=&quot;../../user&#45;doc/html/&quot;JCOUPLING/index.html&quot;&gt; &quot;JCOUPLING" alt="" coords="927,55,1090,80"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="803,123,913,89,955,77,956,83,914,94,804,128"/>
+<area shape="rect" id="Node000009" href="$class_p_l_m_d_1_1isdb_1_1_n_o_e.html" title="Provides the keyword NOE" alt="" coords="943,104,1074,129"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="879,127,943,120,943,126,880,132"/>
+<area shape="rect" id="Node000010" href="$class_p_l_m_d_1_1isdb_1_1_p_r_e.html" title="Provides the keyword PRE" alt="" coords="945,153,1072,179"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="879,151,946,157,945,163,879,157"/>
+<area shape="rect" id="Node000011" href="$class_p_l_m_d_1_1isdb_1_1_r_d_c.html" title="Provides the keyword RDC" alt="" coords="943,203,1074,228"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="806,156,914,189,956,200,955,205,913,194,804,161"/>
+<area shape="rect" id="Node000012" href="$class_p_l_m_d_1_1isdb_1_1_s_a_x_s.html" title="Implementation of SAXS and SANS." alt="" coords="940,252,1077,277"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="782,161,841,200,914,238,947,249,945,254,912,243,839,205,779,165"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="399,80,570,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="568,105,682,127,681,132,567,110"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="224,129,332,155"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="342,123,379,114,427,103,428,108,381,119,343,129"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_action_with_arguments.html" title=" " alt="" coords="380,129,589,155"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="346,139,380,139,380,145,346,145"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="397,179,572,204"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="343,155,381,165,428,176,427,181,379,170,342,161"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,129,176,155"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="190,139,224,139,224,145,190,145"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="603,139,637,139,637,145,603,145"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="567,174,681,152,682,157,568,179"/>
+</map>

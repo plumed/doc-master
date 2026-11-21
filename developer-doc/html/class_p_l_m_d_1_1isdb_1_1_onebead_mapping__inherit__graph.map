@@ -1,0 +1,5 @@
+<map id="PLMD::isdb::OnebeadMapping" name="PLMD::isdb::OnebeadMapping">
+<area shape="rect" id="Node000001" title="The ONEBEAD coarse&#45;grained mapping of an all&#45;atom structure." alt="" coords="5,79,221,104"/>
+<area shape="rect" id="Node000002" href="$struct_p_l_m_d_1_1isdb_1_1_onebead_types.html" title="Identifiers of the ONEBEAD bead types and of the monoatomic ions, with the residue&#45;name helpers that ..." alt="" coords="15,5,212,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,44,116,79,111,79,111,44"/>
+</map>

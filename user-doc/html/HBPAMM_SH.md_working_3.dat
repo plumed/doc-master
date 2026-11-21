@@ -1,0 +1,7 @@
+#SETTINGS INPUTFILES=regtest/pamm/rt-hbpamm/b3lyp.pamm
+hyd: HBPAMM_SH ...
+  SITES=1-192:3 HYDROGENS=2-192:3,3-192:3
+  CLUSTERS=regtest/pamm/rt-hbpamm/b3lyp.pamm
+  NOPBC
+...
+DUMPATOMS ARG=hyd ATOMS=2-192:3,3-192:3 FILE=hydrogens.xyz

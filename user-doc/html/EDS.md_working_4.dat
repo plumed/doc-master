@@ -1,0 +1,5 @@
+dist: DISTANCE ATOMS=1,2
+dist2: COMBINE ARG=dist POWERS=2 PERIODIC=NO
+
+# add the option to write to a restart file
+eds: EDS ARG=dist,dist2 CENTER=2.0,1.0 PERIOD=100 TEMP=1.0 OUT_RESTART=checkpoint.eds

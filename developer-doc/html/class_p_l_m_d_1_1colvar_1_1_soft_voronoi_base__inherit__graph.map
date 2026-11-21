@@ -1,0 +1,20 @@
+<map id="PLMD::colvar::SoftVoronoiBase" name="PLMD::colvar::SoftVoronoiBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="760,55,981,80"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1colvar_1_1_voronoi_coordination.html" title=" " alt="" coords="1029,5,1276,31"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="957,50,1079,28,1080,33,958,55"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1colvar_1_1_voronoi_distance.html" title=" " alt="" coords="1042,55,1263,80"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="995,65,1042,65,1042,70,995,70"/>
+<area shape="rect" id="Node000009" href="$class_p_l_m_d_1_1colvar_1_1_voronoi_position.html" title=" " alt="" coords="1045,104,1261,129"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="958,80,1080,101,1079,107,957,85"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_colvar.html" title=" " alt="" coords="603,55,712,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="726,65,760,65,760,70,726,70"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_atomistic.html" title="Action used to create objects that access the positions of the atoms from the MD code." alt="" coords="382,29,553,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="567,53,603,57,602,63,566,58"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="224,55,332,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="345,56,381,51,382,56,346,61"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_action_with_value.html" title="Used to create a PLMD::Action that has some scalar or vectorial output that may or may not have some ..." alt="" coords="380,79,555,104"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="346,73,380,78,379,83,346,79"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,55,176,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="190,65,224,65,224,70,190,70"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="568,76,602,72,603,77,569,81"/>
+</map>

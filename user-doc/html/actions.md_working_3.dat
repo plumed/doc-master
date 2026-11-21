@@ -1,0 +1,5 @@
+DISTANCE ...
+   ATOMS=1,2
+   COMPONENTS
+   LABEL=d1
+... DISTANCE

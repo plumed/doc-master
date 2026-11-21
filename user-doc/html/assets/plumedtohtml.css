@@ -1,0 +1,121 @@
+.plumedInputContainer{
+  width: 100%;
+  overflow: auto;
+}
+.plumedpreheader{
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "info badges";
+    grid-template-columns: 90% 10%;
+}
+.plumedpreheader > div.headerInfo{
+    grid-area: info;
+}
+.plumedpreheader > div.containerBadge{
+    grid-area: badges;
+    display: block;
+}
+.containerBadge img{
+    max-width: 100%;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+}
+pre.plumedlisting{
+    width:97%;
+    overflow: visible;
+}
+pre.fragment {
+    border: 1px solid #C4CFE5;
+    background-color: #FBFCFD;
+    padding: 4px 6px;
+    margin: 4px 8px 4px 2px;
+    overflow: auto;
+    word-wrap: break-word;
+    font-size:  9pt;
+    line-height: 125%;
+    font-family: monospace, fixed;
+    font-size: 105%;
+}
+.plumedtooltip {
+    display:inline-block;
+    position:relative;
+    border-bottom:1px dotted #666;
+    text-align:left;
+}
+.plumedtooltip .right {
+    min-width:400px;
+    white-space: normal;
+    top:50%;
+    left:100%;
+    margin-left:20px;
+    transform:translate(0, -50%);
+    padding:10px 20px;
+    color:#444444;
+    background-color:#EEEEEE;
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    display:none;
+}
+.plumedtooltip:hover .right {
+    display:block;
+}
+.plumedtooltip .right i {
+    position:absolute;
+    top:50%;
+    right:100%;
+    margin-top:-12px;
+    width:12px;
+    height:24px;
+    overflow:hidden;
+}
+.plumedtooltip .right i::after {
+    content:;
+    position:absolute;
+    width:12px;
+    height:12px;
+    left:0;
+    top:50%;
+    transform:translate(50%,-50%) rotate(-45deg);
+    background-color:#EEEEEE;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+.plumedmodal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.plumedmodal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+.plumedmodal-body {padding: 2px 16px;}
+.plumedmodal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}

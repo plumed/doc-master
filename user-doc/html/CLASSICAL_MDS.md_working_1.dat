@@ -1,0 +1,4 @@
+ff: COLLECT_FRAMES ATOMS=1-256
+mds: CLASSICAL_MDS ARG=ff NLOW_DIM=2
+weights: CUSTOM ARG=ff.logweights FUNC=exp(x) PERIODIC=NO
+DUMPPDB ATOM_INDICES=1-256 ATOMS=ff_data ARG=mds,weights FILE=embed.pdb

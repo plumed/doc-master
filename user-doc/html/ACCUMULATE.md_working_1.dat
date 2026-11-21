@@ -1,0 +1,10 @@
+c: CONSTANT VALUE=1
+d: DISTANCE ATOMS=1,2
+# This adds together the value of the distance on every step
+s: ACCUMULATE ARG=d STRIDE=1
+# This adds one every time we add a new distance to the value s
+n: ACCUMULATE ARG=c STRIDE=1
+# This is thus the average distance
+a: CUSTOM ARG=s,n FUNC=x/y PERIODIC=NO
+# This prints out the average over the whole trajectory (STRIDE=0 means print at end only)
+PRINT ARG=a FILE=average.dat STRIDE=0

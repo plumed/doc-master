@@ -1,0 +1,1 @@
+plumed gen_example --plumed plumed.dat --status working

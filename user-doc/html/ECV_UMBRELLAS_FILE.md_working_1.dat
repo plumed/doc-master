@@ -1,0 +1,12 @@
+#SETTINGS INPUTFILES=extras/Umbrellas.data
+
+cv1: DISTANCE ATOMS=1,2
+cv2: DISTANCE ATOMS=3,4
+cv3: DISTANCE ATOMS=4,1
+ecv: ECV_UMBRELLAS_FILE ...
+   ARG=cv1,cv2,cv3
+   FILE=extras/Umbrellas.data
+   ADD_P0 BARRIER=70
+...
+opes: OPES_EXPANDED ARG=ecv.* PACE=500
+PRINT FILE=COLVAR STRIDE=500 ARG=cv1,cv2,cv3,opes.bias
