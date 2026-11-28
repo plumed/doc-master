@@ -1,0 +1,1 @@
+plumed driver-float --plumed plumed.dat --ixyz trajectory.xyz

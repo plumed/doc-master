@@ -1,0 +1,22 @@
+# Fixed virtual atom which serves as the probe volume's center (pos. in nm)
+center: FIXEDATOM AT=2.5,2.5,2.5
+# Vector in which element i is one if atom i is in sphere of interest and zero otherwise
+sphere: INSPHERE ATOMS=1-192:3 CENTER=center RADIUS={GAUSSIAN D_0=0.5 R_0=0.01 D_MAX=0.52}
+# Calculates cooordination numbers
+cmap: HBOND_MATRIX ...
+  DONORS=1-192:3 ACCEPTORS=1-192:3 HYDROGENS=2-192:3,3-192:3
+  SWITCH={RATIONAL R_0=3.20} HSWITCH={RATIONAL R_0=2.30}
+  ASWITCH={RATIONAL R_0=0.167pi} MASK=sphere
+...
+ones: ONES SIZE=64
+cc: MATRIX_VECTOR_PRODUCT ARG=cmap,ones
+# Multiply coordination numbers by sphere vector
+prod: CUSTOM ARG=cc,sphere FUNC=x*y PERIODIC=NO
+# Sum of coordination numbers for atoms that are in the sphere of interest
+numer: SUM ARG=prod PERIODIC=NO
+# Number of atoms that are in sphere of interest
+denom: SUM ARG=sphere PERIODIC=NO
+# Average coordination number for atoms in sphere of interest
+av: CUSTOM ARG=prod,sphere FUNC=x/y PERIODIC=NO
+# And print out final CV to a file
+PRINT ARG=av FILE=colvar STRIDE=1

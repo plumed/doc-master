@@ -1,0 +1,11 @@
+#SETTINGS INPUTFILES=regtest/basic/rt-contactmap-pdb/native.pdb
+q: CONTACTMAP ...
+   ATOMS1=1,67 ATOMS2=1,68 ATOMS3=1,69 ATOMS4=5,61
+   ATOMS5=5,67 ATOMS6=5,68 ATOMS7=5,69 ATOMS8=11,68
+   SWITCH={Q R_0=0.01 BETA=50.0 LAMBDA=1.5}
+   REFERENCE=regtest/basic/rt-contactmap-pdb/native.pdb
+   NORMALIZE_WEIGHTS
+   SUM
+...
+
+PRINT ARG=q FILE=colvar

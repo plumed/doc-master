@@ -1,0 +1,20 @@
+# The atoms that are of interest
+ow: GROUP ATOMS=1-16500
+# Fixed virtual atom which serves as the probe volume's center (pos. in nm)
+center: FIXEDATOM AT=2.5,2.5,2.5
+# Vector in which element i is one if atom i is in sphere of interest and zero otherwise
+sphere: INSPHERE ATOMS=ow CENTER=center RADIUS={GAUSSIAN D_0=0.5 R_0=0.01 D_MAX=0.52}
+# Calculates cooordination numbers
+cmap: CONTACT_MATRIX GROUP=ow SWITCH={GAUSSIAN D_0=0.32 R_0=0.01 D_MAX=0.34}
+ones: ONES SIZE=16500
+cc: MATRIX_VECTOR_PRODUCT ARG=cmap,ones
+# Multiply coordination numbers by sphere vector
+prod: CUSTOM ARG=cc,sphere FUNC=x*y PERIODIC=NO
+# Sum of coordination numbers for atoms that are in the sphere of interest
+numer: SUM ARG=prod PERIODIC=NO
+# Number of atoms that are in sphere of interest
+denom: SUM ARG=sphere PERIODIC=NO
+# Average coordination number for atoms in sphere of interest
+av: CUSTOM ARG=prod,sphere FUNC=x/y PERIODIC=NO
+# And print out final CV to a file
+PRINT ARG=av FILE=colvar STRIDE=1

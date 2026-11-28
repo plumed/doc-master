@@ -1,0 +1,3 @@
+# plumed.dat
+PLUMED FILE=plumed.dat CHDIR=directory1
+PLUMED FILE=plumed.dat CHDIR=directory2

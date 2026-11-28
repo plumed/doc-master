@@ -1,0 +1,1 @@
+plumed --no-mpi gen_json > syntax.json

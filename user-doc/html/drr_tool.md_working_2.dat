@@ -1,0 +1,1 @@
+plumed drr_tool --merge win1.drrstate,win2.drrstate

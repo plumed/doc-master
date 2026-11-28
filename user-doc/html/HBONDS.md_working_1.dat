@@ -1,0 +1,4 @@
+#SETTINGS MOLFILE=regtest/basic/rt-hbonds/ref.pdb
+MOLINFO STRUCTURE=regtest/basic/rt-hbonds/ref.pdb
+hb: HBONDS DONORS=@hbdonors HYDROGENS=@polarhydrogens ACCEPTORS=@hbacceptors
+PRINT ARG=hb FILE=colvar

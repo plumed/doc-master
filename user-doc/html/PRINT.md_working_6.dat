@@ -1,0 +1,8 @@
+# compute distance:
+distance: DISTANCE ATOMS=2,5
+# compute total energy (potential)
+energy: ENERGY
+# print distance on a file
+PRINT ARG=distance          STRIDE=10   FILE=COLVAR
+# print both variables on another file
+PRINT ARG=distance,energy   STRIDE=1000 FILE=COLVAR_ALL

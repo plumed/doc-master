@@ -1,0 +1,21 @@
+<map id="PLMD::volumes::VolumeShortcut&lt; v &gt;" name="PLMD::volumes::VolumeShortcut&lt; v &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="595,173,867,198"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1volumes_1_1_volume_shortcut.html" title=" " alt="" coords="1044,5,1279,45"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="762,163,820,129,890,96,979,66,1065,43,1066,48,980,71,892,101,823,134,765,168"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1volumes_1_1_volume_shortcut.html" title=" " alt="" coords="1044,69,1279,109"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="793,167,890,143,1058,107,1059,112,891,148,794,172"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1volumes_1_1_volume_shortcut.html" title=" " alt="" coords="1044,133,1279,173"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="880,172,1044,159,1044,165,881,177"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1volumes_1_1_volume_shortcut.html" title=" " alt="" coords="1044,197,1279,237"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="881,194,1044,206,1044,211,880,199"/>
+<area shape="rect" id="Node000009" href="$class_p_l_m_d_1_1volumes_1_1_volume_shortcut.html" title=" " alt="" coords="1044,261,1279,301"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="794,199,891,223,1059,259,1058,264,890,228,793,204"/>
+<area shape="rect" id="Node000010" href="$class_p_l_m_d_1_1volumes_1_1_volume_shortcut.html" title=" " alt="" coords="1044,325,1279,365"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="765,203,823,236,892,270,980,300,1066,323,1065,328,979,305,890,274,820,241,762,208"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_shortcut.html" title="Action used to create a command that expands to multiple PLMD::Action commands when read in during in..." alt="" coords="383,173,545,198"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="559,183,594,183,594,188,559,188"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="225,173,333,198"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="347,183,382,183,382,188,347,188"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,173,176,198"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="190,183,225,183,225,188,190,188"/>
+</map>

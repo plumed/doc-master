@@ -1,0 +1,4 @@
+TD_CUSTOM ...
+ FUNCTION=exp(-(1.0/(kBT*10.0))*FE)
+ LABEL=td
+... TD_CUSTOM

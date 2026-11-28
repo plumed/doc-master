@@ -1,0 +1,19 @@
+#SETTINGS NREPLICAS=4
+#HIDDEN
+cv1: DISTANCE ATOMS=1,2
+cv2: DISTANCE ATOMS=3,4
+#ENDHIDDEN
+
+# 4 replicas switching from cv1 to cv2
+bias: REPLEX_BIASVALUE ...
+  ARG=cv1,cv2
+  COEFFICIENTS={
+    {1.0 0.0}
+    {0.7 0.3}
+    {0.1 0.9}
+    {0.0 1.0}
+  }
+  PACE=100
+  NEX=10
+  SEED=42
+...

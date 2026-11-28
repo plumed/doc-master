@@ -1,0 +1,14 @@
+#SETTINGS INPUTFILES=regtest/basic/rt63/align.pdb
+# center of the ligand:
+center: CENTER ATOMS=100-110
+
+FIT_TO_TEMPLATE REFERENCE=regtest/basic/rt63/align.pdb TYPE=OPTIMAL
+
+# place a fixed atom in the protein reference coordinates:
+fix: FIXEDATOM AT=1.0,1.1,1.0
+
+# take the distance between the fixed atom and the center of the ligand
+d: DISTANCE ATOMS=center,fix
+
+# apply a restraint
+RESTRAINT ARG=d AT=0.0 KAPPA=100.0

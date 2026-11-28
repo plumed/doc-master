@@ -1,0 +1,7 @@
+# This action calculates the position of the point on the line connecting atoms 1 and 10 that is
+# twice as far atom 10 as it is from atom 1
+c1: CENTER ATOMS=1,1,10
+# this is another way of calculating this position
+c1bis: CENTER ATOMS=1,10 WEIGHTS=2,1
+
+DUMPATOMS ATOMS=c1,c1bis FILE=atoms.xyz

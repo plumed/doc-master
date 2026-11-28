@@ -1,0 +1,9 @@
+#SETTINGS INPUTFILES=regtest/mapping/rt-adapt/mypath.pdb
+d1: DISTANCE ATOMS=1,2 COMPONENTS
+pp: ADAPTIVE_PATH ...
+   ARG=d1.x,d1.y UPDATE=50 FIXED=5,15
+   WFILE=out-path.pdb WSTRIDE=50
+   REFERENCE=regtest/mapping/rt-adapt/mypath.pdb
+   PROPERTY=path
+...
+PRINT ARG=d1.x,d1.y,pp.* FILE=colvar

@@ -1,0 +1,12 @@
+phi: TORSION ATOMS=5,7,9,15
+FtgValue: CUSTOM ARG=phi PERIODIC=NO FUNC=(x/0.4)^2
+Ftg: BIASVALUE ARG=FtgValue
+opes: OPES_METAD ...
+  ARG=phi
+  PACE=500
+  BARRIER=50
+  SIGMA=0.2
+  BIASFACTOR=inf
+  EXTRA_BIAS=Ftg.bias
+...
+PRINT FMT=%g STRIDE=500 FILE=COLVAR ARG=phi,Ftg.bias,opes.bias

@@ -1,0 +1,3 @@
+#SETTINGS INPUTFILES=regtest/mapping/rt-pathtools-4/epath.pdb
+t1_ref: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pathtools-4/epath.pdb NOARGS ARG=t1
+t2_ref: PDB2CONSTANT REFERENCE=regtest/mapping/rt-pathtools-4/epath.pdb NOARGS ARG=t2

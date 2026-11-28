@@ -1,0 +1,5 @@
+<map id="PLMD::tiledBodyCenteredCubic" name="PLMD::tiledBodyCenteredCubic">
+<area shape="rect" id="Node000001" title="This BCC is contained in a &quot;standard&quot; FCC box." alt="" coords="5,79,229,104"/>
+<area shape="rect" id="Node000002" href="$struct_p_l_m_d_1_1_atom_distribution.html" title="tested in regtest/tools/rt&#45;make&#45;AtomicDistribution Acts as a template for any distribution" alt="" coords="28,5,207,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,44,120,79,115,79,115,44"/>
+</map>

@@ -1,0 +1,29 @@
+<map id="PLMD::ves::BasisFunctions" name="PLMD::ves::BasisFunctions">
+<area shape="rect" id="Node000001" title=" " alt="" coords="380,252,575,277"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1ves_1_1_b_f___chebyshev.html" title="Provides the keyword BF_CHEBYSHEV" alt="" coords="632,5,827,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="485,238,504,194,533,140,572,86,595,61,621,40,643,28,645,33,624,44,599,65,576,89,537,143,509,196,490,240"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1ves_1_1_b_f___combined.html" title="Provides the keyword BF_COMBINED" alt="" coords="635,55,823,80"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="490,238,511,204,541,164,578,123,621,89,645,78,648,83,624,94,581,127,545,167,515,207,494,241"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1ves_1_1_b_f___cosine.html" title="Provides the keyword BF_COSINE" alt="" coords="646,104,813,129"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="497,240,550,188,584,161,621,138,651,127,653,132,624,143,587,165,553,192,500,244"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1ves_1_1_b_f___cubic_bsplines.html" title="Provides the keyword BF_CUBIC_B_SPLINES" alt="" coords="623,153,836,179"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="510,243,561,214,622,187,660,176,661,181,624,193,564,219,512,247"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1ves_1_1_b_f___custom.html" title="Provides the keyword BF_CUSTOM" alt="" coords="643,203,815,228"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="556,247,663,225,664,231,557,252"/>
+<area shape="rect" id="Node000009" href="$class_p_l_m_d_1_1ves_1_1_b_f___fourier.html" title="Provides the keyword BF_FOURIER" alt="" coords="646,252,813,277"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="589,262,646,262,646,267,589,267"/>
+<area shape="rect" id="Node000010" href="$class_p_l_m_d_1_1ves_1_1_b_f___gaussians.html" title="Provides the keyword BF_GAUSSIANS" alt="" coords="635,301,824,327"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="557,277,664,299,663,304,556,283"/>
+<area shape="rect" id="Node000011" href="$class_p_l_m_d_1_1ves_1_1_b_f___legendre.html" title="Provides the keyword BF_LEGENDRE" alt="" coords="638,351,821,376"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="512,282,564,310,624,337,661,348,660,353,622,342,561,315,510,287"/>
+<area shape="rect" id="Node000012" href="$class_p_l_m_d_1_1ves_1_1_b_f___powers.html" title="Provides the keyword BF_POWERS" alt="" coords="645,400,814,425"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="500,286,553,337,587,364,624,386,653,397,651,402,621,391,584,368,550,341,497,290"/>
+<area shape="rect" id="Node000013" href="$class_p_l_m_d_1_1ves_1_1_b_f___sine.html" title="Provides the keyword BF_SINE" alt="" coords="654,449,805,475"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="494,288,515,322,545,362,581,402,624,436,655,449,653,454,621,440,578,406,541,366,511,325,490,291"/>
+<area shape="rect" id="Node000014" href="$class_p_l_m_d_1_1ves_1_1_b_f___wavelets.html" title="Provides the keyword BF_WAVELETS" alt="" coords="638,499,821,524"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="490,289,509,333,537,386,576,440,599,464,624,485,645,496,643,501,621,490,595,468,572,444,533,389,504,335,485,292"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="224,252,332,277"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="346,262,380,262,380,267,346,267"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,252,176,277"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="190,262,224,262,224,267,190,267"/>
+</map>

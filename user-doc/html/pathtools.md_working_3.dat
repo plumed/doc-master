@@ -1,0 +1,1 @@
+plumed pathtools --start start.pdb --end end.pdb --nframes 4 --metric OPTIMAL --out path.pdb --nframes-before-start 2 --nframes-after-end 2

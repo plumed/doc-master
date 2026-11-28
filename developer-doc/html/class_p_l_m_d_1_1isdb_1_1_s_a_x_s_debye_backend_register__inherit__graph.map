@@ -1,0 +1,10 @@
+<map id="PLMD::isdb::SAXSDebyeBackendRegister" name="PLMD::isdb::SAXSDebyeBackendRegister">
+<area shape="rect" id="Node000001" title="Register of the backends of SAXS/SANS." alt="" coords="7,272,241,312"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="5,183,243,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,237,127,272,121,272,121,237"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_register.html" title="Base class, with type independent information." alt="" coords="58,5,179,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="122,44,126,183,121,183,117,45"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_register_base.html" title="General register." alt="" coords="141,80,294,120"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="145,37,196,78,192,82,142,41"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="192,132,143,184,140,181,189,128"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="PLMD::gridtools::Histogram" name="PLMD::gridtools::Histogram">
+<area shape="rect" id="Node000001" title="Provides the keyword HISTOGRAM" alt="" coords="5,225,205,251"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_action_shortcut.html" title="Action used to create a command that expands to multiple PLMD::Action commands when read in during in..." alt="" coords="24,152,187,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,191,108,225,103,225,103,191"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action.html" title="Base class for all the input Actions." alt="" coords="51,79,159,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,118,108,152,103,152,103,118"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="20,5,191,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="108,44,108,79,103,79,103,44"/>
+</map>

@@ -1,0 +1,15 @@
+#SETTINGS INPUTFILES=regtest/ves/rt-VesDeltaF/fesA.data,regtest/ves/rt-VesDeltaF/fesB.data
+
+cv: TORSION ATOMS=7,9,15,17
+
+ves: VES_DELTA_F ...
+  ARG=cv
+  TEMP=300
+  FILE_F0=regtest/ves/rt-VesDeltaF/fesA.data
+  FILE_F1=regtest/ves/rt-VesDeltaF/fesB.data
+  BIASFACTOR=10.0
+  M_STEP=0.1
+  AV_STRIDE=500
+  PRINT_STRIDE=100
+...
+PRINT FMT=%g STRIDE=500 FILE=Colvar.data ARG=cv,ves.bias,ves.rct

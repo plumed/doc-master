@@ -1,0 +1,5 @@
+d: DISTANCE ATOMS=10,15
+m: CUSTOM ARG=d FUNC=0.5*step(0.5-x)+x*step(x-0.5) PERIODIC=NO
+# check the function you are applying:
+PRINT ARG=d,m FILE=checkme
+RESTRAINT ARG=d AT=0.5 KAPPA=10.0

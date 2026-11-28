@@ -1,0 +1,3 @@
+#SETTINGS INPUTFILES=regtest/mapping/rt-pca/reference.pdb
+pca2: PCAVARS REFERENCE=regtest/mapping/rt-pca/reference.pdb NOPBC TYPE=OPTIMAL
+PRINT ARG=pca2.* FILE=colvar2

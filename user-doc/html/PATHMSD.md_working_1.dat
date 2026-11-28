@@ -1,0 +1,3 @@
+#SETTINGS INPUTFILES=regtest/basic/rt39/all.pdb
+p1: PATHMSD REFERENCE=regtest/basic/rt39/all.pdb LAMBDA=500.0 NEIGH_STRIDE=4 NEIGH_SIZE=8
+PRINT ARG=p1.sss,p1.zzz STRIDE=1 FILE=colvar

@@ -1,0 +1,23 @@
+#SETTINGS NREPLICAS=5
+#HIDDEN
+cv1: DISTANCE ATOMS=1,2
+cv2: DISTANCE ATOMS=3,4
+cv3: DISTANCE ATOMS=5,6
+cv4: DISTANCE ATOMS=7,8
+cv5: DISTANCE ATOMS=9,10
+#ENDHIDDEN
+
+bias: REPLEX_BIASVALUE ...
+  ARG=cv1,cv2,cv3,cv4,cv5
+  COEFFICIENTS=0.8,1.2,0.5,0.9,1.0
+  # equivalent to COEFFICIENTS={
+  #   {0.8    0    0    0    0}
+  #   {  0  1.2    0    0    0}
+  #   {  0    0  0.5    0    0}
+  #   {  0    0    0  0.9    0}
+  #   {  0    0    0    0  1.0}
+  # }
+  PACE=100
+  NEX=100
+  SEED=1312
+...

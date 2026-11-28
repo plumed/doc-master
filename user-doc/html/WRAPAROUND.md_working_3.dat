@@ -1,0 +1,9 @@
+solute: GROUP ATOMS=1-100
+all: GROUP ATOMS=1-1000
+# center of the solute:
+# notice that since plumed 2.2 this also works if the
+# solute molecule is broken
+com: COM ATOMS=solute
+# notice that we wrap around a single atom. this should be fast
+WRAPAROUND ATOMS=all AROUND=com
+DUMPATOMS FILE=dump.xyz ATOMS=all

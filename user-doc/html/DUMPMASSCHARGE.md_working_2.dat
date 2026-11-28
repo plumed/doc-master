@@ -1,0 +1,1 @@
+plumed driver --mc mcfile --plumed plumed.dat --ixyz traj.xyz

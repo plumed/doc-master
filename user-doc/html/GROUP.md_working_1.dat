@@ -1,0 +1,9 @@
+o: GROUP ATOMS=1,4,7,11,14
+h: GROUP ATOMS=2,3,5,6,8,9,12,13
+# compute the coordination among the two groups
+c: COORDINATION GROUPA=o GROUPB=h R_0=0.3
+# same could have been obtained without GROUP, just writing:
+# c: COORDINATION GROUPA=1,4,7,11,14 GROUPB=2,3,5,6,8,9,12,13
+
+# print the coordination on file 'colvar'
+PRINT ARG=c FILE=colvar

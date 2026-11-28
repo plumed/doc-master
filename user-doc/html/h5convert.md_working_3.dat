@@ -1,0 +1,2 @@
+plumed h5convert --input COLVAR.hpa --output COLVAR.h5
+plumed h5convert --input COLVAR.hpa --output COLVAR.big.hpa --batch-size 100000

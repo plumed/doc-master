@@ -1,0 +1,19 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_p_l_m_d_1_1_register.html" title="Base class, with type independent information." alt="" coords="5,141,127,166"/>
+<area shape="rect" id="Node000001" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="175,5,435,45"/>
+<area shape="poly" id="edge722_Node000000_Node000001" title=" " alt="" coords="85,128,123,90,173,55,201,43,203,48,176,60,127,95,89,132"/>
+<area shape="rect" id="Node000002" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="205,69,405,109"/>
+<area shape="poly" id="edge723_Node000000_Node000002" title=" " alt="" coords="121,134,174,119,220,107,221,112,175,124,122,139"/>
+<area shape="rect" id="Node000004" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="205,133,405,173"/>
+<area shape="poly" id="edge725_Node000000_Node000004" title=" " alt="" coords="140,151,204,151,204,156,140,156"/>
+<area shape="rect" id="Node000006" href="$class_p_l_m_d_1_1_register_base.html" title=" " alt="" coords="186,197,423,237"/>
+<area shape="poly" id="edge727_Node000000_Node000006" title=" " alt="" coords="122,167,175,183,221,195,220,200,174,188,121,173"/>
+<area shape="rect" id="Node000008" href="$class_p_l_m_d_1_1_register_base.html" title="General register." alt="" coords="228,261,381,301"/>
+<area shape="poly" id="edge729_Node000000_Node000008" title=" " alt="" coords="89,175,127,212,176,247,229,267,227,272,173,252,123,216,85,178"/>
+<area shape="rect" id="Node000003" href="$class_p_l_m_d_1_1_action_register.html" title="Register holding all the allowed keywords." alt="" coords="519,77,681,102"/>
+<area shape="poly" id="edge724_Node000002_Node000003" title=" " alt="" coords="418,87,518,87,518,92,418,92"/>
+<area shape="rect" id="Node000005" href="$class_p_l_m_d_1_1_c_l_tool_register.html" title="Same as ActionRegister, but for CLTools." alt="" coords="519,141,681,166"/>
+<area shape="poly" id="edge726_Node000004_Node000005" title=" " alt="" coords="418,151,518,151,518,156,418,156"/>
+<area shape="rect" id="Node000007" href="$class_p_l_m_d_1_1isdb_1_1_s_a_x_s_debye_backend_register.html" title="Register of the backends of SAXS/SANS." alt="" coords="483,197,717,237"/>
+<area shape="poly" id="edge728_Node000006_Node000007" title=" " alt="" coords="437,215,482,215,482,220,437,220"/>
+</map>

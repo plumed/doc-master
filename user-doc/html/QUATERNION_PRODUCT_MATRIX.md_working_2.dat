@@ -1,0 +1,13 @@
+# Calculate some quaternions
+quats12: QUATERNION ATOMS1=1,2,3 ATOMS2=4,5,6 ATOMS3=7,8,9 ATOMS4=10,11,12
+# Calculate a contact matrix
+cmap: CONTACT_MATRIX GROUP=1,4,7,10 SWITCH={RATIONAL R_0=0.2 D_MAX=0.7}
+# Calculate the quaternion product matrix
+qp: QUATERNION_PRODUCT_MATRIX ARG=quats12.*,quats12.* MASK=cmap
+# Now calculate a function of the quaternion elements (normally something more complicated than the following is performed
+func: CUSTOM ARG=cmap,qp.* VAR=x,w,i,j,k FUNC=x*(w+i+j+k) PERIODIC=NO
+# Now sum the rows of the above matrix
+ones: ONES SIZE=4
+op: MATRIX_VECTOR_PRODUCT ARG=func,ones
+# And output the values of the order parameter
+DUMPATOMS ATOMS=1,4,7,10 ARG=op FILE=func.yxz

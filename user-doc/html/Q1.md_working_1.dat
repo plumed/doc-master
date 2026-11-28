@@ -1,0 +1,3 @@
+q1: Q1 SPECIES=1-64 D_0=1.3 R_0=0.2
+q1_mean: MEAN ARG=q1 PERIODIC=NO
+PRINT ARG=q1_mean FILE=colvar

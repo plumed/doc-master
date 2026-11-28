@@ -1,0 +1,7 @@
+#SETTINGS MOLFILE=regtest/basic/rt-wraparound-residue-centers/metadata.pdb
+MOLINFO STRUCTURE=regtest/basic/rt-wraparound-residue-centers/metadata.pdb
+solute: GROUP ATOMS=1-3
+solvent: GROUP ATOMS=4-14
+WHOLEMOLECULES ENTITY0=solute
+WRAPAROUND ATOMS=solvent AROUND=solute GROUP_BY_RESIDUE
+DUMPATOMS ATOMS=solute,solvent FILE=wrapped.xyz

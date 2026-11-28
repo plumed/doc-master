@@ -1,0 +1,24 @@
+# Fixed virtual atom which serves as the probe volume's center (pos. in nm)
+center: FIXEDATOM AT=2.5,2.5,2.5
+ow: GROUP ATOMS=1-400
+hw: GROUP ATOMS=401-1200
+# Vector in which element i is one if atom i is in sphere of interest and zero otherwise
+sphere: INSPHERE ATOMS=ow CENTER=center RADIUS={GAUSSIAN D_0=0.5 R_0=0.01 D_MAX=0.52}
+# Calculate coordination with oxygen atoms
+ow_ones: ONES SIZE=400
+ow_mat: CONTACT_MATRIX GROUP=ow MASK=sphere SWITCH={RATIONAL R_0=0.3 D_MAX=0.8}
+ow_coord: MATRIX_VECTOR_PRODUCT ARG=ow_mat,ow_ones
+# And transform the coordination numbers by a switching function
+ow_mt: MORE_THAN ARG=ow_coord MASK=sphere SWITCH={RATIONAL R_0=4}
+# Calculate the coordination with hydrogen atoms
+hw_ones: ONES SIZE=800
+hw_mat: CONTACT_MATRIX GROUPA=ow GROUPB=hw MASK=sphere SWITCH={RATIONAL R_0=0.1 D_MAX=0.5}
+hw_coord: MATRIX_VECTOR_PRODUCT ARG=hw_mat,hw_ones
+# And transform the coordination numbers by a switching function
+hw_mt: MORE_THAN ARG=hw_coord MASK=sphere SWITCH={RATIONAL R_0=2}
+# And multiply the two vectors of transformed coordination numbers together
+prod: CUSTOM ARG=hw_mt,ow_mt FUNC=x*y MASK=sphere PERIODIC=NO
+# Sum of coordination numbers for atoms that are in the sphere of interest
+cv: SUM ARG=prod PERIODIC=NO
+# And print out final CV to a file
+PRINT ARG=cv FILE=colvar STRIDE=1

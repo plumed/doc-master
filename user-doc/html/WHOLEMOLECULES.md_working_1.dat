@@ -1,0 +1,4 @@
+# to see the effect, one could dump the atoms as they were before molecule reconstruction:
+# DUMPATOMS FILE=dump-broken.xyz ATOMS=1-20
+WHOLEMOLECULES ENTITY0=1-20
+DUMPATOMS FILE=dump.xyz ATOMS=1-20
